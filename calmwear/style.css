@@ -29,16 +29,11 @@ ul.mr-auto{
     left: 95px;
 }
 
-.circulo{       
-    margin-left: 1%;
-    margin-top:1%;
-}
-
 .circulo a{
     background-image:url("./img/btn_shop.png");
-    width:80px;
-    height: 80px;
-    background-size: 65px;
+    width:60px;
+    height: 60px;
+    background-size: cover;
 }
 
 .titulo{
@@ -67,7 +62,7 @@ ul.mr-auto{
     background-size: contain;
     background-repeat: no-repeat;        
     padding: 0px;    
-    background-position-x: 77%;
+    background-position-x: 80%;
 }
 
 .menu-puntos a, .menu-log a, .menu-candado a{
