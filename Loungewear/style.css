@@ -1,0 +1,549 @@
+ 
+@font-face{
+    font-family:"Helvetica, HelveticaLt, HelveticaLtObl, HelveticaNeue, MoristonPersonal-Black, MoristonPersonal-Bold, MoristonPersonal-Light, MoristonPersonal-Medium, MoristonPersonal-Regular, MoristonPersonal-Semibold";
+    src: url("./tipografia/Helvetica.ttc, HelveticaLt.ttf, HelveticaLtObl.ttf, HelveticaNeue.ttc, MoristonPersonal-Black.otf, MoristonPersonal-Bold.otf, MoristonPersonal-Light.otf, MoristonPersonal-Medium.otf, MoristonPersonal-Regular.otf, MoristonPersonal-Semibold.otf");
+}
+
+
+#navbarNav{
+    height: 70px;
+    
+}
+
+.navbar-expand-lg{
+    padding: 0%;
+}   
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+ul.mr-auto{
+    margin:0%;
+    float: left;
+    position: absolute;
+    top:-16px;
+    left: 95px;
+}
+
+.circulo{       
+    margin-left: 1%;
+    margin-top:1%;
+}
+
+.circulo a{
+    background-image:url("./img/btn_shop.png");
+    width:80px;
+    height: 80px;
+    background-size: 65px;
+}
+
+.titulo{
+    width: 254px;
+    height: 70px;
+    padding: 0px;
+}
+
+
+.menu-puntos , .menu-log , .menu-candado{
+    margin-top:0px;
+    margin-left: 65px;
+}
+
+
+/* Titulo*/
+
+.titulo{
+    margin-top: 35px;
+}
+
+
+.titulo a{
+    background-image:url("./img/titulo-klma-humans.png");
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;        
+    padding: 0px;    
+    background-position-x: 77%;
+}
+
+.menu-puntos a, .menu-log a, .menu-candado a{
+    background-image:url("./img/menu-klma-humans.png");
+    width:35px;
+    height: 35px;
+    padding: 0%;
+    background-position: center;
+    background-size: 165px;
+    float: left;
+}
+
+.menu-puntos a{
+    background-position: left;
+}
+
+.menu-log a{
+    background-position: center;
+
+}
+
+.menu-candado a{
+    background-position: right;
+
+}
+
+.menu-puntos a, .menu-log a, .menu-candado a, .circulo a{
+    background-repeat: no-repeat;
+}
+
+
+/*Tamaño de rejillas*/
+.gridvertical {
+    display: grid;
+    grid-template-columns: 540px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gridhorizontal {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.griddoblevertical {
+    display: grid;
+    grid-template-columns: repeat(2, 545px);
+    grid-column-gap: 80px;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*Tamaño de imagenes en las rejillas*/
+
+.gridvertical {
+    width: 100%;
+    height: 100%;
+}
+
+.gridvertical img {
+    width: 496px;
+    height: 600px;
+    margin-bottom: 2%;
+}
+
+.gridhorizontal img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1%;
+}
+
+.griddoblevertical img {
+    width: 500px;
+    height: 605px;
+    grid-column: 1/2;
+    margin-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inicio configuracion estilos pantalla loungewear producto especifico */
+/*Fuentes Especifico LW*/
+.font-lw-1{
+    font-family: "helvetica";
+    font-size: 11pt;
+    text-align: justify;
+    letter-spacing: .5rem;
+}
+
+.font-tallas-lw, .font-tallas-lw:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 14pt;
+    max-width: 615px;
+}
+
+.contenedor-tallas-lw, .contenedor-tallas-lw:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 14pt;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-left: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-tallas-lw > div:first-child{
+    text-align: left!important;
+}
+
+.contenedor-tallas-lw >  div:last-child{
+    text-align: right!important;
+}
+
+.font-price-lw { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 17pt;
+    letter-spacing: 4.66rem;
+    max-width: 568px
+}
+
+.font-tallas-lw2 { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .5rem;
+    margin-bottom: -1.5rem;
+}
+
+
+/*Grid para producto especifico Loungewear*/
+.grid-lw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*
+.grid-lw div {
+    border: 1px solid #000000;
+    margin: 0rem;
+}
+*/
+
+.nested-grid-lw {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(10px, auto);
+}
+
+.elemento1 {
+    grid-column: 1/2;
+}
+
+.elemento2 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+}
+
+.elemento3 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.elemento4 {
+    grid-column: 3/4;
+    margin-bottom: -1rem;
+    align-self: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+/*Botones Negros + Hover neutral*/
+.btn-submit, .btn-submit:hover{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 12pt;
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/*Botones desplegables*/
+.btn-details {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .2rem;
+    margin-left: 50px;
+}
+
+/*Div btn-opciones*/
+.btn-opciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
+/*Detalles del producto*/
+.btn-details-prod {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    width: 135px;
+    z-index: 100
+}
+
+/*Empaque Especial*/
+.btn-empaque {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    width: 100px;
+    z-index: 100
+}
+
+/*Tallas*/
+.btn-size {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5rem;
+    margin-bottom: 5px;
+    padding-left: 20%;
+    z-index: 100
+}
+
+/*Selector circular de talla*/
+.talla-active{
+    border: 3px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/*Contenedor descripcion detalles producto especifico*/
+.contentprod {
+    width: 65%;
+    height: 500px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8pt;
+    position: absolute;
+    bottom: 25px;
+}
+
+.contentdetails {
+    width: 34%;
+    height: 505px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    text-align: justify;
+    font-size: 7pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 25px;
+    padding: 2%;
+}
+
+.contentbag {
+    width: 35%;
+    height: 505px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: justify;
+    font-size: 10pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 25px;
+}
+
+.contentsize {
+    width: 80%;
+    height: 388px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    position: absolute;
+    bottom: 25px;
+}
+
+/*Contenedor de botones para opciones*/
+.divopciones {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+.btn-opciones:nth-child(1){
+    flex: 5;
+    margin-left: 2.7%;
+}
+
+.btn-opciones:nth-child(2){
+    flex: 3;
+}
+
+.btn-opciones:nth-child(3){
+    flex: 5;
+    letter-spacing: .3rem;
+}
+
+/* FIN configuracion estilos pantalla loungewear producto especifico */
+
+
+
+
+
+
+
+
+
+
+
+
+/*Contenedor para Imagenes Productos LoungeWear*/
+.carousel-product {
+    position: relative;
+    height: 460px;
+    width: 620px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-left: 0%;
+}
+
+/*Contenedor descripción de los Productos*/
+
+.body-card {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0rem;
+    margin-left: -.8%;
+    max-width: 690px;
+}
+
+.card {
+    margin-left: 423px;
+    margin-right: 423px;
+    border: none;
+    
+}
+
+/*Titulos en Formatos Card
+.card-title, .card-title:hover {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: justify;
+    letter-spacing: .5rem;
+}*/
+
+
+/* Titulos LOUNGEWEAR*/
+.card-title, .card-title:hover {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8.8pt;
+    text-align: right;
+    letter-spacing: .2rem;
+    margin-bottom: 0rem;
+}
+
+/*Configuracion Descripciones Loungewear*/
+.card-text {
+    min-height: .5rem;
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: left;
+    letter-spacing: .15rem;
+    margin-top: -.8rem;
+    margin-bottom: 0rem;
+}
+
+/*Descripcion para producto especifico*/
+.desc-prod-espec{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11.5pt;
+    text-align: justify;
+    letter-spacing: .495rem;
+    margin-left: 60px;
+}
+
+/*Configuración FUENTE PRECIO*/
+.price, .price:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -1%;
+    text-decoration: none;
+}
+
+.price-horizontal, .price-horizontal:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .75rem;
+    text-align: right;
+    margin: -8px;
+}
