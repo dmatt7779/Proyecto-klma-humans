@@ -34,8 +34,8 @@
                 <li class="nav-item menu-log">
                 <a class="nav-link" href="#"></a>
                 </li>
-                <li class="nav-item menu-candado">
-                <a class="nav-link" href="#"></a>
+                <li class="nav-item">
+                <button class="nav-link menu-candado" id="btnCart"></button>
                 </li>
             </ul>
             </div>
@@ -224,67 +224,66 @@
                 </div>
                 <button id="btn-size" class="btn-size" name="bntOpciones" data-target="divSize">TALLAS</button>
             </div>
-            <a href="#" class="btn-submit">ADD TO CART</a>
+            <a href="#" class="btn-submit" id="aAddCart">ADD TO CART</a>
             <a href="#" class="btn-submit">BUY IT NOW</a>
         </div>
     </div><!-- FIN Contenedores hidden -->
 </div>
 
 
+    <!-- INICIO Carrito de compras -->
+    <div class="cart-overlay" id="divCart">
+        <div class="cart">
+            <span class="close-cart">
+                <i class="fas fa-times" id="closecart"></i>
+            </span>
+            <h1>RESUMEN</h1>
 
-<!-- INICIO Carrito de compras -->
-<div class="cart-overlay">
-    <div class="cart">
-        <span class="close-cart">
-            <i class="fas fa-times"></i>
-        </span>
-        <h1>RESUMEN</h1>
-
-        <div class="cart-content">
-            <!-- Cart items -->
-            <div class="cart-item">
-                <div class="data-item">
-                    <div class="plus-minus">
-                        <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
+            <div class="cart-content">
+                <!-- Cart items -->
+                <div class="cart-item">
+                    <div class="data-item">
+                        <div class="plus-minus">
+                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
+                        </div>
+                        <h2>COMERCIAL BAG</h2>
+                        <span class="cart-size">CIRCLE</span>
+                        <h3>$15.000</h3>
+                        <!-- <span class="remove-item">remove</span> -->
                     </div>
-                    <h2>COMERCIAL BAG</h2>
-                    <span class="cart-size">CIRCLE</span>
-                    <h3>$15.000</h3>
-                    <!-- <span class="remove-item">remove</span> -->
+                    <img src="../assets/img/bolso.png" alt="">
                 </div>
-                <img src="../assets/img/bolso.png" alt="">
-            </div>
 
-            <div class="cart-item">
-                <div class="data-item">
-                    <div class="plus-minus">
-                        <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
+                <div class="cart-item">
+                    <div class="data-item">
+                        <div class="plus-minus">
+                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
+                        </div>
+                        <h2>COMERCIAL BAG</h2>
+                        <span class="cart-size">CIRCLE</span>
+                        <h3>$15.000</h3>
+                        <!-- <span class="remove-item">remove</span> -->
                     </div>
-                    <h2>COMERCIAL BAG</h2>
-                    <span class="cart-size">CIRCLE</span>
-                    <h3>$15.000</h3>
-                    <!-- <span class="remove-item">remove</span> -->
+                    <img src="../assets/img/John_Elliott.jpg" alt="">
                 </div>
-                <img src="../assets/img/John_Elliott.jpg" alt="">
+                <!-- FIN Cart items -->
             </div>
-            <!-- FIN Cart items -->
-        </div>
 
-        <!-- INICIO Cart footer -->
-        <div class="cart-footer">
-            <div class="subtotal">
-            <h3>SUBTOTAL:</h3>
-            <span class="cart-total">$0</span>
-            </div>
-            <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-            <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
-                <div class="finalshop">
-                    <button class="btn btn-submit">FINALIZAR PEDIDO</button>
+            <!-- INICIO Cart footer -->
+            <div class="cart-footer">
+                <div class="subtotal">
+                <h3>SUBTOTAL:</h3>
+                <span class="cart-total">$0</span>
                 </div>
+                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
+                <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
+                    <div class="finalshop">
+                        <button class="btn btn-submit">FINALIZAR PEDIDO</button>
+                    </div>
+            </div>
         </div>
     </div>
-</div>
-<!-- FIN Carrito de compras -->
+    <!-- FIN Carrito de compras -->
 
 
 
@@ -344,5 +343,17 @@
         $(this).addClass('talla-active');
     } )
 </script>   
+
+
+
+
+
+
+
+<script>
+$('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
+$('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
+</script>
+
 </body>
 </html>
