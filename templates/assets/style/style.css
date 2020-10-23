@@ -1,0 +1,2722 @@
+@font-face{
+    font-family:"HelveticaLt";
+    src: url("../tipografia/HelveticaLt.ttf");
+}
+
+@font-face{
+    font-family:"HelveticaLtObl";
+    src: url("../tipografia/HelveticaLtObl.ttf");
+}
+
+@font-face{
+    font-family:"HelveticaNeue";
+    src: url("../tipografia/HelveticaNeue.ttc");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Black";
+    src: url("../tipografia/MoristonPersonal-Black.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Light";
+    src: url("../tipografia/MoristonPersonal-Light.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Regular";
+    src: url("../tipografia/MoristonPersonal-Regular.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Semibold";
+    src: url("../tipografia/MoristonPersonal-Semibold.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Bold";
+    src: url("../tipografia/MoristonPersonal-Bold.otf");
+}
+
+@font-face{
+    font-family:"Helvetica";
+    src: url("../tipografia/Helvetica.ttc");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Medium";
+    src: url("../tipografia/MoristonPersonal-Medium.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#navbarNav{
+    height: 70px;
+    
+}
+
+.navbar-expand-lg{
+    padding: 0%;
+}   
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0% 0% 0% 0%;
+}
+
+ul.mr-auto{
+    margin:0%;
+    float: left;
+    position: absolute;
+    top:-16px;
+    left: 95px;
+}
+
+.circulo{       
+    margin-left: 1%;
+    margin-top:1%;
+}
+
+.circulo a{
+    background-image:url("../img/btn_shop.png");
+    width:80px;
+    height: 80px;
+    background-size: 65px;
+}
+
+.titulo{
+    width: 254px;
+    height: 70px;
+    padding: 0px;
+}
+
+
+.menu-puntos , .menu-log , .menu-candado{
+    margin-top:0px;
+    margin-left: 65px;
+}
+
+
+/* Titulo*/
+
+.titulo{
+    margin-top: 35px;
+}
+
+
+.titulo a{
+    background-image:url("../img/titulo-klma-humans.png");
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;        
+    padding: 0px;    
+    background-position-x: 77%;
+}
+
+.menu-puntos a, .menu-log a, .menu-candado a{
+    background-image:url("../img/menu-klma-humans.png");
+    width:35px;
+    height: 35px;
+    padding: 0%;
+    background-position: center;
+    background-size: 165px;
+    float: left;
+}
+
+.menu-puntos a{
+    background-position: left;
+}
+
+.menu-log a{
+    background-position: center;
+
+}
+
+.menu-candado a{
+    background-position: right;
+
+}
+
+.menu-puntos a, .menu-log a, .menu-candado a, .circulo a{
+    background-repeat: no-repeat;
+}
+
+
+/* ----------------------------INICIO Configuración Footer------------------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(242, 232, 220);
+}
+
+.footer-content > img {
+width: 20%;
+height: 20%;
+}
+/* ----------------------------FIN Configuración Footer------------------------------- */
+
+
+
+/* INICIO Configuración Menu Shop */
+/*Imagen de fondo en el BODY*/
+.contenmenu {
+    background-image: url(../img/menushop/Fondo.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+/*Distibución para el header de este menú*/
+header.header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);  
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.logo img {
+    width: 80px;
+    margin: 10px;
+    grid-column: 1/1;
+}
+
+/*Contenedor principal */
+div.main{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.menua {
+    background-color:rgba(242, 232, 220, 0.6);
+    width:100%;
+    height:270px;
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 150px 190px 190px 200px;
+    align-items: center;
+ }
+
+ .loungewear > img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    grid-column: 2/3;
+ }
+
+ .calmwear img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    grid-column: 3/4;
+ }
+
+ .transition img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    grid-column: 4/4;
+ }
+
+ .nav {
+    margin-left: 2%;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+ }
+
+ a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Helvetica";
+    font-size: 10pt;
+ }
+
+ .tnav {
+    grid-column: 2/2;
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 15pt;
+    margin-right: 20%;
+    font-weight: bold;
+    letter-spacing: 2.0rem;
+    word-spacing: .5rem;
+ }
+ /* FIN Configuración Menu Shop */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------INCIO Configuración Registro------------------------- */
+/* Logo KLMA' HUMANS centrado */
+.img-form{
+    width: 190px;
+    height: 162px;
+    background-image: url("../../img/simbolo.png");
+    background-size: 190px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 11%;
+    margin-left: 12%;
+}
+
+/* Espacio para email y contraseña (letras) */
+
+.login-pass::placeholder, .login-email::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    text-align: center;
+    letter-spacing: .5em;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+/* Diseño del contenedor campo email */
+
+.login-email{
+    text-align: center;
+    background-image: url("../img/login_registro/login-form-klma-humans_01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 25px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Diseño del contenedor campo Contraseña */
+
+.divojitos{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.divojitos>span:nth-child(1){
+    position: absolute;
+}
+
+.divojitos>span:nth-child(2){
+    position: absolute;
+    right: 0;
+}
+
+.login-pass {
+    text-align: center;
+    padding: 0px 30px;
+    background-image: url("../img/login_registro/login-form-klma-humans_02.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 25px;
+    box-shadow: none;
+    position: absolute;
+    border: none;
+    outline: none;
+}
+
+/* Botón ver y ocultar contraseñas */
+.btn-link, .btn-link:hover{
+    color: #000000;
+    opacity: 60%;
+    text-decoration: none;
+}
+
+/* Contenedor del formulario Login */
+.login-form{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+/*Enlace NICK NAME*/
+
+.nick_name p{
+    font-family: "MoristonPersonal-Medium";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    opacity: 60%;
+    letter-spacing: .2em;
+    word-spacing: 0.25em;
+    font-size: 5pt;
+    border-bottom: 1px dotted #000000;
+    margin-top: 30%;
+}
+
+/*Enlace REGRESAR*/
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MoristonPersonal-Medium";
+    color: black;
+    letter-spacing: .3em;
+    font-size: 5pt;
+    margin-top: 1%;
+    border-bottom: 1px dotted #000000;
+    margin-bottom: 7%;
+}
+
+/* Hover para etiquetas <a> */
+.nick_name:hover, .btn-submit:hover{
+    color: white;
+    text-decoration: none !important;
+}
+
+.back:hover{
+    color: black;
+    text-decoration: none !important;
+}
+
+/*Imagen Barras Degradado*/
+
+.img-barras {
+    background-image: url("../../img/barras-klma-humans.png");
+    background-size: 732px 39px;
+    background-repeat: no-repeat;
+    width: 682px;
+    height: 10px;
+    margin-top: .4%;
+    margin-bottom: .4%;
+    margin-left: 23.8%;
+}
+
+/*Botón REGISTRARME*/
+
+.btn-submit{
+    display: flex;
+    justify-content: center;
+    padding: 5px 50px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin-top: 1%;
+    font-family: "MoristonPersonal-Medium";
+    letter-spacing: .3em;
+    font-size: 9pt;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/*Diseño para FOOTER*/
+
+.hondas-footer{
+    background-position-x: 31px;
+    background-position-y: bottom;
+    height: 121px;
+    width: 85px;
+    background-image: url("../../img/hondulaciones-klma-humans.png");
+    background-size: 91px;
+    background-repeat: no-repeat;
+}
+
+.logo-footer{
+    background-position-x: right;
+    background-position-y: bottom;
+    height: 121px;
+    width: 85px;
+    background-image: url("../../img/logo-klma-humans.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+}
+/* FIN Configuración Registro */
+
+
+
+
+
+
+
+
+/* INICIO CONFIGURACIÓN LOUNGEWEAR GENERAL */
+
+/*Tamaño de rejillas*/
+.gridvertical {
+    display: grid;
+    grid-template-columns: 540px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gridhorizontal {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.griddoblevertical {
+    display: grid;
+    grid-template-columns: repeat(2, 545px);
+    grid-column-gap: 80px;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*Tamaño de imagenes en las rejillas*/
+
+.gridvertical {
+    width: 100%;
+    height: 100%;
+}
+
+.gridvertical img {
+    width: 503px;
+    height: 600px;
+    margin-bottom: 2%;
+}
+
+.gridhorizontal img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1%;
+}
+
+.griddoblevertical img {
+    width: 508px;
+    height: 605px;
+    grid-column: 1/2;
+    margin-bottom: 2%;
+}
+
+/*Contenedor para Imagenes Productos LoungeWear*/
+.carousel-product {
+    position: relative;
+    height: 460px;
+    width: 620px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-left: 0%;
+}
+
+/*Contenedor descripción de los Productos*/
+
+.body-card {
+    flex: 1 1 auto;
+    min-height: 1px;
+    max-width: 695px;
+    margin-top: 10px;
+}
+
+.card {
+    margin-left: 423px;
+    margin-right: 423px;
+    border: none;
+    
+}
+
+/* Titulos LOUNGEWEAR*/
+.card-title, .card-title:hover {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7.8pt;
+    text-align: right;
+    letter-spacing: .2rem;
+    margin-bottom: 0rem;
+}
+
+/*Configuracion Descripciones Loungewear*/
+.card-text {
+    min-height: .5rem;
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: left;
+    letter-spacing: .15rem;
+    margin-top: -.8rem;
+    margin-bottom: 0rem;
+}
+
+/*Descripcion para producto especifico*/
+.desc-prod-espec{
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: justify;
+    letter-spacing: .499rem;
+    margin-left: 10%;
+}
+
+/*Configuración FUENTE PRECIO*/
+.price, .price:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -1%;
+    text-decoration: none;
+}
+
+.price-horizontal, .price-horizontal:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .75rem;
+    text-align: right;
+    margin: -8px;
+}
+
+/* Titulo Seleccionar Talla */
+
+.choicesize{
+    font-family: "Helvetica";
+    font-weight: lighter;
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .499rem;
+    margin-left: 10%;
+}
+/* FIN CONFIGURACIÓN LOUNGEWEAR GENERAL */
+
+/* INICIO configuracion estilos pantalla loungewear producto especifico */
+/*Fuentes Especifico LW*/
+.font-lw-1{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    text-align: justify;
+}
+
+.font-tallas-lw, .font-tallas-lw:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 14pt;
+    max-width: 615px;
+}
+
+.contenedor-tallas-lw, .contenedor-tallas-lw:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 12pt;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-left: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-tallas-lw > div:first-child{
+    text-align: left!important;
+}
+
+.contenedor-tallas-lw >  div:last-child{
+    text-align: right!important;
+}
+
+.font-price-lw { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 15pt;
+    letter-spacing: 4.4rem;
+    /* max-width: 568px */
+}
+
+.font-tallas-lw2 { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .5rem;
+    margin-bottom: -1.5rem;
+}
+
+
+/*Grid para producto especifico Loungewear*/
+.grid-lw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* .grid-lw div {
+    border: 1px solid #000000;
+    margin: 0rem;
+} */
+
+
+.nested-grid-lw {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(10px, auto);
+}
+
+.elemento1 {
+    grid-column: 1/3;
+}
+
+.elemento2 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+}
+
+.elemento3 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.elemento4 {
+    /* grid-column: 3/4; */
+    align-self: center;
+    text-align: center;
+}
+
+/*Botones Negros + Hover neutral*/
+.btn-submit, .btn-submit:hover{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 9pt;
+    letter-spacing: .2rem;
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    text-decoration: none;
+    width: 220px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/*Div para los botones de las opciones Ver producto, Empaque Especial, Ver Detalles*/
+.btn-opciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
+/*Detalles del producto*/
+.btn-details-prod, .btn-details-prod:focus {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .3rem;
+    z-index: 100;
+    outline: none !important;
+}
+
+/*Detalles del producto*/
+.btn-verproduct, .btn-verproduct:focus {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .3rem;
+    z-index: 100;
+    outline: none !important;
+}
+
+/*Empaque Especial*/
+.btn-empaque, .btn-empaque:focus {
+    color: #000000;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1rem;
+    z-index: 100;
+    margin-left: 35%;
+    border: none;
+    outline: none !important;
+}
+
+/*Tallas*/
+.btn-change {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: .7rem;
+    z-index: 100;
+    margin-bottom: 7px;
+    outline: none !important;
+    margin-left: 45%;
+}
+
+.btn-size, .btn-size:focus {
+    color: #000000;
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: .7rem;
+    z-index: 100;
+    margin-bottom: 7px;
+    outline: none !important;
+}
+
+/* Cambio de color en la funcion de JQuery */
+.btn-empaque2, .btn-empaque2:focus {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 10px rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1rem;
+    margin-left: 35%;
+    z-index: 100;
+    border: none;
+    outline: none !important;
+}
+
+.btn-details-prod2, .btn-details-prod2 {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 20px rgb(0, 0, 0);
+    border: none;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .3rem;
+    z-index: 100;
+    outline: none !important;
+}
+
+.btn-size2, .btn-size2:focus{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    border: none;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: .7rem;
+    z-index: 100;
+    margin-left: 7%;
+    margin-bottom: 7px;
+    position: relative;
+    outline: none !important;
+}
+
+/*Selector circular de talla*/
+.talla-active{
+    border: 3px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.contentdetails {
+    width: 48%;
+    height: 585px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    text-align: justify;
+    font-size: 7pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 5px;
+    padding: 2%;
+}
+
+/*Contenedor descripcion detalles producto especifico*/
+.contentprod {
+    width:  83%;
+    height: 500px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8pt;
+    position: absolute;
+    bottom: 25px;
+}
+
+/* Contenedor para el boton de empaque especial */
+.contentbag {
+    width: 100%;
+    height: 590px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    text-align: justify;
+    position: absolute;
+    margin-left: 35%;
+    bottom: 0px;
+}
+
+/* Contenedor para el boton de las tallas */
+.contentsize {
+    width: 200%;
+    height: 537px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 10px 5px 20px rgb(0, 0, 0);
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    position: absolute;
+    right: -55px;
+    bottom: -23px;
+}
+
+/*Contenedor de botones para opciones*/
+.divopciones {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+/* Botones de Ver Detalles, Empaque Especial, Tallas */
+.btn-opciones:nth-child(1){
+    flex: 2;
+    margin-left: 4.6%;
+    align-items: flex-end;
+}
+
+.btn-opciones:nth-child(2){
+    flex: 1;
+    margin-left: 9.5%;
+    align-items: flex-end;
+}
+
+.btn-opciones:nth-child(3){
+    flex: 1;
+    letter-spacing: .3rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.btn-opciones:nth-child(4){
+    flex: 2;
+    margin-left: 8%;
+    letter-spacing: .3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Referencia */
+.refer:nth-child(1) {
+    letter-spacing: 2.7rem;
+}
+
+.refer:nth-child(2) {
+    letter-spacing: 0.433rem;
+
+}
+.refer:nth-child(3) {
+    letter-spacing: 1.1rem;
+}
+.refer:nth-child(4) {
+    letter-spacing: 1.48888888rem;
+}
+
+/* Texto del contenedor Ver Detalles */
+.refer-details:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+.refer-details:nth-child(2) {
+    margin-bottom: 2rem;
+}
+
+.refer-details:nth-child(3) {
+    margin-bottom: 2rem;
+}
+
+/* Texto del contenedor Empaque Especial */
+.refer-specialbag:nth-child(2) {
+    padding: 1%;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 9pt;
+    letter-spacing: 0.7rem;
+    text-align: justify;
+}
+
+.refer-specialbag:nth-child(3) {
+    padding: 2%;
+    font-size: 8pt;
+    letter-spacing: 0.3444444444rem;
+    text-align: justify;
+}
+
+.refer-specialbag:nth-child(4) {
+    padding: 2%;
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: 1.5rem;
+    text-align: justify;
+}
+
+.modalbody{padding: .1rem;}
+
+.modalcontent{
+position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem!important;
+    outline: 0;
+}
+
+/* Controles para adelantar y devolver el modal de las fotos */
+.control-prev-icon {
+    background-image: url(../img/flecha.png)!important;
+    width: 30px!important;
+    height: 30px!important;
+    background: no-repeat 50%/100% 100%;
+    display: inline-block;
+}
+
+.control-next-icon {
+    background-image: url(../img/flecha2.png)!important;
+    width: 30px!important;
+    height: 30px!important;
+    background: no-repeat 50%/100% 100%;
+    display: inline-block;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+/* FIN configuracion estilos pantalla loungewear producto especifico */
+
+
+
+/* --------------------------INCIO Configuración Productos generales Calmwear-------------------------- */
+/*
+.producto {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px, 540px));
+    grid-column-gap: 80px;
+    grid-row-gap: 100px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.producto img {
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    position: relative;
+    width: 100%;
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar * {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.titleproduct, .titleproduct:hover {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5em;
+}
+
+.desc{
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    letter-spacing: .5em;
+}
+
+.price, .price:hover {
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 15pt;
+    text-align: justify;
+    letter-spacing: 2.9em;
+    line-height: 1px;
+}*/
+
+/*
+.main-container {
+    min-width: 100vh;
+    position: relative;
+}
+
+.product img {
+    width: 150px;
+}
+
+.product p a, a:hover{
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5em;
+}
+*/
+
+.gridclmw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4.4rem;
+    margin: 7%;
+}
+
+.cover {
+    height: 410px;
+    width: 547px;
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1.5%;
+}
+
+.card-clmw {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+}
+
+.card-title, .card-title:hover {
+
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7.8pt;
+    text-align: right;
+    letter-spacing: .2rem;
+    margin-bottom: 0rem;
+}
+
+.text-clmw {
+    min-height: .5rem;
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: left;
+    letter-spacing: .15rem;
+}
+
+.price, .price:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -1%;
+    text-decoration: none;
+}
+/* --------------------------FIN Configuracion Calmwear-------------------------- */
+
+
+
+
+
+/* INICIO configuración Transition */
+/* GRID para imagenes de figuras geometricas */
+.gridtl {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 205px);
+    column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex:2;
+    overflow:auto;
+}
+
+.gridtl > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+/* GRID para imagenes de camisetas */
+.gridtlin {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 120px);
+    column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex:2;
+    overflow:auto;
+    z-index: 300;
+    margin-bottom: -10%;
+}
+
+.gridtlin > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ubicación y configuración tamaño de las figuras geometricas */
+.packet img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Ubicación y configuración tamaño de las imagenes */
+.tshirt img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    display: flex;
+    flex-flow: column wrap;
+    cursor: pointer;
+}
+
+/* Contenedor general de plantilla transition */
+.containertl {
+    /* margin-top: 5%; */
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 4%;
+    height:90vh;
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction:column;
+}
+
+/* Contenedor de sentimientos */
+.containerfeel2 {
+    display: flex;
+    flex:2;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: end;
+}
+
+.rotate {
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+    -ms-transform: rotate(-90deg); 
+    -o-transform: rotate(-90deg); 
+    transform: rotate(-90deg); 
+    
+    -webkit-transform-origin: 50% 50%; 
+    -moz-transform-origin: 50% 50%; 
+    -ms-transform-origin: 50% 50%; 
+    -o-transform-origin: 50% 50%; 
+    transform-origin: 50% 50%; 
+    
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .5rem;
+    color: #000000;
+    width: 250px;
+}
+/* 
+.grid-view div {
+    border: 1px solid #000000;
+    margin: 0rem;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+  }
+
+
+
+
+
+ /* INICIO Carro de compras */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 100000;
+    visibility: hidden;
+  }
+  .cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 100001;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+  }
+  .showCart {
+    transform: translateX(0);
+  }
+  .transparentBcg {
+    visibility: visible;
+  }
+
+  @media screen and (min-width: 768px) {
+    .cart {
+      width: 30vw;
+      min-width: 410px;
+    }
+  }
+  
+  .close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  .cart h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: center;
+    font-size: 8pt;
+    letter-spacing: 3.5555555555rem;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+  }
+  /*---------- Cart Item -------------------- */
+  .cart-item {
+    display: grid;
+    align-items: end;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0% 10%;
+  }
+
+  .cart-item img {
+    width: 95px;
+    height: 105px;
+  }
+
+  .cart-item h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: end;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+  }
+
+  .cart-item h3 {
+    margin: 0.5rem 0 0 0;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .23333333rem;
+    text-align: end;
+  }
+
+  .cart-size {
+    color: grey;
+    font-size: 6.5pt;
+    font-family: "Helvetica";
+    text-align: end;
+    letter-spacing: .2rem;
+    margin: 0.5rem 0;
+  }
+
+  .data-item {
+    text-align: end;
+  }
+
+  .item-amount {
+    text-align: start;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+  }
+
+  .remove-item {
+    color: grey;
+    cursor: pointer;
+  }
+
+  .plus-minus {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .plus-minus span {
+    font-size: 15pt;
+    cursor: pointer;
+  }
+
+/*---------- End of Cart Item -------------------- */
+.cart-footer {
+    margin-top: 15%;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-footer h3 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    letter-spacing: .7rem;
+    font-size: 9pt;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.cart-footer span {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    letter-spacing: .7rem;
+    font-size: 11pt;
+    margin-bottom: 5%;
+    text-align: right;
+}
+
+.cart-footer p{
+    font-family: "Helvetica";
+    font-size: 6.5pt;
+    letter-spacing: .5rem;
+    text-align: justify;
+}
+
+.cart-footer p:nth-child(3) {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    letter-spacing: .5rem;
+    font-size: 5pt;
+    text-align: center;
+    margin-top: 40%;
+}
+
+.cart-footer button {
+    margin-top: 5%;
+}
+
+.finalshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.finalshop > button {
+    padding: 1%;
+    letter-spacing: 0.3rem;
+    word-spacing: .5rem;
+}
+/* --------------- End of Cart ---------------- */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* INICIO CONFIGURACION PASARELA DE PAGOS */
+ 
+.pay-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 232, 220);
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow: auto;
+}
+
+.pay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(206, 199, 199);
+    padding: 2% 7% 0% 2%;
+}
+
+@media screen and (min-width: 768px) {
+    .pay {
+      width: 30vw;
+      min-width: 530px;
+    }
+  }
+ 
+hr {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1.5px solid;
+    color: rgba(0,0,0);
+    width: 98%;
+}
+
+.saleoff::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    text-align: center;
+    letter-spacing: 1em;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoff {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3% 0%;
+}
+
+/* Campo del codigo descuento */
+.saleoff input {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 310px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    padding: 0% 0% 1% 0%;
+}
+
+.btn-saleoff, .btn-saleoff:hover {
+    background-color: rgb(23, 23, 23);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 8pt;
+    letter-spacing: .7rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0%;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    margin: 0% 0% 0% 20%;
+}
+
+.btn-shipping, .btn-shipping:hover {
+    background-color: rgb(23, 23, 23);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 55px;
+    width: auto;
+}
+
+.saleoffcode {
+    display: flex;
+    flex-direction: column;
+}
+
+.saleoffcode::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    /* text-align: center; */
+    
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoffcode input {
+    text-align: center;
+    width: 100%px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.saleoffcode2 input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.saleoffcode2::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoffcode2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.saleoffcode3 input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.saleoffcode3::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoffcode3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkboxform {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkboxform input:checked{
+    background-color: #eee;
+  }
+
+.checkboxform input{
+    margin-right: 1%;
+}
+
+.payinfo {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .5rem;
+    word-spacing: .2rem;
+}
+
+.containersale {
+    width: 50%;
+    padding-right: 0%;
+    padding-left: 5%;
+    margin: 0% 0% 0% 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.datapay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.datapay > div:nth-child(2) {
+    font-family: "Helvetica";
+    font-size: 6pt;
+    letter-spacing: .2rem;
+}
+
+.datapay > a {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.steps {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 5pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.steps > i {
+    font-size: 12pt;
+}
+
+.datapay > i > a {
+    font-family: "Helvetica";
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.datapay > i {
+    display: flex;
+    align-items: center;
+}
+
+.datapay > a:hover {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* PASARELA PAGOS 2 */
+
+.containersale2 {
+    width: 50%;
+    padding: 2% 5% 0% 5%;
+    margin: 0% 0% 0% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.datachance {
+    background: white;
+    border: 1px solid;
+    border-radius: 8px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 0% 0% 0% 2%;
+
+}
+
+.datachance > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minichance {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .2rem;
+}
+
+.minichance:nth-child(1) {
+    padding: 2% 2% 2% 0%;
+}
+
+.minichance:nth-child(3) {
+    margin: 0% 0% 3% 0%;
+    padding: 2% 2% 2% 0%;
+}
+
+.minichance > label {
+    margin: 0%!important;
+}
+
+.btnminichance{
+    color: rgb(122, 122, 122);
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    border: none;
+    background-color: transparent;
+}
+
+.payinfo2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: 1.5rem;
+}
+
+.checkboxship {
+    font-family: "Helvetica";
+    font-size: 6pt;
+    letter-spacing: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: rgb(122, 122, 122);
+}
+ /* FIN CONFIGURACION PASARELA DE PAGOS */
+
+
+ /* ------------------INICIO CONFIGURACIÓN INTERFACES USUARIOS------------------ */
+ /* Interfaz Administrador */
+.introcontainer {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.introtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.introtext > p {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    color: #ffffff;
+}
+
+.introline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introline > img {
+    height: auto;
+    width: 45%;
+}
+
+.introline > a, .introline > a:hover {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dotted #ffffff;
+}
+
+.operationsec {
+    background-image: url("../img/interfaces/fondo_2.png");
+    background-color: transparent;
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.operationbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15%;
+}
+
+/* Admin Personas */
+.newprofile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px dotted #000000;
+    background: transparent;
+}
+
+.newprofile::placeholder {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 6pt;
+    text-align: center;
+    letter-spacing: .2rem;
+    word-spacing: .2rem;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.newdata {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newdata:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.introline2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introline2 > img {
+    height: auto;
+    width: 15%;
+}
+
+.btn-newprofile {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.tableadmin {
+    background: rgb(122, 122, 122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0% 0% 0%;
+    width: auto;
+    height: 35vh;
+}
+
+/* ----------------------------------Interfaz Ventas---------------------------------- */
+/* Configuración para Ventas */
+
+.containerbeige {
+    background: rgb(242, 232, 220);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 40vh;
+    width: auto;
+}
+
+.btnsales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.introline > a, .introline > a:hover {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
+}
+
+.usercounts {
+    font-family: "MoristonPersonal-Medium";
+    font-weight: bold;
+    font-size: 9pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+/* ------------------FIN CONFIGURACIÓN INTERFACES USUARIOS------------------ */
+
+
+
+
+
+
+
+
+
+/* ----------------------------INICIO configuracion Test--------------------------------- */
+/* Ubicación de componentes Answers */
+.answ{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+.answords{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.testicons, .testicons > img {
+    cursor: pointer;
+    width: 90px
+}
+
+.testicons2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.testicons2 > img {
+    height: 65%;
+    width: 65%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.testicons4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.testicons4 > img {
+    height: 65%;
+    width: 65%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.testwords {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 9pt;
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
+
+/* Texto INSTRODUCCION test */
+.introtest {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: .4rem;
+    text-align: justify;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest3 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 2.5rem;
+    word-spacing: 10rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest4 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 1.177777rem;
+    word-spacing: .5rem;
+    text-align: justify;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest5 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 1.177777rem;
+    word-spacing: .5rem;
+    text-align: justify;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest6 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 1.5rem;
+    word-spacing: 0.5rem;
+    text-align: justify;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* PREGUNTAS DEL TEST (parte inferior) */
+.question1 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1rem;
+    word-spacing: 1rem;
+    text-align: center;
+    margin-top: 6%;
+}
+
+.question2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1rem;
+    word-spacing: 7rem;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+.question3 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1.2rem;
+    word-spacing: 3rem;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.question4 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1.9rem;
+    word-spacing: 2rem;
+    text-align: center;
+    margin-top: 6%;
+}
+
+.question5 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 5.5rem;
+    word-spacing: 25rem;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.question6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 2.5rem;
+    word-spacing: 9rem;
+    text-align: center;
+    margin-top: 8%;
+}
+
+/* Selectores de respuesta */
+.select-wr{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+    border-radius: 100%;
+}
+
+.select-deep{
+    background: #d6e0e4;
+    width: fit-content;
+    border-radius: 100%; 
+    padding: 15px;
+    margin: 10px;
+}
+
+.select-wr2{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+    border-radius: 100%;
+}
+
+.select-deep2{
+    background: #d6e0e4;
+    width: fit-content;
+    border-radius: 100%; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.select-wr3{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+}
+
+.select-deep3{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.select-wr4{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content;
+    border-radius: 100%;
+}
+
+.select-deep4{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+    border-radius: 100%;
+}
+
+.select-wr5{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+}
+
+.select-deep5{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.select-wr6{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+}
+
+.select-deep6{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.selector-active6{
+    background-color: #d6e0e4;
+    /* background-image: url(img/seleccion1.png); */
+    border-radius: 50%;
+}
+
+/* Boton para Pasar a siguiente pregunta */
+.smooth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 20%;
+    outline: none !important;
+}
+
+.smooth > img {
+    width: 15%;
+}
+
+/*Configuración para Animaciones */
+
+.animate-introtest{
+    animation: fadeIn;
+    animation-duration: 4s;
+}
+
+.animate-q1{
+    animation: zoomIn;
+    animation-duration: 15s;
+}
+
+.animate-arrowbtn{
+    animation: slideInUp;
+    animation-duration: 10s;
+}
+
+.animate-selector1 {
+    animation: fadeInUp;
+    animation-duration: 5s;
+}
+
+.animate-selector2 {
+    animation: fadeInUp;
+    animation-duration: 6s;
+}
+
+.animate-selector3 {
+    animation: fadeInUp;
+    animation-duration: 7s;
+}
+
+.animate-selector4 {
+    animation: fadeInUp;
+    animation-duration: 8s;
+}
+
+.animate-selector5 {
+    animation: fadeInUp;
+    animation-duration: 9s;
+}
+
+.animate-selector6 {
+    animation: fadeInUp;
+    animation-duration: 10s;
+}
+
+/* ----------------------------INICIO CONFIGURACIÓN RESULTADOS TEST---------------------------- */
+.results {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: 9rem;
+    text-align: center;
+    margin-top: 6%;
+    margin-left: 10%;
+}
+
+.percents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.test {
+    height: 100%;
+    text-align: center;
+    place-items: center;
+}
+
+.circular {
+    height: 100px;
+    width: 100px;
+    transform: scale(1);
+}
+
+.circular .inner {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+}
+
+/* number1 .number2 .number3 .number4 .number5 .number6 */
+.circular .number1 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    z-index: 1000;
+    font-family: "HelveticaLt";
+    font-size: 14pt;
+    color: #000000;
+}
+
+.circular .number2 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    z-index: 1000;
+    font-family: "HelveticaLt";
+    font-size: 14pt;
+    color: #000000;
+}
+
+.circular .number3 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    z-index: 1000;
+    font-family: "HelveticaLt";
+    font-size: 14pt;
+    color: #000000;
+}
+
+.circular .number4 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    z-index: 1000;
+    font-family: "HelveticaLt";
+    font-size: 14pt;
+    color: #000000;
+}
+
+.circular .number5 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    z-index: 1000;
+    font-family: "HelveticaLt";
+    font-size: 14pt;
+    color: #000000;
+}
+
+.circular .number6 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    z-index: 1000;
+    font-family: "HelveticaLt";
+    font-size: 14pt;
+    color: #000000;
+}
+
+.circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d6e0e4;
+    border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progressbar{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: orangered;
+
+}
+
+.circle .left .progressbar{
+    z-index: 200;
+    animation: left 4s linear both;
+}
+
+.circle .right{
+    z-index: 210;
+    transform: rotate(180deg);
+}
+
+.circle .right .progressbar {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+}
+/*
+@keyframes left {
+    0%{
+        transform: rotate(90deg)
+    }
+    50%{
+        background:pink;
+    }
+    100%{
+        transform: rotate(180deg);
+        background: green;
+    }
+}*/
+
+/*@keyframes right {
+    50%{
+        transform: rotate(90deg)
+    }
+}*/
+
+.rotate {
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+    -ms-transform: rotate(-90deg); 
+    -o-transform: rotate(-90deg); 
+    transform: rotate(-90deg); 
+    
+    -webkit-transform-origin: 50% 50%; 
+    -moz-transform-origin: 50% 50%; 
+    -ms-transform-origin: 50% 50%; 
+    -o-transform-origin: 50% 50%; 
+    transform-origin: 50% 50%; 
+    
+    font-family: "MoristonPersonal-Regular";
+    font-size: 10pt;
+    letter-spacing: .5rem;
+    color: #000000;
+    width: 250px;
+}
+
+.containerfeel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8%;
+    text-align: end;
+}
+
+.feelings {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 1%;
+}
+
+/* Configuración resultado especifico Test */
+.introcontresult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.introresult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.introcontresult {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.introresult > p {
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.contcampaigns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.contcampaigns > div > a, .contcampaigns > div > a:hover {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .1rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.tshirtcampaigns > img, .tshirtcampaigns > a > img {
+    width: 70%;
+}
+
+/* ----------------------------- Configuracion frases de diseñadores -------------------------------- */
+
+.wrapper{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slider-testimonial{
+	width: 50%;
+	max-width: 1400px;
+	margin: auto;
+}
+
+.autor{
+	margin-bottom: 15px;
+}
+
+.autor p{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.designer-text{
+	padding: 10px 120px;
+}
+
+.designer-text p{
+	font-family: "HelveticaLt";
+    font-size: 7pt;
+    letter-spacing: .2rem;
+	text-align: center;
+	color: #454545;
+}
+
+/* FIN CONFIGURACIÓN TEST */
+
+
