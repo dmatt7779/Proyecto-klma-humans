@@ -1,0 +1,105 @@
+@font-face{
+    font-family:"MoristonPersonal-Bold, Helvetica";
+    src: url("./tipografia/MoristonPersonal-Bold.otf, Helvetica.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Imagen de fondo en el BODY*/
+body {
+    background-image: url(images/Fondo.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+/*Distibución para el header de este menú*/
+
+header.header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);  
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.logo img {
+    width: 80px;
+    margin: 15px;
+    grid-column: 1/1;
+}
+
+/*Contenedor principal */
+div.main{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.menua {
+    background-color:rgba(242, 232, 220, 0.6);
+    width:100%;
+    height:270px;
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 150px 190px 190px 200px;
+    align-items: center;
+ }
+
+ .loungewear, img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    grid-column: 2/3;
+ }
+
+ .calmwear img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    grid-column: 3/4;
+ }
+
+ .transition img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    grid-column: 4/4;
+ }
+
+ .nav {
+    margin-top: 30px;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: .5em;  
+ }
+
+ a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Helvetica";
+    font-size: 10pt;
+ }
+
+ .tnav {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 15pt;
+    letter-spacing: .6em;
+    margin-right: 20%;
+    font-weight: bold;
+ }

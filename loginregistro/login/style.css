@@ -1,0 +1,264 @@
+ 
+@font-face{
+    font-family:"MoristonPersonal-Medium";
+    src: url("./tipografia_login/MoristonPersonal-Medium.otf");
+}
+
+
+#navbarNav{
+    height: 70px;
+    
+}
+
+.navbar-expand-lg{
+    padding: 0%;
+}   
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+ul.mr-auto{
+    margin:0%;
+    float: left;
+    position: absolute;
+    top:-16px;
+    left: 95px;
+}
+
+.circulo{       
+    margin-left: 1%;
+    margin-top:1%;
+}
+
+.circulo a{
+    background-image:url("./img/circulo.png");
+    width:60px;
+    height: 60px;
+    background-size: 50px;
+}
+
+.titulo{
+    width: 254px;
+    height: 70px;
+    padding: 0px;
+}
+
+
+.menu-puntos , .menu-log , .menu-candado{
+    margin-top:0px;
+    margin-left: 65px;
+}
+
+
+/* Titulo*/
+
+.titulo{
+    margin-top: 35px;
+}
+
+
+.titulo a{
+    background-image:url("./img/titulo-klma-humans.png");
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;        
+    padding: 0px;    
+    background-position-x: 78%;
+}
+
+.menu-puntos a, .menu-log a, .menu-candado a{
+    background-image:url("./img/menu-klma-humans.png");
+    width:35px;
+    height: 35px;
+    padding: 0%;
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+
+.menu-puntos a{
+    background-position: left;
+}
+
+.menu-log a{
+    background-position: center;
+
+}
+
+.menu-candado a{
+    background-position: right;
+
+}
+
+.menu-puntos a, .menu-log a, .menu-candado a, .circulo a{
+    background-repeat: no-repeat;
+}
+
+/* Logo KLMA' HUMANS centrado */
+.img-form{
+    width: 190px;
+    height: 162px;
+    background-image: url("./img/imagen-login-klma-humans.png");
+    background-size: 190px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 11%;
+    margin-left: 12%;
+}
+
+/* Espacio para email y contraseña (letras) */
+
+.login-pass::placeholder, .login-email::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    text-align: center;
+    letter-spacing: .5em;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+/* Diseño del contenedor campo Login */
+
+.login-email{
+    text-align: center;
+    background-image: url("./img/login-form-klma-humans_01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 25px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Diseño del contenedor campo Contraseña */
+
+.login-pass {
+    text-align: center;
+    background-image: url("./img/login-form-klma-humans_02.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 25px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Contenedor del formulario Login */
+.login-form{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+/*Enlace olvidé mi contraseña*/
+
+.forget-pass p{
+    margin-top: 15%;
+    font-family: "MoristonPersonal-Medium";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: .4em;
+    word-spacing: 0.25em;
+    font-size: 5pt;
+    border-bottom: 1px dotted #000000;
+}
+
+/*Enlace a formulario de Registro*/
+
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MoristonPersonal-Medium";
+    color: black;
+    letter-spacing: .4em;
+    font-size: 5pt;
+    margin-top: 1%;
+    border-bottom: 1px dotted #000000;
+    margin-bottom: 7%;
+}
+
+/* Hover para etiquetas <a> */
+.forget-pass:hover, .btn-submit:hover{
+    color: white;
+    text-decoration: none !important;
+}
+
+.sign-up:hover{
+    color: black;
+    text-decoration: none !important;
+}
+
+/*Imagen Barras Degradado*/
+
+.img-barras {
+    background-image: url("./img/barras-klma-humans.png");
+    background-size: 732px 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    width: 732px;
+    height: 15px;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    margin-left: 23.8%;
+}
+
+/*Botón Ingresar*/
+
+.btn-submit{
+    display: flex;
+    justify-content: center;
+    padding: 5px 75px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin-top: 1%;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 9pt;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/*Diseño para FOOTER*/
+
+footer{
+    height: 150px;
+    background-color: #1d1d1b;
+}
+
+.hondas-footer{
+    background-position-x: 31px;
+    background-position-y: bottom;
+    height: 121px;
+    width: 85px;
+    background-image: url("./img/hondulaciones-klma-humans.png");
+    background-size: 91px;
+    background-repeat: no-repeat;
+}
+
+.logo-footer{
+    background-position-x: right;
+    background-position-y: bottom;
+    height: 121px;
+    width: 85px;
+    background-image: url("./img/logo-klma-humans.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+}
