@@ -56,119 +56,244 @@
     box-sizing: border-box;
 }
 
-#navbarNav{
-    height: 70px;
-    
+/* ------------------------------INICIO NAVBAR------------------------------------- */
+.nav-link{
+    padding: none!important;
 }
 
-.navbar-expand-lg{
-    padding: 0%;
-}   
+.dropdown-menu.show {
+    height: 120px;
+    transform: translate3d(-70px, 30px, 0px)!important;
+}
 
-.row{
+.dropdown-toggle::after {
+    visibility: hidden;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgb(26,24,24);
+}
+
+header.mainheader {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1%;
+    align-items: center;
+}
+
+header.mainheader .navlogo {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header.mainheader .navlogo > a > img {
+    width: 60px;
+}
+
+header.mainheader .navlogo2 {
+    grid-column: 2/3;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    margin: 0% 0% 0% 0%;
 }
 
-ul.mr-auto{
-    margin:0%;
-    float: left;
+header.mainheader .navlogo2 > a > img {
+    width: 220px;
+}
+
+header.mainheader .nav {
+    grid-column: 3/3;
+}
+
+.nested-nav {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-self: self-end;
+    column-gap: 2rem;
+    padding: 0% 2% 0% 0%;
+}
+
+.nested-nav > .dotsmenu {
+    grid-column: 1/2;
+}
+
+.nested-nav > .loginmenu {
+    grid-column: 2/3;
+}
+
+.nested-nav > .cartmenu {
+    grid-column: 3/3;
+}
+
+.nested-nav .cartmenu > img, .nested-nav .loginmenu > img, .nested-nav .dotsmenu > img   {
+    width: 25px;
+}
+
+.nested-nav .dropdown-toggle {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+/* ------------------------------FIN NAVBAR------------------------------------- */
+
+/* ----------------------------INICIO TEST FOOTER------------------------------- */
+
+#testfooter {
     position: absolute;
-    top:-16px;
-    left: 95px;
-}
-
-.circulo{       
-    margin-left: 1%;
-    margin-top:1%;
-}
-
-.circulo a{
-    background-image:url("../img/btn_shop.png");
-    width:80px;
-    height: 80px;
-    background-size: 65px;
-}
-
-.titulo{
-    width: 254px;
-    height: 70px;
-    padding: 0px;
-}
-
-
-.menu-puntos , .menu-log , .menu-candado{
-    margin-top:0px;
-    margin-left: 65px;
-}
-
-
-/* Titulo*/
-
-.titulo{
-    margin-top: 35px;
-}
-
-
-.titulo a{
-    background-image:url("../img/titulo-klma-humans.png");
-    height: 50px;
-    background-size: contain;
-    background-repeat: no-repeat;        
-    padding: 0px;    
-    background-position-x: 77%;
-}
-
-.menu-puntos a, .menu-log a, .menu-candado a{
-    background-image:url("../img/menu-klma-humans.png");
-    width:35px;
-    height: 35px;
-    padding: 0%;
-    background-position: center;
-    background-size: 165px;
-    float: left;
-}
-
-.menu-puntos a{
-    background-position: left;
-}
-
-.menu-log a{
-    background-position: center;
-
-}
-
-.menu-candado a{
-    background-position: right;
-
-}
-
-.menu-puntos a, .menu-log a, .menu-candado a, .circulo a{
-    background-repeat: no-repeat;
-}
-
-
-/* ----------------------------INICIO Configuración Footer------------------------------- */
-
-footer {
-    position: fixed;
     bottom: 0px;
+    left: 0px;
     width: 100%;
     background-color: rgb(242, 232, 220);
 }
 
-.footer-content > img {
-width: 20%;
-height: 20%;
+.footercontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 1%;
 }
-/* ----------------------------FIN Configuración Footer------------------------------- */
+
+.footerleft {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerleft > img {
+width: 25%;
+}
+
+.footerright > a {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footerright > a > img {
+    width: 20%;
+}
+/* ----------------------------FIN TEST FOOTER------------------------------- */
+
+/* ----------------------------INICIO GENERAL FOOTER------------------------------- */
+
+#mainfooter {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #000000;
+}
+
+.maincontentf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+}
+
+.suscribe {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.newsletter > span {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 4pt;
+    color: #ffffff;
+    letter-spacing: .2rem;
+    width: 305px;
+
+}
+
+.conected > h6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    color: #ffffff;
+    letter-spacing: .5rem;
+}
+
+.btnnews {
+    background-color: rgb(148, 149, 148);
+    color: rgb(255, 255, 255);
+    font-family: MoristonPersonal-Medium;
+    font-size: 5pt;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 0% 0% 0% 0.3%;
+    margin: 0% 0% 0% 1.44444%;
+}
+
+.socialfooter img {
+    width: 50px;
+}
+
+.footerhr {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1px solid;
+    color: rgba(255, 255, 255);
+    width: 100%;
+}
+
+.footerhr2 {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1px solid;
+    color: rgba(255, 255, 255);
+    width: 100%;
+}
+
+.legaltexts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0% 1%;
+}
+
+.legaltexts > a {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 5pt;
+    color: #ffffff;
+    letter-spacing: .5rem;
+}
 
 
+/* ----------------------------FIN GENERAL FOOTER------------------------------- */
 
-/* INICIO Configuración Menu Shop */
+/* ---------------------------------------INICIO MENU SHOP--------------------------------------- */
 /*Imagen de fondo en el BODY*/
 .contenmenu {
     background-image: url(../img/menushop/Fondo.png);
@@ -190,7 +315,7 @@ header.header {
 }
 
 .logo img {
-    width: 80px;
+    width: 60px;
     margin: 10px;
     grid-column: 1/1;
 }
@@ -207,76 +332,141 @@ div.main{
     background-color:rgba(242, 232, 220, 0.6);
     width:100%;
     height:270px;
-    margin-top: 130px;
+    margin-top: 10%;
     display: grid;
     grid-template-columns: 150px 190px 190px 200px;
     align-items: center;
- }
+}
 
- .loungewear > img {
+ .loungewear {
     display: flex;
     justify-content: center;
-    width: 150px;
     grid-column: 2/3;
- }
+}
+
+ .calmwear {
+    display: flex;
+    justify-content: center;
+    grid-column: 3/4;
+}
+
+ .transition {
+    display: flex;
+    justify-content: center;
+    grid-column: 4/4;
+}
+
+ .loungewear img {
+    width: 150px;
+}
 
  .calmwear img {
-    display: flex;
-    justify-content: center;
     width: 150px;
-    grid-column: 3/4;
- }
+}
 
  .transition img {
-    display: flex;
-    justify-content: center;
     width: 150px;
-    grid-column: 4/4;
- }
+}
 
  .nav {
     margin-left: 2%;
-    width:100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 10pt;
- }
+}
 
- a {
+ .loungewear > a, .calmwear > a, .transition > a {
     text-decoration: none;
-    color: #000000;
+    color: rgb(26,24,24);
     font-family: "Helvetica";
     font-size: 10pt;
- }
+    letter-spacing: 2rem;
+}
 
  .tnav {
     grid-column: 2/2;
+}
+
+ .tnav > ol > a {
     text-decoration: none;
-    color: #000000;
+    color: rgb(26,24,24);
     font-family: "MoristonPersonal-Bold";
-    font-size: 15pt;
+    font-size: 9pt;
     margin-right: 20%;
     font-weight: bold;
     letter-spacing: 2.0rem;
     word-spacing: .5rem;
- }
- /* FIN Configuración Menu Shop */
+}
 
+ /* ---------------------------------------FIN MENU SHOP--------------------------------------- */
 
+ /* ---------------------------------------INICIO MENU KLMA--------------------------------------- */
 
+ .menub {
+    background-color:rgba(242, 232, 220, 0.6);
+    height:270px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    margin: 1% 0% 0% 0%;
+}
 
+.bloungewear > a, .bcalmwear > a, .btransition > a {
+    text-decoration: none;
+    color: rgb(26,24,24);
+    font-family: "Helvetica";
+    font-size: 8.5pt;
+}
 
+.bloungewear, a {
+    text-align: center;
+    letter-spacing: .400000rem;
+}
 
+.bcalmwear > a {
+    letter-spacing: .71111111rem;
+}
 
+.btransition > a {
+    letter-spacing: .52222222rem;
+}
 
+.bloungewear, .bloungewear img {
+    grid-column: 2/3;
+    width: 150px;
+}
 
+.bcalmwear, .bcalmwear img {
+    grid-column: 3/4;
+    width: 150px;
+}
 
+.btransition, .btransition img {
+    grid-column: 4/5;
+    width: 150px;
+}
 
+.bnav {
+    grid-column: 6/8;
+}
 
+.bnav > .btnav > ol > a {
+    text-decoration: none;
+    color: rgb(26,24,24);
+    font-family: "MoristonPersonal-Bold";
+    font-size: 7pt;
+    font-weight: bold;
+    letter-spacing: .4rem;
+}
 
+.bnav > .btnav > ol {
+    text-align: right;
+}
+
+ /* ---------------------------------------FIN MENU KLMA--------------------------------------- */
 
 /* -------------------------INCIO Configuración Registro------------------------- */
 /* Logo KLMA' HUMANS centrado */
@@ -352,7 +542,7 @@ div.main{
 
 /* Botón ver y ocultar contraseñas */
 .btn-link, .btn-link:hover{
-    color: #000000;
+    color: rgb(26,24,24);
     opacity: 60%;
     text-decoration: none;
 }
@@ -618,7 +808,6 @@ div.main{
     font-size: 7pt;
     text-align: center;
     letter-spacing: .499rem;
-    margin-left: 10%;
 }
 /* FIN CONFIGURACIÓN LOUNGEWEAR GENERAL */
 
@@ -632,7 +821,7 @@ div.main{
 }
 
 .font-tallas-lw, .font-tallas-lw:hover{
-    color: #000000;
+    color: rgb(26,24,24);
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -641,7 +830,7 @@ div.main{
 }
 
 .contenedor-tallas-lw, .contenedor-tallas-lw:hover{
-    color: #000000;
+    color: rgb(26,24,24);
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -757,7 +946,7 @@ div.main{
 
 /*Detalles del producto*/
 .btn-details-prod, .btn-details-prod:focus {
-    color: #000000;
+    color: rgb(26,24,24);
     border: none;
     background: #ffffff;
     text-decoration: none;
@@ -771,7 +960,7 @@ div.main{
 
 /*Detalles del producto*/
 .btn-verproduct, .btn-verproduct:focus {
-    color: #000000;
+    color: rgb(26,24,24);
     border: none;
     background: #ffffff;
     text-decoration: none;
@@ -785,7 +974,7 @@ div.main{
 
 /*Empaque Especial*/
 .btn-empaque, .btn-empaque:focus {
-    color: #000000;
+    color: rgb(26,24,24);
     background: #ffffff;
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
@@ -793,31 +982,72 @@ div.main{
     font-size: 8pt;
     letter-spacing: 1rem;
     z-index: 100;
-    margin-left: 35%;
+    margin: 0% 10% 0% 15%;
+    padding: 0% 2% 1% 1%;
+    width: 80%;
     border: none;
     outline: none !important;
 }
 
+.btn-empaque > .empaque {
+    letter-spacing: 1.1333333333rem;
+}
+
+.btn-empaque > .especial {
+    letter-spacing: .9999999rem;
+}
+
+
+/* ----------------------------------INPUT PERSONALIZADO---------------------------------------------------- */
+
+/* Centra el input personalizado con el texto */
+.custom-radio-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* Modificador para dar la imagen de radio */
+.custom-radio-checkbox__show--radio {
+    background-image: url(../img/esp_lg/uncheck.png);
+}
+
+/* Oculta input original */
+.custom-radio-checkbox > .custom-radio-checkbox__input {
+    display: none;
+}
+
+/* Radio personalizado usando <span> */
+.custom-radio-checkbox > .custom-radio-checkbox__show {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+/* Cambia el radio personalizado cuando es pulsado */
+.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
+    background-image: url(../img/esp_lg/check.png);
+}
+/* ----------------------------------INPUT PERSONALIZADO---------------------------------------------------- */
+
 /*Tallas*/
 .btn-change {
     color: #ffffff;
-    display: flex;
-    flex-direction: column;
     border: none;
-    background: #000000;
+    background: rgb(26,24,24);
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 10pt;
     letter-spacing: .7rem;
     z-index: 100;
-    margin-bottom: 7px;
+    margin-bottom: 3%;
     outline: none !important;
-    margin-left: 45%;
 }
 
 .btn-size, .btn-size:focus {
-    color: #000000;
+    color: rgb(26,24,24);
     border: none;
     background: #ffffff;
     text-decoration: none;
@@ -826,7 +1056,7 @@ div.main{
     font-size: 10pt;
     letter-spacing: .7rem;
     z-index: 100;
-    margin-bottom: 7px;
+    margin: 0% 0% 6% 7%;
     outline: none !important;
 }
 
@@ -840,10 +1070,20 @@ div.main{
     font-weight: bold;
     font-size: 8pt;
     letter-spacing: 1rem;
-    margin-left: 35%;
+    width: 80%;
+    margin: 0% 10% 0% 15%;
     z-index: 100;
+    padding: 0% 2% 1% 1%;
     border: none;
     outline: none !important;
+}
+
+.btn-empaque2 > .empaque {
+    letter-spacing: 1.1333333333rem;
+}
+
+.btn-empaque2 > .especial {
+    letter-spacing: .9999999rem;
 }
 
 .btn-details-prod2, .btn-details-prod2 {
@@ -871,8 +1111,7 @@ div.main{
     font-size: 10pt;
     letter-spacing: .7rem;
     z-index: 100;
-    margin-left: 7%;
-    margin-bottom: 7px;
+    margin: 0% 0% 6% 7%;
     position: relative;
     outline: none !important;
 }
@@ -885,8 +1124,8 @@ div.main{
 }
 
 .contentdetails {
-    width: 48%;
-    height: 585px;
+    width: 30%;
+    height: 541%;
     color: #ffffff;
     background-color: rgb(0, 0, 0);
     box-shadow: 5px 10px 8px rgb(0, 0, 0);
@@ -916,22 +1155,22 @@ div.main{
 
 /* Contenedor para el boton de empaque especial */
 .contentbag {
-    width: 100%;
-    height: 590px;
+    width: 85%;
+    height: 545%;
     color: #ffffff;
     background-color: rgb(0, 0, 0);
     box-shadow: 5px 10px 8px rgb(0, 0, 0);
     font-family: "Helvetica";
     text-align: justify;
     position: absolute;
-    margin-left: 35%;
+    margin-left: -7%;
     bottom: 0px;
 }
 
 /* Contenedor para el boton de las tallas */
 .contentsize {
-    width: 200%;
-    height: 537px;
+    width: 175%;
+    height: 468px;
     color: #ffffff;
     background-color: rgb(0, 0, 0);
     box-shadow: 10px 5px 20px rgb(0, 0, 0);
@@ -939,8 +1178,15 @@ div.main{
     font-weight: bold;
     font-size: 8pt;
     position: absolute;
-    right: -55px;
-    bottom: -23px;
+    right: -40px;
+    bottom: -25px;
+}
+
+.btn-sizes2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Contenedor de botones para opciones*/
@@ -949,31 +1195,37 @@ div.main{
     display:flex;
     flex-direction:row;
     justify-content:space-around;
+    bottom: 80px;
 }
 
 /* Botones de Ver Detalles, Empaque Especial, Tallas */
 .btn-opciones:nth-child(1){
-    flex: 2;
-    margin-left: 4.6%;
+    flex: 3;
+    margin-left: 5.1111111%;
     align-items: flex-end;
 }
 
 .btn-opciones:nth-child(2){
     flex: 1;
-    margin-left: 9.5%;
+    margin: 0% 1.7777777% 0% 0%;
     align-items: flex-end;
 }
 
 .btn-opciones:nth-child(3){
-    flex: 1;
-    letter-spacing: .3rem;
+    flex: 0;
     align-items: flex-end;
     justify-content: center;
 }
 
+.btn-opciones:nth-child(3) > label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-opciones:nth-child(4){
     flex: 2;
-    margin-left: 8%;
+    margin-left: 6.55555555555%;
     letter-spacing: .3rem;
     flex-direction: column;
     justify-content: center;
@@ -1011,17 +1263,17 @@ div.main{
 
 /* Texto del contenedor Empaque Especial */
 .refer-specialbag:nth-child(2) {
-    padding: 1%;
+    padding: 2% 0% 0% 0%;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 9pt;
-    letter-spacing: 0.7rem;
-    text-align: justify;
+    letter-spacing: 0.5rem;
+    text-align: center;
 }
 
 .refer-specialbag:nth-child(3) {
     padding: 2%;
-    font-size: 8pt;
+    font-size: 7pt;
     letter-spacing: 0.3444444444rem;
     text-align: justify;
 }
@@ -1030,7 +1282,7 @@ div.main{
     padding: 2%;
     font-weight: bold;
     font-size: 11pt;
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.33333333333rem;
     text-align: justify;
 }
 
@@ -1090,86 +1342,6 @@ position: relative;
 
 
 /* --------------------------INCIO Configuración Productos generales Calmwear-------------------------- */
-/*
-.producto {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px, 540px));
-    grid-column-gap: 80px;
-    grid-row-gap: 100px;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    margin-top: 60px;
-}
-
-.producto img {
-    width: 100%;
-    height: 100%;
-}
-
-#sidebar {
-    position: relative;
-    width: 100%;
-    border: 1px solid red;
-    margin: 0;
-    padding: 0;
-}
-
-#sidebar * {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-.titleproduct, .titleproduct:hover {
-    text-decoration: none;
-    color: #000000;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 11pt;
-    letter-spacing: .5em;
-}
-
-.desc{
-    font-family: "Helvetica";
-    font-size: 10pt;
-    text-align: justify;
-    letter-spacing: .5em;
-}
-
-.price, .price:hover {
-    color: #000000;
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 15pt;
-    text-align: justify;
-    letter-spacing: 2.9em;
-    line-height: 1px;
-}*/
-
-/*
-.main-container {
-    min-width: 100vh;
-    position: relative;
-}
-
-.product img {
-    width: 150px;
-}
-
-.product p a, a:hover{
-    text-decoration: none;
-    color: #000000;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 11pt;
-    letter-spacing: .5em;
-}
-*/
-
 .gridclmw {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1196,7 +1368,7 @@ position: relative;
 .card-title, .card-title:hover {
 
     text-decoration: none;
-    color: #000000;
+    color: rgb(26,24,24);
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 7.8pt;
@@ -1214,7 +1386,7 @@ position: relative;
 }
 
 .price, .price:hover{
-    color: #000000;
+    color: rgb(26,24,24);
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -2165,8 +2337,8 @@ align-items: center;
     font-size: 7pt;
     letter-spacing: .4rem;
     text-align: justify;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
 .introtest3 {
@@ -2441,7 +2613,7 @@ align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .test {
@@ -2719,5 +2891,61 @@ align-items: center;
 }
 
 /* FIN CONFIGURACIÓN TEST */
+
+/* ---------------------------INICIO PODCAST--------------------------- */
+ #divisor-pod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#divisor-pod > img {
+    width: 50%;
+    margin: 2% 0%;
+}
+
+.container-fluid > div > div > a > img {
+    width: 80%;
+    margin: 2rem 0%;
+}
+/* ---------------------------FIN PODCAST--------------------------- */
+
+/* ----------------------------------INICIO BLOG---------------------------------- */
+
+/* Titulos Blogs*/
+.blog-title, .blog-title:hover {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 9pt;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.card-link > h2 {
+    font-size: 7pt;
+    letter-spacing: .2rem;
+}
+
+/*Textos Blog*/
+.blog-text {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .5rem;
+    word-spacing: .5rem;
+}
+
+.personalhr {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 14px solid;
+    color: rgb(189,213,220, .5);
+    width: 100%;
+}
+/* ----------------------------------FIN BLOG---------------------------------- */
+
 
 
