@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+
+    session_start();
+    include "/opt/lampp/htdocs/Klma-humans/global/config.php";
+    include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
+
+        $id = $_POST['id'];
+       
+
+       
+       $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
+       $sentencia -> execute();
+       $producto=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+         
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +23,7 @@
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/flexboxgrid.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 </head>
 
 <body>
@@ -32,10 +47,10 @@
                 <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item menu-log">
-                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="../login/login1/login.php"></a>
                 </li>
-                <li class="nav-item menu-candado">
-                <a class="nav-link" href="#"></a>
+                <li class="nav-item">
+                <button class="nav-link menu-candado" id="btnCart"></button>
                 </li>
             </ul>
             </div>
@@ -44,21 +59,6 @@
         </div>
     </nav>
 </header>
-<?php
-
-
-    include "/opt/lampp/htdocs/Klma-humans/global/config.php";
-    include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
-
-        $id = $_POST['id'];
-       
-
-       
-       $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
-       $sentencia -> execute();
-       $producto=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-         
-?>
     
 <!-- INICIO GRID PADRE -->
 <div>
@@ -113,18 +113,21 @@
 
             <!--  Seleccionador de Tallas -->
             <div class="elemento3" id="divTalla">
-                <div class="aTalla contenedor-tallas-lw">S</div>
-                <div class="aTalla contenedor-tallas-lw">M</div>
-                <div class="aTalla contenedor-tallas-lw">L</div>
-                <div class="aTalla contenedor-tallas-lw">XL</div>
+                <div onclick="talla('s');" class="aTalla contenedor-tallas-lw">S</div>
+                <div onclick="talla('m');" class="aTalla contenedor-tallas-lw">M</div>
+                <div onclick="talla('l');" class="aTalla contenedor-tallas-lw">L</div>
+                <div onclick="talla('xl');" class="aTalla contenedor-tallas-lw">XL</div>
             </div>
         </div><!-- FIN GRID Anidado -->
     </div><!-- FIN GRID PADRE -->
-        
+        <form action="newcar.php" name="carrito" method="post">
+            <input type="hidden" name="talla" id="talla">
+            <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
+        </form>
 
     <!--Descripción del producto bajo el carousel-->
     <div class="body-card">
-        <p class="desc-prod-espec">EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR OPORTUNIDAD</p>
+        <p class="desc-prod-espec"><?php echo $producto[0]['historia'] ?></p>
     </div>
 
     <!--Botones Opciones para mostrar contenedores hidden-->
@@ -208,7 +211,6 @@
                         <div class="carousel-item">
                             <img src="img/producto05.png" class="d-block w-100" alt="...">
                         </div>
-
                         <div class="carousel-item">
                             <img src="img/producto06.png" class="d-block w-100" alt="...">
                         </div> -->
@@ -230,77 +232,121 @@
                     <div class="contentsize" id="divSize" hidden>
                         <img class="d-block w-100" src="../assets/img/icicle_ss2020_natural.jpg" alt="">
                         <p class="choicesize mt-3">SELECCIONAR TALLA</p>
-                        <button class="btn-change">S</button>
+                        <button  class="btn-change">S</button>
                         <button class="btn-change">M</button>
-                        <button class="btn-change">L</button>
-                        <button class="btn-change">XL</button>
+                        <button  class="btn-change">L</button>
+                        <button   class="btn-change">XL</button>
                     </div>
                 </div>
                 <button id="btn-size" class="btn-size" name="bntOpciones" data-target="divSize">TALLAS</button>
             </div>
-            <a href="#" class="btn-submit">ADD TO CART</a>
+            <a onclick="enviar_carro();" href="#" class="btn-submit" id="aAddCart">ADD TO CART</a>
             <a href="#" class="btn-submit">BUY IT NOW</a>
         </div>
     </div><!-- FIN Contenedores hidden -->
 </div>
 
+    <!-- INICIO Carrito de compras -->
+    <div class="cart-overlay" id="divCart">
+        <div class="cart">
+            <span class="close-cart">
+                <i class="fas fa-times" id="closecart"></i>
+            </span>
+            <h1>RESUMEN</h1>
+
+            <div class="cart-content">
+                <!-- Cart items -->
 
 
-<!-- INICIO Carrito de compras -->
-<div class="cart-overlay">
-    <div class="cart">
-        <span class="close-cart">
-            <i class="fas fa-times"></i>
-        </span>
-        <h1>RESUMEN</h1>
+<?php
 
-        <div class="cart-content">
-            <!-- Cart items -->
-            <div class="cart-item">
-                <div class="data-item">
-                    <div class="plus-minus">
-                        <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
+    $iduser = $_SESSION['iduser'];      
+       $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+       $sentencia -> execute();
+       $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+       if (empty($venta)) {
+        $ventaid =  "";
+       }else{
+        $ventaid =  $venta[0]['id'];
+       }
+       $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+       $sentencia -> execute();
+       $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+         
+
+    
+    
+    $subtotal = 0;
+
+
+foreach($detalleventa as $detventa){ ?>
+
+
+                <div class="cart-item">
+                    <div class="data-item">
+                        <div class="plus-minus">
+                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
+                        </div>
+                        <h2><?php echo $detventa['nombre'] ?></h2>
+                        <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+                        <h3><?php echo $detventa['precio_venta'] ?></h3>
+                        <!-- <span class="remove-item">remove</span> -->
                     </div>
-                    <h2>COMERCIAL BAG</h2>
-                    <span class="cart-size">CIRCLE</span>
-                    <h3>$15.000</h3>
-                    <!-- <span class="remove-item">remove</span> -->
+                    <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div>
-                <img src="../assets/img/bolso.png" alt="">
+    <?php
+                $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+    ?>
+
+
+<?php  
+}
+
+?>
+
+                
+                <!-- FIN Cart items -->
             </div>
 
-            <div class="cart-item">
-                <div class="data-item">
-                    <div class="plus-minus">
-                        <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
+            <!-- INICIO Cart footer -->
+            <div class="cart-footer">
+                <div class="subtotal">
+                <h3>SUBTOTAL:</h3>
+                <span class="cart-total">$<?php echo $subtotal ?></span>
+                </div>
+                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
+                <form  method="post">
+                    <input id="test" type="checkbox"><p>ACEPTO LOS TERMINOS Y CONDICIONES</p> </input>
+                </form>
+                    <div class="finalshop">
+                        
+                            <button onclick="javascript:prueba();" href="../carrito de compras/pagos1.php" class="btn btn-submit">              
+                            FINALIZAR PEDIDO                              
+                            </button>    
+
+                        
+                        
                     </div>
-                    <h2>COMERCIAL BAG</h2>
-                    <span class="cart-size">CIRCLE</span>
-                    <h3>$15.000</h3>
-                    <!-- <span class="remove-item">remove</span> -->
-                </div>
-                <img src="../assets/img/John_Elliott.jpg" alt="">
             </div>
-            <!-- FIN Cart items -->
-        </div>
-
-        <!-- INICIO Cart footer -->
-        <div class="cart-footer">
-            <div class="subtotal">
-            <h3>SUBTOTAL:</h3>
-            <span class="cart-total">$0</span>
-            </div>
-            <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-            <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
-                <div class="finalshop">
-                    <button class="btn btn-submit">FINALIZAR PEDIDO</button>
-                </div>
         </div>
     </div>
-</div>
-<!-- FIN Carrito de compras -->
+    <!-- FIN Carrito de compras -->
+<script>
+    function prueba(){
+        var isChecked = document. getElementById('test').checked;
+            if(isChecked){
+                window.location.href = "../carrito de compras/pagos1.php"
+            }else{
 
+                alert("para proceder a finalizar el pedido debe aceptar los terminos y condiciones")
+            }
 
+                
+    }
+
+</script>
+  
 
 
 <!-- JS, Popper.js, and jQuery -->
@@ -315,7 +361,65 @@
   crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<script src="../assets/js/new.js"></script>
+<!-- Script para ocultar obejtos HTML -->
+<script>
+
+  $('button[name="bntOpciones"]').click(function(){
+     var 
+        Target = $(this).attr('data-target'),
+        Elemento = $('#'+Target),
+        Atributo = $('#'+Target).attr('hidden')
+
+        if( Atributo !== false && typeof Atributo !== 'undefined' ){
+          Elemento.removeAttr('hidden') 
+        } else {
+          
+          Elemento.attr('hidden', true)
+        }
+      });
+</script>
+
+<!-- Script para cambiar botones de color White to Black -->
+<script>
+    //Boton para ver Empaque Especial
+    $("#btn-chance").click(function(){
+    $(this).toggleClass("btn-empaque btn-empaque2");
+    });
+
+    //Boton para ver detalles
+    $("#btn-details-prod").click(function(){
+    $(this).toggleClass("btn-details-prod btn-details-prod2");
+    });
+
+    //Boton para ver tallas
+    $("#btn-size").click(function(){
+    $(this).toggleClass("btn-size btn-size2");
+    });
+</script>
+
+<!-- Script para seleccionar tallas -->
+<script type="text/javascript">
+    $('#divTalla').find('.aTalla').click( function(){
+        $('.aTalla').removeClass('talla-active');
+        $(this).addClass('talla-active');
+    } )
+</script>   
+
+
+
+
+
+
+
+<script>
+$('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
+$('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
+</script>
+
+
+<script src="../assets/js/carrito.js"></script>
+
+
 
 </body>
 </html>

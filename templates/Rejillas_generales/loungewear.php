@@ -17,6 +17,11 @@ include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
     <link rel="stylesheet" href="../assets/style/style.css">
 
 </head>
+<?php
+session_start();
+
+       
+?>       
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
@@ -38,7 +43,7 @@ include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
                     <a class="nav-link" href="#"></a>
                   </li>
                   <li class="nav-item menu-log">
-                    <a class="nav-link" href="#"></a>
+                    <a class="nav-link" href="../login/login1/login.php"></a>
                   </li>
                   <li class="nav-item menu-candado">
                     <a class="nav-link" href="#"></a>
@@ -63,7 +68,7 @@ include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
 <!-- Rejilla Vertical alineada al centro -->
 
 <?php
-    $sentencia = $pdo->prepare("SELECT * FROM productos where tipologia_id = 1");
+    $sentencia = $pdo->prepare("SELECT * FROM productos where tipologia_id = 1 and habilitado = 1");
     $sentencia -> execute();
     $listaproductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
    

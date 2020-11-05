@@ -1,3 +1,12 @@
+<?php
+
+    session_start();
+    include "/opt/lampp/htdocs/Klma-humans/global/config.php";
+    include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
+
+        
+         
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,32 +68,80 @@
 
         <div>
             <div class="datapay">
-                <i class="fas fa-chevron-left"><a href="#" class="ml-1">VOLVER AL CARRITO</a></i>
+                <i class="fas fa-chevron-left"><a href="#" onclick="javascript:atras();" class="ml-1">VOLVER AL CARRITO</a></i>
                 <button class="btn btn-shipping">CONTINUAR CON ENV&Iacute;OS</button>
             </div>
         </div>
     </div>
-
-
     
+
     <!-- INICIO configuración pasarela de pagos 1 -->
     <div class="pay-form">
         <div class="pay">
             <!-- Contenedor de objetos para el carrito de compras -->
             <div class="cart-content mt-5">
                 <!-- Cart items -->
+
+
+
+
+
+
+
+
+    <!-- aqui va lo que pruebo -->
+    <?php
+
+$iduser = $_SESSION['iduser'];      
+   $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+   $sentencia -> execute();
+   $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+   $ventaid =  $venta[0]['id'];
+   $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+   $sentencia -> execute();
+   $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+     
+
+
+
+$subtotal = 0;
+
+
+foreach($detalleventa as $detventa){ ?>
+
+
+
+
+    
                 <div class="cart-item mb-4">
                     <div class="data-item">
                         <div class="plus-minus">
-                            <p class="item-amount mb-4">1</p>
+                            <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>
                         </div>
-                        <h2>COMERCIAL BAG</h2>
-                        <span class="cart-size">CIRCLE</span>
-                        <h3>$15.000</h3>
+                        <h2><?php echo $detventa['nombre'] ?></h2>
+                        <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+                        <h3>$<?php echo $detventa['precio_venta'] ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
-                    <img src="../assets/img/bolso.png" alt="">
+                    <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div><hr>
+
+
+
+                <?php 
+            $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+            
+?>
+
+
+<?php  
+}
+$iva = ($subtotal * 19)/100;
+$total = $subtotal + $iva;
+
+?>
                 <!-- FIN Cart items -->
                 <div class="saleoff">
                     <div class="row">
@@ -96,18 +153,25 @@
                 <div class="cart-footer mt-4">
                     <div class="subtotal">
                         <h3>SUBTOTAL</h3>
-                        <span style="font-size: 6pt;">$90.000</span>
+                        <span style="font-size: 6pt;">$<?php echo $subtotal?></span>
                     </div>
                     <p>EL COSTO DE ENVIO SER&Aacute; VISIBLE EN EL SIGUIENTE PASO</p><hr>
                     <div class="subtotal mt-4">
                         <h3>TOTAL</h3>
-                        <span>$70.000</span>
+                        <span>$<?php echo $total?></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+
+    function atras(){
+    window.history.back();
+    window.history.back();
+    }
+</script>
 
 </body>
 </html>

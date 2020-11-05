@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
+<?php 
+
+include "/opt/lampp/htdocs/Klma-humans/global/config.php";
+include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
+
+session_start();
+?>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
@@ -23,7 +30,7 @@
                 </div>
                 </div>
                 <div class="nav-item titulo col-lg-7 col-md-7">
-                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="../Rejillas_generales/loungewear.php"></a>
                 </div>
                 <div class="col nav-item col-lg-3 col-md-3 col">
                 <ul class="navbar-nav mr-auto">
@@ -48,11 +55,11 @@
     <!-- Beige Section -->
     <div class="containerbeige">
         <div class="usercounts">
-            MI CUENTA
+            HOLA <?php echo $_SESSION['apodo'];  ?>
         </div>
 
         <div class="introline mt-4">
-            <a href="#">CERRAR SESIÓN</a>
+            <a href="../login/login1/salir.php">CERRAR SESIÓN</a>
         </div>
 
         <div class="btnsales mt-3 mb-2">
