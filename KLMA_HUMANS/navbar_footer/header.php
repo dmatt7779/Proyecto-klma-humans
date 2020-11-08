@@ -20,32 +20,19 @@
     </div>
 
     <div class="navlogo2">
-        <a href="../contenido/menu2.php"><img src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
+        <a href="../index.html"><img src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
     </div>
 
-    <div class="nested-nav nav-item dropdown">
-        <a class="dropdown-toggle navicons" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu.png" alt="menu desplegable"></div></a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Sobre Nosotros</a>
-            <a class="dropdown-item" href="../contenido/podcast.php">Podcast</a>
-            <a class="dropdown-item" href="#">Blog</a>
-            <a class="dropdown-item" href="#">Contáctanos</a>
-        </div>
+    <div class="nested-nav mr-2">
+        <a class="navicons m-2" href="../menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
 
-        <a href="#"><div class="loginmenu"><img src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
+        <a href="#" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
 
-        <a href="#" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
+        <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
     </div>
 
 </header>
 <!-- FIN HEADER -->
-
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </body>
 </html>
