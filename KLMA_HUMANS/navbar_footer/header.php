@@ -16,7 +16,7 @@
 
 <header class="mainheader">
     <div class="navlogo">
-        <a href="../menu.html"><img src="../assets/img/nav_foot/btn_shop.png" alt="Logo de compras"></a>
+        <a href="../main/menu.html"><img src="../assets/img/nav_foot/btn_shop.png" alt="Logo de compras"></a>
     </div>
 
     <div class="navlogo2">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="nested-nav mr-2">
-        <a class="navicons m-2" href="../menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
+        <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
 
         <a href="#" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
 

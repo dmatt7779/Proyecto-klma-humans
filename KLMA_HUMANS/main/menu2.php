@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/style.css">
     <title>KLMA' HUMANS</title>
 </head>
 
@@ -30,16 +29,14 @@
             <div class="bnav mr-5">
                 <ul class="btnav">
                         <ol class="p-1"><a href="#">ABOUT</a></ol>
-                        <ol class="p-1"><a href="../test/prueba.php">TEST</a></ol>
+                        <ol class="p-1"><a href="./test/prueba.php">TEST</a></ol>
                         <ol class="p-1"><a href="#">EMOCIONES</a></ol>
-                        <ol class="p-1"><a href="../contenido/podcast.php">PODCAST</a></ol>
-                        <ol class="p-1"><a href="../contenido/blog.php">BLOG</a></ol>
+                        <ol class="p-1"><a href="./contenido/podcast.php">PODCAST</a></ol>
+                        <ol class="p-1"><a href="./contenido/blog.php">BLOG</a></ol>
                         <ol class="p-1"><a href="#">CONTÁCTO</a></ol>
                 </ul>
             </div>
         </div>
-
-
     </div>
 </div>
 
