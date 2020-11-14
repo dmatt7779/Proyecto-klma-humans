@@ -43,6 +43,7 @@
             <p></p>
         </div>
     </div>
-    
 </body>
 </html>
+
+<?php include "../navbar_footer/scd_footer.php";?>

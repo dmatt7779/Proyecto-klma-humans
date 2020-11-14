@@ -28,12 +28,12 @@
             <!-- Menu derecha -->
             <div class="bnav mr-5">
                 <ul class="btnav">
-                        <ol class="p-1"><a href="#">ABOUT</a></ol>
-                        <ol class="p-1"><a href="./test/prueba.php">TEST</a></ol>
+                        <ol class="p-1"><a href="about.php">ABOUT</a></ol>
+                        <ol class="p-1"><a href="../test/prueba.php">TEST</a></ol>
                         <ol class="p-1"><a href="#">EMOCIONES</a></ol>
-                        <ol class="p-1"><a href="./contenido/podcast.php">PODCAST</a></ol>
-                        <ol class="p-1"><a href="./contenido/blog.php">BLOG</a></ol>
-                        <ol class="p-1"><a href="#">CONTÁCTO</a></ol>
+                        <ol class="p-1"><a href="../contenido/podcast.php">PODCAST</a></ol>
+                        <ol class="p-1"><a href="../contenido/blog.php">BLOG</a></ol>
+                        <ol class="p-1"><a href="../contenido/contact.php">CONTÁCTO</a></ol>
                 </ul>
             </div>
         </div>

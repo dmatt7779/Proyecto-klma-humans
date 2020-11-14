@@ -151,6 +151,7 @@ header.mainheader .nav {
     bottom: 0px;
     left: 0px;
     width: 100%;
+    margin-top: 0;
 }
 
 .footercontent {
@@ -684,14 +685,317 @@ div.main{
     background-size: 60px;
     background-repeat: no-repeat;
 }
-/* FIN Configuración Registro */
+/* -----------------------------FIN Configuración Registro----------------------------- */
+
+/* -----------------------------ABOUT US----------------------------- */
+
+.aboutstory {
+    padding: 1% 22% 1% 22%;
+}
+
+.aboutstory p {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .1rem;
+}
+
+.aboutstory h1 {
+    margin-top: 3%;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 12pt;
+    letter-spacing: .8rem;
+    word-spacing: 2rem;
+}
+
+.aboutstory h2 {
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    letter-spacing: .4rem;
+    word-spacing: .5rem;
+}
+
+.aboutbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scdabout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.aboutlines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutlines > div:nth-child(1) {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.aboutlines > div:nth-child(1) > a {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .5777777rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines > div:nth-child(2) > a > img {
+    width: 50%;
+    margin: 0%;
+    box-shadow: 5px 6px 10px #000000;
+}
+
+.aboutlines > div:nth-child(3) {
+    flex-direction: column;
+    display: flex;
+    margin: 7% 0% 2% 0%;
+    width: 50%;
+}
+
+.aboutlines > div:nth-child(3) > a {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.2222222rem;
+}
+
+.aboutlines > div:nth-child(3) > a:nth-child(2) {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.65555555rem;
+}
+
+.aboutlines > div:nth-child(4) > p {
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: center;
+}
+
+.aboutlines2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutlines2 > div:nth-child(1) {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.aboutlines2 > div:nth-child(1) > a {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .933333333rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines2 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines2 > div:nth-child(2) > a > img {
+    width: 50%;
+    margin: 0%;
+    box-shadow: 5px 6px 10px #000000;
+}
+
+.aboutlines2 > div:nth-child(3) {
+    flex-direction: column;
+    display: flex;
+    margin: 7% 0% 2% 0%;
+    width: 50%;
+}
+
+.aboutlines2 > div:nth-child(3) > a {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 3.01111rem;
+}
+
+.aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.65555555rem;
+}
+
+.aboutlines2 > div:nth-child(4) > p {
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: center;
+}
+
+.aboutlines3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutlines3 > div:nth-child(1) {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.aboutlines3 > div:nth-child(1) > a {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .7rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines3 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines3 > div:nth-child(2) > a > img {
+    width: 50%;
+    margin: 0%;
+    box-shadow: 5px 6px 10px #000000;
+}
+
+.aboutlines3 > div:nth-child(3) {
+    flex-direction: column;
+    display: flex;
+    margin: 7% 0% 2% 0%;
+    width: 50%;
+}
+
+.aboutlines3 > div:nth-child(3) > a {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: .8rem;
+}
+
+.aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.65555555rem;
+}
+
+.aboutlines3 > div:nth-child(4) > p {
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: center;
+}
 
 
+/* -----------------------------ABOUT US----------------------------- */
 
+/* -----------------------------INICIO Contact Form----------------------------- */
+.contactcontainer {
+    background: rgb(26,24,24);
+    padding: 2% 10% 2% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
 
+.contacttitle > h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    letter-spacing: 1.6rem;
+    color: #ffffff;
+}
 
+.contactform {
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+}
 
+.contactform input::placeholder,.contactform textarea::placeholder {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 6pt;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
 
+.contactform input {
+    text-align: center;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.contactform textarea {
+    text-align: center;
+    height: 150px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    padding: 5% 0% 0% 5%;
+    letter-spacing: 3.1rem;
+}
+
+.contactform input:nth-child(1)::placeholder {
+    letter-spacing: 4rem;
+    padding: 0% 4% 0% 5%;
+}
+
+.contactform input:nth-child(2)::placeholder {
+    letter-spacing: 1rem;
+    word-spacing: .5rem;
+    padding: 0% 4% 0% 3%;
+}
+
+.contactform textarea:nth-child(3)::placeholder {
+    text-align: center;
+}
+
+.contactform > .btnformcontact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btnformcontact > button {
+    padding: 0% 3% 0% 5%;
+}
+
+/* -----------------------------INICIO Contact Form----------------------------- */
 
 /* INICIO CONFIGURACIÓN LOUNGEWEAR GENERAL */
 
@@ -1896,13 +2200,11 @@ hr {
 .saleoffcode::placeholder{
     font-family: "MoristonPersonal-Medium";
     font-size: 5pt;
-    /* text-align: center; */
-    
     color: rgb(0, 0, 0);
     opacity: 60%;
 }
 
-.saleoffcode input {
+.saleoffcode input, .saleoffcode textarea  {
     text-align: center;
     width: 100%px;
     height: 40px;
@@ -2120,7 +2422,7 @@ hr {
  /* ------------------INICIO CONFIGURACIÓN INTERFACES USUARIOS------------------ */
  /* Interfaz Administrador */
 .introcontainer {
-    background: black;
+    background: rgb(26,24,24);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2264,9 +2566,9 @@ align-items: center;
 .introline > a, .introline > a:hover {
     font-family: "MoristonPersonal-Medium";
     font-size: 7pt;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
-    border-bottom: 1px dotted #000000;
+    border-bottom: 1px dotted #ffffff;
 }
 
 .usercounts {

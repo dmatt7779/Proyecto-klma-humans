@@ -38,3 +38,5 @@
 
 </body>
 </html>
+
+<?php include "../navbar_footer/scd_footer.php";?>

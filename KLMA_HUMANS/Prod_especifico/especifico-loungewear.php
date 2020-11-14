@@ -330,3 +330,5 @@ $('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
 
 </body>
 </html>
+
+<?php include "../navbar_footer/scd_footer.php";?>

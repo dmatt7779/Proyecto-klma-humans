@@ -169,3 +169,5 @@
 </script>
 </body>
 </html>
+
+<?php include "../navbar_footer/footer.php";?>
