@@ -1,35 +1,40 @@
 <?php
     session_start();
-    $Data = json_decode( $_REQUEST[ 'Data' ], true );
+    $Data = $_REQUEST[ 'Data' ];
+    $Question = explode( '-', $Data );
+    $Question = array_filter( $Question, 'strlen' );
+    
+    foreach( $Question as $Key => $Value ){
+        $Result[] = explode( '|', $Value );
+    }
 
     //Ordenar array por tema.
-    foreach( $Data as $Key => $Value ){
-        $Info[ $Key ]  = $Value[ 'Theme' ];
+    foreach( $Result as $Key => $Value ){
+        $Info[ $Key ]  = $Value[ 0 ];
     }
-    array_multisort( $Info, SORT_DESC, $Data );
+    array_multisort( $Info, SORT_DESC, $Result );
 
     //Sumar valores de acuerdo al tema.
+    $Data = $Result;
     $Result = [];
     foreach( $Data as $Row ){
         $Repeat = false;
 
         for( $i = 0; $i < count( $Result ); $i++ ){
-            if( $Result[ $i ][ 'Theme' ] === $Row[ 'Theme' ] ){
-                $Result[ $i ][ 'Value' ] += $Row[ 'Value' ];
+            if( $Result[ $i ][ 'Theme' ] === $Row[ 0 ] ){
+                $Result[ $i ][ 'Value' ] += $Row[ 1 ];
                 $Repeat = true;
                 break;
             }
         }
 
         if( !$Repeat ){
-            $Result [] = [ 'Theme' => $Row[ 'Theme' ], 'Value' => $Row[ 'Value' ] ];
+            $Result [] = [ 'Theme' => $Row[ 0 ], 'Value' => $Row[ 1 ] ];
         }
     }
 echo "<pre>"; print_r( $Result );
 //TestReply Nombre de Variable
     if( isset( $_SESSION[ 'isLogin' ] ) ){
         //Aqui se guardar los valores si la variable de Session Exies
-    } else {
-        //Aqui se retorna el array para ser guardado en session_storage.
-    }
+    } 
 ?>

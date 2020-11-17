@@ -7,13 +7,16 @@ const
     divSave = $( '#test-divSave' ),
     infoReply = '.test-Reply > a',
     btnSave = '#test-btnSave',
-    Url = 'class/'
+    Url = 'class/';
 
 var 
     Param = new FormData(),
     Questions = [],
     Solution = [],
-    CntQuestion = 6
+    CntQuestion = 6,
+    ElementOld = '',
+    Result = '',
+    ResultEquals = '';
 
 /* Agrupando funciones dentro de la variable KlmHumans */
 var 
@@ -103,7 +106,7 @@ var
 
             desingReplys = '<div class="answ" id="selectanswer' + Question.id + '">';
             for( var i = 0; i < countReplys; i++ ){
-                desingReplys += '<div class="testselect' + Question.id + '">';
+                desingReplys += '<div class="testselect' + Question.id + '" data-theme="' + Question.replys[ i ].theme + '" data-val="' + Question.value + '">';
                     desingReplys += '<div class="testicons testselect' + Question.id + Question.id +' animate-selector' + Question.id + '">';
                         ( Question.replys[ i ].reply.slice( -4 ) === '.png' ) 
                         ?
@@ -163,12 +166,27 @@ var
             if( CntQuestion === Solution.length ){ divSave.html( '<button type="button" id="test-btnSave">Registrar Test</button>' ) };
         },
         saveQuestion: function(){
-            Param.append( 'Data', JSON.stringify( Solution ) )
+            Param.append( 'Data', sessionStorage.getItem( 'Result' ) )
             KlmHumans.SentencesPHP( Url + 'save_info.php', Param, function( Result ){
                 console.log( Result )
             } )
-        }
+        },
+        saveSession: function( Element ){
+            let Value = $( Element ).attr( 'data-val' ),
+                Theme = $( Element ).attr( 'data-theme' ),
+                Result = Theme + '|' + Value + '-'; 
+                
+            if( sessionStorage.getItem( 'Result' ) === null ){
+                sessionStorage.setItem( 'Result', Result );
+            } else {
+                let ResultOld = sessionStorage.getItem( 'Result' ),
+                    ResultNew = ResultOld + Result;
+
+                sessionStorage.setItem( 'Result', ResultNew );
+            }
+        } 
     }
+
 
 /* Controlando las funciones de los elementos */
 

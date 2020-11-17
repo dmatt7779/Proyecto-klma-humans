@@ -8,32 +8,32 @@
             'replys' => [
                 [
                     'id' => 1,
-                    'reply' => '../assets/img/test/familia1/familia-1-amor.png',
+                    'reply' => '../assets/img/test/familia_1/familia-1-amor.png',
                     'theme' => 'Amor'
                 ],
                 [
                     'id' => 2,
-                    'reply' => '../assets/img/test/familia1/familia-1-ira.png',
+                    'reply' => '../assets/img/test/familia_1/familia-1-ira.png',
                     'theme' => 'Ira'
                 ],
                 [
                     'id' => 3,
-                    'reply' => '../assets/img/test/familia1/familia-1-felicidad.png',
+                    'reply' => '../assets/img/test/familia_1/familia-1-felicidad.png',
                     'theme' => 'Felicidad'
                 ],
                 [
                     'id' => 4,
-                    'reply' => '../assets/img/test/familia1/familia-1-miedo.png',
+                    'reply' => '../assets/img/test/familia_1/familia-1-miedo.png',
                     'theme' => 'Miedo'
                 ],
                 [
                     'id' => 5,
-                    'reply' => '../assets/img/test/familia1/familia-1-alegria.png',
+                    'reply' => '../assets/img/test/familia_1/familia-1-alegria.png',
                     'theme' => 'Alegría'
                 ],
                 [
                     'id' => 6,
-                    'reply' => '../assets/img/test/familia1/familia-1-tristeza.png',
+                    'reply' => '../assets/img/test/familia_1/familia-1-tristeza.png',
                     'theme' => 'Tristeza'
                 ]
             ]
@@ -46,32 +46,32 @@
             'replys' => [
                 [
                     'id' => 1,
-                    'reply' => '../assets/img/test/familia2/familia-2-tristeza.png',
+                    'reply' => '../assets/img/test/familia_2/familia-2-tristeza.png',
                     'theme' => 'Tristeza'
                 ],
                 [
                     'id' => 2,
-                    'reply' => '../assets/img/test/familia2/familia-2-alegria.png',
+                    'reply' => '../assets/img/test/familia_2/familia-2-alegria.png',
                     'theme' => 'Alegria'
                 ],
                 [
                     'id' => 3,
-                    'reply' => '../assets/img/test/familia2/familia-2-miedo.png',
+                    'reply' => '../assets/img/test/familia_2/familia-2-miedo.png',
                     'theme' => 'Miedo'
                 ],
                 [
                     'id' => 4,
-                    'reply' => '../assets/img/test/familia2/familia-2-felicidad.png',
+                    'reply' => '../assets/img/test/familia_2/familia-2-felicidad.png',
                     'theme' => 'Felicidad'
                 ],
                 [
                     'id' => 5,
-                    'reply' => '../assets/img/test/familia2/familia-2-ira.png',
+                    'reply' => '../assets/img/test/familia_2/familia-2-ira.png',
                     'theme' => 'Ira'
                 ],
                 [
                     'id' => 6,
-                    'reply' => '../assets/img/test/familia2/familia-2-amor.png',
+                    'reply' => '../assets/img/test/familia_2/familia-2-amor.png',
                     'theme' => 'Amor'
                 ]
             ]
@@ -122,32 +122,32 @@
             'replys' => [
                 [
                     'id' => 1,
-                    'reply' => '../assets/img/test/familia3/familia-3-amor.png',
+                    'reply' => '../assets/img/test/familia_3/familia-3-amor.png',
                     'theme' => 'Amor'
                 ],
                 [
                     'id' => 2,
-                    'reply' => '../assets/img/test/familia3/familia-3-ira.png',
+                    'reply' => '../assets/img/test/familia_3/familia-3-ira.png',
                     'theme' => 'Ira'
                 ],
                 [
                     'id' => 3,
-                    'reply' => '../assets/img/test/familia3/familia-3-felicidad.png',
+                    'reply' => '../assets/img/test/familia_3/familia-3-felicidad.png',
                     'theme' => 'Felicidad'
                 ],
                 [
                     'id' => 4,
-                    'reply' => '../assets/img/test/familia3/familia-3-miedo.png',
+                    'reply' => '../assets/img/test/familia_3/familia-3-miedo.png',
                     'theme' => 'Miedo'
                 ],
                 [
                     'id' => 5,
-                    'reply' => '../assets/img/test/familia3/familia-3-alegria.png',
+                    'reply' => '../assets/img/test/familia_3/familia-3-alegria.png',
                     'theme' => 'Alegria'
                 ],
                 [
                     'id' => 6,
-                    'reply' => '../assets/img/test/familia3/familia-3-tristeza.png',
+                    'reply' => '../assets/img/test/familia_3/familia-3-tristeza.png',
                     'theme' => 'Tristeza'
                 ]
             ]
