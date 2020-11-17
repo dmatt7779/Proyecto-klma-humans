@@ -1,0 +1,167 @@
+/* 
+body {
+  background-color: #161b21;
+}
+
+.main_title {
+  text-decoration: none;
+  color: #ff983b;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.main_title:hover {
+  text-decoration: none;
+  color: #ffd835;
+}
+
+.title {
+  color: #00eaff;
+}
+
+.circleBar {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.circleBar .round {
+  min-height: 255px;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 0px;
+}
+.circleBar .round strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  transform: translate(-50%);
+  font-size: 30px;
+  color: #000000;
+  font-weight: 100;
+}
+
+.btn {
+  align-self: center;
+  margin-top: 1px;
+}
+
+.btn:hover {
+  background-color: #00eaff;
+}
+
+.webloper-sm {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.sm {
+  align-self: center;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+} */
+
+/* ------------------------------------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+.radial-progress {
+    @circle-size: 120px;
+    @circle-background: #d6dadc;
+    @circle-color: #97a71d;
+    @inset-size: 90px;
+    @inset-color: #fbfbfb;
+    @transition-length: 1s;
+    @shadow: 6px 6px 10px rgba(0,0,0,0.2);
+    @percentage-color: #97a71d;
+    @percentage-font-size: 22px;
+    @percentage-text-width: 57px;
+    margin: 50px;
+    width:  @circle-size;
+    height: @circle-size;
+    background-color: @circle-background;
+    border-radius: 50%;
+    .circle {
+        .mask, .fill, .shadow {
+            width:    @circle-size;
+            height:   @circle-size;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .shadow {
+            box-shadow: @shadow inset;
+        }
+        .mask, .fill {
+            -webkit-backface-visibility: hidden;
+            transition: -webkit-transform @transition-length;
+            transition: -ms-transform @transition-length;
+            transition: transform @transition-length;
+            border-radius: 50%;
+        }
+        .mask {
+            clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+            .fill {
+                clip: rect(0px, @circle-size/2, @circle-size, 0px);
+                background-color: @circle-color;
+            }
+        }
+    }
+    .inset {
+        width:       @inset-size;
+        height:      @inset-size;
+        position:    absolute;
+        margin-left: (@circle-size - @inset-size)/2;
+        margin-top:  (@circle-size - @inset-size)/2;
+        background-color: @inset-color;
+        border-radius: 50%;
+        box-shadow: @shadow;
+        .percentage {
+            height:   @percentage-font-size;
+            width:    @percentage-text-width;
+            overflow: hidden;
+            position: absolute;
+            top:      (@inset-size - @percentage-font-size) / 2;
+            left:     (@inset-size - @percentage-text-width) / 2;
+            line-height: 1;
+            .numbers {
+                margin-top: -@percentage-font-size;
+                transition: width @transition-length;
+                span {
+                    width:          @percentage-text-width;
+                    display:        inline-block;
+                    vertical-align: top;
+                    text-align:     center;
+                    font-weight:    800;
+                    font-size:      @percentage-font-size;
+                    font-family:    "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    color:          @percentage-color;
+                }
+            }
+        }
+    }
+    @i: 0;
+    @increment: 180deg / 100;
+    .loop (@i) when (@i <= 100) {
+        &[data-progress="@{i}"] {
+            .circle {
+                .mask.full, .fill {
+                    -webkit-transform: rotate(@increment * @i);
+                    -ms-transform: rotate(@increment * @i);
+                    transform: rotate(@increment * @i);
+                }   
+                .fill.fix {
+                    -webkit-transform: rotate(@increment * @i * 2);
+                    -ms-transform: rotate(@increment * @i * 2);
+                    transform: rotate(@increment * @i * 2);
+                }
+            }
+            .inset .percentage .numbers {
+                width: @i * @percentage-text-width + @percentage-text-width;
+            }
+        }
+        .loop(@i + 1);
+    }
+    .loop(@i);
+}

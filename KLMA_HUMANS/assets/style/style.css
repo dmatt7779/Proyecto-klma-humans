@@ -1735,11 +1735,8 @@ position: relative;
 }
 /* --------------------------FIN Configuracion Calmwear-------------------------- */
 
+/* ---------------------------INICIO configuración Transition--------------------------- */
 
-
-
-
-/* INICIO configuración Transition */
 /* GRID para imagenes de figuras geometricas */
 .gridtl {
     display: grid;
@@ -1842,12 +1839,6 @@ position: relative;
     color: #000000;
     width: 250px;
 }
-/* 
-.grid-view div {
-    border: 1px solid #000000;
-    margin: 0rem;
-}
- */
 
 
 
@@ -2917,169 +2908,23 @@ align-items: center;
 
 /* ----------------------------INICIO CONFIGURACIÓN RESULTADOS TEST---------------------------- */
 .results {
+    margin-top: 5%;
+    padding-left: 3rem;
+    margin-left: 4rem;
+}
+
+.results > p {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 10pt;
-    letter-spacing: 9rem;
-    text-align: center;
-    margin-top: 6%;
-    margin-left: 10%;
+    letter-spacing: 8rem;
 }
 
-.percents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 5%;
+.containerf {
+    margin-bottom: 3rem;
 }
 
-.test {
-    height: 100%;
-    text-align: center;
-    place-items: center;
-}
-
-.circular {
-    height: 100px;
-    width: 100px;
-    transform: scale(1);
-}
-
-.circular .inner {
-    position: absolute;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    height: 80px;
-    width: 80px;
-    margin: -40px 0 0 -40px;
-    background: #ffffff;
-    border-radius: 100%;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
-}
-
-/* number1 .number2 .number3 .number4 .number5 .number6 */
-.circular .number1 {
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    z-index: 1000;
-    font-family: "HelveticaLt";
-    font-size: 14pt;
-    color: #000000;
-}
-
-.circular .number2 {
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    z-index: 1000;
-    font-family: "HelveticaLt";
-    font-size: 14pt;
-    color: #000000;
-}
-
-.circular .number3 {
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    z-index: 1000;
-    font-family: "HelveticaLt";
-    font-size: 14pt;
-    color: #000000;
-}
-
-.circular .number4 {
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    z-index: 1000;
-    font-family: "HelveticaLt";
-    font-size: 14pt;
-    color: #000000;
-}
-
-.circular .number5 {
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    z-index: 1000;
-    font-family: "HelveticaLt";
-    font-size: 14pt;
-    color: #000000;
-}
-
-.circular .number6 {
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    z-index: 1000;
-    font-family: "HelveticaLt";
-    font-size: 14pt;
-    color: #000000;
-}
-
-.circular .bar {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #d6e0e4;
-    border-radius: 100%;
-    clip: rect(0px, 100px, 100px, 50px);
-}
-
-.circle .bar .progressbar{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-    clip: rect(0px, 50px, 100px, 0px);
-    background: orangered;
-
-}
-
-.circle .left .progressbar{
-    z-index: 200;
-    animation: left 4s linear both;
-}
-
-.circle .right{
-    z-index: 210;
-    transform: rotate(180deg);
-}
-
-.circle .right .progressbar {
-    animation: right 4s linear both;
-    animation-delay: 4s;
-}
-/*
-@keyframes left {
-    0%{
-        transform: rotate(90deg)
-    }
-    50%{
-        background:pink;
-    }
-    100%{
-        transform: rotate(180deg);
-        background: green;
-    }
-}*/
-
-/*@keyframes right {
-    50%{
-        transform: rotate(90deg)
-    }
-}*/
-
-.rotate {
+.resultfeel {
     -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg); 
     -ms-transform: rotate(-90deg); 
@@ -3091,30 +2936,21 @@ align-items: center;
     -ms-transform-origin: 50% 50%; 
     -o-transform-origin: 50% 50%; 
     transform-origin: 50% 50%; 
-    
-    font-family: "MoristonPersonal-Regular";
-    font-size: 10pt;
+    padding-bottom: 1rem;
+}
+
+.resultfeel > span {
+    font-family: "Helvetica";
+    font-weight: bold;
+    font-size: 8pt;
     letter-spacing: .5rem;
     color: #000000;
     width: 250px;
 }
 
-.containerfeel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 8%;
-    text-align: end;
-}
 
-.feelings {
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 1%;
-}
 
-/* Configuración resultado especifico Test */
+/* -----------------------------Configuración resultado especifico Test----------------------------- */
 .introcontresult {
     display: flex;
     flex-direction: column;
