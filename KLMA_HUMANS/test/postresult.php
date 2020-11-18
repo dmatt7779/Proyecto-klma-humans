@@ -9,8 +9,6 @@
 	
 	<!-- CSS only -->
 	<link rel="stylesheet" href="sss/sss.css">
-	<link rel="stylesheet" href="../assets/style/style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
@@ -45,12 +43,12 @@
 			</div>
 
 			<!-- SPOTIFY -->
-			<div id="spotify" class="tshirtcampaigns mt-2 mb-2">
+			<div id="divSpotify" class="tshirtcampaigns mt-2 mb-2">
 				<a href="https://open.spotify.com/" target="_blank"><img src="../assets/img/test/resultemocion/Interfaz Spotify.png" alt="#"></a>
 			</div>
 
 			<!-- SOCIAL MEDIA -->
-			<div id="socialmedia" class="d-none socialmedia">
+			<div id="socialmedia" class="socialmedia" hidden>
 				<a class="ml-5" href="#"><img src="../assets/img/test/Face.png" alt="Logo de Facebook"></a>
 				<a href="#"><img src="../assets/img/test/Instagram.png" alt="Logo de Instagram"></a>
 				<a href="#"><img src="../assets/img/test/Twitter.png" alt="Logo de twitter"></a>
@@ -76,10 +74,26 @@
 			</div>
 		</div>
 
+		<!-- FIN CAMPAÑAS -->
+
+
+
+
+
+
+
 		<div class="introcontresult">
 			<div class="btn-blogshare">
-				<button type="submit" onclick="showhide()" id="showmedia"><i class="fas fa-ellipsis-v"></i></button>
+				<button type="submit" onclick="showhide()" id="showmedia" class="d-block"><i class="fas fa-ellipsis-v"></i></button>
 			</div>
+
+
+
+
+
+
+
+
 			
 			<!-- frases para Diseñadores -->
 			<div class="wrapper mb-5">
@@ -125,8 +139,6 @@
 <!-- Sentences Slider-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="sss/sss.js"></script>
-
-
 <script>
 	jQuery(function($){
 		$('.slider-testimonial').sss({
@@ -137,42 +149,24 @@
 </script>
 
 <!-- Ocultar y Mostrar redesociales o compartir -->
+<script type="text/javascript">
 
-<!-- <script type="text/javascript">
+	function showhide() {
 
-	$('#showmedia').click( function(){
-		$('#white').css( 'background-color', ' rgb(189,213,220)');
-	} );
-
-	function Showspo() {
-		document.getElementById("spotify").style.display = "block";
+		jQuery( function( $ ){
+			if($('#divSpotify').attr( 'hidden' )){
+				$('#divSpotify').removeAttr( 'hidden' );
+				$('#socialmedia').attr( 'hidden', true );
+				$('#white').removeClass( 'contcampaignsBG' );
+			} else {
+				$('#divSpotify').attr( 'hidden', true );
+				$('#socialmedia').removeAttr( 'hidden' );
+				$('#white').addClass( 'contcampaignsBG' );
+			}
+		} );
 	}
 
-	function hidespo() {
-		document.getElementById("spotify").style.display = "none";
-	}
-
-	function Showmedia() {
-		document.getElementById("socialmedia").style.display = "block";
-	}
-
-	function hidemedia() {
-		document.getElementById("socialmedia").style.display = "none";
-	}
-
-	function showhide () {
-		let spo = document.getElementById("spotify");
-		let media = document.getElementById("socialmedia");
-
-		if (spo.style.display == "none") {
-			Showspo();
-		}else {
-			hidespo();
-		}
-
-	}
-
-</script> -->
+</script>
 
 </body>
 </html>

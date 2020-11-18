@@ -34,5 +34,11 @@
 </header>
 <!-- FIN HEADER -->
 
+<!-- JS, Popper.js, and jQuery -->
+<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+<script src="../assets/librerias/popper.min.js"></script>
+<script src="../assets/librerias/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </body>
 </html>

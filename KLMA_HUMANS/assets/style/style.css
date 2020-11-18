@@ -2973,7 +2973,7 @@ align-items: center;
     width: auto;
 }
 
-.introcontresult {
+.introcontresult p {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 8pt;
@@ -2998,16 +2998,10 @@ align-items: center;
     padding: 0% 1%;
 }
 
-/* .contcampaignshover {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    margin: 0% 5%;
-    padding: 0% 1%;
+.contcampaignsBG {
     background-color: rgb(189,213,220);
-    visibility: hidden;
-} */
+    /* visibility: hidden; */
+}
 
 .contcampaigns > div > a, .contcampaigns > div > a:hover {
     font-family: "MoristonPersonal-Bold";
@@ -3078,7 +3072,58 @@ align-items: center;
 	color: #454545;
 }
 
-/* FIN CONFIGURACIÓN TEST */
+/* --------------------------------FIN CONFIGURACIÓN TEST------------------------------- */
+
+/* ------------------------------------INICIO CONFIGURACION BLOG POSTRESULTADOS------------------------------------ */
+.container-blog {
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.container-blog>div>div:nth-child(2) {
+    padding: 1% 4%;
+}
+
+.blogcontresult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.blogcontresult {
+    padding: 0% 4%;
+}
+
+.blogcontresult>div:nth-child(1) {
+    margin-left: 7%;
+}
+
+.blogcontresult h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 12pt;
+    letter-spacing: 6rem;
+    color: #000000;
+}
+
+.blogcontresult h3 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.btn-blogshare {
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------------INICIO CONFIGURACION BLOG POSTRESULTADOS------------------------------------ */
 
 /* ---------------------------INICIO PODCAST--------------------------- */
  #divisor-pod {
