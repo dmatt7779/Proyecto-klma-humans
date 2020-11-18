@@ -13,11 +13,11 @@
 <footer id="testfooter" class="footer-content">
     <div class="footercontent">
         <div class="footerleft">
-            <img src="../assets/img/test/sonido-activo.png" alt="">
+            <img src="../assets/img/nav_foot/sonido-activo.png" alt="">
         </div>
 
         <div class="footerright">
-            <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/test/Contactenos.png" alt="logo de contacto"></a>
+            <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/nav_foot/Contactenos.png" alt="logo de contacto"></a>
         </div>
     </div>
 </footer>

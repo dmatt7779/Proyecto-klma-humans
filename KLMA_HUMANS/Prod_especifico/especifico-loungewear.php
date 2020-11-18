@@ -315,13 +315,7 @@
         $('.aTalla').removeClass('talla-active');
         $(this).addClass('talla-active');
     } )
-</script>   
-
-
-
-
-
-
+</script>
 
 <script>
 $('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );

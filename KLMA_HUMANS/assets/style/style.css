@@ -2959,6 +2959,12 @@ align-items: center;
     padding: 1%;
 }
 
+.btn-blogshare > button {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
 .introresult {
     display: flex;
     justify-content: center;
@@ -2988,8 +2994,20 @@ align-items: center;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 2%;
+    margin: 0% 5%;
+    padding: 0% 1%;
 }
+
+/* .contcampaignshover {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin: 0% 5%;
+    padding: 0% 1%;
+    background-color: rgb(189,213,220);
+    visibility: hidden;
+} */
 
 .contcampaigns > div > a, .contcampaigns > div > a:hover {
     font-family: "MoristonPersonal-Bold";
@@ -3001,6 +3019,22 @@ align-items: center;
 }
 
 .tshirtcampaigns > img, .tshirtcampaigns > a > img {
+    width: 70%;
+}
+
+.contcampaigns > .socialmedia {
+    background-color: rgb(189,203,212);
+    height: 230px;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia img {
     width: 70%;
 }
 
@@ -3037,7 +3071,7 @@ align-items: center;
 }
 
 .designer-text p{
-	font-family: "HelveticaLt";
+    font-family: "HelveticaLt";
     font-size: 7pt;
     letter-spacing: .2rem;
 	text-align: center;

@@ -96,7 +96,7 @@ var
                 :
                     'introtest'
 
-            desingTitle = '<div class="row">';
+            desingTitle = '<div class="row m-0">';
                 desingTitle += '<div class="col-md-3"></div>';
                     desingTitle += '<div class="' + Class + ' col-md-6 animate-introtest">';
                         desingTitle += Question.title;
@@ -123,7 +123,7 @@ var
             desingQuestion += '<div class="col-12">';
                 desingQuestion += '<div class="question1 animate-q1">' + Question.question + '</div>';
             desingQuestion += '</div>';
-            desingQuestion += '<div class="row" id="' + Question.id + '">';
+            desingQuestion += '<div class="row m-0" id="' + Question.id + '">';
                 desingQuestion += '<div class="col-sm-4 col-md-5 col-lg-5"></div>';
                 desingQuestion += '<div class="introtest animate-arrowbtn col-sm-4 col-md-2 col-lg-2">';
                     desingQuestion += '<button class="smooth"><img src="../assets/img/test/Paso.png" alt=""></button>';
