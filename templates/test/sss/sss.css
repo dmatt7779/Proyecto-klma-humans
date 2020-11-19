@@ -18,23 +18,34 @@
 	overflow: hidden;
 }
 
-.sssnext, .sssprev {
-	width: 25px;
+.sssnext {
+	width: 7%;
 	height: 100%;
 	margin: 0;
 	position: absolute;
 	top: 0;
-	background: url('images/arr.png') no-repeat;
+	background: url('../../assets/img/flecha2.png') no-repeat;
 }
 
 .sssprev {
-	left: 3%;
-	background-position: 0 50%;
+	width: 7%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('../../assets/img/flecha.png') no-repeat;
+}
+
+.sssprev {
+	left: 0%;
+	background-position: 0 20%;
+	background-size: contain;
 }
 
 .sssnext {
-	right: 3%;
-	background-position: -26px 50%;
+	right: 0%;
+	background-position: 0 20%;
+	background-size: contain;
 }
 
 .sssprev:hover, .sssnext:hover {
