@@ -1,10 +1,11 @@
+<?php //include "../../navbar_footer/header.php";?>
+
 <!DOCTYPE html>
 <html lang="es">
 <?php
 
 include "../../../global/config.php";
 include "../../../global/conexion.php";
-
 ?>
 
 <head>
@@ -26,15 +27,18 @@ include "../../../global/conexion.php";
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
 </head>
+
 <?php
 session_start();
-        
-        
         if (isset($_SESSION['correo'])) {
             header("location:../../interfaz_cliente/clienteintro.php");
         }
-?>       
+?>
+
 <body>
+
+<?php //include "../../navbar_footer/header.php";?>
+
   <header>
     <nav class="navbar navbar-expand-lg">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -82,9 +86,9 @@ session_start();
               <input type="password" name="password" class="login-pass" placeholder="CONTRASEÑA"><br>
         </div>
 
-        <div class="row">
-          <a href="" class="forget-pass"><p>OLVIDÉ MI CONTRASEÑA</p></a>
-        </div>
+    <div class="row">
+        <a href="" class="forget-pass"><p>OLVIDÉ MI CONTRASEÑA</p></a>
+    </div>
 			
     <div class="row">
       <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -102,16 +106,6 @@ session_start();
         </div>
       </div>
 
-    <footer>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 hondas-footer" >          
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 logo-footer">
-          </div>
-        </div>
-      </div>
-    </footer>
 </body>
 
 </html>

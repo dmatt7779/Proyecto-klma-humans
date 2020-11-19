@@ -16,8 +16,6 @@ $sentencia -> execute();
 $usuario=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-
-
 if (empty($usuario)) {
     
     echo "pailander";
