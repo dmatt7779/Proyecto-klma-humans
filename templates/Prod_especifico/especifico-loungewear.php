@@ -1,6 +1,7 @@
 <?php
 
-    session_start();
+session_start();
+    include "../navbar_footer/header.php";
     include "../../global/config.php";
     include "../../global/conexion.php";
 
@@ -27,38 +28,7 @@
 </head>
 
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="circulo collapse navbar-collapse col-lg-1 col-md-1 col-sm-1" id="navbarNav">
-            <div class="nav-item circulo">
-                <a class="nav-link" href="#"></a>
-            </div>
-            </div>
-            <div class="nav-item titulo col-lg-7 col-md-7">
-            <a class="nav-link" href="#"></a>
-            </div>
-            <div class="col nav-item col-lg-3 col-md-3 col">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item menu-puntos">
-                <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item menu-log">
-                <a class="nav-link" href="../login/login1/login.php"></a>
-                </li>
-                <li class="nav-item">
-                <button class="nav-link menu-candado" id="btnCart"></button>
-                </li>
-            </ul>
-            </div>
-        </div>
-        </div>
-        </div>
-    </nav>
-</header>
+
     
 <!-- INICIO GRID PADRE -->
 <div>
@@ -281,20 +251,18 @@
 
 
 foreach($detalleventa as $detventa){ ?>
-
-
-                <div class="cart-item">
-                    <div class="data-item">
-                        <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
-                        </div>
-                        <h2><?php echo $detventa['nombre'] ?></h2>
-                        <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-                        <h3><?php echo $detventa['precio_venta'] ?></h3>
-                        <!-- <span class="remove-item">remove</span> -->
-                    </div>
-                    <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
-                </div>
+    <div class="cart-item">
+        <div class="data-item">
+            <div class="plus-minus">
+                <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
+            </div>
+            <h2><?php echo $detventa['nombre'] ?></h2>
+            <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+            <h3><?php echo $detventa['precio_venta'] ?></h3>
+            <!-- <span class="remove-item">remove</span> -->
+        </div>
+        <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
+    </div>
     <?php
                 $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
     ?>
@@ -303,34 +271,29 @@ foreach($detalleventa as $detventa){ ?>
 <?php  
 }
 
-?>
-
-                
-                <!-- FIN Cart items -->
-            </div>
-
-            <!-- INICIO Cart footer -->
-            <div class="cart-footer">
-                <div class="subtotal">
-                <h3>SUBTOTAL:</h3>
-                <span class="cart-total">$<?php echo $subtotal ?></span>
-                </div>
-                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <form  method="post">
-                    <input id="test" type="checkbox"><p>ACEPTO LOS TERMINOS Y CONDICIONES</p> </input>
-                </form>
-                    <div class="finalshop">
-                        
-                            <button onclick="javascript:prueba();" href="../carrito de compras/pagos1.php" class="btn btn-submit">              
-                            FINALIZAR PEDIDO                              
-                            </button>    
-
-                        
-                        
-                    </div>
-            </div>
-        </div>
+?>                
+        <!-- FIN Cart items -->
     </div>
+
+    <!-- INICIO Cart footer -->
+    <div class="cart-footer">
+        <div class="subtotal">
+        <h3>SUBTOTAL:</h3>
+        <span class="cart-total">$<?php echo $subtotal ?></span>
+        </div>
+        <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
+        <form  method="post">
+            <input id="test" type="checkbox"><p>ACEPTO LOS TERMINOS Y CONDICIONES</p> </input>
+        </form>
+            <div class="finalshop">
+                
+                    <button onclick="javascript:prueba();" href="../carrito de compras/pagos1.php" class="btn btn-submit">              
+                    FINALIZAR PEDIDO                              
+                    </button>    
+            </div>
+    </div>
+</div>
+</div>
     <!-- FIN Carrito de compras -->
 <script>
     function prueba(){
@@ -341,10 +304,7 @@ foreach($detalleventa as $detventa){ ?>
 
                 alert("para proceder a finalizar el pedido debe aceptar los terminos y condiciones")
             }
-
-                
     }
-
 </script>
   
 
@@ -405,21 +365,12 @@ foreach($detalleventa as $detventa){ ?>
     } )
 </script>   
 
-
-
-
-
-
+<script src="../assets/js/carrito.js"></script>
 
 <script>
 $('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
 $('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
 </script>
-
-
-<script src="../assets/js/carrito.js"></script>
-
-
 
 </body>
 </html>

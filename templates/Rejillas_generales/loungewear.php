@@ -3,7 +3,6 @@
 
 include "../../global/config.php";
 include "../../global/conexion.php";
-
 ?>
 <html lang="en">
 <head>
@@ -19,11 +18,11 @@ include "../../global/conexion.php";
 </head>
 <?php
 session_start();
-
-       
-?>       
+?>      
+ 
 <body>
-    <header>
+<?php require "../navbar_footer/header.php"; ?>
+    <!--<header>
         <nav class="navbar navbar-expand-lg">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +53,7 @@ session_start();
           </div>
           </div>
         </nav>
-    </header>
+    </header>-->
 
     <!-- Track -->
     <div style="width: 2px; height: 300px; background-color: orangered; z-index: 2; position: fixed; top: 0; bottom: 0; left: 0; margin: auto; margin-left: 50px;">
