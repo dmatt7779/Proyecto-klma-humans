@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <?php
 
-include "/opt/lampp/htdocs/Klma-humans/global/config.php";
-include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
+require_once "global/config.php";
+require_once "global/conexion.php";
 
 ?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -98,7 +99,7 @@ include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
             </div>
         </div>
     </div>
-        <form action="../Prod_especifico/especifico-loungewear.php" method=post       name="formulario2">
+        <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario2">
             <input type="hidden" name="id" value="<?php echo $listaproductos[1]['id']; ?>"> 
             <input type="hidden" name="imagen" value="<?php echo $listaproductos[1]['imagen']; ?>">
             <input type="hidden" name="nombre" value="<?php echo $listaproductos[1]['nombre']; ?>">

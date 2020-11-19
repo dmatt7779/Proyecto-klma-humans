@@ -8,9 +8,6 @@ try {
             );
 } catch (PDOException $e) {
     
-
-
-
 }
 
 

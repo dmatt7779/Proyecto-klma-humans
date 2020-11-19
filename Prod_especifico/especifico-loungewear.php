@@ -47,8 +47,8 @@
 <?php
 
 
-    include "/opt/lampp/htdocs/Klma-humans/global/config.php";
-    include "/opt/lampp/htdocs/Klma-humans/global/conexion.php";
+    include "../global/config.php";
+    include "../global/conexion.php";
 
         $id = $_POST['id'];
        
