@@ -12,8 +12,8 @@
 
 <!-- Contenido BLOG -->
 
-    <div class="mt-5 btn-blogshare">
-        <button type="button" id="showmedia"><i class="fas fa-ellipsis-v"></i></button>
+    <div class="btn-blogshare mt-5">
+        <button type="submit" onclick="showhide()" id="showmedia" class="d-block"><i class="fas fa-ellipsis-v"></i></button>
     </div>
 
     <div id="hideblog" class="mt-1 container container-blog">
@@ -35,8 +35,57 @@
         </div>
     </div>
 
+    	<!-- Contenedor para campañas -->
+    <div id="white" class="contcampaigns mb-3" hidden>
+
+        <!-- Campaña 1 -->
+        <div>
+            <a href="#">C1</a>
+            <div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+                <img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Ranglan.png" alt="producto">
+            </div>
+            <a href="#">VER PRODUCTO</a>
+        </div>
+
+        <!-- Campaña 2 -->
+        <div>
+            <a href="#">C2</a>
+            <div class="tshirtcampaigns mt-2 mb-2">
+                <img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Sisa.png" alt="producto">
+            </div>
+            <a href="#">VER PRODUCTO</a>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div id="socialmedia" class="socialmedia">
+            <a class="ml-5" href="#"><img src="../assets/img/test/Face.png" alt="Logo de Facebook"></a>
+            <a href="#"><img src="../assets/img/test/Instagram.png" alt="Logo de Instagram"></a>
+            <a href="#"><img src="../assets/img/test/Twitter.png" alt="Logo de twitter"></a>
+            <a class="mr-5" href="#"><img src="../assets/img/test/Enlace.png" alt="Logo para compartir enlace"></a>
+        </div>
+
+        <!-- Campaña 3 -->
+        <div>
+            <a href="#">C3</a>
+            <div class="tshirtcampaigns mt-2 mb-2">
+                <img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Ranglan.png" alt="producto">
+            </div>
+            <a href="#">VER PRODUCTO</a>
+        </div>
+
+        <!-- Campaña 4 -->
+        <div>
+            <a href="#">C4</a>
+            <div class="tshirtcampaigns mt-2 mb-2">
+                <img  src="../assets/img/test/resultemocion/miedo/T-shirt Manga Sisa.png" alt="producto">
+            </div>
+            <a href="#">VER PRODUCTO</a>
+        </div>
+    </div>
+
+
     <!-- Texto de introduccion -->
-    <div id="prueba" class="blogcontresult mb-5">
+    <div class="blogcontresult mb-5">
         <div class="mt-2"><h2>MIEDO</h2></div>
         <div class="introresult mt-5 mb-4">
             <p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
@@ -46,16 +95,23 @@
 
     
 
+<!-- Ocultar y Mostrar redesociales o compartir -->
 <script type="text/javascript">
 
-    function showhide(){
-        document.getElementById("hideblog").innerHTML = document.getElementById("prueba");
-    }
-    
-    document.getElementById("showmedia").onclick = function() {
-        showhide();
-    }
+	function showhide() {
 
+		jQuery( function( $ ){
+			if($('#divSpotify').attr( 'hidden' )){
+				$('#divSpotify').removeAttr( 'hidden' );
+				$('#socialmedia').attr( 'hidden', true );
+				$('#white').removeClass( 'contcampaignsBG' );
+			} else {
+				$('#divSpotify').attr( 'hidden', true );
+				$('#socialmedia').removeAttr( 'hidden' );
+				$('#white').addClass( 'contcampaignsBG' );
+			}
+		} );
+	}
 
 </script>
     

@@ -18,7 +18,7 @@
 			<div class="introresult mb-2">
 				<p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
 			</div>
-			<div><p>MARIE CURIE</p></div>
+			<a href="blogresult.php"><p>MARIE CURIE</p></a>
 		</div>
 		
 		<!-- Contenedor para campañas -->
@@ -73,28 +73,13 @@
 				<a href="#">VER PRODUCTO</a>
 			</div>
 		</div>
-
 		<!-- FIN CAMPAÑAS -->
-
-
-
-
-
-
 
 		<div class="introcontresult">
 			<div class="btn-blogshare">
 				<button type="submit" onclick="showhide()" id="showmedia" class="d-block"><i class="fas fa-ellipsis-v"></i></button>
 			</div>
 
-
-
-
-
-
-
-
-			
 			<!-- frases para Diseñadores -->
 			<div class="wrapper mb-5">
 				<div class="slider-testimonial">

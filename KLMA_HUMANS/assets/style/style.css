@@ -147,7 +147,7 @@ header.mainheader .nav {
 /* ----------------------------INICIO TEST FOOTER------------------------------- */
 
 #testfooter {
-    position: relative;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -2973,12 +2973,17 @@ align-items: center;
     width: auto;
 }
 
-.introcontresult p {
+.introcontresult > a p {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 8pt;
     letter-spacing: .2rem;
     color: #000000;
+}
+
+.introcontresult > a:hover, .introcontresult > a p:hover {
+    font-size: 10pt;
+    text-decoration: none;
 }
 
 .introresult > p {
@@ -2999,8 +3004,7 @@ align-items: center;
 }
 
 .contcampaignsBG {
-    background-color: rgb(189,213,220);
-    /* visibility: hidden; */
+    background-color: #C1D4DF;
 }
 
 .contcampaigns > div > a, .contcampaigns > div > a:hover {

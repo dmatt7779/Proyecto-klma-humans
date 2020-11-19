@@ -255,7 +255,7 @@
     </div>
 
     <!-- Contenedor de los sentimientos rotados 90°-->
-    <div class="containerf container-fluid mt-3">
+    <div class="containerf container-fluid mt-3 mb-5">
         <div class="row pr-5 pl-5 text-center">
             <!-- IRA -->
             <div class="resultfeel col-md-2">
@@ -375,4 +375,4 @@
 </body>
 </html>
 
-<?php include "../navbar_footer/scd_footer.php"; ?>
+<?php //include "../navbar_footer/scd_footer.php"; ?>
