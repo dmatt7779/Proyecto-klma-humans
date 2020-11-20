@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <title>KLMA HUMANS</title>
-
-    <!-- CSS only -->
-    <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-</head>
-<body>
-
-<!-- INICIO HEADER -->
-
+<!-- 
+    Encabezado aplicado para todas las paginas.
+-->
 <header class="mainheader">
     <div class="navlogo">
         <a href="../main/menu.html"><img src="../assets/img/nav_foot/btn_shop.png" alt="Logo de compras"></a>
@@ -32,105 +18,70 @@
         <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
     </div>
 </header>
-<!-- FIN HEADER -->
 
+<!-- 
+    Construcción del carrito de compras
+-->
 <!-- INICIO Carrito de compras -->
-    <div class="cart-overlay" id="divCart2">
-        <div class="cart">
-            <span class="close-cart">
-                <i class="fas fa-times" id="closecart"></i>
-            </span>
-            <h1>RESUMEN</h1>
+<div class="cart-overlay" id="divCart" style="visibility:hidden">
+	<div class="cart">
+		<span class="close-cart">
+			<i class="fas fa-times" id="closecart"></i>
+		</span>
+		<h1>RESUMEN</h1>
 
-            <div class="cart-content">
-                <!-- Cart items -->
+		<div class="cart-content">
+			<!-- Cart items -->
+<?php
+            $iduser = isset( $_SESSION['iduser'] );    
+            $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+            $sentencia -> execute();
+            $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+            
+            if (empty($venta)) {
+                $ventaid =  "";
+            }else{
+                $ventaid =  $venta[0]['id'];
+            }
+        
+            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+            $sentencia -> execute();
+            $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+            $subtotal = 0;
+        
+            foreach($detalleventa as $detventa){
+?>
                 <div class="cart-item">
                     <div class="data-item">
                         <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4"></p><span></span>
+                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
                         </div>
-                        <h2>COMERCIAL BAG</h2>
-                        <span class="cart-size">CIRCLE</span>
-                        <h3>$15.000</h3>
+                        <h2><?php echo $detventa['nombre'] ?></h2>
+                        <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+                        <h3><?php echo $detventa['precio_venta'] ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
-                    <img src="../assets/img/bolso.png" alt="">
+                    <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div>
+<?php
+                $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+            }
+?>			
+			<!-- FIN Cart items -->
+		</div>
 
-                <div class="cart-item">
-                    <div class="data-item">
-                        <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
-                        </div>
-                        <h2>COMERCIAL BAG</h2>
-                        <span class="cart-size">CIRCLE</span>
-                        <h3>$15.000</h3>
-                        <!-- <span class="remove-item">remove</span> -->
-                    </div>
-                    <img src="../assets/img/John_Elliott.jpg" alt="">
-                </div>
-                <!-- FIN Cart items -->
-            </div>
-
-            <!-- INICIO Cart footer -->
-            <div class="cart-footer">
-                <div class="subtotal">
+        <!-- INICIO Cart footer -->
+        <div class="cart-footer">
+            <div class="subtotal">
                 <h3>SUBTOTAL:</h3>
-                <span class="cart-total">$0</span>
-                </div>
-                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
-                    <div class="finalshop">
-                        <button class="btn btn-submit">FINALIZAR PEDIDO</button>
-                    </div>
+                <span class="cart-total">$<?php echo $subtotal ?></span>
+            </div>
+            <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
+            <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
+            <div class="finalshop">
+                <button class="btn btn-submit">FINALIZAR PEDIDO</button>
             </div>
         </div>
-    </div>
+	</div>
+</div>
 <!-- FIN Carrito de compras -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- JS, Popper.js, and jQuery -->
-<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-<script src="../assets/librerias/popper.min.js"></script>
-<script src="../assets/librerias/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<script>
-$('#btnCart, #aAddCart2').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
-$('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
-</script>
-
-
-</body>
-</html>

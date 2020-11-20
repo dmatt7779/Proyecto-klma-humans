@@ -1,5 +1,8 @@
-<?php include "../navbar_footer/header.php";?>
-
+<?php
+session_start();
+include "../../global/config.php";
+include "../../global/conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +11,14 @@
 	<title>Resultado Especifico KLMA HUMANS</title>
 	
 	<!-- CSS only -->
+<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../assets/style/style.css">
 	<link rel="stylesheet" href="sss/sss.css">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-	
+		<?php include "../navbar_footer/header.php";?>
+
 		<!-- Texto de introduccion -->
 		<div class="introcontresult mt-5">
 			<div class="introresult mb-2">
@@ -76,24 +82,10 @@
 
 		<!-- FIN CAMPAÑAS -->
 
-
-
-
-
-
-
 		<div class="introcontresult">
 			<div class="btn-blogshare">
 				<button type="submit" onclick="showhide()" id="showmedia" class="d-block"><i class="fas fa-ellipsis-v"></i></button>
 			</div>
-
-
-
-
-
-
-
-
 			
 			<!-- frases para Diseñadores -->
 			<div class="wrapper mb-5">
@@ -133,12 +125,16 @@
 				</div>
 			</div>
 		</div>
-	
 
-<!-- Script -->
+    <!-- JS, Popper.js, and jQuery -->
+	<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+	<script src="../assets/librerias/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="sss/sss.js"></script>
+	<script src="../assets/js/contactform.js"></script>
+
 <!-- Sentences Slider-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="sss/sss.js"></script>
 <script>
 	jQuery(function($){
 		$('.slider-testimonial').sss({

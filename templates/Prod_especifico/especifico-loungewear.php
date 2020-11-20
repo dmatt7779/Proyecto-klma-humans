@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-    include "../navbar_footer/header.php";
+    
     include "../../global/config.php";
     include "../../global/conexion.php";
 
@@ -28,7 +28,7 @@ session_start();
 </head>
 
 <body>
-
+    <?php include "../navbar_footer/header.php"; ?>
     
 <!-- INICIO GRID PADRE -->
 <div>
@@ -177,13 +177,6 @@ session_start();
                         <div class="carousel-item active">
                         <img src="../assets/img/bolso.png" class="d-block w-100" alt="...">
                         </div>
-                        <!-- 
-                        <div class="carousel-item">
-                            <img src="img/producto05.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/producto06.png" class="d-block w-100" alt="...">
-                        </div> -->
                     </div>
                 </div>
                 <p class="refer-specialbag"><?php echo $producto[0]['nombre'] ?></p>
@@ -215,86 +208,6 @@ session_start();
         </div>
     </div><!-- FIN Contenedores hidden -->
 </div>
-
-    <!-- INICIO Carrito de compras -->
-    <div class="cart-overlay" id="divCart">
-        <div class="cart">
-            <span class="close-cart">
-                <i class="fas fa-times" id="closecart"></i>
-            </span>
-            <h1>RESUMEN</h1>
-
-            <div class="cart-content">
-                <!-- Cart items -->
-
-
-<?php
-
-    $iduser = $_SESSION['iduser'];      
-       $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
-       $sentencia -> execute();
-       $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-       if (empty($venta)) {
-        $ventaid =  "";
-       }else{
-        $ventaid =  $venta[0]['id'];
-       }
-       $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
-       $sentencia -> execute();
-       $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-         
-
-    
-    
-    $subtotal = 0;
-
-
-foreach($detalleventa as $detventa){ ?>
-    <div class="cart-item">
-        <div class="data-item">
-            <div class="plus-minus">
-                <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
-            </div>
-            <h2><?php echo $detventa['nombre'] ?></h2>
-            <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-            <h3><?php echo $detventa['precio_venta'] ?></h3>
-            <!-- <span class="remove-item">remove</span> -->
-        </div>
-        <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
-    </div>
-    <?php
-                $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
-    ?>
-
-
-<?php  
-}
-
-?>                
-        <!-- FIN Cart items -->
-    </div>
-
-    <!-- INICIO Cart footer -->
-    <div class="cart-footer">
-        <div class="subtotal">
-        <h3>SUBTOTAL:</h3>
-        <span class="cart-total">$<?php echo $subtotal ?></span>
-        </div>
-        <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-        <form  method="post">
-            <input id="test" type="checkbox"><p>ACEPTO LOS TERMINOS Y CONDICIONES</p> </input>
-        </form>
-            <div class="finalshop">
-                
-                    <button onclick="javascript:prueba();" href="../carrito de compras/pagos1.php" class="btn btn-submit">              
-                    FINALIZAR PEDIDO                              
-                    </button>    
-            </div>
-    </div>
-</div>
-</div>
-    <!-- FIN Carrito de compras -->
 <script>
     function prueba(){
         var isChecked = document. getElementById('test').checked;
@@ -310,16 +223,10 @@ foreach($detalleventa as $detventa){ ?>
 
 
 <!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-  crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-  crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+    <script src="../assets/librerias/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Script para ocultar obejtos HTML -->
 <script>
@@ -367,10 +274,6 @@ foreach($detalleventa as $detventa){ ?>
 
 <script src="../assets/js/carrito.js"></script>
 
-<script>
-$('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
-$('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
-</script>
 
 </body>
 </html>

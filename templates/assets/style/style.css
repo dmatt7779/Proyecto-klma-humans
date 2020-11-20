@@ -141,13 +141,11 @@ header.mainheader .nav {
     justify-self: center;
     align-items: center;
 }
-
 /* ------------------------------FIN NAVBAR------------------------------------- */
 
 /* ----------------------------INICIO TEST FOOTER------------------------------- */
-
 #testfooter {
-    position: relative;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -3126,6 +3124,12 @@ align-items: center;
 /* ------------------------------------INICIO CONFIGURACION BLOG POSTRESULTADOS------------------------------------ */
 
 /* ---------------------------INICIO PODCAST--------------------------- */
+
+.podcastgrid {
+    padding: 0% 5%;
+    margin: 1% 0%;
+}
+
  #divisor-pod {
     display: flex;
     flex-direction: column;
@@ -3144,6 +3148,11 @@ align-items: center;
 /* ---------------------------FIN PODCAST--------------------------- */
 
 /* ----------------------------------INICIO BLOG---------------------------------- */
+
+.gridblog {
+    padding: 0% 5%;
+    margin: -2% 0%;
+}
 
 /* Titulos Blogs*/
 .blog-title, .blog-title:hover {

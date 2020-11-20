@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <?php
-
+session_start();
 include "../../global/config.php";
 include "../../global/conexion.php";
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,47 +14,10 @@ include "../../global/conexion.php";
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style/style.css">
-
-</head>
-<?php
-session_start();
-?>      
- 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head> 
 <body>
 <?php require "../navbar_footer/header.php"; ?>
-    <!--<header>
-        <nav class="navbar navbar-expand-lg">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="circulo collapse navbar-collapse col-lg-1 col-md-1 col-sm-1" id="navbarNav">
-                <div class="nav-item circulo">
-                  <a class="nav-link" href="#"></a>
-                </div>
-              </div>
-              <div class="nav-item titulo col-lg-7 col-md-7">
-                <a class="nav-link" href="#"></a>
-              </div>
-              <div class="col nav-item col-lg-3 col-md-3 col">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item menu-puntos">
-                    <a class="nav-link" href="#"></a>
-                  </li>
-                  <li class="nav-item menu-log">
-                    <a class="nav-link" href="../login/login1/login.php"></a>
-                  </li>
-                  <li class="nav-item menu-candado">
-                    <a class="nav-link" href="#"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          </div>
-        </nav>
-    </header>-->
-
     <!-- Track -->
     <div style="width: 2px; height: 300px; background-color: orangered; z-index: 2; position: fixed; top: 0; bottom: 0; left: 0; margin: auto; margin-left: 50px;">
 
@@ -70,9 +33,6 @@ session_start();
     $sentencia = $pdo->prepare("SELECT * FROM productos where tipologia_id = 1 and habilitado = 1");
     $sentencia -> execute();
     $listaproductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-   
-
-
 ?>
 
     <div class="gridvertical">
@@ -83,7 +43,7 @@ session_start();
             <a href="#" class="price">$<?php echo $listaproductos[0]['precio_venta']; ?></a>
         </div>
     </div>
-    <form action="../Prod_especifico/especifico-loungewear.php" method=post       name="formulario1">
+    <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario1">
             <input type="hidden" name="id" value="<?php echo $listaproductos[0]['id']; ?>"> 
             <input type="hidden" name="imagen" value="<?php echo $listaproductos[0]['imagen']; ?>">
             <input type="hidden" name="nombre" value="<?php echo $listaproductos[0]['nombre']; ?>">
@@ -271,18 +231,11 @@ session_start();
 
     <!-- JS, Popper.js, and jQuery -->
 
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+    <script src="../assets/librerias/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../assets/js/new.js"></script>
-<!--     
 
 </body>
 </html>
