@@ -1,9 +1,7 @@
 <?php
 session_start();
-include "../../global/config.php";
 include "../../global/conexion.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

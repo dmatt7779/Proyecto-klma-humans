@@ -1,8 +1,5 @@
 <?php
-
-include "../../global/config.php";
 include "../../global/conexion.php";
-
 session_start();
         if (isset($_SESSION['correo'])) {
             header("location:../interfaz_cliente/clienteintro.php");

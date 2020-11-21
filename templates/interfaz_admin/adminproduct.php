@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "../../global/config.php";
 include "../../global/conexion.php";
 ?>
 <!DOCTYPE html>
@@ -43,8 +42,6 @@ include "../../global/conexion.php";
         </div><!-- FIN DIV PARA EL DATATABLE -->
     </div>
 
-
-    
 
     <!-- JS, Popper.js, and jQuery -->
 

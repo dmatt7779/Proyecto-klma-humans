@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "../../global/config.php";
 include "../../global/conexion.php";
 ?>
 <!DOCTYPE html>

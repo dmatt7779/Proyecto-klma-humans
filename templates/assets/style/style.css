@@ -103,6 +103,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    width: 210px;
     height: 25px;
     position: absolute;
     border: none;
