@@ -11,10 +11,11 @@ include "../../global/conexion.php";
     <title>LOUNGEWEAR KLMA' HUMANS</title>
 
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../assets/librerias/flexboxgrid.min.css">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    
 </head> 
 <body>
 <?php require "../navbar_footer/header.php"; ?>
@@ -94,18 +95,6 @@ include "../../global/conexion.php";
             <p class="card-text"><?php echo $listaproductos[3]['descripcion']; ?></p>
             <a href="#" class="price">$<?php echo $listaproductos[3]['precio_venta']; ?></a>
         </div>
-     
-
-
-
-
-
-
-
-
-
-
-
 
         <div class="card-body">
             <div><a href="javascript:enviar_formulario5()"><img src="../assets/img/prodgenerales/<?php echo $listaproductos[4]['imagen']; ?>" alt=""></a></div>
@@ -113,9 +102,8 @@ include "../../global/conexion.php";
             <p class="card-text"><?php echo $listaproductos[4]['descripcion']; ?></p>
             <a href="#" class="price">$<?php echo $listaproductos[4]['precio_venta']; ?></a>
         </div>
-
-
     </div>
+
         <form action="../Prod_especifico/especifico-loungewear.php" method=post       name="formulario4">
             <input type="hidden" name="id" value="<?php echo $listaproductos[3]['id']; ?>"> 
             <input type="hidden" name="imagen" value="<?php echo $listaproductos[3]['imagen']; ?>">

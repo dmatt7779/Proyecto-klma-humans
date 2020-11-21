@@ -12,7 +12,7 @@ $usuario = $_SESSION['correo'];
 
 if (!isset($usuario)) {
     
-    header("location:../login/login1/login.php");
+    header("location:../login/login.php");
 }
 $id = $_POST['id'];
 $talla = $_POST['talla'];

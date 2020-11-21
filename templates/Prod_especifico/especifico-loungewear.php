@@ -1,29 +1,27 @@
 <?php
-
-session_start();
-    
     include "../../global/config.php";
     include "../../global/conexion.php";
+    
+    session_start();
 
         $id = $_POST['id'];
-       
-
-       
-       $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
-       $sentencia -> execute();
-       $producto=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-         
-?><!DOCTYPE html>
+        
+        $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
+        $sentencia -> execute();
+        $producto=$sentencia->fetchAll(PDO::FETCH_ASSOC);         
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto Especifico - LW</title>
+
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="../assets/librerias/flexboxgrid.min.css">
+    <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../assets/librerias/flexboxgrid.min.css">
+    <link rel="stylesheet" href="../assets/style/style.css">
 
 </head>
 
@@ -208,6 +206,8 @@ session_start();
         </div>
     </div><!-- FIN Contenedores hidden -->
 </div>
+
+<!-- Check  -->
 <script>
     function prueba(){
         var isChecked = document. getElementById('test').checked;
@@ -219,8 +219,6 @@ session_start();
             }
     }
 </script>
-  
-
 
 <!-- JS, Popper.js, and jQuery -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>

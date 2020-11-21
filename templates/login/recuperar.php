@@ -5,12 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klma Humans</title>
-
   <!-- CSS only -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
-
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -24,18 +22,6 @@
 </head>
 
 <body>
-<?php
-        include '../conexion/conexion.php';
-
-        session_start();
-        
-                
-        if (isset($_SESSION['correo'])) {
-            session_destroy();
-        }
-        
-        
-?>
 
   <header>
     <nav class="navbar navbar-expand-lg">
@@ -69,7 +55,7 @@
       </div>
     </nav>
   </header>
-        
+
     <div class="row">
       <div class="col col-lg-8 offset-2 col-md-8 offset-4 ">
         <div class="img-form">
@@ -77,15 +63,16 @@
       </div>
 
     <div class="row">
-        <div class="login-form">
-          <form action="logueo.php" method="POST">
+        <div class="login-form ">
+          <form id="frm_recuperar" method="POST">
             <div class="col col-xl-12  col-lg-12 col-md-12 form"></div>
-              <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
-              <input type="password" name="clave" class="login-pass" placeholder="CONTRASEÑA"><br>
+              <input type="text" name="apodo" id="apodo" class="login-email" placeholder="APODO"><br>
+              <br>
         </div>
 
         <div class="row">
-          <a href="recuperar.php" class="forget-pass"><p>OLVIDÉ MI CONTRASEÑA</p></a>
+          
+          <BR></BR>
         </div>
 			
     <div class="row">
@@ -94,20 +81,17 @@
         </div>
       </div>
     </div>
-    <button class="btn-submit" type="submit">INGRESAR</button>
+    <button class="btn-submit" type="submit">sub</button>
 <!-- <a href="#" type="submit" class="btn-submit"></a> -->
                                      
     </form>
             <div class="row">
-                <a href="../registro/registro.php" class="sign-up">REGISTRARME</a>
-                
-                
+                <a href="login.php" class="sign-up">REGRESAR</a>
+                <?php session_start(); if (isset($_SESSION['correo'])) { ?>
+                  <p>se ha enviado un correo de recuperacion a: <?php echo $_SESSION['correo'];?></p>
+          
+                <?php  }  ?>
             </div>
-                 
-            
-            
-               
-           
          
         </div>
       </div>
@@ -122,7 +106,11 @@
         </div>
       </div>
     </footer>
-    
-</body>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/login.js"></script>
+  <script type="text/javascript">
+    console.log(Correo)
+  </script>
+  </body>
 
 </html>

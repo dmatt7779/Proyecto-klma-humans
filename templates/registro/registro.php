@@ -5,12 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klma Humans</title>
-
   <!-- CSS only -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -24,19 +23,6 @@
 </head>
 
 <body>
-<?php
-        include '../conexion/conexion.php';
-
-        session_start();
-        
-                
-        if (isset($_SESSION['correo'])) {
-            session_destroy();
-        }
-        
-        
-?>
-
   <header>
     <nav class="navbar navbar-expand-lg">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -69,7 +55,7 @@
       </div>
     </nav>
   </header>
-        
+
     <div class="row">
       <div class="col col-lg-8 offset-2 col-md-8 offset-4 ">
         <div class="img-form">
@@ -78,14 +64,18 @@
 
     <div class="row">
         <div class="login-form">
-          <form action="logueo.php" method="POST">
+          <form action="guardar.php" method="post">
             <div class="col col-xl-12  col-lg-12 col-md-12 form"></div>
-              <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
-              <input type="password" name="clave" class="login-pass" placeholder="CONTRASEÑA"><br>
+              <input type="text" class="login-email" name="correo" placeholder="CORREO ELECTRÓNICO"><br>
+              <div class="divojitos">
+              <input id="txtPassword" type="password" name="contraseña" class="login-pass" placeholder="CONTRASEÑA">
+              <span id="show_password" onclick="mostrarPassword()" class="btn btn-link btn-sm fas fa-eye icon"></span>
+              <span id="show_password" onclick="mostrarPassword()" class="btn btn-link btn-sm fas fa-eye icon"></span>
+            </div>
         </div>
 
         <div class="row">
-          <a href="recuperar.php" class="forget-pass"><p>OLVIDÉ MI CONTRASEÑA</p></a>
+        <input type="text"  name="nickname" placeholder="NICK NAME">
         </div>
 			
     <div class="row">
@@ -94,21 +84,13 @@
         </div>
       </div>
     </div>
-    <button class="btn-submit" type="submit">INGRESAR</button>
-<!-- <a href="#" type="submit" class="btn-submit"></a> -->
-                                     
-    </form>
+
+    <button type="submit"  class="btn-submit">REGISTRARME</button>                                 
+
             <div class="row">
-                <a href="../registro/registro.php" class="sign-up">REGISTRARME</a>
-                
-                
+                <a href="../login/login.php" class="back">REGRESAR</a>
             </div>
-                 
-            
-            
-               
-           
-         
+          </form>
         </div>
       </div>
 
@@ -122,7 +104,29 @@
         </div>
       </div>
     </footer>
-    
+    <?php session_start(); if (isset($_SESSION['creado'])) { ?>
+          <script type="text/javascript">
+            alert("se creó el correo");
+          </script> <?php 
+        };    
+    ?>
+
+
+
+
+<!-- Mostrar y ocultar contraseña-->
+<script type="text/javascript">
+  function mostrarPassword(){
+      var cambio = document.getElementById("txtPassword");
+      if(cambio.type == "password"){
+        cambio.type = "text";
+        $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+      }else{
+        cambio.type = "password";
+        $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+      }
+    }
+</script>
 </body>
 
 </html>

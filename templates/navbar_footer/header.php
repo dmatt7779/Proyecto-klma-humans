@@ -58,7 +58,7 @@
                         </div>
                         <h2><?php echo $detventa['nombre'] ?></h2>
                         <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-                        <h3><?php echo $detventa['precio_venta'] ?></h3>
+                        <h3>$<?php echo $detventa['precio_venta'] ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
