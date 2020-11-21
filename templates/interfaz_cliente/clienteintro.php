@@ -22,7 +22,7 @@ include "../../global/conexion.php";
     <!-- Beige Section -->
     <div class="containerbeige">
         <div class="usercounts">
-            HOLA <?php echo $_SESSION['apodo'];  ?>
+            HOLA <?php echo $_SESSION['apodo'];?>
         </div>
 
         <div class="introlineclient mt-4">

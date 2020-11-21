@@ -45,7 +45,7 @@ include "../../global/conexion.php";
     <!-- Second About -->
     <div class="scdabout">
         <!-- LOUNGEWEAR -->
-        <div class="aboutlines p-5">
+        <div class="text-center aboutlines p-5">
             <div>
                 <a href="#">LOUNGEWEAR</a>
             </div>
@@ -61,7 +61,7 @@ include "../../global/conexion.php";
             </div>
         </div>
         <!-- CALMWEAR -->
-        <div class="aboutlines2 p-5">
+        <div class="text-center aboutlines2 p-5">
             <div>
                 <a href="#">CALMWEAR</a>
             </div>
@@ -77,7 +77,7 @@ include "../../global/conexion.php";
             </div>
         </div>
         <!-- TRANSITION -->
-        <div class="aboutlines3 p-5">
+        <div class="text-center aboutlines3 p-5">
             <div>
                 <a href="#">TRANSITION</a>
             </div>

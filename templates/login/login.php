@@ -31,12 +31,12 @@ session_start();
 
         <form class="login-form" action="logueo.php" method="POST">
 
-            <div class="logpass">
+            <div class="logpass mb-2">
                 <input type="text" name="email" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
                 <input type="password" name="password" class="login-pass" placeholder="CONTRASEÑA"><br>
             </div>
 
-            <div class="forget-pass text-center">
+            <div class="forget-pass text-center mt-1">
                 <a href="">OLVIDÉ MI CONTRASEÑA</a>
             </div>
             
@@ -47,7 +47,7 @@ session_start();
             <button class="btn btn-submit" type="submit">INGRESAR</button>                                
 
             <div class="sign-up text-center">
-                <a href="">REGISTRARME</a>
+                <a href="../registro/registro.php">REGISTRARME</a>
             </div>
         </form>
     </div>

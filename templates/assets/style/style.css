@@ -62,7 +62,6 @@
 
 
 /* ----------------------------------LOGIN------------------------- */
-
 .contentlogin {
     margin-top: 5%;
 }
@@ -104,8 +103,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 210px;
     height: 25px;
+    position: absolute;
     border: none;
     outline: none;
     box-shadow: none;
@@ -131,7 +130,7 @@
 
 .logpass > input {
     font-family: "MoristonPersonal-Medium";
-    font-size: 8pt;
+    font-size: 7pt;
     text-align: center;
     letter-spacing: .2rem;
     word-spacing: 0.2rem;
@@ -147,7 +146,6 @@
 
 .forget-pass > a, .forget-pass > a:hover{
     text-decoration: none;
-    margin-top: 15%;
     font-family: "MoristonPersonal-Medium";
     color: rgb(0, 0, 0);
     text-align: center;
@@ -159,7 +157,6 @@
 
 .sign-up > a, .sign-up > a:hover{
     text-decoration: none;
-    margin-top: 15%;
     font-family: "MoristonPersonal-Medium";
     color: rgb(0, 0, 0);
     text-align: center;
@@ -171,24 +168,86 @@
 
 /* ----------------------------------LOGIN------------------------- */
 
+/* ----------------------------------REGISTRO------------------------- */
 
+/* Logo KLMA' HUMANS centrado */
+.img-register{
+    background-image: url("../img/login_registro/simbolo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 190px;
+    height: 162px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
 
+.divshowhide{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+.divshowhide > span:nth-child(1){
+    position: absolute;
+}
 
+.divshowhide > span:nth-child(2){
+    position: absolute;
+    right: 0;
+}
 
+/* Botón ver y ocultar contraseñas */
+.btn-link, .btn-link:hover{
+    color: #000000;
+    opacity: 60%;
+    text-decoration: none;
+}
 
+.nickname > input{
+    margin-top: 15%;
+    font-family: "MoristonPersonal-Medium";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    opacity: 90%;
+    letter-spacing: .2rem;
+    font-size: 6pt;
+    border-bottom: 1px dotted #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+}
 
+/*Enlace REGRESAR*/
 
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MoristonPersonal-Medium";
+    color: black;
+    letter-spacing: .3em;
+    font-size: 5pt;
+    margin-top: 1%;
+    border-bottom: 1px dotted #000000;
+    margin-bottom: 7%;
+}
 
+/* Hover para etiquetas <a> */
+.nick_name:hover, .btn-submit:hover{
+    color: white;
+    text-decoration: none !important;
+}
 
+.back:hover{
+    color: black;
+    text-decoration: none !important;
+}
 
-
-
-
-
-
-
-
+/* ----------------------------------REGISTRO------------------------- */
 
 /* ------------------------------INICIO NAVBAR------------------------------------- */
 .nav-link{
@@ -299,7 +358,6 @@ width: 25%;
 /* ----------------------------FIN TEST FOOTER------------------------------- */
 
 /* ----------------------------INICIO GENERAL FOOTER------------------------------- */
-
 footer {
     position: relative;
     bottom: 0px;
@@ -443,7 +501,6 @@ footer {
 /* ----------------------------FIN GENERAL FOOTER------------------------------- */
 
 /* ---------------------------------------INICIO MENU SHOP--------------------------------------- */
-
 /*Distibución para el header de este menú*/
 header.header {
     width: 100%;
@@ -561,11 +618,9 @@ div.main{
     letter-spacing: 2.0rem;
     word-spacing: .5rem;
 }
-
  /* ---------------------------------------FIN MENU SHOP--------------------------------------- */
 
  /* ---------------------------------------INICIO DOTS MENU--------------------------------------- */
-
 #dotsmenubody {
     overflow: hidden; 
     background-image: url(../img/menushop/Fondo.png); 
@@ -607,10 +662,7 @@ div.mainb{
 
  /* ---------------------------------------FIN DOTS MENU--------------------------------------- */
 
-
-
 /* -----------------------------ABOUT US----------------------------- */
-
 .aboutstory {
     padding: 1% 22% 1% 22%;
 }
@@ -1181,7 +1233,7 @@ div.mainb{
 .btn-submit, .btn-submit:hover{
     display: flex;
     justify-content: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #2D2A29;
     color: rgb(255, 255, 255);
     border-radius: 8px;
     font-family: "MoristonPersonal-Medium";
@@ -1290,7 +1342,6 @@ div.mainb{
     background-image: url(../img/esp_lg/check.png);
 }
 /* ----------------------------------INPUT PERSONALIZADO---------------------------------------------------- */
-
 /*Tallas*/
 .btn-change {
     color: #ffffff;
@@ -1762,29 +1813,6 @@ position: relative;
     width: 250px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /* -------------------------------INICIO Carro de compras------------------------------- */
 .cart-content {
     display: flex;
@@ -1975,32 +2003,7 @@ position: relative;
 }
 /* --------------- End of Cart ---------------- */ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /* ----------------------------------INICIO CONFIGURACION PASARELA DE PAGOS---------------------------------- */
- 
 .pay-form {
     position: fixed;
     top: 0;
@@ -2459,7 +2462,6 @@ align-items: center;
     height: 35vh;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
-
 .containerbeige {
     background: rgb(242, 232, 220);
     display: flex;
@@ -2512,7 +2514,6 @@ align-items: center;
 }
 
 /* ----------------------------------Interfaz Ventas---------------------------------- */
-
 .btnsales {
     display: flex;
     flex-direction: row;
@@ -2539,8 +2540,6 @@ align-items: center;
     align-items: center;
 }
 /* ------------------FIN CONFIGURACIÓN INTERFACES USUARIOS------------------ */
-
-
 
 /* ----------------------------INICIO configuracion Test--------------------------------- */
 /* Ubicación de componentes Answers */
@@ -2908,8 +2907,6 @@ align-items: center;
     width: 250px;
 }
 
-
-
 /* -----------------------------Configuración resultado especifico Test----------------------------- */
 .introcontresult {
     display: flex;
@@ -3086,7 +3083,6 @@ align-items: center;
 /* ------------------------------------INICIO CONFIGURACION BLOG POSTRESULTADOS------------------------------------ */
 
 /* ---------------------------INICIO PODCAST--------------------------- */
-
 .podcastgrid {
     padding: 0% 5%;
     margin: 1% 0%;
@@ -3110,7 +3106,6 @@ align-items: center;
 /* ---------------------------FIN PODCAST--------------------------- */
 
 /* ----------------------------------INICIO BLOG---------------------------------- */
-
 .gridblog {
     padding: 0% 5%;
     margin: -2% 0%;
