@@ -28,14 +28,16 @@ include "../../global/conexion.php";
         </div>
 
         <div class="introline">
-            <a href="#">CERRAR SESIÓN</a>
+            <a href="../login/salir.php">CERRAR SESIÓN</a>
         </div>
     </div>
 
     <div class="operationsec">
         <div class="operationbtn">
-            <button class="btn btn-submit">PERSONAS</button>
-            <button class="btn btn-submit">PRODUCTOS</button>
+            <button onclick="window.location.href='http://localhost/Proyecto-klma-humans-BACKEND/templates/interfaz_admin/adminperson.php';" class="btn btn-submit" href=".">PERSONAS</button>
+
+
+            <button  onclick="window.location.href='http://localhost/Proyecto-klma-humans-BACKEND/templates/interfaz_admin/adminproduct.php';" class="btn btn-submit">PRODUCTOS</button>
         </div>
     </div>
 

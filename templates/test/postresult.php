@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "../../global/config.php";
 include "../../global/conexion.php";
 ?>
 <!DOCTYPE html>
@@ -81,7 +80,6 @@ include "../../global/conexion.php";
 		</div>
 
 		<!-- FIN CAMPAÑAS -->
-
 		<div class="introcontresult">
 			<div class="btn-blogshare">
 				<button type="submit" onclick="showhide()" id="showmedia" class="d-block"><i class="fas fa-ellipsis-v"></i></button>

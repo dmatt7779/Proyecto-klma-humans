@@ -41,7 +41,7 @@ include "../../global/conexion.php";
                 <div class="bnav mr-5">
                     <ul class="btnav">
                         <ol class="p-1"><a href="about.php">ABOUT</a></ol>
-                        <ol class="p-1"><a href="../test/prueba.php">TEST</a></ol>
+                        <ol class="p-1"><a href="../test/test.php">TEST</a></ol>
                         <ol class="p-1"><a href="#">EMOCIONES</a></ol>
                         <ol class="p-1"><a href="../contenido/podcast.php">PODCAST</a></ol>
                         <ol class="p-1"><a href="../contenido/blog.php">BLOG</a></ol>

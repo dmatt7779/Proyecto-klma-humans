@@ -28,7 +28,7 @@ if (empty($usuario)) {
     $_SESSION['correo']   = $usuario[0]['correo'];   
     $_SESSION['apodo']   = $usuario[0]['apodo'];   
     $_SESSION['iduser']   = $usuario[0]['id'];   
-
+    $_SESSION['rol'] = $usuario[0]['rol'];
     
     header('location:../Rejillas_generales/loungewear.php');
 

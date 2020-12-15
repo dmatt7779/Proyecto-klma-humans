@@ -1,5 +1,7 @@
-<?php include "../navbar_footer/header.php";?>
-
+<?php
+session_start();
+include "../../global/conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,66 +14,32 @@
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css ">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="circulo collapse navbar-collapse col-lg-1 col-md-1 col-sm-1" id="navbarNav">
-                <div class="nav-item circulo">
-                  <a class="nav-link" href="#"></a>
-                </div>
-              </div>
-              <div class="nav-item titulo col-lg-7 col-md-7">
-                <a class="nav-link" href="#"></a>
-              </div>
-              <div class="col nav-item col-lg-3 col-md-3 col">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item menu-puntos">
-                    <a class="nav-link" href="#"></a>
-                  </li>
-                  <li class="nav-item menu-log">
-                    <a class="nav-link" href="#"></a>
-                  </li>
-                  <li class="nav-item menu-candado">
-                    <a class="nav-link" href="#"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          </div>
-        </nav>
-    </header>
+<?php include "../navbar_footer/header.php";?>
 
 <!-- Home Questions -->
     <div id="divQuestion"></div>
 <!-- End Questions -->
 
-
+<?php include "../navbar_footer/scd_footer.php" ?>
 
     <!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-crossorigin="anonymous"></script>
+<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+<script src="../assets/librerias/popper.min.js"></script>
 <script src="function.js"></script>
 <script>
     //Script para pasar preguntas por capas
     $( document ).on( 'click', 'button.smooth', function() {
         let Id = $( this ).parent().parent().attr( 'id' ),
             NextId = parseInt( Id ) + 1;
-            
-        KlmHumans.saveSession( $( '#divQuestion' ).find( 'div.answ' ).children( 'div.active' ) );
-        if( NextId <= 6 ){ 
-          KlmHumans.existsQuestion( NextId );
-        } else {
-          KlmHumans.saveQuestion();
-        }
-    } );
+            KlmHumans.saveSession( $( '#divQuestion' ).find( 'div.answ' ).children( 'div.active' ) );
+            if( NextId <= 6 ){ 
+                KlmHumans.existsQuestion( NextId );
+            } else {
+                KlmHumans.saveQuestion();
+            }
+    });
 
-    //Script para seleccionar tallas
+    //Script para seleccionar Respuestas
     $( document ).on( 'click', '#selectanswer1 > .testselect1 > .testselect11', function() {
         $( '.testselect1' ).removeClass( 'select-wr active' );
         $( '.testselect11' ).removeClass( 'select-deep' );
