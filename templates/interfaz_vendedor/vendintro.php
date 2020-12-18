@@ -35,8 +35,9 @@ include "../../global/conexion.php";
 
         <div class="operationsec">
             <div class="operationbtn">
-                <button class="btn btn-submit">VENTAS</button>
-                <button class="btn btn-submit">STOCK</button>
+                <button onclick="window.location.href='ventasvend.php';" class="btn btn-submit">VENTAS</button>
+                
+                <button onclick="window.location.href='vendstock.php';" class="btn btn-submit">STOCK</button>
             </div>
         </div>
 

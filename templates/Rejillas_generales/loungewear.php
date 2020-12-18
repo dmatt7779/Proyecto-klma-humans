@@ -18,12 +18,46 @@ include "../../global/conexion.php";
 </head> 
 <body>
 <?php require "../navbar_footer/header.php"; ?>
-    <!-- Track -->
-    <div style="width: 2px; height: 300px; background-color: orangered; z-index: 2; position: fixed; top: 0; bottom: 0; left: 0; margin: auto; margin-left: 50px;">
 
-        <!-- Thumbs -->
-        <div style=" width: 4px; height: 50px; position: absolute; background-color: purple;" id="scrollwrap"></div>
+<!-- --------------------------PRUEBA------------------------------------- -->
+
+<div style="position: fixed;">
+
+    <div style="margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-size: 10pt;
+    top: 150px;
+    position: relative;
+    bottom: 0;
+    left: -25px;">Loungewear</div>
+
+    <!-- Track -->
+    <div style="
+        width: 1px;
+        height: 230px;
+        background-color: rgba(0, 0, 0, 0.548);
+        margin: 23% auto auto 2.5%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: none;">
+
+    <!-- Thumbs -->
+        <div style="
+            width: 2px;
+            height: 40px;
+            position: absolute;
+            background-color: #000000;
+        " id="scrollwrap">
+        </div>
     </div>
+</div>
+
+
+<!-- ---------------------------------------------------------------------------------------------- -->
+
 
 <!-- Espacio Horizontal para imagenes de punta a punta, mantener las margenes de las imagenes horizontales -->
 
@@ -223,6 +257,27 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../assets/js/new.js"></script>
+
+    <!-- scroll bar -->
+
+    <script>
+
+    $(window).scroll(function(event) {
+        var scrollTop = $(window).scrollTop()
+        $('#scrollwrap').css('top', scrollTop+'px')
+
+        if( scrollTop >= 260 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        } else if( scrollTop >= 0 ){
+            $('#scrollwrap').css('display', 'block')
+            $('#scrollwrap').parent().css('display', 'block')
+        } else if( scrollTop < 0 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        }
+    });
+</script>
 
 </body>
 </html>

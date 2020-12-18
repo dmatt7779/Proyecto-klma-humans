@@ -22,7 +22,7 @@ include "../../global/conexion.php";
             <form action="">
                 <div class="col col-xl-12  col-lg-12 col-md-12 form"></div>
                 <input type="text" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
-                <div class="divojitos">
+                <div class="divojitos divshowhide">
                 <input id="txtPassword" type="password" class="login-pass" placeholder="CONTRASEÑA">
                 <span id="show_password" onclick="mostrarPassword()" class="btn btn-link btn-sm fas fa-eye icon"></span>
                 <span id="show_password" onclick="mostrarPassword()" class="btn btn-link btn-sm fas fa-eye icon"></span>
@@ -59,6 +59,20 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
+
+        <!-- Mostrar y ocultar contraseña-->
+    <script type="text/javascript">
+        function mostrarPassword(){
+            var cambio = document.getElementById("txtPassword");
+            if(cambio.type == "password"){
+                cambio.type = "text";
+                $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+            }else{
+                cambio.type = "password";
+                $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+            }
+            }
+    </script>
     
 </body>
 </html>

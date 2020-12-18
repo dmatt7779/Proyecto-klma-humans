@@ -19,14 +19,12 @@
     </div>
 </header>
 
-<!-- 
-    Construcción del carrito de compras
--->
+<!-- Construcción del carrito de compras -->
 <!-- INICIO Carrito de compras -->
 <div class="cart-overlay" id="divCart" style="visibility:hidden">
 	<div class="cart">
 		<span class="close-cart">
-			<i class="fas fa-times" id="closecart"></i>
+			<i class="fal fa-times" id="closecart"></i>
 		</span>
 		<h1>RESUMEN</h1>
 

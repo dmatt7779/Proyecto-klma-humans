@@ -7,7 +7,7 @@ include "../../global/conexion.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PODCAST KLMA HUMANS</title>
+    <title>BLOG KLMA HUMANS</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
@@ -18,7 +18,7 @@ include "../../global/conexion.php";
 <?php include "../navbar_footer/header.php";?>
 
     <div class="container-fluid gridblog">
-        <div class="row text-center mt-4">
+        <div class="row text-center mt-5">
 
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">

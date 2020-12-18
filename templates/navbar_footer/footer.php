@@ -25,7 +25,7 @@
     <div class="maincontentf">
         <div class="conected mt-5">
             <h6>CONECTEMONOS</h6>
-            <input type="text" class="suscribe mt-3" placeholder="CORREO ELECTRÓNICO">
+            <input id="footersuscribe" type="text" class="suscribe mt-3" placeholder="CORREO ELECTRÓNICO">
             <div class="newsletter mt-3">
                 <span>RECIBIRAS NOTICIAS Y OFERTAS EXCLUSIVAS</span>
                 <button class="btn btnnews">SUSCRIBIRSE</button>
@@ -34,7 +34,7 @@
 
         <div class="socialfooter">
             <hr class="footerhr">
-            <div>
+            <div class="mt-4">
                 <a href=""><img src="../assets/img/nav_foot/Facebook.png" alt=""></a>
                 <a href=""><img src="../assets/img/nav_foot/Instgram.png" alt=""></a>
                 <a href=""><img src="../assets/img/nav_foot/Twitter.png" alt=""></a>
@@ -46,13 +46,12 @@
         <hr class="footerhr2">
         <div>
             <a href="">TÉRMINOS Y CONDICIONES</a>
-            <a href="">ABOUT US</a>
-            <a href="">PODCAST</a>
-            <a href="">BLOG</a>
+            <a href="../main/about.php">ABOUT US</a>
+            <a href="../contenido/podcast.php">PODCAST</a>
+            <a href="../contenido/blog.php">BLOG</a>
             <a href="">POLÍTICAS DE PRIVACIDAD</a>
         </div>
     </div>
-
 </div>
 
     <div class="footer-content">
@@ -62,7 +61,7 @@
             </div>
 
             <div class="footerright">
-                <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/test/Contactenos.png" alt="logo de contacto"></a>
+                <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/nav_foot/Contactenos.png"></a>
             </div>
         </div>
     </div>

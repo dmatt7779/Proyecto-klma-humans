@@ -7,7 +7,7 @@ include "../../global/conexion.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG KLMA HUMANS</title>
+    <title>PODCAST KLMA HUMANS</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">

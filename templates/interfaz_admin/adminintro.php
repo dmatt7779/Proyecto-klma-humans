@@ -34,10 +34,9 @@ include "../../global/conexion.php";
 
     <div class="operationsec">
         <div class="operationbtn">
-            <button onclick="window.location.href='http://localhost/Proyecto-klma-humans-BACKEND/templates/interfaz_admin/adminperson.php';" class="btn btn-submit" href=".">PERSONAS</button>
+            <button onclick="window.location.href='adminperson.php';" class="btn btn-submit" href=".">PERSONAS</button>
 
-
-            <button  onclick="window.location.href='http://localhost/Proyecto-klma-humans-BACKEND/templates/interfaz_admin/adminproduct.php';" class="btn btn-submit">PRODUCTOS</button>
+            <button  onclick="window.location.href='adminproduct.php';" class="btn btn-submit">PRODUCTOS</button>
         </div>
     </div>
 
