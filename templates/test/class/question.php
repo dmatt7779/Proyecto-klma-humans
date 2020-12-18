@@ -4,7 +4,7 @@
             'id' => 1,
             'title' => 'SOMOS UN LABORATORIO DE CREACIÓN EMOCIONAL DONDE A TRAVÉS DE LA VULNERABILIDAD Y LA TRANSCEDENCIA BUSCAMOS POTENCIALIZAR TU COEFICIENTE EMOCIONAL',
             'question' => 'OBSERVA TU CORAZÓN Y SELECCIONA UNA EXPRESIÓN',
-            'value' => '10',
+            'value' => '25',
             'replys' => [
                 [
                     'id' => 1,
@@ -42,7 +42,7 @@
             'id' => 2,
             'title' => 'CONSTRUIMOS NUESTRA IDENTIDAD A PARTIR DE NUESTROS OBJETOS EXTERNOS',
             'question' => '¿CON CUÁL SIENTO MÁS AFINIDAD?',
-            'value' => '20',
+            'value' => '25',
             'replys' => [
                 [
                     'id' => 1,
@@ -118,7 +118,7 @@
             'id' => 4,
             'title' => 'ROMPEMOS PARADIGMAS FRENTE A LO QUE ES CORRECTO',
             'question' => 'GENERALMENTE ACTÚAS DE FORMA',
-            'value' => '20',
+            'value' => '10',
             'replys' => [
                 [
                     'id' => 1,
@@ -156,7 +156,7 @@
             'id' => 5,
             'title' => 'LA VULNERABILIDAD NOS HACE FUERTES PORQUE NOS ATREVEMOS A SER AUTENTICOS',
             'question' => 'ME GUSTA',
-            'value' => '10',
+            'value' => '20',
             'replys' => [
                 [
                     'id' => 1,

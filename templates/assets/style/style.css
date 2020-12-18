@@ -1815,10 +1815,16 @@ position: relative;
 }
 
  /* -------------------------------INICIO Carro de compras------------------------------- */
-.cart-content {
+#pagos1 {
+    overflow: auto;
+}
+
+
+ .cart-content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 15%;
 }
 
  .cart-overlay {
@@ -1879,7 +1885,7 @@ position: relative;
     align-items: end;
     grid-template-columns: auto 1fr auto;
     grid-column-gap: 1.5rem;
-    margin: 1.5rem 0% 10%;
+    margin: 1.5rem -1.5rem 10%;
   }
 
   .cart-item img {
@@ -1944,7 +1950,7 @@ position: relative;
 
 /*---------- End of Cart Item -------------------- */
 .cart-footer {
-    margin-top: 15%;
+    margin: 5% -2% 5% 2%;
 }
 
 .subtotal {
@@ -1975,6 +1981,7 @@ position: relative;
     font-size: 6.5pt;
     letter-spacing: .5rem;
     text-align: justify;
+    margin-bottom: 5%;
 }
 
 .cart-footer p:nth-child(3) {
@@ -2027,6 +2034,7 @@ position: relative;
     height: 100%;
     background: rgb(206, 199, 199);
     padding: 2% 7% 0% 2%;
+    overflow: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -2059,7 +2067,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 3% 0%;
+    margin: 2% 0% 2% -5%;
 }
 
 /* Campo del codigo descuento */
@@ -2067,7 +2075,7 @@ hr {
     display: flex;
     align-items: center;
     text-align: center;
-    width: 310px;
+    width: 280px;
     height: 40px;
     border: none;
     border-radius: 8px;
@@ -2085,12 +2093,12 @@ hr {
     letter-spacing: .7rem;
     text-decoration: none;
     text-align: center;
-    padding: 0%;
     justify-content: center;
     align-items: center;
     height: 40px;
     width: auto;
-    margin: 0% 0% 0% 20%;
+    margin: 0% 0% 0% 10%;
+    padding: 0% 0% 0% 10%;
 }
 
 .btn-shipping, .btn-shipping:hover {
@@ -2210,7 +2218,7 @@ hr {
     width: 50%;
     padding-right: 0%;
     padding-left: 5%;
-    margin: 0% 0% 0% 2%;
+    margin: 5% 0% 0% 2%;
     display: flex;
     flex-direction: column;
 }

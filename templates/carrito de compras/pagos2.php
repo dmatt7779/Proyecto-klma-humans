@@ -1,7 +1,6 @@
 <?php
     session_start();
     include "../../global/conexion.php";
-    include "../navbar_footer/header.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +14,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../assets/style/style.css">
 </head>
-<body>
+<body id="pagos1">
+<?php include "../navbar_footer/header.php"; ?>
 
     <div class="containersale2 mt-5">
             <div class="mb-1">
@@ -72,12 +72,10 @@
                         <img src="../assets/img/bolso.png" alt="">
                     </div><hr>
                     <!-- FIN Cart items -->
-                    <div class="saleoff">
-                        <div class="row">
+                        <div class="saleoff">
                             <input type="text" class="saleoff" placeholder="CODIGO DE DESCUENTO">
                             <div><button class="btn btn-saleoff">USAR</button></div>
-                        </div>
-                    </div><hr>
+                        </div><hr>
                     <!-- SUBTOTAL -->
                     <div class="cart-footer mt-4">
                         <div class="subtotal">

@@ -10,8 +10,8 @@ include "../../global/conexion.php";
 	<title>Resultado Especifico KLMA HUMANS</title>
 	
 	<!-- CSS only -->
-<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
 	<link rel="stylesheet" href="sss/sss.css">
 </head>
@@ -126,9 +126,9 @@ include "../../global/conexion.php";
 
     <!-- JS, Popper.js, and jQuery -->
 	<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+	<script src="../assets/librerias/jquery-2.2.4.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
 	<script src="../assets/librerias/bootstrap.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="sss/sss.js"></script>
 	<script src="../assets/js/contactform.js"></script>
 

@@ -94,7 +94,7 @@ var
                 ?
                     'introtest' + Question.id + ''
                 :
-                    'introtest'
+                    'introtest';
 
             desingTitle = '<div class="row m-0">';
                 desingTitle += '<div class="col-md-3"></div>';
@@ -106,7 +106,7 @@ var
 
             desingReplys = '<div class="answ" id="selectanswer' + Question.id + '">';
             for( var i = 0; i < countReplys; i++ ){
-                desingReplys += '<div class="testselect' + Question.id + '" data-theme="' + Question.replys[ i ].theme + '" data-val="' + Question.value + '">';
+                desingReplys += '<div class="testselect' + Question.id + '" data-theme="' + Question.replys[ i ].theme + '" data-val="' + Question.value + '" data-id="' + Question.id + '">';
                     desingReplys += '<div class="testicons testselect' + Question.id + Question.id +' animate-selector' + Question.id + '">';
                         ( Question.replys[ i ].reply.slice( -4 ) === '.png' ) 
                         ?
@@ -168,12 +168,14 @@ var
         saveQuestion: function(){
             Param.append( 'Data', sessionStorage.getItem( 'Result' ) )
             KlmHumans.SentencesPHP( Url + 'save_info.php', Param, function( Result ){
-                console.log( Result )
+                sessionStorage.setItem( 'ResultT', Result );
+                location.href = 'resultados.php'; 
             } )
         },
         saveSession: function( Element ){
             let Value = $( Element ).attr( 'data-val' ),
                 Theme = $( Element ).attr( 'data-theme' ),
+                Question = $( Element ).attr( 'data-id' ),
                 Result = Theme + '|' + Value + '-'; 
                 
             if( sessionStorage.getItem( 'Result' ) === null ){
@@ -184,7 +186,11 @@ var
 
                 sessionStorage.setItem( 'Result', ResultNew );
             }
-        } 
+
+            if( Question === '6' ){ 
+                this.saveQuestion();
+            }
+        }
     }
 
 
@@ -206,10 +212,6 @@ $( document ).on( 'click', infoReply, function(){
         Element = $( this )
         KlmHumans.selectReply( Element )
 })
-
-$( document ).on( 'click', btnSave, function(){
-    KlmHumans.saveQuestion()
-} )
 
 modalTest.on( 'hidden.bs.modal', function ( e ) {
     Questions.length = 0

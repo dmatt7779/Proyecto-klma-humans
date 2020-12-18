@@ -8,6 +8,9 @@
         $Result[] = explode( '|', $Value );
     }
 
+    //Array de Emociones
+    $Emosiones = [ 'Felicidad', 'Miedo', 'Amor', 'Ira', 'Alegria', 'Tristeza' ];
+
     //Ordenar array por tema.
     foreach( $Result as $Key => $Value ){
         $Info[ $Key ]  = $Value[ 0 ];
@@ -29,12 +32,28 @@
         }
 
         if( !$Repeat ){
-            $Result [] = [ 'Theme' => $Row[ 0 ], 'Value' => $Row[ 1 ] ];
+            $Result[] = [ 'Theme' => $Row[ 0 ], 'Value' => $Row[ 1 ] ];
+            $Emo[] = $Row[ 0 ];
         }
     }
-echo "<pre>"; print_r( $Result );
+
+    //Validar Emosion
+
+        $End = '';
+        $Count = count( $Result );
+        for( $i = 0; $i < $Count; $i++ ){
+            $End .= $Result[ $i ][ 'Theme' ] . '|' . $Result[ $i ][ 'Value' ] . '-';
+        }
+
+        $NArray = array_diff( $Emosiones, $Emo );
+        foreach( $NArray as $Value ){
+            $End .= $Value . '|' . 0 . '-';
+        }
+
 //TestReply Nombre de Variable
-    if( isset( $_SESSION[ 'isLogin' ] ) ){
+    if( isset( $_SESSIO11N[ 'isLogin' ] ) ){
         //Aqui se guardar los valores si la variable de Session Exies
     } 
+
+    echo json_encode( $End ); 
 ?>
