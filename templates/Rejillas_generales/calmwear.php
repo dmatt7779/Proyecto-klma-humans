@@ -23,12 +23,12 @@ include "../../global/conexion.php";
 	<!-- GRID -->
 	<!--Productos 1-->
 	<div class="gridclmw mt-5">
-			<div class="card-clmw">
+		<div class="card-clmw">
 				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$210.000</p>
 				</div>
 			</div>
 
@@ -37,10 +37,10 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$220.000</p>
 				</div>
 			</div>
-	</div>
+		</div>
 	<!--Productos 2-->
 	<div class="gridclmw mt-5">
 			<div class="card-clmw">
@@ -48,7 +48,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$230.000</p>
 				</div>
 			</div>
 
@@ -57,7 +57,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$240.000</p>
 				</div>
 			</div>
 	</div>
@@ -68,7 +68,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$250.000</p>
 				</div>
 			</div>
 
@@ -77,7 +77,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$260.000</p>
 				</div>
 			</div>
 	</div>
@@ -97,7 +97,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$280.000</p>
 				</div>
 			</div>
 	</div>
@@ -108,7 +108,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$290.000</p>
 				</div>
 			</div>
 
@@ -117,7 +117,7 @@ include "../../global/conexion.php";
 				<div class="card-body">
 				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
 				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
+				<p class="price" href="#">$291.000</p>
 				</div>
 			</div>
 	</div>

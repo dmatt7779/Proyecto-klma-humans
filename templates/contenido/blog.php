@@ -83,4 +83,4 @@ include "../../global/conexion.php";
 </body>
 </html>
 
-<?php include "../navbar_footer/scd_footer.php"; ?>
+<?php include "../navbar_footer/footer.php"; ?>

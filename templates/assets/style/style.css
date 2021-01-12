@@ -431,9 +431,9 @@ footer {
 .conected > h6 {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 10pt;
+    font-size: 8pt;
     color: #ffffff;
-    letter-spacing: .5rem;
+    letter-spacing: 1.3rem;
 }
 
 .btnnews {
@@ -455,7 +455,7 @@ footer {
 
 #footersuscribe {
     letter-spacing: 1.3rem;
-    font-size: 7pt;
+    font-size: 5pt;
     padding: 0% 0% 0% 2.6%;
 }
 
@@ -955,7 +955,7 @@ div.mainb{
     outline: none;
     box-shadow: none;
     padding: 5% 0% 0% 5%;
-    letter-spacing: 3.1rem;
+    letter-spacing: 3.0rem;
 }
 
 .contactform input:nth-child(1)::placeholder {
@@ -1667,10 +1667,10 @@ position: relative;
     height: 410px;
     width: 547px;
     color: #ffffff;
-    background-size: cover;
     background-position: center;
     margin-bottom: 1.5%;
-}
+    background-size: contain;
+    background-repeat: no-repeat;}
 
 .card-clmw {
     display: flex;
@@ -3160,5 +3160,90 @@ align-items: center;
 }
 /* ----------------------------------FIN BLOG---------------------------------- */
 
+/*@ Responsive media queries*/
+
+    @media screen and (max-width: 1220px){
+        .gridclmw{
+            column-gap: 2rem;
+            margin: 6.5%;
+            /* width: 90%; */
+            padding: 20px;
+            /* background-color: blue; */
+        }
+
+        .cover{
+            height: 30vw;
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        .gridclmw{
+            column-gap: 3rem;
+            margin: 7.5%;
+            /* width: 90%; */
+            padding: 20px;
+            /* background-color: rgb(0, 183, 255); */
+        }
+
+        .cover{
+            height: 30vw;
+            max-width: 100%;
+        }
+    }
 
 
+    @media screen and (max-width: 768px){
+        .gridclmw{
+            column-gap: 2rem;
+            margin: 5.5%;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .cover{
+            height: 30vw;
+            max-width: 100%;
+        }
+    }
+
+    /*Móviles*/
+    @media screen and (max-width: 576px){
+        .gridclmw{
+            grid-template-columns: 100%;
+        }
+        .cover{
+            height: 329px;
+            max-width: 100%;
+        }
+        .footerhr {
+            display: none;
+        }
+        .maincontentf{
+            padding: 0% 2% 2% 0%;
+        }
+        .conected{
+            margin-left: -0.5rem;
+        }
+        .socialfooter img {
+            width: 25px;
+            margin-left: 0.3rem;
+        } 
+        .legaltexts > div > a{
+            font-size: 0.1rem;
+        }
+        .contactform{
+            width: 150%;
+            margin-left: -8vw;
+            margin-bottom: 4vw;
+        }
+        .contactform textarea{
+            padding: 5% 0% 0% 9%;
+            letter-spacing: 2rem;
+        }
+        .img-barras{
+            width: 480px;
+            height: 5px;
+        }
+        
+    }
