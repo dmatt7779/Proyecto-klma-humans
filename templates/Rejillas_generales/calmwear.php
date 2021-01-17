@@ -22,7 +22,7 @@ include "../../global/conexion.php";
 
 	<!-- GRID -->
 	<!--Productos 1-->
-	<div class="gridclmw mt-5">
+	<div class="gridclmw mt-5"> <!--Lucia quitó todos los mt-5 de gridclmw-->
 		<div class="card-clmw">
 				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
 				<div class="card-body">
@@ -42,7 +42,7 @@ include "../../global/conexion.php";
 			</div>
 		</div>
 	<!--Productos 2-->
-	<div class="gridclmw mt-5">
+	<div class="gridclmw">
 			<div class="card-clmw">
 				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
 				<div class="card-body">
@@ -62,7 +62,7 @@ include "../../global/conexion.php";
 			</div>
 	</div>
 	<!--Productos 3-->
-	<div class="gridclmw mt-5">
+	<div class="gridclmw">
 			<div class="card-clmw">
 				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
 				<div class="card-body">
@@ -82,7 +82,7 @@ include "../../global/conexion.php";
 			</div>
 	</div>
 	<!--Productos 4-->
-	<div class="gridclmw mt-5">
+	<div class="gridclmw">
 			<div class="card-clmw">
 				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
 				<div class="card-body">
@@ -102,7 +102,7 @@ include "../../global/conexion.php";
 			</div>
 	</div>
 	<!--Productos 5-->
-	<div class="gridclmw mt-5">
+	<div class="gridclmw">
 			<div class="card-clmw">
 				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
 				<div class="card-body">
