@@ -19,7 +19,7 @@ include "../../global/conexion.php";
         @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
         .radial-progress {
             @circle-size: 105px;
-            @circle-background: #BDD5DC;
+            @circle-background: #969797;
             @circle-color: #000000;
             @inset-size: 90px;
             @inset-color: #ffffff; /* Fondo del porcentaje */
@@ -204,4 +204,4 @@ include "../../global/conexion.php";
 </body>
 </html>
 
-<?php include "../navbar_footer/scd_footer.php"; ?>
+<?php include "../navbar_footer/footer.php"; ?>
