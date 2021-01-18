@@ -2471,9 +2471,10 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% 0% 0% 0%;
+    margin: 1% 0% 0% 0%;
+    margin-top: 26px
     width: auto;
-    height: 35vh;
+    height: 52vh;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
 .containerbeige {
@@ -3302,8 +3303,8 @@ align-items: center;
         .gridclmw{
             column-gap: 2rem;
             margin: 5.5%;
-            width: 95%;
-           /*  padding: 20px; */
+            width: 90%;
+            padding: 20px;
         }
 
         .cover{
@@ -3312,50 +3313,30 @@ align-items: center;
         }
     }
 
-    /*--------Móviles-----------------------------------*/
+    /*Móviles*/
     @media screen and (max-width: 576px){
         .gridclmw{
-            grid-template-columns: 90%;
-            margin-top: -15%;
+            grid-template-columns: 100%;
         }
         .cover{
             height: 329px;
             max-width: 100%;
-            margin-bottom: -5%;
         }
-        /*-----------Móviles footer----------------------*/
-
         .footerhr {
             display: none;
         }
-        #footersuscribe {
-            letter-spacing: 0.5rem;
-            padding: 0% 0% 0% 0.6%;
-        }
         .maincontentf{
-            padding: 0% 10% 2% 0%;
+            padding: 0% 2% 2% 0%;
         }
-        .conected {
-            margin-left: 0rem;
-            max-width: 95%;
-        }
-        .conected > h6 {
-            font-size: 5pt;
-            letter-spacing: 0.9rem;
-        }
-        .legaltexts div {
-            flex-direction: column;
-            align-items: center;
-            padding: 4% 8%;
+        .conected{
+            margin-left: -0.5rem;
         }
         .socialfooter img {
-            width: 33px;
-            margin-left: 0.7em;
+            width: 25px;
+            margin-left: 0.3rem;
         } 
         .legaltexts > div > a{
             font-size: 0.1rem;
-            margin-bottom: 3%;
-            letter-spacing: 0.3rem;
         }
         .contactform{
             width: 150%;
@@ -3370,7 +3351,5 @@ align-items: center;
             width: 480px;
             height: 5px;
         }
-    
-         /*-----------Móviles Navbar----------------------*/
         
     }
