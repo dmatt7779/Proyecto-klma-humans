@@ -2475,8 +2475,8 @@ align-items: center;
     align-items: center;
     margin: 1% 0% 0% 0%;
     margin-top: 26px;
-    width: auto;
-    height: auto;
+/*     width: auto;
+    height: auto; */
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
 .containerbeige {
