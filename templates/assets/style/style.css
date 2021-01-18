@@ -54,6 +54,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    list-style: none; /* Lucia agregó esta linea */
+    box-sizing: border-box; /* Lucia agregó esta linea */
 }
 
 :root {
@@ -315,7 +317,7 @@ header.mainheader .nav {
     width: 25px;
 }
 
-.nested-nav .dropdown-toggle {
+.nested-nav .header {
     display: flex;
     justify-self: center;
     align-items: center;
@@ -3351,5 +3353,80 @@ align-items: center;
             width: 480px;
             height: 5px;
         }
+<<<<<<< HEAD
+    
+        /*-----------Móviles Navbar----------------------*/
+    }
+
+        .nav{
+            background-color: cornflowerblue;
+            height: 80px;
+            width: 100%;
+        }
+
+        .nav > ul{
+            float: right;
+            /* margin-right: 20px; */
+        }
+
+        .nav > ul > li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        .nav > ul > li > a{
+            color: white;
+            font-size: 17px;
+            /* padding: 7px 13px;
+            border-radius: 3px; */
+        }
+
+        .checkbtn{
+            font-size: 35px;
+            color: #ABA9A9;
+            float: right;
+            /* line-height: 80px;
+            margin-right: 40px; */
+            cursor: pointer;
+            display: none;
+            margin-right: 0.5rem;
+        }
+
+        #check{
+            display: none;
+        }
+
+        @media screen and (max-width: 780px){
+
+            .nav > ul > li > a{
+                font-size: 20px;
+            }
+            .checkbtn{
+                display: block;
+            }
+
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #454545;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+=======
         
     }
+>>>>>>> refs/remotes/origin/BACKEND
