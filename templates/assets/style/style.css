@@ -2472,9 +2472,9 @@ align-items: center;
     justify-content: center;
     align-items: center;
     margin: 1% 0% 0% 0%;
-    margin-top: 26px
+    margin-top: 26px;
     width: auto;
-    height: 52vh;
+    height: auto;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
 .containerbeige {
