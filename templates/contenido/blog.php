@@ -17,6 +17,24 @@ include "../../global/conexion.php";
 <body>
 <?php include "../navbar_footer/header.php";?>
 
+<!-- --------------------------PRUEBA------------------------------------- -->
+
+<div id="scrollblog">
+
+    <div id="scrolltitleblog">BLOG</div>
+
+    <!-- Track -->
+    <div class="scrolllightbar">
+
+    <!-- Thumbs -->
+        <div id="scrollwrap" class="scrollblock">
+        </div>
+    </div>
+</div>
+
+
+<!-- ---------------------------------------------------------------------------------------------- -->
+
     <div class="container-fluid gridblog">
         <div class="row text-center mt-5">
 
@@ -74,12 +92,31 @@ include "../../global/conexion.php";
     </div>
     
 
-    <!-- JS, Popper.js, and jQuery -->
+<!-- JS, Popper.js, and jQuery -->
 
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
-    <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
+<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+<script src="../assets/librerias/popper.min.js"></script>
+<script src="../assets/librerias/bootstrap.min.js"></script>
+<script src="../assets/librerias/jquery-2.1.1.min.js"></script>
+
+<!-- scroll bar -->
+<script>
+    $(window).scroll(function(event) {
+        var scrollTop = $(window).scrollTop()
+        $('#scrollwrap').css('top', scrollTop+'px')
+
+        if( scrollTop >= 260 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        } else if( scrollTop >= 0 ){
+            $('#scrollwrap').css('display', 'block')
+            $('#scrollwrap').parent().css('display', 'block')
+        } else if( scrollTop < 0 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        }
+    });
+</script>
 </body>
 </html>
 

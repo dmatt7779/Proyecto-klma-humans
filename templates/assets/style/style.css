@@ -2473,9 +2473,10 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% 0% 0% 0%;
+    margin: 1% 0% 0% 0%;
+    margin-top: 26px
     width: auto;
-    height: 35vh;
+    height: 52vh;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
 .containerbeige {
@@ -2972,8 +2973,7 @@ align-items: center;
 }
 
 .contcampaignsBG {
-    background-color: rgb(189,213,220);
-    /* visibility: hidden; */
+    background-color: #c1d4df;
 }
 
 .contcampaigns > div > a, .contcampaigns > div > a:hover {
@@ -3128,8 +3128,9 @@ align-items: center;
 }
 
 /* Titulos Blogs*/
-.blog-title, .blog-title:hover {
+.blog-title, a > .blog-title {
     text-decoration: none;
+    cursor: pointer;
     color: #000000;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -3138,9 +3139,23 @@ align-items: center;
     letter-spacing: .5rem;
 }
 
+.blog-title:hover {
+    color: #c89c91;
+}
+
 .card-link > h2 {
     font-size: 7pt;
     letter-spacing: .2rem;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.card-link > h2:hover {
+    color: #c89c91;
+    font-size: 9pt;
 }
 
 /*Textos Blog*/
@@ -3160,7 +3175,98 @@ align-items: center;
     color: rgb(189,213,220, .5);
     width: 100%;
 }
+
+.jumbotron {
+    background-color: #c1d4df!important;
+    margin: 0%!important;
+    padding: 0%!important;
+}
+
+.contentsharesocialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sharesocialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189,203,212);
+    height: 280px;
+}
+
+.sharesocialmedia img {
+    width: 80%;
+    margin: 0% 2%;
+}
+
 /* ----------------------------------FIN BLOG---------------------------------- */
+/* ----------------------------------Barras Laterales---------------------------------- */
+/* Scroll Blog */
+
+#scrollblog {
+    position: fixed;
+}
+
+#scrolltitleblog {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 190px;
+    position: relative;
+    bottom: 0;
+    left: 10px;
+}
+
+/* Scroll About Us */
+#scrollabout {
+    position: fixed;
+}
+
+#scrolltitleabout {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 185px;
+    position: relative;
+    bottom: 0;
+    left: 3px;
+}
+
+
+.scrolllightbar {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.scrollblock {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+
+/* -------------------------------FIN Barras Laterales---------------------------------- */
+
+
+
+
+
+
 
 /*@ Responsive media queries*/
 
@@ -3199,8 +3305,8 @@ align-items: center;
         .gridclmw{
             column-gap: 2rem;
             margin: 5.5%;
-            width: 95%;
-           /*  padding: 20px; */
+            width: 90%;
+            padding: 20px;
         }
 
         .cover{
@@ -3209,50 +3315,30 @@ align-items: center;
         }
     }
 
-    /*--------Móviles-----------------------------------*/
+    /*Móviles*/
     @media screen and (max-width: 576px){
         .gridclmw{
-            grid-template-columns: 90%;
-            margin-top: -15%;
+            grid-template-columns: 100%;
         }
         .cover{
             height: 329px;
             max-width: 100%;
-            margin-bottom: -5%;
         }
-        /*-----------Móviles footer----------------------*/
-
         .footerhr {
             display: none;
         }
-        #footersuscribe {
-            letter-spacing: 0.5rem;
-            padding: 0% 0% 0% 0.6%;
-        }
         .maincontentf{
-            padding: 0% 10% 2% 0%;
+            padding: 0% 2% 2% 0%;
         }
-        .conected {
-            margin-left: 0rem;
-            max-width: 95%;
-        }
-        .conected > h6 {
-            font-size: 5pt;
-            letter-spacing: 0.9rem;
-        }
-        .legaltexts div {
-            flex-direction: column;
-            align-items: center;
-            padding: 4% 8%;
+        .conected{
+            margin-left: -0.5rem;
         }
         .socialfooter img {
-            width: 33px;
-            margin-left: 0.7em;
+            width: 25px;
+            margin-left: 0.3rem;
         } 
         .legaltexts > div > a{
             font-size: 0.1rem;
-            margin-bottom: 3%;
-            letter-spacing: 0.3rem;
         }
         .contactform{
             width: 150%;
@@ -3267,6 +3353,7 @@ align-items: center;
             width: 480px;
             height: 5px;
         }
+<<<<<<< HEAD
     
         /*-----------Móviles Navbar----------------------*/
     }
@@ -3339,3 +3426,7 @@ align-items: center;
                 left: 0;
             }
         }
+=======
+        
+    }
+>>>>>>> refs/remotes/origin/BACKEND
