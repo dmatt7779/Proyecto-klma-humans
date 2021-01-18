@@ -2970,8 +2970,7 @@ align-items: center;
 }
 
 .contcampaignsBG {
-    background-color: rgb(189,213,220);
-    /* visibility: hidden; */
+    background-color: #c1d4df;
 }
 
 .contcampaigns > div > a, .contcampaigns > div > a:hover {
@@ -3126,8 +3125,9 @@ align-items: center;
 }
 
 /* Titulos Blogs*/
-.blog-title, .blog-title:hover {
+.blog-title, a > .blog-title {
     text-decoration: none;
+    cursor: pointer;
     color: #000000;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -3136,9 +3136,23 @@ align-items: center;
     letter-spacing: .5rem;
 }
 
+.blog-title:hover {
+    color: #c89c91;
+}
+
 .card-link > h2 {
     font-size: 7pt;
     letter-spacing: .2rem;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.card-link > h2:hover {
+    color: #c89c91;
+    font-size: 9pt;
 }
 
 /*Textos Blog*/
@@ -3158,7 +3172,98 @@ align-items: center;
     color: rgb(189,213,220, .5);
     width: 100%;
 }
+
+.jumbotron {
+    background-color: #c1d4df!important;
+    margin: 0%!important;
+    padding: 0%!important;
+}
+
+.contentsharesocialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sharesocialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189,203,212);
+    height: 280px;
+}
+
+.sharesocialmedia img {
+    width: 80%;
+    margin: 0% 2%;
+}
+
 /* ----------------------------------FIN BLOG---------------------------------- */
+/* ----------------------------------Barras Laterales---------------------------------- */
+/* Scroll Blog */
+
+#scrollblog {
+    position: fixed;
+}
+
+#scrolltitleblog {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 190px;
+    position: relative;
+    bottom: 0;
+    left: 10px;
+}
+
+/* Scroll About Us */
+#scrollabout {
+    position: fixed;
+}
+
+#scrolltitleabout {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 185px;
+    position: relative;
+    bottom: 0;
+    left: 3px;
+}
+
+
+.scrolllightbar {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.scrollblock {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+
+/* -------------------------------FIN Barras Laterales---------------------------------- */
+
+
+
+
+
+
 
 /*@ Responsive media queries*/
 

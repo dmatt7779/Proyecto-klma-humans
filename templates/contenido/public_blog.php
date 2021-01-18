@@ -17,6 +17,21 @@ include "../../global/conexion.php";
 <body>
 <?php include "../navbar_footer/header.php";?>
 
+<!-- Scroll Bar personalizado -->
+
+<div id="scrollblog">
+
+    <div id="scrolltitleblog">BLOG</div>
+
+    <!-- Track -->
+    <div class="scrolllightbar">
+
+    <!-- Thumbs -->
+        <div id="scrollwrap" class="scrollblock">
+        </div>
+    </div>
+</div>
+
 <!-- Contenido BLOG -->
 
 <div class="btn-blogshare mt-5">
@@ -88,6 +103,25 @@ include "../../global/conexion.php";
 			}
 		});
 	}
+</script>
+
+<!-- scroll bar -->
+<script>
+    $(window).scroll(function(event) {
+        var scrollTop = $(window).scrollTop()
+        $('#scrollwrap').css('top', scrollTop+'px')
+
+        if( scrollTop >= 260 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        } else if( scrollTop >= 0 ){
+            $('#scrollwrap').css('display', 'block')
+            $('#scrollwrap').parent().css('display', 'block')
+        } else if( scrollTop < 0 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        }
+    });
 </script>
 </body>
 </html>

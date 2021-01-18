@@ -30,7 +30,7 @@ include "../../global/conexion.php";
     top: 150px;
     position: relative;
     bottom: 0;
-    left: -25px;">Loungewear</div>
+    left: -25px;">LOUNGEWEAR</div>
 
     <!-- Track -->
     <div style="
@@ -260,7 +260,7 @@ include "../../global/conexion.php";
 
     <!-- scroll bar -->
 
-    <script>
+<script>
 
     $(window).scroll(function(event) {
         var scrollTop = $(window).scrollTop()
