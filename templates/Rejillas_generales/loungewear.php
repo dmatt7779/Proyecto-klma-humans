@@ -19,45 +19,20 @@ include "../../global/conexion.php";
 <body>
 <?php require "../navbar_footer/header.php"; ?>
 
-<!-- --------------------------PRUEBA------------------------------------- -->
+<!-- Scroll Bar personalizado -->
 
-<div style="position: fixed;">
+<div id="scrolllg">
 
-    <div style="margin: 0% 0% 0% 0%;
-    transform: rotate(-90deg);
-    letter-spacing: .3rem;
-    font-size: 10pt;
-    top: 150px;
-    position: relative;
-    bottom: 0;
-    left: -25px;">LOUNGEWEAR</div>
+    <div id="scrolltitlelg">LOUNGEWEAR</div>
 
     <!-- Track -->
-    <div style="
-        width: 1px;
-        height: 230px;
-        background-color: rgba(0, 0, 0, 0.548);
-        margin: 23% auto auto 2.5%;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        display: none;">
+    <div class="scrolllightbar">
 
     <!-- Thumbs -->
-        <div style="
-            width: 2px;
-            height: 40px;
-            position: absolute;
-            background-color: #000000;
-        " id="scrollwrap">
+        <div id="scrollwrap" class="scrollblock">
         </div>
     </div>
 </div>
-
-
-<!-- ---------------------------------------------------------------------------------------------- -->
-
 
 <!-- Espacio Horizontal para imagenes de punta a punta, mantener las margenes de las imagenes horizontales -->
 
@@ -259,7 +234,6 @@ include "../../global/conexion.php";
     <script src="../assets/js/new.js"></script>
 
     <!-- scroll bar -->
-
 <script>
 
     $(window).scroll(function(event) {

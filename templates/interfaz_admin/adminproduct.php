@@ -43,9 +43,8 @@ include "../../global/conexion.php";
         </form>
     </div>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
+<div class="jumbotrontable">
+    <div class="container-fluid">
     <!-- DIV PARA EL DATATABLE -->
 <!--         <div class="tableadmin"> -->
             <table class="records_list table-striped table-bordered table-hover" id="mydatatable">

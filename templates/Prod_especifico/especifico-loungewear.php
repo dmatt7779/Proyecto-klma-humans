@@ -18,14 +18,28 @@
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../assets/librerias/flexboxgrid.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 </head>
 
 <body>
-    <?php include "../navbar_footer/header.php"; ?>
+<?php require "../navbar_footer/header.php"; ?>
+
+<!-- Scroll Bar personalizado -->
+
+<div id="scrolllg">
+
+    <div id="scrolltitlelg">LOUNGEWEAR</div>
+
+    <!-- Track -->
+    <div class="scrolllightbar">
+
+    <!-- Thumbs -->
+        <div id="scrollwrap" class="scrollblock">
+        </div>
+    </div>
+</div>
     
 <!-- INICIO GRID PADRE -->
 <div>
@@ -103,7 +117,6 @@
         <div class="btn-opciones">
             <div class="contentdetails" id="divDetalle" hidden>
                 <p class="refer-details"><?php echo $producto[0]['historia'] ?></p>
-                
             </div>
             <!-- Boton VER DETALLES -->
             <button id="btn-details-prod" class="btn-details-prod" name="bntOpciones" data-target="divDetalle">VER DETALLES</button>
@@ -169,42 +182,56 @@
         <div class="btn-opciones">
                 <div class="contentbag" id="divEmpaque" hidden>
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                        
                         <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="../assets/img/bolso.png" class="d-block w-100" alt="...">
+                            <div class="carousel-item active">
+                                <img src="../assets/img/bolso.png" class="d-block w-100" alt="...">
+                            </div>
                         </div>
                     </div>
+                    <p class="refer-specialbag"><?php echo $producto[0]['nombre'] ?></p>
+                    <p class="refer-specialbag"><?php echo $producto[0]['descripcion'] ?></p>
+                    <p class="refer-specialbag">$20.000</p>
                 </div>
-                <p class="refer-specialbag"><?php echo $producto[0]['nombre'] ?></p>
-                <p class="refer-specialbag"><?php echo $producto[0]['descripcion'] ?></p>
-                <p class="refer-specialbag">$20.000</p>
-            </div>
-            <button id="btn-chance" class="btn-empaque" name="bntOpciones" data-target="divEmpaque"><span style="letter-spacing: 1.5rem;">EMPAQUE</span><br><span style="letter-spacing: 1.333333333rem;">ESPECIAL</span></button>
+            <button id="btn-chance" class="btn-empaque" name="bntOpciones" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
             
+            <!-- INPUT PERSONALIZADO -->
+            <label class="custom-radio-checkbox">
+                <!-- Input oculto -->
+                <input class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi" >
+                <!-- Imagen en sustitucion -->
+                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
+            </label>
         </div>
 
         <!-- Buy It Now -->
-        <div class="btn-opciones" style="flex-direction: column; justify-content: center; align-items: center;">
+        <div class="btn-opciones">
             <!-- Botones de TALLAS y agregar + carrito de compras -->
             <div class="elemento4">
                 <div class="btn-opciones">
                     <div class="contentsize" id="divSize" hidden>
                         <img class="d-block w-100" src="../assets/img/icicle_ss2020_natural.jpg" alt="">
                         <p class="choicesize mt-3">SELECCIONAR TALLA</p>
-                        <button  class="btn-change">S</button>
-                        <button class="btn-change">M</button>
-                        <button  class="btn-change">L</button>
-                        <button   class="btn-change">XL</button>
+                        <div class="btn-sizes2">
+                            <button class="btn-change">S</button>
+                            <button class="btn-change">M</button>
+                            <button class="btn-change">L</button>
+                            <button class="btn-change">XL</button>
+                        </div>
                     </div>
                 </div>
                 <button id="btn-size" class="btn-size" name="bntOpciones" data-target="divSize">TALLAS</button>
             </div>
-            <a onclick="enviar_carro();" href="#" class="btn-submit" id="aAddCart">ADD TO CART</a>
-            <a href="#" class="btn-submit">BUY IT NOW</a>
+            <a onclick="enviar_carro();" href="#" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
+            <a href="#" class="btn btn-submit">BUY IT NOW</a>
         </div>
     </div><!-- FIN Contenedores hidden -->
 </div>
+
+<!-- JS, Popper.js, and jQuery -->
+    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+    <script src="../assets/librerias/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Check  -->
 <script>
@@ -218,12 +245,6 @@
             }
     }
 </script>
-
-<!-- JS, Popper.js, and jQuery -->
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Script para ocultar obejtos HTML -->
 <script>
@@ -241,6 +262,25 @@
           Elemento.attr('hidden', true)
         }
       });
+</script>
+
+    <!-- scroll bar -->
+<script>
+    $(window).scroll(function(event) {
+        var scrollTop = $(window).scrollTop()
+        $('#scrollwrap').css('top', scrollTop+'px')
+
+        if( scrollTop >= 260 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        } else if( scrollTop >= 0 ){
+            $('#scrollwrap').css('display', 'block')
+            $('#scrollwrap').parent().css('display', 'block')
+        } else if( scrollTop < 0 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        }
+    });
 </script>
 
 <!-- Script para cambiar botones de color White to Black -->
@@ -267,10 +307,16 @@
         $('.aTalla').removeClass('talla-active');
         $(this).addClass('talla-active');
     } )
-</script>   
+</script>
+
+<!-- Funcion para seleccionar Empaque Especial -->
+<script>
+    $('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
+    $('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
+</script>
 
 <script src="../assets/js/carrito.js"></script>
-
-
 </body>
 </html>
+
+<?php include "../navbar_footer/footer.php";?>

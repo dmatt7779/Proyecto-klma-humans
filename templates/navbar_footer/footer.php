@@ -35,9 +35,9 @@
         <div class="socialfooter">
             <hr class="footerhr">
             <div class="mt-4">
-                <a href=""><img src="../assets/img/nav_foot/Facebook.png" alt=""></a>
-                <a href=""><img src="../assets/img/nav_foot/Instgram.png" alt=""></a>
-                <a href=""><img src="../assets/img/nav_foot/Twitter.png" alt=""></a>
+                <a target="_blank" href="https://www.facebook.com/klmahum"><img src="../assets/img/nav_foot/Facebook.png" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/klmahum/"><img src="../assets/img/nav_foot/Instgram.png" alt=""></a>
+                <a target="_blank" href="https://twitter.com/klmahum"><img src="../assets/img/nav_foot/Twitter.png" alt=""></a>
             </div>
         </div>
     </div>
