@@ -19,7 +19,7 @@ include "../../global/conexion.php";
         @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
         .radial-progress {
             @circle-size: 105px;
-            @circle-background: #BDD5DC;
+            @circle-background: #969797;
             @circle-color: #000000;
             @inset-size: 90px;
             @inset-color: #ffffff; /* Fondo del porcentaje */
@@ -116,6 +116,21 @@ include "../../global/conexion.php";
 <body>
 <?php include "../navbar_footer/header.php";?>
 
+<!-- Scroll Bar personalizado -->
+<div id="scrollresults">
+
+    <div id="scrolltitleresults">RESULTADOS</div>
+
+    <!-- Track -->
+    <div class="scrolllightbar">
+
+    <!-- Thumbs -->
+        <div id="scrollwrap" class="scrollblock">
+        </div>
+    </div>
+</div>
+
+
     <div class="results text-center">
         <p>RESULTADOS</p>
     </div>
@@ -182,7 +197,7 @@ include "../../global/conexion.php";
 
                             Graph += '<div class="inset"></div>';
                         Graph += '</div>' ;
-                        Graph += '<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); font-size: 20pt;">' + Info[ 1 ] + '%</span>';   
+                        Graph += '<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); font-size: 15pt;">' + Info[ 1 ] + '%</span>';   
                     Graph += '</div>';
 
                     Val = Val + parseInt( Info[ 1 ] );
@@ -201,7 +216,26 @@ include "../../global/conexion.php";
         }
     </script>
 
+    <!-- scroll bar -->
+    <script>
+        $(window).scroll(function(event) {
+            var scrollTop = $(window).scrollTop()
+            $('#scrollwrap').css('top', scrollTop+'px')
+
+            if( scrollTop >= 260 ){
+                $('#scrollwrap').css('display', 'none')
+                $('#scrollwrap').parent().css('display', 'none')
+            } else if( scrollTop >= 0 ){
+                $('#scrollwrap').css('display', 'block')
+                $('#scrollwrap').parent().css('display', 'block')
+            } else if( scrollTop < 0 ){
+                $('#scrollwrap').css('display', 'none')
+                $('#scrollwrap').parent().css('display', 'none')
+            }
+        });
+    </script>
+
 </body>
 </html>
 
-<?php include "../navbar_footer/scd_footer.php"; ?>
+<?php include "../navbar_footer/footer.php"; ?>

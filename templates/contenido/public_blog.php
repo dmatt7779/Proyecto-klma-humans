@@ -56,14 +56,14 @@ include "../../global/conexion.php";
             <div class="col-md-2"></div>
 
             <!-- SOCIAL MEDIA -->
-            <div id="socialmedia2" class="jumbotron jumbotron-fluid mt-5" hidden>
+            <div id="socialmedia2" class="jumbotronsocialmedia mt-5" hidden>
                 <div class="container contentsharesocialmedia">
                     <div class="col-md-4 container"></div>
                     <div class="container sharesocialmedia">
-                        <a class="ml-5" href="#"><img src="../assets/img/test/Face.png" alt="Logo de Facebook"></a>
-                        <a href="#"><img src="../assets/img/test/Instagram.png" alt="Logo de Instagram"></a>
-                        <a href="#"><img src="../assets/img/test/Twitter.png" alt="Logo de twitter"></a>
-                        <a class="mr-5" href="#"><img src="../assets/img/test/Enlace.png" alt="Logo para compartir enlace"></a>
+                        <a class="ml-5" target="_blank" href="https://www.facebook.com/klmahum"><img src="../assets/img/test/Face.png" alt="Logo de Facebook"></a>
+                        <a target="_blank" href="https://www.instagram.com/klmahum/"><img src="../assets/img/test/Instagram.png" alt="Logo de Instagram"></a>
+                        <a target="_blank" href="https://twitter.com/klmahum"><img src="../assets/img/test/Twitter.png" alt="Logo de twitter"></a>
+                        <a target="_blank" class="mr-5" href="#"><img src="../assets/img/test/Enlace.png" alt="Logo para compartir enlace"></a>
                     </div>
                     <div class="col-md-4 container"></div>
                 </div>
@@ -72,7 +72,7 @@ include "../../global/conexion.php";
     </div>
 
     <!-- Texto de introduccion -->
-    <div id="prueba" class="blogcontresult mt-5 mb-5">
+    <div id="prueba" class="blogcontresult mt-3 mb-5">
         <div class="mt-2"><h2>MIEDO</h2></div>
         <div class="introresult mt-5 mb-4">
             <p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
