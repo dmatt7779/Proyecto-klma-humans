@@ -3283,6 +3283,40 @@ align-items: center;
     left: -28px;
 }
 
+/* Scroll TEST */
+#scrollTest {
+    position: fixed;
+}
+
+#scrolltitleTest {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 125px;
+    position: relative;
+    bottom: 0;
+    left: -12px;
+}
+
+/* Scroll RESULTADO TEST */
+#scrollresults {
+    position: fixed;
+}
+
+#scrolltitleresults {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 115px;
+    position: relative;
+    bottom: 0;
+    left: -25px;
+}
+
 .scrolllightbar {
     width: 1px;
     height: 230px;
