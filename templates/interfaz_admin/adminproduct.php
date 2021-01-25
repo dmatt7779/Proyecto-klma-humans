@@ -2,6 +2,13 @@
 session_start();
 include "../../global/conexion.php";
 
+        if (!isset($_SESSION['correo'])) {
+         
+                    header("location:../login/login.php");
+            
+        }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

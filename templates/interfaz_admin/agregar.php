@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    if (!isset($_SESSION['correo'])) {
+         
+        header("location:../login/login.php");
+
+}
     date_default_timezone_set("America/Bogota");
     include ('../../global/conexion.php');
   
