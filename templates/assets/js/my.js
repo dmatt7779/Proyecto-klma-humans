@@ -26,3 +26,55 @@ $(document).ready(function() {
         }
     });
 });
+
+// confirmar deshabilitacion
+
+function myconfirmdes(event) {
+
+    var r =  confirm("seguro que desea deshabilitar?");
+
+    if (r == true) {
+  txt = "Deshabilitado";
+  alert(txt);
+} else {
+  txt = "Accion cancelada";
+  alert(txt);
+  event.preventDefault();
+}
+
+}
+
+
+// confirmar habilitacion
+
+function myconfirmhab(event) {
+
+    var r =  confirm("seguro que desea habilitar?");
+
+    if (r == true) {
+  txt = "Habilitado";
+  alert(txt);
+} else {
+  txt = "Accion cancelada";
+  alert(txt);
+  event.preventDefault();
+}
+
+}
+
+// confirmar borrar usuario
+
+function myconfirm(event) {
+
+    var r =  confirm("seguro que desea borrar?");
+
+    if (r == true) {
+  txt = "Borrado";
+  alert(txt);
+} else {
+  txt = "Accion cancelada";
+  alert(txt);
+  event.preventDefault();
+}
+
+}

@@ -71,6 +71,7 @@ include "../../global/conexion.php";
                             <th>Genero</th>
                             <th>Imagen</th>
                             <th>Emocion</th>
+                            <th>Cambiar Estado</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -114,6 +115,13 @@ include "../../global/conexion.php";
                             <td><?php echo $producto['genero'] ?></td>
                             <td><?php echo $producto['imagen'] ?></td>
                             <td><?php echo $producto['emocion'] ?></td>
+                            <td> <form action="estadoproducto.php" method="get">
+                            <input type="hidden" name="id" value="<?php echo $producto['id'] ?>">
+                            <button class="btn btn-warning" onclick="myconfirmdes(event)" type="submit">deshabilitar</button>
+                            </form> <form action="estadoproductoh.php" method="get">
+                            <input type="hidden" name="id" value="<?php echo $producto['id'] ?>">
+                            <button class="btn btn-success" onclick="myconfirmhab(event)" type="submit">habilitar</button>
+                            </form> </td>
                     </tr>
                     <?php } ?>                  
                 </tbody>
@@ -121,6 +129,7 @@ include "../../global/conexion.php";
     </div>
 </div>
     <!-- JS, Popper.js, and jQuery -->
+    <script src="../assets/js/my.js"></script>
 
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
