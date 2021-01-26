@@ -41,12 +41,16 @@
 </div>
 
 <!-- INICIO GRID PADRE -->
-<div>
+<div class="mt-5">
     <div class="grid-cw mt-4">
         <!-- Carousel para imagenes de productos -->
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-product">
                 <div class="carousel-item active">
+                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/productomat.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-item">
                     <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto00.png" class="d-block w-100" alt="...">
                 </div>
 
@@ -87,7 +91,11 @@
             </div>
 
             <div class="font-lw-1 elemento1-5cw">
-                <p class="materials">MATERIALES</p>
+                <p class="materialstitle">MATERIALES</p>
+                <div class="materials">
+                    <div><img src="../assets/img/prodgenerales/prod_esp/calmwear/material02.png" alt=""></div>
+                    <div><img src="../assets/img/prodgenerales/prod_esp/calmwear/material01.png" alt=""></div>
+                </div>
             </div>
 
             <!-- Precio -->

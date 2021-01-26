@@ -1737,7 +1737,8 @@ div.mainb{
     background-position: center;
     margin-bottom: 1.5%;
     background-size: contain;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 .card-clmw {
     display: flex;
@@ -1802,8 +1803,8 @@ div.mainb{
 /* .grid-cw div {
     border: 1px solid #000000;
     margin: 0rem;
-}
- */
+} */
+
 
 .nested-grid-cw {
     display: grid;
@@ -1838,6 +1839,24 @@ div.mainb{
     /* grid-column: 3/4; */
     align-self: center;
     text-align: center;
+}
+
+.materials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.materials > div > img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    color: #ffffff;
+    background-position: center;
+    margin: 2% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /*Botones Negros + Hover neutral*/
@@ -2164,10 +2183,11 @@ div.mainb{
 }
 
 /* Referencia */
-.materials:nth-child(1) {
+.materialstitle:nth-child(1) {
     letter-spacing: 0.7rem;
     font-family: "MoristonPersonal-Bold";
     font-size: 9pt;
+    padding-left: 2%;
 }
 
 /* Texto del contenedor Ver Detalles */
