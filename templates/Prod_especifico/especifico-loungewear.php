@@ -89,7 +89,7 @@
 
             <!-- Precio -->
             <div class="elemento2">
-                <p class="font-price-lw">$<?php echo $producto[0]['precio_venta'] ?></p>
+                <p class="font-price-lw">$<?php echo number_format($producto[0]['precio_venta']) ?></p>
             </div>
 
             <!--  Seleccionador de Tallas -->

@@ -1,7 +1,7 @@
 <?php
 
 
-include "../../global/config.php";
+
 include "../../global/conexion.php";
 
 session_start();
@@ -14,6 +14,10 @@ if (!isset($usuario)) {
     
     header("location:../login/login.php");
 }
+
+
+
+
 $id = $_POST['id'];
 $talla = $_POST['talla'];
 
@@ -71,7 +75,7 @@ if (!isset($opensale[0]['id'])) {
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale2');");
     $producto -> execute();
 
-    header("location:../Rejillas_generales/loungewear.php");
+    // header("location:../Rejillas_generales/loungewear.php");
 
 
     }else{
@@ -111,7 +115,7 @@ if (!isset($opensale[0]['id'])) {
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale');");
         $producto -> execute();
 
-        header("location:../Rejillas_generales/loungewear.php");
+        // header("location:../Rejillas_generales/loungewear.php");
 
 
 
@@ -144,15 +148,23 @@ if (!isset($opensale[0]['id'])) {
 
     }
 
+?> 
+
+
+
+<?php
+
+
     $sum_sale2 = $pdo->prepare("UPDATE ventas SET subtotal = $subtotal where id = $idsale");
 
     $sum_sale2 -> execute();
 
 
-
+    
 
     
-    header("location:../Rejillas_generales/loungewear.php"); 
+    
+    // header("location:../Rejillas_generales/loungewear.php"); 
 
         
     }

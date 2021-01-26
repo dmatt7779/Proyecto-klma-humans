@@ -139,6 +139,7 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/datatables.min.js"></script>
     <script src="../assets/js/mydatatable.js"></script>
 
+
 </body>
 </html>
 

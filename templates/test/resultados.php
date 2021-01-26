@@ -238,4 +238,8 @@ include "../../global/conexion.php";
 </body>
 </html>
 
+
+
+
+
 <?php include "../navbar_footer/footer.php"; ?>

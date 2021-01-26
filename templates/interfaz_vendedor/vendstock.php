@@ -111,6 +111,50 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/datatables.min.js"></script>
     <script src="../assets/js/mydatatable.js"></script>
 
+    <script>
+
+
+
+let result = sessionStorage.getItem('ResultT');
+
+var vec_barra = result.split('-');
+vec_barra.pop();
+
+let resultado = vec_barra.map(e=> e.replace(/'|'/g, ':'));
+let convert = [];
+var mayor = 0;
+for (i in resultado) {
+
+    convert.push(resultado[i].split('|'))
+
+
+
+}
+
+for (y in convert){
+   
+    if (parseInt(convert[y][1]) > mayor) {
+        mayor = parseInt(convert[y][1]);
+        emocionselected = convert[y][0];
+    }
+
+
+}
+
+console.log(mayor);
+console.log(emocionselected);
+
+
+
+
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
 
