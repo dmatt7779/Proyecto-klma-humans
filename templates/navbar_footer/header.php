@@ -5,7 +5,6 @@
 <nav class="navbar-expand-sm navbar-light">
     <header class="mainheader">
     <div class="navlogo">
-            <!-- <a href="../main/menu.php"><img src="../assets/img/nav_foot/btn_shop.png" alt="Logo de compras"></a> -->
             <a href="../main/menu.php"><img src="../assets/img/nav_foot/shop.gif" alt="Logo de compras"></a>
     </div>
 

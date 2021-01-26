@@ -3342,15 +3342,30 @@ hr {
 
 /*@ Responsive media queries*/
 
-    @media screen and (max-width: 1220px){
+    @media screen and (min-width: 1400px){
         .gridclmw{
-            column-gap: 2rem;
-            margin: 5.5%;
-            width: 95%;
-            /* padding: 20px; */
-
+            column-gap: 15rem;
+            margin: 8%;
+            width: 84%
         }
 
+        /* .cover{
+            height: 30vw;
+            width: 100%;
+        } */
+    }
+
+    @media screen and (max-width: 1220px){
+        .gridclmw{
+            column-gap: 8rem;
+            margin: 5.5%;
+            width: 93%
+            /* padding: 20px; */
+        }
+        /* .card-body {
+            padding: 2rem;
+            margin-top: -3rem;
+        } */
         .cover{
             height: 30vw;
             max-width: 100%;
@@ -3390,16 +3405,22 @@ hr {
     /*Móviles*/
     @media screen and (max-width: 576px){
         .gridclmw{
-            grid-template-columns: 90%;
+            grid-template-columns: 100%;
             margin-top: -15%;
         }
         .cover{
             height: 329px;
             max-width: 100%;
-            margin-bottom: -5%;
+            margin: 5% 0% -5% 0%;
+        }
+        .price, .price:hover {
+            margin: 2%;
         }
         .footerhr {
             display: none;
+        }
+        .footerhr2 {
+            width: 95%;
         }
         #footersuscribe {
             letter-spacing: 0.5rem;
@@ -3409,12 +3430,13 @@ hr {
             padding: 0% 10% 2% 0%;
         }
         .conected{
-            margin-left: 0rem;
-            max-width: 95%;
+            margin-left: 1rem;
+            max-width: 100%;
         }
         .conected > h6 {
-            font-size: 5pt;
+            font-size: 4pt;
             letter-spacing: 0.9rem;
+            margin-top: 2rem;
         }
         .legaltexts div {
             flex-direction: column;
@@ -3423,7 +3445,7 @@ hr {
         }
         .socialfooter img {
             width: 33px;
-            margin-left: 0.7em;
+            margin: -58px 78px 98px -164px;
         }
         .legaltexts > div > a{
             font-size: 0.1rem;
