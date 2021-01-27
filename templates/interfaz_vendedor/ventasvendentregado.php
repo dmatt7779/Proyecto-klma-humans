@@ -28,18 +28,16 @@ if (!isset($_SESSION['correo'])) {
           
 
             <div class="btnsales mt-4 mb-4">
-            <button onclick="location.href='../interfaz_vendedor/ventasvend.php'" class="btn btn-submit">RECIBIDOS</button>
+                <button onclick="location.href='../interfaz_vendedor/ventasvend.php'" class="btn btn-submit">RECIBIDOS</button>
                 <button onclick="location.href='../interfaz_vendedor/ventasvendenviado.php'" class="btn btn-submit ml-4 mr-4">ENVIADOS</button>
                 <button onclick="location.href='../interfaz_vendedor/ventasvendentregado.php'" class="btn btn-submit">ENTREGADOS</button>
             </div> 
             
             <div class="introline mb-4 mt-4">
-            
                 <img src="../assets/img/interfaces/linea_principal.png" alt="Linea gradient">
             </div>
             <div class="introline mb-4 mt-4">
-            
-                <h1 style="color: black;">Pagados</h1>
+                <h1  style="color: black;">Entregados</h1>
             </div>
         </div>
 
@@ -80,7 +78,7 @@ if (!isset($_SESSION['correo'])) {
                     </tfoot>
                 <tbody>
                     <?php
-        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 1");
+        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 3");
         $sentencia -> execute();
         $listaventas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     ?>

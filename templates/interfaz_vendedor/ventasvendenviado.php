@@ -34,12 +34,11 @@ if (!isset($_SESSION['correo'])) {
             </div> 
             
             <div class="introline mb-4 mt-4">
-            
                 <img src="../assets/img/interfaces/linea_principal.png" alt="Linea gradient">
             </div>
             <div class="introline mb-4 mt-4">
-            
-                <h1 style="color: black;">Pagados</h1>
+            <h1  style="color: black;">Enviados</h1>
+                
             </div>
         </div>
 
@@ -80,7 +79,7 @@ if (!isset($_SESSION['correo'])) {
                     </tfoot>
                 <tbody>
                     <?php
-        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 1");
+        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 2");
         $sentencia -> execute();
         $listaventas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     ?>
