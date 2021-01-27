@@ -81,7 +81,7 @@
                     <p class="refertr">DESIGN</p>
             </div>
 
-            <div class="font-lw-1 elemento1-5cw">
+            <div class="font-lw-1 elemento1-5tr">
                 <p class="typeselectortitle">SEXO</p>
                 <div class="typeselector">
                     <div><img src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino-2.png" alt=""></div>
@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="font-lw-1 elemento1-5cw">
+            <div class="font-lw-1 elemento1-5tr">
                 <p class="typeselectortitle">MANGA</p>
                 <div class="typeselector">
                     <div><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
@@ -244,10 +244,8 @@
 
 <!-- JS, Popper.js, and jQuery -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/jquery-2.2.4.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- scroll bar -->
 <script>
