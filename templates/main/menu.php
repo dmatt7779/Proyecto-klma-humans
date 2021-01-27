@@ -15,7 +15,7 @@
 
     <header class="header">
         <div class="logo">
-            <a href="#"><img src="../assets/img/menushop/btn_shop.png" alt="logo shop shop"></a>
+            <a href="#"><img src="../assets/img/nav_foot/shop.gif" alt="logo shop shop"></a>
         </div>
     </header>
 
