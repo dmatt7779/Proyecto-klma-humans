@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto Especifico - TR</title>
+    <title>Producto Especifico - CW</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
@@ -29,7 +29,7 @@
 <!-- Scroll Bar personalizado -->
 <div id="scrolltr">
 
-    <div id="scrolltitletr">TRANSITION</div>
+    <div id="scrolltitletr">CALMWEAR</div>
 
     <!-- Track -->
     <div class="scrolllightbar">
