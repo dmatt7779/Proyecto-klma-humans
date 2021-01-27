@@ -10,13 +10,26 @@ include "../../global/conexion.php";
 	<title>Resultado Especifico KLMA HUMANS</title>
 	
 	<!-- CSS only -->
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
+	<link rel="stylesheet" href="../assets/style/style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="sss/sss.css">
 </head>
 <body>
 <?php include "../navbar_footer/header.php";?>
+
+<!-- Scroll Bar personalizado -->
+<div id="scrollpostresults">
+
+    <div id="scrolltitlepostresults">EMOCIÓN</div>
+
+    <!-- Track -->
+    <div class="scrolllightbar">
+
+        <!-- Thumbs -->
+        <div id="scrollwrap" class="scrollblock"></div>
+    </div>
+</div>
 
 	<!-- Texto de introduccion -->
 	<div class="introcontresult mt-5">
@@ -130,7 +143,25 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/popper.min.js"></script>
 	<script src="../assets/librerias/bootstrap.min.js"></script>
 	<script src="sss/sss.js"></script>
-	<script src="../assets/js/contactform.js"></script>
+
+<!-- scroll bar -->
+<script>
+    $(window).scroll(function(event) {
+        var scrollTop = $(window).scrollTop()
+        $('#scrollwrap').css('top', scrollTop+'px')
+
+        if( scrollTop >= 260 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        } else if( scrollTop >= 0 ){
+            $('#scrollwrap').css('display', 'block')
+            $('#scrollwrap').parent().css('display', 'block')
+        } else if( scrollTop < 0 ){
+            $('#scrollwrap').css('display', 'none')
+            $('#scrollwrap').parent().css('display', 'none')
+        }
+    });
+</script>
 
 <!-- Sentences Slider-->
 <script>

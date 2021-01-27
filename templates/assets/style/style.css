@@ -986,7 +986,7 @@ div.mainb{
     padding: 0% 3% 0% 5%;
 }
 
-/* -----------------------------INICIO Contact Form----------------------------- */
+/* -----------------------------FIN Contact Form----------------------------- */
 
 /* INICIO CONFIGURACIÓN LOUNGEWEAR GENERAL */
 
@@ -1350,20 +1350,6 @@ div.mainb{
     background-image: url(../img/esp_lg/check.png);
 }
 /* ----------------------------------FIN INPUT PERSONALIZADO---------------------------------------------------- */
-/*Tallas*/
-.btn-change {
-    color: #ffffff;
-    border: none;
-    background: rgb(26,24,24);
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 10pt;
-    letter-spacing: .7rem;
-    z-index: 100;
-    margin-bottom: 3%;
-    outline: none !important;
-}
 
 .btn-size, .btn-size:focus {
     color: rgb(26,24,24);
@@ -1653,76 +1639,9 @@ div.mainb{
     opacity: .5;
     transition: opacity .15s ease;
 }
-/* FIN configuracion estilos pantalla loungewear producto especifico */
+/* ------------------------------FIN LOUNGEWEAR ------------------------  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --------------------------INCIO Configuración Productos generales Calmwear-------------------------- */
+/* --------------------------INCIO Generales CALMWEAR-------------------------- */
 .gridclmw {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1779,7 +1698,7 @@ div.mainb{
     margin: -1%;
     text-decoration: none;
 }
-/* --------------------------FIN Configuracion Calmwear-------------------------- */
+/* --------------------------FIN Generales CALMWEAR-------------------------- */
 
 /* ---------------------------- INICIO Especifico CALMWEAR -------------------------- */
 
@@ -1836,7 +1755,6 @@ div.mainb{
 }
 
 .elemento4 {
-    /* grid-column: 3/4; */
     align-self: center;
     text-align: center;
 }
@@ -1859,25 +1777,6 @@ div.mainb{
     background-repeat: no-repeat;
 }
 
-/*Botones Negros + Hover neutral*/
-.btn-submit, .btn-submit:hover{
-    display: flex;
-    justify-content: center;
-    background-color: #2D2A29;
-    color: rgb(255, 255, 255);
-    border-radius: 8px;
-    font-family: "MoristonPersonal-Medium";
-    font-size: 8pt;
-    letter-spacing: .2rem;
-    box-shadow: 5px 3px 8px rgb(0, 0, 0);
-    text-decoration: none;
-    width: 200px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
 /*Div para los botones de las opciones Ver producto, Empaque Especial, Ver Detalles*/
 .btn-opcionescw {
     display: flex;
@@ -1886,92 +1785,6 @@ div.mainb{
     position: relative;
 }
 
-/*Detalles del producto*/
-.btn-details-prod, .btn-details-prod:focus {
-    color: rgb(26,24,24);
-    border: none;
-    background: #ffffff;
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    letter-spacing: .3rem;
-    z-index: 100;
-    outline: none !important;
-}
-
-/*Detalles del producto*/
-.btn-verproduct, .btn-verproduct:focus {
-    color: rgb(26,24,24);
-    border: none;
-    background: #ffffff;
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    letter-spacing: .3rem;
-    z-index: 100;
-    outline: none !important;
-}
-
-/*Empaque Especial*/
-.btn-empaque, .btn-empaque:focus {
-    color: rgb(26,24,24);
-    background: #ffffff;
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    letter-spacing: 1rem;
-    z-index: 100;
-    margin: 0% 10% 0% 15%;
-    padding: 0% 2% 1% 1%;
-    width: 80%;
-    border: none;
-    outline: none !important;
-}
-
-.btn-empaque > .empaque {
-    letter-spacing: 1.1333333333rem;
-}
-
-.btn-empaque > .especial {
-    letter-spacing: .9999999rem;
-}
-
-
-/* ----------------------------------INPUT PERSONALIZADO---------------------------------------------------- */
-
-/* Centra el input personalizado con el texto */
-.custom-radio-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    margin: 0;
-}
-
-/* Modificador para dar la imagen de radio */
-.custom-radio-checkbox__show--radio {
-    background-image: url(../img/esp_lg/uncheck.png);
-}
-
-/* Oculta input original */
-.custom-radio-checkbox > .custom-radio-checkbox__input {
-    display: none;
-}
-
-/* Radio personalizado usando <span> */
-.custom-radio-checkbox > .custom-radio-checkbox__show {
-    width: 30px;
-    height: 30px;
-    background-size: cover;
-}
-
-/* Cambia el radio personalizado cuando es pulsado */
-.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
-    background-image: url(../img/esp_lg/check.png);
-}
-/* ----------------------------------FIN INPUT PERSONALIZADO---------------------------------------------------- */
 /*Tallas*/
 .btn-change {
     color: #ffffff;
@@ -2001,59 +1814,6 @@ div.mainb{
     outline: none !important;
 }
 
-/* Cambio de color en la funcion de JQuery */
-.btn-empaque2, .btn-empaque2:focus {
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    letter-spacing: 1rem;
-    width: 80%;
-    margin: 0% 10% 0% 15%;
-    z-index: 100;
-    padding: 0% 2% 1% 1%;
-    border: none;
-    outline: none !important;
-}
-
-.btn-empaque2 > .empaque {
-    letter-spacing: 1.1333333333rem;
-}
-
-.btn-empaque2 > .especial {
-    letter-spacing: .9999999rem;
-}
-
-.btn-details-prod2, .btn-details-prod2 {
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    letter-spacing: .3rem;
-    z-index: 100;
-    outline: none !important;
-}
-
-.btn-size2, .btn-size2:focus{
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    text-decoration: none;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 10pt;
-    letter-spacing: .7rem;
-    z-index: 100;
-    margin: 0% 0% 6% 7%;
-    position: relative;
-    outline: none !important;
-}
-
 .contentdetailscw {
     width: 45%;
     height: 758%;
@@ -2070,20 +1830,6 @@ div.mainb{
     padding: 2%;
 }
 
-/*Contenedor descripcion detalles producto especifico*/
-.contentprod {
-    width:  83%;
-    height: 500px;
-    color: #ffffff;
-    background-color: rgb(0, 0, 0);
-    box-shadow: 5px 10px 8px rgb(0, 0, 0);
-    font-family: "Helvetica";
-    font-weight: normal;
-    font-size: 8pt;
-    position: absolute;
-    bottom: 25px;
-}
-
 /* Contenedor para el boton de empaque especial */
 .contentbagcw {
     width: 85%;
@@ -2096,28 +1842,6 @@ div.mainb{
     position: absolute;
     margin-left: 15%;
     bottom: 0px;
-}
-
-/* Contenedor para el boton de las tallas */
-.contentsize {
-    width: 170%;
-    height: 470px;
-    color: #ffffff;
-    background-color: rgb(26,24,24);
-    box-shadow: 10px 5px 20px rgb(0, 0, 0);
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    position: absolute;
-    right: -40px;
-    bottom: -25px;
-}
-
-.btn-sizes2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /*Contenedor de botones para opciones CALMWEAR*/
@@ -2167,120 +1891,12 @@ div.mainb{
 }
 
 /* Referencia */
-.refer:nth-child(1) {
-    letter-spacing: 2.7rem;
-}
-
-.refer:nth-child(2) {
-    letter-spacing: 0.433rem;
-
-}
-.refer:nth-child(3) {
-    letter-spacing: 1.1rem;
-}
-.refer:nth-child(4) {
-    letter-spacing: 1.48888888rem;
-}
-
-/* Referencia */
 .materialstitle:nth-child(1) {
     letter-spacing: 0.7rem;
     font-family: "MoristonPersonal-Bold";
     font-size: 9pt;
     padding-left: 2%;
 }
-
-/* Texto del contenedor Ver Detalles */
-.refer-details:nth-child(1) {
-    margin-bottom: 2rem;
-}
-
-.refer-details:nth-child(2) {
-    margin-bottom: 2rem;
-}
-
-.refer-details:nth-child(3) {
-    margin-bottom: 2rem;
-}
-
-/* Texto del contenedor Empaque Especial */
-.refer-specialbag:nth-child(2) {
-    padding: 2% 0% 0% 0%;
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 9pt;
-    letter-spacing: 0.5rem;
-    text-align: center;
-}
-
-.refer-specialbag:nth-child(3) {
-    padding: 2%;
-    font-size: 7pt;
-    letter-spacing: 0.3444444444rem;
-    text-align: justify;
-}
-
-.refer-specialbag:nth-child(4) {
-    padding: 2%;
-    font-weight: bold;
-    font-size: 11pt;
-    letter-spacing: 1.33333333333rem;
-    text-align: justify;
-}
-
-.modalbody{padding: .1rem;}
-
-.modalcontent{
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: .3rem!important;
-    outline: 0;
-}
-
-/* Controles para adelantar y devolver el modal de las fotos */
-.control-prev-icon {
-    background-image: url(../img/flecha.png)!important;
-    width: 30px!important;
-    height: 30px!important;
-    background: no-repeat 50%/100% 100%;
-    display: inline-block;
-}
-
-.control-next-icon {
-    background-image: url(../img/flecha2.png)!important;
-    width: 30px!important;
-    height: 30px!important;
-    background: no-repeat 50%/100% 100%;
-    display: inline-block;
-}
-
-.carousel-control-next, .carousel-control-prev {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 15%;
-    color: #fff;
-    text-align: center;
-    opacity: .5;
-    transition: opacity .15s ease;
-}
-/* FIN configuracion estilos pantalla loungewear producto especifico */
-
 /* ---------------------------- FIN Especifico CALMWEAR -------------------------- */
 
 
@@ -2343,8 +1959,7 @@ div.mainb{
 
 
 
-/* ---------------------------INICIO configuración Transition--------------------------- */
-
+/* ---------------------------INICIO General Transition--------------------------- */
 /* GRID para imagenes de figuras geometricas */
 .gridtl {
     display: grid;
@@ -2446,12 +2061,227 @@ div.mainb{
     color: #000000;
     width: 250px;
 }
+/* ------------------------------FIN General TRANSITION ------------------------ */
+
+/* ---------------------------INICIO Especifico TRANSITION ------------------------ */
+
+.elemento1-5tr > p:nth-child(1) {
+    letter-spacing: 0.7rem;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 7pt;
+    padding-left: 2%;
+    text-align: center;
+}
+
+/*Grid para producto especifico Loungewear*/
+.grid-lw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* .grid-lw div {
+    border: 1px solid #000000;
+    margin: 0rem;
+} */
+
+.typeselector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.typeselector > div > img {
+    height: 70px;
+    width: 70px;
+    color: #ffffff;
+    background-position: center;
+    margin: 2% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nested-grid-lw {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(10px, auto);
+}
+
+.elemento1 {
+    grid-column: 1/2;
+}
+
+.elemento1-5tr {
+    grid-column: 3/3;
+}
+
+.elemento2 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+}
+
+.elemento3 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.elemento4 {
+    /* grid-column: 3/4; */
+    align-self: center;
+    text-align: center;
+}
+
+.contentdetailstr {
+    width: 45%;
+    height: 533%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    text-align: justify;
+    font-size: 7pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 0px;
+    padding: 2%;
+}
+
+/* Contenedor para el boton de empaque especial */
+.contentbagtr {
+    width: 85%;
+    height: 535%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    text-align: justify;
+    position: absolute;
+    margin-left: 15%;
+    bottom: 0px;
+}
+
+/*Div para los botones de las opciones Ver producto, Empaque Especial, Ver Detalles*/
+.btn-opcionestr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
+/*Contenedor de botones para opciones*/
+.divopcionestr {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    bottom: 77px;
+}
+
+/* Botones de Ver Detalles, Empaque Especial, Tallas */
+.btn-opcionestr:nth-child(1){
+    flex: 2;
+    margin-left: 5%;
+    align-items: flex-end;
+}
+
+.btn-opcionestr:nth-child(2){
+    flex: 2;
+    margin: 0% 1.555555% 0% 0%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btn-opcionestr:nth-child(3){
+    flex: 0;
+    align-items: flex-end;
+    justify-content: end;
+    flex: 0 1 0%;
+    margin: 0% 8% 0% 0%;
+}
+
+.btn-opcionestr:nth-child(3) > label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-opcionestr:nth-child(4){
+    flex: 2;
+    letter-spacing: .3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Referencia */
+.refertr:nth-child(1) {
+    letter-spacing: 0.7rem;
+}
+
+.refertr:nth-child(2) {
+    letter-spacing: 0.433rem;
+
+}
+.refertr:nth-child(3) {
+    letter-spacing: 1.1rem;
+}
+.refertr:nth-child(4) {
+    letter-spacing: 1.48888888rem;
+}
+/* -------------------------------FIN Especifico TRANSITION-------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  /* -------------------------------INICIO Carro de compras------------------------------- */
 #pagos1 {
     overflow: auto;
 }
-
 
  .cart-content {
     display: flex;
@@ -3874,7 +3704,24 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 120px;
+    top: 160px;
+    position: relative;
+    bottom: 0;
+    left: -16px;
+}
+
+/* Scroll Especifico Calmwear */
+#scrollcw {
+    position: fixed;
+}
+
+#scrolltitlecw {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 165px;
     position: relative;
     bottom: 0;
     left: -16px;
@@ -3891,10 +3738,26 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 7pt;
-    top: 115px;
+    top: 155px;
     position: relative;
     bottom: 0;
     left: -23px;
+}
+/* Scroll Especifico TRANSITION*/
+#scrolltr {
+    position: fixed;
+}
+
+#scrolltitletr {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 160px;
+    position: relative;
+    bottom: 0;
+    left: -22px;
 }
 
 /* Scroll LOUNGEWEAR GENERAL */
@@ -3908,10 +3771,11 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 110px;
+    top: 150px;
     position: relative;
     bottom: 0;
     left: -28px;
+
 }
 
 /* Scroll TEST */
@@ -3925,10 +3789,10 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 125px;
+    top: 165px;
     position: relative;
     bottom: 0;
-    left: -12px;
+    left: -13px;
 }
 
 /* Scroll RESULTADO TEST */
@@ -3942,10 +3806,27 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 115px;
+    top: 155px;
     position: relative;
     bottom: 0;
     left: -25px;
+}
+
+/* Scroll POSTRESULTADOS*/
+#scrollpostresults {
+    position: fixed;
+}
+
+#scrolltitlepostresults {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 170px;
+    position: relative;
+    bottom: 0;
+    left: -9px;
 }
 
 .scrolllightbar {

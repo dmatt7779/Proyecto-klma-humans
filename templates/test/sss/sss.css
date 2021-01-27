@@ -24,7 +24,7 @@
 	margin: 0;
 	position: absolute;
 	top: 0;
-	background: url('../../assets/img/flecha2.png') no-repeat;
+	background: url('../../assets/img/test/resultemocion/flecha-derecha.gif') no-repeat;
 }
 
 .sssprev {
@@ -33,7 +33,7 @@
 	margin: 0;
 	position: absolute;
 	top: 0;
-	background: url('../../assets/img/flecha.png') no-repeat;
+	background: url('../../assets/img/test/resultemocion/flecha-izquierda.gif') no-repeat;
 }
 
 .sssprev {

@@ -35,7 +35,7 @@ if (!isset($_SESSION['correo'])) {
             </div>
 
             <div class="introline">
-                <a href="#">CERRAR SESIÓN</a>
+                <a href="../login/salir.php">CERRAR SESIÓN</a>
             </div>
         </div>
 

@@ -6,7 +6,9 @@ include "../../global/conexion.php";
 
 session_start();
 
-
+date_default_timezone_set("America/Bogota");
+$hoy = date('Y-m-d');
+$fecha =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
 
 $usuario = $_SESSION['correo'];
 
@@ -47,7 +49,7 @@ if (!isset($opensale[0]['id'])) {
 
 
 
-    $insert = $pdo->prepare("INSERT INTO ventas (`subtotal`, `estado`, `fecha`, `envio`, `usuarios_id`) VALUES ('0', '0', '2020-04-19 00:00:00', '0', '$iduser');");
+    $insert = $pdo->prepare("INSERT INTO ventas (`subtotal`, `estado`, `fecha`, `envio`, `usuarios_id`) VALUES ('0', '0', '$fecha', '0', '$iduser');");
     $insert -> execute();
 
 
@@ -75,7 +77,7 @@ if (!isset($opensale[0]['id'])) {
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale2');");
     $producto -> execute();
 
-    // header("location:../Rejillas_generales/loungewear.php");
+     header("location:../Rejillas_generales/loungewear.php");
 
 
     }else{
@@ -115,7 +117,10 @@ if (!isset($opensale[0]['id'])) {
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale');");
         $producto -> execute();
 
-        // header("location:../Rejillas_generales/loungewear.php");
+         header("location:../Rejillas_generales/loungewear.php");
+
+
+         
 
 
 
@@ -148,13 +153,6 @@ if (!isset($opensale[0]['id'])) {
 
     }
 
-?> 
-
-
-
-<?php
-
-
     $sum_sale2 = $pdo->prepare("UPDATE ventas SET subtotal = $subtotal where id = $idsale");
 
     $sum_sale2 -> execute();
@@ -164,7 +162,7 @@ if (!isset($opensale[0]['id'])) {
 
     
     
-    // header("location:../Rejillas_generales/loungewear.php"); 
+     header("location:../Rejillas_generales/loungewear.php"); 
 
         
     }

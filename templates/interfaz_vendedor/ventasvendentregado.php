@@ -1,69 +1,50 @@
 <?php
 session_start();
 include "../../global/conexion.php";
-
 if (!isset($_SESSION['correo'])) {
          
     header("location:../login/login.php");
 
 }
-
-$correo = $_SESSION['correo'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario KLMA' HUMANS</title>
+    <title>Ventas KLMA' HUMANS</title>
 
     <!-- CSS only -->
-   
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/datatables.min.css">
     <link rel="stylesheet" href="../assets/style/mydatatable.css">
 </head>
-
 <body>
 <?php include "../navbar_footer/header.php";?>
 
-    <!-- Beige Section -->
-    <div class="containerbeige">
-        <div class="usercounts">
-            HOLA <?php echo $_SESSION['apodo'];?>
+        <!-- Beige Section -->
+        <div class="containerbeige">
+          
+
+            <div class="btnsales mt-4 mb-4">
+                <button onclick="location.href='../interfaz_vendedor/ventasvend.php'" class="btn btn-submit">RECIBIDOS</button>
+                <button onclick="location.href='../interfaz_vendedor/ventasvendenviado.php'" class="btn btn-submit ml-4 mr-4">ENVIADOS</button>
+                <button onclick="location.href='../interfaz_vendedor/ventasvendentregado.php'" class="btn btn-submit">ENTREGADOS</button>
+            </div> 
+            
+            <div class="introline mb-4 mt-4">
+                <img src="../assets/img/interfaces/linea_principal.png" alt="Linea gradient">
+            </div>
+            <div class="introline mb-4 mt-4">
+                <h1  style="color: black;">Entregados</h1>
+            </div>
         </div>
 
-        <div class="introlineclient mt-4">
-            <a href="../login/salir.php">CERRAR SESIÓN</a>
-        </div>
+        <div class="operationsec">
+            <div class="operationbtn">
+               
 
-        <div class="mt-3 mb-2">
-        <form action="suscripcion.php" method="post">
-            <input type="hidden" name="correo" value="<?php echo $correo; ?>">
-            <button onclick="myconfirmsus(event)" class="btn btn-submit">SUSCRIBIRME</button>
-
-        </form>
-        </div> 
-
-        <div class="cancelsub">
-        <form action="desuscripcion.php" method="post" name="desuscribirse">
-            <input type="hidden" name="correo" value="<?php echo $correo; ?>">
-
-        </form>
-            <a href="#" onclick="document.desuscribirse.submit()">CANCELAR SUSCRIPCIÓN</a>
-        </div>
-        
-        <div class="introlineclient mt-4">
-            <img src="../assets/img/interfaces/linea_principal.png" alt="Linea gradient">
-        </div>
-    </div>
-
-    <!-- AQUI VA LA TABLA -->
-    <div class="operationsec">
-        <div class="operationbtn">
-        
 <div class="jumbotrontable">
     <div class="container-fluid">
     <!-- DIV PARA EL DATATABLE -->
@@ -77,16 +58,27 @@ $correo = $_SESSION['correo'];
                             <th>Estado</th>
                             <th>Fecha</th>
                             <th>Envío</th>
-                            
+                            <th>id usuario</th>
+                            <th>Pago</th>
+                            <th>Envio</th>
                             
                                                         
                         </tr>
                     </thead>
-                   
+                    <tfoot>
+                        <tr>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                           
+                    </tfoot>
                 <tbody>
                     <?php
-                    $idses = $_SESSION['iduser'];
-        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado != 0 and usuarios_id = '$idses'");
+        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 3");
         $sentencia -> execute();
         $listaventas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     ?>
@@ -100,8 +92,19 @@ $correo = $_SESSION['correo'];
                             <td><?php echo $venta['estado'] ?></td>
                             <td><?php echo $venta['fecha'] ?></td>
                             <td><?php echo $venta['envio'] ?></td>
-                            
-                           
+                            <td><?php echo $venta['usuarios_id'] ?></td>
+                            <td>
+                            <form action="estadoventapago.php" method="get">
+                            <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
+                            <button class="btn btn-warning" onclick="myconfirmpag(event)"  type="submit">Pagado</button>
+                            </form>
+                            </td>
+                            <td>
+                             <form action="estadoventaenvio.php" method="get">
+                            <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
+                            <button class="btn btn-info" onclick="myconfirmenv(event)"  type="submit">Enviado</button>
+                            </form>
+                            </td>
                          
                         
                     </tr>
@@ -112,18 +115,18 @@ $correo = $_SESSION['correo'];
 </div>
             </div>
         </div>
-        </div>
-    </div>
+
 
     <!-- JS, Popper.js, and jQuery -->
+
     <script src="../assets/js/my.js"></script>
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+
+<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
 <script src="../assets/librerias/popper.min.js"></script>
 <script src="../assets/librerias/bootstrap.min.js"></script>
 
 <!-- Datatables -->
 <script src="../assets/librerias/datatables.min.js"></script>
 <script src="../assets/js/mydatatable.js"></script>
-    
 </body>
 </html>

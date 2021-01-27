@@ -44,6 +44,74 @@ function myconfirmdes(event) {
 
 }
 
+// confirmar suscripcion
+
+function myconfirmsus(event) {
+
+  var r =  confirm("Al suscribirse usted acepta el envío de información de su interes como descuentos, nuevas colecciones y mas \n ¿Seguro que desea subscribirse?");
+
+  if (r == true) {
+txt = "Suscrito correctamente, gracias por preferirnos";
+alert(txt);
+} else {
+txt = "Accion cancelada";
+alert(txt);
+event.preventDefault();
+}
+
+}
+
+// confirmar pagado
+
+function myconfirmpag(event) {
+
+  var r =  confirm("Seguro que desea pagar?");
+
+  if (r == true) {
+txt = "Pagado";
+alert(txt);
+} else {
+txt = "Accion cancelada";
+alert(txt);
+event.preventDefault();
+}
+
+}
+
+// confirmar enviado
+
+function myconfirmenv(event) {
+
+  var r =  confirm("Seguro que desea enviar?");
+
+  if (r == true) {
+txt = "Enviado";
+alert(txt);
+} else {
+txt = "Accion cancelada";
+alert(txt);
+event.preventDefault();
+}
+
+}
+
+
+// confirmar entregado
+
+function myconfirment(event) {
+
+  var r =  confirm("Seguro que desea entregar?");
+
+  if (r == true) {
+txt = "Entregado";
+alert(txt);
+} else {
+txt = "Accion cancelada";
+alert(txt);
+event.preventDefault();
+}
+
+}
 
 // confirmar habilitacion
 

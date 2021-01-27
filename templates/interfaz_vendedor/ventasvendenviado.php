@@ -34,12 +34,11 @@ if (!isset($_SESSION['correo'])) {
             </div> 
             
             <div class="introline mb-4 mt-4">
-            
                 <img src="../assets/img/interfaces/linea_principal.png" alt="Linea gradient">
             </div>
             <div class="introline mb-4 mt-4">
-            
-                <h1 style="color: black;">Pagados</h1>
+            <h1  style="color: black;">Enviados</h1>
+                
             </div>
         </div>
 
@@ -61,7 +60,7 @@ if (!isset($_SESSION['correo'])) {
                             <th>Fecha</th>
                             <th>Envío</th>
                             <th>id usuario</th>
-                            <th>Envio</th>
+                            <th>Pago</th>                        
                             <th>Entrega</th>
                                                         
                         </tr>
@@ -79,7 +78,7 @@ if (!isset($_SESSION['correo'])) {
                     </tfoot>
                 <tbody>
                     <?php
-        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 1");
+        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado = 2");
         $sentencia -> execute();
         $listaventas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     ?>
@@ -94,13 +93,13 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $venta['fecha'] ?></td>
                             <td><?php echo $venta['envio'] ?></td>
                             <td><?php echo $venta['usuarios_id'] ?></td>
-                            
                             <td>
-                             <form action="estadoventaenvio.php" method="get">
+                            <form action="estadoventapago.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
-                            <button class="btn btn-info" onclick="myconfirmenv(event)"  type="submit">Enviado</button>
+                            <button class="btn btn-warning" onclick="myconfirmpag(event)"  type="submit">Pagado</button>
                             </form>
                             </td>
+                          
                             <td>
                             <form action="estadoventaentrega.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">

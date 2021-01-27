@@ -80,20 +80,7 @@
             $subtotal = 0;
 
             
-?>
-<script>
-    var formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
 
-  // These options are needed to round to whole numbers if that's what you want.
-  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-});
-
-//(formatter.format(2500000))
-</script>
-<?php
         
             foreach($detalleventa as $detventa){
 ?>
@@ -109,7 +96,8 @@
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div>
-<?php
+<?php           
+                
                 $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
             }
 ?>			
@@ -125,7 +113,11 @@
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
             <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">
-                <button class="btn btn-submit">FINALIZAR PEDIDO</button>
+            <form action="../carrito de compras/finalpedido.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $ventaid ?>">
+                <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
+                <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
+            </form>
             </div>
         </div>
 	</div>
