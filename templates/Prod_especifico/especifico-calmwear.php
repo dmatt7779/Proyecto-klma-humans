@@ -27,9 +27,9 @@
 <?php require "../navbar_footer/header.php"; ?>
 
 <!-- Scroll Bar personalizado -->
-<div id="scrolllg">
+<div id="scrollcw">
 
-    <div id="scrolltitlelg">CALMWEAR</div>
+    <div id="scrolltitlecw">CALMWEAR</div>
 
     <!-- Track -->
     <div class="scrolllightbar">

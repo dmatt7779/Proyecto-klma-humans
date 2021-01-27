@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto Especifico - CW</title>
+    <title>Producto Especifico - TR</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
@@ -27,55 +27,46 @@
 <?php require "../navbar_footer/header.php"; ?>
 
 <!-- Scroll Bar personalizado -->
-<div id="scrolllg">
+<div id="scrolltr">
 
-    <div id="scrolltitlelg">CALMWEAR</div>
+    <div id="scrolltitletr">TRANSITION</div>
 
     <!-- Track -->
     <div class="scrolllightbar">
 
-    <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock">
-        </div>
+        <!-- Thumbs -->
+        <div id="scrollwrap" class="scrollblock"></div>
     </div>
 </div>
 
 <!-- INICIO GRID PADRE -->
 <div class="mt-5">
-    <div class="grid-cw mt-4">
+    <div class="grid-lw mt-4">
         <!-- Carousel para imagenes de productos -->
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-product">
                 <div class="carousel-item active">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/productomat.jpg" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto00.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto01.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen01.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto02.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen02.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto03.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen03.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto04.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto05.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/calmwear/producto06.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen04.png" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
@@ -84,17 +75,25 @@
         <!-- GRID Anidado -->
         <div class="nested-grid-cw">
             <div class="font-lw-1 elemento1cw">
-                    <p class="refer">SOFT</p>
-                    <p class="refer">REF C1/315-01</p>
-                    <p class="refer">COMFORT</p>
-                    <p class="refer">DESIGN</p>
+                    <p class="refertr">T-SHIRT GALERY</p>
+                    <p class="refertr">REF C1/223-01</p>
+                    <p class="refertr">EMOTIONAL</p>
+                    <p class="refertr">DESIGN</p>
             </div>
 
             <div class="font-lw-1 elemento1-5cw">
-                <p class="materialstitle">MATERIALES</p>
-                <div class="materials">
-                    <div><img src="../assets/img/prodgenerales/prod_esp/calmwear/material02.png" alt=""></div>
-                    <div><img src="../assets/img/prodgenerales/prod_esp/calmwear/material01.png" alt=""></div>
+                <p class="typeselectortitle">SEXO</p>
+                <div class="typeselector">
+                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino-2.png" alt=""></div>
+                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
+                </div>
+            </div>
+
+            <div class="font-lw-1 elemento1-5cw">
+                <p class="typeselectortitle">MANGA</p>
+                <div class="typeselector">
+                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
+                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
                 </div>
             </div>
 
@@ -104,7 +103,12 @@
             </div>
 
             <!--  Seleccionador de Tallas -->
-            <div class="elemento3cw"></div>
+            <div class="elemento3" id="divTalla">
+                <div class="aTalla contenedor-tallas-lw">S</div>
+                <div class="aTalla contenedor-tallas-lw">M</div>
+                <div class="aTalla contenedor-tallas-lw">L</div>
+                <div class="aTalla contenedor-tallas-lw">XL</div>
+            </div>
         </div><!-- FIN GRID Anidado -->
     </div><!-- FIN GRID PADRE -->
         
@@ -115,26 +119,26 @@
     </div>
 
     <!--Botones Opciones para mostrar contenedores hidden-->
-    <div class="divopcionescw">
+    <div class="divopcionestr">
         <!-- Contenedor de VER DETALLES -->
-        <div class="btn-opcionescw">
-            <div class="contentdetailscw" id="divDetalle" hidden>
+        <div class="btn-opcionestr">
+            <div class="contentdetailstr" id="divDetalle" hidden>
                 <p class="refer-details">ESTA T-SHIRT GALERY FUE ELABORADA EN 100% ALGÓDON ORGÁNICO EXTRA SUAVE, TIENE UN FIT OVERSIZED</p>
                 <p class="refer-details">SU ARTE FUE CREADO A TRAVÉS DE UNA EXPRESIÓN EMOCIONAL</p>
                 <p class="refer-details">MADE IN COLOMBIA</p>
             </div>
             <!-- Boton VER DETALLES -->
-            <button id="btn-details-prod" class="btn-details-prod" name="bntOpcionescw" data-target="divDetalle">VER DETALLES</button>
+            <button id="btn-details-prod" class="btn-details-prod" name="bntOpcionestr" data-target="divDetalle">VER DETALLES</button>
         </div>
 
         <!-- Boton para ver MODAL -->
-        <div class="btn-opcionescw">
-            <button type="button" class="btn-verproduct" name="bntOpcionescw">DESIGN BY HUMANOIDE</button>
+        <div class="btn-opcionestr">
+            <button type="button" class="btn-verproduct" name="bntOpcionestr">DESIGN BY SARA VARGAS</button>
         </div>
 
         <!-- Botón EMPAQUE ESPECIAL -->
-        <div class="btn-opcionescw">
-                <div class="contentbagcw" id="divEmpaque" hidden>
+        <div class="btn-opcionestr">
+                <div class="contentbagtr" id="divEmpaque" hidden>
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         
                         <div class="carousel-inner">
@@ -147,7 +151,7 @@
                     <p class="refer-specialbag">CHOMPA MANGA CORTA</p>
                     <p class="refer-specialbag">$20.000</p>
                 </div>
-            <button id="btn-chance" class="btn-empaque" name="bntOpcionescw" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
+            <button id="btn-chance" class="btn-empaque" name="bntOpcionestr" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
             
             <!-- INPUT PERSONALIZADO -->
             <label class="custom-radio-checkbox">
@@ -161,12 +165,25 @@
 
         <!-- Buy It Now -->
 
-        <div class="btn-opcionescw">
+        <div class="btn-opcionestr">
             <!-- Botones Agregar y comprar ahora -->
             <div class="elemento4">
-                <a href="#" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
-                <a href="#" class="btn btn-submit">BUY IT NOW</a>
+                <div class="btn-opcionestr">
+                    <div class="contentsize" id="divSize" hidden>
+                        <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" alt="">
+                        <p class="choicesize mt-3">SELECCIONAR TALLA</p>
+                        <div class="btn-sizes2">
+                            <button class="btn-change">S</button>
+                            <button class="btn-change">M</button>
+                            <button class="btn-change">L</button>
+                            <button class="btn-change">XL</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="btn-size" class="btn-size" name="bntOpcionestr" data-target="divSize">TALLAS</button>
             </div>
+            <a href="#" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
+            <a href="#" class="btn btn-submit">BUY IT NOW</a>
         </div>
     </div><!-- FIN Contenedores hidden -->
 </div>
@@ -226,7 +243,8 @@
     <!-- FIN Carrito de compras -->
 
 <!-- JS, Popper.js, and jQuery -->
-<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/jquery-2.2.4.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -253,7 +271,7 @@
 <!-- Script para ocultar obejtos HTML -->
 <script>
 
-  $('button[name="bntOpcionescw"]').click(function(){
+  $('button[name="bntOpcionestr"]').click(function(){
      var 
         Target = $(this).attr('data-target'),
         Elemento = $('#'+Target),
@@ -284,6 +302,14 @@
     $("#btn-size").click(function(){
     $(this).toggleClass("btn-size btn-size2");
     });
+</script>
+
+<!-- Script para seleccionar tallas -->
+<script type="text/javascript">
+    $('#divTalla').find('.aTalla').click( function(){
+        $('.aTalla').removeClass('talla-active');
+        $(this).addClass('talla-active');
+    } )
 </script>
 
 <!-- Scrip para mostrar y ocultar carrito de compras -->
