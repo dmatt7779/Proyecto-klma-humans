@@ -61,7 +61,6 @@ if (!isset($_SESSION['correo'])) {
                             <th>Fecha</th>
                             <th>Envío</th>
                             <th>id usuario</th>
-                            <th>Pago</th>
                             <th>Envio</th>
                             <th>Entrega</th>
                                                         
@@ -95,22 +94,17 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $venta['fecha'] ?></td>
                             <td><?php echo $venta['envio'] ?></td>
                             <td><?php echo $venta['usuarios_id'] ?></td>
-                            <td>
-                            <form action="estadoventapago.php" method="get">
-                            <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
-                            <button class="btn btn-warning"  type="submit">Pagado</button>
-                            </form>
-                            </td>
+                            
                             <td>
                              <form action="estadoventaenvio.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
-                            <button class="btn btn-info"  type="submit">Enviado</button>
+                            <button class="btn btn-info" onclick="myconfirmenv(event)"  type="submit">Enviado</button>
                             </form>
                             </td>
                             <td>
                             <form action="estadoventaentrega.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
-                            <button class="btn btn-success"  type="submit">Entregado</button>
+                            <button class="btn btn-success" onclick="myconfirment(event)"  type="submit">Entregado</button>
                             </form>
                              </td>
                         

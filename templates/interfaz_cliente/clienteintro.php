@@ -7,6 +7,8 @@ if (!isset($_SESSION['correo'])) {
     header("location:../login/login.php");
 
 }
+
+$correo = $_SESSION['correo'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +18,12 @@ if (!isset($_SESSION['correo'])) {
     <title>Usuario KLMA' HUMANS</title>
 
     <!-- CSS only -->
-    <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
+   
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/librerias/datatables.min.css">
+    <link rel="stylesheet" href="../assets/style/mydatatable.css">
 </head>
 
 <body>
@@ -35,11 +40,19 @@ if (!isset($_SESSION['correo'])) {
         </div>
 
         <div class="mt-3 mb-2">
-            <button class="btn btn-submit">SUSCRIBIRME</button>
+        <form action="suscripcion.php" method="post">
+            <input type="hidden" name="correo" value="<?php echo $correo; ?>">
+            <button onclick="myconfirmsus(event)" class="btn btn-submit">SUSCRIBIRME</button>
+
+        </form>
         </div> 
 
         <div class="cancelsub">
-            <a href="#">CANCELAR SUSCRIPCIÓN</a>
+        <form action="desuscripcion.php" method="post" name="desuscribirse">
+            <input type="hidden" name="correo" value="<?php echo $correo; ?>">
+
+        </form>
+            <a href="#" onclick="document.desuscribirse.submit()">CANCELAR SUSCRIPCIÓN</a>
         </div>
         
         <div class="introlineclient mt-4">
@@ -50,15 +63,67 @@ if (!isset($_SESSION['correo'])) {
     <!-- AQUI VA LA TABLA -->
     <div class="operationsec">
         <div class="operationbtn">
-            <span style="font-weight: bolder; font-size: 30pt;">AQUI VA LA TABLA</span>
+        
+<div class="jumbotrontable">
+    <div class="container-fluid">
+    <!-- DIV PARA EL DATATABLE -->
+<!--         <div class="tableadmin"> -->
+            <table class="records_list table-striped table-bordered table-hover" id="mydatatable">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Subtotal</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Envío</th>
+                            
+                            
+                                                        
+                        </tr>
+                    </thead>
+                   
+                <tbody>
+                    <?php
+                    $idses = $_SESSION['iduser'];
+        $sentencia = $pdo->prepare("SELECT * FROM ventas where estado != 0 and usuarios_id = '$idses'");
+        $sentencia -> execute();
+        $listaventas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+    ?>
+
+    <?php foreach($listaventas as $venta) {  ?>
+                    <tr>
+
+                            <td><?php echo $venta['id'] ?></td>
+                            <td><?php echo $venta['subtotal'] ?></td>
+                            <td><?php echo $venta['total'] ?></td>
+                            <td><?php echo $venta['estado'] ?></td>
+                            <td><?php echo $venta['fecha'] ?></td>
+                            <td><?php echo $venta['envio'] ?></td>
+                            
+                           
+                         
+                        
+                    </tr>
+                    <?php } ?>                  
+                </tbody>
+            </table><!-- FIN DIV PARA EL DATATABLE -->
+    </div>
+</div>
+            </div>
+        </div>
         </div>
     </div>
 
     <!-- JS, Popper.js, and jQuery -->
-
+    <script src="../assets/js/my.js"></script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
+<script src="../assets/librerias/popper.min.js"></script>
+<script src="../assets/librerias/bootstrap.min.js"></script>
+
+<!-- Datatables -->
+<script src="../assets/librerias/datatables.min.js"></script>
+<script src="../assets/js/mydatatable.js"></script>
     
 </body>
 </html>
