@@ -22,7 +22,7 @@
     </head>
 
 <body id="pagos1">
-<?php include "../navbar_footer/header.php"; ?>
+<?php include "../navbar_footer/dark_header.php"; ?>
 
 <div class="pay-form mb-5">
     <!-- Contenedor del formulario Izquierda -->
@@ -75,23 +75,12 @@
         </div>
     </div>
 
-    
-
-
-
     <!-- INICIO configuración pasarela de pagos 1 -->
 
         <div class="pay">
             <!-- Contenedor de objetos para el carrito de compras -->
             <div class="cart-content">
                 <!-- Cart items -->
-
-
-
-
-
-
-
 
     <!-- aqui va lo que pruebo -->
     <?php
@@ -169,15 +158,15 @@
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
 
-    <script>
+<script>
 
-        function atras(){
-        window.history.back();
-        window.history.back();
-        }
-    </script>
+    function atras(){
+    window.history.back();
+    window.history.back();
+    }
+</script>
 
 </body>
 </html>
 
-<?php //include "../navbar_footer/scd_footer.php"  ?>
+<?php //include "../navbar_footer/footer.php"  ?>

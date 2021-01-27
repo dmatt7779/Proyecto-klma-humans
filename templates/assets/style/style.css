@@ -292,6 +292,41 @@ header.mainheader .nav {
     grid-column: 3/3;
 }
 
+header.darkmainheader .navlogo {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header.darkmainheader .navlogo > a > img {
+    width: 55px;
+    /* width: 125px; */
+}
+
+header.darkmainheader .navlogo2 {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.darkmainheader .navlogo2 > a > img {
+    width: 190px;
+}
+
+header.darkmainheader .nav {
+    grid-column: 3/3;
+}
+
+header.darkmainheader {
+    background-color: #2D2A29;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1%;
+    align-items: center;
+}
+
 .nested-nav {
     background-color: transparent;
     display: grid;

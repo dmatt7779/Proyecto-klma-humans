@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 <body id="pagos1">
-<?php include "../navbar_footer/header.php"; ?>
+<?php include "../navbar_footer/dark_header.php"; ?>
 
     <div class="containersale2 mt-5">
             <div class="mb-1">
