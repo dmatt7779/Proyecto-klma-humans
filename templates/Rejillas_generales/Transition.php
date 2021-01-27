@@ -53,19 +53,8 @@ include "../../global/conexion.php";
 
         <!-- GRID para productos con imagenes -->
         <div class="grid-view gridtl">
-            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-            </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-            </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-            </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-            </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-            </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-            </div>
 
+        <!-- ira -->
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
@@ -78,7 +67,7 @@ include "../../global/conexion.php";
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
             </div>
-            
+<!-- miedo -->
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
@@ -91,7 +80,7 @@ include "../../global/conexion.php";
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
             </div>
-
+    <!-- tristeza         -->
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
@@ -104,7 +93,7 @@ include "../../global/conexion.php";
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
             </div>
-
+<!-- felicidad -->
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
@@ -117,7 +106,20 @@ include "../../global/conexion.php";
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
             </div>
-
+<!-- amor -->
+            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
+            </div>
+            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
+            </div>
+            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
+            </div>
+            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
+            </div>
+            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
+            </div>
+            <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
+            </div>
+<!-- alegria -->
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
             </div>
             <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">

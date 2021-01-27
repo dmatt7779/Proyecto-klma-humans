@@ -48,31 +48,31 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-product">
                 <div class="carousel-item active">
-                    <img src="../assets/img/producto00.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto00.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/producto01.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto01.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/producto02.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto02.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/producto03.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto03.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/producto04.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto04.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/producto05.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto05.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/img/producto06.png" class="d-block w-100" alt="...">
+                    <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto06.png" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
 
             <!-- Precio -->
             <div class="elemento2">
-                <p class="font-price-lw">$<?php echo $producto[0]['precio_venta'] ?></p>
+                <p class="font-price-lw">$<?php echo number_format($producto[0]['precio_venta']) ?></p>
             </div>
 
             <!--  Seleccionador de Tallas -->
@@ -136,31 +136,31 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../assets/img/producto00.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto00.png" class="d-block w-100" alt="...">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="../assets/img/producto01.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto01.png" class="d-block w-100" alt="...">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="../assets/img/producto02.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto02.png" class="d-block w-100" alt="...">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="../assets/img/producto03.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto03.png" class="d-block w-100" alt="...">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="../assets/img/producto04.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto04.png" class="d-block w-100" alt="...">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="../assets/img/producto05.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto05.png" class="d-block w-100" alt="...">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="../assets/img/producto06.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/prod_esp/loungewear/producto06.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -184,7 +184,7 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../assets/img/bolso.png" class="d-block w-100" alt="...">
+                                <img src="../assets/img/prodgenerales/prod_esp/loungewear/bolso.png" class="d-block w-100" alt="...">
                             </div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
             <div class="elemento4">
                 <div class="btn-opciones">
                     <div class="contentsize" id="divSize" hidden>
-                        <img class="d-block w-100" src="../assets/img/icicle_ss2020_natural.jpg" alt="">
+                        <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/icicle_ss2020_natural.jpg" alt="">
                         <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                         <div class="btn-sizes2">
                             <button class="btn-change">S</button>

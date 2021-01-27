@@ -2,6 +2,7 @@
     Encabezado aplicado para todas las paginas.
 -->
 
+
 <nav class="navbar-expand-sm navbar-light">
     <header class="mainheader">
     <div class="navlogo">
@@ -62,7 +63,7 @@
 		<div class="cart-content">
 			<!-- Cart items -->
 <?php
-            $iduser = isset( $_SESSION['iduser'] );    
+            $iduser = $_SESSION['iduser'] ;    
             $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
             $sentencia -> execute();
             $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -77,6 +78,22 @@
             $sentencia -> execute();
             $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
             $subtotal = 0;
+
+            
+?>
+<script>
+    var formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+
+  // These options are needed to round to whole numbers if that's what you want.
+  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
+
+//(formatter.format(2500000))
+</script>
+<?php
         
             foreach($detalleventa as $detventa){
 ?>
@@ -87,7 +104,7 @@
                         </div>
                         <h2><?php echo $detventa['nombre'] ?></h2>
                         <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-                        <h3>$<?php echo $detventa['precio_venta'] ?></h3>
+                        <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
@@ -103,7 +120,7 @@
         <div class="cart-footer">
             <div class="subtotal">
                 <h3>SUBTOTAL:</h3>
-                <span class="cart-total">$<?php echo $subtotal ?></span>
+                <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
             <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>

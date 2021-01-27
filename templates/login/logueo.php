@@ -30,7 +30,24 @@ if (empty($usuario)) {
     $_SESSION['iduser']   = $usuario[0]['id'];   
     $_SESSION['rol'] = $usuario[0]['rol'];
     
-    header('location:../Rejillas_generales/loungewear.php');
+
+    switch ($_SESSION['rol']) {
+        case '3':
+            header("location:../interfaz_cliente/clienteintro.php");
+            break;
+        case '2':
+            header("location:../interfaz_vendedor/vendintro.php");
+            break;
+        case '1':
+            header("location:../interfaz_admin/adminintro.php");
+            break;
+                    
+            
+        default:
+            # code...
+            break;
+    }
+   
 
 }
 
