@@ -60,7 +60,7 @@ include "../../global/conexion.php";
                             <th>id</th>
                             <th>Referencia</th>
                             <th>Nombre</th>
-                            <th>id Tipologia</th>
+                            <th>Unidad negocio</th>
                             <th>Precio venta</th>
                             <th>Precio compra</th>
                             <th>Cantidad</th>
@@ -104,11 +104,38 @@ include "../../global/conexion.php";
                             <td><?php echo $producto['id'] ?></td>
                             <td><?php echo $producto['codigo'] ?></td>
                             <td><?php echo $producto['nombre'] ?></td>
-                            <td><?php echo $producto['tipologia_id'] ?></td>
+                             <td><?php switch($producto['tipologia_id']){
+                                case '1':
+                                    
+                                    echo 'Loungewear';
+                                    break;
+                                case '2':
+                                    echo 'Calmwear';
+                                    break;
+                                case '3':
+                                    echo 'Transition';
+                                    break;
+                              
+                                default:
+                                    break;
+
+                            }?></td>
                             <td><?php echo $producto['precio_venta'] ?></td>
                             <td><?php echo $producto['precio_compra'] ?></td>
                             <td><?php echo $producto['cantidad'] ?></td>
-                            <td><?php echo $producto['habilitado'] ?></td>
+                            <td><?php switch($producto['habilitado']){
+                                case '1':
+                                    
+                                    echo 'habilitado';
+                                    break;
+                                case '0':
+                                    echo 'deshabilitado';
+                                    break;
+                              
+                                default:
+                                    break;
+
+                            }?></td>
                             <td><?php echo $producto['fecha'] ?></td>
                             
                             <td><?php echo $producto['descripcion'] ?></td>

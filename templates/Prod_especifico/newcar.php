@@ -21,7 +21,7 @@ if (!isset($usuario)) {
 
 
 $id = $_POST['id'];
-$talla = $_POST['talla'];
+$talla = strtoupper($_POST['talla']);
 
 if ($talla == "") {
     ?>

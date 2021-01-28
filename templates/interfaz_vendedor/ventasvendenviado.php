@@ -89,7 +89,22 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $venta['id'] ?></td>
                             <td><?php echo $venta['subtotal'] ?></td>
                             <td><?php echo $venta['total'] ?></td>
-                            <td><?php echo $venta['estado'] ?></td>
+                            <td><?php switch($venta['estado']){
+                                case '1':
+                                    
+                                    echo 'Pagado';
+                                    break;
+                                case '2':
+                                    echo 'Enviado';
+                                    break;
+                                case '3':
+                                    echo 'Entregado';
+                                    break;
+                              
+                                default:
+                                    break;
+
+                            }?></td>
                             <td><?php echo $venta['fecha'] ?></td>
                             <td><?php echo $venta['envio'] ?></td>
                             <td><?php echo $venta['usuarios_id'] ?></td>

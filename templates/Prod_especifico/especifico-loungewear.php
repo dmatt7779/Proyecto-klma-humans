@@ -4,6 +4,11 @@
     session_start();
 
         $id = $_POST['id'];
+
+        if(empty($id)){
+            header("location:../Rejillas_generales/loungewear.php");
+
+        }
         
         $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
         $sentencia -> execute();
@@ -94,7 +99,7 @@
 
             <!--  Seleccionador de Tallas -->
             <div class="elemento3" id="divTalla">
-                <div onclick="talla('s');" class="aTalla contenedor-tallas-lw">S</div>
+                <div  onclick="talla('s');" class="aTalla contenedor-tallas-lw talla-active">S</div>
                 <div onclick="talla('m');" class="aTalla contenedor-tallas-lw">M</div>
                 <div onclick="talla('l');" class="aTalla contenedor-tallas-lw">L</div>
                 <div onclick="talla('xl');" class="aTalla contenedor-tallas-lw">XL</div>
@@ -102,7 +107,7 @@
         </div><!-- FIN GRID Anidado -->
     </div><!-- FIN GRID PADRE -->
         <form action="newcar.php" name="carrito" method="post">
-            <input type="hidden" name="talla" id="talla">
+            <input type="hidden" name="talla" id="talla" value="S">
             <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
         </form>
 
@@ -308,6 +313,8 @@
         $(this).addClass('talla-active');
     } )
 </script>
+
+
 
 <!-- Funcion para seleccionar Empaque Especial -->
 <script>

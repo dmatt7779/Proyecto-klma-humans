@@ -4,29 +4,29 @@
 
 function talla(t){
     
-    switch (t) {
-        case "s":
-            document.getElementById("talla").value = "s";
+    switch (t.toUpperCase()) {
+        case "S":
+            document.getElementById("talla").value = "S";
             
             break;
             
-        case "m":
-            document.getElementById("talla").value = "m";
+        case "M":
+            document.getElementById("talla").value = "M";
 
         
             break;
-        case "l":
-            document.getElementById("talla").value = "l";
+        case "L":
+            document.getElementById("talla").value = "L";
 
         
             break;
-        case "xl":
-            document.getElementById("talla").value = "xl";
+        case "XL":
+            document.getElementById("talla").value = "XL";
             
 
         break;
         default:
-            console.log("nichi");
+            console.log("nothing");
             break;
     }
 

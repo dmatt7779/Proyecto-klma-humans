@@ -63,7 +63,16 @@
 		<div class="cart-content">
 			<!-- Cart items -->
 <?php
+            if(!empty($_SESSION['iduser'])){
+
             $iduser = $_SESSION['iduser'] ;    
+            }else{
+                
+                $iduser = -1;
+
+            }
+
+            
             $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
             $sentencia -> execute();
             $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);

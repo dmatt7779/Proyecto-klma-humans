@@ -25,16 +25,19 @@
     $emocion = $_POST['emocion'];
     
 
-    if ($tipologia == 1) {
+    if ($tipologia == 315) {
         $ruta = "../assets/img/prodgenerales/Loungewear";
         $ruta2 = "Loungewear";
-    }elseif($tipologia == 2){
+        $tipologia = 1;
+    }elseif($tipologia == 220){
         $ruta = "../assets/img/prodgenerales/Calmwear";
         $ruta2 = "Calmwear";
+        $tipologia = 2;
 
-    }else{
+    }elseif($tipologia == 223){
         $ruta = "../assets/img/prodgenerales/Transition";
         $ruta2 = "Transition";
+        $tipologia = 3;
 
     }
     
@@ -50,7 +53,7 @@
     $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     
    
-
+    header("location:adminproduct.php");
     
    
 ?>

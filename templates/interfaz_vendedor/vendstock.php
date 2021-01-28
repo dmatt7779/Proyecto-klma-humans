@@ -86,7 +86,19 @@ include "../../global/conexion.php";
                             <td><?php echo $producto['precio_venta'] ?></td>
                             <td><?php echo $producto['precio_compra'] ?></td>
                             <td><?php echo $producto['cantidad'] ?></td>
-                            <td><?php echo $producto['habilitado'] ?></td>
+                            <td><?php switch($producto['habilitado']){
+                                case '1':
+                                    
+                                    echo 'habilitado';
+                                    break;
+                                case '0':
+                                    echo 'deshabilitado';
+                                    break;
+                              
+                                default:
+                                    break;
+
+                            }?></td>
                             <td><?php echo $producto['fecha'] ?></td>
                             
                             <td><?php echo $producto['descripcion'] ?></td>
