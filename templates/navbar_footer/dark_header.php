@@ -68,7 +68,7 @@
                             <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
                         </div>
                         <h2><?php echo $detventa['nombre'] ?></h2>
-                        <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+                        <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
                         <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>

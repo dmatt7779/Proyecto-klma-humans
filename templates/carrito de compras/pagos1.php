@@ -32,8 +32,7 @@
         </div>
         <div class="datapay">
             <div class="payinfo">INFORMACION DE PAGO</div>
-            <div>¿YA TIENES CUENTA?</div>
-            <a href="#">INICIAR SESI&Oacute;N</a>
+            <a href="#">INICIAR SESIÓN</a>
         </div>
 
         <div class="saleoffcode">

@@ -29,11 +29,7 @@
 <!-- Scroll Bar personalizado -->
 <div id="scrolltr">
 
-<<<<<<< HEAD
     <div id="scrolltitletr">CALMWEAR</div>
-=======
-    <div id="scrolltitletr">TRANSITION</div>
->>>>>>> 004fe93ce35a54a7b5f341d0e14db526ab374e14
 
     <!-- Track -->
     <div class="scrolllightbar">
