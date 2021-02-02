@@ -29,28 +29,6 @@
     </header>
 </nav>
 
-<!-- Original por Mateo -->
-
-<!-- <header class="mainheader">
-    <div class="navlogo">
-        <a href="../main/menu.php"><img src="../assets/img/nav_foot/btn_shop.png" alt="Logo de compras"></a>
-    </div>
-
-    <div class="navlogo2">
-        <a href="../main/menu2.php"><img src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
-    </div>
-
-    <div class="nested-nav mr-2">
-
-        <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
-
-        <a href="../login/login.php" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
-
-        <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
-    </div>
-</header> -->
-
-
 <!-- Construcción del carrito de compras -->
 <!-- INICIO Carrito de compras -->
 <div class="cart-overlay" id="divCart" style="visibility:hidden">

@@ -6,11 +6,11 @@
 <nav class="navbar-expand-sm navbar-light">
     <header class="darkmainheader">
     <div class="navlogo">
-            <a href="../main/menu.php"><img src="../assets/img/nav_foot/shop.png" alt="Logo de compras"></a>
+            <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
     </div>
 
     <div class="navlogo2">
-            <a href="../main/menu2.php"><img src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
+            <a href="../main/menu2.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
     </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

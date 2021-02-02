@@ -34,8 +34,8 @@
                 <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
                 <div class="divshowhide">
                     <input id="txtPassword" type="password" name="contrasena" class="login-pass" placeholder="CONTRASEÑA">
-                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-link btn-sm fas fa-eye icon"></span>
-                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-link btn-sm fas fa-eye icon"></span>
+                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                 </div>
             </div>
 

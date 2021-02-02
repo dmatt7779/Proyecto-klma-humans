@@ -16,42 +16,49 @@ if (!isset($_SESSION['correo'])) {
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/datatables.min.css">
     <link rel="stylesheet" href="../assets/style/mydatatable.css">
+
 </head>
 <body>
 <?php include "../navbar_footer/header.php";?>
 
     <div class="mt-5">
-    
-        
-        <form action="guardarusuario.php" method="POST">
+        <div class="container-fluid">
+            <form  class="login-form mb-4" action="guardarusuario.php" method="POST">
 
-            <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO" required><br><br>             
-            <input id="txtPassword" name="contraseña" type="password" class="login-pass" placeholder="CONTRASEÑA" required><br><br>
-            <input type="text" name="nickname" required  class="newprofile" placeholder="APODO"><br><br>
-            <input type="text" name="rol" required class="newprofile" placeholder="ROL"><br><br>
+                <div class="logpass">
+                    <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO" required> 
+                    <div class="divshowhide">          
+                        <input id="txtPassword" type="password" name="contrasena" class="login-pass" placeholder="CONTRASEÑA">
+                        <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                        <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                    </div>
+                </div><br>
+                
+                <div class="newdata">
+                    <input type="text" name="nickname" required  class="newprofile" placeholder="APODO"><br>
+                    <input type="text" name="rol" required class="newprofile" placeholder="ROL"><br>
+                </div>
 
-            <input type="submit" class="btn btn-submit">AGREGAR</input><br>
-            
-            
+                <div class="introline2 mt-2">
+                    <img src="../assets/img/interfaces/admin/Línea Principal.png" alt="Linea gradient">
+                </div>
+
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-submit">AGREGAR</button><br>
+                </div>
             </form>
-       
-
-            
-        </div>
+        </div>            
+    </div>
         
-           
-       
-
             <!-- DIV PARA EL DATATABLE -->
-        <div>
-            <div class="tableadmin">
-            <div class="jumbotrontable">
+    <div>
+        <div class="tableadmin">
+        <div class="jumbotrontable">
     <div class="container-fluid">
-    <!-- DIV PARA EL DATATABLE -->
-<!--         <div class="tableadmin"> -->
             <table class="records_list table-striped table-bordered table-hover" id="mydatatable">
                     <thead>
                         <tr>

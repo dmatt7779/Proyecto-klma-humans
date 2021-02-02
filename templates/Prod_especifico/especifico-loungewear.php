@@ -1,18 +1,6 @@
 <?php
-    include "../../global/conexion.php";
-    
-    session_start();
-
-        $id = $_POST['id'];
-
-        if(empty($id)){
-            header("location:../Rejillas_generales/loungewear.php");
-
-        }
-        
-        $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
-        $sentencia -> execute();
-        $producto=$sentencia->fetchAll(PDO::FETCH_ASSOC);         
+session_start();
+include "../../global/conexion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
