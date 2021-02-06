@@ -41,6 +41,7 @@ include "../../global/conexion.php";
             <input type="text" name="descripcion" class="newprofile" placeholder="DESCRIPCION">
             <input type="text" name="genero" class="newprofile" placeholder="GENERO">
             <input type="file" name="imagen" class="newprofile" placeholder="IMAGEN" required>
+            <input type="file" name="imagenes[]" class="newprofile"  multiple>
             <input type="text" name="emocion" class="newprofile" placeholder="EMOCION">
         </div>
 
@@ -70,12 +71,14 @@ include "../../global/conexion.php";
                             <th>Descripcion</th>
                             <th>Genero</th>
                             <th>Imagen</th>
+                            <th>Carrusel</th>
                             <th>Emocion</th>
                             <th>Cambiar Estado</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
@@ -141,6 +144,7 @@ include "../../global/conexion.php";
                             <td><?php echo $producto['descripcion'] ?></td>
                             <td><?php echo $producto['genero'] ?></td>
                             <td><?php echo $producto['imagen'] ?></td>
+                            <td><?php echo $producto['carrusel'] ?></td>
                             <td><?php echo $producto['emocion'] ?></td>
                             <td> <form action="estadoproducto.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $producto['id'] ?>">

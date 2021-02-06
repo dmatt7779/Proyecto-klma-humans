@@ -46,14 +46,67 @@
 
     move_uploaded_file($imagen,$ruta);
 
-    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `emocion`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$emocion')";
+
+
+// parte del carrusel
+
+$rutas = array();
+$imagenes = array();
+
+for ($i = 0; $i < count($_FILES['imagenes']['name']); $i++) {
+
+    array_push($rutas, $_FILES['imagenes']['name'][$i]);
+    array_push($imagenes, $_FILES['imagenes']['tmp_name'][$i]);
+}
+
+$ruta1 = "../assets/img/carrusel/";
+$rutaconcatenada = "";
+$rutaconcatenadabd = "";
+$rutabd = "carrusel/";
+$rutasfinales = array();
+$rutasfinalesbd = array();
+
+
+
+for ($i = 0; $i < count($rutas); $i++) {
+
+    $rutaconcatenada = $ruta1 . ((string)$rutas[$i]);
+    array_push($rutasfinales, $rutaconcatenada);
+    $rutaconcatenadabd = $rutabd . ((string)$rutas[$i]);
+    array_push($rutasfinalesbd, $rutaconcatenadabd);
+}
+
+
+for ($i = 0; $i < count($rutasfinales); $i++) {
+
+    move_uploaded_file($imagenes[$i], $rutasfinales[$i]);
+}
+
+$cadenasave = '';
+
+for ($i = 0; $i < count($rutasfinalesbd); $i++) {
+
+    $cadenasave = $cadenasave.','.$rutasfinalesbd[$i];
+}
+
+$cadenasave = substr($cadenasave,1);
+
+
+//parte del carrusel
+
+
+
+
+
+    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();
-    $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    
     
    
     header("location:adminproduct.php");
+
     
    
 ?>
