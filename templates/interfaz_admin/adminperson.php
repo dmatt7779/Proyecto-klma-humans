@@ -16,28 +16,27 @@ if (!isset($_SESSION['correo'])) {
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/datatables.min.css">
     <link rel="stylesheet" href="../assets/style/mydatatable.css">
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
 <?php include "../navbar_footer/header.php";?>
 
     <div class="mt-5">
         <div class="container-fluid">
-            <form  class="login-form mb-4" action="guardarusuario.php" method="POST">
-
+            <form action="guardarusuario.php" class="login-form mb-4" method="POST">
+                
                 <div class="logpass">
                     <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO" required> 
-                    <div class="divshowhide">          
-                        <input id="txtPassword" type="password" name="contrasena" class="login-pass" placeholder="CONTRASEÑA">
+                    <div class="divshowhide">
+                        <input id="txtPassword" type="password" name="contraseña" class="login-pass" placeholder="CONTRASEÑA">
                         <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                         <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                     </div>
                 </div><br>
-                
+
                 <div class="newdata">
                     <input type="text" name="nickname" required  class="newprofile" placeholder="APODO"><br>
                     <input type="text" name="rol" required class="newprofile" placeholder="ROL"><br>
