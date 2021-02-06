@@ -32,7 +32,7 @@ if (!isset($_SESSION['correo'])) {
                 <div class="logpass">
                     <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO" required> 
                     <div class="divshowhide">          
-                        <input id="txtPassword" type="password" name="contrasena" class="login-pass" placeholder="CONTRASEÑA">
+                        <input id="txtPassword" type="password" name="contraseña" class="login-pass" placeholder="CONTRASEÑA">
                         <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                         <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                     </div>

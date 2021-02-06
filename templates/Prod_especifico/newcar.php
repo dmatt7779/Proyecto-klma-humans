@@ -153,9 +153,7 @@ if (!isset($opensale[0]['id'])) {
 
     }
 
-    $sum_sale2 = $pdo->prepare("UPDATE ventas SET subtotal = $subtotal where id = $idsale");
-
-    $sum_sale2 -> execute();
+  
 
 
     

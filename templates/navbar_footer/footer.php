@@ -69,5 +69,7 @@
 
 <!-- FIN FOOTER -->
 
+
+<script src="../assets/js/carrito.js"></script>
 </body>
 </html>

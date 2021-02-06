@@ -31,7 +31,9 @@ function talla(t){
     }
 
 }
-
+function prueba(){
+    console.log("estoy en header");
+}
 
 function enviar_carro(){
     

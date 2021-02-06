@@ -29,5 +29,6 @@
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../assets/js/carrito.js"></script>
 </body>
 </html>

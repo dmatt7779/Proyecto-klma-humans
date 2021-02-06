@@ -61,20 +61,49 @@
                 $ventaid =  $venta[0]['id'];
             }
         
-            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.id, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
             $sentencia -> execute();
             $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
             $subtotal = 0;
 
             
 
-        
+?> 
+
+<!-- formulario de eliminacion -->
+    <form action="../interfaz_cliente/deletecart.php" method="post" name="formdeletecart">
+                    <input type="hidden" id="eliminacion" name="iddetalleventa" >                    
+    </form>
+
+
+            <!-- formulario de suma -->
+    <form action="../interfaz_cliente/addonetocart.php" method="post" name="formaddonetocart">
+                    <input type="hidden" id="suma" name="iddetalleventasuma" > 
+                    <input type="hidden" id="cantidad" name="cantidadsuma" > 
+
+    </form>
+
+
+
+<!-- formulario resta -->
+    <form action="../interfaz_cliente/removeonetocart.php" method="post" name="formremoveonetocart">
+                    <input type="hidden" id="resta" name="iddetalleventaresta" >      
+                    <input type="hidden" id="cantidad2" name="cantidadresta" >               
+    </form>
+
+
+
+<?php            
             foreach($detalleventa as $detventa){
 ?>
                 <div class="cart-item">
+                <span class="close-cart">
+                
+			<i class="fal fa-times" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
+		</span>
                     <div class="data-item">
                         <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
+                            <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
                         </div>
                         <h2><?php echo $detventa['nombre'] ?></h2>
                         <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
@@ -109,4 +138,32 @@
         </div>
 	</div>
 </div>
+
+<script>
+function eliminar(iddelete){
+   document.getElementById('eliminacion').value = iddelete;
+   document.formdeletecart.submit();
+}
+
+function add(idadd, cantidadold){
+    document.getElementById('suma').value = idadd;
+    document.getElementById('cantidad').value = cantidadold;
+
+   document.formaddonetocart.submit();
+
+
+}
+
+function remove(idremove , cantidadold2){
+    document.getElementById('resta').value = idremove;
+    document.getElementById('cantidad2').value = cantidadold2;
+
+   document.formremoveonetocart.submit();
+
+
+}
+</script>
+
+    
+
 <!-- FIN Carrito de compras -->
