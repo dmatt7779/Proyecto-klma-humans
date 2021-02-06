@@ -1,5 +1,4 @@
 <?php
-
 include "../../global/conexion.php";
 session_start();
 $id = $_POST['id'];
