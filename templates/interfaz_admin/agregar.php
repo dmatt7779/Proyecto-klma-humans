@@ -23,20 +23,29 @@
     $imagenname = $_FILES['imagen']['name'];
     $imagen = $_FILES['imagen']['tmp_name'];
     $emocion = $_POST['emocion'];
+    $empaque = $_POST['empaque'];
+    $imagennamecalmwear = $_FILES['imagencalmwear']['name'];
+    $imagencalmwear = $_FILES['imagencalmwear']['tmp_name'];
     
 
     if ($tipologia == 315) {
         $ruta = "../assets/img/prodgenerales/Loungewear";
         $ruta2 = "Loungewear";
+        $rutacalmwear = "../assets/img/prodgenerales/Loungewear";
+        $ruta2calmwear = "Loungewear";
         $tipologia = 1;
     }elseif($tipologia == 220){
         $ruta = "../assets/img/prodgenerales/Calmwear";
         $ruta2 = "Calmwear";
+        $rutacalmwear = "../assets/img/prodgenerales/Calmwear";
+        $ruta2calmwear = "Calmwear";
         $tipologia = 2;
 
     }elseif($tipologia == 223){
         $ruta = "../assets/img/prodgenerales/Transition";
         $ruta2 = "Transition";
+        $rutacalmwear = "../assets/img/prodgenerales/Transition";
+        $ruta2calmwear = "Transitionr";
         $tipologia = 3;
 
     }
@@ -44,8 +53,11 @@
     $ruta = $ruta."/".$imagenname;
     $ruta2 = $ruta2."/".$imagenname;
 
-    move_uploaded_file($imagen,$ruta);
+    $rutacalmwear = $rutacalmwear."/".$imagennamecalmwear;
+    $ruta2calmwear = $ruta2calmwear."/".$imagennamecalmwear;
 
+    move_uploaded_file($imagen,$ruta);
+    move_uploaded_file($imagencalmwear,$rutacalmwear);
 
 
 // parte del carrusel
@@ -98,7 +110,7 @@ $cadenasave = substr($cadenasave,1);
 
 
 
-    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion')";
+    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear` ) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();

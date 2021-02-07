@@ -11,6 +11,12 @@ $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
 $sentencia->execute();
 $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
+$idempaque = $producto[0]['empaque'];
+
+$queryempaque = $pdo->prepare("SELECT * FROM productos where id = $idempaque");
+$queryempaque->execute();
+$empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 
@@ -63,11 +69,11 @@ $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
                     $carrusel = explode(',', $producto[0]['carrusel']);
 
 
-                    ?>
 
 
 
-                    <?php for ($i = 0; $i < count($carrusel); $i++) {
+
+                    for ($i = 0; $i < count($carrusel); $i++) {
 
                     ?>
                         <div class="carousel-item">
@@ -106,6 +112,11 @@ $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
             <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
         </form>
 
+        <form action="newpackage.php" name="empaque" method="post">
+            <input type="hidden" name="talla" value="S">
+            <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
+        </form>
+
         <!--Descripción del producto bajo el carousel-->
         <div class="body-card">
             <p class="desc-prod-espec"><?php echo $producto[0]['historia'] ?></p>
@@ -135,25 +146,25 @@ $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                        <img src="../assets/img/prodgenerales/<?php echo $producto[0]['imagen'] ?>" class="d-block w-100" alt="...">
-                    </div>
-                    <?php
+                                        <div class="carousel-item active">
+                                            <img src="../assets/img/prodgenerales/<?php echo $producto[0]['imagen'] ?>" class="d-block w-100" alt="...">
+                                        </div>
+                                        <?php
 
-                    $carrusel = explode(',', $producto[0]['carrusel']);
-
-
-                    ?>
+                                        $carrusel = explode(',', $producto[0]['carrusel']);
 
 
+                                        ?>
 
-                    <?php for ($i = 0; $i < count($carrusel); $i++) {
 
-                    ?>
-                        <div class="carousel-item">
-                            <img src="../assets/img/<?php echo $carrusel[$i] ?>" class="d-block w-100" alt="...">
-                        </div>
-                    <?php }  ?>
+
+                                        <?php for ($i = 0; $i < count($carrusel); $i++) {
+
+                                        ?>
+                                            <div class="carousel-item">
+                                                <img src="../assets/img/<?php echo $carrusel[$i] ?>" class="d-block w-100" alt="...">
+                                            </div>
+                                        <?php }  ?>
 
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -177,20 +188,22 @@ $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../assets/img/prodgenerales/prod_esp/loungewear/bolso.png" class="d-block w-100" alt="...">
+                                <img src="../assets/img/prodgenerales/<?php echo $empaque[0]['imagen'] ?>" class="d-block w-100" alt="...">
                             </div>
                         </div>
                     </div>
-                    <p class="refer-specialbag"><?php echo $producto[0]['nombre'] ?></p>
-                    <p class="refer-specialbag"><?php echo $producto[0]['descripcion'] ?></p>
-                    <p class="refer-specialbag">$20.000</p>
+                    <p class="refer-specialbag"><?php echo $empaque[0]['nombre'] ?></p>
+                    <p class="refer-specialbag"><?php echo $empaque[0]['descripcion'] ?></p>
+                    <p class="refer-specialbag"><?php echo $empaque[0]['precio_compra'] ?></p>
                 </div>
                 <button id="btn-chance" class="btn-empaque" name="bntOpciones" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
 
                 <!-- INPUT PERSONALIZADO -->
                 <label class="custom-radio-checkbox">
                     <!-- Input oculto -->
-                    <input class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
+
+                    
+                    <input  onclick="enviar_empaque()" class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
                     <!-- Imagen en sustitucion -->
                     <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
                 </label>
@@ -225,6 +238,13 @@ $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        function enviar_empaque() {
+
+            document.empaque.submit()
+        }
+    </script>
 
     <!-- Check  -->
     <script>
