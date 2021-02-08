@@ -35,7 +35,11 @@ function prueba(){
     console.log("estoy en header");
 }
 
+
+
 function enviar_carro(){
     
-    document.carrito.submit()
+        document.carrito.submit()
+  
+    
 }

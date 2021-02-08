@@ -40,9 +40,15 @@ include "../../global/conexion.php";
             <input type="text" name="historia" class="newprofile" placeholder="HISTORIA">
             <input type="text" name="descripcion" class="newprofile" placeholder="DESCRIPCION">
             <input type="text" name="genero" class="newprofile" placeholder="GENERO">
+            <label for="imagen" style="color: black;">imagen principal</label>
             <input type="file" name="imagen" class="newprofile" placeholder="IMAGEN" required>
+            <label for="imagenes[]" style="color: black;" >imagenes carrusel</label>
             <input type="file" name="imagenes[]" class="newprofile"  multiple>
             <input type="text" name="emocion" class="newprofile" placeholder="EMOCION">
+            <input type="text" name="empaque" class="newprofile" placeholder="EMPAQUE">
+            <label for="imagencalmwear" style="color: black;">imagen de tipo calmwear</label>
+            <input type="file" name="imagencalmwear" class="newprofile">
+
         </div>
 
         <div class="btn-newprofile mt-2">
