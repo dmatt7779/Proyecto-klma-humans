@@ -25,7 +25,7 @@ include "../../global/conexion.php";
             <div class="alert alert-danger d-none" id="bad"></div>
 
             <form id="form" class="contactform" method="POST" novalidate>
-                
+
                 <input type="text" name="nombre" value="" id="nombre" class="mt-3 mb-3" placeholder="NOMBRE" required>
 
                 <input type="email" name="email" value="" id="email" class="mt-3 mb-3" placeholder="CORREO ELECTRÓNICO" required>
@@ -36,7 +36,7 @@ include "../../global/conexion.php";
         </div>
     </div>
 
-    
+
     <!-- JS, Popper.js, and jQuery -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>

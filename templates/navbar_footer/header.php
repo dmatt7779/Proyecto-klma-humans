@@ -87,20 +87,22 @@
 
 <!-- formulario resta -->
     <form action="../interfaz_cliente/removeonetocart.php" method="post" name="formremoveonetocart">
-                    <input type="hidden" id="resta" name="iddetalleventaresta" >      
-                    <input type="hidden" id="cantidad2" name="cantidadresta" >               
+                    <input type="hidden" id="resta" name="iddetalleventaresta" >
+                    <input type="hidden" id="cantidad2" name="cantidadresta" >
     </form>
 
 
 
-<?php            
+<?php
             foreach($detalleventa as $detventa){
 ?>
-                <div class="cart-item">
                 <span class="close-cart">
-                
-			<i class="fal fa-times" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
-		</span>
+			    <i class="fal fa-times pr-2" style="font-size: 15px!important;" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
+		        </span>
+                <div class="cart-item">
+                <!-- <span class="close-cart"
+			    <i class="fal fa-times" onclick="eliminar(<//?php echo $detventa['id'] ?>)"></i>
+		        </span> -->
                     <div class="data-item">
                         <div class="plus-minus">
                             <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
@@ -112,11 +114,11 @@
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div>
-<?php           
-                
+<?php
+
                 $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
             }
-?>			
+?>
 			<!-- FIN Cart items -->
 		</div>
 

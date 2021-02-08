@@ -30,7 +30,7 @@
 
             <div class="datachance mb-5">
                 <div class="minichance">
-                    <span>CONTACTO</span> 
+                    <span>CONTACTO</span>
                     <button class="btnminichance">CAMBIAR</button>
                 </div><hr>
                 <div class="minichance">

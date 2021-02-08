@@ -8,7 +8,7 @@ include "../../global/conexion.php";
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Resultado Especifico KLMA HUMANS</title>
-	
+
 	<!-- CSS only -->
 	<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/style/style.css">
@@ -36,9 +36,9 @@ include "../../global/conexion.php";
 		<div class="introresult mb-2">
 			<p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
 		</div>
-		<div><p>MARIE CURIE</p></div>
+		<div class="contautor"><p><a href="blogresult.php" target="_blank">MARIE CURIE</a></p></div>
 	</div>
-		
+
 	<!-- Contenedor para campañas -->
 	<div id="white" class="contcampaigns mb-3">
 
