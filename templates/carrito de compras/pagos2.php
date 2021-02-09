@@ -63,7 +63,7 @@
         <div class="pay-form">
             <div class="pay">
                 <!-- Contenedor de objetos para el carrito de compras -->
-                <div class="cart-content mt-5">
+                <div class="cart-content">
                     <!-- Cart items -->
                     <div class="cart-item mb-4">
                         <div class="data-item">

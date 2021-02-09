@@ -36,17 +36,17 @@ include "../../global/conexion.php";
 <div class="containertl">
     <!-- GRID para figuras geometricas -->
     <div class="grid-view gridtlin">
-        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere.gif" alt="prisma">
+        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere_transparent_1.gif" alt="prisma">
         </div>
-        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere.gif" alt="cubo">
+        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere_transparent_1.gif" alt="cubo">
         </div>
-        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere.gif" alt="piramide">
+        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere_transparent_1.gif" alt="piramide">
         </div>
-        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere.gif" alt="cono">
+        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere_transparent_1.gif" alt="cono">
         </div>
-        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere.gif" alt="esfera">
+        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere_transparent_1.gif" alt="esfera">
         </div>
-        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere.gif" alt="cilindro">
+        <div class="packet"><img src="../assets/img/prodgenerales/transition/sphere_transparent_1.gif" alt="cilindro">
         </div>
     </div>
 

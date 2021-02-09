@@ -595,7 +595,7 @@ footer {
 
 .imagenews2{
 
-    margin-bottom: -8.5%;
+    margin-bottom: -8.1%;
 
 }
 
@@ -2126,11 +2126,38 @@ div.mainb{
 
 
 /* ---------------------------INICIO General Transition--------------------------- */
+/* SCROLL BAR Personalizado */
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2d2a29;
+    border-radius: 6px;
+}
+
+.gridtl::-webkit-scrollbar {
+    width: 0.5px;
+}
+/* Thumb para barra de desplazamiento */
+/* .gridtl::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 8px;
+} */
+
+
+
+
+
+
+
 /* GRID para imagenes de figuras geometricas */
 .gridtl {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 205px);
+    grid-template-rows: repeat(6, 235px);
     column-gap: 4rem;
     margin-left: auto;
     margin-right: auto;
@@ -2200,11 +2227,12 @@ div.mainb{
 /* Contenedor de sentimientos */
 .containerfeel2 {
     display: flex;
-    flex:2;
+    flex: 2;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     text-align: end;
+    margin: 0% -4%;
 }
 
 .rotate {

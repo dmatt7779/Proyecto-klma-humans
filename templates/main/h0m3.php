@@ -43,14 +43,6 @@ include "../../global/conexion.php";
     </header>
 </nav>
 
-
-
-
-
-
-
-
-
 <!-- Construcción del carrito de compras -->
 <!-- INICIO Carrito de compras -->
 <div class="cart-overlay" id="divCart" style="visibility:hidden">
@@ -133,6 +125,10 @@ include "../../global/conexion.php";
 </div>
 <!-- FIN Carrito de compras -->
 
+
+
+
+<?php include "../navbar_footer/newsletter.php";?>
 
 
 <!---------- SCROLL BAR ---------->
