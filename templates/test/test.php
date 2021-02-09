@@ -41,6 +41,11 @@ include "../../global/conexion.php";
 <script src="../assets/librerias/popper.min.js"></script>
 <script src="function.js"></script>
 <script>
+
+    //Limpiar al abrir el Test.
+    sessionStorage.removeItem( 'Result' );
+    sessionStorage.removeItem( 'ResultT' );
+
     //Script para pasar preguntas por capas
     $( document ).on( 'click', 'button.smooth', function() {
         let Id = $( this ).parent().parent().attr( 'id' ),

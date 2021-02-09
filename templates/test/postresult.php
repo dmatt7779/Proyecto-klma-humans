@@ -36,7 +36,7 @@ include "../../global/conexion.php";
 		<div class="introresult mb-2">
 			<p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
 		</div>
-		<div class="contautor"><p><a href="blogresult.php" target="_blank">MARIE CURIE</a></p></div>
+		<div class="contautor"><p><a href="blogresult.php">MARIE CURIE</a></p></div>
 	</div>
 
 	<!-- Contenedor para campañas -->

@@ -29,18 +29,18 @@
 <!-- Scroll Bar personalizado -->
 <div id="scrolltr">
 
-    <div id="scrolltitletr">CALMWEAR</div>
+    <div id="scrolltitletr">TRANSITION</div>
 
     <!-- Track -->
-    <div class="scrolllightbar">
+    <div class="scrolllightbartr">
 
         <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock"></div>
+        <div class="scrollblocktr"></div>
     </div>
 </div>
 
 <!-- INICIO GRID PADRE -->
-<div class="mt-5">
+<div class="mt-5 ">
     <div class="grid-lw mt-4">
         <!-- Carousel para imagenes de productos -->
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -82,18 +82,18 @@
             </div>
 
             <div class="font-lw-1 elemento1-5tr">
-                <p class="typeselectortitle">SEXO</p>
+                <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
                 <div class="typeselector">
-                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino-2.png" alt=""></div>
-                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
+                    <div><img id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino.png" alt=""></div>
+                    <div><img id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
                 </div>
             </div>
 
             <div class="font-lw-1 elemento1-5tr">
-                <p class="typeselectortitle">MANGA</p>
+                <p class="titleManga">MANGA</p>
                 <div class="typeselector">
-                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
-                    <div><img src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
+                    <div id="m-sisa"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
+                    <div id="m-ranglan"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
                 </div>
             </div>
 
@@ -316,6 +316,33 @@
     $('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
 </script>
 
+<!-- Seleccion de SEXO -->
+<script>
+    var Ruta = "../assets/img/prodgenerales/prod_esp/transition/";
+
+    $(document).on( 'click', '#femenino', function(){
+        $(this).attr( 'src', Ruta + 'Sexo-Femenino.png' );
+        $( '#masculino' ).attr( 'src', Ruta + 'Sexo-Masculino-2.png ') ;
+    })
+
+    $(document).on( 'click', '#masculino', function(){
+        $(this).attr( 'src', Ruta + 'Sexo-masculino.png' );
+        $( '#femenino' ).attr( 'src', Ruta + 'Sexo-Femenino-2.png ') ;
+    })
+</script>
+
+<!-- Seleccionar Manga -->
+<script>
+    $(document).on( 'click', '#m-sisa', function(){
+            $('#m-sisa').addClass( 'selectdotted' );
+            $('#m-ranglan').removeClass( 'selectdotted');
+        })
+
+        $(document).on( 'click', '#m-ranglan', function(){
+            $('#m-ranglan').addClass( 'selectdotted' );
+            $('#m-sisa').removeClass('selectdotted');
+        })
+</script>
 <script src="../assets/js/carrito.js"></script>
 </body>
 </html>

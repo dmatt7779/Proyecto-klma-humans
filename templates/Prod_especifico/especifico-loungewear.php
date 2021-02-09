@@ -16,11 +16,6 @@ $idempaque = $producto[0]['empaque'];
 $queryempaque = $pdo->prepare("SELECT * FROM productos where id = $idempaque");
 $queryempaque->execute();
 $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,10 +42,10 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         <div id="scrolltitlelg">LOUNGEWEAR</div>
 
         <!-- Track -->
-        <div class="scrolllightbar">
+        <div class="scrolllightbarlg">
 
             <!-- Thumbs -->
-            <div id="scrollwrap" class="scrollblock">
+            <div class="scrollblocklg">
             </div>
         </div>
     </div>
@@ -239,6 +234,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+    <!-- Empaque Especial -->
     <script>
         function enviar_empaque() {
 
@@ -272,25 +268,6 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             } else {
 
                 Elemento.attr('hidden', true)
-            }
-        });
-    </script>
-
-    <!-- scroll bar -->
-    <script>
-        $(window).scroll(function(event) {
-            var scrollTop = $(window).scrollTop()
-            $('#scrollwrap').css('top', scrollTop + 'px')
-
-            if (scrollTop >= 260) {
-                $('#scrollwrap').css('display', 'none')
-                $('#scrollwrap').parent().css('display', 'none')
-            } else if (scrollTop >= 0) {
-                $('#scrollwrap').css('display', 'block')
-                $('#scrollwrap').parent().css('display', 'block')
-            } else if (scrollTop < 0) {
-                $('#scrollwrap').css('display', 'none')
-                $('#scrollwrap').parent().css('display', 'none')
             }
         });
     </script>

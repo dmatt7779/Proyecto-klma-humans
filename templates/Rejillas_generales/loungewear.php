@@ -26,10 +26,10 @@ include "../../global/conexion.php";
     <div id="scrolltitlelg">LOUNGEWEAR</div>
 
     <!-- Track -->
-    <div class="scrolllightbar">
+    <div class="scrolllightbarglg">
 
     <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock">
+        <div id="scrollwraplw" class="scrollblock">
         </div>
     </div>
 </div>
@@ -235,23 +235,22 @@ include "../../global/conexion.php";
 
     <!-- scroll bar -->
 <script>
-
-    $(window).scroll(function(event) {
+   $(window).scroll(function(event) {
         var scrollTop = $(window).scrollTop()
-        $('#scrollwrap').css('top', scrollTop+'px')
-
-        if( scrollTop >= 260 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        } else if( scrollTop >= 0 ){
-            $('#scrollwrap').css('display', 'block')
-            $('#scrollwrap').parent().css('display', 'block')
+        var Tamano = scrollTop / $('#scrollwraplw').height();
+        $('#scrollwraplw').css('top', parseInt( Tamano ) +'px')
+        
+        console.log( Tamano );
+        if( scrollTop >= 0 ){
+            $('#scrollwraplw').css('display', 'block')
+            $('#scrollwraplw').parent().css('display', 'block')
         } else if( scrollTop < 0 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
+            $('#scrollwraplw').css('display', 'none')
+            $('#scrollwraplw').parent().css('display', 'none')
         }
     });
 </script>
 
+<?php include "../navbar_footer/footer.php";?>
 </body>
 </html>

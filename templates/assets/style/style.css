@@ -266,7 +266,7 @@ header.mainheader {
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 1%;
+    padding: 0.5%;
     align-items: center;
 }
 
@@ -1344,7 +1344,7 @@ div.mainb{
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 15pt;
-    letter-spacing: 4rem;
+    letter-spacing: 3.8rem;
 }
 
 .font-tallas-lw2 { 
@@ -1872,7 +1872,7 @@ div.mainb{
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 14pt;
-    letter-spacing: 3.855555555rem;
+    letter-spacing: 3.6333333rem;
 }
 
 /*Grid para producto especifico Calmwear*/
@@ -2167,7 +2167,7 @@ div.mainb{
 
 /* Ubicación y configuración tamaño de las figuras geometricas */
 .packet img {
-    width: 40%;
+    width: 43%;
     height: auto;
     object-fit: cover;
     object-position: center center;
@@ -2190,7 +2190,7 @@ div.mainb{
 .containertl {
     margin-left: auto;
     margin-right: auto;
-    padding: 6%;
+    padding: 6% 6% 0% 6%;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
@@ -2232,10 +2232,10 @@ div.mainb{
 /* ---------------------------INICIO Especifico TRANSITION ------------------------ */
 
 .elemento1-5tr > p:nth-child(1) {
-    letter-spacing: 0.7rem;
+    letter-spacing: 1.5rem;
     font-family: "MoristonPersonal-Bold";
     font-size: 7pt;
-    padding-left: 2%;
+    padding-left: 4%;
     text-align: center;
 }
 
@@ -2259,6 +2259,26 @@ div.mainb{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+#femenino {
+    cursor: pointer;
+}
+
+#masculino {
+    cursor: pointer;
+}
+
+#m-sisa {
+    cursor: pointer;
+}
+
+#m-ranglan {
+    cursor: pointer;
+}
+
+.selectdotted {
+    border-bottom: dotted;
 }
 
 .typeselector > div > img {
@@ -2453,7 +2473,7 @@ div.mainb{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 15%;
+    margin-top: 30%;
 }
 
  .cart-overlay {
@@ -3891,15 +3911,15 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 160px;
+    top: 177px;
     position: relative;
     bottom: 0;
-    left: -16px;
+    left: -17px;
 }
 
 /* Scroll Especifico Calmwear */
 #scrollcw {
-    position: fixed;
+    position: absolute;
 }
 
 #scrolltitlecw {
@@ -3909,14 +3929,33 @@ hr {
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
     top: 165px;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    left: -16px;
+    left: -24px;
+}
+
+.scrollblockcw {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+.scrolllightbarcw {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 222px;
+    bottom: 0;
+    left: 35px;
+    display: block;
 }
 
 /* Scroll TRANSITION GENERAL*/
 #scrollTrans {
-    position: fixed;
+    position: absolute;
 }
 
 #scrolltitletrans {
@@ -3925,14 +3964,33 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 7pt;
-    top: 155px;
-    position: relative;
+    top: 150px;
+    position: absolute;
     bottom: 0;
-    left: -23px;
+    left: -32px;
+}
+
+.scrolllightbartrans {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 215px;
+    bottom: 0;
+    left: 32px;
+    display: block;
+}
+
+.scrollblocktrans {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
 }
 /* Scroll Especifico TRANSITION*/
 #scrolltr {
-    position: fixed;
+    position: absolute;
 }
 
 #scrolltitletr {
@@ -3942,9 +4000,28 @@ hr {
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
     top: 160px;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    left: -22px;
+    left: -32px;
+}
+
+.scrolllightbartr {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 220px;
+    bottom: 0;
+    left: 31px;
+    display: block;
+}
+
+.scrollblocktr {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
 }
 
 /* Scroll LOUNGEWEAR GENERAL */
@@ -3958,11 +4035,42 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 150px;
+    top: 162px;
     position: relative;
     bottom: 0;
-    left: -28px;
+    left: -31px;
+}
 
+.scrolllightbarglg {
+    width: 1px;
+    height: 215px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -2px;
+}
+
+/* Scroll LOUNGEWEAR Especifico */
+
+.scrolllightbarlg {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 195px;
+    bottom: 0;
+    left: 30px;
+    display: block;
+}
+
+.scrollblocklg {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
 }
 
 /* Scroll TEST */
@@ -4025,7 +4133,7 @@ hr {
     top: 0;
     bottom: 0;
     left: 0;
-    display: none;
+    display: block;
 }
 
 .scrollblock {
@@ -4236,7 +4344,7 @@ hr {
         }
         .scrollblock{
             overflow-x: hidden;
-            display: none;
+            display: block;
             width: 0px;
             height: 0px;
         }

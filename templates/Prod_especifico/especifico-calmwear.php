@@ -32,10 +32,10 @@
     <div id="scrolltitlecw">CALMWEAR</div>
 
     <!-- Track -->
-    <div class="scrolllightbar">
+    <div class="scrolllightbarcw">
 
     <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock">
+        <div class="scrollblockcw">
         </div>
     </div>
 </div>
@@ -230,25 +230,6 @@
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<!-- scroll bar -->
-<script>
-    $(window).scroll(function(event) {
-        var scrollTop = $(window).scrollTop()
-        $('#scrollwrap').css('top', scrollTop+'px')
-
-        if( scrollTop >= 260 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        } else if( scrollTop >= 0 ){
-            $('#scrollwrap').css('display', 'block')
-            $('#scrollwrap').parent().css('display', 'block')
-        } else if( scrollTop < 0 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        }
-    });
-</script>
 
 <!-- Script para ocultar obejtos HTML -->
 <script>
