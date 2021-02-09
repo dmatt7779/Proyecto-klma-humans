@@ -18,7 +18,7 @@
     <div class="modal" tabindex="-1" id="modal1"  data-backdrop="false" data-keyboard="false">
         <div class="modal-dialog modal-xl">
             <div class="modal-content inferior" style="background: transparent!important; border:none!important;">
-                <div class="modal-body">
+                <div class="modal-body p-0">
                     <div id="imagenews">
                         <div class="newscontent">
                             <div class="conectednews">

@@ -24,10 +24,10 @@ include "../../global/conexion.php";
     <div id="scrolltitleabout">ABOUT</div>
 
     <!-- Track -->
-    <div class="scrolllightbar">
+    <div class="scrolllightbarabout">
 
     <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock">
+        <div id="scrollwrapabout" class="scrollblock">
         </div>
     </div>
 </div>
@@ -51,7 +51,7 @@ include "../../global/conexion.php";
 
         <div class="row aboutbtn">
             <div class="mt-2">
-                <button class="smooth"><img src="../assets/img/test/Paso.png" alt=""></button>
+                <button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>
             </div>
         </div>
     </div>
@@ -116,21 +116,20 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
 
-    <!-- scroll bar -->
+<!-- scroll bar -->
 <script>
-    $(window).scroll(function(event) {
+   $(window).scroll(function(event) {
         var scrollTop = $(window).scrollTop()
-        $('#scrollwrap').css('top', scrollTop+'px')
-
-        if( scrollTop >= 260 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        } else if( scrollTop >= 0 ){
-            $('#scrollwrap').css('display', 'block')
-            $('#scrollwrap').parent().css('display', 'block')
+        var Tamano = scrollTop / $('#scrollwrapabout').height();
+        $('#scrollwrapabout').css('top', parseInt( Tamano ) +'px')
+        
+        console.log( Tamano );
+        if( scrollTop >= 0 ){
+            $('#scrollwrapabout').css('display', 'block')
+            $('#scrollwrapabout').parent().css('display', 'block')
         } else if( scrollTop < 0 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
+            $('#scrollwrapabout').css('display', 'none')
+            $('#scrollwrapabout').parent().css('display', 'none')
         }
     });
 </script>

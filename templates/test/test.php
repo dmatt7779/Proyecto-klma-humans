@@ -58,7 +58,7 @@ include "../../global/conexion.php";
             }
     });
 
-    //Script para seleccionar Respuestas
+//Script para seleccionar Respuestas
     $( document ).on( 'click', '#selectanswer1 > .testselect1 > .testselect11', function() {
         $( '.testselect1' ).removeClass( 'select-wr active' );
         $( '.testselect11' ).removeClass( 'select-deep' );

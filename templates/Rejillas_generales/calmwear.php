@@ -20,7 +20,6 @@ include "../../global/conexion.php";
 <?php require "../navbar_footer/header.php"; ?>
 
 <!-- Scroll Bar personalizado -->
-
 <div id="scrollCalm">
 
     <div id="scrolltitleCalm">CALMWEAR</div>

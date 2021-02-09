@@ -16,16 +16,17 @@ include "../../global/conexion.php";
 
 </head>
 <body>
+<?php include "../navbar_footer/newsletter.php";?>
 
 <nav id="hnav" class="navbar-expand-sm navbar-light">
-    <header class="mainheader">
-    <div class="navlogo">
-            <a href="../main/menu.php"><img src="../assets/img/nav_foot/shop.gif" alt="Logo de compras"></a>
-    </div>
+    <header class="mainheader mainheader2">
+        <div class="navlogo">
+                <a href="../main/menu.php"><img id="logoshopnav" src="../assets/img/nav_foot/shop.gif" alt="Logo de compras"></a>
+        </div>
 
-    <div class="navlogo2">
-            <a href="../main/menu2.php"><img src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
-    </div>
+        <div class="navlogo2">
+                <a href="h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
+        </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,15 +34,19 @@ include "../../global/conexion.php";
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="nested-nav mr-2">
 
-                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
+                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img id="dotsnav" src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
 
-                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
+                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img id="loginnav" src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
 
-                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
+                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img id="shopcartnav" src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
                 </div>
             </div>
     </header>
 </nav>
+
+<section class="hero"></section>
+<section class="demo-content"></section>
+
 
 <!-- Construcción del carrito de compras -->
 <!-- INICIO Carrito de compras -->
@@ -54,82 +59,76 @@ include "../../global/conexion.php";
 
 		<div class="cart-content">
 			<!-- Cart items -->
-<?php
-            if(!empty($_SESSION['iduser'])){
+    <?php
+                if(!empty($_SESSION['iduser'])){
 
-            $iduser = $_SESSION['iduser'] ;    
-            }else{
+                $iduser = $_SESSION['iduser'] ;    
+                }else{
+                    
+                    $iduser = -1;
+
+                }
+
                 
-                $iduser = -1;
+                $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+                $sentencia -> execute();
+                $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+                
+                if (empty($venta)) {
+                    $ventaid =  "";
+                }else{
+                    $ventaid =  $venta[0]['id'];
+                }
+            
+                $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+                $sentencia -> execute();
+                $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+                $subtotal = 0;
 
-            }
+                
 
             
-            $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
-            $sentencia -> execute();
-            $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-            
-            if (empty($venta)) {
-                $ventaid =  "";
-            }else{
-                $ventaid =  $venta[0]['id'];
-            }
-        
-            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
-            $sentencia -> execute();
-            $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-            $subtotal = 0;
-
-            
-
-        
-            foreach($detalleventa as $detventa){
-?>
-                <div class="cart-item">
-                    <div class="data-item">
-                        <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
+                foreach($detalleventa as $detventa){
+    ?>
+                    <div class="cart-item">
+                        <div class="data-item">
+                            <div class="plus-minus">
+                                <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
+                            </div>
+                            <h2><?php echo $detventa['nombre'] ?></h2>
+                            <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
+                            <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
+                            <!-- <span class="remove-item">remove</span> -->
                         </div>
-                        <h2><?php echo $detventa['nombre'] ?></h2>
-                        <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
-                        <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
-                        <!-- <span class="remove-item">remove</span> -->
+                        <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                     </div>
-                    <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
-                </div>
-<?php           
-                
-                $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
-            }
-?>			
-			<!-- FIN Cart items -->
-		</div>
-
-        <!-- INICIO Cart footer -->
-        <div class="cart-footer">
-            <div class="subtotal">
-                <h3>SUBTOTAL:</h3>
-                <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
+    <?php           
+                    
+                    $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+                }
+    ?>			
+                <!-- FIN Cart items -->
             </div>
-            <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-            <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
-            <div class="finalshop">
-            <form action="../carrito de compras/finalpedido.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $ventaid ?>">
-                <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
-                <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
-            </form>
+
+            <!-- INICIO Cart footer -->
+            <div class="cart-footer">
+                <div class="subtotal">
+                    <h3>SUBTOTAL:</h3>
+                    <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
+                </div>
+                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
+                <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
+                <div class="finalshop">
+                <form action="../carrito de compras/finalpedido.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $ventaid ?>">
+                    <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
+                    <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
+                </form>
+                </div>
             </div>
         </div>
-	</div>
 </div>
 <!-- FIN Carrito de compras -->
-
-
-
-
-<?php include "../navbar_footer/newsletter.php";?>
-
 
 <!---------- SCROLL BAR ---------->
 <div id="scrollabout">
@@ -189,7 +188,7 @@ include "../../global/conexion.php";
 
     <div class="row aboutbtn">
         <div class="mt-2">
-            <button class="smooth"><img src="../assets/img/test/Paso.png" alt=""></button>
+            <button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>
         </div>
     </div>
     </div>
@@ -311,6 +310,31 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../test/sss/sss.js"></script>
 
+<script>
+
+    window.addEventListener('scroll', function() {
+
+        let routenavbar = "../assets/img/nav_foot/"
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 870;
+        
+        if( windowPosition => 870 ){
+            header.classList.toggle('scrolling-active', windowPosition);
+            $('#logoshopnav').attr( 'src', routenavbar + 'Shop-White.gif');
+            $('#logomainnav').attr( 'src', routenavbar+ 'logoblanco.png');
+            $('#dotsnav').attr( 'src', routenavbar + 'menu2.png' );
+            $('#loginnav').attr( 'src', routenavbar + 'Login2.png' );
+            $('#shopcartnav').attr( 'src', routenavbar + 'Cartera2.png');
+        }else if(windowPosition < 870) {
+            $('#logoshopnav').attr( 'src', routenavbar + 'shop.gif' );
+            $('#logomainnav').attr( 'src', routenavbar+ 'Logo.png' );
+            $('#dotsnav').attr( 'src', routenavbar + 'menu.png' );
+            $('#loginnav').attr( 'src', routenavbar + 'Login.png' );
+            $('#shopcartnav').attr( 'src', routenavbar + 'Cartera.png');
+        }
+    })
+
+</script>
 
 <!-- scroll bar -->
 <script>

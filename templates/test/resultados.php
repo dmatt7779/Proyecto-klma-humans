@@ -149,7 +149,7 @@ include "../../global/conexion.php";
 
     <div class="row aboutbtn">
         <div class="mt-5">
-            <button class="smooth"><img src="../assets/img/test/Paso.png" alt=""></button>
+            <button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>
         </div>
     </div>
 

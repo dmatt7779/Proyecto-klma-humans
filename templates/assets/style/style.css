@@ -809,7 +809,6 @@ div.mainb{
  /* ---------------------------------- INICIO HOME ------------------------------ */
 
 #hnav {
-    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -819,10 +818,23 @@ div.mainb{
     transition: .5s;
     z-index: 10;
 
+    transition: height .5s ease;
 }
 
+.mainheader2 {
+    transition: background-color .5s ease;
+}
+
+/* Style after scroll */
+.scrolling-active {
+    background-color: #2d2d2d!important;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+/*FIN Scrolling  */
+
 .hmcarousel-control-prev-icon {
-    background-image: url(../img/flecha.png)!important;
+    background-image: url(../img/flecha-izquierda.gif)!important;
     width: 30px!important;
     height: 30px!important;
     background: no-repeat 50%/100% 100%;
@@ -830,15 +842,12 @@ div.mainb{
 }
     
 .hmcarousel-control-next-icon {
-    background-image: url(../img/flecha2.png)!important;
+    background-image: url(../img/flecha-derecha.gif)!important;
     width: 30px!important;
     height: 30px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
 }    
-
-
-
  /* ---------------------------------- FIN HOME ------------------------------ */
 
 /* -----------------------------ABOUT US----------------------------- */
@@ -1773,7 +1782,7 @@ div.mainb{
 
 /* Controles para adelantar y devolver el modal de las fotos */
 .control-prev-icon {
-    background-image: url(../img/flecha.png)!important;
+    background-image: url(../img/flecha-izquierda.gif)!important;
     width: 30px!important;
     height: 30px!important;
     background: no-repeat 50%/100% 100%;
@@ -1781,7 +1790,7 @@ div.mainb{
 }
 
 .control-next-icon {
-    background-image: url(../img/flecha2.png)!important;
+    background-image: url(../img/flecha-derecha.gif)!important;
     width: 30px!important;
     height: 30px!important;
     background: no-repeat 50%/100% 100%;
@@ -3506,7 +3515,7 @@ hr {
 }
 
 .smooth > img {
-    width: 15%;
+    width: 20%;
 }
 
 /*Configuración para Animaciones */
@@ -3922,10 +3931,29 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 144px;
-    position: relative;
+    top: 190px;
+    position: absolute;
     bottom: 0;
-    left: 3px;
+    left: -6px;
+}
+
+.scrolllightbarabout {
+    width: 1px;
+    height: 165px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 225px;
+    bottom: 0;
+    left: 33px;
+    display: block;
+}
+
+.scrollblock {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
 }
 
 /* Scroll CALMWEAR GENERAL */
