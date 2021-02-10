@@ -50,7 +50,7 @@ include "../../global/conexion.php";
         </div>
 
         <div class="row aboutbtn">
-            <div class="mt-2">
+            <div class="mt-4">
                 <button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>
             </div>
         </div>

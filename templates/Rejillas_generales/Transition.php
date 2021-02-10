@@ -22,7 +22,7 @@ include "../../global/conexion.php";
 <!-- Scroll Bar personalizado -->
 <div id="scrollTrans">
 
-    <div id="scrolltitletrans">LOUNGEWEAR</div>
+    <div id="scrolltitletrans">TRANSITION</div>
 
     <!-- Track -->
     <div class="scrolllightbartrans">
@@ -105,32 +105,6 @@ include "../../global/conexion.php";
         </div>
         <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
         </div>
-        <!-- amor -->
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-        </div>
-        <!-- alegria -->
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Ranglan.png" alt="">
-        </div>
-        <div class="tshirt"><img src="../assets/img/prodgenerales/transition/T-shirt Manga Sisa.png" alt="">
-        </div>
     </div>
 
     <!-- Contenedor de los sentimientos rotados 90° -->
@@ -145,13 +119,13 @@ include "../../global/conexion.php";
                 <span class="">TRISTEZA</span>
             </div>
             <div class="rotate">
+                <span class="">ALEGRÍA</span>
+            </div>
+            <div class="rotate">
                 <span class="">FELICIDAD</span>
             </div>
             <div class="rotate">
                 <span class="">AMOR</span>
-            </div>
-            <div class="rotate">
-                <span class="">ALEGRÍA</span>
             </div>
     </div>
 </div>

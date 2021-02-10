@@ -36,7 +36,7 @@
         </div>
 
         <div class="saleoffcode">
-            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="CORREO ELECTRÓNICO">
+            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="CORREO ELECTRÓNICO">
         </div>
         <label class="checkboxform mb-5"><input type="checkbox" id="cbox1" value="checkboxsale"> QUIERO RECIBIR NOTICIAS Y OFERTAS EXCLUSIVAS</label>
 
@@ -45,24 +45,24 @@
         </div>
 
         <div class="saleoffcode2">
-            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode2 mt-3 mb-3" placeholder="NOMBRES">
-            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode2 mt-3 mb-3" placeholder="APELLIDOS">
+            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode2 mt-3 mb-3" placeholder="NOMBRES">
+            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode2 mt-3 mb-3" placeholder="APELLIDOS">
         </div>
 
         <div class="saleoffcode">
-            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="DIRECCIÓN">
-            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="APT - LOCAL - ETC - (OPCIONAL)">
-            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="CIUDAD">
+            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="DIRECCIÓN">
+            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="APT - LOCAL - ETC - (OPCIONAL)">
+            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="CIUDAD">
         </div>
 
         <div class="saleoffcode3">
-            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode3 mt-3 mb-3" placeholder="PAÍS/REGIÓN">
-            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode3 mt-3 mb-3" placeholder="PROVINCIA">
-            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode3 mt-3 mb-3" placeholder="BARRIO">
+            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode3 mt-3 mb-3" placeholder="PAÍS/REGIÓN">
+            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode3 mt-3 mb-3" placeholder="PROVINCIA">
+            <input type="text" style="letter-spacing: 0.5rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode3 mt-3 mb-3" placeholder="BARRIO">
         </div>
 
         <div class="saleoffcode">
-            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 0% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="TELÉFONO">
+            <input type="text" style="letter-spacing: 1.1rem; text-align: left; padding: 0% 0% 1% 1.5%;" class="saleoffcode mt-3 mb-3" placeholder="TELÉFONO">
         </div>
         <label class="checkboxform mb-4"><input type="checkbox" id="cbox1" value="checkboxsale"> GUARDAR MI INFORMACI&Oacute;N Y CONSULTAR M&Aacute;S R&Aacute;PIDAMENTE LA PR&Oacute;XIMA VEZ</label>
 

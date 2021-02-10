@@ -21,13 +21,6 @@ include "../../global/conexion.php";
 
     <div id="scrolltitleTest">CALMTEST</div>
 
-    <!-- Track -->
-    <div class="scrolllightbar">
-
-    <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock">
-        </div>
-    </div>
 </div>
 
 <!-- Home Questions -->

@@ -135,6 +135,69 @@ include "../../global/conexion.php";
 			</div>
 	</div>
 
+	<!--Productos 6-->
+	<div class="gridclmw">
+		<div class="card-clmw">
+			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
+			<div class="card-body">
+			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
+			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
+			<p class="price" href="#">$290.000</p>
+			</div>
+		</div>
+
+		<div class="card-clmw">
+			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
+			<div class="card-body">
+			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
+			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
+			<p class="price" href="#">$291.000</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Productos 7-->
+	<div class="gridclmw">
+		<div class="card-clmw">
+			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
+			<div class="card-body">
+			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
+			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
+			<p class="price" href="#">$290.000</p>
+			</div>
+		</div>
+
+		<div class="card-clmw">
+			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
+			<div class="card-body">
+			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
+			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
+			<p class="price" href="#">$291.000</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Productos 8-->
+	<div class="gridclmw">
+		<div class="card-clmw">
+			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
+			<div class="card-body">
+			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
+			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
+			<p class="price" href="#">$290.000</p>
+			</div>
+		</div>
+
+		<div class="card-clmw">
+			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
+			<div class="card-body">
+			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
+			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
+			<p class="price" href="#">$291.000</p>
+			</div>
+		</div>
+	</div>
+
     <!-- JS, Popper.js, and jQuery -->
 
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>

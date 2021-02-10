@@ -31,13 +31,6 @@
 
     <div id="scrolltitlecw">CALMWEAR</div>
 
-    <!-- Track -->
-    <div class="scrolllightbarcw">
-
-    <!-- Thumbs -->
-        <div class="scrollblockcw">
-        </div>
-    </div>
 </div>
 
 <!-- INICIO GRID PADRE -->

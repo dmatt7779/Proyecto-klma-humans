@@ -116,6 +116,7 @@ body {
     border: none;
     outline: none;
     box-shadow: none;
+    text-align: center;
 }
 
 .img-barras {
@@ -142,6 +143,13 @@ body {
     text-align: center;
     letter-spacing: .2rem;
     word-spacing: 0.2rem;
+}
+
+.logpassregister > input {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .3rem;
 }
 
 .login-form{
@@ -266,7 +274,7 @@ header.mainheader {
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0.5%;
+    padding: 1% 1%;
     align-items: center;
 }
 
@@ -624,16 +632,18 @@ footer {
     border-radius: 8px;
     outline: none;
     box-shadow: none;
+    padding: 0% 0% 1% 2%;
 }
 
 .suscribenews::placeholder{
     font-family: "MoristonPersonal-Medium";
     font-size: 5pt;
     text-align: center;
-    letter-spacing: 3.1em;
+    letter-spacing: 1.2rem;
     word-spacing: 0.25em;
     color: rgb(0, 0, 0);
     opacity: 60%;
+
 }
 
 .inferior {
@@ -1130,7 +1140,6 @@ div.mainb{
     box-shadow: none;
     padding: 5% 0% 0% 5%;
     letter-spacing: 3.0rem;
-    
 }
 
 .contactform input:nth-child(1)::placeholder {
@@ -2203,7 +2212,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Ubicación y configuración tamaño de las figuras geometricas */
 .packet img {
-    width: 43%;
+    width: 60%;
     height: auto;
     object-fit: cover;
     object-position: center center;
@@ -3121,6 +3130,16 @@ hr {
     opacity: 60%;
 }
 
+.newprofile label {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 6pt;
+    text-align: center;
+    letter-spacing: .2rem;
+    word-spacing: .2rem;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
 .newdata {
     display: flex;
     justify-content: center;
@@ -3967,7 +3986,7 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 177px;
+    top: 145px;
     position: relative;
     bottom: 0;
     left: -17px;
@@ -3984,7 +4003,7 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 165px;
+    top: 274px;
     position: absolute;
     bottom: 0;
     left: -24px;
@@ -4020,10 +4039,10 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 7pt;
-    top: 150px;
+    top: 127px;
     position: absolute;
     bottom: 0;
-    left: -32px;
+    left: -27px;
 }
 
 .scrolllightbartrans {
@@ -4055,7 +4074,7 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 160px;
+    top: 270px;
     position: absolute;
     bottom: 0;
     left: -32px;
@@ -4091,7 +4110,7 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 162px;
+    top: 250px;
     position: relative;
     bottom: 0;
     left: -31px;

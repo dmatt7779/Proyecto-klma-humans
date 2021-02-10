@@ -41,13 +41,6 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
         <div id="scrolltitlelg">LOUNGEWEAR</div>
 
-        <!-- Track -->
-        <div class="scrolllightbarlg">
-
-            <!-- Thumbs -->
-            <div class="scrollblocklg">
-            </div>
-        </div>
     </div>
 
     <!-- INICIO GRID PADRE -->

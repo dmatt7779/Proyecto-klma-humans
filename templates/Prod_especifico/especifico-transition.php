@@ -31,12 +31,6 @@
 
     <div id="scrolltitletr">TRANSITION</div>
 
-    <!-- Track -->
-    <div class="scrolllightbartr">
-
-        <!-- Thumbs -->
-        <div class="scrollblocktr"></div>
-    </div>
 </div>
 
 <!-- INICIO GRID PADRE -->
