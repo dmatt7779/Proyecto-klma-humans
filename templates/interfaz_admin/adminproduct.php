@@ -48,6 +48,11 @@ include "../../global/conexion.php";
             <input type="text" name="empaque" class="newprofile" placeholder="EMPAQUE">
             <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">IMAGEN DE TIPO CALMWEAR</label>
             <input type="file" name="imagencalmwear" class="newprofile">
+            <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">IMAGEN DE MATERIAL 1</label>
+            <input type="file" name="imagenmaterial1" class="newprofile">
+            <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">IMAGEN DE MATERIAL 2</label>
+            <input type="file" name="imagenmaterial2" class="newprofile">
+
 
         </div>
 
@@ -72,12 +77,10 @@ include "../../global/conexion.php";
                             <th>Precio compra</th>
                             <th>Cantidad</th>
                             <th>Habilitado</th>
-                            <th>Fecha</th>
-                            
+                            <th>Fecha</th>                            
                             <th>Descripcion</th>
                             <th>Genero</th>
-                            <th>Imagen</th>
-                            <th>Carrusel</th>
+                            <th>Imagen</th>                            
                             <th>Emocion</th>
                             <th>Cambiar Estado</th>
                         </tr>
@@ -93,7 +96,7 @@ include "../../global/conexion.php";
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
-                            <th>Filter..</th>
+                            
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
@@ -150,7 +153,7 @@ include "../../global/conexion.php";
                             <td><?php echo $producto['descripcion'] ?></td>
                             <td><?php echo $producto['genero'] ?></td>
                             <td><?php echo $producto['imagen'] ?></td>
-                            <td><?php echo $producto['carrusel'] ?></td>
+                            
                             <td><?php echo $producto['emocion'] ?></td>
                             <td> <form action="estadoproducto.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $producto['id'] ?>">
