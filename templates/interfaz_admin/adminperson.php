@@ -80,6 +80,7 @@ if (!isset($_SESSION['correo'])) {
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
+                            <th>Filter..</th>
                             
                         </tr>
                     </tfoot>

@@ -1,17 +1,28 @@
-<?php     
-    include "../../global/conexion.php";
-        
-/*     session_start();
+<?php
+include "../../global/conexion.php";
+session_start();
 
-        $id = $_POST['id'];
-        
-        $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
-        $sentencia -> execute();
-        $producto=$sentencia->fetchAll(PDO::FETCH_ASSOC); */
+$id = $_POST['id'];
+
+$sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
+$sentencia->execute();
+$producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+
+$idempaque = $producto[0]['empaque'];
+
+$queryempaque = $pdo->prepare("SELECT * FROM productos where id = $idempaque");
+$queryempaque->execute();
+$empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
+<script>
+    console.log(<?php echo $id ?>)
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,325 +31,323 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
-<?php require "../navbar_footer/header.php"; ?>
+    <?php require "../navbar_footer/header.php"; ?>
 
-<!-- Scroll Bar personalizado -->
-<div id="scrolltr">
+    <!-- Scroll Bar personalizado -->
+    <div id="scrolltr">
 
-    <div id="scrolltitletr">TRANSITION</div>
+        <div id="scrolltitletr">TRANSITION</div>
 
-</div>
-
-<!-- INICIO GRID PADRE -->
-<div class="mt-5 ">
-    <div class="grid-lw mt-4">
-        <!-- Carousel para imagenes de productos -->
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-product">
-                <div class="carousel-item active">
-                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen01.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen02.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen03.png" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="../assets/img/prodgenerales/prod_esp/transition/imagen04.png" class="d-block w-100" alt="...">
-                </div>
-            </div>
-        </div>
-        <!--FIN Carousel-->
-
-        <!-- GRID Anidado -->
-        <div class="nested-grid-cw">
-            <div class="font-lw-1 elemento1cw">
-                    <p class="refertr">T-SHIRT GALERY</p>
-                    <p class="refertr">REF C1/223-01</p>
-                    <p class="refertr">EMOTIONAL</p>
-                    <p class="refertr">DESIGN</p>
-            </div>
-
-            <div class="font-lw-1 elemento1-5tr">
-                <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
-                <div class="typeselector">
-                    <div><img id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino.png" alt=""></div>
-                    <div><img id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
-                </div>
-            </div>
-
-            <div class="font-lw-1 elemento1-5tr">
-                <p class="titleManga">MANGA</p>
-                <div class="typeselector">
-                    <div id="m-sisa"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
-                    <div id="m-ranglan"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
-                </div>
-            </div>
-
-            <!-- Precio -->
-            <div class="elemento2cw">
-                <p class="font-price-cw">$118.000</p>
-            </div>
-
-            <!--  Seleccionador de Tallas -->
-            <div class="elemento3" id="divTalla">
-                <div class="aTalla contenedor-tallas-lw">S</div>
-                <div class="aTalla contenedor-tallas-lw">M</div>
-                <div class="aTalla contenedor-tallas-lw">L</div>
-                <div class="aTalla contenedor-tallas-lw">XL</div>
-            </div>
-        </div><!-- FIN GRID Anidado -->
-    </div><!-- FIN GRID PADRE -->
-        
-
-    <!--Descripción del producto bajo el carousel-->
-    <div class="body-card">
-        <p class="desc-prod-espec">EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR OPORTUNIDAD.</p>
     </div>
 
-    <!--Botones Opciones para mostrar contenedores hidden-->
-    <div class="divopcionestr">
-        <!-- Contenedor de VER DETALLES -->
-        <div class="btn-opcionestr">
-            <div class="contentdetailstr" id="divDetalle" hidden>
-                <p class="refer-details">ESTA T-SHIRT GALERY FUE ELABORADA EN 100% ALGÓDON ORGÁNICO EXTRA SUAVE, TIENE UN FIT OVERSIZED</p>
-                <p class="refer-details">SU ARTE FUE CREADO A TRAVÉS DE UNA EXPRESIÓN EMOCIONAL</p>
-                <p class="refer-details">MADE IN COLOMBIA</p>
+    <!-- INICIO GRID PADRE -->
+    <div class="mt-5 ">
+        <div class="grid-lw mt-4">
+            <!-- Carousel para imagenes de productos -->
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-product">
+
+
+                    <div class="carousel-item active">
+                        <img src="../assets/img/prodgenerales/<?php echo $producto[0]['imagen']  ?>" class="d-block w-100" alt="...">
+                    </div>
+
+                    <?php
+
+                    $carrusel = explode(',', $producto[0]['carrusel']);
+
+
+                    for ($i = 0; $i < count($carrusel); $i++) {
+
+                    ?>
+                        <div class="carousel-item">
+                            <img src="../assets/img/<?php echo $carrusel[$i] ?>" class="d-block w-100" alt="...">
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
-            <!-- Boton VER DETALLES -->
-            <button id="btn-details-prod" class="btn-details-prod" name="bntOpcionestr" data-target="divDetalle">VER DETALLES</button>
+            <!--FIN Carousel-->
+
+            <!-- GRID Anidado -->
+            <div class="nested-grid-cw">
+                <div class="font-lw-1 elemento1cw">
+                    <p class="refertr">T-SHIRT GALERY</p>
+                    <p class="refertr"><?php echo $producto[0]['codigo']  ?></p>
+                    <p class="refertr">EMOTIONAL</p>
+                    <p class="refertr">DESIGN</p>
+                </div>
+
+                <div class="font-lw-1 elemento1-5tr">
+                    <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
+                    <div class="typeselector">
+                        <div><img id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino.png" alt=""></div>
+                        <div><img id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="font-lw-1 elemento1-5tr">
+                    <p class="titleManga">MANGA</p>
+                    <div class="typeselector">
+                        <div id="m-sisa"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
+                        <div id="m-ranglan"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- Precio -->
+                <div class="elemento2cw">
+                    <p class="font-price-cw">$<?php echo $producto[0]['precio_compra']  ?></p>
+                </div>
+
+                <!--  Seleccionador de Tallas -->
+                <div class="elemento3" id="divTalla">
+                    <div onclick="talla('s');" class="aTalla contenedor-tallas-lw talla-active">S</div>
+                    <div onclick="talla('m');" class="aTalla contenedor-tallas-lw">M</div>
+                    <div onclick="talla('l');" class="aTalla contenedor-tallas-lw">L</div>
+                    <div onclick="talla('xl');" class="aTalla contenedor-tallas-lw">XL</div>
+                </div>
+            </div><!-- FIN GRID Anidado -->
+        </div><!-- FIN GRID PADRE -->
+
+        <form action="newcar.php" method="post" name="transition">
+            <input type="text" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
+            <input type="text" name="talla" id="talla" value="S">
+
+        </form>
+
+        <form action="newpackage.php" name="empaque" method="post">
+            <input type="hidden" name="talla" value="S">
+            <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
+        </form>
+        <!--Descripción del producto bajo el carousel-->
+        <div class="body-card">
+            <p class="desc-prod-espec"><?php echo $producto[0]['frase']  ?></p>
         </div>
 
-        <!-- Boton para ver MODAL -->
-        <div class="btn-opcionestr">
-            <button type="button" class="btn-verproduct" name="bntOpcionestr">DESIGN BY SARA VARGAS</button>
-        </div>
+        <!--Botones Opciones para mostrar contenedores hidden-->
+        <div class="divopcionestr">
+            <!-- Contenedor de VER DETALLES -->
+            <div class="btn-opcionestr">
+                <div class="contentdetailstr" id="divDetalle" hidden>
+                    <p class="refer-details"> <?php echo $producto[0]['historia']  ?></p>
 
-        <!-- Botón EMPAQUE ESPECIAL -->
-        <div class="btn-opcionestr">
+                </div>
+                <!-- Boton VER DETALLES -->
+                <button id="btn-details-prod" class="btn-details-prod" name="bntOpcionestr" data-target="divDetalle">VER DETALLES</button>
+            </div>
+
+            <!-- Boton para ver MODAL -->
+            <div class="btn-opcionestr">
+                <button type="button" class="btn-verproduct" name="bntOpcionestr">DESIGN BY <?php echo $producto[0]['diseñador']  ?></button>
+            </div>
+
+            <!-- Botón EMPAQUE ESPECIAL -->
+            <div class="btn-opcionestr">
                 <div class="contentbagtr" id="divEmpaque" hidden>
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                        
+
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../assets/img/prodgenerales/prod_esp/calmwear/bolso.png" class="d-block w-100" alt="...">
+                            <img src="../assets/img/prodgenerales/<?php echo $empaque[0]['imagen'] ?>" class="d-block w-100" alt="...">
+                               
                             </div>
                         </div>
                     </div>
-                    <p class="refer-specialbag">CALM DRESS</p>
-                    <p class="refer-specialbag">CHOMPA MANGA CORTA</p>
-                    <p class="refer-specialbag">$20.000</p>
+                    <p class="refer-specialbag"><?php echo $empaque[0]['nombre'] ?></p>
+                    <p class="refer-specialbag"><?php echo $empaque[0]['descripcion'] ?></p>
+                    <p class="refer-specialbag"><?php echo $empaque[0]['precio_compra'] ?></p>
                 </div>
-            <button id="btn-chance" class="btn-empaque" name="bntOpcionestr" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
-            
-            <!-- INPUT PERSONALIZADO -->
-            <label class="custom-radio-checkbox">
-                <!-- Input oculto -->
-                <input class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi" >
-                <!-- Imagen en sustitucion -->
-                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
-            </label>
-        </div>
+                <button id="btn-chance" class="btn-empaque" name="bntOpcionestr" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
 
-
-        <!-- Buy It Now -->
-
-        <div class="btn-opcionestr">
-            <!-- Botones Agregar y comprar ahora -->
-            <div class="elemento4">
-                <div class="btn-opcionestr">
-                    <div class="contentsize" id="divSize" hidden>
-                        <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" alt="">
-                        <p class="choicesize mt-3">SELECCIONAR TALLA</p>
-                        <div class="btn-sizes2">
-                            <button class="btn-change">S</button>
-                            <button class="btn-change">M</button>
-                            <button class="btn-change">L</button>
-                            <button class="btn-change">XL</button>
-                        </div>
-                    </div>
-                </div>
-                <button id="btn-size" class="btn-size" name="bntOpcionestr" data-target="divSize">TALLAS</button>
-            </div>
-            <a href="#" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
-            <a href="#" class="btn btn-submit">BUY IT NOW</a>
-        </div>
-    </div><!-- FIN Contenedores hidden -->
-</div>
-
-    <!-- INICIO Carrito de compras -->
-    <div class="cart-overlay" id="divCart">
-        <div class="cart">
-            <span class="close-cart">
-                <i class="fas fa-times" id="closecart"></i>
-            </span>
-            <h1>RESUMEN</h1>
-
-            <div class="cart-content">
-                <!-- Cart items -->
-                <div class="cart-item">
-                    <div class="data-item">
-                        <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
-                        </div>
-                        <h2>COMERCIAL BAG</h2>
-                        <span class="cart-size">CIRCLE</span>
-                        <h3>$15.000</h3>
-                        <!-- <span class="remove-item">remove</span> -->
-                    </div>
-                    <img src="../assets/img/bolso.png" alt="">
-                </div>
-
-                <div class="cart-item">
-                    <div class="data-item">
-                        <div class="plus-minus">
-                            <span>-</span><p class="item-amount mb-4">&nbsp &nbsp1&nbsp &nbsp</p><span>+</span>
-                        </div>
-                        <h2>COMERCIAL BAG</h2>
-                        <span class="cart-size">CIRCLE</span>
-                        <h3>$15.000</h3>
-                        <!-- <span class="remove-item">remove</span> -->
-                    </div>
-                    <img src="../assets/img/John_Elliott.jpg" alt="">
-                </div>
-                <!-- FIN Cart items -->
+                <!-- INPUT PERSONALIZADO -->
+                <label class="custom-radio-checkbox">
+                    <!-- Input oculto -->
+                    <input onclick="enviar_empaque()" class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
+                    <!-- Imagen en sustitucion -->
+                    <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
+                </label>
             </div>
 
-            <!-- INICIO Cart footer -->
-            <div class="cart-footer">
-                <div class="subtotal">
-                <h3>SUBTOTAL:</h3>
-                <span class="cart-total">$0</span>
-                </div>
-                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
-                    <div class="finalshop">
-                        <button class="btn btn-submit">FINALIZAR PEDIDO</button>
+
+            <!-- Buy It Now -->
+
+            <div class="btn-opcionestr">
+                <!-- Botones Agregar y comprar ahora -->
+                <div class="elemento4">
+                    <div class="btn-opcionestr">
+                        <div class="contentsize" id="divSize" hidden>
+                            <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" alt="">
+                            <p class="choicesize mt-3">SELECCIONAR TALLA</p>
+                            <div class="btn-sizes2">
+                                <button class="btn-change">S</button>
+                                <button class="btn-change">M</button>
+                                <button class="btn-change">L</button>
+                                <button class="btn-change">XL</button>
+                            </div>
+                        </div>
                     </div>
+                    <button id="btn-size" class="btn-size" name="bntOpcionestr" data-target="divSize">TALLAS</button>
+                </div>
+                <a href="#" class="btn btn-submit" id="aAddCart" onclick="submit()">ADD TO CART</a>
+                <a href="#" class="btn btn-submit">BUY IT NOW</a>
             </div>
-        </div>
+        </div><!-- FIN Contenedores hidden -->
     </div>
+
+
     <!-- FIN Carrito de compras -->
 
-<!-- JS, Popper.js, and jQuery -->
+    <!-- JS, Popper.js, and jQuery -->
+    <script>
+    function submit(){
+        document.transition.submit()
+    }
+    
+        function enviar_empaque() {
+
+            document.empaque.submit()
+        }
+    
+    </script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
+    <script>
+        function talla(t) {
 
-<!-- scroll bar -->
-<script>
-    $(window).scroll(function(event) {
-        var scrollTop = $(window).scrollTop()
-        $('#scrollwrap').css('top', scrollTop+'px')
+            switch (t.toUpperCase()) {
+                case "S":
+                    document.getElementById("talla").value = "S";
 
-        if( scrollTop >= 260 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        } else if( scrollTop >= 0 ){
-            $('#scrollwrap').css('display', 'block')
-            $('#scrollwrap').parent().css('display', 'block')
-        } else if( scrollTop < 0 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
+                    break;
+
+                case "M":
+                    document.getElementById("talla").value = "M";
+
+
+                    break;
+                case "L":
+                    document.getElementById("talla").value = "L";
+
+
+                    break;
+                case "XL":
+                    document.getElementById("talla").value = "XL";
+
+
+                    break;
+                default:
+                    console.log("nothing");
+                    break;
+            }
+
         }
-    });
-</script>
+    </script>
+    <!-- scroll bar -->
+    <script>
+        $(window).scroll(function(event) {
+            var scrollTop = $(window).scrollTop()
+            $('#scrollwrap').css('top', scrollTop + 'px')
 
-<!-- Script para ocultar obejtos HTML -->
-<script>
+            if (scrollTop >= 260) {
+                $('#scrollwrap').css('display', 'none')
+                $('#scrollwrap').parent().css('display', 'none')
+            } else if (scrollTop >= 0) {
+                $('#scrollwrap').css('display', 'block')
+                $('#scrollwrap').parent().css('display', 'block')
+            } else if (scrollTop < 0) {
+                $('#scrollwrap').css('display', 'none')
+                $('#scrollwrap').parent().css('display', 'none')
+            }
+        });
+    </script>
 
-  $('button[name="bntOpcionestr"]').click(function(){
-     var 
-        Target = $(this).attr('data-target'),
-        Elemento = $('#'+Target),
-        Atributo = $('#'+Target).attr('hidden')
+    <!-- Script para ocultar obejtos HTML -->
+    <script>
+        $('button[name="bntOpcionestr"]').click(function() {
+            var
+                Target = $(this).attr('data-target'),
+                Elemento = $('#' + Target),
+                Atributo = $('#' + Target).attr('hidden')
 
-        if( Atributo !== false && typeof Atributo !== 'undefined' ){
-          Elemento.removeAttr('hidden')
-        } else {
-          console.log('YeaH!')
-          Elemento.attr('hidden', true)
-        }
-      });
-</script>
+            if (Atributo !== false && typeof Atributo !== 'undefined') {
+                Elemento.removeAttr('hidden')
+            } else {
+                console.log('YeaH!')
+                Elemento.attr('hidden', true)
+            }
+        });
+    </script>
 
-<!-- Script para cambiar botones de color White to Black -->
-<script>
-    //Boton para ver Empaque Especial
-    $("#btn-chance").click(function(){
-    $(this).toggleClass("btn-empaque btn-empaque2");
-    });
+    <!-- Script para cambiar botones de color White to Black -->
+    <script>
+        //Boton para ver Empaque Especial
+        $("#btn-chance").click(function() {
+            $(this).toggleClass("btn-empaque btn-empaque2");
+        });
 
-    //Boton para ver detalles
-    $("#btn-details-prod").click(function(){
-    $(this).toggleClass("btn-details-prod btn-details-prod2");
-    });
+        //Boton para ver detalles
+        $("#btn-details-prod").click(function() {
+            $(this).toggleClass("btn-details-prod btn-details-prod2");
+        });
 
-    //Boton para ver tallas
-    $("#btn-size").click(function(){
-    $(this).toggleClass("btn-size btn-size2");
-    });
-</script>
+        //Boton para ver tallas
+        $("#btn-size").click(function() {
+            $(this).toggleClass("btn-size btn-size2");
+        });
+    </script>
 
-<!-- Script para seleccionar tallas -->
-<script type="text/javascript">
-    $('#divTalla').find('.aTalla').click( function(){
-        $('.aTalla').removeClass('talla-active');
-        $(this).addClass('talla-active');
-    } )
-</script>
+    <!-- Script para seleccionar tallas -->
+    <script type="text/javascript">
+        $('#divTalla').find('.aTalla').click(function() {
+            $('.aTalla').removeClass('talla-active');
+            $(this).addClass('talla-active');
+        })
+    </script>
 
-<!-- Scrip para mostrar y ocultar carrito de compras -->
-<script>
-    $('#btnCart, #aAddCart').click( function(){ $('#divCart').css( 'visibility', 'visible' ) } );
-    $('#closecart').click( function(){ $('#divCart').css('visibility', 'hidden')});
-</script>
+    <!-- Scrip para mostrar y ocultar carrito de compras -->
+    <script>
+        $('#btnCart, #aAddCart').click(function() {
+            $('#divCart').css('visibility', 'visible')
+        });
+        $('#closecart').click(function() {
+            $('#divCart').css('visibility', 'hidden')
+        });
+    </script>
 
-<!-- Seleccion de SEXO -->
-<script>
-    var Ruta = "../assets/img/prodgenerales/prod_esp/transition/";
+    <!-- Seleccion de SEXO -->
+    <script>
+        var Ruta = "../assets/img/prodgenerales/prod_esp/transition/";
 
-    $(document).on( 'click', '#femenino', function(){
-        $(this).attr( 'src', Ruta + 'Sexo-Femenino.png' );
-        $( '#masculino' ).attr( 'src', Ruta + 'Sexo-Masculino-2.png ') ;
-    })
-
-    $(document).on( 'click', '#masculino', function(){
-        $(this).attr( 'src', Ruta + 'Sexo-masculino.png' );
-        $( '#femenino' ).attr( 'src', Ruta + 'Sexo-Femenino-2.png ') ;
-    })
-</script>
-
-<!-- Seleccionar Manga -->
-<script>
-    $(document).on( 'click', '#m-sisa', function(){
-            $('#m-sisa').addClass( 'selectdotted' );
-            $('#m-ranglan').removeClass( 'selectdotted');
+        $(document).on('click', '#femenino', function() {
+            $(this).attr('src', Ruta + 'Sexo-Femenino.png');
+            $('#masculino').attr('src', Ruta + 'Sexo-Masculino-2.png ');
         })
 
-        $(document).on( 'click', '#m-ranglan', function(){
-            $('#m-ranglan').addClass( 'selectdotted' );
+        $(document).on('click', '#masculino', function() {
+            $(this).attr('src', Ruta + 'Sexo-masculino.png');
+            $('#femenino').attr('src', Ruta + 'Sexo-Femenino-2.png ');
+        })
+    </script>
+
+    <!-- Seleccionar Manga -->
+    <script>
+        $(document).on('click', '#m-sisa', function() {
+            $('#m-sisa').addClass('selectdotted');
+            $('#m-ranglan').removeClass('selectdotted');
+        })
+
+        $(document).on('click', '#m-ranglan', function() {
+            $('#m-ranglan').addClass('selectdotted');
             $('#m-sisa').removeClass('selectdotted');
         })
-</script>
-<script src="../assets/js/carrito.js"></script>
+    </script>
+    <script src="../assets/js/carrito.js"></script>
 </body>
+
 </html>
 
-<?php include "../navbar_footer/footer.php";?>
+<?php include "../navbar_footer/footer.php"; ?>

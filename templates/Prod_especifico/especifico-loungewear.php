@@ -107,7 +107,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
         <!--Descripción del producto bajo el carousel-->
         <div class="body-card">
-            <p class="desc-prod-espec"><?php echo $producto[0]['historia'] ?></p>
+            <p class="desc-prod-espec"><?php echo $producto[0]['frase'] ?></p>
         </div>
 
         <!--Botones Opciones para mostrar contenedores hidden-->

@@ -77,7 +77,7 @@ if (!isset($opensale[0]['id'])) {
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale2');");
     $producto -> execute();
 
-     header("location:../Rejillas_generales/loungewear.php");
+     header("location:../main/menu2.php");
 
 
     }else{
@@ -117,7 +117,7 @@ if (!isset($opensale[0]['id'])) {
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale');");
         $producto -> execute();
 
-         header("location:../Rejillas_generales/loungewear.php");
+        header("location:../main/menu2.php");
 
 
          
@@ -152,15 +152,9 @@ if (!isset($opensale[0]['id'])) {
 
 
     }
-
-  
-
-
-    
-
     
     
-     header("location:../Rejillas_generales/loungewear.php"); 
+    header("location:../main/menu2.php");
 
         
     }
