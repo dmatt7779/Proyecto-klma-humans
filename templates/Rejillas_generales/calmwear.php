@@ -32,174 +32,42 @@ include "../../global/conexion.php";
         </div>
     </div>
 </div>
+<?php
+    $sentencia = $pdo->prepare("SELECT * FROM productos where tipologia_id = 2 and habilitado = 1");
+    $sentencia -> execute();
+    $listaproductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+?>
 
-	<!-- GRID -->
-	<!--Productos 1-->
-	<div class="gridclmw mt-5">
-		<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$210.000</p>
-				</div>
-			</div>
-
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$220.000</p>
-				</div>
-			</div>
-		</div>
+	
+<form action="../Prod_especifico/especifico-calmwear.php" name="formprod" method="post">
+		<input type="hidden" id=prod name="idprod">
+	</form>
 	<!--Productos 2-->
-	<div class="gridclmw">
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$230.000</p>
-				</div>
-			</div>
-
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$240.000</p>
-				</div>
-			</div>
-	</div>
-	<!--Productos 3-->
-	<div class="gridclmw">
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$250.000</p>
-				</div>
-			</div>
-
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$260.000</p>
-				</div>
-			</div>
-	</div>
-	<!--Productos 4-->
-	<div class="gridclmw">
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$270.000</p>
-				</div>
-			</div>
-
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$280.000</p>
-				</div>
-			</div>
-	</div>
-	<!--Productos 5-->
-	<div class="gridclmw">
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$290.000</p>
-				</div>
-			</div>
-
-			<div class="card-clmw">
-				<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-				<div class="card-body">
-				<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-				<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-				<p class="price" href="#">$291.000</p>
-				</div>
-			</div>
-	</div>
-
-	<!--Productos 6-->
-	<div class="gridclmw">
-		<div class="card-clmw">
-			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
+	<div class="gridclmw mt-5">
+	<?php for($i=0 ; $i < count($listaproductos) ;  $i++    ){ ?>
+		<div style="margin-bottom: 15%;" class="card-clmw">
+			<a href="#"><div class="cover" onclick="idprod(<?php echo $listaproductos[$i]['id'];?>)" style="background-image: url(../assets/img/prodgenerales/<?php echo $listaproductos[$i]['imagen']; ?>)" title="Diseño de museo"></div></a>
 			<div class="card-body">
-			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-			<p class="price" href="#">$290.000</p>
+			<a href="#" class="card-title"><p><?php echo $listaproductos[$i]['nombre']; ?></p></a>
+			<p class="text-clmw"><?php echo $listaproductos[$i]['descripcion']; ?></p>
+			<p class="price" href="#"><?php echo $listaproductos[$i]['precio_venta']; ?></p>
 			</div>
 		</div>
 
-		<div class="card-clmw">
-			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-			<div class="card-body">
-			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-			<p class="price" href="#">$291.000</p>
-			</div>
-		</div>
+
+	<?php }?>	
 	</div>
+	
 
-	<!--Productos 7-->
-	<div class="gridclmw">
-		<div class="card-clmw">
-			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-			<div class="card-body">
-			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-			<p class="price" href="#">$290.000</p>
-			</div>
-		</div>
 
-		<div class="card-clmw">
-			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-			<div class="card-body">
-			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-			<p class="price" href="#">$291.000</p>
-			</div>
-		</div>
-	</div>
-
-	<!--Productos 8-->
-	<div class="gridclmw">
-		<div class="card-clmw">
-			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/Design_Museum_.jpg)" title="Diseño de museo"></div></a>
-			<div class="card-body">
-			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-			<p class="price" href="#">$290.000</p>
-			</div>
-		</div>
-
-		<div class="card-clmw">
-			<a href="#"><div class="cover" style="background-image: url(../assets/img/prodgenerales/calmwear/book.jpg)" title="Diseño de museo"></div></a>
-			<div class="card-body">
-			<a href="#" class="card-title"><p>GEOMETRY TOTUM</p></a>
-			<p class="text-clmw">Chompa manga corta con sesgos en contraste</p>
-			<p class="price" href="#">$291.000</p>
-			</div>
-		</div>
-	</div>
 
     <!-- JS, Popper.js, and jQuery -->
-
+		<script>
+			function idprod(i){
+				document.getElementById("prod").value = i
+				document.formprod.submit()
+			}
+		</script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>

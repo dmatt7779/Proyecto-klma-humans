@@ -26,6 +26,10 @@
     $empaque = $_POST['empaque'];
     $imagennamecalmwear = $_FILES['imagencalmwear']['name'];
     $imagencalmwear = $_FILES['imagencalmwear']['tmp_name'];
+    $imagennamematerial1 = $_FILES['imagenmaterial1']['name'];
+    $imagenmaterial1 = $_FILES['imagenmaterial1']['tmp_name'];
+    $imagennamematerial2 = $_FILES['imagenmaterial2']['name'];
+    $imagenmaterial2 = $_FILES['imagenmaterial2']['tmp_name'];
     
 
     if ($tipologia == 315) {
@@ -33,12 +37,18 @@
         $ruta2 = "Loungewear";
         $rutacalmwear = "../assets/img/prodgenerales/Loungewear";
         $ruta2calmwear = "Loungewear";
+
         $tipologia = 1;
     }elseif($tipologia == 220){
         $ruta = "../assets/img/prodgenerales/Calmwear";
         $ruta2 = "Calmwear";
         $rutacalmwear = "../assets/img/prodgenerales/Calmwear";
         $ruta2calmwear = "Calmwear";
+        $rutamaterial1 = "../assets/img/prodgenerales/prod_esp/Calmwear";
+        $ruta2material1 = "Calmwear";
+        $rutamaterial2 = "../assets/img/prodgenerales/prod_esp/Calmwear";
+        $ruta2material2 = "Calmwear";
+
         $tipologia = 2;
 
     }elseif($tipologia == 223){
@@ -56,8 +66,17 @@
     $rutacalmwear = $rutacalmwear."/".$imagennamecalmwear;
     $ruta2calmwear = $ruta2calmwear."/".$imagennamecalmwear;
 
+    $rutamaterial1 = $rutamaterial1."/".$imagennamematerial1;
+    $ruta2material1 = $ruta2material1."/".$imagennamematerial1;
+
+    $rutamaterial2 = $rutamaterial2."/".$imagennamematerial2;
+    $ruta2material2 = $ruta2material2."/".$imagennamematerial2;
+
     move_uploaded_file($imagen,$ruta);
     move_uploaded_file($imagencalmwear,$rutacalmwear);
+    move_uploaded_file($imagenmaterial1,$rutamaterial1);
+    move_uploaded_file($imagenmaterial2,$rutamaterial2);
+
 
 
 // parte del carrusel
@@ -110,7 +129,7 @@ $cadenasave = substr($cadenasave,1);
 
 
 
-    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear` ) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear')";
+    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();
