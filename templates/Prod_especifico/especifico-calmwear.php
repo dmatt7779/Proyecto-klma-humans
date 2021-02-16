@@ -104,7 +104,7 @@ if ($idempaque != null || $idempaque != "") {
                 <!-- Precio -->
                 <!-- Precio -->
             <div class="elemento2cw">
-                <p class="font-price-cw">$<?php echo $producto[0]['precio_compra'] ?></p>
+                <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_compra']) ?></p>
             </div>
 
                 <!--  Seleccionador de Tallas -->
@@ -147,7 +147,7 @@ if ($idempaque != null || $idempaque != "") {
                     </div>
                     <p class="refer-specialbag"><?php echo $empaque[0]['nombre'] ?></p>
                     <p class="refer-specialbag"><?php echo $empaque[0]['descripcion'] ?></p>
-                    <p class="refer-specialbag"><?php echo $empaque[0]['precio_compra'] ?></p>
+                    <p class="refer-specialbag"><?php echo number_format($empaque[0]['precio_compra']) ?></p>
                 </div>
                 <?php if ($idempaque != null) { ?>
                     <button id="btn-chance" class="btn-empaque" name="bntOpcionescw" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>

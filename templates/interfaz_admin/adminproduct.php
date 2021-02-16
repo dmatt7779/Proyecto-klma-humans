@@ -41,7 +41,7 @@ include "../../global/conexion.php";
             <input type="text" name="descripcion" class="newprofile" placeholder="DESCRIPCION">
             <input type="text" name="genero" class="newprofile" placeholder="GENERO">
             <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">IMAGEN PRINCIPAL</label>
-            <input type="file" name="imagen" class="newprofile" placeholder="IMAGEN">
+            <input type="file" name="imagen" class="newprofile" placeholder="IMAGEN" required>
             <label for="imagenes[]" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;" >IMAGENES CARRUSEL</label>
             <input type="file" name="imagenes[]" class="newprofile"  multiple>
             <input type="text" name="emocion" class="newprofile" placeholder="EMOCION">

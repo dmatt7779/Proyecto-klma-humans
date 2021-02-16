@@ -84,22 +84,22 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="font-lw-1 elemento1-5tr">
                     <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
                     <div class="typeselector">
-                        <div><img id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino.png" alt=""></div>
-                        <div><img id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
+                        <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino.png" alt=""></div>
+                        <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
                     </div>
                 </div>
 
                 <div class="font-lw-1 elemento1-5tr">
                     <p class="titleManga">MANGA</p>
                     <div class="typeselector">
-                        <div id="m-sisa"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
-                        <div id="m-ranglan"><img src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
+                        <div id="m-sisa"><img onclick="manga('S')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
+                        <div id="m-ranglan"><img onclick="manga('R')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
                     </div>
                 </div>
 
                 <!-- Precio -->
                 <div class="elemento2cw">
-                    <p class="font-price-cw">$<?php echo $producto[0]['precio_compra']  ?></p>
+                    <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_venta'])  ?></p>
                 </div>
 
                 <!--  Seleccionador de Tallas -->
@@ -112,10 +112,11 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             </div><!-- FIN GRID Anidado -->
         </div><!-- FIN GRID PADRE -->
 
-        <form action="newcar.php" method="post" name="transition">
-            <input type="text" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
-            <input type="text" name="talla" id="talla" value="S">
-
+        <form action="newcar2.php" method="post" name="transition">
+            <input type="hidden" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
+            <input type="hidden" name="talla" id="talla" value="S">
+            <input type="hidden" name="genero" id="genero">
+            <input type="hidden" name="manga" id="manga">
         </form>
 
         <form action="newpackage.php" name="empaque" method="post">
@@ -151,14 +152,14 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="../assets/img/prodgenerales/<?php echo $empaque[0]['imagen'] ?>" class="d-block w-100" alt="...">
-                               
+                                <img src="../assets/img/prodgenerales/<?php echo $empaque[0]['imagen'] ?>" class="d-block w-100" alt="...">
+
                             </div>
                         </div>
                     </div>
                     <p class="refer-specialbag"><?php echo $empaque[0]['nombre'] ?></p>
                     <p class="refer-specialbag"><?php echo $empaque[0]['descripcion'] ?></p>
-                    <p class="refer-specialbag"><?php echo $empaque[0]['precio_compra'] ?></p>
+                    <p class="refer-specialbag"><?php echo number_format($empaque[0]['precio_compra']) ?></p>
                 </div>
                 <button id="btn-chance" class="btn-empaque" name="bntOpcionestr" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
 
@@ -202,15 +203,14 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- JS, Popper.js, and jQuery -->
     <script>
-    function submit(){
-        document.transition.submit()
-    }
-    
+        function submit() {
+            document.transition.submit()
+        }
+
         function enviar_empaque() {
 
             document.empaque.submit()
         }
-    
     </script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
@@ -243,6 +243,41 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                     console.log("nothing");
                     break;
             }
+
+        }
+
+
+        function genero(t) {
+
+            if (t == "f") {
+
+                document.getElementById("genero").value = "Femenino";
+
+
+            } else if(t=="m") {
+
+                document.getElementById("genero").value = "Masculino";
+
+            }
+
+        }
+
+        function manga(m) {
+            
+
+            if (m == "R") {
+
+                document.getElementById("manga").value = "Ranglan";
+
+
+            } else if(m == "S") {
+
+                document.getElementById("manga").value = "Sisa";
+
+            }
+
+
+
 
         }
     </script>

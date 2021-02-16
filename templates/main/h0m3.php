@@ -80,7 +80,7 @@ include "../../global/conexion.php";
                 $ventaid =  $venta[0]['id'];
             }
         
-            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.id, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.manga, detalleventa.genero, detalleventa.id, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
             $sentencia -> execute();
             $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
             $subtotal = 0;
@@ -128,7 +128,29 @@ include "../../global/conexion.php";
                         </div>
                         <h2><?php echo $detventa['nombre'] ?></h2>
                         <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
+                        <h3>Genero <?php 
+                            if(empty(($detventa['genero']))){
+
+                                echo "";
+
+                            }else{
+                                echo $detventa['genero'];
+                            }
+                        
+                        ?></h3>
+                         <h3>Manga <?php 
+                            if(empty(($detventa['manga']))){
+
+                                echo "";
+
+                            }else{
+                                echo $detventa['manga'];
+                            }
+                        
+                        ?></h3>
+                        
                         <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
+
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
