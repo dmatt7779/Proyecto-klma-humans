@@ -52,6 +52,10 @@ include "../../global/conexion.php";
             <input type="file" name="imagenmaterial1" class="newprofile">
             <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">IMAGEN DE MATERIAL 2</label>
             <input type="file" name="imagenmaterial2" class="newprofile">
+            <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">DISEÑADOR</label>
+            <input type="text" name="diseñador" class="newprofile">
+            <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">FRASE</label>
+            <input type="text" name="frase" class="newprofile">
 
 
         </div>
@@ -96,7 +100,7 @@ include "../../global/conexion.php";
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
-                            
+                            <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>

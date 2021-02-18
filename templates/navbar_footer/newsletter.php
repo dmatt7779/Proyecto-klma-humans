@@ -23,11 +23,14 @@
                         <div class="newscontent">
                             <div class="conectednews">
                                 <h6>CONECTEMONOS</h6>
-                                <input type="text" class="suscribenews mt-3" placeholder="CORREO ELECTRÓNICO">
+                                <form action="../interfaz_cliente/suscripcion.php" name="suscripcion" method="post">
+                                <input type="text" class="suscribenews mt-3" name="correo" id="sus"  placeholder="CORREO ELECTRÓNICO">
                                 <div class="newsletter mt-3">
                                     <span class="text-dark">RECIBIRAS NOTICIAS Y OFERTAS EXCLUSIVAS</span>
-                                    <button class="btn btnnewsp">SUSCRIBIRSE</button>
+                                    <button onclick="submit()" class="btn btnnewsp">SUSCRIBIRSE</button>
                                 </div>
+                                </form>
+                                
                             </div>
                             <img src="../assets/img/nav_foot/newsletter.png" alt="" class="imagenews2">
                             <button type="button" class="close close-news" data-dismiss="modal" aria-label="Close">
@@ -47,6 +50,13 @@
 <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
 <script src="../assets/librerias/popper.min.js"></script>
 <script src="../assets/librerias/bootstrap.min.js"></script>
+<script>
+function submit(){
+    
+    console.log(document.getElementById('sus').value)
+
+}
+</script>
 <script>
     $( document ).ready(function(){
         setTimeout( function(){

@@ -59,54 +59,107 @@ include "../../global/conexion.php";
 
 		<div class="cart-content">
 			<!-- Cart items -->
-    <?php
-                if(!empty($_SESSION['iduser'])){
+<?php
+            if(!empty($_SESSION['iduser'])){
 
-                $iduser = $_SESSION['iduser'] ;    
-                }else{
-                    
-                    $iduser = -1;
-
-                }
-
+            $iduser = $_SESSION['iduser'] ;    
+            }else{
                 
-                $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
-                $sentencia -> execute();
-                $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-                
-                if (empty($venta)) {
-                    $ventaid =  "";
-                }else{
-                    $ventaid =  $venta[0]['id'];
-                }
-            
-                $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
-                $sentencia -> execute();
-                $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-                $subtotal = 0;
+                $iduser = -1;
 
-                
+            }
 
             
-                foreach($detalleventa as $detventa){
-    ?>
-                    <div class="cart-item">
-                        <div class="data-item">
-                            <div class="plus-minus">
-                                <span>-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span>+</span>
-                            </div>
-                            <h2><?php echo $detventa['nombre'] ?></h2>
-                            <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
-                            <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
-                            <!-- <span class="remove-item">remove</span> -->
+            $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+            $sentencia -> execute();
+            $venta=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+            
+            if (empty($venta)) {
+                $ventaid =  "";
+            }else{
+                $ventaid =  $venta[0]['id'];
+            }
+        
+            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.manga, detalleventa.genero, detalleventa.id, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+            $sentencia -> execute();
+            $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+            $subtotal = 0;
+
+            
+
+?> 
+
+<!-- formulario de eliminacion -->
+    <form action="../interfaz_cliente/deletecart.php" method="post" name="formdeletecart">
+                    <input type="hidden" id="eliminacion" name="iddetalleventa" >                    
+    </form>
+
+
+            <!-- formulario de suma -->
+    <form action="../interfaz_cliente/addonetocart.php" method="post" name="formaddonetocart">
+                    <input type="hidden" id="suma" name="iddetalleventasuma" > 
+                    <input type="hidden" id="cantidad" name="cantidadsuma" > 
+
+    </form>
+
+
+
+<!-- formulario resta -->
+    <form action="../interfaz_cliente/removeonetocart.php" method="post" name="formremoveonetocart">
+                    <input type="hidden" id="resta" name="iddetalleventaresta" >
+                    <input type="hidden" id="cantidad2" name="cantidadresta" >
+    </form>
+
+
+
+<?php
+            foreach($detalleventa as $detventa){
+?>
+                <span class="close-cart">
+			    <i class="fal fa-times pr-2" style="font-size: 15px!important;" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
+		        </span>
+                <div class="cart-item">
+                <!-- <span class="close-cart"
+			    <i class="fal fa-times" onclick="eliminar(<//?php echo $detventa['id'] ?>)"></i>
+		        </span> -->
+                    <div class="data-item">
+                        <div class="plus-minus">
+                            <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
                         </div>
-                        <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
+                        <h2><?php echo $detventa['nombre'] ?></h2>
+                        <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
+                        <h3>Genero <?php 
+                            if(empty(($detventa['genero']))){
+
+                                echo "";
+
+                            }else{
+                                echo $detventa['genero'];
+                            }
+                        
+                        ?></h3>
+                         <h3>Manga <?php 
+                            if(empty(($detventa['manga']))){
+
+                                echo "";
+
+                            }else{
+                                echo $detventa['manga'];
+                            }
+                        
+                        ?></h3>
+                        
+                        <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
+
+                        <!-- <span class="remove-item">remove</span> -->
                     </div>
-    <?php           
-                    
-                    $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
-                }
-    ?>			
+                    <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
+                </div>
+<?php
+
+                $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+            }
+?>
                 <!-- FIN Cart items -->
             </div>
 
@@ -363,6 +416,31 @@ include "../../global/conexion.php";
 			speed : 3500
 		});
 	});
+</script>
+
+<script>
+function eliminar(iddelete){
+   document.getElementById('eliminacion').value = iddelete;
+   document.formdeletecart.submit();
+}
+
+function add(idadd, cantidadold){
+    document.getElementById('suma').value = idadd;
+    document.getElementById('cantidad').value = cantidadold;
+
+   document.formaddonetocart.submit();
+
+
+}
+
+function remove(idremove , cantidadold2){
+    document.getElementById('resta').value = idremove;
+    document.getElementById('cantidad2').value = cantidadold2;
+
+   document.formremoveonetocart.submit();
+
+
+}
 </script>
 
 <!-- Ocultar y Mostrar redesociales o compartir -->

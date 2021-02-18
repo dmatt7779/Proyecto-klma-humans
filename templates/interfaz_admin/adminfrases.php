@@ -24,22 +24,20 @@ if (!isset($_SESSION['correo'])) {
 <body>
 <?php include "../navbar_footer/header.php";?>
 
-    <div class="mt-5">
+<div class="mt-5">
         <div class="container-fluid">
-            <form action="guardarusuario.php" class="login-form mb-4" method="POST">
+            <form action="guardarfrase.php" class="login-form mb-4" method="POST">
                 
                 <div class="logpass">
-                    <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO" required> 
-                    <div class="divshowhide">          
-                        <input id="txtPassword" type="password" name="contraseña" class="login-pass" placeholder="CONTRASEÑA">
-                        <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
-                        <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
-                    </div>
+                    <input type="text" name="idproducto" class="login-email" placeholder="id de producto" required> 
+                    
                 </div><br>
 
                 <div class="newdata">
-                    <input type="text" name="nickname" required  class="newprofile" placeholder="APODO"><br>
-                    <input type="text" name="rol" required class="newprofile" placeholder="ROL"><br>
+                <input type="text" name="frase" placeholder="frase">
+                <input type="text" name="escritor" placeholder="escritor">
+                <input type="text" name="emocion" placeholder="emocion">
+
                 </div>
 
                 <div class="introline2 mt-2">
@@ -52,6 +50,8 @@ if (!isset($_SESSION['correo'])) {
             </form>
         </div>            
     </div>
+
+   
         
             <!-- DIV PARA EL DATATABLE -->
     <div>
@@ -62,14 +62,12 @@ if (!isset($_SESSION['correo'])) {
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>Correo</th>
-                            <th>Apodo</th>
-                            <th>clave</th>
-                            <th>rol</th>
-                            <th>fecha de creacion</th>
-                            <th>accion</th>
-                            
-                         
+                            <th>frase</th>
+                            <th>id producto</th>
+                            <th>escritor</th>
+                            <th>emocion</th>
+
+                                                     
                         </tr>
                     </thead>
                     <tfoot>
@@ -79,31 +77,27 @@ if (!isset($_SESSION['correo'])) {
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
-                            <th>Filter..</th>
-                            <th>Filter..</th>
+
+                           
                             
                         </tr>
                     </tfoot>
                 <tbody>
                     <?php
-        $sentencia = $pdo->prepare("SELECT * FROM usuarios");
+        $sentencia = $pdo->prepare("SELECT * FROM frases");
         $sentencia -> execute();
-        $listausuarios=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $listafrases=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
-    <?php foreach($listausuarios as $usuario) {  ?>
+    <?php foreach($listafrases as $frase) {  ?>
                     <tr>
 
-                            <td><?php echo $usuario['id'] ?></td>
-                            <td><?php echo $usuario['correo'] ?></td>
-                            <td><?php echo $usuario['apodo'] ?></td>
-                            <td><?php echo $usuario['clave'] ?></td>
-                            <td><?php echo $usuario['rol'] ?></td>
-                            <td><?php echo $usuario['fecha_registro'] ?></td>
-                            <td> <form action="borrarusuario.php" method="post">
-                            <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
-                            <button class="btn btn-danger"  onclick="myconfirm(event)" type="submit">borrar</button>
-                            </form> </td>
+                            <td><?php echo $frase['id'] ?></td>
+                            <td><?php echo $frase['frase'] ?></td>                            
+                            <td><?php echo $frase['idproducto'] ?></td>
+                            <td><?php echo $frase['escritor'] ?></td>
+                            <td><?php echo $frase['emocion'] ?></td>
+                           
                     </tr>
                     <?php } ?>                  
                 </tbody>

@@ -22,6 +22,8 @@ if (!isset($usuario)) {
 
 $id = $_POST['id'];
 $talla = strtoupper($_POST['talla']);
+$genero = $_POST['genero'];
+$manga = $_POST['manga'];
 
 if ($talla == "") {
     ?>
@@ -63,7 +65,7 @@ if (!isset($opensale[0]['id'])) {
     
 
 
-    $repetido = $pdo->prepare("SELECT productos_id, talla, cantidad FROM detalleventa where talla = '$talla' and ventas_id = $idsale2 and productos_id = $id;");
+    $repetido = $pdo->prepare("SELECT productos_id, talla, cantidad FROM detalleventa where talla = '$talla' and ventas_id = $idsale2 and productos_id = $id and genero = '$genero' and manga = '$manga';");
 
     $repetido -> execute();
     $repetidos=$repetido->fetchAll(PDO::FETCH_ASSOC);
@@ -74,7 +76,7 @@ if (!isset($opensale[0]['id'])) {
 
 
 
-    $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale2');");
+    $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`, `genero`, `manga`) VALUES ('1', '$id', '1', '$talla', '$idsale2', '$genero', '$manga');");
     $producto -> execute();
 
      header("location:../main/menu2.php");
@@ -93,7 +95,7 @@ if (!isset($opensale[0]['id'])) {
             
 
             
-    }
+        }
 
 
 
@@ -104,7 +106,7 @@ if (!isset($opensale[0]['id'])) {
     $idsale = $opensale[0]['id'];
 
 
-    $repetido = $pdo->prepare("SELECT productos_id, talla, cantidad, id FROM detalleventa where talla = '$talla' and ventas_id = $idsale and productos_id = $id;");
+    $repetido = $pdo->prepare("SELECT productos_id, talla, cantidad, id FROM detalleventa where talla = '$talla' and ventas_id = $idsale and productos_id = $id and genero = '$genero' and manga = '$manga';");
 
     $repetido -> execute();
     $repetidos=$repetido->fetchAll(PDO::FETCH_ASSOC);
@@ -114,7 +116,7 @@ if (!isset($opensale[0]['id'])) {
         
 
 
-        $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale');");
+        $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`, `genero`, `manga`) VALUES ('1', '$id', '1', '$talla', '$idsale', '$genero', '$manga');");
         $producto -> execute();
 
         header("location:../main/menu2.php");

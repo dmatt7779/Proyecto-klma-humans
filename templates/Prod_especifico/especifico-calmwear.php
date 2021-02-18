@@ -12,7 +12,7 @@ $sentencia->execute();
 $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 $idempaque = $producto[0]['empaque'];
-if ($idempaque != null || $idempaque != "" ) {
+if ($idempaque != null || $idempaque != "") {
 
     $queryempaque = $pdo->prepare("SELECT * FROM productos where id = $idempaque");
     $queryempaque->execute();
@@ -22,9 +22,6 @@ if ($idempaque != null || $idempaque != "" ) {
 
 
 ?>
-<script>
-    console.log('<?php echo $id; ?>')
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +46,16 @@ if ($idempaque != null || $idempaque != "" ) {
         <div id="scrolltitlecw">CALMWEAR</div>
 
     </div>
+
+    <form action="newcar.php" name="carrito" method="post">
+        <input type="hidden" name="talla" id="talla" value="S">
+        <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
+    </form>
+
+    <form action="newpackage.php" name="empaque" method="post">
+        <input type="hidden" name="talla" value="S">
+        <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
+    </form>
 
     <!-- INICIO GRID PADRE -->
     <div class="mt-5">
@@ -95,9 +102,10 @@ if ($idempaque != null || $idempaque != "" ) {
                 </div>
 
                 <!-- Precio -->
-                <div class="elemento2cw">
-                    <p class="font-price-cw"></p>
-                </div>
+                <!-- Precio -->
+            <div class="elemento2cw">
+                <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_compra']) ?></p>
+            </div>
 
                 <!--  Seleccionador de Tallas -->
                 <div class="elemento3cw"></div>
@@ -107,7 +115,7 @@ if ($idempaque != null || $idempaque != "" ) {
 
         <!--Descripción del producto bajo el carousel-->
         <div class="body-card">
-            <p class="desc-prod-espec">EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR OPORTUNIDAD.</p>
+            <p class="desc-prod-espec"><?php echo $producto[0]['frase'] ?></p>
         </div>
 
         <!--Botones Opciones para mostrar contenedores hidden-->
@@ -123,7 +131,7 @@ if ($idempaque != null || $idempaque != "" ) {
 
             <!-- Boton para ver MODAL -->
             <div class="btn-opcionescw">
-                <button type="button" class="btn-verproduct" name="bntOpcionescw">DESIGN BY HUMANOIDE</button>
+                <button type="button" class="btn-verproduct" name="bntOpcionescw">DESIGN BY <?php echo $producto[0]['diseñador'] ?></button>
             </div>
 
             <!-- Botón EMPAQUE ESPECIAL -->
@@ -139,7 +147,7 @@ if ($idempaque != null || $idempaque != "" ) {
                     </div>
                     <p class="refer-specialbag"><?php echo $empaque[0]['nombre'] ?></p>
                     <p class="refer-specialbag"><?php echo $empaque[0]['descripcion'] ?></p>
-                    <p class="refer-specialbag"><?php echo $empaque[0]['precio_compra'] ?></p>
+                    <p class="refer-specialbag"><?php echo number_format($empaque[0]['precio_compra']) ?></p>
                 </div>
                 <?php if ($idempaque != null) { ?>
                     <button id="btn-chance" class="btn-empaque" name="bntOpcionescw" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
@@ -147,7 +155,7 @@ if ($idempaque != null || $idempaque != "" ) {
                     <!-- INPUT PERSONALIZADO -->
                     <label class="custom-radio-checkbox">
                         <!-- Input oculto -->
-                        <input class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
+                        <input onclick="enviar_empaque();" class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
                         <!-- Imagen en sustitucion -->
                         <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
                     </label>
@@ -160,14 +168,14 @@ if ($idempaque != null || $idempaque != "" ) {
             <div class="btn-opcionescw">
                 <!-- Botones Agregar y comprar ahora -->
                 <div class="elemento4">
-                    <a href="#" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
+                    <a href="#" onclick="enviar_carro();" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
                     <a href="#" class="btn btn-submit">BUY IT NOW</a>
                 </div>
             </div>
         </div><!-- FIN Contenedores hidden -->
     </div>
 
-    
+
     <!-- FIN Carrito de compras -->
 
     <!-- JS, Popper.js, and jQuery -->
@@ -175,6 +183,21 @@ if ($idempaque != null || $idempaque != "" ) {
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        function enviar_empaque() {
+
+            document.empaque.submit()
+        }
+
+
+        function enviar_carro() {
+
+            document.carrito.submit()
+
+
+        }
+    </script>
 
     <!-- Script para ocultar obejtos HTML -->
     <script>

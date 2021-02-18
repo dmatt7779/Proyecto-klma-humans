@@ -40,7 +40,7 @@
             <!-- Menu derecha -->
             <div class="nav">
                 <ul class="tnav">
-                    <ol><a href="#">NEW-ARRIVALS</a></ol>
+                    <ol><a onclick="window.location.href='redirect.php';" href="#">NEW-ARRIVALS</a></ol>
                     <ol><a href="#">WOMENS</a></ol>
                     <ol><a href="#">MENS</a></ol>
                     <ol><a href="#">CLASSICS</a></ol>

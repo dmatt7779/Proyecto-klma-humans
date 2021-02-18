@@ -31,65 +31,52 @@ include "../../global/conexion.php";
         </div>
     </div>
 </div>
+<?php
+        $sentencia = $pdo->prepare("SELECT * FROM frases");
+        $sentencia -> execute();
+        $listafrases=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+
+    ?>
 
 
 <!-- ---------------------------------------------------------------------------------------------- -->
 
     <div class="container-fluid gridblog">
         <div class="row text-center mt-5">
+        <?php foreach($listafrases as $frases) {  ?>
 
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 class="blog-title">AMOR</h1><hr class="personalhr">
-                    <p class="blog-text mt-3 mb-4">"LA ALEGRÍA Y EL AMOR SON DOS ALAS PARA LAS GRANDES ACCIONES"</p>
-                    <a href="#" class="card-link"><h2 class="blog-title">GOETHE</h2></a>
+                    <h1 onclick="idsend(<?php echo $frases['idproducto'] ?>)" class="blog-title"><?php echo $frases['emocion'] ?></h1><hr class="personalhr">
+                    <p class="blog-text mt-3 mb-4">"<?php echo $frases['frase'] ?>"</p>
+                    <a href="#" class="card-link"><h2 class="blog-title"><?php echo $frases['escritor'] ?></h2></a>
                 </div>
             </div>
-
-            <div class="col-md-4 col-xs-12 p-4" id="newblog">
-                <div class="card-body mt-4 mb-4">
-                    <h1 class="blog-title">FELICIDAD</h1><hr class="personalhr">
-                    <p class="blog-text mt-3 mb-4">"LA FELICIDAD ES LA CERTEZA DE NO SENTIRSE PERDIDO"</p>
-                    <a href="#" class="card-link"><h2 class="blog-title">JORGE BUCAY</h2></a>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 p-4" id="newblog">
-                <div class="card-body mt-4 mb-4">
-                    <h1 class="blog-title">ALEGRÍA</h1><hr class="personalhr">
-                    <p class="blog-text mt-3 mb-4">"LA PRUEBA MÀS CLARA DE SABIDURÍA ES UNA ALEGRÍA CONTINUA"</p>
-                    <a href="#" class="card-link"><h2 class="blog-title">MONTAIGNE</h2></a>
-                </div>
-            </div>
+            <?php } ?>
 
             <div class="col-12" id="divisor-pod"><img src="../assets/img/podcast/linea_principal.png" alt=""></div>
 
-            <div class="col-md-4 col-xs-12 p-4" id="newblog">
-                <div class="card-body mt-4 mb-4">
-                    <h1 class="blog-title">IRA</h1><hr class="personalhr">
-                    <p class="blog-text mt-3 mb-4">"EL QUE DE LA IRA SE DEJA VENCER SE EXPONE A PERDER"</p>
-                    <a href="#" class="card-link"><h2 class="blog-title">PROVERBIO</h2></a>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 p-4" id="newblog">
-                <div class="card-body mt-4 mb-4">
-                    <h1 class="blog-title">MIEDO</h1><hr class="personalhr">
-                    <p class="blog-text mt-3 mb-4">"DEJAMOS DE TEMER A AQUELLO QUE SE HA APRENDIDO A ENTENDER"</p>
-                    <a href="#" class="card-link"><h2 class="blog-title">MARIE CURIE</h2></a>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 p-4" id="newblog">
-                <div class="card-body mt-4 mb-4">
-                    <h1 class="blog-title">TRISTEZA</h1><hr class="personalhr">
-                    <p class="blog-text mt-3 mb-4">"UN SANTO TRISTE ES UN TRISTE SANTO"</p>
-                    <a href="#" class="card-link"><h2 class="blog-title">FRANCISCO DE SALES</h2></a>
-                </div>
-            </div>
 
         </div>
     </div>
+
+
+    <form action="../Prod_especifico/especifico-transition.php" name="formblog" method="post">
+    
+            <input type="hidden" name="id" id="idproducto">
+    </form>
+
+    <script>
+        function idsend(id){
+
+            document.getElementById('idproducto').value = id;
+            document.formblog.submit();
+        }
+    </script>
     
 
 <!-- JS, Popper.js, and jQuery -->
