@@ -33,6 +33,7 @@ include "../../global/conexion.php";
 <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
 <script src="../assets/librerias/popper.min.js"></script>
 <script src="function.js"></script>
+
 <script>
 
     //Limpiar al abrir el Test.
@@ -51,7 +52,7 @@ include "../../global/conexion.php";
             }
     });
 
-//Script para seleccionar Respuestas
+    //Script para seleccionar Respuestas
     $( document ).on( 'click', '#selectanswer1 > .testselect1 > .testselect11', function() {
         $( '.testselect1' ).removeClass( 'select-wr active' );
         $( '.testselect11' ).removeClass( 'select-deep' );
