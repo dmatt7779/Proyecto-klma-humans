@@ -25,10 +25,12 @@
     <div class="maincontentf">
         <div class="conected mt-5">
             <h6>CONECTEMONOS</h6>
-            <input id="footersuscribe" type="text" class="suscribe mt-3" placeholder="CORREO ELECTRÓNICO">
+            <form action="../interfaz_cliente/suscripcion.php" name="suscripcion" method="post">
+            <input id="footersuscribe" type="text" name="correo" class="suscribe mt-3" placeholder="CORREO ELECTRÓNICO">
             <div class="newsletter mt-3">
                 <span>RECIBIRAS NOTICIAS Y OFERTAS EXCLUSIVAS</span>
-                <button class="btn btnnews">SUSCRIBIRSE</button>
+                <button type="submit" class="btn btnnews">SUSCRIBIRSE</button>
+                </form>
             </div>
         </div>
 

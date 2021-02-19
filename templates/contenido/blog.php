@@ -44,14 +44,18 @@ include "../../global/conexion.php";
 
 
 <!-- ---------------------------------------------------------------------------------------------- -->
-
+<?php
+    $blogsend = "";
+?>
     <div class="container-fluid gridblog">
         <div class="row text-center mt-5">
-        <?php foreach($listafrases as $frases) {  ?>
-
+        <?php foreach($listafrases as $frases) {  
+            $blogsend = $frases['blog'];
+            
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend(<?php echo $frases['idproducto'] ?>)" class="blog-title"><?php echo $frases['emocion'] ?></h1><hr class="personalhr">
+                    <h1 onclick= "idsend('<?php echo $blogsend ?>')" class="blog-title"><?php echo $frases['emocion'] ?></h1><hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases['frase'] ?>"</p>
                     <a href="#" class="card-link"><h2 class="blog-title"><?php echo $frases['escritor'] ?></h2></a>
                 </div>
@@ -65,15 +69,19 @@ include "../../global/conexion.php";
     </div>
 
 
-    <form action="../Prod_especifico/especifico-transition.php" name="formblog" method="post">
+    <form action="../contenido/public_blog.php" name="formblog" method="post">
     
-            <input type="hidden" name="id" id="idproducto">
+            <input type="hidden" name="blog" id="blog">
+            <input type="hidden" name="emocion" value="<?php echo $frases['emocion'] ?>">
+            <input type="hidden" name="escritor" value= "<?php echo $frases['escritor'] ?>">
+            <input type="hidden" name="frase" value= "<?php echo $frases['frase'] ?>">
+            
     </form>
 
     <script>
-        function idsend(id){
-
-            document.getElementById('idproducto').value = id;
+        function idsend(blog){
+            
+            document.getElementById('blog').value = blog;
             document.formblog.submit();
         }
     </script>

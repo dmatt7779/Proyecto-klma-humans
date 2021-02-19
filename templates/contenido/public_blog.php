@@ -1,6 +1,11 @@
 <?php
 session_start();
 include "../../global/conexion.php";
+
+$blog = $_POST['blog'];
+$frase = $_POST['frase'];
+$escritor = $_POST['escritor'];
+$emocion = $_POST['emocion'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,15 +47,7 @@ include "../../global/conexion.php";
         <div class="row">
             <div class="col-md-2"></div>
                 <div id="textDiv" class="text-center col-md-8">
-                    <p class="">Todos los hombres, hermano Galión, quieren vivir felizmente. Aspiramos a ser felices y para ello intentamos descubrir qué es. Sin embargo, cada persona posee una respuesta y una definición de felicidad diferente. — Séneca, “De vita beata”<br><br>
-
-                    Es que pocas veces reflexionamos sobre el tema, tal vez, cuando leemos un libro de superación personal o vamos a un retiro espiritual. No sé, cosas de la vida que nos llevan a pensar en la felicidad y en la temida frase ¿eres feliz? que es aún más tediosa que “¿quién eres?” Y se pone peor porque: ¿sabemos la respuesta a esa pregunta?<br><br>
-
-                    La Rae define felicidad como “estado de grata satisfacción espiritual y física” pero se han quedado cortos en la dimensionalidad de palabra y lo pueden hacer, al fin y al cabo, no es un manual para vivir, es uno para definir.<br><br>
-
-                    Me parece curioso que hay emociones o sensaciones que prevalecen en nuestras vidas, siempre somos conscientes de la tristeza, el dolor o el desespero. Pero cuando hablamos de felicidad tenemos que mirar con retrovisor, buscar esos momentos cumbres en nuestra vida y dejarnos llenar por la mezcla de éxtasis y nostalgia que nos producen esos recuerdos.<br><br>
-
-                    Añorar el pasado se convirtió en parte del diario vivir y, la felicidad en recuerdo y no en acciones o experiencias, se quedó ahí para alimentar las sensaciones que impulsan las memorias. Que si la sociedad de consumo, que si los medios, el capitalismo, el socialismo y todos esos instrumentos de poder; pero es que de pronto somos nosotros mismos los encargados de cargar una vida llena de recuerdos memorables y alejarla de la experiencia del momento, del aquí y del ahora.<br><br>
+                    <p class=""><?php echo $blog ?>
                     </p>
                 </div>
             <div class="col-md-2"></div>
@@ -73,11 +70,11 @@ include "../../global/conexion.php";
 
     <!-- Texto de introduccion -->
     <div id="prueba" class="blogcontresult mt-3 mb-5">
-        <div class="mt-2"><h2>MIEDO</h2></div>
+        <div class="mt-2"><h2><?php echo $emocion ?></h2></div>
         <div class="introresult mt-5 mb-4">
-            <p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
+            <p><?php echo $frase ?></p>
         </div>
-        <div><h3>MARIE CURIE</h3></div>
+        <div><h3><?php echo $escritor ?></h3></div>
     </div>
 
 
