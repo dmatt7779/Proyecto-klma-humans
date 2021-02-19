@@ -9,7 +9,7 @@
     }
 
     //Array de Emociones
-    $Emosiones = [ 'Felicidad', 'Miedo', 'Amor', 'Ira', 'Alegria', 'Tristeza' ];
+    $Emosiones = [ 'FELICIDAD', 'MIEDO', 'AMOR', 'IRA', 'ALEGRIA', 'TRISTEZA' ];
 
     //Ordenar array por tema.
     foreach( $Result as $Key => $Value ){
