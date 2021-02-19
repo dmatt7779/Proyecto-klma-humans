@@ -9,32 +9,32 @@
                 [
                     'id' => 1,
                     'reply' => '../assets/img/test/familia_1/familia-1-amor.png',
-                    'theme' => 'Amor'
+                    'theme' => 'AMOR'
                 ],
                 [
                     'id' => 2,
                     'reply' => '../assets/img/test/familia_1/familia-1-ira.png',
-                    'theme' => 'Ira'
+                    'theme' => 'IRA'
                 ],
                 [
                     'id' => 3,
                     'reply' => '../assets/img/test/familia_1/familia-1-felicidad.png',
-                    'theme' => 'Felicidad'
+                    'theme' => 'FELICIDAD'
                 ],
                 [
                     'id' => 4,
                     'reply' => '../assets/img/test/familia_1/familia-1-miedo.png',
-                    'theme' => 'Miedo'
+                    'theme' => 'MIEDO'
                 ],
                 [
                     'id' => 5,
                     'reply' => '../assets/img/test/familia_1/familia-1-alegria.png',
-                    'theme' => 'Alegría'
+                    'theme' => 'ALEGRIA'
                 ],
                 [
                     'id' => 6,
                     'reply' => '../assets/img/test/familia_1/familia-1-tristeza.png',
-                    'theme' => 'Tristeza'
+                    'theme' => 'TRISTEZA'
                 ]
             ]
         ],
@@ -47,32 +47,32 @@
                 [
                     'id' => 1,
                     'reply' => '../assets/img/test/familia_2/familia-2-tristeza.png',
-                    'theme' => 'Tristeza'
+                    'theme' => 'TRISTEZA'
                 ],
                 [
                     'id' => 2,
                     'reply' => '../assets/img/test/familia_2/familia-2-alegria.png',
-                    'theme' => 'Alegria'
+                    'theme' => 'ALEGRIA'
                 ],
                 [
                     'id' => 3,
                     'reply' => '../assets/img/test/familia_2/familia-2-miedo.png',
-                    'theme' => 'Miedo'
+                    'theme' => 'MIEDO'
                 ],
                 [
                     'id' => 4,
                     'reply' => '../assets/img/test/familia_2/familia-2-felicidad.png',
-                    'theme' => 'Felicidad'
+                    'theme' => 'FELICIDAD'
                 ],
                 [
                     'id' => 5,
                     'reply' => '../assets/img/test/familia_2/familia-2-ira.png',
-                    'theme' => 'Ira'
+                    'theme' => 'IRA'
                 ],
                 [
                     'id' => 6,
                     'reply' => '../assets/img/test/familia_2/familia-2-amor.png',
-                    'theme' => 'Amor'
+                    'theme' => 'AMOR'
                 ]
             ]
         ],
@@ -85,32 +85,32 @@
                 [
                     'id' => 1,
                     'reply' => 'SATISFECH@',
-                    'theme' => 'Tristeza'
+                    'theme' => 'TRISTEZA'
                 ],
                 [
                     'id' => 2,
                     'reply' => 'DESILUCIONAD@',
-                    'theme' => 'Alegria'
+                    'theme' => 'ALEGRIA'
                 ],
                 [
                     'id' => 3,
                     'reply' => ' ALARMAD@',
-                    'theme' => 'Miedo'
+                    'theme' => 'MIEDO'
                 ],
                 [
                     'id' => 4,
                     'reply' => 'CONFIAD@',
-                    'theme' => 'Felicidad'
+                    'theme' => 'FELICIDAD'
                 ],
                 [
                     'id' => 5,
                     'reply' => 'INDIFERENTE',
-                    'theme' => 'Ira'
+                    'theme' => 'IRA'
                 ],
                 [
                     'id' => 6,
                     'reply' => 'OPTIMISTA',
-                    'theme' => 'Amor'
+                    'theme' => 'AMOR'
                 ]
             ]
         ],
@@ -123,32 +123,32 @@
                 [
                     'id' => 1,
                     'reply' => '../assets/img/test/familia_3/familia-3-amor.png',
-                    'theme' => 'Amor'
+                    'theme' => 'AMOR'
                 ],
                 [
                     'id' => 2,
                     'reply' => '../assets/img/test/familia_3/familia-3-ira.png',
-                    'theme' => 'Ira'
+                    'theme' => 'IRA'
                 ],
                 [
                     'id' => 3,
                     'reply' => '../assets/img/test/familia_3/familia-3-felicidad.png',
-                    'theme' => 'Felicidad'
+                    'theme' => 'FELICIDAD'
                 ],
                 [
                     'id' => 4,
                     'reply' => '../assets/img/test/familia_3/familia-3-miedo.png',
-                    'theme' => 'Miedo'
+                    'theme' => 'MIEDO'
                 ],
                 [
                     'id' => 5,
                     'reply' => '../assets/img/test/familia_3/familia-3-alegria.png',
-                    'theme' => 'Alegria'
+                    'theme' => 'ALEGRIA'
                 ],
                 [
                     'id' => 6,
                     'reply' => '../assets/img/test/familia_3/familia-3-tristeza.png',
-                    'theme' => 'Tristeza'
+                    'theme' => 'TRISTEZA'
                 ]
             ]
         ],
@@ -161,32 +161,32 @@
                 [
                     'id' => 1,
                     'reply' => 'DOLOR',
-                    'theme' => 'Tristeza'
+                    'theme' => 'TRISTEZA'
                 ],
                 [
                     'id' => 2,
                     'reply' => 'PLACER',
-                    'theme' => 'Alegria'
+                    'theme' => 'ALEGRIA'
                 ],
                 [
                     'id' => 3,
                     'reply' => ' FRIALDAD',
-                    'theme' => 'Miedo'
+                    'theme' => 'MIEDO'
                 ],
                 [
                     'id' => 4,
                     'reply' => 'CALIDEZ',
-                    'theme' => 'Felicidad'
+                    'theme' => 'FELICIDAD'
                 ],
                 [
                     'id' => 5,
                     'reply' => 'SOBRESALTO',
-                    'theme' => 'Ira'
+                    'theme' => 'IRA'
                 ],
                 [
                     'id' => 6,
                     'reply' => 'CALMA',
-                    'theme' => 'Amor'
+                    'theme' => 'AMOR'
                 ]
             ]
         ],
@@ -199,32 +199,32 @@
                 [
                     'id' => 1,
                     'reply' => 'FLUIDEZ',
-                    'theme' => 'Tristeza'
+                    'theme' => 'TRISTEZA'
                 ],
                 [
                     'id' => 2,
                     'reply' => 'RECELO',
-                    'theme' => 'Alegria'
+                    'theme' => 'ALEGRIA'
                 ],
                 [
                     'id' => 3,
                     'reply' => ' AMABILIDAD',
-                    'theme' => 'Miedo'
+                    'theme' => 'MIEDO'
                 ],
                 [
                     'id' => 4,
                     'reply' => 'FASTIDIO',
-                    'theme' => 'Felicidad'
+                    'theme' => 'FELICIDAD'
                 ],
                 [
                     'id' => 5,
                     'reply' => 'GRATIFICACIÓN',
-                    'theme' => 'Ira'
+                    'theme' => 'IRA'
                 ],
                 [
                     'id' => 6,
                     'reply' => 'DECEPCIÓN',
-                    'theme' => 'Amor'
+                    'theme' => 'AMOR'
                 ]
             ]
         ]

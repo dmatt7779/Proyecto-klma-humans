@@ -20,11 +20,11 @@ include "../../global/conexion.php";
         .radial-progress {
             @circle-size: 105px;
             @circle-background: #969797;
-            @circle-color: #000000;
+            @circle-color: #000000;/* Barra oscura */
             @inset-size: 90px;
             @inset-color: #ffffff; /* Fondo del porcentaje */
-            @transition-length: 3s;
-            @percentage-color: #000000;
+            @transition-length: 5s;
+            @percentage-color: #000000; /* Porcentajes */
             @percentage-font-size: 17px;
             @percentage-text-width: 57px;
             margin: 50px;
@@ -78,7 +78,7 @@ include "../../global/conexion.php";
                             display:        inline-block;
                             vertical-align: top;
                             text-align:     center;
-                            font-weight:    800;
+                            font-weight:    600;
                             font-size:      @percentage-font-size;
                             font-family:    "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
                             color:          @percentage-color;
@@ -121,15 +121,12 @@ include "../../global/conexion.php";
     </div>
 
     <div class="container-fluid mt-5">
-        <div class="row pr-5 pl-5" id="divGraph">
-        </div>
+        <div class="row pr-5 pl-5" id="divGraph"></div>
     </div>
 
     <!-- Contenedor de los sentimientos rotados 90°-->
     <div class="containerf container-fluid mt-3">
-        <div class="row pr-5 pl-5 text-center" id="divLetter">
-            
-        </div>
+        <div class="row pr-5 pl-5 text-center" id="divLetter"></div>
     </div>
 
     <div class="row aboutbtn">
@@ -143,17 +140,13 @@ include "../../global/conexion.php";
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script> -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/less.min.js"></script>
+
     <script type="text/javascript">
         $( document ).ready( function(){
+            //$( '#divLetter' ).html( '' );
+            //$( '#divGraph' ).html( '' );
             createGraph();
         });
-        /*$(function(){
-        window = function() {
-        $('.radial-progress').attr('data-progress', Math.floor(Math() * 100));
-        }
-        setTimeout(window, 200);
-        $('.radial-progress').click(window);
-        });*/
 
         function createGraph(){
             var Graph = '', Letter = '';
@@ -182,29 +175,26 @@ include "../../global/conexion.php";
 
                             Graph += '<div class="inset"></div>';
                         Graph += '</div>' ;
-                        Graph += '<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); font-size: 15pt;">' + Info[ 1 ] + '%</span>';   
+                        Graph += '<span style="position: absolute; top: 48%; left: 50%; transform: translate(-50%, -55%); font-size: 15pt;">' + Info[ 1 ] + '%</span>';   
+                        Graph += '<div class="resultfeel">' + Info[ 0 ] + '</div>';
                     Graph += '</div>';
 
                     Val = Val + parseInt( Info[ 1 ] );
                 } );
 
-                $.each( Question, function( i, Value ) {
+                /*$.each( Question, function( i, Value ) {
                     const Info = Value.split( '|' );
 
                     Letter += '<div class="resultfeel col-md-2">';
                         Letter += '<span class="">' + Info[ 0 ] + '</span>';
                     Letter += '</div>';
-                } );
+                } );*/
 
-            $( '#divLetter' ).html( Letter );
+            //$( '#divLetter' ).html( Letter );
             $( '#divGraph' ).html( Graph );
         }
     </script>
 </body>
 </html>
-
-
-
-
 
 <?php include "../navbar_footer/footer.php"; ?>

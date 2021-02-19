@@ -125,7 +125,7 @@ var
             desingQuestion += '</div>';
             desingQuestion += '<div class="row m-0" id="' + Question.id + '">';
                 desingQuestion += '<div class="col-sm-4 col-md-5 col-lg-5"></div>';
-                desingQuestion += '<div class="introtest animate-arrowbtn col-sm-4 col-md-2 col-lg-2">';
+                desingQuestion += '<div class="animate-arrowbtn col-sm-4 col-md-2 col-lg-2">';
                     desingQuestion += '<button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>';
                 desingQuestion += '</div>';
                 desingQuestion += '<div class="col-sm-4 col-md-5 col-lg-5"></div>';
@@ -197,24 +197,3 @@ var
 /* Controlando las funciones de los elementos */
 
 $( document ).ready( KlmHumans.onReady )
-/*
-$( document ).on( 'click', btnQuestion, function(){
-    var 
-        IdQuestion = $( this ).attr( 'data-question' )
-
-    if( modalContent.attr( 'question' ) !== IdQuestion ){
-        KlmHumans.existsQuestion( IdQuestion )
-    }
-} )
-
-$( document ).on( 'click', infoReply, function(){
-    var 
-        Element = $( this )
-        KlmHumans.selectReply( Element )
-})
-
-modalTest.on( 'hidden.bs.modal', function ( e ) {
-    Questions.length = 0
-    Solution.length = 0
-})
-*/
