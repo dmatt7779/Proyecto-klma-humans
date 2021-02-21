@@ -2213,12 +2213,12 @@ body::-webkit-scrollbar-thumb {
 .gridtlin {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 120px);
+    grid-template-rows: repeat(1, 140px);
     column-gap: 4rem;
     margin-left: auto;
     margin-right: auto;
-    flex:2;
-    overflow:auto;
+    flex: 2;
+    overflow: auto;
     z-index: 300;
     margin-bottom: -10%;
 }
@@ -4180,7 +4180,7 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 230px;
+    top: 173px;
     position: relative;
     bottom: 0;
     left: -13px;

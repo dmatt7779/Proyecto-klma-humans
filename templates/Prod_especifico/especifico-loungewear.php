@@ -291,8 +291,6 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         })
     </script>
 
-
-
     <!-- Funcion para seleccionar Empaque Especial -->
     <script>
         $('#btnCart, #aAddCart').click(function() {
