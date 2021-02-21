@@ -7,13 +7,14 @@
   
 
 
-    $idproducto = $_POST['idproducto']; 
+    
     $frase = $_POST['frase'];
     $escritor = $_POST['escritor'];
     $emocion = $_POST['emocion'];
+    $blog = $_POST['blog'];
     
    
-    $sql = "INSERT INTO frases (frase,idproducto,escritor,emocion) VALUES ('$frase', '$idproducto', '$escritor', '$emocion');";
+    $sql = "INSERT INTO frases (frase,escritor,emocion,blog) VALUES ('$frase', '$escritor', '$emocion','$blog');";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();

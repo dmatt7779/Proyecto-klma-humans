@@ -115,7 +115,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         <form action="newcar2.php" method="post" name="transition">
             <input type="hidden" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
             <input type="hidden" name="talla" id="talla" value="S">
-            <input type="hidden" name="genero" id="genero">
+            <input type="hidden" name="genero" id="genero" value="Femenino">
             <input type="hidden" name="manga" id="manga">
         </form>
 

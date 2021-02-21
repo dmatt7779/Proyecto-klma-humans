@@ -28,15 +28,13 @@ if (!isset($_SESSION['correo'])) {
         <div class="container-fluid">
             <form action="guardarfrase.php" class="login-form mb-4" method="POST">
                 
-                <div class="logpass">
-                    <input type="text" name="idproducto" class="login-email" placeholder="id de producto" required> 
-                    
-                </div><br>
+               
 
                 <div class="newdata">
                 <input type="text" name="frase" placeholder="frase">
                 <input type="text" name="escritor" placeholder="escritor">
                 <input type="text" name="emocion" placeholder="emocion">
+                <input type="text" name="blog" placeholder="blog">
 
                 </div>
 
@@ -62,10 +60,10 @@ if (!isset($_SESSION['correo'])) {
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>frase</th>
-                            <th>id producto</th>
+                            <th>frase</th>                
                             <th>escritor</th>
                             <th>emocion</th>
+                            <th>blog</th>
 
                                                      
                         </tr>
@@ -93,10 +91,10 @@ if (!isset($_SESSION['correo'])) {
                     <tr>
 
                             <td><?php echo $frase['id'] ?></td>
-                            <td><?php echo $frase['frase'] ?></td>                            
-                            <td><?php echo $frase['idproducto'] ?></td>
+                            <td><?php echo $frase['frase'] ?></td>
                             <td><?php echo $frase['escritor'] ?></td>
                             <td><?php echo $frase['emocion'] ?></td>
+                            <td><?php echo $frase['blog'] ?></td>
                            
                     </tr>
                     <?php } ?>                  
