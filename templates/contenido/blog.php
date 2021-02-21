@@ -55,7 +55,7 @@ include "../../global/conexion.php";
             ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick= "idsend('<?php echo $blogsend ?>')" class="blog-title"><?php echo $frases['emocion'] ?></h1><hr class="personalhr">
+                    <h1 onclick= "idsend('<?php echo $blogsend ?>','<?php echo $frases['emocion'] ?>','<?php echo $frases['escritor'] ?>','<?php echo $frases['frase'] ?>')" class="blog-title"><?php echo $frases['emocion'] ?></h1><hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases['frase'] ?>"</p>
                     <a href="#" class="card-link"><h2 class="blog-title"><?php echo $frases['escritor'] ?></h2></a>
                 </div>
@@ -72,16 +72,20 @@ include "../../global/conexion.php";
     <form action="../contenido/public_blog.php" name="formblog" method="post">
     
             <input type="hidden" name="blog" id="blog">
-            <input type="hidden" name="emocion" value="<?php echo $frases['emocion'] ?>">
-            <input type="hidden" name="escritor" value= "<?php echo $frases['escritor'] ?>">
-            <input type="hidden" name="frase" value= "<?php echo $frases['frase'] ?>">
+            <input type="hidden" name="emocion" id="emocion">
+            <input type="hidden" name="escritor" id="escritor">
+            <input type="hidden" name="frase" id="frase">
             
     </form>
 
     <script>
-        function idsend(blog){
+        function idsend(blog,emocion,escritor,frase){
             
             document.getElementById('blog').value = blog;
+            document.getElementById('emocion').value = emocion;
+            document.getElementById('escritor').value = escritor;
+            document.getElementById('frase').value = frase;
+
             document.formblog.submit();
         }
     </script>

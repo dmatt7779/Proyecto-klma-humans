@@ -32,6 +32,7 @@
     $imagenmaterial2 = $_FILES['imagenmaterial2']['tmp_name'];
     $diseñador = $_POST['diseñador'];
     $frase = $_POST['frase'];
+    $campaña = $_POST['campaña'];
     
 
     if ($tipologia == 315) {
@@ -131,7 +132,7 @@ $cadenasave = substr($cadenasave,1);
 
 
 
-    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`, `diseñador`, `frase`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2','$diseñador','$frase')";
+    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`, `diseñador`, `frase`, `campaña`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2','$diseñador','$frase','$campaña')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();

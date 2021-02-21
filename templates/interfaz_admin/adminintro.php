@@ -45,6 +45,7 @@ if (!isset($_SESSION['correo'])) {
 
             <button  onclick="window.location.href='adminsuscription.php';" class="btn btn-submit">SUSCRIPCIONES</button>
             <button  onclick="window.location.href='adminfrases.php';" class="btn btn-submit">FRASES</button>
+            <button  onclick="window.location.href='admincampañas.php';" class="btn btn-submit">CAMPAÑA ACTIVA</button>
 
         </div>
     </div>

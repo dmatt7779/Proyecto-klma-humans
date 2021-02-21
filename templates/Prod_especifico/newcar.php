@@ -1,7 +1,5 @@
 <?php
 
-
-
 include "../../global/conexion.php";
 
 session_start();
@@ -14,12 +12,8 @@ $usuario = $_SESSION['correo'];
 
 
 
-
-
 $id = $_POST['id'];
 $talla = strtoupper($_POST['talla']);
-
-
 
 
 if ($talla == "") {
@@ -32,7 +26,6 @@ if ($talla == "") {
     <?php
 }else{
    
-
 $iduser = $_SESSION['iduser'];
 if (empty($idusuario)) {
     
@@ -49,9 +42,6 @@ $opensale=$ventauser->fetchAll(PDO::FETCH_ASSOC);
 if (!isset($opensale[0]['id'])) {
     
 
-
-
-
     $insert = $pdo->prepare("INSERT INTO ventas (`subtotal`, `estado`, `fecha`, `envio`, `usuarios_id`) VALUES ('0', '0', '$fecha', '0', '$iduser');");
     $insert -> execute();
 
@@ -64,7 +54,6 @@ if (!isset($opensale[0]['id'])) {
 
     $idsale2 = $opensale2[0]['id'];
     
-
 
     $repetido = $pdo->prepare("SELECT productos_id, talla, cantidad FROM detalleventa where talla = '$talla' and ventas_id = $idsale2 and productos_id = $id;");
 
@@ -87,7 +76,6 @@ if (!isset($opensale[0]['id'])) {
 
     }else{
 
-
         $cantidad = $repetidos[0]['cantidad'] + 1;
 
         $repetido_sum = $pdo->prepare("UPDATE detalleventa
@@ -95,14 +83,10 @@ if (!isset($opensale[0]['id'])) {
 
         $repetido_sum -> execute();
         
-            
-
-            
+                        
     }
 
 
-
-    
 
 }else {
 
@@ -118,7 +102,6 @@ if (!isset($opensale[0]['id'])) {
     if (empty($repetidos)) {
         
 
-
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '$talla', '$idsale');");
         $producto -> execute();
 
@@ -130,13 +113,7 @@ if (!isset($opensale[0]['id'])) {
         }
 
 
-         
-
-
-
-
-
-
+        
     }else{
 
 
@@ -163,7 +140,6 @@ if (!isset($opensale[0]['id'])) {
 
     }
     
-    
     if (empty($iduser)) {
     
         header("location:../login/login.php");
@@ -174,18 +150,9 @@ if (!isset($opensale[0]['id'])) {
         
     }
 
-   
-
     
-    
-    
-
-    
-
 }
-   
 
-    
 
 }
 ?> 

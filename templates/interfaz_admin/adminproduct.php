@@ -56,6 +56,8 @@ include "../../global/conexion.php";
             <input type="text" name="diseñador" class="newprofile">
             <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">FRASE</label>
             <input type="text" name="frase" class="newprofile">
+            <label for="imagencalmwear" class="mt-3" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">CAMPAÑA</label>
+            <input type="text" name="campaña" class="newprofile">
 
 
         </div>
