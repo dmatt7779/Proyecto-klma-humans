@@ -12,13 +12,10 @@ $fecha =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
 
 $usuario = $_SESSION['correo'];
 
-if (!isset($usuario)) {
+if (empty($iduser)) {
     
     header("location:../login/login.php");
 }
-
-
-
 
 $id = $_POST['id'];
 $talla = strtoupper($_POST['talla']);
@@ -79,7 +76,12 @@ if (!isset($opensale[0]['id'])) {
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`, `genero`, `manga`) VALUES ('1', '$id',  '$talla', '$idsale2', '$genero', '$manga');");
     $producto -> execute();
 
+    if (empty($iduser)) {
+    
+        header("location:../login/login.php");
+    }else{
      header("location:../main/menu2.php");
+    }
 
 
     }else{
@@ -119,7 +121,12 @@ if (!isset($opensale[0]['id'])) {
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`,  `talla`, `ventas_id`, `genero`, `manga`) VALUES ('1', '$id',  '$talla', '$idsale', '$genero', '$manga');");
         $producto -> execute();
 
-        header("location:../main/menu2.php");
+        if (empty($iduser)) {
+    
+            header("location:../login/login.php");
+        }else{
+         header("location:../main/menu2.php");
+        }
 
 
          
@@ -156,7 +163,12 @@ if (!isset($opensale[0]['id'])) {
     }
     
     
-    header("location:../main/menu2.php");
+    if (empty($iduser)) {
+    
+        header("location:../login/login.php");
+    }else{
+     header("location:../main/menu2.php");
+    }
 
         
     }
