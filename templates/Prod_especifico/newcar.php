@@ -74,7 +74,7 @@ if (!isset($opensale[0]['id'])) {
 
 
 
-    $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale2');");
+    $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`) VALUES ('1', '$id',  '$talla', '$idsale2');");
     $producto -> execute();
 
      header("location:../main/menu2.php");
@@ -114,7 +114,7 @@ if (!isset($opensale[0]['id'])) {
         
 
 
-        $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `tipo_producto_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '1', '$talla', '$idsale');");
+        $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '$talla', '$idsale');");
         $producto -> execute();
 
         header("location:../main/menu2.php");
