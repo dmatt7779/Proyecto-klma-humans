@@ -71,9 +71,6 @@ if (!isset($opensale[0]['id'])) {
      
     if (empty($repetidos)) {
 
-
-
-
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`) VALUES ('1', '$id',  '$talla', '$idsale2');");
     $producto -> execute();
 
