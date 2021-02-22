@@ -39,14 +39,20 @@ include "../../global/conexion.php";
 ?>
 
 	
-<form action="../Prod_especifico/especifico-calmwear.php" name="formprod" method="post">
-		<input type="hidden" id=prod name="idprod">
+<form action="../Prod_especifico/especifico-calmwear.php" name="formprodcalm" method="post">
+		<input type="hidden" id=calm name="idprod">
+	</form>
+    <form action="../Prod_especifico/especifico-loungewear.php" name="formprodlounge" method="post">
+		<input type="hidden" id=lounge name="id">
+	</form>
+    <form action="../Prod_especifico/especifico-transition.php" name="formprodtransi" method="post">
+		<input type="hidden" id=transi name="id">
 	</form>
 	<!--Productos 2-->
 	<div class="gridclmw mt-5">
 	<?php for($i=0 ; $i < count($listaproductos) ;  $i++    ){ ?>
 		<div style="margin-bottom: 15%;" class="card-clmw">
-			<a href="#"><div class="cover" onclick="idprod(<?php echo $listaproductos[$i]['id'];?>)" style="background-image: url(../assets/img/prodgenerales/<?php echo $listaproductos[$i]['imagencalmwear']; ?>)" title="Diseño de museo"></div></a>
+			<a href="#"><div class="cover" onclick="idprod(<?php echo $listaproductos[$i]['id'];?>,<?php echo $listaproductos[$i]['tipologia_id'];?>)" style="background-image: url(../assets/img/prodgenerales/<?php echo $listaproductos[$i]['imagencalmwear']; ?>)" title="Diseño de museo"></div></a>
 			<div class="card-body">
 			<a href="#" class="card-title"><p><?php echo $listaproductos[$i]['nombre']; ?></p></a>
 			<p class="text-clmw"><?php echo $listaproductos[$i]['descripcion']; ?></p>
@@ -54,18 +60,27 @@ include "../../global/conexion.php";
 			</div>
 		</div>
 
-
 	<?php }?>	
 	</div>
-	
-
-
 
     <!-- JS, Popper.js, and jQuery -->
 		<script>
-			function idprod(i){
-				document.getElementById("prod").value = i
-				document.formprod.submit()
+			function idprod(i,type){
+                if(type == 1){
+
+                    document.getElementById("lounge").value = i
+                    document.formprodlounge.submit()
+                }else if(type == 2){
+                    document.getElementById("calm").value = i
+                    document.formprodcalm.submit()
+                }else{
+
+                    document.getElementById("transi").value = i
+                    document.formprodtransi.submit()
+                }
+				
+
+				
 			}
 		</script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>

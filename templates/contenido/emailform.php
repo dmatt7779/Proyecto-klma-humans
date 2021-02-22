@@ -41,13 +41,13 @@
 
     //Correo Electrónico de destino
 
-    $enviarA = 'mateof.aguilarp@gmail.com';
+    $enviarA = 'jerry182q@gmail.com';
     $asunto = 'Nuevo mensaje desde KLMA HUMANS';
 
     //Enviar Correo
 
     if ($error == '') {
-        $success = mail($enviarA, $asunto, $emailbd, 'de: '.$email);
+        $success = mail($enviarA, $asunto, $emailbd, 'From: '.$email);
         echo 'exito';
     }else {
         echo $error;

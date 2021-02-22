@@ -1,6 +1,10 @@
 <?php
 session_start();
 include "../../global/conexion.php";
+
+
+$emocion = $_POST['emocion'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,23 +45,27 @@ include "../../global/conexion.php";
 
 	<!-- Contenedor para campañas -->
 	<div id="white" class="contcampaigns mb-3">
-
+	<?php
+	$sentencia = $pdo->prepare("SELECT * FROM productos where habilitado = 1 and tipologia_id = 3 and emocion = '$emocion'");
+    $sentencia -> execute();
+    $listaproductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+	?>
 		<!-- Campaña 1 -->
 		<div>
-			<a href="#">C1</a>
+			<a onclick="seecampain(<?php echo $listaproductos[0]['campaña']?>)" href="#">C<?php echo $listaproductos[0]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
-				<img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Ranglan.png" alt="producto">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[0]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos[0]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
 		<!-- Campaña 2 -->
 		<div>
-			<a href="#">C2</a>
-			<div class="tshirtcampaigns mt-2 mb-2">
-				<img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Sisa.png" alt="producto">
+			<a onclick="seecampain(<?php echo $listaproductos[1]['campaña']?>)" href="#">C<?php echo $listaproductos[1]['campaña']?></a>
+			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[1]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos[1]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
 		<!-- SPOTIFY -->
@@ -75,23 +83,31 @@ include "../../global/conexion.php";
 
 		<!-- Campaña 3 -->
 		<div>
-			<a href="#">C3</a>
-			<div class="tshirtcampaigns mt-2 mb-2">
-				<img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Ranglan.png" alt="producto">
+			<a onclick="seecampain(<?php echo $listaproductos[2]['campaña']?>)" href="#">C<?php echo $listaproductos[2]['campaña']?></a>
+			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[2]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos[2]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
 		<!-- Campaña 4 -->
 		<div>
-			<a href="#">C4</a>
-			<div class="tshirtcampaigns mt-2 mb-2">
-				<img  src="../assets/img/test/resultemocion/miedo/T-shirt Manga Sisa.png" alt="producto">
+			<a onclick="seecampain(<?php echo $listaproductos[3]['campaña']?>)" href="#">C<?php echo $listaproductos[3]['campaña']?></a>
+			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[3]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos[3]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 	</div>
 	<!-- FIN CAMPAÑAS -->
+
+	<form action="../Prod_especifico/especifico-transition.php" name="formclothes" method="post">
+			<input type="hidden" name="id" id="id">
+	</form>
+
+	<form action="../Rejillas_generales/capsulestest.php" name="formcapsule" method="post">
+			<input type="hidden" name="campaña" id="campaña">
+	</form>
 
 	<div class="introcontresult">
 		<div class="btn-blogshare">
@@ -189,6 +205,18 @@ include "../../global/conexion.php";
 				$('#white').addClass( 'contcampaignsBG' );
 			}
 		} );
+	}
+</script>
+
+<script>
+	function seeclothes(id){
+		document.getElementById('id').value = id
+		document.formclothes.submit()
+	}
+
+	function seecampain(campain){
+		document.getElementById('campaña').value = campain
+		document.formcapsule.submit()
 	}
 </script>
 

@@ -4,12 +4,13 @@ include "../../global/conexion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KLMA' HUMANS</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css ">
 
@@ -113,8 +114,9 @@ include "../../global/conexion.php";
     </style>
 
 </head>
+
 <body>
-<?php include "../navbar_footer/header.php";?>
+    <?php include "../navbar_footer/header.php"; ?>
 
     <div class="results text-center">
         <p>RESULTADOS</p>
@@ -131,10 +133,12 @@ include "../../global/conexion.php";
 
     <div class="row aboutbtn">
         <div class="mt-5">
-            <button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>
+            <button class="smooth"><img onclick="submit()" src="../assets/img/test/abajo.gif" alt=""></button>
         </div>
     </div>
-
+    <form action="postresult.php" name="testform" method="post">
+        <input type="hidden" name="emocion" id="emocion">
+    </form>
 
     <!-- Script y CDN -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script> -->
@@ -142,59 +146,100 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/less.min.js"></script>
 
     <script type="text/javascript">
-        $( document ).ready( function(){
+        $(document).ready(function() {
             //$( '#divLetter' ).html( '' );
             //$( '#divGraph' ).html( '' );
             createGraph();
+            sendemotion();
         });
 
-        function createGraph(){
-            var Graph = '', Letter = '';
-            let Val = 0, Deg = 0;
-            const Data = sessionStorage.getItem( 'ResultT' ),
-                Question = Data.split( '-' ).filter( Boolean );
+        function createGraph() {
+            var Graph = '',
+                Letter = '';
+            let Val = 0,
+                Deg = 0;
+            const Data = sessionStorage.getItem('ResultT'),
+                Question = Data.split('-').filter(Boolean);
 
-                $.each( Question, function( i, Value ) {
-                    const Info = Value.split( '|' );
-                    
-                    if(  Val !== 0 ){
-                        Deg = ( ( Val / 100 ) * 360 );
-                    }
-                    
-                    Graph += '<div class="col-md2" style="position: relative;">';
-                        Graph += '<div class="radial-progress" data-progress="'+ Info[ 1 ] +'" style="transform: rotate(' + Deg + 'deg)">';
-                            Graph += '<div class="circle">';
-                                Graph += '<div class="mask full">' ;
-                                    Graph += '<div class="fill"></div>' ;
-                                Graph += '</div>' ;
-                                Graph += '<div class="mask half">' ;
-                                    Graph += '<div class="fill"></div>' ;
-                                    Graph += '<div class="fill fix"></div>' ;
-                                Graph += '</div>' ;
-                            Graph += '</div>' ;
+            $.each(Question, function(i, Value) {
+                const Info = Value.split('|');
 
-                            Graph += '<div class="inset"></div>';
-                        Graph += '</div>' ;
-                        Graph += '<span style="position: absolute; top: 48%; left: 50%; transform: translate(-50%, -55%); font-size: 15pt;">' + Info[ 1 ] + '%</span>';   
-                        Graph += '<div class="resultfeel">' + Info[ 0 ] + '</div>';
-                    Graph += '</div>';
+                if (Val !== 0) {
+                    Deg = ((Val / 100) * 360);
+                }
 
-                    Val = Val + parseInt( Info[ 1 ] );
-                } );
+                Graph += '<div class="col-md2" style="position: relative;">';
+                Graph += '<div class="radial-progress" data-progress="' + Info[1] + '" style="transform: rotate(' + Deg + 'deg)">';
+                Graph += '<div class="circle">';
+                Graph += '<div class="mask full">';
+                Graph += '<div class="fill"></div>';
+                Graph += '</div>';
+                Graph += '<div class="mask half">';
+                Graph += '<div class="fill"></div>';
+                Graph += '<div class="fill fix"></div>';
+                Graph += '</div>';
+                Graph += '</div>';
 
-                /*$.each( Question, function( i, Value ) {
-                    const Info = Value.split( '|' );
+                Graph += '<div class="inset"></div>';
+                Graph += '</div>';
+                Graph += '<span style="position: absolute; top: 48%; left: 50%; transform: translate(-50%, -55%); font-size: 15pt;">' + Info[1] + '%</span>';
+                Graph += '<div class="resultfeel">' + Info[0] + '</div>';
+                Graph += '</div>';
 
-                    Letter += '<div class="resultfeel col-md-2">';
-                        Letter += '<span class="">' + Info[ 0 ] + '</span>';
-                    Letter += '</div>';
-                } );*/
+                Val = Val + parseInt(Info[1]);
+            });
+
+            /*$.each( Question, function( i, Value ) {
+                const Info = Value.split( '|' );
+
+                Letter += '<div class="resultfeel col-md-2">';
+                    Letter += '<span class="">' + Info[ 0 ] + '</span>';
+                Letter += '</div>';
+            } );*/
 
             //$( '#divLetter' ).html( Letter );
-            $( '#divGraph' ).html( Graph );
+            $('#divGraph').html(Graph);
+        }
+
+        function sendemotion() {
+            let result = sessionStorage.getItem('ResultT');
+
+            var vec_barra = result.split('-');
+            vec_barra.pop();
+
+            let resultado = vec_barra.map(e => e.replace(/'|'/g, ':'));
+            let convert = [];
+            var mayor = 0;
+            for (i in resultado) {
+
+                convert.push(resultado[i].split('|'))
+
+
+
+            }
+
+            for (y in convert) {
+
+                if (parseInt(convert[y][1]) > mayor) {
+                    mayor = parseInt(convert[y][1]);
+                    emocionselected = convert[y][0];
+                }
+
+
+            }
+
+            
+            document.getElementById('emocion').value = emocionselected.toLowerCase();
+
+        }
+
+        function submit(){
+            document.testform.submit();
         }
     </script>
+
 </body>
+
 </html>
 
 <?php include "../navbar_footer/footer.php"; ?>

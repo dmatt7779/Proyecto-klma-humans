@@ -43,12 +43,13 @@
                     <ol><a onclick="window.location.href='redirect.php';" href="#">NEW-ARRIVALS</a></ol>
                     <ol><a onclick="window.location.href='../Rejillas_generales/womens.php';" href="#">WOMENS</a></ol>
                     <ol><a onclick="window.location.href='../Rejillas_generales/mans.php';" href="#">MENS</a></ol>
-                    <ol><a  href="#">CLASSICS</a></ol>
+                    <ol><a onclick="window.location.href='../Rejillas_generales/classics.php';" href="#">CLASSICS</a></ol>
                     <ol><a onclick="window.location.href='../Rejillas_generales/capsules.php';" href="#">CAPSULES</a></ol>
                 </ul>
             </div>
         </div>
     </div>
+
 
 </body>
 </html>

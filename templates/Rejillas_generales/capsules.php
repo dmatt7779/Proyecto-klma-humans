@@ -48,9 +48,10 @@ $campainselected = $campaña[0]['campaña'];
 ?>
 
 	
-<form action="../Prod_especifico/especifico-calmwear.php" name="formprod" method="post">
-		<input type="hidden" id=prod name="idprod">
+<form action="../Prod_especifico/especifico-transition.php" name="formprod" method="post">
+		<input type="hidden" id=prod name="id">
 	</form>
+    
 	<!--Productos 2-->
 	<div class="gridclmw mt-5">
 	<?php for($i=0 ; $i < count($listaproductos) ;  $i++    ){ ?>
