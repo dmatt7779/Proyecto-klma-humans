@@ -64,7 +64,7 @@ include "../../global/conexion.php";
                 <a href="#">LOUNGEWEAR</a>
             </div>
             <div>
-                <a href="#"><img src="../assets/img/menushop/Loungewear.png" alt=""></a>
+                <a href="../Rejillas_generales/loungewear.php"><img src="../assets/img/menushop/Loungewear.png" alt=""></a>
             </div>
             <div>
                 <a>CONFORT</a>
@@ -80,7 +80,7 @@ include "../../global/conexion.php";
                 <a href="#">CALMWEAR</a>
             </div>
             <div>
-                <a href="#"><img src="../assets/img/menushop/Calmwear.png" alt=""></a>
+                <a href="../Rejillas_generales/calmwear.php"><img src="../assets/img/menushop/Calmwear.png" alt=""></a>
             </div>
             <div>
                 <a>CALM</a>
@@ -93,10 +93,10 @@ include "../../global/conexion.php";
         <!-- TRANSITION -->
         <div class="text-center aboutlines3 p-5">
             <div>
-                <a href="#">TRANSITION</a>
+                <a href="">TRANSITION</a>
             </div>
             <div>
-                <a href="#"><img src="../assets/img/menushop/Transition.png" alt=""></a>
+                <a href="../Rejillas_generales/Transition.php"><img src="../assets/img/menushop/Transition.png" alt=""></a>
             </div>
             <div>
                 <a>EMOTIONAL</a>

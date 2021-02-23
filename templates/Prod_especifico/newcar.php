@@ -1,7 +1,5 @@
 <?php
 
-
-
 include "../../global/conexion.php";
 
 session_start();
@@ -12,16 +10,11 @@ $fecha =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
 
 $usuario = $_SESSION['correo'];
 
-if (!isset($usuario)) {
-    
-    header("location:../login/login.php");
-}
-
-
 
 
 $id = $_POST['id'];
 $talla = strtoupper($_POST['talla']);
+
 
 if ($talla == "") {
     ?>
@@ -33,8 +26,11 @@ if ($talla == "") {
     <?php
 }else{
    
-
 $iduser = $_SESSION['iduser'];
+if (empty($idusuario)) {
+    
+    header("location:../login/login.php");
+}
 
 $ventauser = $pdo->prepare("SELECT * FROM ventas where usuarios_id = '$iduser' and estado = '0';");
 
@@ -45,9 +41,6 @@ $opensale=$ventauser->fetchAll(PDO::FETCH_ASSOC);
 // validar si existe una venta y si no la hay se crea
 if (!isset($opensale[0]['id'])) {
     
-
-
-
 
     $insert = $pdo->prepare("INSERT INTO ventas (`subtotal`, `estado`, `fecha`, `envio`, `usuarios_id`) VALUES ('0', '0', '$fecha', '0', '$iduser');");
     $insert -> execute();
@@ -62,7 +55,6 @@ if (!isset($opensale[0]['id'])) {
     $idsale2 = $opensale2[0]['id'];
     
 
-
     $repetido = $pdo->prepare("SELECT productos_id, talla, cantidad FROM detalleventa where talla = '$talla' and ventas_id = $idsale2 and productos_id = $id;");
 
     $repetido -> execute();
@@ -74,11 +66,15 @@ if (!isset($opensale[0]['id'])) {
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`) VALUES ('1', '$id',  '$talla', '$idsale2');");
     $producto -> execute();
 
-     header("location:../main/menu2.php");
 
+    if (empty($iduser)) {
+    
+        header("location:../login/login.php");
+    }else{
+     header("location:../main/menu2.php");
+    }
 
     }else{
-
 
         $cantidad = $repetidos[0]['cantidad'] + 1;
 
@@ -87,14 +83,10 @@ if (!isset($opensale[0]['id'])) {
 
         $repetido_sum -> execute();
         
-            
-
-            
+                        
     }
 
 
-
-    
 
 }else {
 
@@ -110,20 +102,18 @@ if (!isset($opensale[0]['id'])) {
     if (empty($repetidos)) {
         
 
-
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`) VALUES ('1', '$id', '$talla', '$idsale');");
         $producto -> execute();
 
-        header("location:../main/menu2.php");
+        if (empty($iduser)) {
+    
+            header("location:../login/login.php");
+        }else{
+         header("location:../main/menu2.php");
+        }
 
 
-         
-
-
-
-
-
-
+        
     }else{
 
 
@@ -150,24 +140,19 @@ if (!isset($opensale[0]['id'])) {
 
     }
     
+    if (empty($iduser)) {
     
-    header("location:../main/menu2.php");
+        header("location:../login/login.php");
+    }else{
+     header("location:../main/menu2.php");
+    }
 
         
     }
 
-   
-
     
-    
-    
-
-    
-
 }
-   
 
-    
 
 }
 ?>

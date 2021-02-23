@@ -1,7 +1,5 @@
 <?php
 
-
-
 include "../../global/conexion.php";
 
 session_start();
@@ -12,13 +10,10 @@ $fecha =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
 
 $usuario = $_SESSION['correo'];
 
-if (!isset($usuario)) {
+if (empty($iduser)) {
     
     header("location:../login/login.php");
 }
-
-
-
 
 $id = $_POST['id'];
 $talla = strtoupper($_POST['talla']);
@@ -46,9 +41,6 @@ $opensale=$ventauser->fetchAll(PDO::FETCH_ASSOC);
 
 // validar si existe una venta y si no la hay se crea
 if (!isset($opensale[0]['id'])) {
-    
-
-
 
 
     $insert = $pdo->prepare("INSERT INTO ventas (`subtotal`, `estado`, `fecha`, `envio`, `usuarios_id`) VALUES ('0', '0', '$fecha', '0', '$iduser');");
@@ -74,13 +66,15 @@ if (!isset($opensale[0]['id'])) {
     if (empty($repetidos)) {
 
 
-
-
     $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`, `talla`, `ventas_id`, `genero`, `manga`) VALUES ('1', '$id',  '$talla', '$idsale2', '$genero', '$manga');");
     $producto -> execute();
 
+    if (empty($iduser)) {
+    
+        header("location:../login/login.php");
+    }else{
      header("location:../main/menu2.php");
-
+    }
 
     }else{
 
@@ -92,14 +86,11 @@ if (!isset($opensale[0]['id'])) {
 
         $repetido_sum -> execute();
         
-            
-
+    
             
         }
 
 
-
-    
 
 }else {
 
@@ -114,18 +105,15 @@ if (!isset($opensale[0]['id'])) {
 
     if (empty($repetidos)) {
         
-
-
         $producto = $pdo->prepare("INSERT INTO `detalleventa` ( `cantidad`, `productos_id`,  `talla`, `ventas_id`, `genero`, `manga`) VALUES ('1', '$id',  '$talla', '$idsale', '$genero', '$manga');");
         $producto -> execute();
 
-        header("location:../main/menu2.php");
-
-
-         
-
-
-
+        if (empty($iduser)) {
+    
+            header("location:../login/login.php");
+        }else{
+         header("location:../main/menu2.php");
+        }
 
 
 
@@ -152,27 +140,20 @@ if (!isset($opensale[0]['id'])) {
         
     $subtotal = $subtotal + ($key3['cantidad'] * $key3['precio_venta']);
 
-
     }
     
+    if (empty($iduser)) {
     
-    header("location:../main/menu2.php");
+        header("location:../login/login.php");
+    }else{
+     header("location:../main/menu2.php");
+    }
 
         
     }
 
    
-
-    
-    
-    
-
-    
-
 }
    
-
-    
-
 }
 ?>
