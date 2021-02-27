@@ -1,6 +1,13 @@
 <?php
 session_start();
 include "../../global/conexion.php";
+
+$usuario = $_SESSION['correo'];
+if (empty($usuario)) {
+    
+    header("location:../login/login.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

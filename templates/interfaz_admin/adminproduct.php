@@ -86,7 +86,7 @@ include "../../global/conexion.php";
                             <th>Fecha</th>                            
                             <th>Descripcion</th>
                             <th>Genero</th>
-                            <th>Imagen</th>                            
+                            <th>Campaña</th>                            
                             <th>Emocion</th>
                             <th>Cambiar Estado</th>
                         </tr>
@@ -158,7 +158,7 @@ include "../../global/conexion.php";
                             
                             <td><?php echo $producto['descripcion'] ?></td>
                             <td><?php echo $producto['genero'] ?></td>
-                            <td><?php echo $producto['imagen'] ?></td>
+                            <td><?php echo $producto['campaña'] ?></td>
                             
                             <td><?php echo $producto['emocion'] ?></td>
                             <td> <form action="estadoproducto.php" method="get">

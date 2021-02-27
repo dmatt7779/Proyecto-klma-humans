@@ -264,21 +264,65 @@ include "../../global/conexion.php";
 	<div id="white" class="contcampaigns mb-3">
 
 		<!-- Campaña 1 -->
+
+        <?php
+
+       $emociones = array(
+            "1" => "amor",
+            "2" => "tristeza",
+            "3" => "ira",
+            "4" => "felicidad",
+            "5" => "alegria",
+            "6" => "miedo"
+       );
+        $numero1 = mt_rand(1,6);
+        $numero2 = mt_rand(1,6);
+        $numero3 = mt_rand(1,6);
+        $numero4 = mt_rand(1,6);
+
+        $seleccion1 = mt_rand(0,3);
+        $seleccion2 = mt_rand(0,3);
+        $seleccion3 = mt_rand(0,3);
+        $seleccion4 = mt_rand(0,3);      
+        
+        
+        $emocion1 = $emociones[strval($numero1)];    
+        $emocion2 = $emociones[strval($numero2)];    
+        $emocion3 = $emociones[strval($numero3)];    
+        $emocion4 = $emociones[strval($numero4)];    
+       
+
+
+	$sentencia1 = $pdo->prepare("SELECT * FROM productos where habilitado = 1 and tipologia_id = 3 and emocion = '$emocion1'");
+    $sentencia1 -> execute();
+    $listaproductos1=$sentencia1->fetchAll(PDO::FETCH_ASSOC);
+
+    $sentencia2 = $pdo->prepare("SELECT * FROM productos where habilitado = 1 and tipologia_id = 3 and emocion = '$emocion2'");
+    $sentencia2 -> execute();
+    $listaproductos2=$sentencia2->fetchAll(PDO::FETCH_ASSOC);
+
+    $sentencia3 = $pdo->prepare("SELECT * FROM productos where habilitado = 1 and tipologia_id = 3 and emocion = '$emocion3'");
+    $sentencia3 -> execute();
+    $listaproductos3=$sentencia3->fetchAll(PDO::FETCH_ASSOC);
+
+    $sentencia4 = $pdo->prepare("SELECT * FROM productos where habilitado = 1 and tipologia_id = 3 and emocion = '$emocion4'");
+    $sentencia4 -> execute();
+    $listaproductos4=$sentencia4->fetchAll(PDO::FETCH_ASSOC);
+	?>
 		<div>
-			<a href="#">C1</a>
+			<a onclick="seecampain(<?php echo $listaproductos1[$seleccion1]['campaña']?>)" href="#">C<?php echo $listaproductos1[$seleccion1]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
-				<img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Ranglan.png" alt="producto">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos1[$seleccion1]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos1[$seleccion1]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
-		<!-- Campaña 2 -->
 		<div>
-			<a href="#">C2</a>
-			<div class="tshirtcampaigns mt-2 mb-2">
-				<img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Sisa.png" alt="producto">
+			<a onclick="seecampain(<?php echo $listaproductos2[$seleccion2]['campaña']?>)" href="#">C<?php echo $listaproductos2[$seleccion2]['campaña']?></a>
+			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos2[$seleccion2]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos2[$seleccion2]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
 		<!-- SPOTIFY -->
@@ -296,23 +340,32 @@ include "../../global/conexion.php";
 
 		<!-- Campaña 3 -->
 		<div>
-			<a href="#">C3</a>
-			<div class="tshirtcampaigns mt-2 mb-2">
-				<img src="../assets/img/test/resultemocion/miedo/T-shirt Manga Ranglan.png" alt="producto">
+			<a onclick="seecampain(<?php echo $listaproductos3[$seleccion3]['campaña']?>)" href="#">C<?php echo $listaproductos3[$seleccion3]['campaña']?></a>
+			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos3[$seleccion3]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos3[$seleccion3]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
 		<!-- Campaña 4 -->
 		<div>
-			<a href="#">C4</a>
-			<div class="tshirtcampaigns mt-2 mb-2">
-				<img  src="../assets/img/test/resultemocion/miedo/T-shirt Manga Sisa.png" alt="producto">
+			<a onclick="seecampain(<?php echo $listaproductos4[$seleccion4]['campaña']?>)" href="#">C<?php echo $listaproductos4[$seleccion4]['campaña']?></a>
+			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
+				<img src="../assets/img/prodgenerales/<?php echo $listaproductos4[$seleccion4]['imagen']; ?>" alt="producto">
 			</div>
-			<a href="#">VER PRODUCTO</a>
+			<a onclick="seeclothes(<?php echo $listaproductos4[$seleccion4]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 	</div>
 	<!-- FIN CAMPAÑAS -->
+
+    <form action="../Prod_especifico/especifico-transition.php" name="formclothes" method="post">
+			<input type="hidden" name="id" id="id">
+	</form>
+
+	<form action="../Rejillas_generales/capsulestest.php" name="formcapsule" method="post">
+			<input type="hidden" name="campaña" id="campaña">
+	</form>
+
 
 	<div class="introcontresult">
 		<div class="btn-blogshare">
@@ -448,6 +501,18 @@ function remove(idremove , cantidadold2){
 
 
 }
+</script>
+
+<script>
+	function seeclothes(id){
+		document.getElementById('id').value = id
+		document.formclothes.submit()
+	}
+
+	function seecampain(campain){
+		document.getElementById('campaña').value = campain
+		document.formcapsule.submit()
+	}
 </script>
 
 <!-- Ocultar y Mostrar redesociales o compartir -->
