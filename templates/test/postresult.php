@@ -3,7 +3,14 @@ session_start();
 include "../../global/conexion.php";
 
 
+
+if (!isset($_POST['emocion'])) {
+    
+    header("location:../main/menu2.php");
+	
+}
 $emocion = $_POST['emocion'];
+$_SESSION['emocion'] = $emocion;
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +27,16 @@ $emocion = $_POST['emocion'];
 	<link rel="stylesheet" href="sss/sss.css">
 </head>
 <body>
-<?php include "../navbar_footer/header.php";?>
+<?php include "../navbar_footer/header.php";
+
+$usuario = $_SESSION['correo'];
+if (empty($usuario)) {
+    
+    header("location:../login/login.php");
+}
+
+
+?>
 
 <!-- Scroll Bar personalizado -->
 <div id="scrollpostresults">

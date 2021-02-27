@@ -15,7 +15,12 @@ include "../../global/conexion.php";
     <title>KLMA' HUMANS</title>
 </head>
 <body>
-<?php include "../navbar_footer/header.php";?>
+<?php include "../navbar_footer/header.php";
+
+
+?>
+
+
 
 <!-- Contenido BLOG -->
 
