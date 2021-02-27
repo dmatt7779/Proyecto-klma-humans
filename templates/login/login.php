@@ -50,7 +50,7 @@ session_start();
             </div>
 
             <div class="forget-pass text-center mt-1">
-                <a href="">OLVIDÉ MI CONTRASEÑA</a>
+                <a href="recuperar.php">OLVIDÉ MI CONTRASEÑA</a>
             </div>
             
             <div class="mt-4 mb-4">
