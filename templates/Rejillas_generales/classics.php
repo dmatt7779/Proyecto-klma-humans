@@ -206,7 +206,7 @@ include "../../global/conexion.php";
 
 <?php 
 
-$sentencia = $pdo->prepare("SELECT imagen FROM classics");
+$sentencia = $pdo->prepare("SELECT imagen FROM classics WHERE habilitado = 1");
 $sentencia->execute();
 $classics = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 

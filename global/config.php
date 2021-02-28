@@ -1,6 +1,6 @@
 <?php
-    define("SERVIDOR","127.0.0.1:3307");
+    define("SERVIDOR","127.0.0.1:3306");
     define("USUARIO","root");
-    define("PASSWORD","admin");
+    define("PASSWORD","");
     define("BD","ejemplo");
 ?>

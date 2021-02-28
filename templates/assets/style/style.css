@@ -506,9 +506,10 @@ footer {
 }
 
 #footersuscribe {
-    letter-spacing: 1.3rem;
-    font-size: 5pt;
+    letter-spacing: 1rem;
+    font-size: 7pt;
     padding: 0% 0% 0% 2.6%;
+    text-align: left;
 }
 
 .socialfooter {
@@ -863,16 +864,16 @@ div.mainb{
 
 .hmcarousel-control-prev-icon {
     background-image: url(../img/flecha-izquierda.gif)!important;
-    width: 30px!important;
-    height: 30px!important;
+    width: 40px!important;
+    height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
 }
     
 .hmcarousel-control-next-icon {
     background-image: url(../img/flecha-derecha.gif)!important;
-    width: 30px!important;
-    height: 30px!important;
+    width: 40px!important;
+    height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
 }    
@@ -1839,7 +1840,7 @@ div.mainb{
     width: 15%;
     color: #fff;
     text-align: center;
-    opacity: .5;
+    opacity: 3.5;
     transition: opacity .15s ease;
 }
 /* ------------------------------FIN LOUNGEWEAR ------------------------  */
@@ -2102,13 +2103,16 @@ div.mainb{
 }
 /* ---------------------------- FIN Especifico CALMWEAR -------------------------- */
 
+/* ---------- Colores de iconos adminperson, adminproduct, adminclassics--------- */
+.fa-trash-alt:before {
+    content: "\f2ed";
+    color: #fff;
+}
 
-
-
-
-
-
-
+.fa-check:before {
+    content: "\f00c";
+    color: #fff;
+}
 
 
 

@@ -22,6 +22,7 @@ include "../../global/conexion.php";
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/datatables.min.css">
     <link rel="stylesheet" href="../assets/style/mydatatable.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
      
 </head>
 <body>
@@ -161,12 +162,12 @@ include "../../global/conexion.php";
                             <td><?php echo $producto['campaña'] ?></td>
                             
                             <td><?php echo $producto['emocion'] ?></td>
-                            <td> <form action="estadoproducto.php" method="get">
+                            <td> <form action="estadoproductoh.php" method="get" class="text-center">
                             <input type="hidden" name="id" value="<?php echo $producto['id'] ?>">
-                            <button class="btn btn-warning" onclick="myconfirmdes(event)" type="submit">deshabilitar</button>
-                            </form> <form action="estadoproductoh.php" method="get">
+                            <button class="btn" onclick="myconfirmhab(event)" type="submit"> <i class="fal fa-check"></i> </button>
+                            </form> <form action="estadoproducto.php" method="get" class="text-center">
                             <input type="hidden" name="id" value="<?php echo $producto['id'] ?>">
-                            <button class="btn btn-success" onclick="myconfirmhab(event)" type="submit">habilitar</button>
+                            <button class="btn" onclick="myconfirmdes(event)" type="submit"> <i class="fal fa-ban"></i> </button>
                             </form> </td>
                     </tr>
                     <?php } ?>                  
