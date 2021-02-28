@@ -28,7 +28,7 @@ include "../../global/conexion.php";
 
         <div class="navlogo2">
         <!-- <img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"> -->
-            <a href="h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
+            <a href="../main/h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
             
         </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -189,20 +189,6 @@ include "../../global/conexion.php";
 </div>
 <!-- FIN Carrito de compras -->
 
-<!---------- SCROLL BAR ---------->
-<div id="scrollabout">
-
-    <div id="scrolltitleabout">CLASSICS</div>
-
-    <!-- Track -->
-    <div class="scrolllightbar">
-
-    <!-- Thumbs -->
-        <div id="scrollwrap" class="scrollblock">
-        </div>
-    </div>
-</div>
-
 
 <?php 
 
@@ -278,25 +264,6 @@ $classics = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 </script>
 
-<!-- scroll bar -->
-<script>
-    $(window).scroll(function(event) {
-        var scrollTop = $(window).scrollTop()
-        $('#scrollwrap').css('top', scrollTop+'px')
-
-        if( scrollTop >= 260 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        } else if( scrollTop >= 0 ){
-            $('#scrollwrap').css('display', 'block')
-            $('#scrollwrap').parent().css('display', 'block')
-        } else if( scrollTop < 0 ){
-            $('#scrollwrap').css('display', 'none')
-            $('#scrollwrap').parent().css('display', 'none')
-        }
-    });
-</script>
-
 <!-- Sentences Slider-->
 <script>
 	jQuery(function($){
@@ -308,28 +275,28 @@ $classics = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 </script>
 
 <script>
-function eliminar(iddelete){
-   document.getElementById('eliminacion').value = iddelete;
-   document.formdeletecart.submit();
-}
+    function eliminar(iddelete){
+    document.getElementById('eliminacion').value = iddelete;
+    document.formdeletecart.submit();
+    }
 
-function add(idadd, cantidadold){
-    document.getElementById('suma').value = idadd;
-    document.getElementById('cantidad').value = cantidadold;
+    function add(idadd, cantidadold){
+        document.getElementById('suma').value = idadd;
+        document.getElementById('cantidad').value = cantidadold;
 
-   document.formaddonetocart.submit();
-
-
-}
-
-function remove(idremove , cantidadold2){
-    document.getElementById('resta').value = idremove;
-    document.getElementById('cantidad2').value = cantidadold2;
-
-   document.formremoveonetocart.submit();
+    document.formaddonetocart.submit();
 
 
-}
+    }
+
+    function remove(idremove , cantidadold2){
+        document.getElementById('resta').value = idremove;
+        document.getElementById('cantidad2').value = cantidadold2;
+
+    document.formremoveonetocart.submit();
+
+
+    }
 </script>
 
 <!-- Ocultar y Mostrar redesociales o compartir -->

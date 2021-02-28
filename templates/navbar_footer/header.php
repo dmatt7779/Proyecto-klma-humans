@@ -150,7 +150,15 @@
                 <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-            <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
+                <!-- INPUT PERSONALIZADO -->
+                <label class="custom-radio-tyc">
+                    <!-- Input oculto -->
+
+                    <input class="custom-radio-tyc__input" type="radio" required>
+                    <!-- Imagen en sustitucion -->
+                    <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
+                </label>
+            <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">
             <form action="../carrito de compras/finalpedido.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $ventaid ?>">
@@ -163,30 +171,38 @@
 </div>
 
 <script>
-function eliminar(iddelete){
-   document.getElementById('eliminacion').value = iddelete;
-   document.formdeletecart.submit();
-}
+    function eliminar(iddelete){
+    document.getElementById('eliminacion').value = iddelete;
+    document.formdeletecart.submit();
+    }
 
-function add(idadd, cantidadold){
-    document.getElementById('suma').value = idadd;
-    document.getElementById('cantidad').value = cantidadold;
+    function add(idadd, cantidadold){
+        document.getElementById('suma').value = idadd;
+        document.getElementById('cantidad').value = cantidadold;
 
-   document.formaddonetocart.submit();
-
-
-}
-
-function remove(idremove , cantidadold2){
-    document.getElementById('resta').value = idremove;
-    document.getElementById('cantidad2').value = cantidadold2;
-
-   document.formremoveonetocart.submit();
+    document.formaddonetocart.submit();
 
 
-}
+    }
+
+    function remove(idremove , cantidadold2){
+        document.getElementById('resta').value = idremove;
+        document.getElementById('cantidad2').value = cantidadold2;
+
+    document.formremoveonetocart.submit();
+
+
+    }
 </script>
 
-    
+<!-- Seleccionar terminos y condiciones -->
+<script>
+    $('#btnCart, #aAddCart').click(function() {
+        $('#divCart').css('visibility', 'visible')
+    });
+    $('#closecart').click(function() {
+        $('#divCart').css('visibility', 'hidden')
+    });
+</script>
 
 <!-- FIN Carrito de compras -->
