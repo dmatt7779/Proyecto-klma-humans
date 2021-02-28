@@ -17,7 +17,7 @@ include "../../global/conexion.php";
 <body>
 <?php include "../navbar_footer/header.php";?>
 
-<!-- --------------------------PRUEBA------------------------------------- -->
+<!-- -------------- SCROLL BAR ------------------------------ -->
 
 <div id="scrollblog">
 
@@ -31,19 +31,13 @@ include "../../global/conexion.php";
         </div>
     </div>
 </div>
+
 <?php
-        $sentencia = $pdo->prepare("SELECT * FROM frases");
-        $sentencia -> execute();
-        $listafrases=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+    $sentencia = $pdo->prepare("SELECT * FROM frases WHERE habilitado = 1");
+    $sentencia -> execute();
+    $listafrases=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+?>
 
-
-
-
-
-    ?>
-
-
-<!-- ---------------------------------------------------------------------------------------------- -->
 <?php
     $blogsend = "";
 ?>
@@ -80,7 +74,7 @@ include "../../global/conexion.php";
 
     <script>
         function idsend(blog,emocion,escritor,frase){
-            
+            debugger;
             document.getElementById('blog').value = blog;
             document.getElementById('emocion').value = emocion;
             document.getElementById('escritor').value = escritor;
