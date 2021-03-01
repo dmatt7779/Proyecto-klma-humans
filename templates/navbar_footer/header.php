@@ -100,9 +100,6 @@
 			    <i class="fal fa-times pr-2" style="font-size: 15px!important;" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
 		        </span>
                 <div class="cart-item">
-                <!-- <span class="close-cart"
-			    <i class="fal fa-times" onclick="eliminar(<//?php echo $detventa['id'] ?>)"></i>
-		        </span> -->
                     <div class="data-item">
                         <div class="plus-minus">
                             <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
@@ -119,7 +116,7 @@
                             }
                         
                         ?></h3>
-                         <h3>Manga <?php 
+                         <span class="cart-size">Manga <?php 
                             if(empty(($detventa['manga']))){
 
                                 echo "";
@@ -128,7 +125,7 @@
                                 echo $detventa['manga'];
                             }
                         
-                        ?></h3>
+                        ?></span>
 
                         <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
