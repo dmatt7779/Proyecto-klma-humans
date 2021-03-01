@@ -1,4 +1,4 @@
-global/*
-global/config.php
+/global/
 config.php
 conexion.php
+/global/config.php
