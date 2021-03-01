@@ -42,7 +42,7 @@ include "../../global/conexion.php";
 <form action="../Prod_especifico/especifico-calmwear.php" name="formprod" method="post">
 		<input type="hidden" id=prod name="idprod">
 	</form>
-	<!--Productos 2-->
+	<!--Productos -->
 	<div class="gridclmw mt-5">
 	<?php for($i=0 ; $i < count($listaproductos) ;  $i++    ){ ?>
 		<div style="margin-bottom: 15%;" class="card-clmw">

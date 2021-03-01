@@ -60,11 +60,15 @@ if (!isset($_SESSION['correo'])) {
                             <th>id</th>
                             <th>nombre</th>                
                             <th>imagen</th>
+                            <th>habilitado</th>
+                            <th>cambiar Estado</th>
                                                
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
@@ -84,7 +88,29 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $classics['id'] ?></td>
                             <td><?php echo $classics['nombre'] ?></td>
                             <td><?php echo $classics['imagen'] ?></td>
-                                                      
+                            <td class="text-center"><?php switch($classics['habilitado']){
+                                case '1':
+                                    
+                                    echo 'habilitado';
+                                    break;
+                                case '0':
+                                    echo 'deshabilitado';
+                                    break;
+                              
+                                default:
+                                    break;
+
+                            }?></td>
+                            <td> <form action="estadoclassicsh.php" method="get" class="text-center">
+                            <input type="hidden" name="id" value="<?php echo $classics['id'] ?>">
+                            <button class="btn" onclick="myconfirmhab(event)" type="submit"> <i class="fal fa-check"></i> </button>
+                            </form> <form action="estadoclassics.php" method="get" class="text-center">
+                            <input type="hidden" name="id" value="<?php echo $classics['id'] ?>">
+                            <button class="btn" onclick="myconfirmdes(event)" type="submit"> <i class="fal fa-ban"></i> </button>
+                            </form> <form action="borrarclassics.php" method="post" class="text-center">
+                            <input type="hidden" name="id" value="<?php echo $classics['id'] ?>">
+                            <button class="btn"  onclick="myconfirm(event)" type="submit"> <i class="far fa-trash-alt"></i></button>
+                            </form> </td>                                                 
                     </tr>
                     <?php } ?>                  
                 </tbody>

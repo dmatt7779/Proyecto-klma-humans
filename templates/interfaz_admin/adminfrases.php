@@ -34,7 +34,8 @@ if (!isset($_SESSION['correo'])) {
                 <input type="text" name="frase" placeholder="frase">
                 <input type="text" name="escritor" placeholder="escritor">
                 <input type="text" name="emocion" placeholder="emocion">
-                <input type="text" name="blog" placeholder="blog">
+<!--                 <input type="text" name="blog" placeholder="blog"> -->
+                <textarea rows="5" type="text" name="blog" placeholder="blog"></textarea>
 
                 </div>
 
@@ -64,7 +65,8 @@ if (!isset($_SESSION['correo'])) {
                             <th>escritor</th>
                             <th>emocion</th>
                             <th>blog</th>
-
+                            <th>Habilitado</th>
+                            <th>Cambiar Estado</th>
                                                      
                         </tr>
                     </thead>
@@ -75,8 +77,8 @@ if (!isset($_SESSION['correo'])) {
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
-
-                           
+                            <th>Filter..</th>
+                            <th>Filter..</th>
                             
                         </tr>
                     </tfoot>
@@ -95,6 +97,27 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $frase['escritor'] ?></td>
                             <td><?php echo $frase['emocion'] ?></td>
                             <td><?php echo $frase['blog'] ?></td>
+                            <td><?php switch($frase['habilitado']){
+                                case '1':
+                                    
+                                    echo 'habilitado';
+                                    break;
+                                case '0':
+                                    echo 'deshabilitado';
+                                    break;
+                              
+                                default:
+                                    break;
+
+                            }?></td>
+
+                            <td> <form action="estadofrase.php" method="get" class="text-center">
+                                <input type="hidden" name="id" value="<?php echo $frase['id'] ?>">
+                                <button class="btn" onclick="myconfirmdes(event)" type="submit"><i class="fal fa-ban"></i></button>
+                                </form> <form action="estadofraseh.php" method="get" class="text-center">
+                                <input type="hidden" name="id" value="<?php echo $frase['id'] ?>">
+                                <button class="btn" onclick="myconfirmhab(event)" type="submit"><i class="fal fa-check"></i></button>
+                            </form> </td>
                            
                     </tr>
                     <?php } ?>                  

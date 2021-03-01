@@ -506,9 +506,10 @@ footer {
 }
 
 #footersuscribe {
-    letter-spacing: 1.3rem;
-    font-size: 5pt;
+    letter-spacing: 1rem;
+    font-size: 7pt;
     padding: 0% 0% 0% 2.6%;
+    text-align: left;
 }
 
 .socialfooter {
@@ -863,16 +864,16 @@ div.mainb{
 
 .hmcarousel-control-prev-icon {
     background-image: url(../img/flecha-izquierda.gif)!important;
-    width: 30px!important;
-    height: 30px!important;
+    width: 40px!important;
+    height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
 }
     
 .hmcarousel-control-next-icon {
     background-image: url(../img/flecha-derecha.gif)!important;
-    width: 30px!important;
-    height: 30px!important;
+    width: 40px!important;
+    height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
 }    
@@ -1132,51 +1133,53 @@ div.mainb{
     width: 150%;
 }
 
-.contactform input::placeholder,.contactform textarea::placeholder {
+.contactform input::placeholder, .contactform textarea::placeholder {
     font-family: "MoristonPersonal-Medium";
     font-size: 6pt;
-    text-align: center;
     color: rgb(0, 0, 0);
     opacity: 60%;
 }
 
-.contactform input {
-    text-align: center;
+.contactform > input {
+    font-family: "MoristonPersonal-Medium";
+    letter-spacing: .5rem;
+    font-size: 8pt;
+    text-align: left;
     height: 40px;
     border: 1px solid #000000;
     border-radius: 8px;
     outline: none;
     box-shadow: none;
-    padding: 0% 0% 1% 0%;
+    padding: 0% 4% 0% 2.5%;
 }
 
 .contactform textarea {
-    text-align: center;
+    font-size: 10pt;
     height: 150px;
     border: 1px solid #000000;
     border-radius: 8px;
     outline: none;
     box-shadow: none;
-    padding: 5% 0% 0% 5%;
-    letter-spacing: 3.0rem;
+    letter-spacing: .5rem;
+    padding: 4% 4% 0% 3%;
 }
 
 .contactform input:nth-child(1)::placeholder {
-    letter-spacing: 1.1rem;
-    padding: 0% 4% 0% 5%;
+    letter-spacing: 2.522222rem;
+    padding-top: 4%;
     text-align: left;
 }
 
 .contactform input:nth-child(2)::placeholder {
-    letter-spacing: 0.5rem;
+    letter-spacing: .5rem;
     word-spacing: .5rem;
-    padding: 0% 4% 0% 3%;
+    padding-top: 4%;
     text-align: left;
 }
 
 .contactform textarea:nth-child(3)::placeholder {
     text-align: left;
-    letter-spacing: 1.1rem;
+    letter-spacing: 2.088888rem;
 }
 
 .contactform > .btnformcontact {
@@ -1552,6 +1555,38 @@ div.mainb{
 .custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
     background-image: url(../img/esp_lg/check.png);
 }
+
+/* Centra el input TYC personalizado con el texto */
+.custom-radio-tyc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5rem 0% -2% 0%;
+}
+
+/* Modificador para dar la imagen de radio */
+.custom-radio-tyc__show--radio {
+    background-image: url(../img/nav_foot/tyc01.png);
+}
+
+/* Oculta input original */
+.custom-radio-tyc > .custom-radio-tyc__input {
+    display: none;
+}
+
+/* Radio personalizado usando <span> */
+.custom-radio-tyc > .custom-radio-tyc__show {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+}
+
+/* Cambia el radio personalizado cuando es pulsado */
+.custom-radio-tyc > .custom-radio-tyc__input:checked + .custom-radio-tyc__show--radio {
+    background-image: url(../img/nav_foot/tyc02.png);
+}
+
 /* ----------------------------------FIN INPUT PERSONALIZADO---------------------------------------------------- */
 
 .btn-size, .btn-size:focus {
@@ -1839,7 +1874,7 @@ div.mainb{
     width: 15%;
     color: #fff;
     text-align: center;
-    opacity: .5;
+    opacity: 3.5;
     transition: opacity .15s ease;
 }
 /* ------------------------------FIN LOUNGEWEAR ------------------------  */
@@ -2102,13 +2137,16 @@ div.mainb{
 }
 /* ---------------------------- FIN Especifico CALMWEAR -------------------------- */
 
+/* ---------- Colores de iconos adminperson, adminproduct, adminclassics--------- */
+.fa-trash-alt:before {
+    content: "\f2ed";
+    color: #fff;
+}
 
-
-
-
-
-
-
+.fa-check:before {
+    content: "\f00c";
+    color: #fff;
+}
 
 
 
@@ -2213,12 +2251,12 @@ body::-webkit-scrollbar-thumb {
 .gridtlin {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 120px);
+    grid-template-rows: repeat(1, 140px);
     column-gap: 4rem;
     margin-left: auto;
     margin-right: auto;
-    flex:2;
-    overflow:auto;
+    flex: 2;
+    overflow: auto;
     z-index: 300;
     margin-bottom: -10%;
 }
@@ -2693,7 +2731,7 @@ body::-webkit-scrollbar-thumb {
 .cart-footer p{
     font-family: "Helvetica";
     font-size: 6.5pt;
-    letter-spacing: .5rem;
+    letter-spacing: .424444rem;
     text-align: justify;
     margin-bottom: 5%;
 }
@@ -3648,6 +3686,20 @@ hr {
 }
 
 /* -----------------------------Configuración resultado especifico Test----------------------------- */
+
+.newdata > textarea {
+    font-size: 10pt;
+    height: 150px;
+    width: 500%;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    letter-spacing: .5rem;
+    padding: 4% 4% 0% 3%;
+}
+
+
 .introcontresult {
     display: flex;
     flex-direction: column;
@@ -4180,7 +4232,7 @@ hr {
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 230px;
+    top: 173px;
     position: relative;
     bottom: 0;
     left: -13px;

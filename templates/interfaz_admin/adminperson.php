@@ -100,9 +100,9 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $usuario['clave'] ?></td>
                             <td><?php echo $usuario['rol'] ?></td>
                             <td><?php echo $usuario['fecha_registro'] ?></td>
-                            <td> <form action="borrarusuario.php" method="post">
+                            <td> <form action="borrarusuario.php" method="post" class="text-center">
                             <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
-                            <button class="btn btn-danger"  onclick="myconfirm(event)" type="submit">borrar</button>
+                            <button class="btn"  onclick="myconfirm(event)" type="submit"> <i class="far fa-trash-alt"></i></button>
                             </form> </td>
                     </tr>
                     <?php } ?>                  

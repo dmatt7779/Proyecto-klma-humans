@@ -191,7 +191,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                     <!-- Input oculto -->
 
                     
-                    <input  onclick="enviar_empaque()" class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
+                    <input class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
                     <!-- Imagen en sustitucion -->
                     <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
                 </label>
@@ -290,8 +290,6 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             $(this).addClass('talla-active');
         })
     </script>
-
-
 
     <!-- Funcion para seleccionar Empaque Especial -->
     <script>
