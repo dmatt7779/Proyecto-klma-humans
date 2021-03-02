@@ -479,28 +479,28 @@ include "../../global/conexion.php";
 </script>
 
 <script>
-function eliminar(iddelete){
-   document.getElementById('eliminacion').value = iddelete;
-   document.formdeletecart.submit();
-}
+    function eliminar(iddelete){
+    document.getElementById('eliminacion').value = iddelete;
+    document.formdeletecart.submit();
+    }
 
-function add(idadd, cantidadold){
-    document.getElementById('suma').value = idadd;
-    document.getElementById('cantidad').value = cantidadold;
+    function add(idadd, cantidadold){
+        document.getElementById('suma').value = idadd;
+        document.getElementById('cantidad').value = cantidadold;
 
-   document.formaddonetocart.submit();
-
-
-}
-
-function remove(idremove , cantidadold2){
-    document.getElementById('resta').value = idremove;
-    document.getElementById('cantidad2').value = cantidadold2;
-
-   document.formremoveonetocart.submit();
+    document.formaddonetocart.submit();
 
 
-}
+    }
+
+    function remove(idremove , cantidadold2){
+        document.getElementById('resta').value = idremove;
+        document.getElementById('cantidad2').value = cantidadold2;
+
+    document.formremoveonetocart.submit();
+
+
+    }
 </script>
 
 <script>

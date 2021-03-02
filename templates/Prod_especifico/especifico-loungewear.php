@@ -36,7 +36,6 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     <?php require "../navbar_footer/header.php"; ?>
 
     <!-- Scroll Bar personalizado -->
-
     <div id="scrolllg">
 
         <div id="scrolltitlelg">LOUNGEWEAR</div>
@@ -191,7 +190,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                     <!-- Input oculto -->
 
                     
-                    <input class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
+                    <input onclick="enviar_empaque()" class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
                     <!-- Imagen en sustitucion -->
                     <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>
                 </label>
@@ -206,10 +205,10 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                             <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/icicle_ss2020_natural.jpg" alt="">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2">
-                                <button class="btn-change">S</button>
-                                <button class="btn-change">M</button>
-                                <button class="btn-change">L</button>
-                                <button class="btn-change">XL</button>
+                                <button id="sizeS" class="btn-change">S</button>
+                                <button id="sizeM" class="btn-change">M</button>
+                                <button id="sizeL" class="btn-change">L</button>
+                                <button id="sizeXL" class="btn-change">XL</button>
                             </div>
                         </div>
                     </div>
@@ -227,10 +226,30 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+    <!-- TALLAS BOTONES BLACK CONTAINER -->
+    <script>
+
+    function showsizes() {
+
+        let routesizes = "../assets/img/prodgenerales/prod_esp/"
+
+        jQuery( function( $ ){
+            if( '#sizeM', '#sizeL', '#sizeXL').attr('hidden'){
+                $('#logoshopnav').attr( 'src', routesizes + 'Shop-White.gif');
+                $('#logomainnav').attr( 'hidden', true );
+                $('#lbtngo-test').removeAttr( 'hidden' );
+            }else if(windowPosition < 870) {
+                $('#logoshopnav').attr( 'src', routesizes + 'shop.gif' );
+                $('#logomainnav').removeAttr( 'hidden' );
+            }
+        })
+    }
+
+</script>
+
     <!-- Empaque Especial -->
     <script>
         function enviar_empaque() {
-
             document.empaque.submit()
         }
     </script>
@@ -248,7 +267,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         }
     </script>
 
-    <!-- Script para ocultar obejtos HTML -->
+    <!-- Script para ocultar objetos HTML -->
     <script>
         $('button[name="bntOpciones"]').click(function() {
             var

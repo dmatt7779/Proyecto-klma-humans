@@ -147,12 +147,12 @@
                 <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <!-- INPUT PERSONALIZADO -->
+                <!-- INPUT PERSONALIZADO-->
                 <label class="custom-radio-tyc">
-                    <!-- Input oculto -->
+                     <!-- Input oculto  -->
 
-                    <input class="custom-radio-tyc__input" type="radio" required>
-                    <!-- Imagen en sustitucion -->
+                    <input class="custom-radio-tyc__input" type="radio">
+                     <!--Imagen en sustitucion -->
                     <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
                 </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
@@ -190,16 +190,6 @@
 
 
     }
-</script>
-
-<!-- Seleccionar terminos y condiciones -->
-<script>
-    $('#btnCart, #aAddCart').click(function() {
-        $('#divCart').css('visibility', 'visible')
-    });
-    $('#closecart').click(function() {
-        $('#divCart').css('visibility', 'hidden')
-    });
 </script>
 
 <!-- FIN Carrito de compras -->

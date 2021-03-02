@@ -263,6 +263,15 @@ body {
     text-decoration: none !important;
 }
 
+.noRobot {
+    height: 100vh;
+}
+.captchaClass{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 /* ----------------------------------REGISTRO------------------------- */
 
 /* ------------------------------INICIO NAVBAR------------------------------------- */
@@ -1578,8 +1587,8 @@ div.mainb{
 
 /* Radio personalizado usando <span> */
 .custom-radio-tyc > .custom-radio-tyc__show {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     background-size: cover;
 }
 
@@ -1649,8 +1658,8 @@ div.mainb{
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 10pt;
-    letter-spacing: .7rem;
+    font-size: 8pt;
+    letter-spacing: 1.11111rem;
     z-index: 100;
     margin: 0% 0% 6% 7%;
     position: relative;
@@ -1710,16 +1719,16 @@ div.mainb{
 
 /* Contenedor para el boton de las tallas */
 .contentsize {
-    width: 170%;
+    width: 140%;
     height: 470px;
     color: #ffffff;
     background-color: rgb(26,24,24);
-    box-shadow: 10px 5px 20px rgb(0, 0, 0);
+    box-shadow: 10px 5px 20px rgb(0 0 0);
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 8pt;
     position: absolute;
-    right: -40px;
+    right: -25px;
     bottom: -25px;
 }
 
@@ -2650,7 +2659,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     text-align: end;
-    font-size: 6pt;
+    font-size: 9pt;
     letter-spacing: .2rem;
   }
 
@@ -2658,7 +2667,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0.5rem 0 0 0;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 11pt;
+    font-size: 6pt;
     letter-spacing: .5rem;
     text-align: end;
     padding: 0% 0% 0% 5%;
@@ -3132,6 +3141,12 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.introline > h1 {
+    color: #c89c91;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
 }
 
 .introline > img {
@@ -4190,6 +4205,18 @@ hr {
     left: -31px;
 }
 
+#scrolltitlegenlg {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 7pt;
+    top: 140px;
+    position: relative;
+    bottom: 0;
+    left: -18px;
+}
+
 .scrolllightbarglg {
     width: 1px;
     height: 215px;
@@ -4198,7 +4225,7 @@ hr {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -2px;
+    left: 5px;
 }
 
 /* Scroll LOUNGEWEAR Especifico */

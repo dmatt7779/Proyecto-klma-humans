@@ -23,7 +23,7 @@ include "../../global/conexion.php";
 
 <div id="scrolllg">
 
-    <div id="scrolltitlelg">LOUNGEWEAR</div>
+    <div id="scrolltitlegenlg">LOUNGEWEAR</div>
 
     <!-- Track -->
     <div class="scrolllightbarglg">
