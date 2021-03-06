@@ -19,6 +19,7 @@ if (!isset($_SESSION['correo'])) {
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/datatables.min.css">
     <link rel="stylesheet" href="../assets/style/mydatatable.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
 <?php include "../navbar_footer/header.php";?>
@@ -39,7 +40,7 @@ if (!isset($_SESSION['correo'])) {
             </div>
             <div class="introline mb-4 mt-4">
             
-                <h1 style="color: black;">Pagados</h1>
+                <h1>PAGADOS</h1>
             </div>
         </div>
 
@@ -61,8 +62,8 @@ if (!isset($_SESSION['correo'])) {
                             <th>Fecha</th>
                             <th>Envío</th>
                             <th>id usuario</th>
-                            <th>Envio</th>
-                            <th>Entrega</th>
+                            <th>Enviado</th>
+                            <th>Entregado</th>
                                                         
                         </tr>
                     </thead>
@@ -111,15 +112,15 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $venta['usuarios_id'] ?></td>
                             
                             <td>
-                             <form action="estadoventaenvio.php" method="get">
+                             <form action="estadoventaenvio.php" method="get" class="text-center">
                             <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
-                            <button class="btn btn-info" onclick="myconfirmenv(event)"  type="submit">Enviado</button>
+                            <button class="btn" onclick="myconfirmenv(event)"  type="submit"><i class="fas fa-truck"></i></button>
                             </form>
                             </td>
                             <td>
-                            <form action="estadoventaentrega.php" method="get">
+                            <form action="estadoventaentrega.php" method="get" class="text-center">
                             <input type="hidden" name="id" value="<?php echo $venta['id'] ?>">
-                            <button class="btn btn-success" onclick="myconfirment(event)"  type="submit">Entregado</button>
+                            <button class="btn" onclick="myconfirment(event)"  type="submit"><i class="fas fa-box-open"></i></button>
                             </form>
                              </td>
                         

@@ -100,9 +100,6 @@
 			    <i class="fal fa-times pr-2" style="font-size: 15px!important;" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
 		        </span>
                 <div class="cart-item">
-                <!-- <span class="close-cart"
-			    <i class="fal fa-times" onclick="eliminar(<//?php echo $detventa['id'] ?>)"></i>
-		        </span> -->
                     <div class="data-item">
                         <div class="plus-minus">
                             <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
@@ -119,7 +116,7 @@
                             }
                         
                         ?></h3>
-                         <h3>Manga <?php 
+                         <span class="cart-size">Manga <?php 
                             if(empty(($detventa['manga']))){
 
                                 echo "";
@@ -128,7 +125,7 @@
                                 echo $detventa['manga'];
                             }
                         
-                        ?></h3>
+                        ?></span>
 
                         <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
@@ -150,12 +147,12 @@
                 <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <!-- INPUT PERSONALIZADO -->
+                <!-- INPUT PERSONALIZADO-->
                 <label class="custom-radio-tyc">
-                    <!-- Input oculto -->
+                     <!-- Input oculto  -->
 
-                    <input class="custom-radio-tyc__input" type="radio" required>
-                    <!-- Imagen en sustitucion -->
+                    <input class="custom-radio-tyc__input" type="radio">
+                     <!--Imagen en sustitucion -->
                     <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
                 </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
@@ -193,16 +190,6 @@
 
 
     }
-</script>
-
-<!-- Seleccionar terminos y condiciones -->
-<script>
-    $('#btnCart, #aAddCart').click(function() {
-        $('#divCart').css('visibility', 'visible')
-    });
-    $('#closecart').click(function() {
-        $('#divCart').css('visibility', 'hidden')
-    });
 </script>
 
 <!-- FIN Carrito de compras -->

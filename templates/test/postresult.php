@@ -10,6 +10,15 @@ if (!isset($_POST['emocion'])) {
 	
 }
 $emocion = $_POST['emocion'];
+
+
+$sql = "INSERT INTO respuestas  (respuesta) VALUES ('$emocion')";
+
+$sentencia = $pdo->prepare( $sql );
+$sentencia -> execute();
+
+
+
 $_SESSION['emocion'] = $emocion;
 
 ?>
