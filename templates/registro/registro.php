@@ -6,6 +6,7 @@
     };
 
     include "../../global/conexion.php";
+    include "recaptcha.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,7 +29,7 @@
                 <div class="img-register"></div>
         </div>
 
-        <form class="login-form" action="guardar.php" method="POST">
+        <form id="register-form" class="login-form" action="noRobot.php" method="POST"><!-- guardar.php -->
 
             <div class="logpass">
                 <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
@@ -46,8 +47,8 @@
             <div class="mt-4 mb-4">
                 <div class="img-barras"></div>
             </div>
-
-            <button class="btn btn-submit" type="submit">REGISTRARME</button>                                
+            <input type="hidden" name="google-response-token" id="google-response-token">
+            <button onclick="noRobot()" class="btn btn-submit" type="submit">REGISTRARME</button>                                
 
             <div class="sign-up text-center">
                 <a href="../login/login.php">REGRESAR</a>
@@ -61,6 +62,37 @@
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
+
+<!-- Recaptcha $_POST -->
+    <script>
+        function register() {
+
+            var form = $('#register-form');
+            var url = form.attr('action')
+
+            $.ajax({
+                type: "POST",
+                url: 'noRobot.php',
+                data: form.serialize(),
+                success: function(data)
+                {
+                    console.log("Falló")
+                }
+            });
+        }
+    </script>
+
+<!-- Recaptcha Function -->
+    <script>
+        grecaptcha.ready(function() {
+        grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'submit'})
+        .then(function(token) {
+            //console.log(token);
+            $('#google-response-token').val(token);
+        });
+        });
+    </script>
     
     <!-- Mostrar y ocultar contraseña-->
     <script type="text/javascript">

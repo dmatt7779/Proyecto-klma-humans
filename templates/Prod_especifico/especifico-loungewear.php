@@ -1,21 +1,21 @@
 <?php
-include "../../global/conexion.php";
-session_start();
-$id = $_POST['id'];
+    include "../../global/conexion.php";
+    session_start();
+    $id = $_POST['id'];
 
-if (empty($id)) {
-    header("location:../Rejillas_generales/loungewear.php");
-}
+    if (empty($id)) {
+        header("location:../Rejillas_generales/loungewear.php");
+    }
 
-$sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
-$sentencia->execute();
-$producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    $sentencia = $pdo->prepare("SELECT * FROM productos where id = $id");
+    $sentencia->execute();
+    $producto = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-$idempaque = $producto[0]['empaque'];
+    $idempaque = $producto[0]['empaque'];
 
-$queryempaque = $pdo->prepare("SELECT * FROM productos where id = $idempaque");
-$queryempaque->execute();
-$empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
+    $queryempaque = $pdo->prepare("SELECT * FROM productos where id = $idempaque");
+    $queryempaque->execute();
+    $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +28,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -202,9 +201,9 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="elemento4">
                     <div class="btn-opciones">
                         <div class="contentsize" id="divSize" hidden>
-                            <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/icicle_ss2020_natural.jpg" alt="">
+                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/icicle_ss2020_natural.jpg" alt="">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
-                            <div class="btn-sizes2">
+                            <div class="btn-sizes2" id="">
                                 <button id="sizeS" class="btn-change">S</button>
                                 <button id="sizeM" class="btn-change">M</button>
                                 <button id="sizeL" class="btn-change">L</button>
@@ -227,102 +226,98 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- TALLAS BOTONES BLACK CONTAINER -->
-    <script>
+<script>
+    let routesizes = "../assets/img/prodgenerales/prod_esp/loungewear/"
 
-    function showsizes() {
-
-        let routesizes = "../assets/img/prodgenerales/prod_esp/"
-
-        jQuery( function( $ ){
-            if( '#sizeM', '#sizeL', '#sizeXL').attr('hidden'){
-                $('#logoshopnav').attr( 'src', routesizes + 'Shop-White.gif');
-                $('#logomainnav').attr( 'hidden', true );
-                $('#lbtngo-test').removeAttr( 'hidden' );
-            }else if(windowPosition < 870) {
-                $('#logoshopnav').attr( 'src', routesizes + 'shop.gif' );
-                $('#logomainnav').removeAttr( 'hidden' );
-            }
-        })
-    }
-
+    $('#sizeS').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'icicle_ss2020_natural.jpg');
+    }) 
+    $('#sizeM').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'Btn_See_Sizes.jpg');
+    }) 
+    $('#sizeL').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'icicle_ss2020_natural.jpg');
+    }) 
+    $('#sizeXL').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'Btn_See_Sizes.jpg');
+    });
 </script>
 
     <!-- Empaque Especial -->
-    <script>
-        function enviar_empaque() {
-            document.empaque.submit()
-        }
-    </script>
+<script>
+    function enviar_empaque() {
+        document.empaque.submit()
+    }
+</script>
 
     <!-- Check  -->
-    <script>
-        function prueba() {
-            var isChecked = document.getElementById('test').checked;
-            if (isChecked) {
-                window.location.href = "../carrito de compras/pagos1.php"
-            } else {
+<script>
+    function prueba() {
+        var isChecked = document.getElementById('test').checked;
+        if (isChecked) {
+            window.location.href = "../carrito de compras/pagos1.php"
+        } else {
 
-                alert("para proceder a finalizar el pedido debe aceptar los terminos y condiciones")
-            }
+            alert("para proceder a finalizar el pedido debe aceptar los terminos y condiciones")
         }
-    </script>
+    }
+</script>
 
     <!-- Script para ocultar objetos HTML -->
-    <script>
-        $('button[name="bntOpciones"]').click(function() {
-            var
-                Target = $(this).attr('data-target'),
-                Elemento = $('#' + Target),
-                Atributo = $('#' + Target).attr('hidden')
+<script>
+    $('button[name="bntOpciones"]').click(function() {
+        var
+            Target = $(this).attr('data-target'),
+            Elemento = $('#' + Target),
+            Atributo = $('#' + Target).attr('hidden')
 
-            if (Atributo !== false && typeof Atributo !== 'undefined') {
-                Elemento.removeAttr('hidden')
-            } else {
+        if (Atributo !== false && typeof Atributo !== 'undefined') {
+            Elemento.removeAttr('hidden')
+        } else {
 
-                Elemento.attr('hidden', true)
-            }
-        });
-    </script>
+            Elemento.attr('hidden', true)
+        }
+    });
+</script>
 
     <!-- Script para cambiar botones de color White to Black -->
-    <script>
-        //Boton para ver Empaque Especial
-        $("#btn-chance").click(function() {
-            $(this).toggleClass("btn-empaque btn-empaque2");
-        });
+<script>
+    //Boton para ver Empaque Especial
+    $("#btn-chance").click(function() {
+        $(this).toggleClass("btn-empaque btn-empaque2");
+    });
 
-        //Boton para ver detalles
-        $("#btn-details-prod").click(function() {
-            $(this).toggleClass("btn-details-prod btn-details-prod2");
-        });
+    //Boton para ver detalles
+    $("#btn-details-prod").click(function() {
+        $(this).toggleClass("btn-details-prod btn-details-prod2");
+    });
 
-        //Boton para ver tallas
-        $("#btn-size").click(function() {
-            $(this).toggleClass("btn-size btn-size2");
-        });
-    </script>
+    //Boton para ver tallas
+    $("#btn-size").click(function() {
+        $(this).toggleClass("btn-size btn-size2");
+    });
+</script>
 
     <!-- Script para seleccionar tallas -->
-    <script type="text/javascript">
-        $('#divTalla').find('.aTalla').click(function() {
-            $('.aTalla').removeClass('talla-active');
-            $(this).addClass('talla-active');
-        })
-    </script>
+<script type="text/javascript">
+    $('#divTalla').find('.aTalla').click(function() {
+        $('.aTalla').removeClass('talla-active');
+        $(this).addClass('talla-active');
+    })
+</script>
 
     <!-- Funcion para seleccionar Empaque Especial -->
-    <script>
-        $('#btnCart, #aAddCart').click(function() {
-            $('#divCart').css('visibility', 'visible')
-        });
-        $('#closecart').click(function() {
-            $('#divCart').css('visibility', 'hidden')
-        });
-    </script>
+<script>
+    $('#btnCart, #aAddCart').click(function() {
+        $('#divCart').css('visibility', 'visible')
+    });
+    $('#closecart').click(function() {
+        $('#divCart').css('visibility', 'hidden')
+    });
+</script>
 
-    <script src="../assets/js/carrito.js"></script>
+<script src="../assets/js/carrito.js"></script>
 </body>
-
 </html>
 
 <?php include "../navbar_footer/footer.php"; ?>
