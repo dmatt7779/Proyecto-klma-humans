@@ -4377,7 +4377,7 @@ hr {
         } */
     }
 
-    @media screen and (max-width: 1220px){
+    @media screen and (max-width: 1200px){
         .gridclmw{
             column-gap: 8rem;
             margin: 5.5%;
@@ -4392,6 +4392,11 @@ hr {
             height: 30vw;
             max-width: 100%;
         }
+
+        .card-body{
+            margin-right: -6%;
+        }
+
     }
 
     @media screen and (max-width: 992px){
@@ -4422,6 +4427,7 @@ hr {
             height: 30vw;
             max-width: 100%;
         }
+
     }
 
     /*Móviles*/
@@ -4507,4 +4513,27 @@ hr {
         }
     }
 
+      /*-----------Responsive MAC----------------------*/
+            /*---------Calmwear-----------*/
+
+      @media screen and (max-width: 1280px){
+        .card > p{
+            margin-right: -8%;
+        }
+
+        /*---------Longewear-----------*/
+            /* .price-horizontal, .card-title > .card-title:hover{
+                margin-right: -11%;
+            
+            } */
+            /* .card{
+                margin-left: 403px;
+                margin-right: 376px;
+            }
+
+            .card-title{
+                margin-right: -11%;
+            } */
+
+      }   
         /* Navbar con Bootstrap */
