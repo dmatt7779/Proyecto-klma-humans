@@ -26,7 +26,6 @@ include "../../global/conexion.php";
         </div>
 
         <div class="navlogo2">
-        <!-- <img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"> -->
             <a href="h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
             <a href="../test/test.php" id="lbtngo-test" class="btn btnGoTest" hidden>HACER TEST</a>
         </div>
@@ -62,7 +61,7 @@ include "../../global/conexion.php";
 
 		<div class="cart-content">
 			<!-- Cart items -->
-<?php
+    <?php
             if(!empty($_SESSION['iduser'])){
 
             $iduser = $_SESSION['iduser'] ;    
@@ -90,9 +89,9 @@ include "../../global/conexion.php";
 
             
 
-?> 
+    ?> 
 
-<!-- formulario de eliminacion -->
+    <!-- formulario de eliminacion -->
     <form action="../interfaz_cliente/deletecart.php" method="post" name="formdeletecart">
                     <input type="hidden" id="eliminacion" name="iddetalleventa" >                    
     </form>
@@ -107,7 +106,7 @@ include "../../global/conexion.php";
 
 
 
-<!-- formulario resta -->
+    <!-- formulario resta -->
     <form action="../interfaz_cliente/removeonetocart.php" method="post" name="formremoveonetocart">
                     <input type="hidden" id="resta" name="iddetalleventaresta" >
                     <input type="hidden" id="cantidad2" name="cantidadresta" >
@@ -115,16 +114,13 @@ include "../../global/conexion.php";
 
 
 
-<?php
+    <?php
             foreach($detalleventa as $detventa){
-?>
+    ?>
                 <span class="close-cart">
 			    <i class="fal fa-times pr-2" style="font-size: 15px!important;" onclick="eliminar(<?php echo $detventa['id'] ?>)"></i>
 		        </span>
                 <div class="cart-item">
-                <!-- <span class="close-cart"
-			    <i class="fal fa-times" onclick="eliminar(<//?php echo $detventa['id'] ?>)"></i>
-		        </span> -->
                     <div class="data-item">
                         <div class="plus-minus">
                             <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
@@ -158,11 +154,11 @@ include "../../global/conexion.php";
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div>
-<?php
+    <?php
 
                 $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
             }
-?>
+    ?>
                 <!-- FIN Cart items -->
             </div>
 
@@ -175,11 +171,11 @@ include "../../global/conexion.php";
                 <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
                 <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
                 <div class="finalshop">
-                <form action="../carrito de compras/finalpedido.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $ventaid ?>">
-                    <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
-                    <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
-                </form>
+                    <form action="../carrito de compras/finalpedido.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $ventaid ?>">
+                        <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
+                        <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -421,23 +417,22 @@ include "../../global/conexion.php";
 
 <!-- Dynamic Navbar -->
 <script>
-
     window.addEventListener('scroll', function() {
 
         let routenavbar = "../assets/img/nav_foot/"
         let header = document.querySelector('header');
         let windowPosition = window.scrollY;
 
-        header.classList.toggle('scrolling-active', windowPosition > 870);
+        header.classList.toggle('scrolling-active', windowPosition > 680);
 
-        if( windowPosition >= 870 ){
+        if( windowPosition >= 680 ){
             $('#logoshopnav').attr( 'src', routenavbar + 'Shop-White.gif');
             $('#dotsnav').attr( 'src', routenavbar + 'menu2.png' );
             $('#loginnav').attr( 'src', routenavbar + 'Login2.png' );
             $('#shopcartnav').attr( 'src', routenavbar + 'Cartera2.png');
             $('#logomainnav').attr( 'hidden', true );
             $('#lbtngo-test').removeAttr( 'hidden' );
-        }else if(windowPosition < 870) {
+        }else if(windowPosition < 680) {
             $('#logoshopnav').attr( 'src', routenavbar + 'shop.gif' );
             $('#dotsnav').attr( 'src', routenavbar + 'menu.png' );
             $('#loginnav').attr( 'src', routenavbar + 'Login.png' );
@@ -479,28 +474,28 @@ include "../../global/conexion.php";
 </script>
 
 <script>
-function eliminar(iddelete){
-   document.getElementById('eliminacion').value = iddelete;
-   document.formdeletecart.submit();
-}
+    function eliminar(iddelete){
+    document.getElementById('eliminacion').value = iddelete;
+    document.formdeletecart.submit();
+    }
 
-function add(idadd, cantidadold){
-    document.getElementById('suma').value = idadd;
-    document.getElementById('cantidad').value = cantidadold;
+    function add(idadd, cantidadold){
+        document.getElementById('suma').value = idadd;
+        document.getElementById('cantidad').value = cantidadold;
 
-   document.formaddonetocart.submit();
-
-
-}
-
-function remove(idremove , cantidadold2){
-    document.getElementById('resta').value = idremove;
-    document.getElementById('cantidad2').value = cantidadold2;
-
-   document.formremoveonetocart.submit();
+    document.formaddonetocart.submit();
 
 
-}
+    }
+
+    function remove(idremove , cantidadold2){
+        document.getElementById('resta').value = idremove;
+        document.getElementById('cantidad2').value = cantidadold2;
+
+    document.formremoveonetocart.submit();
+
+
+    }
 </script>
 
 <script>

@@ -263,6 +263,15 @@ body {
     text-decoration: none !important;
 }
 
+.noRobot {
+    height: 100vh;
+}
+.captchaClass{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 /* ----------------------------------REGISTRO------------------------- */
 
 /* ------------------------------INICIO NAVBAR------------------------------------- */
@@ -377,6 +386,14 @@ header.darkmainheader {
 /* ----------------------------INICIO TEST FOOTER------------------------------- */
 #testfooter {
     position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin-top: 0;
+}
+
+#clientfooter {
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -829,8 +846,11 @@ div.mainb{
     box-sizing: border-box;
     transition: .5s;
     z-index: 10;
-
     transition: height .5s ease;
+}
+
+.carousel-inner {
+    height: 100vh;
 }
 
 .mainheader2 {
@@ -877,7 +897,78 @@ div.mainb{
     height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
-}    
+}
+
+div.useTYC > h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
+    text-align: center;
+    margin: 4% 0%;
+}
+
+div.useTYC > h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+div.useTYC > h3 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h4 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h5 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h6 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 10pt;
+    text-align: left;
+    margin: 3% 4%;
+}
+
+div.useTYC >h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p {
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p:last-child {
+    text-align: justify;
+    margin: 0% 4% 3% 4%;
+}
+
+div.useTYC > ol, ul > li {
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+    margin: 0% 4%;
+}
  /* ---------------------------------- FIN HOME ------------------------------ */
 
 /* -----------------------------ABOUT US----------------------------- */
@@ -1578,8 +1669,8 @@ div.mainb{
 
 /* Radio personalizado usando <span> */
 .custom-radio-tyc > .custom-radio-tyc__show {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     background-size: cover;
 }
 
@@ -1649,8 +1740,8 @@ div.mainb{
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 10pt;
-    letter-spacing: .7rem;
+    font-size: 8pt;
+    letter-spacing: 1.11111rem;
     z-index: 100;
     margin: 0% 0% 6% 7%;
     position: relative;
@@ -1710,16 +1801,16 @@ div.mainb{
 
 /* Contenedor para el boton de las tallas */
 .contentsize {
-    width: 170%;
+    width: 140%;
     height: 470px;
     color: #ffffff;
     background-color: rgb(26,24,24);
-    box-shadow: 10px 5px 20px rgb(0, 0, 0);
+    box-shadow: 10px 5px 20px rgb(0 0 0);
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 8pt;
     position: absolute;
-    right: -40px;
+    right: -25px;
     bottom: -25px;
 }
 
@@ -2650,7 +2741,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     text-align: end;
-    font-size: 6pt;
+    font-size: 9pt;
     letter-spacing: .2rem;
   }
 
@@ -2658,7 +2749,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0.5rem 0 0 0;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 11pt;
+    font-size: 6pt;
     letter-spacing: .5rem;
     text-align: end;
     padding: 0% 0% 0% 5%;
@@ -3134,6 +3225,12 @@ hr {
     align-items: center;
 }
 
+.introline > h1 {
+    color: #c89c91;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
+}
+
 .introline > img {
     height: auto;
     width: 45%;
@@ -3151,7 +3248,7 @@ hr {
     background-image: url("../img/interfaces/fondo_2.png");
     background-color: transparent;
     background-size: cover;
-    height: 50vh;
+    height: 75vh;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -3237,8 +3334,69 @@ hr {
     background-color: #969797;
     /* background-color: #000000; */
     border-radius: .3rem;
+    width: 100%;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
+table.dataTableclient{
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 58px 0px!important;
+    text-align: center!important;
+    border-radius: 100px!important;
+}
+
+.jumbotrontableclient{
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    /* background-color: #000000; */
+    border-radius: .3rem;
+    width: 100%;
+}
+
+table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting{
+    padding-right: 0!important;
+}
+
+.tableTheadClient {
+    background-color: black!important;
+}
+
+.tableTheadClient > tr > th:nth-child(1){
+    width: 5%;
+    border-radius: 8px!important;
+}
+
+.tableTheadClient > tr > th:nth-child(2){
+    width: 13%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(3){
+    width: 13%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(4){
+    width: 12%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(5){
+    width: 15%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(6){
+    width: 5%;
+    border-radius: 8px!important;
+}
+
+.table-bordered thead th {
+    border-bottom-width: 0px!important;
+    border-bottom-color: black!important;
+}
+
 .containerbeige {
     background: rgb(242, 232, 220);
     display: flex;
@@ -4190,6 +4348,18 @@ hr {
     left: -31px;
 }
 
+#scrolltitlegenlg {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 7pt;
+    top: 140px;
+    position: relative;
+    bottom: 0;
+    left: -18px;
+}
+
 .scrolllightbarglg {
     width: 1px;
     height: 215px;
@@ -4198,7 +4368,7 @@ hr {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -2px;
+    left: 5px;
 }
 
 /* Scroll LOUNGEWEAR Especifico */
