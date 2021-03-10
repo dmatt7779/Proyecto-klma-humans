@@ -356,7 +356,6 @@ header.darkmainheader {
     align-items: center;
     justify-self: self-end;
     column-gap: 2rem;
-    /* padding: 0% 2% 0% 0%; */
     padding: 0% 2% 0% 54%;
 }
 
@@ -459,7 +458,7 @@ footer {
 }
 
 #footerbg2 {
-    background-image: url("../img/nav_foot/fondo.png");
+    background-image: url("../img/nav_foot/fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -2586,7 +2585,6 @@ body::-webkit-scrollbar-thumb {
     flex: 0;
     align-items: flex-end;
     justify-content: end;
-    flex: 0 1 0%;
     margin: 0% 8% 0% 0%;
 }
 
@@ -3539,7 +3537,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     font-family: "Helvetica";
     font-size: 7pt;
     letter-spacing: .4rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 4%;
     margin-bottom: 3%;
 }
@@ -3559,7 +3557,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     font-size: 7pt;
     letter-spacing: 1.177777rem;
     word-spacing: .5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3569,7 +3567,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     font-size: 7pt;
     letter-spacing: 1.177777rem;
     word-spacing: .5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3579,7 +3577,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     font-size: 7pt;
     letter-spacing: 1.5rem;
     word-spacing: 0.5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3820,6 +3818,11 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
 .containerf {
     margin-bottom: 3rem;
+}
+
+#divGraph{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .resultfeel {
@@ -4333,7 +4336,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
 /* Scroll LOUNGEWEAR GENERAL */
 #scrolllg {
-    position: fixed;
+    position: absolute;
 }
 
 #scrolltitlelg {
@@ -4343,7 +4346,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
     top: 250px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: -31px;
 }
@@ -4691,19 +4694,178 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             margin-right: -8%;
         }
 
-        /*---------Longewear-----------*/
-            /* .price-horizontal, .card-title > .card-title:hover{
-                margin-right: -11%;
-            
-            } */
-            /* .card{
-                margin-left: 403px;
-                margin-right: 376px;
+        .body-card {        
+            max-width: 692px;
+        }
+
+        #divGraph{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .results > p {
+            letter-spacing: 7.0rem;
+        }
+
+        #scrolltitlegenlg {
+            top: 130px;
+            left: -20px;
+        }
+
+        #scrolltitleabout {
+            top: 175px;
+            left: 0px;
+        }
+
+        .scrolllightbarabout {
+            left: 38px;
+        }
+
+        #scrolltitleblog {
+            left: 9px;
+        }
+
+        #scrolltitlepostresults {
+            top: 135px;
+            left: -10px;
+        }
+
+        #scrolltitleCalm {
+            top: 135px;
+            left: -14px;
+            font-size: 7pt;
+        }
+
+        #scrolltitletrans {
+            left: -26px;
+        }
+
+        .card {
+            margin-left: 383px;
+            margin-right: 381px;
+        }
+
+        .aboutstory {
+            padding: 1% 20%;
+        }
+
+        .nested-nav {
+            padding: 0% 2% 0% 51%;
+        }
+
+        .aboutbtn {
+            margin: 0%;
+        }
+
+        .aboutstory h1 {
+            text-align: justify;
+            letter-spacing: .6rem;
+            word-spacing: 2.7rem;
+        }
+        
+        .aboutstory h2 {
+            word-spacing: .222222rem;
+        }
+
+        .aboutlines > div:nth-child(3) > a {
+            letter-spacing: 1.055555rem;
+        }
+        
+        .aboutlines > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.422222rem;
+        }
+
+        
+        .aboutlines2 > div:nth-child(3) > a {
+            letter-spacing: 2.599999rem
+        }
+        
+        .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.433333rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a {
+            letter-spacing: .666666rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.388888rem;
+        }
+
+        .aboutlines > div:nth-child(1) > a {
+            letter-spacing: .477777rem;
+        }
+
+        .aboutlines2 > div:nth-child(1) > a {
+            letter-spacing: .7666666rem;
+        }
+
+        .aboutlines3 > div:nth-child(1) > a {
+            letter-spacing: .5777777rem;
+        }
+
+        .footerright > a > img {
+            height: 70px;
+        }
+
+        .footerleft > img {
+            height: 70px;
             }
 
-            .card-title{
-                margin-right: -11%;
-            } */
+        .desc-prod-espec{
+            margin-left: 9.4%;
+        }
 
-      }   
-        /* Navbar con Bootstrap */
+        .font-price-lw { 
+            letter-spacing: 3.155555rem;
+        }
+        
+        .btn-opciones:nth-child(2){
+            margin: 0% 3.22222% 0% 0%;
+        }
+        
+        .btn-opciones:nth-child(4){
+            margin-left: 0%;
+        }
+
+        .contentdetails {
+            height: 530%;
+        }
+
+        .contentbag {
+            height: 530%;
+            margin-left: -8%;
+        }
+
+        .contentsize {
+            height: 457px;
+        }
+
+        .btn-opcionestr:nth-child(1){
+            flex: 3;
+        }
+
+        .btn-opcionestr:nth-child(2){
+            flex: 3;
+            margin: 0% 2% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(3){
+            flex: 0;
+            margin: 0% 3% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(4){
+            flex: 3;
+        }
+        
+        .contentdetailstr, .contentbagtr {
+            height: 560%;
+        }
+
+        .mac-contentsize{
+            height: 460px;
+        }
+      } /*-----------Fin Responsive MAC----------------------*/
+
+      
