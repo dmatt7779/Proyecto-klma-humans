@@ -84,8 +84,8 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="font-lw-1 elemento1-5tr">
                     <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
                     <div class="typeselector">
-                        <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Femenino.png" alt=""></div>
-                        <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo-Masculino-2.png" alt=""></div>
+                        <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Femenino.jpg" alt=""></div>
+                        <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Masculino_2.jpg" alt=""></div>
                     </div>
                 </div>
 
@@ -179,7 +179,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <!-- Botones Agregar y comprar ahora -->
                 <div class="elemento4">
                     <div class="btn-opcionestr">
-                        <div class="contentsize" id="divSize" hidden>
+                        <div class="contentsize mac-contentsize" id="divSize" hidden>
                             <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" alt="">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2">
@@ -358,13 +358,13 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         var Ruta = "../assets/img/prodgenerales/prod_esp/transition/";
 
         $(document).on('click', '#femenino', function() {
-            $(this).attr('src', Ruta + 'Sexo-Femenino.png');
-            $('#masculino').attr('src', Ruta + 'Sexo-Masculino-2.png ');
+            $(this).attr('src', Ruta + 'Sexo_Femenino.jpg');
+            $('#masculino').attr('src', Ruta + 'Sexo_Masculino_2.jpg ');
         })
 
         $(document).on('click', '#masculino', function() {
-            $(this).attr('src', Ruta + 'Sexo-masculino.png');
-            $('#femenino').attr('src', Ruta + 'Sexo-Femenino-2.png ');
+            $(this).attr('src', Ruta + 'Sexo_Masculino.jpg');
+            $('#femenino').attr('src', Ruta + 'Sexo_Femenino_2.jpg ');
         })
     </script>
 

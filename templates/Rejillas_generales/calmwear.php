@@ -32,6 +32,7 @@ include "../../global/conexion.php";
         </div>
     </div>
 </div>
+
 <?php
     $sentencia = $pdo->prepare("SELECT * FROM productos where tipologia_id = 2 and habilitado = 1");
     $sentencia -> execute();
@@ -57,25 +58,24 @@ include "../../global/conexion.php";
 
 	<?php }?>	
 	</div>
-	
-
-
 
     <!-- JS, Popper.js, and jQuery -->
-		<script>
-			function idprod(i){
-				document.getElementById("prod").value = i
-				document.formprod.submit()
-			}
-		</script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="../assets/js/new.js"></script>
 
+
+<script>
+    function idprod(i){
+        document.getElementById("prod").value = i
+        document.formprod.submit()
+    }
+</script>
+
 	<!-- scroll bar -->
-	<script>
+<script>
    $(window).scroll(function(event) {
         var scrollTop = $(window).scrollTop()
         var Tamano = scrollTop / $('#scrollwrapcw').height();

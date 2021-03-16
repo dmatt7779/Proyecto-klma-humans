@@ -64,22 +64,19 @@ $correo = $_SESSION['correo'];
     <div class="operationsec">
         <div class="operationbtn">
         
-<div class="jumbotrontable">
+<div class="jumbotrontableclient">
     <div class="container-fluid">
     <!-- DIV PARA EL DATATABLE -->
 <!--         <div class="tableadmin"> -->
-            <table class="records_list table-striped table-bordered table-hover" id="mydatatable">
-                    <thead>
+            <table class="dataTableclient records_list table-striped table-bordered table-hover" id="mydatatable">
+                    <thead class="tableTheadClient">
                         <tr>
                             <th>id</th>
                             <th>Subtotal</th>
                             <th>Total</th>
                             <th>Estado</th>
                             <th>Fecha</th>
-                            <th>Envío</th>
-                            
-                            
-                                                        
+                            <th>Envío</th>                           
                         </tr>
                     </thead>
                    
@@ -92,7 +89,7 @@ $correo = $_SESSION['correo'];
     ?>
 
     <?php foreach($listaventas as $venta) {  ?>
-                    <tr>
+                    <tr style="background-color: black;">
 
                             <td><?php echo $venta['id'] ?></td>
                             <td><?php echo $venta['subtotal'] ?></td>
@@ -133,12 +130,26 @@ $correo = $_SESSION['correo'];
     <!-- JS, Popper.js, and jQuery -->
     <script src="../assets/js/my.js"></script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-<script src="../assets/librerias/popper.min.js"></script>
-<script src="../assets/librerias/bootstrap.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+    <script src="../assets/librerias/bootstrap.min.js"></script>
 
-<!-- Datatables -->
-<script src="../assets/librerias/datatables.min.js"></script>
-<script src="../assets/js/mydatatable.js"></script>
+    <!-- Datatables -->
+    <script src="../assets/librerias/datatables.min.js"></script>
+    <script src="../assets/js/mydatatable.js"></script>
+
+    <!-- INICIO Footer -->
+<footer id="clientfooter" class="footer-content">
+    <div class="footercontent">
+        <div class="footerleft">
+            <img src="../assets/img/nav_foot/sonido-activo.png" alt="">
+        </div>
+
+        <div class="footerright">
+            <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/nav_foot/Contactenos.png" alt="logo de contacto"></a>
+        </div>
+    </div>
+</footer>
+<!-- FIN Footer -->
     
 </body>
 </html>

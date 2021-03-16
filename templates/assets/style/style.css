@@ -263,6 +263,15 @@ body {
     text-decoration: none !important;
 }
 
+.noRobot {
+    height: 100vh;
+}
+.captchaClass{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 /* ----------------------------------REGISTRO------------------------- */
 
 /* ------------------------------INICIO NAVBAR------------------------------------- */
@@ -347,7 +356,6 @@ header.darkmainheader {
     align-items: center;
     justify-self: self-end;
     column-gap: 2rem;
-    /* padding: 0% 2% 0% 0%; */
     padding: 0% 2% 0% 54%;
 }
 
@@ -377,6 +385,14 @@ header.darkmainheader {
 /* ----------------------------INICIO TEST FOOTER------------------------------- */
 #testfooter {
     position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin-top: 0;
+}
+
+#clientfooter {
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -442,7 +458,7 @@ footer {
 }
 
 #footerbg2 {
-    background-image: url("../img/nav_foot/fondo.png");
+    background-image: url("../img/nav_foot/fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -627,13 +643,14 @@ footer {
 .suscribenews {
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     width: 100%;
     height: 35px;
     border-radius: 8px;
     outline: none;
     box-shadow: none;
-    padding: 0% 0% 1% 2%;
+    padding: 0% 0% 0% 2%;
+    font-size: 7pt;
 }
 
 .suscribenews::placeholder{
@@ -828,8 +845,11 @@ div.mainb{
     box-sizing: border-box;
     transition: .5s;
     z-index: 10;
-
     transition: height .5s ease;
+}
+
+.carousel-inner {
+    height: 100vh;
 }
 
 .mainheader2 {
@@ -876,7 +896,78 @@ div.mainb{
     height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
-}    
+}
+
+div.useTYC > h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
+    text-align: center;
+    margin: 4% 0%;
+}
+
+div.useTYC > h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+div.useTYC > h3 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h4 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h5 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h6 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 10pt;
+    text-align: left;
+    margin: 3% 4%;
+}
+
+div.useTYC >h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p {
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p:last-child {
+    text-align: justify;
+    margin: 0% 4% 3% 4%;
+}
+
+div.useTYC > ol, ul > li {
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+    margin: 0% 4%;
+}
  /* ---------------------------------- FIN HOME ------------------------------ */
 
 /* -----------------------------ABOUT US----------------------------- */
@@ -1577,8 +1668,8 @@ div.mainb{
 
 /* Radio personalizado usando <span> */
 .custom-radio-tyc > .custom-radio-tyc__show {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     background-size: cover;
 }
 
@@ -1648,8 +1739,8 @@ div.mainb{
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 10pt;
-    letter-spacing: .7rem;
+    font-size: 8pt;
+    letter-spacing: 1.11111rem;
     z-index: 100;
     margin: 0% 0% 6% 7%;
     position: relative;
@@ -1709,16 +1800,16 @@ div.mainb{
 
 /* Contenedor para el boton de las tallas */
 .contentsize {
-    width: 170%;
+    width: 140%;
     height: 470px;
     color: #ffffff;
     background-color: rgb(26,24,24);
-    box-shadow: 10px 5px 20px rgb(0, 0, 0);
+    box-shadow: 10px 5px 20px rgb(0 0 0);
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     font-size: 8pt;
     position: absolute;
-    right: -40px;
+    right: -25px;
     bottom: -25px;
 }
 
@@ -2494,7 +2585,6 @@ body::-webkit-scrollbar-thumb {
     flex: 0;
     align-items: flex-end;
     justify-content: end;
-    flex: 0 1 0%;
     margin: 0% 8% 0% 0%;
 }
 
@@ -2649,7 +2739,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
     text-align: end;
-    font-size: 6pt;
+    font-size: 9pt;
     letter-spacing: .2rem;
   }
 
@@ -2657,7 +2747,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0.5rem 0 0 0;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
-    font-size: 11pt;
+    font-size: 6pt;
     letter-spacing: .5rem;
     text-align: end;
     padding: 0% 0% 0% 5%;
@@ -3133,6 +3223,12 @@ hr {
     align-items: center;
 }
 
+.introline > h1 {
+    color: #c89c91;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
+}
+
 .introline > img {
     height: auto;
     width: 45%;
@@ -3150,7 +3246,7 @@ hr {
     background-image: url("../img/interfaces/fondo_2.png");
     background-color: transparent;
     background-size: cover;
-    height: 50vh;
+    height: 75vh;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -3236,8 +3332,69 @@ hr {
     background-color: #969797;
     /* background-color: #000000; */
     border-radius: .3rem;
+    width: 100%;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
+table.dataTableclient{
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 58px 0px!important;
+    text-align: center!important;
+    border-radius: 100px!important;
+}
+
+.jumbotrontableclient{
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    /* background-color: #000000; */
+    border-radius: .3rem;
+    width: 100%;
+}
+
+table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting{
+    padding-right: 0!important;
+}
+
+.tableTheadClient {
+    background-color: black!important;
+}
+
+.tableTheadClient > tr > th:nth-child(1){
+    width: 5%;
+    border-radius: 8px!important;
+}
+
+.tableTheadClient > tr > th:nth-child(2){
+    width: 13%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(3){
+    width: 13%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(4){
+    width: 12%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(5){
+    width: 15%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(6){
+    width: 5%;
+    border-radius: 8px!important;
+}
+
+.table-bordered thead th {
+    border-bottom-width: 0px!important;
+    border-bottom-color: black!important;
+}
+
 .containerbeige {
     background: rgb(242, 232, 220);
     display: flex;
@@ -3380,7 +3537,7 @@ hr {
     font-family: "Helvetica";
     font-size: 7pt;
     letter-spacing: .4rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 4%;
     margin-bottom: 3%;
 }
@@ -3400,7 +3557,7 @@ hr {
     font-size: 7pt;
     letter-spacing: 1.177777rem;
     word-spacing: .5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3410,7 +3567,7 @@ hr {
     font-size: 7pt;
     letter-spacing: 1.177777rem;
     word-spacing: .5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3420,7 +3577,7 @@ hr {
     font-size: 7pt;
     letter-spacing: 1.5rem;
     word-spacing: 0.5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3661,6 +3818,11 @@ hr {
 
 .containerf {
     margin-bottom: 3rem;
+}
+
+#divGraph{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .resultfeel {
@@ -4174,7 +4336,7 @@ hr {
 
 /* Scroll LOUNGEWEAR GENERAL */
 #scrolllg {
-    position: fixed;
+    position: absolute;
 }
 
 #scrolltitlelg {
@@ -4184,9 +4346,21 @@ hr {
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
     top: 250px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: -31px;
+}
+
+#scrolltitlegenlg {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 7pt;
+    top: 140px;
+    position: relative;
+    bottom: 0;
+    left: -18px;
 }
 
 .scrolllightbarglg {
@@ -4197,7 +4371,7 @@ hr {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -2px;
+    left: 5px;
 }
 
 /* Scroll LOUNGEWEAR Especifico */
@@ -4376,7 +4550,7 @@ hr {
         } */
     }
 
-    @media screen and (max-width: 1220px){
+    @media screen and (max-width: 1200px){
         .gridclmw{
             column-gap: 8rem;
             margin: 5.5%;
@@ -4391,6 +4565,11 @@ hr {
             height: 30vw;
             max-width: 100%;
         }
+
+        .card-body{
+            margin-right: -6%;
+        }
+
     }
 
     @media screen and (max-width: 992px){
@@ -4421,6 +4600,7 @@ hr {
             height: 30vw;
             max-width: 100%;
         }
+
     }
 
     /*Móviles*/
@@ -4506,4 +4686,186 @@ hr {
         }
     }
 
-        /* Navbar con Bootstrap */
+      /*-----------Responsive MAC----------------------*/
+            /*---------Calmwear-----------*/
+
+      @media screen and (max-width: 1280px){
+        .card > p{
+            margin-right: -8%;
+        }
+
+        .body-card {        
+            max-width: 692px;
+        }
+
+        #divGraph{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .results > p {
+            letter-spacing: 7.0rem;
+        }
+
+        #scrolltitlegenlg {
+            top: 130px;
+            left: -20px;
+        }
+
+        #scrolltitleabout {
+            top: 175px;
+            left: 0px;
+        }
+
+        .scrolllightbarabout {
+            left: 38px;
+        }
+
+        #scrolltitleblog {
+            left: 9px;
+        }
+
+        #scrolltitlepostresults {
+            top: 135px;
+            left: -10px;
+        }
+
+        #scrolltitleCalm {
+            top: 135px;
+            left: -14px;
+            font-size: 7pt;
+        }
+
+        #scrolltitletrans {
+            left: -26px;
+        }
+
+        .card {
+            margin-left: 383px;
+            margin-right: 381px;
+        }
+
+        .aboutstory {
+            padding: 1% 20%;
+        }
+
+        .nested-nav {
+            padding: 0% 2% 0% 51%;
+        }
+
+        .aboutbtn {
+            margin: 0%;
+        }
+
+        .aboutstory h1 {
+            text-align: justify;
+            letter-spacing: .6rem;
+            word-spacing: 2.7rem;
+        }
+        
+        .aboutstory h2 {
+            word-spacing: .222222rem;
+        }
+
+        .aboutlines > div:nth-child(3) > a {
+            letter-spacing: 1.055555rem;
+        }
+        
+        .aboutlines > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.422222rem;
+        }
+
+        
+        .aboutlines2 > div:nth-child(3) > a {
+            letter-spacing: 2.599999rem
+        }
+        
+        .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.433333rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a {
+            letter-spacing: .666666rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.388888rem;
+        }
+
+        .aboutlines > div:nth-child(1) > a {
+            letter-spacing: .477777rem;
+        }
+
+        .aboutlines2 > div:nth-child(1) > a {
+            letter-spacing: .7666666rem;
+        }
+
+        .aboutlines3 > div:nth-child(1) > a {
+            letter-spacing: .5777777rem;
+        }
+
+        .footerright > a > img {
+            height: 70px;
+        }
+
+        .footerleft > img {
+            height: 70px;
+            }
+
+        .desc-prod-espec{
+            margin-left: 9.4%;
+        }
+
+        .font-price-lw { 
+            letter-spacing: 3.155555rem;
+        }
+        
+        .btn-opciones:nth-child(2){
+            margin: 0% 3.22222% 0% 0%;
+        }
+        
+        .btn-opciones:nth-child(4){
+            margin-left: 0%;
+        }
+
+        .contentdetails {
+            height: 530%;
+        }
+
+        .contentbag {
+            height: 530%;
+            margin-left: -8%;
+        }
+
+        .contentsize {
+            height: 457px;
+        }
+
+        .btn-opcionestr:nth-child(1){
+            flex: 3;
+        }
+
+        .btn-opcionestr:nth-child(2){
+            flex: 3;
+            margin: 0% 2% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(3){
+            flex: 0;
+            margin: 0% 3% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(4){
+            flex: 3;
+        }
+        
+        .contentdetailstr, .contentbagtr {
+            height: 560%;
+        }
+
+        .mac-contentsize{
+            height: 460px;
+        }
+      } /*-----------Fin Responsive MAC----------------------*/
+
+      

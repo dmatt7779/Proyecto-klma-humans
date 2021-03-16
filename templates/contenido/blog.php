@@ -126,7 +126,7 @@ include "../../global/conexion.php";
 
     <script>
         function idsend(blog, emocion, escritor, frase) {
-            debugger;
+            
             document.getElementById('blog').value = blog;
             document.getElementById('emocion').value = emocion;
             document.getElementById('escritor').value = escritor;
