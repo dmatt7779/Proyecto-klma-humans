@@ -14,7 +14,7 @@
     $blog = $_POST['blog'];
     
    
-    $sql = "INSERT INTO frases (frase,escritor,emocion,blog) VALUES ('$frase', '$escritor', '$emocion','$blog');";
+    $sql = "INSERT INTO frases (frase,escritor,emocion,blog,habilitado) VALUES ('$frase', '$escritor', '$emocion','$blog',1);";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();
