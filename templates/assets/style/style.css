@@ -898,6 +898,18 @@ div.mainb{
     display: inline-block;
 }
 
+.blackTYC{
+    display: block;
+    position: absolute;
+    top: 32%;
+    width: 90.2%;
+    height: 330px;
+    left: 4.8%;
+    background-color: black;
+    font-family: MoristonPersonal-Regular !important;
+    padding-right: 17px;
+}
+
 div.useTYC > h1 {
     font-family: "MoristonPersonal-Bold";
     font-size: 20pt;

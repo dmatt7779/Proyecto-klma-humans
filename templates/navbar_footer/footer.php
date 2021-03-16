@@ -57,7 +57,7 @@
 </div>
 
     <!-- Términos y condiciones - MODAL -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal blackTYC fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="useTYC modal-content">
             <h1>TÉRMINOS Y CONDICIONES DE USO</h1>
