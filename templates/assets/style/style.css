@@ -1882,7 +1882,9 @@ div.useTYC > ol, ul > li {
 
 .refer:nth-child(2) {
     letter-spacing: 0.433rem;
-
+}
+.refercl {
+    letter-spacing: 0.8444444rem;
 }
 .refer:nth-child(3) {
     letter-spacing: 1.1rem;
@@ -4877,6 +4879,18 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
         .mac-contentsize{
             height: 460px;
+        }
+
+        .cover {
+            width: 516px;
+        }
+
+        .card-title>p, .card-title:hover>p {
+            margin: -0.3rem;
+        }
+
+        .refercl {
+            letter-spacing: 0.83rem;
         }
       } /*-----------Fin Responsive MAC----------------------*/
 

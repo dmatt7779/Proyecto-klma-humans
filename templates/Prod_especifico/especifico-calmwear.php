@@ -88,7 +88,7 @@ if ($idempaque != null || $idempaque != "") {
             <div class="nested-grid-cw">
                 <div class="font-lw-1 elemento1cw">
                     <p class="refer">SOFT</p>
-                    <p class="refer"><?php echo $producto[0]['codigo'] ?></p>
+                    <p class="refercl"><?php echo $producto[0]['codigo'] ?></p>
                     <p class="refer">COMFORT</p>
                     <p class="refer">DESIGN</p>
                 </div>
