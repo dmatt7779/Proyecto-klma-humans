@@ -1366,8 +1366,8 @@ div.useTYC > ol, ul > li {
 }
 
 .card {
-    margin-left: 423px;
-    margin-right: 423px;
+    margin-left: 427px;
+    margin-right: 427px;
     border: none;
     
 }
@@ -1991,8 +1991,8 @@ div.useTYC > ol, ul > li {
 }
 
 .cover {
-    height: 410px;
-    width: 547px;
+    height: 411px;
+    width: 550px;
     color: #ffffff;
     background-position: center;
     margin-bottom: 1.5%;
@@ -2588,7 +2588,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-opcionestr:nth-child(2){
     flex: 2;
-    margin: 0% 1.555555% 0% 0%;
+    margin: 0% 2% 0% 0%;
     align-items: flex-end;
     justify-content: flex-end;
 }
