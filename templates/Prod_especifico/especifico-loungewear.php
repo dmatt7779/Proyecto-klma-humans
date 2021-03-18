@@ -172,7 +172,7 @@
             <div class="btn-opciones">
                 <div class="contentbag" id="divEmpaque" hidden>
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner carousel-innertr">
                             <div class="carousel-item active">
                                 <img src="../assets/img/prodgenerales/<?php echo $empaque[0]['imagen'] ?>" class="d-block w-100" alt="...">
                             </div>
@@ -201,7 +201,7 @@
                 <div class="elemento4">
                     <div class="btn-opciones">
                         <div class="contentsize" id="divSize" hidden>
-                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/icicle_ss2020_natural.jpg" alt="">
+                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/iciclenatural.jpg" alt="">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2" id="">
                                 <button id="sizeS" class="btn-change">S</button>
@@ -230,16 +230,16 @@
     let routesizes = "../assets/img/prodgenerales/prod_esp/loungewear/"
 
     $('#sizeS').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'icicle_ss2020_natural.jpg');
+        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
     }) 
     $('#sizeM').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'Btn_See_Sizes.jpg');
+        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
     }) 
     $('#sizeL').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'icicle_ss2020_natural.jpg');
+        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
     }) 
     $('#sizeXL').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'Btn_See_Sizes.jpg');
+        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
     });
 </script>
 

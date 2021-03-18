@@ -150,7 +150,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="contentbagtr" id="divEmpaque" hidden>
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 
-                        <div class="carousel-inner">
+                        <div class="carousel-innertr carousel-inner">
                             <div class="carousel-item active">
                                 <img src="../assets/img/prodgenerales/<?php echo $empaque[0]['imagen'] ?>" class="d-block w-100" alt="...">
 
@@ -180,13 +180,13 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="elemento4">
                     <div class="btn-opcionestr">
                         <div class="contentsize mac-contentsize" id="divSize" hidden>
-                            <img class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/imagen00.png" alt="">
+                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/iciclenatural.jpg" alt="">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2">
-                                <button class="btn-change">S</button>
-                                <button class="btn-change">M</button>
-                                <button class="btn-change">L</button>
-                                <button class="btn-change">XL</button>
+                                <button id="sizeS" class="btn-change">S</button>
+                                <button id="sizeM" class="btn-change">M</button>
+                                <button id="sizeL" class="btn-change">L</button>
+                                <button id="sizeXL" class="btn-change">XL</button>
                             </div>
                         </div>
                     </div>
@@ -381,6 +381,24 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         })
     </script>
     <script src="../assets/js/carrito.js"></script>
+
+        <!-- TALLAS BOTONES BLACK CONTAINER -->
+<script>
+    let routesizes = "../assets/img/prodgenerales/prod_esp/loungewear/"
+
+    $('#sizeS').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
+    }) 
+    $('#sizeM').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
+    }) 
+    $('#sizeL').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
+    }) 
+    $('#sizeXL').click(function(){
+        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
+    });
+</script>
 </body>
 
 </html>
