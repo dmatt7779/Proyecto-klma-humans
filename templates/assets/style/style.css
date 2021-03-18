@@ -4232,11 +4232,11 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     transform: rotate(-90deg);
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
-    font-size: 8pt;
-    top: 145px;
+    font-size: 7pt;
+    top: 155px;
     position: relative;
     bottom: 0;
-    left: -17px;
+    left: -13px;
 }
 
 /* Scroll Especifico Calmwear */
