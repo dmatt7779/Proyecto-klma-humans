@@ -1611,18 +1611,18 @@ div.useTYC > ol, ul > li {
     letter-spacing: 1rem;
     z-index: 100;
     margin: 0% 10% 0% 10%;
-    padding: 0% 2% 1% 1%;
+    padding: 0% 2% 1% 5%;
     width: 80%;
     border: none;
     outline: none !important;
 }
 
 .btn-empaque > .empaque {
-    letter-spacing: 1.1333333333rem;
+    letter-spacing: 1.1333rem;
 }
 
 .btn-empaque > .especial {
-    letter-spacing: .9999999rem;
+    letter-spacing: .9999rem;
 }
 
 
@@ -1717,7 +1717,7 @@ div.useTYC > ol, ul > li {
     width: 80%;
     margin: 0% 10% 0% 10%;
     z-index: 100;
-    padding: 0% 2% 1% 1%;
+    padding: 0% 2% 1% 5%;
     border: none;
     outline: none !important;
 }
@@ -4873,7 +4873,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
         .btn-opcionestr:nth-child(3){
             flex: 0;
-            margin: 0% 3% 0% 0%;
+            margin: 0% 2% 0% 0%;
         }
 
         .btn-opcionestr:nth-child(4){
@@ -4933,6 +4933,14 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
         .refertr:nth-child(4) {
             letter-spacing: 1.811111rem;
+        }
+
+        .btn-empaque, .btn-empaque:focus {
+            padding: 0% 2% 1% 7%;
+        }
+
+        .btn-empaque2, .btn-empaque2:focus {
+            padding: 0% 2% 1% 7%;
         }
 
 } /*-----------Fin Responsive MAC----------------------*/
