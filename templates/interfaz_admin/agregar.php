@@ -9,7 +9,7 @@
     date_default_timezone_set("America/Bogota");
     include ('../../global/conexion.php');
   
-    $codigo = $_POST['codigo']; 
+    $codigo = $_POST['codigo'];
     $nombre = $_POST['nombre'];
     $tipologia = $_POST['tipologia'];
     $precio_venta = $_POST['precio_venta'];
@@ -36,29 +36,29 @@
     
 
     if ($tipologia == 315) {
-        $ruta = "../assets/img/prodgenerales/Loungewear";
-        $ruta2 = "Loungewear";
-        $rutacalmwear = "../assets/img/prodgenerales/Loungewear";
-        $ruta2calmwear = "Loungewear";
+        $ruta = "../assets/img/prodgenerales/loungewear";
+        $ruta2 = "loungewear";
+        $rutacalmwear = "../assets/img/prodgenerales/loungewear";
+        $ruta2calmwear = "loungewear";
 
         $tipologia = 1;
     }elseif($tipologia == 220){
-        $ruta = "../assets/img/prodgenerales/Calmwear";
-        $ruta2 = "Calmwear";
-        $rutacalmwear = "../assets/img/prodgenerales/Calmwear";
-        $ruta2calmwear = "Calmwear";
-        $rutamaterial1 = "../assets/img/prodgenerales/prod_esp/Calmwear";
-        $ruta2material1 = "Calmwear";
-        $rutamaterial2 = "../assets/img/prodgenerales/prod_esp/Calmwear";
-        $ruta2material2 = "Calmwear";
+        $ruta = "../assets/img/prodgenerales/calmwear";
+        $ruta2 = "calmwear";
+        $rutacalmwear = "../assets/img/prodgenerales/calmwear";
+        $ruta2calmwear = "calmwear";
+        $rutamaterial1 = "../assets/img/prodgenerales/prod_esp/calmwear";
+        $ruta2material1 = "calmwear";
+        $rutamaterial2 = "../assets/img/prodgenerales/prod_esp/calmwear";
+        $ruta2material2 = "calmwear";
 
         $tipologia = 2;
 
     }elseif($tipologia == 223){
-        $ruta = "../assets/img/prodgenerales/Transition";
-        $ruta2 = "Transition";
-        $rutacalmwear = "../assets/img/prodgenerales/Transition";
-        $ruta2calmwear = "Transitionr";
+        $ruta = "../assets/img/prodgenerales/transition";
+        $ruta2 = "transition";
+        $rutacalmwear = "../assets/img/prodgenerales/transition";
+        $ruta2calmwear = "transitionr";
         $tipologia = 3;
 
     }
@@ -129,18 +129,12 @@ $cadenasave = substr($cadenasave,1);
 //parte del carrusel
 
 
-
-
-
-    $sql = "INSERT INTO `ejemplo`.`productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`, `diseñador`, `frase`, `campaña`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2','$diseñador','$frase','$campaña')";
+    $sql = "INSERT INTO `productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`, `diseñador`, `frase`, `campaña`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2','$diseñador','$frase','$campaña')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();
     
-    
    
     header("location:adminproduct.php");
 
-    
-   
 ?>

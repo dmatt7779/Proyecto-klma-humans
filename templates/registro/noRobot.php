@@ -1,46 +1,38 @@
 <?php
-session_start();
+date_default_timezone_set("America/Bogota");
+include "recaptcha.php";
 include "../../global/conexion.php";
+
+if($_POST['google-response-token']){
+    $googleToken = $_POST['google-response-token'];
+
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$googleToken}");
+    $response = json_decode($response);
+
+    $response = (array) $response;
+    /* print_r($response);
+    exit; */
+
+        if($response['success'] && ($response['score'] && $response['score'] > 0.5)){
+            $usuario = $_POST['nickname']; 
+            $contrasena = $_POST['contrasena'];
+            $correo = $_POST['correo'];
+            $hoy = date('Y-m-d');
+            $fecha_registro =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
+            
+            $sql = "INSERT INTO usuarios (apodo, correo, clave, rol, fecha_registro) VALUES ('$usuario', '$correo', '$contrasena', '3','$fecha_registro')";
+        
+            $sentencia = $pdo->prepare( $sql );
+            $sentencia -> execute();
+            $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        
+            if( !$register ){
+                $_SESSION['creado'] = 1;      
+                header('location:registro.php');
+            }
+        }else {
+            echo "<div class='alert alert-warning'> Validación incorrecta :) </div>";
+        }
+    
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro KLMA HUMAN'S</title>
-
-    <!-- CSS only -->
-    <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-</head>
-<body>
-    <?php require "../navbar_footer/header.php"; ?>
-
-    <div class="noRobot row justify-content-center align-items-center">
-        <form action="?" method="POST">
-            <div class="captchaClass g-recaptcha" data-sitekey="6LcHBW8aAAAAAB-vwrkT0MIZGIPsP4KLlDiJpSC6"></div>
-            <br/>
-            <div class="mb-4">
-                    <div class="img-barras"></div>
-                </div>
-            <input class="btn btn-submit" type="submit" value="ENVIAR">
-        </form>
-    </div>
-
-        <!-- JS, Popper.js, and jQuery -->
-        <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-        <script src="../assets/librerias/popper.min.js"></script>
-        <script src="../assets/librerias/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-
-<script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
-</script>
-
-</body>
-</html>

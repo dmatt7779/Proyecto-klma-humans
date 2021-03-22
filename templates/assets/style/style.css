@@ -356,7 +356,6 @@ header.darkmainheader {
     align-items: center;
     justify-self: self-end;
     column-gap: 2rem;
-    /* padding: 0% 2% 0% 0%; */
     padding: 0% 2% 0% 54%;
 }
 
@@ -386,6 +385,14 @@ header.darkmainheader {
 /* ----------------------------INICIO TEST FOOTER------------------------------- */
 #testfooter {
     position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin-top: 0;
+}
+
+#clientfooter {
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -451,7 +458,7 @@ footer {
 }
 
 #footerbg2 {
-    background-image: url("../img/nav_foot/fondo.png");
+    background-image: url("../img/nav_foot/fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -838,8 +845,11 @@ div.mainb{
     box-sizing: border-box;
     transition: .5s;
     z-index: 10;
-
     transition: height .5s ease;
+}
+
+.carousel-inner {
+    height: 100vh;
 }
 
 .mainheader2 {
@@ -886,7 +896,89 @@ div.mainb{
     height: 35px!important;
     background: no-repeat 50%/100% 100%;
     display: inline-block;
-}    
+}
+
+.blackTYC{
+    position: absolute;
+    top: 32%;
+    width: 90.2%;
+    height: 330px;
+    left: 4.8%;
+    background-color: black;
+    font-family: MoristonPersonal-Regular !important;
+    padding-right: 17px;
+}
+
+div.useTYC > h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
+    text-align: center;
+    margin: 4% 0%;
+}
+
+div.useTYC > h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+div.useTYC > h3 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h4 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h5 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 15pt;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+div.useTYC > h6 {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 10pt;
+    text-align: left;
+    margin: 3% 4%;
+}
+
+div.useTYC >h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p {
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p:last-child {
+    text-align: justify;
+    margin: 0% 4% 3% 4%;
+}
+
+div.useTYC > ol, ul > li {
+    font-family: "Helvetica";
+    font-size: 10pt;
+    text-align: justify;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+    margin: 0% 4%;
+}
  /* ---------------------------------- FIN HOME ------------------------------ */
 
 /* -----------------------------ABOUT US----------------------------- */
@@ -1273,8 +1365,8 @@ div.mainb{
 }
 
 .card {
-    margin-left: 423px;
-    margin-right: 423px;
+    margin-left: 427px;
+    margin-right: 427px;
     border: none;
     
 }
@@ -1518,19 +1610,19 @@ div.mainb{
     font-size: 8pt;
     letter-spacing: 1rem;
     z-index: 100;
-    margin: 0% 10% 0% 15%;
-    padding: 0% 2% 1% 1%;
+    margin: 0% 10% 0% 10%;
+    padding: 0% 2% 1% 5%;
     width: 80%;
     border: none;
     outline: none !important;
 }
 
 .btn-empaque > .empaque {
-    letter-spacing: 1.1333333333rem;
+    letter-spacing: 1.1333rem;
 }
 
 .btn-empaque > .especial {
-    letter-spacing: .9999999rem;
+    letter-spacing: .9999rem;
 }
 
 
@@ -1623,9 +1715,9 @@ div.mainb{
     font-size: 8pt;
     letter-spacing: 1rem;
     width: 80%;
-    margin: 0% 10% 0% 15%;
+    margin: 0% 10% 0% 10%;
     z-index: 100;
-    padding: 0% 2% 1% 1%;
+    padding: 0% 2% 1% 5%;
     border: none;
     outline: none !important;
 }
@@ -1674,7 +1766,7 @@ div.mainb{
 }
 
 .contentdetails {
-    width: 30%;
+    width: 32%;
     height: 550%;
     color: #ffffff;
     background-color: rgb(26,24,24);
@@ -1713,14 +1805,14 @@ div.mainb{
     font-family: "Helvetica";
     text-align: justify;
     position: absolute;
-    margin-left: -7%;
+    margin-left: -11%;
     bottom: 0px;
 }
 
 /* Contenedor para el boton de las tallas */
 .contentsize {
     width: 140%;
-    height: 470px;
+    height: 553px;
     color: #ffffff;
     background-color: rgb(26,24,24);
     box-shadow: 10px 5px 20px rgb(0 0 0);
@@ -1757,7 +1849,7 @@ div.mainb{
 
 .btn-opciones:nth-child(2){
     flex: 1;
-    margin: 0% 1.7777777% 0% 0%;
+    margin: 0% 3.555555% 0% 0%;
     align-items: flex-end;
 }
 
@@ -1775,7 +1867,7 @@ div.mainb{
 
 .btn-opciones:nth-child(4){
     flex: 2;
-    margin-left: 6.55555555555%;
+    margin-left: 5.999999%;
     letter-spacing: .3rem;
     flex-direction: column;
     justify-content: center;
@@ -1789,7 +1881,9 @@ div.mainb{
 
 .refer:nth-child(2) {
     letter-spacing: 0.433rem;
-
+}
+.refercl {
+    letter-spacing: 0.8444444rem;
 }
 .refer:nth-child(3) {
     letter-spacing: 1.1rem;
@@ -1898,8 +1992,8 @@ div.mainb{
 }
 
 .cover {
-    height: 410px;
-    width: 547px;
+    height: 411px;
+    width: 550px;
     color: #ffffff;
     background-position: center;
     margin-bottom: 1.5%;
@@ -2285,6 +2379,7 @@ body::-webkit-scrollbar-thumb {
     object-position: center center;
     display: flex;
     flex-flow: column wrap;
+    margin-bottom: 30%;
 }
 
 /* Ubicación y configuración tamaño de las imagenes */
@@ -2343,6 +2438,12 @@ body::-webkit-scrollbar-thumb {
 /* ------------------------------FIN General TRANSITION ------------------------ */
 
 /* ---------------------------INICIO Especifico TRANSITION ------------------------ */
+.carousel-innertr{
+    position: relative;
+    width: 100%;
+    height: auto !important; 
+    overflow: hidden;
+}
 
 .elemento1-5tr > p:nth-child(1) {
     letter-spacing: 1.5rem;
@@ -2440,8 +2541,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contentdetailstr {
-    width: 45%;
-    height: 533%;
+    width: 47%;
+    height: 550%;
     color: #ffffff;
     background-color: rgb(26,24,24);
     box-shadow: 5px 10px 8px rgb(0, 0, 0);
@@ -2458,14 +2559,14 @@ body::-webkit-scrollbar-thumb {
 /* Contenedor para el boton de empaque especial */
 .contentbagtr {
     width: 85%;
-    height: 535%;
+    height: 550%;
     color: #ffffff;
     background-color: rgb(26,24,24);
     box-shadow: 5px 10px 8px rgb(0, 0, 0);
     font-family: "Helvetica";
     text-align: justify;
     position: absolute;
-    margin-left: 15%;
+    margin-left: 14%;
     bottom: 0px;
 }
 
@@ -2495,7 +2596,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-opcionestr:nth-child(2){
     flex: 2;
-    margin: 0% 1.555555% 0% 0%;
+    margin: 0% 2% 0% 0%;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -2504,7 +2605,6 @@ body::-webkit-scrollbar-thumb {
     flex: 0;
     align-items: flex-end;
     justify-content: end;
-    flex: 0 1 0%;
     margin: 0% 8% 0% 0%;
 }
 
@@ -2524,18 +2624,18 @@ body::-webkit-scrollbar-thumb {
 
 /* Referencia */
 .refertr:nth-child(1) {
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.5rem;
 }
 
 .refertr:nth-child(2) {
-    letter-spacing: 0.433rem;
+    letter-spacing: 1.066666rem;
 
 }
 .refertr:nth-child(3) {
-    letter-spacing: 1.1rem;
+    letter-spacing: 1rem;
 }
 .refertr:nth-child(4) {
-    letter-spacing: 1.48888888rem;
+    letter-spacing: 1.8777777rem;
 }
 /* -------------------------------FIN Especifico TRANSITION-------------------------------------- */
 
@@ -3166,7 +3266,7 @@ hr {
     background-image: url("../img/interfaces/fondo_2.png");
     background-color: transparent;
     background-size: cover;
-    height: 50vh;
+    height: 75vh;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -3252,8 +3352,69 @@ hr {
     background-color: #969797;
     /* background-color: #000000; */
     border-radius: .3rem;
+    width: 100%;
 }
 /* ----------------------------------Interfaz Clientes---------------------------------- */
+table.dataTableclient{
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 58px 0px!important;
+    text-align: center!important;
+    border-radius: 100px!important;
+}
+
+.jumbotrontableclient{
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    /* background-color: #000000; */
+    border-radius: .3rem;
+    width: 100%;
+}
+
+table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting{
+    padding-right: 0!important;
+}
+
+.tableTheadClient {
+    background-color: black!important;
+}
+
+.tableTheadClient > tr > th:nth-child(1){
+    width: 5%;
+    border-radius: 8px!important;
+}
+
+.tableTheadClient > tr > th:nth-child(2){
+    width: 13%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(3){
+    width: 13%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(4){
+    width: 12%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(5){
+    width: 15%;
+    border-radius: 8px!important;
+}
+.tableTheadClient > tr > th:nth-child(6){
+    width: 5%;
+    border-radius: 8px!important;
+}
+
+.table-bordered thead th {
+    border-bottom-width: 0px!important;
+    border-bottom-color: black!important;
+}
+
 .containerbeige {
     background: rgb(242, 232, 220);
     display: flex;
@@ -3396,7 +3557,7 @@ hr {
     font-family: "Helvetica";
     font-size: 7pt;
     letter-spacing: .4rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 4%;
     margin-bottom: 3%;
 }
@@ -3416,7 +3577,7 @@ hr {
     font-size: 7pt;
     letter-spacing: 1.177777rem;
     word-spacing: .5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3426,7 +3587,7 @@ hr {
     font-size: 7pt;
     letter-spacing: 1.177777rem;
     word-spacing: .5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3436,7 +3597,7 @@ hr {
     font-size: 7pt;
     letter-spacing: 1.5rem;
     word-spacing: 0.5rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -3677,6 +3838,11 @@ hr {
 
 .containerf {
     margin-bottom: 3rem;
+}
+
+#divGraph{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .resultfeel {
@@ -4074,11 +4240,11 @@ hr {
     transform: rotate(-90deg);
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
-    font-size: 8pt;
-    top: 145px;
+    font-size: 7pt;
+    top: 155px;
     position: relative;
     bottom: 0;
-    left: -17px;
+    left: -13px;
 }
 
 /* Scroll Especifico Calmwear */
@@ -4190,7 +4356,7 @@ hr {
 
 /* Scroll LOUNGEWEAR GENERAL */
 #scrolllg {
-    position: fixed;
+    position: absolute;
 }
 
 #scrolltitlelg {
@@ -4200,7 +4366,7 @@ hr {
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
     top: 250px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: -31px;
 }
@@ -4319,6 +4485,7 @@ hr {
     background-color: #000000;
 }
 
+
 /* -------------------------------FIN Barras Laterales---------------------------------- */
 
 
@@ -4404,7 +4571,7 @@ hr {
         } */
     }
 
-    @media screen and (max-width: 1220px){
+    @media screen and (max-width: 1200px){
         .gridclmw{
             column-gap: 8rem;
             margin: 5.5%;
@@ -4419,6 +4586,11 @@ hr {
             height: 30vw;
             max-width: 100%;
         }
+
+        .card-body{
+            margin-right: -6%;
+        }
+
     }
 
     @media screen and (max-width: 992px){
@@ -4449,6 +4621,7 @@ hr {
             height: 30vw;
             max-width: 100%;
         }
+
     }
 
     /*Móviles*/
@@ -4534,4 +4707,240 @@ hr {
         }
     }
 
-        /* Navbar con Bootstrap */
+      /*-----------Responsive MAC----------------------*/
+            /*---------Calmwear-----------*/
+
+      @media screen and (max-width: 1280px){
+        .card > p{
+            margin-right: -8%;
+        }
+
+        .body-card {        
+            max-width: 692px;
+        }
+
+        #divGraph{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .results > p {
+            letter-spacing: 7.0rem;
+        }
+
+        #scrolltitlegenlg {
+            top: 130px;
+            left: -20px;
+        }
+
+        #scrolltitleabout {
+            top: 175px;
+            left: 0px;
+        }
+
+        .scrolllightbarabout {
+            left: 38px;
+        }
+
+        #scrolltitleblog {
+            left: 9px;
+        }
+
+        #scrolltitlepostresults {
+            top: 135px;
+            left: -10px;
+        }
+
+        #scrolltitleCalm {
+            top: 135px;
+            left: -14px;
+            font-size: 7pt;
+        }
+
+        #scrolltitletrans {
+            left: -26px;
+        }
+
+        .card {
+            margin-left: 383px;
+            margin-right: 381px;
+        }
+
+        .aboutstory {
+            padding: 1% 20%;
+        }
+
+        .nested-nav {
+            padding: 0% 2% 0% 51%;
+        }
+
+        .aboutbtn {
+            margin: 0%;
+        }
+
+        .aboutstory h1 {
+            text-align: justify;
+            letter-spacing: .6rem;
+            word-spacing: 2.7rem;
+        }
+        
+        .aboutstory h2 {
+            word-spacing: .222222rem;
+        }
+
+        .aboutlines > div:nth-child(3) > a {
+            letter-spacing: 1.055555rem;
+        }
+        
+        .aboutlines > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.422222rem;
+        }
+
+        
+        .aboutlines2 > div:nth-child(3) > a {
+            letter-spacing: 2.599999rem
+        }
+        
+        .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.433333rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a {
+            letter-spacing: .666666rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.388888rem;
+        }
+
+        .aboutlines > div:nth-child(1) > a {
+            letter-spacing: .477777rem;
+        }
+
+        .aboutlines2 > div:nth-child(1) > a {
+            letter-spacing: .7666666rem;
+        }
+
+        .aboutlines3 > div:nth-child(1) > a {
+            letter-spacing: .5777777rem;
+        }
+
+        .footerright > a > img {
+            height: 70px;
+        }
+
+        .footerleft > img {
+            height: 70px;
+            }
+
+        .desc-prod-espec{
+            margin-left: 9.4%;
+        }
+
+        .font-price-lw { 
+            letter-spacing: 3.155555rem;
+        }
+        
+        .btn-opciones:nth-child(2){
+            margin: 0% 3.22222% 0% 0%;
+        }
+        
+        .btn-opciones:nth-child(4){
+            margin-left: 0%;
+        }
+
+        .contentdetails {
+            height: 530%;
+        }
+
+        .contentbag {
+            height: 530%;
+            margin-left: -8%;
+        }
+
+        .contentsize {
+            height: 457px;
+        }
+
+        .btn-opcionestr:nth-child(1){
+            flex: 3;
+        }
+
+        .btn-opcionestr:nth-child(2){
+            flex: 3;
+            margin: 0% 2% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(3){
+            flex: 0;
+            margin: 0% 2% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(4){
+            flex: 3;
+        }
+        
+        .contentdetailstr, .contentbagtr {
+            height: 600%;
+        }
+
+        .mac-contentsize{
+            height: 460px;
+        }
+
+        .cover {
+            width: 516px;
+        }
+
+        .card-title>p, .card-title:hover>p {
+            margin: -0.3rem;
+        }
+
+        .refercl {
+            letter-spacing: 0.83rem;
+        }
+
+        .packet img {
+            margin-bottom: 0%;
+        }
+
+        .gridtlin {
+            grid-template-rows: repeat(1, 115px);
+            flex: 3;
+            margin-bottom: -8%;
+        }
+
+        .gridtl {
+            grid-template-rows: repeat(6, 210px);
+            flex: 3;
+        }
+
+        .containerfeel2 {
+            align-items: baseline;
+            margin: 9% -4%;
+        }
+
+        .refertr:nth-child(1) {
+            letter-spacing: 0.477777rem;
+        }
+
+        .refertr:nth-child(2) {
+            letter-spacing: 1.033333rem;
+
+        }
+        .refertr:nth-child(3) {
+            letter-spacing: 0.955555rem;
+        }
+        .refertr:nth-child(4) {
+            letter-spacing: 1.811111rem;
+        }
+
+        .btn-empaque, .btn-empaque:focus {
+            padding: 0% 2% 1% 7%;
+        }
+
+        .btn-empaque2, .btn-empaque2:focus {
+            padding: 0% 2% 1% 7%;
+        }
+
+} /*-----------Fin Responsive MAC----------------------*/

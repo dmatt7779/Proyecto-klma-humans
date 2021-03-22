@@ -33,7 +33,6 @@ if ($idempaque != null || $idempaque != "") {
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
@@ -88,7 +87,7 @@ if ($idempaque != null || $idempaque != "") {
             <div class="nested-grid-cw">
                 <div class="font-lw-1 elemento1cw">
                     <p class="refer">SOFT</p>
-                    <p class="refer"><?php echo $producto[0]['codigo'] ?></p>
+                    <p class="refercl"><?php echo $producto[0]['codigo'] ?></p>
                     <p class="refer">COMFORT</p>
                     <p class="refer">DESIGN</p>
                 </div>

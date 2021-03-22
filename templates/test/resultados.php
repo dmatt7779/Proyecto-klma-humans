@@ -130,7 +130,7 @@ if (empty($usuario)) {
     </div>
 
     <div class="container-fluid mt-5">
-        <div class="row pr-5 pl-5" id="divGraph"></div>
+        <div class="row" id="divGraph"></div>
     </div>
 
     <!-- Contenedor de los sentimientos rotados 90°-->

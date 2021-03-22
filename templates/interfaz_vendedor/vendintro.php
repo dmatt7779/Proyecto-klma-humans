@@ -56,5 +56,3 @@ if (!isset($_SESSION['correo'])) {
     <script src="../assets/librerias/bootstrap.min.js"></script>
 </body>
 </html>
-
-<?php include "../navbar_footer/scd_footer.php";?>
