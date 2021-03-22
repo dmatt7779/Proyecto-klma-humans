@@ -81,7 +81,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="font-lw-1 elemento1-5tr">
-                    <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
+                    <p class="titleSexo">SEXO</p>
                     <div class="typeselector">
                         <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Femenino.jpg" alt=""></div>
                         <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Masculino_2.jpg" alt=""></div>

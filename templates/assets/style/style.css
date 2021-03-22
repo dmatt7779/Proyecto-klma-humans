@@ -1918,16 +1918,17 @@ div.useTYC > ol, ul > li {
 .refer-specialbag:nth-child(3) {
     padding: 2%;
     font-size: 7pt;
-    letter-spacing: 0.3444444444rem;
-    text-align: justify;
+    letter-spacing: 0.344444rem;
+    text-align: center;
+    overflow: hidden;
 }
 
 .refer-specialbag:nth-child(4) {
     padding: 2%;
     font-weight: bold;
     font-size: 11pt;
-    letter-spacing: 1.33333333333rem;
-    text-align: justify;
+    letter-spacing: 1.333333rem;
+    text-align: center;
 }
 
 .modalbody{padding: .1rem;}
@@ -4707,10 +4708,10 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
     }
 
-      /*-----------Responsive MAC----------------------*/
+      /*-----------Responsive MAC 1280----------------------*/
             /*---------Calmwear-----------*/
 
-      @media screen and (max-width: 1280px){
+      @media screen and (min-width: 1279px) and (max-width: 1280px){
         .card > p{
             margin-right: -8%;
         }
@@ -4944,3 +4945,181 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
 
 } /*-----------Fin Responsive MAC----------------------*/
+
+
+  /*-----------Responsive MAC 1440----------------------*/
+
+  @media screen and (min-width: 1439px) and (max-width: 1440px){
+
+    .gridclmw{
+        column-gap: 5rem;
+        width: 84%
+    }
+
+    .cover {
+        width: 541px;
+    }
+
+    .card-bodyMAC{
+        width: 543px;
+    }
+
+    .card {
+        margin-left: 469px;
+        margin-right: 469px;        
+    }
+
+    .btn-opciones:nth-child(1){
+        margin-left: 4.888888%;
+    }
+    
+    .btn-opciones:nth-child(2){
+        margin: 0% 4.555555% 0% 0%;
+        justify-content: flex-end;
+    }
+    
+    .btn-opciones:nth-child(3){
+        flex: 1;
+        justify-content: flex-end;
+    }
+    
+    .btn-opciones:nth-child(4){
+        flex: 3;
+        margin-left: 0%;
+    }
+
+    .contentbag {
+        width: 83%;
+        left: -2px;
+        margin-left: 0%;
+    }
+
+    .contentsize {
+        height: 498px;
+    }
+
+    .btn-empaque2, .btn-empaque2:focus {
+        width: 75%;
+        margin: 0% 12% 0% 0%;
+        padding: 0% 2% 1% 2%;
+    }
+
+    .gridtlin {
+        grid-template-rows: repeat(1, 195px);
+        flex: 4;
+        margin-bottom: 3%;
+    }
+
+    .gridtl {
+        grid-template-rows: repeat(6, 215px);
+        flex:7;
+    }
+
+    .containerfeel2 {
+        flex: 7;
+        align-items: baseline;
+        margin: 10% -4%;
+    }
+
+    .btn-opcionestr:nth-child(1){
+        margin-left: 4.8%;
+    }
+    
+    .btn-opcionestr:nth-child(2){
+        margin: 0% 4.55555% 0% 0%;
+    }
+    
+    .btn-opcionestr:nth-child(3){
+        flex: 1;
+        justify-content: flex-end;
+        margin: 0% 0% 0% 0%;
+    }
+    
+    .btn-opcionestr:nth-child(4){
+        flex: 3;
+        margin-left: 0%;
+    }
+
+    .contentbagtr {
+        width: 83%;
+        margin-left: 0%;
+        left: -2px;
+    }
+
+    .elemento1-5tr > p:nth-child(1) {
+        letter-spacing: 1.8rem;
+        padding-left: 9%;
+    }    
+
+    .typeselector {
+        justify-content: space-around;
+    }
+
+    .elemento1-5tr > p:nth-child(1) {
+        letter-spacing: 1.55555rem;
+        padding-left: 12%;
+    }
+
+    .aboutstory h1 {
+        letter-spacing: .969999rem;
+    }
+    
+    .aboutstory h2 {
+        letter-spacing: .495rem;
+    }
+
+    .aboutlines > div:nth-child(1) > a {
+        letter-spacing: .68rem;
+    }
+
+    .aboutlines > div:nth-child(3) > a {
+        letter-spacing: 1.32222rem;
+    }
+    
+    .aboutlines > div:nth-child(3) > a:nth-child(2) {
+        letter-spacing: 1.74444rem;
+    }
+
+    .aboutlines2 > div:nth-child(1) > a {
+        letter-spacing: 1rem;
+    }
+
+    .aboutlines2 > div:nth-child(3) > a {
+        letter-spacing: 3.09999rem
+    }
+
+    .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+        letter-spacing: 1.73333rem;
+    }
+
+    .aboutlines3 > div:nth-child(1) > a {
+        letter-spacing: .766666rem;
+    }
+
+    .aboutlines3 > div:nth-child(3) > a {
+        letter-spacing: .88888rem;
+    }
+    
+    .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+        letter-spacing: 1.74444rem;
+    }
+
+    .results {
+        margin-top: 10%;
+        padding-left: 0%;
+    }
+
+    .results > p {
+        letter-spacing: 6.9rem;
+    }
+
+    #divGraph{
+        margin: 0px 20px!important;
+    }
+    
+
+  }
+
+  /*-----------Fin Responsive MAC 1440----------------------*/
+
+
