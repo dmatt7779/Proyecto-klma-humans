@@ -904,29 +904,29 @@ div.mainb{
     width: 90.2%;
     height: 330px;
     left: 4.8%;
-    background-color: black;
+    background-color: rgb(26,24,24);
     font-family: MoristonPersonal-Regular !important;
     padding-right: 17px;
 }
 
-.userTYC{
-    background-color: black;
-    color: white;
-}
-
-div.useTYC >h1, h2, h3, h4, h5, h6, p{
-    text-align: left;
+.useTYC{
+    background-color: rgb(26,24,24)!important;
+    color: white!important;
+    width: 140%;
+    left: -22%;
 }
 
 div.useTYC > h1 {
     font-family: "MoristonPersonal-Bold";
     font-size: 20pt;
+    text-align: left;
     margin: 4% 0%;
 }
 
 div.useTYC > h2 {
     font-family: "MoristonPersonal-Bold";
     font-size: 18pt;
+    text-align: left;
     margin-bottom: 3%;
 }
 
@@ -934,23 +934,27 @@ div.useTYC > h3 {
     font-family: "MoristonPersonal-Medium";
     font-size: 15pt;
     margin: 3% 0%;
+    text-align: left;
 }
 
 div.useTYC > h4 {
     font-family: "MoristonPersonal-Medium";
     font-size: 15pt;
+    text-align: left;
     margin: 3% 0%;
 }
 
 div.useTYC > h5 {
     font-family: "MoristonPersonal-Medium";
     font-size: 15pt;
+    text-align: left;
     margin: 3% 0%;
 }
 
 div.useTYC > h6 {
     font-family: "MoristonPersonal-Medium";
     font-size: 10pt;
+    text-align: left;
     margin: 3% 4%;
 }
 
@@ -962,7 +966,7 @@ div.useTYC >h1, h2, h3, h4, h5, h6 {
 div.useTYC > p {
     font-family: "Helvetica";
     font-size: 10pt;
-    margin: 0% 4%;
+    text-align: left;
     letter-spacing: .1rem;
     word-spacing: .1rem;
 }
@@ -5115,6 +5119,10 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
     #divGraph{
         margin: 0px 20px!important;
+    }
+
+    .blackTYC{
+        top: 15%;
     }
     
 

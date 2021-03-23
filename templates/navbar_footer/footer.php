@@ -266,7 +266,7 @@
 </div>
 
     <!-- Politicas de privacidad - MODAL -->
-<div id="exampleModal" class="modal fade bd-example-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="exampleModal" class="modal blackTYC fade bd-example-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg ">
         <div class="useTYC modal-content">
             <h1>POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES</h1>

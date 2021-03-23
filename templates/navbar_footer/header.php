@@ -147,14 +147,14 @@
                 <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <!-- INPUT PERSONALIZADO
-                <label class="custom-radio-tyc">-->
+                <!-- INPUT PERSONALIZADO-->
+                <label class="custom-radio-tyc">
                      <!-- Input oculto  -->
 
-                   <!-- <input class="custom-radio-tyc__input" type="radio">-->
+                    <input class="custom-radio-tyc__input" type="radio">
                      <!--Imagen en sustitucion -->
-                    <!--<span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
-                </label>-->
+                    <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
+                </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">
             <form action="../carrito de compras/finalpedido.php" method="post">
@@ -166,6 +166,7 @@
         </div>
 	</div>
 </div>
+
 
 <script>
     function eliminar(iddelete){
