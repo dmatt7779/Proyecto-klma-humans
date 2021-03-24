@@ -17,7 +17,32 @@ include "../../global/conexion.php";
 	
 </head>
 <body>
-<?php require "../navbar_footer/header.php"; ?>
+<nav id="hnavgen" class="navbar-expand-sm navbar-light">
+    <header class="mainheader mainheader2">
+        <div class="navlogo">
+                <a href="../main/menu.php"><img id="logoshopnav" src="../assets/img/nav_foot/shop.gif" alt="Logo de compras"></a>
+        </div>
+
+        <div class="navlogo2">
+            <a href="h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
+            <a href="../test/test.php" id="lbtngo-test" class="btn btnGoTest" hidden>HACER TEST</a>
+        </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nested-nav mr-2">
+
+                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img id="dotsnav" src="../assets/img/nav_foot/menu.png" alt="menu 2"></div></a>
+
+                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img id="loginnav" src="../assets/img/nav_foot/Login.png" alt="Login de usuarios"></div></a>
+
+                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img id="shopcartnav" src="../assets/img/nav_foot/Cartera.png" alt="carrito de compras"></div></a>
+                </div>
+            </div>
+    </header>
+</nav>
 
 <!-- Scroll Bar personalizado -->
 <div id="scrollCalm">
@@ -44,7 +69,7 @@ include "../../global/conexion.php";
 		<input type="hidden" id=prod name="idprod">
 	</form>
 	<!--Productos -->
-	<div class="gridclmw mt-5">
+	<div class="gridclmw">
 	<?php for($i=0 ; $i < count($listaproductos) ;  $i++    ){ ?>
 		<div style="margin-bottom: 15%;" class="card-clmw">
 			<a href="#"><div class="cover" onclick="idprod(<?php echo $listaproductos[$i]['id'];?>)" style="background-image: url(../assets/img/prodgenerales/<?php echo $listaproductos[$i]['imagen']; ?>)" title="Diseño de museo"></div></a>
@@ -90,6 +115,35 @@ include "../../global/conexion.php";
             $('#scrollwrapcw').parent().css('display', 'none')
         }
     });
+</script>
+
+    <!-- Dynamic Navbar -->
+<script>
+    window.addEventListener('scroll', function() {
+
+        let routenavbar = "../assets/img/nav_foot/"
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY;
+
+        header.classList.toggle('scrolling-active', windowPosition > 80);
+
+        if( windowPosition >= 80 ){
+            $('#logoshopnav').attr( 'src', routenavbar + 'Shop-White.gif');
+            $('#dotsnav').attr( 'src', routenavbar + 'menu2.png' );
+            $('#loginnav').attr( 'src', routenavbar + 'Login2.png' );
+            $('#shopcartnav').attr( 'src', routenavbar + 'Cartera2.png');
+            $('#logomainnav').attr( 'hidden', true );
+            $('#lbtngo-test').removeAttr( 'hidden' );
+        }else if(windowPosition < 80) {
+            $('#logoshopnav').attr( 'src', routenavbar + 'shop.gif' );
+            $('#dotsnav').attr( 'src', routenavbar + 'menu.png' );
+            $('#loginnav').attr( 'src', routenavbar + 'Login.png' );
+            $('#shopcartnav').attr( 'src', routenavbar + 'Cartera.png');
+            $('#lbtngo-test').attr( 'hidden', true );
+            $('#logomainnav').removeAttr( 'hidden' );
+        }
+    })
+
 </script>
 
 <?php include "../navbar_footer/footer.php";?>

@@ -63,7 +63,7 @@ $tristeza = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
     <!-- style="overflow: hidden;" -->
-    <?php require "../navbar_footer/header.php"; ?>
+    <?php require "../navbar_footer/dark_header.php"; ?>
 
     <!-- Scroll Bar personalizado -->
     <div id="scrollTrans">

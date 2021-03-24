@@ -27,9 +27,8 @@ include "../../global/conexion.php";
         </div>
 
         <div class="navlogo2">
-        <!-- <img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"> -->
-            <a href="../main/h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
-            
+            <a href="h0m3.php"><img id="logomainnav" src="../assets/img/nav_foot/Logo.png" alt="logo principal"></a>
+            <a href="../test/test.php" id="lbtngo-test" class="btn btnGoTest" hidden>HACER TEST</a>
         </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -316,6 +315,35 @@ $classics = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 			}
 		} );
 	}
+</script>
+
+<!-- Dynamic Navbar -->
+<script>
+    window.addEventListener('scroll', function() {
+
+        let routenavbar = "../assets/img/nav_foot/"
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY;
+
+        header.classList.toggle('scrolling-active', windowPosition > 90);
+
+        if( windowPosition >= 90 ){
+            $('#logoshopnav').attr( 'src', routenavbar + 'Shop-White.gif');
+            $('#dotsnav').attr( 'src', routenavbar + 'menu2.png' );
+            $('#loginnav').attr( 'src', routenavbar + 'Login2.png' );
+            $('#shopcartnav').attr( 'src', routenavbar + 'Cartera2.png');
+            $('#logomainnav').attr( 'hidden', true );
+            $('#lbtngo-test').removeAttr( 'hidden' );
+        }else if(windowPosition < 90) {
+            $('#logoshopnav').attr( 'src', routenavbar + 'shop.gif' );
+            $('#dotsnav').attr( 'src', routenavbar + 'menu.png' );
+            $('#loginnav').attr( 'src', routenavbar + 'Login.png' );
+            $('#shopcartnav').attr( 'src', routenavbar + 'Cartera.png');
+            $('#lbtngo-test').attr( 'hidden', true );
+            $('#logomainnav').removeAttr( 'hidden' );
+        }
+    })
+
 </script>
 
 </body>

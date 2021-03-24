@@ -64,7 +64,7 @@ include "../../global/conexion.php";
                 <a href="#">LOUNGEWEAR</a>
             </div>
             <div>
-                <a href="../Rejillas_generales/loungewear.php"><img src="../assets/img/menushop/Loungewear.png" alt=""></a>
+                <a href="../Rejillas_generales/loungewear.php"><img src="../assets/img/menushop/Loungewear.jpg" alt=""></a>
             </div>
             <div>
                 <a>CONFORT</a>
@@ -74,29 +74,13 @@ include "../../global/conexion.php";
                 <p>loungewear se define como ropa funcional y de “estar en casa”, pero que va más allá de solo pijamas. A esta lista entran prendas como los pantalones de lino ligeros para el verano, las camisetas de tejidos cálidos como el algodón, coordinados de t-shirt y shorts, conjuntos comfies y hasta ligeros suéteres de punto. La comodidad de esta división nos da la pauta para crear interesantes looks y sumar a nuestro armario diseños creativos y fucionales.</p>
             </div>
         </div>
-        <!-- CALMWEAR -->
-        <div class="text-center aboutlines2 p-5">
-            <div>
-                <a href="#">CALMWEAR</a>
-            </div>
-            <div>
-                <a href="../Rejillas_generales/calmwear.php"><img src="../assets/img/menushop/Calmwear.png" alt=""></a>
-            </div>
-            <div>
-                <a>CALM</a>
-                <a>DESIGN</a>
-            </div>
-            <div>
-                <p>El Calmwear es una categoría propia de KLMA ́humans y su finalidad es crear productos de hogar y descanso que permitan a las personas relajarse en sus espacios personales e íntimos. Esta categoría integra también los sentidos, los mas importantes son el tacto y el olfativo ya que una apariencia suave y un aroma adecuado, permitirá al usuario alcanzar estados elevados de descanso y bienestar.</p>
-            </div>
-        </div>
         <!-- TRANSITION -->
         <div class="text-center aboutlines3 p-5">
             <div>
                 <a href="">TRANSITION</a>
             </div>
             <div>
-                <a href="../Rejillas_generales/Transition.php"><img src="../assets/img/menushop/Transition.png" alt=""></a>
+                <a href="../Rejillas_generales/Transition.php"><img src="../assets/img/menushop/Transition.jpg" alt=""></a>
             </div>
             <div>
                 <a>EMOTIONAL</a>
@@ -104,6 +88,22 @@ include "../../global/conexion.php";
             </div>
             <div>
                 <p>Transition se define como ropa funcional y casual, que tiene amplia influencia deportiva. Es como un atlheisure pero más relajado, lo que permite estar fuera en una reunión o en una cena sin perder comodidad y elegancia ya que sus tejidos y siluetas siempre serán minimalistas y sofisticados, para poder hacer la transición de un espacio a otro o de una ocasión de uso a otra, así como del día a la noche.</p>
+            </div>
+        </div>
+        <!-- CALMWEAR -->
+        <div class="text-center aboutlines2 p-5">
+            <div>
+                <a href="#">CALMWEAR</a>
+            </div>
+            <div>
+                <a href="../Rejillas_generales/calmwear.php"><img src="../assets/img/menushop/Calmwear.jpg" alt=""></a>
+            </div>
+            <div>
+                <a>CALM</a>
+                <a>DESIGN</a>
+            </div>
+            <div>
+                <p>El Calmwear es una categoría propia de KLMA ́humans y su finalidad es crear productos de hogar y descanso que permitan a las personas relajarse en sus espacios personales e íntimos. Esta categoría integra también los sentidos, los mas importantes son el tacto y el olfativo ya que una apariencia suave y un aroma adecuado, permitirá al usuario alcanzar estados elevados de descanso y bienestar.</p>
             </div>
         </div>
     </div>

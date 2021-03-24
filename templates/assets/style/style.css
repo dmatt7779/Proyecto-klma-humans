@@ -848,6 +848,18 @@ div.mainb{
     transition: height .5s ease;
 }
 
+#hnavgen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 10;
+    transition: height .5s ease;
+}
+
 .carousel-inner {
     height: 100vh;
 }
@@ -904,58 +916,64 @@ div.mainb{
     width: 90.2%;
     height: 330px;
     left: 4.8%;
-    background-color: rgb(26,24,24);
+    background-color: #000000;
     font-family: MoristonPersonal-Regular !important;
     padding-right: 17px;
 }
 
 .useTYC{
-    background-color: rgb(26,24,24)!important;
+    background-color: #000000!important;
     color: white!important;
     width: 140%;
     left: -22%;
 }
 
 div.useTYC > h1 {
-    font-family: "MoristonPersonal-Bold";
-    font-size: 20pt;
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
     text-align: left;
     margin: 4% 0%;
 }
 
 div.useTYC > h2 {
-    font-family: "MoristonPersonal-Bold";
-    font-size: 18pt;
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
     text-align: left;
     margin-bottom: 3%;
 }
 
 div.useTYC > h3 {
-    font-family: "MoristonPersonal-Medium";
-    font-size: 15pt;
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
     margin: 3% 0%;
     text-align: left;
 }
 
 div.useTYC > h4 {
-    font-family: "MoristonPersonal-Medium";
-    font-size: 15pt;
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
     text-align: left;
     margin: 3% 0%;
 }
 
 div.useTYC > h5 {
-    font-family: "MoristonPersonal-Medium";
-    font-size: 15pt;
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
     text-align: left;
     margin: 3% 0%;
 }
 
 div.useTYC > h6 {
-    font-family: "MoristonPersonal-Medium";
-    font-size: 10pt;
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
     text-align: left;
-    margin: 3% 4%;
+    margin: 3% 0%;
 }
 
 div.useTYC >h1, h2, h3, h4, h5, h6 {
@@ -965,7 +983,8 @@ div.useTYC >h1, h2, h3, h4, h5, h6 {
 
 div.useTYC > p {
     font-family: "Helvetica";
-    font-size: 10pt;
+    font-family: "Helvetica";
+    font-size: 9pt;
     text-align: left;
     letter-spacing: .1rem;
     word-spacing: .1rem;
@@ -977,11 +996,17 @@ div.useTYC > p:last-child {
 
 div.useTYC > ol, ul > li {
     font-family: "Helvetica";
-    font-size: 10pt;
+    font-size: 9pt;
     margin: 0% 4%;
     letter-spacing: .1rem;
     word-spacing: .1rem;
     margin: 0% 4%;
+}
+
+button > .closeColorTYC, .closeColorTYC{
+    color: #ffff!important;
+    opacity: 100%!important;
+    padding: 2% 2% 0% 0%!important;
 }
  /* ---------------------------------- FIN HOME ------------------------------ */
 
@@ -1304,6 +1329,7 @@ div.useTYC > ol, ul > li {
 
 /*Tamaño de rejillas*/
 .gridvertical {
+    margin-top: 8%;
     display: grid;
     justify-content: center;
     margin-bottom: 50px;
@@ -1993,7 +2019,7 @@ div.useTYC > ol, ul > li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
-    margin: 7%;
+    margin: 8%;
 }
 
 .cover {
@@ -2208,8 +2234,8 @@ div.useTYC > ol, ul > li {
 }
 
 .btn-opcionescw:nth-child(2){
-    flex: 2;
-    margin: 0% 1.555555% 0% 0%;
+    flex: 1;
+    margin: 0% 18.6% 0% 0%;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -2218,8 +2244,7 @@ div.useTYC > ol, ul > li {
     flex: 0;
     align-items: flex-end;
     justify-content: end;
-    flex: 0 1 0%;
-    margin: 0% 8% 0% 0%;
+    margin: 0% 0% 0% 0%;
 }
 
 .btn-opcionescw:nth-child(3) > label > span {
@@ -2230,7 +2255,6 @@ div.useTYC > ol, ul > li {
 
 .btn-opcionescw:nth-child(4){
     flex: 2;
-    /* margin-left: 6.55555555%; */
     letter-spacing: .3rem;
     flex-direction: column;
     justify-content: center;
@@ -4364,6 +4388,10 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     position: absolute;
 }
 
+#scrollgenlg {
+    position: fixed;
+}
+
 #scrolltitlelg {
     margin: 0% 0% 0% 0%;
     transform: rotate(-90deg);
@@ -4912,7 +4940,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         .gridtlin {
             grid-template-rows: repeat(1, 115px);
             flex: 3;
-            margin-bottom: -8%;
+            margin-bottom: -9%;
         }
 
         .gridtl {
@@ -4969,8 +4997,8 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     }
 
     .card {
-        margin-left: 469px;
-        margin-right: 469px;        
+        margin-left: 467px;
+        margin-right: 467px;     
     }
 
     .btn-opciones:nth-child(1){
@@ -4978,7 +5006,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     }
     
     .btn-opciones:nth-child(2){
-        margin: 0% 4.555555% 0% 0%;
+        margin: 0% 3.8% 0% 0%;
         justify-content: flex-end;
     }
     
@@ -5010,38 +5038,39 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
     .gridtlin {
         grid-template-rows: repeat(1, 195px);
-        flex: 4;
-        margin-bottom: 3%;
+        flex: 5;
     }
 
     .gridtl {
         grid-template-rows: repeat(6, 215px);
-        flex:7;
+        flex:4;
     }
 
     .containerfeel2 {
-        flex: 7;
+        flex: 2;
         align-items: baseline;
         margin: 10% -4%;
     }
 
     .btn-opcionestr:nth-child(1){
-        margin-left: 4.8%;
+        margin-left: 5.1%;
     }
     
     .btn-opcionestr:nth-child(2){
-        margin: 0% 4.55555% 0% 0%;
+        flex: 1;
+        margin: 0% 11.3% 0% 0%;
     }
     
     .btn-opcionestr:nth-child(3){
         flex: 1;
         justify-content: flex-end;
-        margin: 0% 0% 0% 0%;
+        margin: 0% 0% 0% -7%;
     }
     
     .btn-opcionestr:nth-child(4){
-        flex: 3;
-        margin-left: 0%;
+        flex: 1;
+        margin: 0% 7.5% 0% 10%;
+        align-items: flex-end;
     }
 
     .contentbagtr {
@@ -5065,11 +5094,11 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     }
 
     .aboutstory h1 {
-        letter-spacing: .969999rem;
+        letter-spacing: .96rem;
     }
     
     .aboutstory h2 {
-        letter-spacing: .495rem;
+        letter-spacing: .49rem;
     }
 
     .aboutlines > div:nth-child(1) > a {
@@ -5125,6 +5154,29 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         top: 15%;
     }
     
+    .btn-opcionescw:nth-child(2){
+        margin: 0% 22.4% 0% 0%;
+    }
+
+    .containertl {
+        padding: 3.7% 6% 0% 6%;
+    }
+
+    #scrolltitleCalm {
+        left: -11px;
+    }
+
+    #scrolltitlegenlg {
+        left: -17px;
+    }
+
+    .body-card {
+        max-width: 699px;
+    }
+
+    .desc-prod-espec{
+        margin-left: 10.4%;
+    }
 
   }
 
