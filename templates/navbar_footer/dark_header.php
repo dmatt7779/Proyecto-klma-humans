@@ -10,7 +10,7 @@
     </div>
 
     <div class="navlogo2">
-            <a href="../main/menu2.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
+            <a href="../main/h0m3.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
     </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

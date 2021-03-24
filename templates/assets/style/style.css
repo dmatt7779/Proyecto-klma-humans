@@ -2464,6 +2464,12 @@ body::-webkit-scrollbar-thumb {
     color: #000000;
     width: 250px;
 }
+
+.rotate>span:hover{
+    color: #c89c91;
+    cursor: pointer;
+    
+}
 /* ------------------------------FIN General TRANSITION ------------------------ */
 
 /* ---------------------------INICIO Especifico TRANSITION ------------------------ */
