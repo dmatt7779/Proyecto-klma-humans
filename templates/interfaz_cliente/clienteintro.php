@@ -32,7 +32,13 @@ $correo = $_SESSION['correo'];
     <!-- Beige Section -->
     <div class="containerbeige">
         <div class="usercounts">
-            HOLA <?php echo $_SESSION['apodo'];?>
+            BIENVENIDO <?php echo strtoupper($_SESSION['apodo']);?>,
+        </div>
+        <div class="usercounts">
+            COMO BUEN AMIGO, ME ALEGRA INMENSAMENTE VERTE DE NUEVO. Y ESTOY MÁS QUE LISTO PARA EXPLORAR JUNTOS TU UNIVERSO DE EMOCIONES. RECUERDA QUE ESTE ESPACIO ES TUYO, QUE ERES LIBRE DE SENTIR, EXPRESAR Y CREAR TODO LO QUE DESEES.
+        </div>
+        <div class="usercounts">
+            ACÁ ESTARÉ POR SI ME NECESITAS.
         </div>
 
         <div class="introlineclient mt-4">

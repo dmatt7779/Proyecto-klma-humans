@@ -49,7 +49,6 @@ include "../../global/conexion.php";
 <section class="hero"></section>
 <section class="demo-content"></section>
 
-
 <!-- Construcción del carrito de compras -->
 <!-- INICIO Carrito de compras -->
 <div class="cart-overlay" id="divCart" style="visibility:hidden">
@@ -82,7 +81,7 @@ include "../../global/conexion.php";
                 $ventaid =  $venta[0]['id'];
             }
         
-            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.manga, detalleventa.genero, detalleventa.id, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.manga, detalleventa.id, detalleventa.genero, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen, productos.tipologia_id, productos.codigo from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
             $sentencia -> execute();
             $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
             $subtotal = 0;
@@ -125,9 +124,18 @@ include "../../global/conexion.php";
                         <div class="plus-minus">
                             <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
                         </div>
-                        <h2><?php echo $detventa['nombre'] ?></h2>
+                        <h2><?php echo $detventa['codigo'] ?></h2>
+                        <?php 
+                            if($detventa['tipologia_id'] != 2) {
+                            
+                        ?>
                         <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
-                        <h3>Genero <?php 
+
+                    <?php }?>
+                        <?php
+                            if($detventa ['tipologia_id'] == 3){
+                        ?>
+                        <h3>GENERO <?php 
                             if(empty(($detventa['genero']))){
 
                                 echo "";
@@ -137,7 +145,14 @@ include "../../global/conexion.php";
                             }
                         
                         ?></h3>
-                         <h3>Manga <?php 
+                    <?php
+                    }
+                    ?>
+                        <?php
+                            if($detventa ['tipologia_id'] == 3){
+                            
+                        ?>
+                         <span class="cart-size">MANGA <?php 
                             if(empty(($detventa['manga']))){
 
                                 echo "";
@@ -146,10 +161,11 @@ include "../../global/conexion.php";
                                 echo $detventa['manga'];
                             }
                         
-                        ?></h3>
-                        
+                        ?></span>
+                    <?php
+                    }
+                    ?>
                         <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
-
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
@@ -159,27 +175,62 @@ include "../../global/conexion.php";
                 $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
             }
     ?>
-                <!-- FIN Cart items -->
-            </div>
+			<!-- FIN Cart items -->
+		</div>
 
-            <!-- INICIO Cart footer -->
-            <div class="cart-footer">
-                <div class="subtotal">
-                    <h3>SUBTOTAL:</h3>
-                    <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
-                </div>
-                <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <p>ACEPTO LOS TERMINOS Y CONDICIONES</p>
-                <div class="finalshop">
-                    <form action="../carrito de compras/finalpedido.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $ventaid ?>">
-                        <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
-                        <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
-                    </form>
-                </div>
+        <!-- INICIO Cart footer -->
+        <div class="cart-footer">
+            <div class="subtotal">
+                <h3>SUBTOTAL:</h3>
+                <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
+            </div>
+            <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
+                <!-- INPUT PERSONALIZADO-->
+                <label class="custom-radio-tyc">
+                     <!-- Input oculto  -->
+
+                    <input class="custom-radio-tyc__input" type="radio">
+                     <!--Imagen en sustitucion -->
+                    <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
+                </label>
+            <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
+            <div class="finalshop">
+            <form action="../carrito de compras/finalpedido.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $ventaid ?>">
+                <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
+                <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
+            </form>
             </div>
         </div>
+	</div>
 </div>
+
+
+<script>
+    function eliminar(iddelete){
+    document.getElementById('eliminacion').value = iddelete;
+    document.formdeletecart.submit();
+    }
+
+    function add(idadd, cantidadold){
+        document.getElementById('suma').value = idadd;
+        document.getElementById('cantidad').value = cantidadold;
+
+    document.formaddonetocart.submit();
+
+
+    }
+
+    function remove(idremove , cantidadold2){
+        document.getElementById('resta').value = idremove;
+        document.getElementById('cantidad2').value = cantidadold2;
+
+    document.formremoveonetocart.submit();
+
+
+    }
+</script>
+
 <!-- FIN Carrito de compras -->
 
 <!---------- SCROLL BAR ---------->

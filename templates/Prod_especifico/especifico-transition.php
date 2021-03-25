@@ -250,12 +250,12 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
             if (t == "f") {
 
-                document.getElementById("genero").value = "Femenino";
+                document.getElementById("genero").value = "FEMENINO";
 
 
             } else if(t=="m") {
 
-                document.getElementById("genero").value = "Masculino";
+                document.getElementById("genero").value = "MASCULINO";
 
             }
 
@@ -266,12 +266,12 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
             if (m == "R") {
 
-                document.getElementById("manga").value = "Ranglan";
+                document.getElementById("manga").value = "RANGLAN";
 
 
             } else if(m == "S") {
 
-                document.getElementById("manga").value = "Sisa";
+                document.getElementById("manga").value = "SISA";
 
             }
 
