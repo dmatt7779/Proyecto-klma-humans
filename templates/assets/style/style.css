@@ -2024,7 +2024,7 @@ button > .closeColorTYC, .closeColorTYC{
 
 .cover {
     height: 411px;
-    width: 550px;
+    width: 535px;
     color: #ffffff;
     background-position: center;
     margin-bottom: 1.5%;
@@ -2419,6 +2419,9 @@ body::-webkit-scrollbar-thumb {
     object-position: center center;
     display: flex;
     flex-flow: column wrap;
+}
+
+#pruebita {
     cursor: pointer;
 }
 
@@ -2766,6 +2769,7 @@ body::-webkit-scrollbar-thumb {
   .close-cart {
     font-size: 1.7rem;
     cursor: pointer;
+    padding: 0% 0% 4% 0%;
   }
   .cart h1 {
     font-family: "MoristonPersonal-Bold";
@@ -2805,7 +2809,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 6pt;
     letter-spacing: .5rem;
     text-align: end;
-    padding: 0% 0% 0% 5%;
+    padding: 0% 0% 0% 0%;
   }
 
   .cart-size {

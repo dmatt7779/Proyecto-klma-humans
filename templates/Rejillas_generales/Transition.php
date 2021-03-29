@@ -90,56 +90,56 @@ $ira=$sentencia->fetchAll(PDO::FETCH_ASSOC);
         <div class="grid-view gridtl">
 
             <!-- ira -->
-            <div class="tshirt"><img onclick="enviartransition(<?php echo $ira[0]['id']; ?>)" src="../assets/img/prodgenerales/<?php echo $ira[0]['imagen']; ?>" alt="">
+            <div id="pruebita" class="tshirt" onclick="enviartransition(<?php echo $ira[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $ira[0]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img onclick="enviartransition(<?php echo $miedo[0]['id']; ?>)" src="../assets/img/prodgenerales/<?php echo $miedo[0]['imagen']; ?>" alt="">
+            <div style="cursor: pointer" class="tshirt" onclick="enviartransition(<?php echo $miedo[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $miedo[0]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img onclick="enviartransition(<?php echo $tristeza[0]['id']; ?>)" src="../assets/img/prodgenerales/<?php echo $tristeza[0]['imagen']; ?>" alt="">
+            <div style="cursor: pointer" class="tshirt" onclick="enviartransition(<?php echo $tristeza[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $tristeza[0]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img onclick="enviartransition(<?php echo $alegria[0]['id']; ?>)" src="../assets/img/prodgenerales/<?php echo $alegria[0]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $alegria[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $alegria[0]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img onclick="enviartransition(<?php echo $felicidad[0]['id']; ?>)" src="../assets/img/prodgenerales/<?php echo $felicidad[0]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $felicidad[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $felicidad[0]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img onclick="enviartransition(<?php echo $amor[0]['id']; ?>)" src="../assets/img/prodgenerales/<?php echo $amor[0]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $amor[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $amor[0]['imagen']; ?>" alt="">
             </div>
             <!-- miedo -->
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $ira[1]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $ira[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $ira[1]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $miedo[1]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $miedo[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $miedo[1]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $tristeza[1]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $tristeza[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $tristeza[1]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $alegria[1]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $alegria[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $alegria[1]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $felicidad[1]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $felicidad[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $felicidad[1]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $amor[1]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $amor[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $amor[1]['imagen']; ?>" alt="">
             </div>
             <!-- ii -->
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $ira[2]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $ira[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $ira[2]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $miedo[2]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $miedo[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $miedo[2]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $tristeza[2]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $tristeza[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $tristeza[2]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $alegria[2]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $alegria[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $alegria[2]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $felicidad[2]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $felicidad[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $felicidad[2]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $amor[2]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $amor[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $amor[2]['imagen']; ?>" alt="">
             </div>
             <!-- li -->
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $ira[3]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $ira[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $ira[3]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $miedo[3]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $miedo[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $miedo[3]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $tristeza[3]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $tristeza[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $tristeza[3]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $alegria[3]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $alegria[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $alegria[3]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $felicidad[3]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $felicidad[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $felicidad[3]['imagen']; ?>" alt="">
             </div>
-            <div class="tshirt"><img src="../assets/img/prodgenerales/<?php echo $amor[3]['imagen']; ?>" alt="">
+            <div class="tshirt" onclick="enviartransition(<?php echo $amor[0]['id']; ?>)"><img src="../assets/img/prodgenerales/<?php echo $amor[3]['imagen']; ?>" alt="">
             </div>
             
         </div>
