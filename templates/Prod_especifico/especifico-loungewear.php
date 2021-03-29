@@ -97,7 +97,7 @@
             <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
         </form>
 
-        <form action="newpackage.php" name="empaque" method="post">
+        <form action="newcar.php" name="empaque" method="post">
             <input type="hidden" name="talla" value="S">
             <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
         </form>
@@ -187,7 +187,6 @@
                 <label class="custom-radio-checkbox">
                     <!-- Input oculto -->
 
-                    
                     <input onclick="enviar_empaque()" class="custom-radio-checkbox__input" type="radio" name="empaque" value="empaquesi">
                     <!-- Imagen en sustitucion -->
                     <span class="custom-radio-checkbox__show custom-radio-checkbox__show--radio"></span>

@@ -2378,6 +2378,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     margin-bottom: 10%;
+    cursor: pointer;
 }
 
 /* GRID para imagenes de camisetas */
@@ -2419,10 +2420,6 @@ body::-webkit-scrollbar-thumb {
     object-position: center center;
     display: flex;
     flex-flow: column wrap;
-}
-
-#pruebita {
-    cursor: pointer;
 }
 
 /* Contenedor general de plantilla transition */

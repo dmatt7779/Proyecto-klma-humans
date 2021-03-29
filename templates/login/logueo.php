@@ -6,6 +6,20 @@ session_start();
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+$usuario = $_SESSION['correo'];
+
+if ($email == '') {
+    
+    header("location:../login/login.php");
+}
+
+?>
+<script>
+    debugger;
+    console.log('<?php echo $usuario ?>')
+</script>
+<?php
+
 
 
 $sentencia = $pdo->prepare("SELECT * FROM usuarios where correo = '$email' and clave = '$password'");

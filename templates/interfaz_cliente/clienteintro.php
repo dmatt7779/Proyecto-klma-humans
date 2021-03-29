@@ -2,7 +2,7 @@
 session_start();
 include "../../global/conexion.php";
 
-if (!isset($_SESSION['correo'])) {
+if ($_SESSION['apodo'] == '') {
          
     header("location:../login/login.php");
 

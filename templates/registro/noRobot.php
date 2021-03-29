@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("America/Bogota");
-include "recaptcha.php";
 include "../../global/conexion.php";
+include "recaptcha.php";
 
 if($_POST['google-response-token']){
     $googleToken = $_POST['google-response-token'];

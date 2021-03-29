@@ -118,7 +118,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             <input type="hidden" name="manga" id="manga">
         </form>
 
-        <form action="newpackage.php" name="empaque" method="post">
+        <form action="newcar.php" name="empaque" method="post">
             <input type="hidden" name="talla" value="S">
             <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
         </form>
