@@ -2391,7 +2391,6 @@ body::-webkit-scrollbar-thumb {
     margin-right: auto;
     flex: 2;
     overflow: auto;
-    z-index: 300;
     margin-bottom: -10%;
 }
 

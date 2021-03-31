@@ -44,11 +44,10 @@ include "../../global/conexion.php";
     $( document ).on( 'click', 'button.smooth', function() {
         let Id = $( this ).parent().parent().attr( 'id' ),
             NextId = parseInt( Id ) + 1;
-            KlmHumans.saveSession( $( '#divQuestion' ).find( 'div.answ' ).children( 'div.active' ) );
-            if( NextId <= 6 ){ 
-                KlmHumans.existsQuestion( NextId );
-            } else {
-                KlmHumans.saveQuestion();
+            
+            if ( $( '#selectanswer' + Id + '' ).find( 'div.active' ).length === 1 ) {
+                KlmHumans.saveSession( $( '#divQuestion' ).find( 'div.answ' ).children( 'div.active' ) );
+                ( NextId <= 6 ) ? KlmHumans.existsQuestion( NextId ) : KlmHumans.saveQuestion();
             }
     });
 
