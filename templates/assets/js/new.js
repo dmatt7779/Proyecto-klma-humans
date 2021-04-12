@@ -78,7 +78,7 @@ $('button[name="bntOpciones"]').click(function(){
 
 // Boton para ver Empaque Especial
 $("#btn-chance").click(function(){
-$(this).toggleClass("btn-empaque btn-empaque2");
+    $(this).toggleClass("btn-empaque btn-empaque2");
 });
 
 //Boton para ver detalles

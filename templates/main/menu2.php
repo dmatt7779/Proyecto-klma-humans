@@ -23,17 +23,17 @@ include "../../global/conexion.php";
         <div class="mainb">
             <div class="menub">
                 <div class="loungewear">
-                    <a class="mt-1" href="../Rejillas_generales/loungewear.php" style="letter-spacing: .4em"><img src="../assets/img/menushop/Loungewear.png" alt="logo shop shop"></a>
+                    <a class="mt-1" href="../Rejillas_generales/loungewear.php" style="letter-spacing: .4em"><img src="../assets/img/menushop/Loungewear.jpg" alt="logo shop shop"></a>
                     <a href="../Rejillas_generales/loungewear.php">LOUNGEWEAR</a>
                 </div>
 
                 <div class="calmwear">
-                    <a href="../Rejillas_generales/calmwear.php" style="letter-spacing: .7em"><img src="../assets/img/menushop/Calmwear.png" alt="logo shop shop"></a>
+                    <a href="../Rejillas_generales/calmwear.php" style="letter-spacing: .7em"><img src="../assets/img/menushop/Calmwear.jpg" alt="logo shop shop"></a>
                     <a href="../Rejillas_generales/calmwear.php">CALMWEAR</a>
                 </div>
 
                 <div class="transition">
-                    <a href="../Rejillas_generales/Transition.php" style="letter-spacing: .5em"><img src="../assets/img/menushop/Transition.png" alt="logo shop shop"></a>
+                    <a href="../Rejillas_generales/Transition.php" style="letter-spacing: .5em"><img src="../assets/img/menushop/Transition.jpg" alt="logo shop shop"></a>
                     <a href="../Rejillas_generales/Transition.php">TRANSITION</a>
                 </div>
 
@@ -42,7 +42,7 @@ include "../../global/conexion.php";
                     <ul class="btnav">
                         <ol class="p-1"><a href="about.php">ABOUT</a></ol>
                         <ol class="p-1"><a href="../test/test.php">TEST</a></ol>
-                        <ol class="p-1"><a href="#">EMOCIONES</a></ol>
+                        <ol class="p-1"><a href="h0m3.php">EMOCIONES</a></ol>
                         <ol class="p-1"><a href="../contenido/podcast.php">PODCAST</a></ol>
                         <ol class="p-1"><a href="../contenido/blog.php">BLOG</a></ol>
                         <ol class="p-1"><a href="../contenido/contact.php">CONTÁCTO</a></ol>

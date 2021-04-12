@@ -41,7 +41,7 @@
 
     //Correo Electrónico de destino
 
-    $enviarA = 'jerry182q@gmail.com';
+    $enviarA = 'dmatt7779@gmail.com';
     $asunto = 'Nuevo mensaje desde KLMA HUMANS';
 
     //Enviar Correo

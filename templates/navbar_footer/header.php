@@ -61,7 +61,7 @@
                 $ventaid =  $venta[0]['id'];
             }
         
-            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.manga, detalleventa.id, detalleventa.genero, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+            $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.manga, detalleventa.id, detalleventa.genero, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen, productos.tipologia_id, productos.codigo from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
             $sentencia -> execute();
             $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
             $subtotal = 0;
@@ -104,9 +104,18 @@
                         <div class="plus-minus">
                             <span onclick="remove(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">-</span><p class="item-amount mb-4">&nbsp &nbsp<?php echo $detventa['cantidad'] ?>&nbsp &nbsp</p><span onclick="add(<?php echo $detventa['id'] ?>,<?php echo $detventa['cantidad'] ?>)">+</span>
                         </div>
-                        <h2><?php echo $detventa['nombre'] ?></h2>
+                        <h2><?php echo $detventa['codigo'] ?></h2>
+                        <?php 
+                            if($detventa['tipologia_id'] != 2) {
+                            
+                        ?>
                         <span class="cart-size">TALLA <?php echo $detventa['talla'] ?></span>
-                        <h3>Genero <?php 
+
+                    <?php }?>
+                        <?php
+                            if($detventa ['tipologia_id'] == 3){
+                        ?>
+                        <h3>GENERO <?php 
                             if(empty(($detventa['genero']))){
 
                                 echo "";
@@ -116,7 +125,14 @@
                             }
                         
                         ?></h3>
-                         <span class="cart-size">Manga <?php 
+                    <?php
+                    }
+                    ?>
+                        <?php
+                            if($detventa ['tipologia_id'] == 3){
+                            
+                        ?>
+                         <span class="cart-size">MANGA <?php 
                             if(empty(($detventa['manga']))){
 
                                 echo "";
@@ -126,7 +142,9 @@
                             }
                         
                         ?></span>
-
+                    <?php
+                    }
+                    ?>
                         <h3>$ <?php echo number_format($detventa['precio_venta']) ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
@@ -147,14 +165,14 @@
                 <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <!-- INPUT PERSONALIZADO
-                <label class="custom-radio-tyc">-->
+                <!-- INPUT PERSONALIZADO-->
+                <label class="custom-radio-tyc">
                      <!-- Input oculto  -->
 
-                   <!-- <input class="custom-radio-tyc__input" type="radio">-->
+                    <input class="custom-radio-tyc__input" type="radio">
                      <!--Imagen en sustitucion -->
-                    <!--<span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
-                </label>-->
+                    <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
+                </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">
             <form action="../carrito de compras/finalpedido.php" method="post">
@@ -166,6 +184,7 @@
         </div>
 	</div>
 </div>
+
 
 <script>
     function eliminar(iddelete){

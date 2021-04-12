@@ -47,6 +47,7 @@
             <div class="mt-4 mb-4">
                 <div class="img-barras"></div>
             </div>
+            
             <input type="hidden" name="google-response-token" id="google-response-token">
             <button onclick="noRobot()" class="btn btn-submit" type="submit">REGISTRARME</button>                                
 

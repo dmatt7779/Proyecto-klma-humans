@@ -7,6 +7,7 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <title>KLMA HUMANS</title>
 </head>
@@ -58,10 +59,11 @@
 
     <!-- Términos y condiciones - MODAL -->
 <div class="modal blackTYC fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <button type="button" class="close closeColorTYC" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fal fa-times closeColorTYC"></span></button>
     <div class="modal-dialog modal-lg">
         <div class="useTYC modal-content">
             <h1>TÉRMINOS Y CONDICIONES DE USO</h1>
-            <h2>K L M A HUMAN'S</h2>
+            <h2>K L M A' humans</h2>
             <p>Jhon Hobber Ramírez Cárdenas identificado con Cédula de Ciudadanía 1.037.643.132 en adelante “la empresa”, quiere promocionar sus Productos:<br><br>A continuación, encontrarás los términos y condiciones de uso, los cuales rigen la relación comercial de consumo electrónico de la empresa con cada uno de sus usuarios, ya sean personas naturales o jurídicas. El conocimiento y la aceptación de los términos y condiciones de uso son indispensables para hacer uso del sitio web, marketplace, e-commerce el cual se denominará para efectos del presente documentos como "el e-commerce" entendido como el sitio web o aplicación o plataforma a través de la cual se realizan actos de comercio no tradicional, por ellos al dar clic en el botón de aceptar, o hacer uso de este, estás manifestando expresamente que has leído, conoces y estás de acuerdo con el presente contrato de adhesión y las disposiciones que este contiene, en donde también encontrarás toda la información sobre deberes y derechos de los consumidores electrónicos.</p>
 
             <h3>DECLARACIONES PREVIAS</h3>
@@ -266,11 +268,12 @@
 </div>
 
     <!-- Politicas de privacidad - MODAL -->
-<div id="exampleModal" class="modal fade bd-example-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="exampleModal" class="modal blackTYC fade bd-example-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <button type="button" class="close closeColorTYC" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fal fa-times closeColorTYC"></span></button>
     <div class="modal-dialog modal-lg ">
         <div class="useTYC modal-content">
             <h1>POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES</h1>
-            <h2>K L M A HUMAN'S</h2>
+            <h2>K L M A' humans</h2>
             <p>Jhon Hobber Ramírez Cárdenas identificado con Cédula de Ciudadanía 1.037.643.132 en adelante “la empresa” quien será el responsable del tratamiento de los datos personales.</p><br>
 
             <p>Al aceptar esta política, acepto, como titular de mis datos personales, el tratamiento de estos por parte de la empresa, sus aliados estratégicos, filiales, sociedades subordinadas, matrices con la finalidad de cumplir con las funciones y obligaciones, procedentes de diversas operaciones realizadas a través del comercio electrónico o de manera presencial en los establecimientos de comercio. Acepto que mis datos personales sean usados para el cumplimiento de la relación que actualmente tengo con la empresa, y para los siguiente fines: Estadísticos, de mercadeo, de contacto, envío de documentación, información, promociones, eventos propios de la empresa o de sus aliados o notificaciones, entre otros, salvo que manifiestes expresa o verbalmente que se eliminen, rectifiquen o supriman los datos de las base de datos de la empresa mediante los mecanismos que en esta política se establecen.<br><br>
@@ -281,7 +284,7 @@
 
             Todas las personas que en el ejercicio de nuestras actividades comerciales, laborales o societarias nos suministren cualquier tipo de información o dato personal, podrán conocer, actualizar y rectificar en cualquier tiempo sus datos, es decir ejercer sus derechos de habeas data, este es el principal objetivo de nuestra política.</p>
 
-            <h3 class="m-4">OBJETO DE LA POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES</h3>
+            <h3>OBJETO DE LA POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES</h3>
 
             <p>La presente política de tratamiento de datos personales la tiene como objetivo implementar las disposiciones contenidas en la Ley 1581 de 2012 y demás normas que la modifiquen, en lo que se refiere exclusivamente a las bases de datos, archivos e información que contenga datos personales susceptibles de tratamiento, y explica cómo la empresa recolecta, almacena, gestiona, usa, circula y trata información que usted nos provee a través de distintos medios.<br><br>
 
@@ -329,7 +332,7 @@
 
             Puedes manifestar tu autorización de la siguiente forma: (i) de manera verbal al momento de realizar la compra, (ii) por escrito, y (iii) cuando acepte los términos y condiciones de las relaciones comerciales.</p>
 
-            <h5 class="m-3">EXCEPCIONES A LA AUTORIZACIÓN PARA EL TRATAMIENTO DE LOS DATOS PERSONALES</h5>
+            <h5>EXCEPCIONES A LA AUTORIZACIÓN PARA EL TRATAMIENTO DE LOS DATOS PERSONALES</h5>
             <ul>
                 <li>• Cuando dicha información sea requerida por una entidad pública o administrativa en ejercicio de sus funciones constitucionales o legales.</li><br>
                 <li>• Cuando medie una orden judicial que lo así lo ordene.</li><br>
@@ -363,7 +366,7 @@
                 <li>• Los demás establecidos por la ley.</li>
             </ul>
 
-            <h5 class="m-4">USO DE COOKIES Y DEL FICHERO DE ACTIVIDAD, MONITORIZACIÓN DEL SITIO WEB</h5>
+            <h5>USO DE COOKIES Y DEL FICHERO DE ACTIVIDAD, MONITORIZACIÓN DEL SITIO WEB</h5>
 
             <p>El acceso al sitio web, marketplace o e-commerce de la empresa puede implicar la utilización de cookies con el objeto de reconocer a los usuarios que se hayan registrado y poder ofrecerles un mejor servicio y más personalizado, así como información técnica.<br><br>
 

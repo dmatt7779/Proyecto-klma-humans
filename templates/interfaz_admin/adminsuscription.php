@@ -34,7 +34,6 @@ if (!isset($_SESSION['correo'])) {
             <table class="records_list table-striped table-bordered table-hover" id="mydatatable">
                     <thead>
                         <tr>
-                            <th>id</th>
                             <th>Correo</th>
                                                      
                         </tr>
@@ -42,9 +41,6 @@ if (!isset($_SESSION['correo'])) {
                     <tfoot>
                         <tr>
                             <th>Filter..</th>
-                            <th>Filter..</th>
-                           
-                            
                         </tr>
                     </tfoot>
                 <tbody>
@@ -56,10 +52,7 @@ if (!isset($_SESSION['correo'])) {
 
     <?php foreach($listausuarios as $usuario) {  ?>
                     <tr>
-
-                            <td><?php echo $usuario['id'] ?></td>
-                            <td><?php echo $usuario['correo'] ?></td>
-                           
+                            <td><?php echo $usuario['correo'] ?></td>   
                     </tr>
                     <?php } ?>                  
                 </tbody>

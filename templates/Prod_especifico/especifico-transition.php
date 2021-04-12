@@ -81,7 +81,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="font-lw-1 elemento1-5tr">
-                    <p class="titleSexo" style="padding-left: 15%; letter-spacing: 1.9rem;">SEXO</p>
+                    <p class="titleSexo">SEXO</p>
                     <div class="typeselector">
                         <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Femenino.jpg" alt=""></div>
                         <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Masculino_2.jpg" alt=""></div>
@@ -118,7 +118,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             <input type="hidden" name="manga" id="manga">
         </form>
 
-        <form action="newpackage.php" name="empaque" method="post">
+        <form action="newcar.php" name="empaque" method="post">
             <input type="hidden" name="talla" value="S">
             <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
         </form>
@@ -250,12 +250,12 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
             if (t == "f") {
 
-                document.getElementById("genero").value = "Femenino";
+                document.getElementById("genero").value = "FEMENINO";
 
 
             } else if(t=="m") {
 
-                document.getElementById("genero").value = "Masculino";
+                document.getElementById("genero").value = "MASCULINO";
 
             }
 
@@ -266,12 +266,12 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
             if (m == "R") {
 
-                document.getElementById("manga").value = "Ranglan";
+                document.getElementById("manga").value = "RANGLAN";
 
 
             } else if(m == "S") {
 
-                document.getElementById("manga").value = "Sisa";
+                document.getElementById("manga").value = "SISA";
 
             }
 
