@@ -168,10 +168,9 @@
                 <!-- INPUT PERSONALIZADO-->
                 <label class="custom-radio-tyc">
                      <!-- Input oculto  -->
-
-                    <input class="custom-radio-tyc__input" type="radio">
+                    <input class="custom-radio-tyc__input" type="checkbox">
                      <!--Imagen en sustitucion -->
-                    <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
+                    <span class="custom-radio-tyc__show custom-radio-tyc__show--checkbox"></span>
                 </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">

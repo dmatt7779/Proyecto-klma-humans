@@ -188,10 +188,9 @@ include "../../global/conexion.php";
                 <!-- INPUT PERSONALIZADO-->
                 <label class="custom-radio-tyc">
                      <!-- Input oculto  -->
-
-                    <input class="custom-radio-tyc__input" type="radio">
+                    <input class="custom-radio-tyc__input" type="checkbox">
                      <!--Imagen en sustitucion -->
-                    <span class="custom-radio-tyc__show custom-radio-tyc__show--radio"></span>
+                    <span class="custom-radio-tyc__show custom-radio-tyc__show--checkbox"></span>
                 </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">
@@ -204,32 +203,6 @@ include "../../global/conexion.php";
         </div>
 	</div>
 </div>
-
-
-<script>
-    function eliminar(iddelete){
-    document.getElementById('eliminacion').value = iddelete;
-    document.formdeletecart.submit();
-    }
-
-    function add(idadd, cantidadold){
-        document.getElementById('suma').value = idadd;
-        document.getElementById('cantidad').value = cantidadold;
-
-    document.formaddonetocart.submit();
-
-
-    }
-
-    function remove(idremove , cantidadold2){
-        document.getElementById('resta').value = idremove;
-        document.getElementById('cantidad2').value = cantidadold2;
-
-    document.formremoveonetocart.submit();
-
-
-    }
-</script>
 <!-- FIN Carrito de compras -->
 
 <!---------- SCROLL BAR ---------->
@@ -460,11 +433,37 @@ include "../../global/conexion.php";
 </section>
 
 <!-- JS, Popper.js, and jQuery -->
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/jquery-2.2.4.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
-    <script src="../test/sss/sss.js"></script>
+<script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+        <script src="../assets/librerias/jquery-2.2.4.min.js"></script>
+        <script src="../assets/librerias/popper.min.js"></script>
+        <script src="../assets/librerias/bootstrap.min.js"></script>
+        <script src="../test/sss/sss.js"></script>
+
+    <script>
+        function eliminar(iddelete){
+        document.getElementById('eliminacion').value = iddelete;
+        document.formdeletecart.submit();
+        }
+
+        function add(idadd, cantidadold){
+            document.getElementById('suma').value = idadd;
+            document.getElementById('cantidad').value = cantidadold;
+
+        document.formaddonetocart.submit();
+
+
+        }
+
+        function remove(idremove , cantidadold2){
+            document.getElementById('resta').value = idremove;
+            document.getElementById('cantidad2').value = cantidadold2;
+
+        document.formremoveonetocart.submit();
+
+
+        }
+    </script>
+
 
 <!-- Dynamic Navbar -->
 <script>

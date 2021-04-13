@@ -1747,7 +1747,7 @@ button > .closeColorTYC, .closeColorTYC{
 }
 
 /* Modificador para dar la imagen de radio */
-.custom-radio-tyc__show--radio {
+.custom-radio-tyc__show--checkbox {
     background-image: url(../img/nav_foot/tyc01.png);
 }
 
@@ -1764,7 +1764,7 @@ button > .closeColorTYC, .closeColorTYC{
 }
 
 /* Cambia el radio personalizado cuando es pulsado */
-.custom-radio-tyc > .custom-radio-tyc__input:checked + .custom-radio-tyc__show--radio {
+.custom-radio-tyc > .custom-radio-tyc__input:checked + .custom-radio-tyc__show--checkbox {
     background-image: url(../img/nav_foot/tyc02.png);
 }
 
