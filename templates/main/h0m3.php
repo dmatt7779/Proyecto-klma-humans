@@ -230,7 +230,6 @@ include "../../global/conexion.php";
 
     }
 </script>
-
 <!-- FIN Carrito de compras -->
 
 <!---------- SCROLL BAR ---------->
@@ -276,20 +275,21 @@ include "../../global/conexion.php";
 <section class="mt-5">
     <div class="container-fluid p-5">
 
-    <div class="row text-center col-sm-12 col-md-12 col-xs-12 aboutstory">
-    <p>KLMA'humans se define como una marca de moda psicológica que busca llevar un mensaje trascendental en sus productos a todos sus usuarios a través de imágenes y palabras para mejorar su calidad de vida, enseñando a las personas a aceptar su luz y su sombra y a tener un mejor manejo de sus emociones, sin la pretensión de reemplazar una terapia con un psicoanalista, pero si con la responsabilidad de llevar los mensajes de forma acertada y orientados por profesionales de la salud mental.</p>
-    <p>KLMA'humans abre un espacio a la vulnerabilidad, sin juzgar, sin pretender cambiar al otro, sin coartar la expresión y los sentimientos, sin evangelizar, sin querer decir lo que es correcto o no, simplemente extiende sus brazos y da acogida a todos para que se sientan amados y aceptados.</p>
-    <p>KLMA ́humans es una mejor amiga o amigo, es una presencia suave y amorosa, cálida, gentil, sonriente y juguetona, que brinda paz y armonía solo con estar ahí, dispuesta a escuchar de forma noble y tranquila. Ella es como un ser divino, que no tiene sexo ni forma definida. Ella es una chispa que te recuerda que todo siempre va a estar bien, y te muestra constantemente el valor de la vida y la importancia de volver a lo esencial, de evolucionar y de soltar para trascender. Su propósito superior es enseñarte a ser feliz a pesar de las adversidades, entendiendo la felicidad como el estado natural de ser.</p>
+    <div class="row text-center col-sm-12 col-md-12 col-xs-12 aboutstoryHome">
+    <p>CREAMOS ARTE A TRAVÉS DE TU EXPRESIÓN EMOCIONAL</p>
+    <p>Somos una marca de moda psicológica que lleva un mensaje trascendental en cada uno de nuestros productos para mejorar la calidad de vida del SER humano.<br> Permitirnos ser vulnerables, trascender y llevar KLMA a las personas es nuestra misión en el mundo.</p>
+    <p>KLMA' humans es un espacio que extiende sus brazos y da acogida al amor y la aceptación, como un mejor amigo, ese que te brinda una compañía cálida, gentil y sonriente. De esas que brindan paz y armonía con solo estar ahí.</p>
+    <p>Somos la chispa que te recuerda que todo siempre va a estar bien, que te muestra el valor de la vida, la importancia de volver a lo esencial, de evolucionar y de soltar para trascender.</p>
     </div>
 
     <div class="col-12" id="divisor-pod"><img src="../assets/img/podcast/linea_principal.png" alt=""></div>
 
-    <div class="colum col-md-12 col-xs-12 aboutstory">
+    <div class="colum col-md-12 col-xs-12 aboutstoryHome">
         <h1>LLEVAR KLMA A LAS PERSONAS</h1>
         <h2>POTENCIALIZANDO EL COEFICIENTE EMOCIONAL DE CADA UNO</h2>
     </div>
 
-    <div class="row aboutbtn">
+    <div class="row aboutbtn" id="emociones">
         <div class="mt-2">
             <button class="smooth"><img src="../assets/img/test/abajo.gif" alt=""></button>
         </div>

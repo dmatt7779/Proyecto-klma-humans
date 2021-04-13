@@ -32,21 +32,19 @@ include "../../global/conexion.php";
     </div>
 </div>
 
-<div>
 
     <div class="container-fluid p-5">
 
         <div class="row text-center col-sm-12 col-md-12 col-xs-12 aboutstory">
-        <p>KLMA'humans se define como una marca de moda psicológica que busca llevar un mensaje trascendental en sus productos a todos sus usuarios a través de imágenes y palabras para mejorar su calidad de vida, enseñando a las personas a aceptar su luz y su sombra y a tener un mejor manejo de sus emociones, sin la pretensión de reemplazar una terapia con un psicoanalista, pero si con la responsabilidad de llevar los mensajes de forma acertada y orientados por profesionales de la salud mental.</p>
-        <p>KLMA'humans abre un espacio a la vulnerabilidad, sin juzgar, sin pretender cambiar al otro, sin coartar la expresión y los sentimientos, sin evangelizar, sin querer decir lo que es correcto o no, simplemente extiende sus brazos y da acogida a todos para que se sientan amados y aceptados.</p>
-        <p>KLMA ́humans es una mejor amiga o amigo, es una presencia suave y amorosa, cálida, gentil, sonriente y juguetona, que brinda paz y armonía solo con estar ahí, dispuesta a escuchar de forma noble y tranquila. Ella es como un ser divino, que no tiene sexo ni forma definida. Ella es una chispa que te recuerda que todo siempre va a estar bien, y te muestra constantemente el valor de la vida y la importancia de volver a lo esencial, de evolucionar y de soltar para trascender. Su propósito superior es enseñarte a ser feliz a pesar de las adversidades, entendiendo la felicidad como el estado natural de ser.</p>
+        <p>KLMA' humans nace con un propósito fuerte, superior y visionario, enseñándole al SER a aceptar su luz y su sombra, a manejar sus emociones, llevando con responsabilidad mensajes positivos de inclusión y sostenibilidad. Todo lo que en KLMA ofrecemos está orientado por profesionales de la salud mental.</p>
+        <p>Llevamos un mensaje disruptivo que busca conectar corazones ofreciendo un hombro donde apoyarse, como lo haría un amigo de verdad. Queremos que entiendas y vivas la felicidad como el estado natural del SER.</p>
         </div>
 
         <div class="col-12" id="divisor-pod"><img src="../assets/img/podcast/linea_principal.png" alt=""></div>
 
         <div class="colum col-md-12 col-xs-12 aboutstory">
-            <h1>LLEVAR KLMA A LAS PERSONAS</h1>
-            <h2>POTENCIALIZANDO EL COEFICIENTE EMOCIONAL DE CADA UNO</h2>
+            <h1>WE ARE MADE IN</h1>
+            <h2>COLOMBIA</h2>
         </div>
 
         <div class="row aboutbtn">
@@ -61,7 +59,7 @@ include "../../global/conexion.php";
         <!-- LOUNGEWEAR -->
         <div class="text-center aboutlines p-5">
             <div>
-                <a href="#">LOUNGEWEAR</a>
+                <a href="../Rejillas_generales/loungewear.php">LOUNGEWEAR</a>
             </div>
             <div>
                 <a href="../Rejillas_generales/loungewear.php"><img src="../assets/img/menushop/Loungewear.jpg" alt=""></a>
@@ -71,13 +69,13 @@ include "../../global/conexion.php";
                 <a>DESIGN</a>
             </div>
             <div>
-                <p>loungewear se define como ropa funcional y de “estar en casa”, pero que va más allá de solo pijamas. A esta lista entran prendas como los pantalones de lino ligeros para el verano, las camisetas de tejidos cálidos como el algodón, coordinados de t-shirt y shorts, conjuntos comfies y hasta ligeros suéteres de punto. La comodidad de esta división nos da la pauta para crear interesantes looks y sumar a nuestro armario diseños creativos y fucionales.</p>
+                <p>"ESTAR EN CASA"<br>La comodidad es la base para crear outfits creativos, funcionales y de bienestar. En esta línea sobresalen las prendas ligeras, los tejidos cálidos y los materiales y colores que nos regalan KLMA.</p>
             </div>
         </div>
         <!-- TRANSITION -->
         <div class="text-center aboutlines3 p-5">
             <div>
-                <a href="">TRANSITION</a>
+                <a href="../Rejillas_generales/Transition.php">TRANSITION</a>
             </div>
             <div>
                 <a href="../Rejillas_generales/Transition.php"><img src="../assets/img/menushop/Transition.jpg" alt=""></a>
@@ -87,13 +85,13 @@ include "../../global/conexion.php";
                 <a>DESIGN</a>
             </div>
             <div>
-                <p>Transition se define como ropa funcional y casual, que tiene amplia influencia deportiva. Es como un atlheisure pero más relajado, lo que permite estar fuera en una reunión o en una cena sin perder comodidad y elegancia ya que sus tejidos y siluetas siempre serán minimalistas y sofisticados, para poder hacer la transición de un espacio a otro o de una ocasión de uso a otra, así como del día a la noche.</p>
+                <p>“LLEVA UNA EMOCIÓN CONTIGO”<br>En KLMA entendimos que las emociones son cíclicas, únicas, subjetivas y poderosas. Por eso esta línea se convierte en la más importante, la de mayor valor. Porque de forma integral con diseñadores, psicólogos y comunicadores creamos experiencias, vivencias y emociones a través de nuestras T-shirt Atrévete a portar una emoción, romper paradigmas y vivir la experiencia Klma.</p>
             </div>
         </div>
         <!-- CALMWEAR -->
         <div class="text-center aboutlines2 p-5">
             <div>
-                <a href="#">CALMWEAR</a>
+                <a href="../Rejillas_generales/calmwear.php">CALMWEAR</a>
             </div>
             <div>
                 <a href="../Rejillas_generales/calmwear.php"><img src="../assets/img/menushop/Calmwear.jpg" alt=""></a>
@@ -103,11 +101,10 @@ include "../../global/conexion.php";
                 <a>DESIGN</a>
             </div>
             <div>
-                <p>El Calmwear es una categoría propia de KLMA ́humans y su finalidad es crear productos de hogar y descanso que permitan a las personas relajarse en sus espacios personales e íntimos. Esta categoría integra también los sentidos, los mas importantes son el tacto y el olfativo ya que una apariencia suave y un aroma adecuado, permitirá al usuario alcanzar estados elevados de descanso y bienestar.</p>
+                <p>"PRODUCTOS PARA EL HOGAR Y EL DESCANSO"<br>Nuestra finalidad es que encuentres relajación, descanso y tranquilidad en tus espacios personales e íntimos. En esta línea fusionamos los 5 sentidos para crear elementos que nos ayuden a elevar tu bienestar.</p>
             </div>
         </div>
     </div>
-</div>
 
     <!-- JS, Popper.js, and jQuery -->
 

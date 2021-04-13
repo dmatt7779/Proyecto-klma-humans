@@ -27,7 +27,6 @@ include "../../global/conexion.php";
     <div id="divQuestion"></div>
 <!-- End Questions -->
 
-<?php include "../navbar_footer/footer.php" ?>
 
     <!-- JS, Popper.js, and jQuery -->
 <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
@@ -113,5 +112,7 @@ include "../../global/conexion.php";
         }
     });
 </script>
+
 </body>
 </html>
+<?php include "../navbar_footer/footer.php" ?>

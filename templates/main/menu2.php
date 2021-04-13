@@ -42,7 +42,7 @@ include "../../global/conexion.php";
                     <ul class="btnav">
                         <ol class="p-1"><a href="about.php">ABOUT</a></ol>
                         <ol class="p-1"><a href="../test/test.php">TEST</a></ol>
-                        <ol class="p-1"><a href="h0m3.php">EMOCIONES</a></ol>
+                        <ol class="p-1"><a href="h0m3.php#emociones">EMOCIONES</a></ol>
                         <ol class="p-1"><a href="../contenido/podcast.php">PODCAST</a></ol>
                         <ol class="p-1"><a href="../contenido/blog.php">BLOG</a></ol>
                         <ol class="p-1"><a href="../contenido/contact.php">CONTÁCTO</a></ol>

@@ -25,11 +25,12 @@
 <div id="mainfooter">
     <div class="maincontentf">
         <div class="conected mt-5">
+            <div><h6>¿ARE YOU READY TO FIND KLMA?</h6></div>
             <h6>CONECTEMONOS</h6>
             <form action="../interfaz_cliente/suscripcion.php" name="suscripcion" method="post">
             <input id="footersuscribe" type="text" name="correo" class="suscribe mt-3" placeholder="CORREO ELECTRÓNICO">
             <div class="newsletter mt-3">
-                <span>RECIBIRAS NOTICIAS Y OFERTAS EXCLUSIVAS</span>
+                <span>RECIBIRAS NOTICIAS, OFERTAS EXCLUSIVAS Y A UN AMIGO QUE TE ESCUCHA.</span>
                 <button type="submit" class="btn btnnews">SUSCRIBIRSE</button>
                 </form>
             </div>
@@ -424,7 +425,7 @@
 
     <div class="footer-content">
         <div class="footercontent">
-            <div class="footerleft">
+            <div class="footerleft display-none">
                 <img src="../assets/img/test/sonido-activo.png" alt="">
             </div>
 

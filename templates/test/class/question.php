@@ -40,8 +40,8 @@
         ],
         [
             'id' => 2,
-            'title' => 'CONSTRUIMOS NUESTRA IDENTIDAD A PARTIR DE NUESTROS OBJETOS EXTERNOS',
-            'question' => '¿CON CUÁL SIENTO MÁS AFINIDAD?',
+            'title' => 'CONSTRUIMOS NUESTRA IDENTIDAD A PARTIR DEL UNIVERSO QUE NOS RODEA',
+            'question' => '¿CON CUÁL SIENTES MÁS CONEXIÓN?',
             'value' => '25',
             'replys' => [
                 [
@@ -79,7 +79,7 @@
         [
             'id' => 3,
             'title' => 'ME SIENTO',
-            'question' => 'ESTO ES UN ESPACIO PARA EXPRESARSE',
+            'question' => 'ESTO ES UN ESPACIO PARA ESCUCHARTE',
             'value' => '10',
             'replys' => [
                 [
@@ -192,7 +192,7 @@
         ],
         [
             'id' => 6,
-            'title' => 'EL RECONOCIMIENTO DE OTROS HACIA NOSOTROS',
+            'title' => 'EL RECONOCIMIENTO DE OTROS HACIA NUESTRO SER',
             'question' => 'ME IDENTIFICAN CON',
             'value' => '10',
             'replys' => [
