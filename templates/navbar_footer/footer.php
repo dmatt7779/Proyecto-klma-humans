@@ -25,7 +25,6 @@
 <div id="mainfooter">
     <div class="maincontentf">
         <div class="conected mt-5">
-            <div><h6>¿ARE YOU READY TO FIND KLMA?</h6></div>
             <h6>CONECTEMONOS</h6>
             <form action="../interfaz_cliente/suscripcion.php" name="suscripcion" method="post">
             <input id="footersuscribe" type="text" name="correo" class="suscribe mt-3" placeholder="CORREO ELECTRÓNICO">

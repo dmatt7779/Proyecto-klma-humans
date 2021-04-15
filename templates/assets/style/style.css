@@ -496,14 +496,6 @@ footer {
 
 }
 
-.conected > div > h6 {
-    font-family: "MoristonPersonal-Bold";
-    font-weight: bold;
-    font-size: 8pt;
-    color: #ffffff;
-    letter-spacing: .3rem;
-}
-
 .conected > h6 {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -634,6 +626,14 @@ footer {
 
     margin-bottom: -8.1%;
 
+}
+
+.conectednews > div > h6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    color: #000000;
+    letter-spacing: .3rem;
 }
 
 .conectednews > h6 {
@@ -2434,7 +2434,7 @@ body::-webkit-scrollbar-thumb {
 .gridtlin {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 140px);
+    grid-template-rows: repeat(1, 167px);
     column-gap: 4rem;
     margin-left: auto;
     margin-right: auto;
@@ -2457,7 +2457,7 @@ body::-webkit-scrollbar-thumb {
     object-position: center center;
     display: flex;
     flex-flow: column wrap;
-    margin-bottom: 30%;
+    margin-bottom: 59%;
 }
 
 /* Ubicación y configuración tamaño de las imagenes */
@@ -5100,14 +5100,18 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     }
 
     .gridtl {
-        grid-template-rows: repeat(6, 215px);
+        grid-template-rows: repeat(6, 270px);
         flex:4;
+    }
+
+    .packet img {
+        margin-bottom: 0%;
     }
 
     .containerfeel2 {
         flex: 2;
         align-items: baseline;
-        margin: 10% -4%;
+        margin: 12% -4%;
     }
 
     .btn-opcionestr:nth-child(1){
@@ -5151,12 +5155,20 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         padding-left: 12%;
     }
 
+    .aboutstory {
+        margin: 0%!important;
+    }
+
     .aboutstory h1 {
-        letter-spacing: .96rem;
+        letter-spacing: 0.99rem;
+        text-align: left;
+        padding: 0% 3% 0% 3%;
     }
     
     .aboutstory h2 {
-        letter-spacing: .49rem;
+        letter-spacing: 3.87rem;
+        text-align: center;
+        padding: 0% 3% 0% 3.5%;
     }
 
     .aboutlines > div:nth-child(1) > a {
@@ -5241,11 +5253,11 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     }
 
     .aboutstoryHome h1{
-        letter-spacing: .97rem;
+        letter-spacing: .95rem;
     }
 
     .aboutstoryHome h2{
-        letter-spacing: .495rem;
+        letter-spacing: .486rem;
     }
 
   }

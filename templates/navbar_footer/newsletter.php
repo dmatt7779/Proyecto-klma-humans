@@ -22,11 +22,12 @@
                     <div id="imagenews">
                         <div class="newscontent">
                             <div class="conectednews">
+                                <div><h6>¿ARE YOU READY TO FIND KLMA?</h6></div>
                                 <h6>CONECTEMONOS</h6>
                                 <form action="../interfaz_cliente/suscripcion.php" name="suscripcion" method="post">
                                 <input type="text" class="suscribenews mt-3" name="correo" id="sus"  placeholder="CORREO ELECTRÓNICO" style= "font-family: MoristonPersonal-Medium; letter-spacing: .3rem; word-spacing: 0.2rem;">
                                 <div class="newsletter mt-3">
-                                    <span class="text-dark">RECIBIRAS NOTICIAS Y OFERTAS EXCLUSIVAS</span>
+                                    <span class="text-dark">RECIBIRAS NOTICIAS, OFERTAS EXCLUSIVAS Y A UN AMIGO QUE TE ESCUCHA.</span>
                                     <button onclick="submit()" class="btn btnnewsp">SUSCRIBIRSE</button>
                                 </div>
                                 </form>

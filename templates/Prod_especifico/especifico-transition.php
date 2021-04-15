@@ -91,7 +91,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="font-lw-1 elemento1-5tr">
                     <p class="titleManga">MANGA</p>
                     <div class="typeselector">
-                        <div id="m-sisa"><img onclick="manga('S')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
+                        <div id="m-sisa"><img onclick="manga('S')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt="" class="selectdotted"></div>
                         <div id="m-ranglan"><img onclick="manga('R')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
                     </div>
                 </div>
@@ -196,11 +196,13 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div><!-- FIN Contenedores hidden -->
     </div>
-
-
     <!-- FIN Carrito de compras -->
 
     <!-- JS, Popper.js, and jQuery -->
+    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+    <script src="../assets/librerias/bootstrap.min.js"></script>
+
     <script>
         function submit() {
             document.transition.submit()
@@ -211,9 +213,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             document.empaque.submit()
         }
     </script>
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
+
     <script>
         function talla(t) {
 
@@ -342,7 +342,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         })
     </script>
 
-    <!-- Scrip para mostrar y ocultar carrito de compras -->
+    <!-- Script para mostrar y ocultar carrito de compras -->
     <script>
         $('#btnCart, #aAddCart').click(function() {
             $('#divCart').css('visibility', 'visible')
@@ -399,7 +399,6 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     });
 </script>
 </body>
-
 </html>
 
 <?php include "../navbar_footer/footer.php"; ?>
