@@ -153,22 +153,22 @@ $ira=$sentencia->fetchAll(PDO::FETCH_ASSOC);
         <!-- Contenedor de los sentimientos rotados 90° -->
         <div class="containerfeel2">
             <div class="rotate">
-                <span class="">IRA</span>
+                <span onclick="location.href='../emociones/ira.php'" class="">IRA</span>
             </div>
             <div class="rotate">
-                <span class="">MIEDO</span>
+                <span onclick="location.href='../emociones/miedo.php'" class="">MIEDO</span>
             </div>
             <div class="rotate">
-                <span class="">TRISTEZA</span>
+                <span onclick="location.href='../emociones/tristeza.php'" class="">TRISTEZA</span>
             </div>
             <div class="rotate">
-                <span class="">ALEGRÍA</span>
+                <span onclick="location.href='../emociones/alegria.php'" class="">ALEGRÍA</span>
             </div>
             <div class="rotate">
-                <span class="">FELICIDAD</span>
+                <span onclick="location.href='../emociones/felicidad.php'" class="">FELICIDAD</span>
             </div>
             <div class="rotate">
-                <span class="">AMOR</span>
+                <span onclick="location.href='../emociones/amor.php'" class="">AMOR</span>
             </div>
         </div>
     </div>

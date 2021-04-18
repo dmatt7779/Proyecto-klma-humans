@@ -30,6 +30,16 @@
     $imagenmaterial1 = $_FILES['imagenmaterial1']['tmp_name'];
     $imagennamematerial2 = $_FILES['imagenmaterial2']['name'];
     $imagenmaterial2 = $_FILES['imagenmaterial2']['tmp_name'];
+
+    $imagennametalla_S = $_FILES['talla_S']['name'];
+    $imagentalla_S = $_FILES['talla_S']['tmp_name'];
+    $imagennametalla_L = $_FILES['talla_L']['name'];
+    $imagentalla_L = $_FILES['talla_L']['tmp_name'];
+    $imagennametalla_M = $_FILES['talla_M']['name'];
+    $imagentalla_M = $_FILES['talla_M']['tmp_name'];
+    $imagennametalla_XL = $_FILES['talla_XL']['name'];
+    $imagentalla_XL = $_FILES['talla_XL']['tmp_name'];
+
     $diseñador = $_POST['diseñador'];
     $frase = $_POST['frase'];
     $campaña = $_POST['campaña'];
@@ -40,7 +50,14 @@
         $ruta2 = "loungewear";
         $rutacalmwear = "../assets/img/prodgenerales/loungewear";
         $ruta2calmwear = "loungewear";
-
+        $rutatalla_S = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_S = "tallas";
+        $rutatalla_L = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_L = "tallas";
+        $rutatalla_M = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_M = "tallas";
+        $rutatalla_XL = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_XL = "tallas";
         $tipologia = 1;
     }elseif($tipologia == 220){
         $ruta = "../assets/img/prodgenerales/calmwear";
@@ -58,7 +75,15 @@
         $ruta = "../assets/img/prodgenerales/transition";
         $ruta2 = "transition";
         $rutacalmwear = "../assets/img/prodgenerales/transition";
-        $ruta2calmwear = "transitionr";
+        $ruta2calmwear = "transition";
+        $rutatalla_S = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_S = "tallas";
+        $rutatalla_L = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_L = "tallas";
+        $rutatalla_M = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_M = "tallas";
+        $rutatalla_XL = "../assets/img/prodgenerales/tallas";
+        $ruta2talla_XL = "tallas";
         $tipologia = 3;
 
     }
@@ -75,10 +100,25 @@
     $rutamaterial2 = $rutamaterial2."/".$imagennamematerial2;
     $ruta2material2 = $ruta2material2."/".$imagennamematerial2;
 
+    $rutatalla_S = $rutatalla_S."/".$imagennametalla_S;
+    $ruta2talla_S = $ruta2talla_S."/".$imagennametalla_S;
+    $rutatalla_L = $rutatalla_L."/".$imagennametalla_L;
+    $ruta2talla_L = $ruta2talla_L."/".$imagennametalla_L;
+    $rutatalla_M = $rutatalla_M."/".$imagennametalla_M;
+    $ruta2talla_M = $ruta2talla_M."/".$imagennametalla_M;
+    $rutatalla_XL = $rutatalla_XL."/".$imagennametalla_XL;
+    $ruta2talla_XL = $ruta2talla_XL."/".$imagennametalla_XL;
+
+
     move_uploaded_file($imagen,$ruta);
     move_uploaded_file($imagencalmwear,$rutacalmwear);
     move_uploaded_file($imagenmaterial1,$rutamaterial1);
     move_uploaded_file($imagenmaterial2,$rutamaterial2);
+    move_uploaded_file($imagentalla_S,$rutatalla_S);
+    move_uploaded_file($imagentalla_L,$rutatalla_L);
+    move_uploaded_file($imagentalla_M,$rutatalla_M);
+    move_uploaded_file($imagentalla_XL,$rutatalla_XL);
+
 
 
 
@@ -129,7 +169,7 @@ $cadenasave = substr($cadenasave,1);
 //parte del carrusel
 
 
-    $sql = "INSERT INTO `productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`, `diseñador`, `frase`, `campaña`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2','$diseñador','$frase','$campaña')";
+    $sql = "INSERT INTO `productos` (`codigo`,`nombre`, `tipologia_id`, `precio_venta`, `precio_compra`, `cantidad`, `habilitado`, `fecha`, `historia`, `descripcion`, `genero`, `imagen`, `carrusel`, `emocion`, `empaque`, `imagencalmwear`,`imagenmaterial1`, `imagenmaterial2`, `diseñador`, `frase`, `campaña`, `talla_S`,`talla_L`,`talla_M`,`talla_XL`) VALUES ('$codigo', '$nombre', '$tipologia', '$precio_venta' , '$precio_compra' , '$cantidad' , '1' , '$fecha' , '$historia' , '$descripcion' , '$genero' , '$ruta2' , '$cadenasave', '$emocion', '$empaque', '$ruta2calmwear','$ruta2material1','$ruta2material2','$diseñador','$frase','$campaña','$ruta2talla_S','$ruta2talla_L','$ruta2talla_M','$ruta2talla_XL')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();

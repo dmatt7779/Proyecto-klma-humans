@@ -199,7 +199,7 @@
                 <div class="elemento4">
                     <div class="btn-opciones">
                         <div class="contentsize" id="divSize" hidden>
-                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/loungewear/iciclenatural.jpg" alt="">
+                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/<?php echo $producto[0]['talla_S'] ?>" alt="">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2" id="">
                                 <button id="sizeS" class="btn-change">S</button>
@@ -225,19 +225,19 @@
 
     <!-- TALLAS BOTONES BLACK CONTAINER -->
 <script>
-    let routesizes = "../assets/img/prodgenerales/prod_esp/loungewear/"
+    let routesizes = "../assets/img/prodgenerales/"
 
     $('#sizeS').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_S'] ?>');
     }) 
     $('#sizeM').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_M']?>');
     }) 
     $('#sizeL').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_L']?>');
     }) 
     $('#sizeXL').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_XL']?>');
     });
 </script>
 
