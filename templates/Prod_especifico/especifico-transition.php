@@ -91,7 +91,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="font-lw-1 elemento1-5tr">
                     <p class="titleManga">MANGA</p>
                     <div class="typeselector">
-                        <div id="m-sisa"><img onclick="manga('S')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt="" class="selectdotted"></div>
+                        <div id="m-sisa"  class="selectdotted"><img onclick="manga('S')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-sisa.png" alt=""></div>
                         <div id="m-ranglan"><img onclick="manga('R')"  src="../assets/img/prodgenerales/prod_esp/transition/manga-ranglan.png" alt=""></div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             <input type="hidden" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
             <input type="hidden" name="talla" id="talla" value="S">
             <input type="hidden" name="genero" id="genero" value="Femenino">
-            <input type="hidden" name="manga" id="manga">
+            <input type="hidden" name="manga" id="manga" value="SISA">
         </form>
 
         <form action="newcar.php" name="empaque" method="post">
