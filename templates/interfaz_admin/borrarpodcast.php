@@ -6,9 +6,8 @@
 
    
     $id = $_POST['id']; 
-    $subtotal = $_POST['subtotal'];
 
-    $sql = "UPDATE ventas SET subtotal = '$subtotal' WHERE id = '$id'";
+    $sql = "delete from podcast where id = '$id'";
 
 
 
@@ -18,8 +17,10 @@
     $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-    if( !$register ){   
-        header('location:pagos1.php');
+    if( !$register ){
+             
+    
+        header('location:adminpodcast.php');
     } 
 ?>
 

@@ -17,32 +17,38 @@ include "../../global/conexion.php";
 <body>
 <?php include "../navbar_footer/header.php";?>
 
+<?php
+    $sentencia = $pdo->prepare("SELECT * FROM podcast where estado = 1");
+    $sentencia -> execute();
+    $listapodcast=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+?>
+
     <div class="container-fluid podcastgrid">
         <div class="row text-center">
             <div class="col-md-4 col-xs-12">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"><img src="../assets/img/podcast/Interfaz Spotify.png" alt="Imagen de reproductor spotify"></a>
+            <a href="<?php echo $listapodcast[0]["link"] ?>" target="_blank" rel="noopener noreferrer"><img src="../assets/img/<?php echo $listapodcast[0]["imagen"]?>" alt="Imagen de reproductor spotify"></a>
             </div>
 
             <div class="col-md-4 col-xs-12">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"><img src="../assets/img/podcast/Interfaz Spotify.png" alt="Imagen de reproductor spotify"></a>
+            <a href="<?php echo $listapodcast[1]["link"] ?>" target="_blank" rel="noopener noreferrer"><img src="../assets/img/<?php echo $listapodcast[1]["imagen"] ?>" alt="Imagen de reproductor spotify"></a>
             </div>
 
             <div class="col-md-4 col-xs-12">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"><img src="../assets/img/podcast/Interfaz Spotify.png" alt="Imagen de reproductor spotify"></a>
+            <a href="<?php echo $listapodcast[2]["link"] ?>" target="_blank" rel="noopener noreferrer"><img src="../assets/img/<?php echo $listapodcast[2]["imagen"] ?>" alt="Imagen de reproductor spotify"></a>
             </div>
 
             <div class="col-12" id="divisor-pod"><img src="../assets/img/podcast/linea_principal.png" alt=""></div>
 
             <div class="col-md-4 col-xs-12">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"><img src="../assets/img/podcast/Interfaz Spotify.png" alt="Imagen de reproductor spotify"></a>
+            <a href="<?php echo $listapodcast[3]["link"] ?>" target="_blank" rel="noopener noreferrer"><img src="../assets/img/<?php echo $listapodcast[3]["imagen"] ?>" alt="Imagen de reproductor spotify"></a>
             </div>
 
             <div class="col-md-4 col-xs-12">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"><img src="../assets/img/podcast/Interfaz Spotify.png" alt="Imagen de reproductor spotify"></a>
+            <a href="<?php echo $listapodcast[4]["link"] ?>" target="_blank" rel="noopener noreferrer"><img src="../assets/img/<?php echo $listapodcast[4]["imagen"] ?>" alt="Imagen de reproductor spotify"></a>
             </div>
 
             <div class="col-md-4 col-xs-12">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"><img src="../assets/img/podcast/Interfaz Spotify.png" alt="Imagen de reproductor spotify"></a>
+            <a href="<?php echo $listapodcast[5]["link"] ?>" target="_blank" rel="noopener noreferrer"><img src="../assets/img/<?php echo $listapodcast[5]["imagen"] ?>" alt="Imagen de reproductor spotify"></a>
             </div>
         </div>
     </div>

@@ -165,20 +165,22 @@
                 <span class="cart-total">$<?php echo number_format($subtotal) ?></span>
             </div>
             <p>EL COSTO DE ENVIO SERÁ VISIBLE EN EL PROCESO DE PAGO</p>
-                <!-- INPUT PERSONALIZADO-->
-                <label class="custom-radio-tyc">
-                     <!-- Input oculto  -->
-                    <input class="custom-radio-tyc__input" type="checkbox">
-                     <!--Imagen en sustitucion -->
-                    <span class="custom-radio-tyc__show custom-radio-tyc__show--checkbox"></span>
-                </label>
+               <!-- INPUT PERSONALIZADO-->
+            <label class="custom-radio-tyc">
+                <!-- Input oculto  -->
+                <input class="custom-radio-tyc__input" onclick="aceptar()" type="checkbox">
+                <!--Imagen en sustitucion -->
+                <span class="custom-radio-tyc__show custom-radio-tyc__show--checkbox"></span>
+            </label>
             <p class="text-center">ACEPTO LOS TERMINOS Y CONDICIONES</p>
             <div class="finalshop">
-            <form action="../carrito de compras/finalpedido.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $ventaid ?>">
-                <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
-                <button type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
-            </form>
+                <form action="../carrito de compras/finalpedido.php" method="post" name="finpedido">
+                    <input type="hidden" name="id" value="<?php echo $ventaid ?>">
+                    <input type="hidden" name="subtotal" value="<?php echo $subtotal ?>">
+                </form>
+                <button  onclick="enviarpedido()" type="submit" class="btn btn-submit">FINALIZAR PEDIDO</button>
+                <input type="hidden" id="acept" value="0">
+
             </div>
         </div>
 	</div>
@@ -207,6 +209,18 @@
     document.formremoveonetocart.submit();
 
 
+    }
+
+    function aceptar() {
+        document.getElementById("acept").value = parseInt(document.getElementById("acept").value) + 1
+    }
+
+    function enviarpedido() {
+        if (document.getElementById("acept").value % 2 == 0) {
+            alert("debe aceptar los terminos y condiciones")
+        } else {
+            document.finpedido.submit();
+        }
     }
 </script>
 

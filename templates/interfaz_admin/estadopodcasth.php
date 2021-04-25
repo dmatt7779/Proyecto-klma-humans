@@ -5,10 +5,9 @@
   
 
    
-    $id = $_POST['id']; 
-    $subtotal = $_POST['subtotal'];
+    $id = $_GET['id']; 
 
-    $sql = "UPDATE ventas SET subtotal = '$subtotal' WHERE id = '$id'";
+    $sql = "UPDATE podcast SET estado = '1' WHERE id = '$id'";
 
 
 
@@ -18,8 +17,10 @@
     $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-    if( !$register ){   
-        header('location:pagos1.php');
+    if( !$register ){
+             
+    
+        header('location:adminpodcast.php');
     } 
 ?>
 
