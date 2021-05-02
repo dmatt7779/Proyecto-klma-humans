@@ -19,9 +19,9 @@
     $url = 'https://sandbox.wompi.co/v1/transactions/' . $id;
     $data = file_get_contents($url);
     $data = json_decode($data);
-    $data = $data->{'data'}->{'status'};
+    $status = $data->{'data'}->{'status'};
 
-    switch ($data) {
+    switch ($status) {
         case 'DECLINED':
             echo "declinada";
             break;
