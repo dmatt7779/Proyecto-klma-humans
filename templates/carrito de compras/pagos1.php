@@ -69,7 +69,9 @@
         <div>
             <div class="datapay">
                 <i class="fas fa-chevron-left"><a href="#" onclick="javascript:atras();" class="ml-1">VOLVER AL CARRITO</a></i>
-                <button class="btn btn-shipping">CONTINUAR CON ENV&Iacute;OS</button>
+                
+                <button onclick="javascript:pagos()" class="btn btn-shipping">CONTINUAR CON ENV&Iacute;OS</button>
+
             </div>
         </div>
     </div>
@@ -93,9 +95,6 @@
         $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
         $sentencia -> execute();
         $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-     
-
 
 
     $subtotal = 0;
@@ -125,10 +124,13 @@
 
     <?php  
     }
-    $iva = ($subtotal * 19)/100;
-    $total = $subtotal + $iva;
+    
+    $total = $subtotal ;
 
     ?>
+                <form action="pagos2.php" method="POST" name="pagos2">
+                <input type="text" name="total" id="total" value=<?php echo $total?>>
+                </form>
             <!-- FIN Cart items -->
                 <div class="saleoff">
                     <input type="text" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
@@ -162,6 +164,10 @@
     function atras(){
     window.history.back();
     window.history.back();
+    }
+
+    function pagos(){
+      document.pagos2.submit()
     }
 </script>
 
