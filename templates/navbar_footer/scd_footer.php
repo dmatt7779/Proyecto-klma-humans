@@ -41,10 +41,10 @@
         iconSong.onclick = function() {
             if(klmaSong.paused){
                 klmaSong.play();
-                iconSong.src = "../assets/img/nav_foot/shop-copia.gif";
+                iconSong.src = "../assets/img/nav_foot/onda1.gif";
             }else {
                 klmaSong.pause();
-                iconSong.src = "../assets/img/nav_foot/sonido-activo.png";
+                iconSong.src = "../assets/img/nav_foot/onda2.gif";
             }
         }
 
