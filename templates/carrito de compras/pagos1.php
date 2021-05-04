@@ -22,7 +22,32 @@
     </head>
 
 <body id="pagos1">
-<?php include "../navbar_footer/dark_header.php"; ?>
+
+<nav class="navbar-expand-sm navbar-light">
+    <header class="darkmainheader">
+    <div class="navlogo">
+            <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
+    </div>
+
+    <div class="navlogo2">
+            <a href="../main/h0m3.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
+    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nested-nav mr-2">
+
+                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu2.png" alt="menu 2"></div></a>
+
+                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login2.png" alt="Login de usuarios"></div></a>
+
+                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera2.png" alt="carrito de compras"></div></a>
+                </div>
+            </div>
+    </header>
+</nav>
 
 <div class="pay-form mb-5">
     <!-- Contenedor del formulario Izquierda -->
@@ -32,7 +57,6 @@
         </div>
         <div class="datapay">
             <div class="payinfo">INFORMACION DE PAGO</div>
-            <a href="#">INICIAR SESIÓN</a>
         </div>
 
         <div class="saleoffcode">
@@ -69,7 +93,9 @@
         <div>
             <div class="datapay">
                 <i class="fas fa-chevron-left"><a href="#" onclick="javascript:atras();" class="ml-1">VOLVER AL CARRITO</a></i>
-                <button class="btn btn-shipping">CONTINUAR CON ENV&Iacute;OS</button>
+                
+                <button onclick="javascript:pagos()" class="btn btn-shipping">CONTINUAR CON ENV&Iacute;OS</button>
+
             </div>
         </div>
     </div>
@@ -93,9 +119,6 @@
         $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
         $sentencia -> execute();
         $detalleventa=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-     
-
 
 
     $subtotal = 0;
@@ -125,10 +148,13 @@
 
     <?php  
     }
-    $iva = ($subtotal * 19)/100;
-    $total = $subtotal + $iva;
+    
+    $total = $subtotal ;
 
     ?>
+                <form action="pagos2.php" method="POST" name="pagos2">
+                <input type="text" name="total" id="total" value=<?php echo $total?>>
+                </form>
             <!-- FIN Cart items -->
                 <div class="saleoff">
                     <input type="text" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
@@ -162,6 +188,10 @@
     function atras(){
     window.history.back();
     window.history.back();
+    }
+
+    function pagos(){
+      document.pagos2.submit()
     }
 </script>
 
