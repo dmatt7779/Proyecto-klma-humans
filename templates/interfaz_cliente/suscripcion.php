@@ -84,7 +84,7 @@ if(!isset($register2[0]['id'])){
 
 
     }
-    }
+}
 
     
     

@@ -6,7 +6,16 @@ if (!isset($_SESSION['correo'])) {
 
     header("location:../login/login.php");
 }
-$total = 100*(floatval($_POST['total']));
+$total = 100 * (floatval($_POST['total']));
+if ($total == 0) {
+
+    $iduser = $_SESSION['iduser'];
+    $sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
+    $sentencia->execute();
+    $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+    $total =  100 * (floatval($venta[0]['subtotal']));;
+}
 $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000))
 ?>
 <!DOCTYPE html>
@@ -23,7 +32,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000))
     <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 
-<body id="pagos1">
+<body id="pagos1" onload="nobackbutton()">
     <?php include "../navbar_footer/dark_header.php"; ?>
 
     <div class="containersale2 mt-5">
@@ -80,49 +89,85 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000))
                 <!-- Contenedor de objetos para el carrito de compras -->
                 <div class="cart-content">
                     <!-- Cart items -->
-                    <div class="cart-item mb-4">
-                        <div class="data-item">
-                            <div class="plus-minus">
-                                <p class="item-amount mb-4">1</p>
+
+                    <!-- aqui va lo que pruebo -->
+                    <?php
+
+                    $iduser = $_SESSION['iduser'];
+                    $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+                    $sentencia->execute();
+                    $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+                    $ventaid =  $venta[0]['id'];
+                    $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+                    $sentencia->execute();
+                    $detalleventa = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+
+                    $subtotal = 0;
+
+                    foreach ($detalleventa as $detventa) { ?>
+
+                        <div class="cart-item mb-4">
+                            <div class="data-item">
+                                <div class="plus-minus">
+                                    <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>
+                                </div>
+                                <h2><?php echo $detventa['nombre'] ?></h2>
+                                <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+                                <h3>$<?php echo $detventa['precio_venta'] ?></h3>
+                                <!-- <span class="remove-item">remove</span> -->
                             </div>
-                            <h2>COMERCIAL BAG</h2>
-                            <span class="cart-size">CIRCLE</span>
-                            <h3>$15.000</h3>
-                            <!-- <span class="remove-item">remove</span> -->
+                            <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                         </div>
-                        <img src="../assets/img/bolso.png" alt="">
-                    </div>
-                    <hr>
+                        <hr>
+
+
+
+                        <?php
+                        $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+
+                        ?>
+
+
+                    <?php
+                    }
+
+                    $total = $subtotal;
+                    $totalglobal = $total;
+                    $_SESSION['total'] = $total
+                    ?>
+
                     <!-- FIN Cart items -->
                     <div class="saleoff">
-                        <input type="text" class="saleoff" placeholder="CODIGO DE DESCUENTO">
-                        <div><button class="btn btn-saleoff">USAR</button></div>
+                        <input type="text" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
+                        <div class="mr-3"><button class="btn btn-saleoff">USAR</button></div>
                     </div>
                     <hr>
                     <!-- SUBTOTAL -->
                     <div class="cart-footer mt-4">
-                        <div class="subtotal">
-                            <h3 style="letter-spacing: .6rem;">SUBTOTAL</h3>
-                            <span style="font-size: 6pt;">$70.000</span>
-                        </div>
-                        <div class="subtotal">
-                            <h3 style="letter-spacing: 1.1rem;">ENVÍOS</h3>
-                            <span style="font-size: 6pt;">$10.000</span>
-                        </div>
-                        <hr>
+                       
                         <div class="subtotal mt-4">
-                            <h3 style="letter-spacing: 1.5rem;">TOTAL</h3>
-                            <span>$80.000</span>
+                            <h3>TOTAL</h3>
+                            <span>$<?php echo $total ?></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- JS, Popper.js, and jQuery -->
     <script>
-        console.log("<?php echo $ref ?>")
+        function nobackbutton() {
+
+            window.location.hash = "no-back-button";
+
+            window.location.hash = "Again-No-back-button" //chrome
+
+            window.onhashchange = function() {
+                window.location.hash = "no-back-button";
+            }
+
+        }
     </script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
