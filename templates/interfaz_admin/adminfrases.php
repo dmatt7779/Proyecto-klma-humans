@@ -36,7 +36,6 @@ if (!isset($_SESSION['correo'])) {
                 <input type="text" name="emocion" placeholder="emocion">
 <!--                 <input type="text" name="blog" placeholder="blog"> -->
                 <textarea rows="5" type="text" name="blog" placeholder="blog"></textarea>
-
                 </div>
 
                 <div class="introline2 mt-2">

@@ -84,7 +84,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
 
         <!-- INICIO configuración pasarela de pagos 1 -->
-        <div class="pay-form">
+        <div class="">
             <div class="pay">
                 <!-- Contenedor de objetos para el carrito de compras -->
                 <div class="cart-content">

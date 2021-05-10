@@ -12,7 +12,7 @@
     $escritor = $_POST['escritor'];
     $emocion = $_POST['emocion'];
     $blog = $_POST['blog'];
-    
+/*     $blog = str_replace(PHP_EOL, '<p>', $blog); */
    
     $sql = "INSERT INTO frases (frase,escritor,emocion,blog,habilitado) VALUES ('$frase', '$escritor', '$emocion','$blog',1);";
 

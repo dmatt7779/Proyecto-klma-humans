@@ -42,7 +42,7 @@ include "../../global/conexion.php";
 
         <div class="col-12" id="divisor-pod"><img src="../assets/img/podcast/linea_principal.png" alt=""></div>
 
-        <div class="colum col-md-12 col-xs-12 aboutstory">
+        <div class="colum col-md-12 col-xs-12 aboutstoryTitle">
             <h1>WE ARE MADE IN</h1>
             <h2>COLOMBIA</h2>
         </div>
@@ -55,18 +55,18 @@ include "../../global/conexion.php";
     </div>
 
     <!-- Second About -->
-    <div class="scdabout">
+    <Section class="scdabout">
         <!-- LOUNGEWEAR -->
         <div class="text-center aboutlines p-5">
-            <div>
+            <div class="pb-3">
                 <a href="../Rejillas_generales/loungewear.php">LOUNGEWEAR</a>
             </div>
             <div>
-                <a href="../Rejillas_generales/loungewear.php"><img src="../assets/img/menushop/Loungewear.jpg" alt=""></a>
+                <a href="../Rejillas_generales/loungewear.php"><img src="../assets/img/menushop/Loungewear.jpg" alt="LoungeWear bussiness line"></a>
             </div>
-            <div>
-                <a>CONFORT</a>
-                <a>DESIGN</a>
+            <div class="pt-3 pb-3">
+                <a href="../Rejillas_generales/loungewear.php">CONFORT</a>
+                <a href="../Rejillas_generales/loungewear.php">DESIGN</a>
             </div>
             <div>
                 <p>"ESTAR EN CASA"<br>La comodidad es la base para crear outfits creativos, funcionales y de bienestar. En esta línea sobresalen las prendas ligeras, los tejidos cálidos y los materiales y colores que nos regalan KLMA.</p>
@@ -74,37 +74,37 @@ include "../../global/conexion.php";
         </div>
         <!-- TRANSITION -->
         <div class="text-center aboutlines3 p-5">
-            <div>
+            <div class="pb-3">
                 <a href="../Rejillas_generales/Transition.php">TRANSITION</a>
             </div>
             <div>
-                <a href="../Rejillas_generales/Transition.php"><img src="../assets/img/menushop/Transition.jpg" alt=""></a>
+                <a href="../Rejillas_generales/Transition.php"><img src="../assets/img/menushop/Transition.jpg" alt="Transition bussiness line"></a>
+            </div>
+            <div class="pt-3 pb-3">
+                <a href="../Rejillas_generales/Transition.php">EMOTIONAL</a>
+                <a href="../Rejillas_generales/Transition.php">DESIGN</a>
             </div>
             <div>
-                <a>EMOTIONAL</a>
-                <a>DESIGN</a>
-            </div>
-            <div>
-                <p>“LLEVA UNA EMOCIÓN CONTIGO”<br>En KLMA entendimos que las emociones son cíclicas, únicas, subjetivas y poderosas. Por eso esta línea se convierte en la más importante, la de mayor valor. Porque de forma integral con diseñadores, psicólogos y comunicadores creamos experiencias, vivencias y emociones a través de nuestras T-shirt Atrévete a portar una emoción, romper paradigmas y vivir la experiencia Klma.</p>
+                <p>“LLEVA UNA EMOCIÓN CONTIGO”<br>En KLMA entendimos que las emociones son cíclicas, únicas, subjetivas y poderosas. Por eso esta línea se convierte en la más importante, la de mayor valor. Porque de forma integral con diseñadores, psicólogos y comunicadores creamos experiencias, vivencias y emociones a través de nuestras t-shirt. Atrévete a portar una emoción, romper paradigmas y vivir la experiencia KLMA.</p>
             </div>
         </div>
         <!-- CALMWEAR -->
         <div class="text-center aboutlines2 p-5">
-            <div>
+            <div class="pb-3">
                 <a href="../Rejillas_generales/calmwear.php">CALMWEAR</a>
             </div>
             <div>
-                <a href="../Rejillas_generales/calmwear.php"><img src="../assets/img/menushop/Calmwear.jpg" alt=""></a>
+                <a href="../Rejillas_generales/calmwear.php"><img src="../assets/img/menushop/Calmwear.jpg" alt="LoungeWear Calmwear line"></a>
             </div>
-            <div>
-                <a>CALM</a>
-                <a>DESIGN</a>
+            <div class="pt-3 pb-3">
+                <a href="../Rejillas_generales/calmwear.php">CALM</a>
+                <a href="../Rejillas_generales/calmwear.php">DESIGN</a>
             </div>
             <div>
                 <p>"PRODUCTOS PARA EL HOGAR Y EL DESCANSO"<br>Nuestra finalidad es que encuentres relajación, descanso y tranquilidad en tus espacios personales e íntimos. En esta línea fusionamos los 5 sentidos para crear elementos que nos ayuden a elevar tu bienestar.</p>
             </div>
         </div>
-    </div>
+    </Section>
 
     <!-- JS, Popper.js, and jQuery -->
 

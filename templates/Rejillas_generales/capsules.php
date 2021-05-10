@@ -81,7 +81,7 @@ $tristeza = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containertl">
         <!-- GRID para figuras geometricas -->
-        <div class="grid-view gridtlin">
+        <div class="grid-view gridtlin2">
             <div style="margin-bottom: 30%;" class="packet"><img src="../assets/img/prodgenerales/transition/rectangulo_transparent_1.gif" alt="prisma">
             </div>
             <div style="margin-bottom: 30%;" class="packet"><img src="../assets/img/prodgenerales/transition/cubo_transparent_1.gif" alt="cubo">

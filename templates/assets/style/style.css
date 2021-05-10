@@ -182,6 +182,13 @@ body {
     border-bottom: 1px dotted #000000;
 }
 
+.recoverypwd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ----------------------------------LOGIN------------------------- */
 
 /* ----------------------------------REGISTRO------------------------- */
@@ -209,7 +216,7 @@ body {
     position: absolute;
 }
 
-.divshowhide > span:nth-child(2){
+.divshowhide > span:nth-child(3){
     position: absolute;
     right: 0;
 }
@@ -413,7 +420,7 @@ header.darkmainheader {
 }
 
 .footerleft > img {
-width: 25%;
+    width: 33%;
 }
 
 .footerright > a {
@@ -623,9 +630,9 @@ footer {
 }
 
 .imagenews2{
-
+    width: 598px;
+    height: 230px;
     margin-bottom: -8.1%;
-
 }
 
 .conectednews > div > h6 {
@@ -1057,7 +1064,7 @@ button > .closeColorTYC, .closeColorTYC{
  /* ---------------------------------- FIN HOME ------------------------------ */
 
 /* -----------------------------ABOUT US----------------------------- */
-.aboutstory {
+.aboutstory, .aboutstoryTitle {
     padding: 1% 30% 1% 30%
 }
 
@@ -1068,19 +1075,19 @@ button > .closeColorTYC, .closeColorTYC{
     letter-spacing: .1rem;
 }
 
-.aboutstory h1 {
+.aboutstoryTitle h1 {
     margin-top: 3%;
-    font-family: "MoristonPersonal-Bold";
-    font-size: 12pt;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 10pt;
     letter-spacing: 1rem;
-    word-spacing: 2.7rem;
+    word-spacing: 3.4rem;
     padding: 0% 0% 0% 0%;
 }
 
-.aboutstory h2 {
-    font-family: "MoristonPersonal-Regular";
-    font-size: 7pt;
-    letter-spacing: 3.9rem;
+.aboutstoryTitle h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 12pt;
+    letter-spacing: 3.4666rem;
     padding: 0% 0% 0% 0%;
 }
 
@@ -1101,7 +1108,6 @@ button > .closeColorTYC, .closeColorTYC{
 .aboutlines {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -1145,6 +1151,8 @@ button > .closeColorTYC, .closeColorTYC{
     font-size: 8pt;
     text-align: center;
     letter-spacing: 1.17777777rem;
+    text-decoration: none;
+    color: #000000;
 }
 
 .aboutlines > div:nth-child(3) > a:nth-child(2) {
@@ -1152,6 +1160,8 @@ button > .closeColorTYC, .closeColorTYC{
     font-size: 8pt;
     text-align: center;
     letter-spacing: 1.56666666rem;
+    text-decoration: none;
+    color: #000000;
 }
 
 .aboutlines > div:nth-child(4) > p {
@@ -1164,7 +1174,6 @@ button > .closeColorTYC, .closeColorTYC{
 .aboutlines2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -1207,7 +1216,9 @@ button > .closeColorTYC, .closeColorTYC{
     font-family: "MoristonPersonal-Bold";
     font-size: 8pt;
     text-align: center;
-    letter-spacing: 2.8555555rem
+    letter-spacing: 2.8555555rem;
+    text-decoration: none;
+    color: #000000;
 }
 
 .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
@@ -1215,6 +1226,7 @@ button > .closeColorTYC, .closeColorTYC{
     font-size: 8pt;
     text-align: center;
     letter-spacing: 1.57999999rem;
+    text-decoration: none;
 }
 
 .aboutlines2 > div:nth-child(4) > p {
@@ -1227,7 +1239,6 @@ button > .closeColorTYC, .closeColorTYC{
 .aboutlines3 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -1237,6 +1248,13 @@ button > .closeColorTYC, .closeColorTYC{
     margin-bottom: 5%;
 }
 
+.aboutlines3 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .aboutlines3 > div:nth-child(1) > a {
     margin-top: 3%;
     font-family: "Helvetica";
@@ -1244,13 +1262,6 @@ button > .closeColorTYC, .closeColorTYC{
     letter-spacing: .666666666rem;
     color: #000000;
     text-decoration: none;
-}
-
-.aboutlines3 > div:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 .aboutlines3 > div:nth-child(2) > a > img {
@@ -1271,6 +1282,8 @@ button > .closeColorTYC, .closeColorTYC{
     font-size: 8pt;
     text-align: center;
     letter-spacing: .7777777rem;
+    color: #000000;
+    text-decoration: none;
 }
 
 .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
@@ -1278,6 +1291,8 @@ button > .closeColorTYC, .closeColorTYC{
     font-size: 8pt;
     text-align: center;
     letter-spacing: 1.5777777rem;
+    color: #000000;
+    text-decoration: none;
 }
 
 .aboutlines3 > div:nth-child(4) > p {
@@ -2444,6 +2459,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 .gridtlin > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridtlin2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 227px);
+    column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 2;
+    overflow: auto;
+    margin-bottom: -10%;
+}
+
+.gridtlin2 > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4095,8 +4128,8 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 	padding: 10px 120px;
 }
 
-.designer-text p{
-    font-family: "HelveticaLt";
+.designer-text > p{
+    font-family: "Helvetica";
     font-size: 7pt;
     letter-spacing: .2rem;
 	text-align: center;
@@ -5095,7 +5128,12 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     }
 
     .gridtlin {
-        grid-template-rows: repeat(1, 195px);
+        grid-template-rows: repeat(1, 155px);
+        flex: 5;
+    }
+
+    .gridtlin2 {
+        grid-template-rows: repeat(1, 205px);
         flex: 5;
     }
 
@@ -5155,22 +5193,6 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         padding-left: 12%;
     }
 
-    .aboutstory {
-        margin: 0%!important;
-    }
-
-    .aboutstory h1 {
-        letter-spacing: 0.99rem;
-        text-align: left;
-        padding: 0% 3% 0% 3%;
-    }
-    
-    .aboutstory h2 {
-        letter-spacing: 3.87rem;
-        text-align: center;
-        padding: 0% 3% 0% 3.5%;
-    }
-
     .aboutlines > div:nth-child(1) > a {
         letter-spacing: .68rem;
     }
@@ -5210,14 +5232,15 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     .results {
         margin-top: 10%;
         padding-left: 0%;
+        margin-left: 6rem;
     }
 
     .results > p {
-        letter-spacing: 6.9rem;
+        letter-spacing: 7rem;
     }
 
     #divGraph{
-        margin: 0px 20px!important;
+        margin: 0% 0% 0% 2.5%!important;
     }
 
     .blackTYC{
@@ -5258,6 +5281,28 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
     .aboutstoryHome h2{
         letter-spacing: .486rem;
+    }
+
+    .slider-testimonial{
+        width: 55%;
+    }
+
+    .aboutstoryTitle {
+        padding: 1% 30% 1% 30%;
+        margin: 0%!important;
+    }
+
+    .aboutstoryTitle > h1 {
+        letter-spacing: 1rem;
+        text-align: left;
+        margin: 6% 0% 0% 3%;
+    }
+    
+    .aboutstoryTitle > h2 {
+        letter-spacing: 3.455rem;
+        text-align: center;
+        padding: 0% 3% 0% 3.5%;
+        margin: 2% 0% 8% 0%;
     }
 
   }

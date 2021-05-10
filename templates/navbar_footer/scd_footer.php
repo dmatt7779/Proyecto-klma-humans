@@ -11,7 +11,7 @@
 <footer id="testfooter" class="footer-content">
     <div class="footercontent">
         <div class="footerleft">
-            <img src="../assets/img/nav_foot/sonido-activo.png" alt="icono para reproducir musica" id="iconSong">
+            <img src="../assets/img/nav_foot/onda1.gif" alt="icono para reproducir musica" id="iconSong">
         </div>
 
         <audio id="klmaSong">
