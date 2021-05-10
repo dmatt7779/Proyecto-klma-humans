@@ -13,7 +13,8 @@ $sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $idu
 $sentencia->execute();
 $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-$total =  100 * (floatval($venta[0]['subtotal']));;
+$total =  100 * (floatval($venta[0]['subtotal']));
+$total2 =  floatval($venta[0]['subtotal']);
 
 $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
@@ -32,7 +33,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
     <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 
-<body id="pagos1" onload="nobackbutton()">
+<body id="pagos1">
     <?php include "../navbar_footer/dark_header.php"; ?>
 
     <div class="containersale2 mt-5">
@@ -43,12 +44,59 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
         <div class="datachance mb-5">
             <div class="minichance">
                 <span>CONTACTO</span>
-                <button class="btnminichance">CAMBIAR</button>
+                <button class="btnminichance" data-toggle="modal" data-target="#exampleModal">CAMBIAR</button>
             </div>
             <hr>
             <div class="minichance">
                 <span>ENVIAR A</span>
-                <button class="btnminichance">CAMBIAR</button>
+                <button class="btnminichance" data-toggle="modal" data-target="#exampleModal1">CAMBIAR</button>
+            </div>
+
+        </div>
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Escriba el nuevo nombre</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="changenombre.php" name="name" method="post">
+                            <input type="text" name="nombre">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="document.name.submit()" class="btn btn-primary">Cambiar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Escriba el nuevo telefono</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="changedireccion.php" name="telefono" method="post">
+                            <input type="text" name="telefono">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="entre()" class="btn btn-primary">Cambiar</button>
+                    </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -66,7 +114,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
         <!-- Sección para pasar a pagos -->
         <div>
             <div class="datapay">
-                <i class="fas fa-chevron-left"><a href="#" class="ml-1">VOLVER A INFORMACIÓN</a></i>
+                
                 <!-- wompi -->
                 <form action="https://checkout.wompi.co/p/" method="GET">
                     <!-- OBLIGATORIOS -->
@@ -132,10 +180,6 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
                     <?php
                     }
-
-                    $total = $subtotal;
-                    $totalglobal = $total;
-                    $_SESSION['total'] = $total
                     ?>
 
                     <!-- FIN Cart items -->
@@ -151,7 +195,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
                         <div class="subtotal mt-4">
                             <h3>TOTAL</h3>
-                            <span>$<?php echo $total ?></span>
+                            <span>$<?php echo $total2 ?></span>
                         </div>
                     </div>
                 </div>
@@ -159,17 +203,12 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
         </div>
     </div>
     <script>
-        function nobackbutton() {
 
-            window.location.hash = "no-back-button";
-
-            window.location.hash = "Again-No-back-button" //chrome
-
-            window.onhashchange = function() {
-                window.location.hash = "no-back-button";
-            }
-
+        function entre() {
+            document.telefono.submit()
         }
+
+
     </script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>

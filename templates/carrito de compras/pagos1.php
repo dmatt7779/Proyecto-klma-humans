@@ -9,6 +9,12 @@ if (!isset($_SESSION['correo'])) {
 }
 
 $iduser = $_SESSION['iduser'];
+$sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
+$sentencia->execute();
+$venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+$total2 =  floatval($venta[0]['subtotal']);
+
 $sql = "SELECT * FROM usuarios WHERE id = '$iduser' and has_direccion = 1";
 
 
@@ -146,8 +152,6 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
             $detalleventa = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-            $subtotal = 0;
-
             foreach ($detalleventa as $detventa) { ?>
 
                 <div class="cart-item mb-4">
@@ -164,26 +168,16 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                 </div>
                 <hr>
 
-
-
-                <?php
-                $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
-
-                ?>
-
-
             <?php
             }
-
-            $total = $subtotal;
-            $totalglobal = $total;
-            $_SESSION['total'] = $total
             ?>
 
             <!-- FIN Cart items -->
             <div class="saleoff">
-                <input type="text" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
-                <div class="mr-3"><button class="btn btn-saleoff">USAR</button></div>
+                <form action="descuento.php" method="post">
+                    <input type="text" name="codigo" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
+                    <div class="mr-3"><button type="submit" class="btn btn-saleoff">USAR</button></div>
+                </form>
             </div>
             <hr>
             <!-- SUBTOTAL -->
@@ -196,7 +190,7 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                 <hr>
                 <div class="subtotal mt-4">
                     <h3>TOTAL</h3>
-                    <span>$<?php echo $total ?></span>
+                    <span>$<?php echo $total2 ?></span>
                 </div>
             </div>
         </div>
