@@ -29,6 +29,7 @@
             echo "hay error";
             break;
         case 'APPROVED':
+            echo "PAGADO";
             $iduser = $_SESSION['iduser'];      
             $sentencia = $pdo->prepare("SELECT id,subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
             $sentencia -> execute();
@@ -45,9 +46,6 @@
             break;
     }
     ?>
-    <script>
-        var a = ('<?php echo $data ?>')
-    </script>
     <h1>lo pagaste una zimbita</h1>
 
     <a href="http://klmahumans.com/templates/main/h0m3.php">volver</a>
