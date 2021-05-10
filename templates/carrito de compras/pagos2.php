@@ -6,17 +6,17 @@ if (!isset($_SESSION['correo'])) {
 
     header("location:../login/login.php");
 }
-$total = 100 * (floatval($_POST['total']));
-if ($total == 0) {
 
-    $iduser = $_SESSION['iduser'];
-    $sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
-    $sentencia->execute();
-    $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-    $total =  100 * (floatval($venta[0]['subtotal']));;
-}
-$ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000))
+$iduser = $_SESSION['iduser'];
+$sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
+$sentencia->execute();
+$venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+$total =  100 * (floatval($venta[0]['subtotal']));;
+
+$ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,13 +140,15 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000))
 
                     <!-- FIN Cart items -->
                     <div class="saleoff">
-                        <input type="text" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
-                        <div class="mr-3"><button class="btn btn-saleoff">USAR</button></div>
+                        <form action="descuento.php" method="post">
+                            <input type="text" name="codigo" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
+                            <div class="mr-3"><button type="submit" class="btn btn-saleoff">USAR</button></div>
+                        </form>
                     </div>
                     <hr>
                     <!-- SUBTOTAL -->
                     <div class="cart-footer mt-4">
-                       
+
                         <div class="subtotal mt-4">
                             <h3>TOTAL</h3>
                             <span>$<?php echo $total ?></span>
