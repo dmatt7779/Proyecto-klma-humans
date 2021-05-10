@@ -51,3 +51,20 @@
 .sssprev:hover, .sssnext:hover {
 	cursor: pointer;
 }
+
+/*@ Responsive media queries*/
+
+
+@media screen and (min-width: 1439px) and (max-width: 1440px){
+
+	.sssprev {
+		left: 0%;
+		background-position: 0 20px;
+	}
+	
+	.sssnext {
+		right: 0%;
+		background-position: 0 20px;
+	}
+
+}

@@ -1,6 +1,14 @@
 <?php
 session_start();
 include "../../global/conexion.php";
+
+if( isset($_GET['email'])  && isset($_GET['token']) ){
+    $email=$_GET['email'];
+    $token=$_GET['token'];
+}else{
+    header("Location: login.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +17,7 @@ include "../../global/conexion.php";
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klma Humans</title>
+  <title>Restablecer Klma Humans</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
@@ -26,10 +34,12 @@ include "../../global/conexion.php";
                 <div class="img-form"></div>
         </div>
 
-        <form action="restablecer.php" class="login-form" method="POST">
+        <form action="verificartoken.php" class="login-form" method="POST">
             
             <div class="logpass">
-                <input type="email" name="email" class="login-email" placeholder="CORREO ELECTRÓNICO">
+                <input type="text" name="codigo" class="login-email" placeholder="CÓDIGO">
+                <input type="hidden" class="form-control" id="c" name="email" value="<?php echo $email;?>">
+                <input type="hidden" class="form-control" id="c" name="token" value="<?php echo $token;?>">
             </div>
                 
             <div class="contentlogoform mt-4 mb-4">
@@ -37,7 +47,7 @@ include "../../global/conexion.php";
             </div>
 
             <div class="recoverypwd">
-                <button class="btn btn-submit" type="submit">RECUPERAR</button>  
+                <button class="btn btn-submit" type="submit">INGRESAR CÓDIGO</button>  
             </div>
         </form>
 

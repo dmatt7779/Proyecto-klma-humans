@@ -99,7 +99,7 @@ include "../../global/conexion.php";
                     </a>
                 </div>
             </div>
-            <!-- blog 3 -->
+            <!-- blog 6 -->
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
                     <h1 onclick="idsend('<?php echo $frases[5]['blog'] ?>','<?php echo $frases[5]['emocion'] ?>','<?php echo $frases[5]['escritor'] ?>','<?php echo $frases[5]['frase'] ?>')" class="blog-title"><?php echo $frases[5]['emocion'] ?></h1>
@@ -117,32 +117,30 @@ include "../../global/conexion.php";
 
     <form action="../contenido/public_blog.php" name="formblog" method="post">
 
-        <input type="hidden" name="blog" id="blog">
-        <input type="hidden" name="emocion" id="emocion">
-        <input type="hidden" name="escritor" id="escritor">
-        <input type="hidden" name="frase" id="frase">
+        <input type="text" name="blog" id="blog">
+        <input type="text" name="emocion" id="emocion">
+        <input type="text" name="escritor" id="escritor">
+        <input type="text" name="frase" id="frase">
 
     </form>
 
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
+    <script src="../assets/librerias/popper.min.js"></script>
+    <script src="../assets/librerias/bootstrap.min.js"></script>
+    <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
+
     <script>
         function idsend(blog, emocion, escritor, frase) {
-            
+            debugger;
             document.getElementById('blog').value = blog;
             document.getElementById('emocion').value = emocion;
             document.getElementById('escritor').value = escritor;
             document.getElementById('frase').value = frase;
 
-            document.formblog.submit();
+/*             document.formblog.submit(); */
         }
     </script>
-
-
-    <!-- JS, Popper.js, and jQuery -->
-
-    <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
-    <script src="../assets/librerias/popper.min.js"></script>
-    <script src="../assets/librerias/bootstrap.min.js"></script>
-    <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
 
     <!-- scroll bar -->
     <script>

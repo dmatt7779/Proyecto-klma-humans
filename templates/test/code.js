@@ -77,7 +77,10 @@ var
         infoQuestion: function( Id, Validate ){
             var
                 Question
+                Titulo = document.getElementById('titulo')
 
+            ( Id == 1 ) ? Question.innerHTML = 'Bienvenido' : Question.innerHTML =  '';
+            
             if( Validate ){
                 console.log( Questions )
             } else {

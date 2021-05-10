@@ -29,7 +29,7 @@
                 <div class="img-register"></div>
         </div>
 
-        <form id="register-form" class="login-form" action="noRobot.php" method="POST"><!-- guardar.php -->
+        <form id="register-form" class="login-form" action="noRobot.php" method="POST">
 
             <div class="logpass">
                 <input type="text" name="correo" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
@@ -95,7 +95,7 @@
         });
     </script>
     
-    <!-- Mostrar y ocultar contraseña-->
+<!-- Mostrar y ocultar contraseña-->
     <script type="text/javascript">
         function mostrarPassword(){
             var cambio = document.getElementById("txtPassword");

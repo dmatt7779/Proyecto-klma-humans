@@ -279,7 +279,7 @@ include "../../global/conexion.php";
 		<div class="introresult mb-2">
 			<p>"DEJAMOS DE TEMER A AQUELLO QUE SE HA<br>APRENDIDO A ENTENDER"</p>
 		</div>
-		<div><p>MARIE CURIE</p></div>
+		<div class="contautor"><p><a href="../contenido/public_blog.php">MARIE CURIE</a></p></div>
 	</div>
 		
 	<!-- Contenedor para campañas -->

@@ -44,9 +44,13 @@ session_start();
 
         <form class="login-form" action="logueo.php" method="POST">
 
-            <div class="logpass mb-2">
+            <div class="logpass">
                 <input type="text" name="email" class="login-email" placeholder="CORREO ELECTRÓNICO"><br>
-                <input type="password" name="password" class="login-pass" placeholder="CONTRASEÑA"><br>
+                <div class="divshowhide logpassregister">
+                    <input id="txtPassword" type="password" name="password" class="login-pass" placeholder="CONTRASEÑA"><br>
+                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                </div>
             </div>
 
             <div class="forget-pass text-center mt-1">
@@ -71,6 +75,20 @@ session_start();
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
+
+<!-- Mostrar y ocultar contraseña-->
+<script type="text/javascript">
+    function mostrarPassword(){
+        var cambio = document.getElementById("txtPassword");
+        if(cambio.type == "password"){
+            cambio.type = "text";
+            $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+        }else{
+            cambio.type = "password";
+            $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+        }
+        }
+</script>
 </body>
 </html>
 
