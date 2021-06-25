@@ -2892,8 +2892,8 @@ body::-webkit-scrollbar-thumb {
  .cart-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-top: 30%;
+    align-items: stretch;
+    margin-top: 20%;
 }
 
  .cart-overlay {
@@ -2951,16 +2951,16 @@ body::-webkit-scrollbar-thumb {
   }
   /*---------- Cart Item -------------------- */
   .cart-item {
-    display: grid;
-    align-items: end;
-    grid-template-columns: auto 1fr auto;
-    grid-column-gap: 1.5rem;
-    margin: -1.1rem -1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0% 0% 0% 0%;
   }
 
   .cart-item img {
     width: 95px;
     height: 105px;
+    margin-left: 5%;
   }
 
   .cart-item h2 {
@@ -3020,7 +3020,7 @@ body::-webkit-scrollbar-thumb {
 
 /*---------- End of Cart Item -------------------- */
 .cart-footer {
-    margin: 5% -2% 5% 2%;
+    margin: 5% -2% 5% 0%;
 }
 
 .subtotal {
@@ -3096,16 +3096,33 @@ body::-webkit-scrollbar-thumb {
     justify-content: start;
     overflow: auto;
 }
+.modal-backdrop {
+    z-index: -1040!important;
+}
 
 .pay {
-    position: ABSOLUTE;
-    top: 13.4%;
+    position: absolute;
+    top: 14.1%;
     right: 0;
     width: 100%;
     height: 100%;
     background: rgb(206, 199, 199);
-    padding: 2% 7% 0% 2%;
+    padding: 2% 5% 0% 3%;
     overflow: auto;
+}
+
+.btn-Wompi, .btn-Wompi:hover {
+    background-color: #2D2A29;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    letter-spacing: .5rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -3121,7 +3138,7 @@ hr {
     border: 0;
     border-top: 1.5px solid;
     color: rgba(0,0,0);
-    width: 98%;
+    width: 99.5%;
 }
 
 .saleoff::placeholder{
@@ -3138,7 +3155,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2% 0% 2% -5%;
+    margin: 2% 0% 2% 0%;
 }
 
 /* Campo del codigo descuento */
@@ -3146,7 +3163,7 @@ hr {
     display: flex;
     align-items: center;
     text-align: center;
-    width: 280px;
+    width: 287px;
     height: 40px;
     border: none;
     border-radius: 8px;
@@ -3156,7 +3173,7 @@ hr {
 }
 
 .btn-saleoff, .btn-saleoff:hover {
-    background-color: rgb(23, 23, 23);
+    background-color: #2D2A29;
     color: rgb(255, 255, 255);
     border-radius: 6px;
     font-family: "MoristonPersonal-Medium";
@@ -3168,8 +3185,8 @@ hr {
     align-items: center;
     height: 40px;
     width: auto;
-    margin: 0% 0% 0% 10%;
-    padding: 0% 0% 0% 10%;
+    margin: 0% 0% 0% 11%;
+    padding: 0% 0% 0% 11%;
 }
 
 .btn-shipping, .btn-shipping:hover {
@@ -3342,10 +3359,11 @@ hr {
 
 .containersale2 {
     width: 50%;
-    padding: 2% 5% 0% 5%;
-    margin: 0% 0% 0% 5%;
+    padding: 2% 3% 0% 5%;
     display: flex;
     flex-direction: column;
+    margin-top: 9rem!important;
+    background: rgba(242, 232, 220);
 }
 
 .datachance {
