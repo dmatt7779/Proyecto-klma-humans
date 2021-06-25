@@ -5,10 +5,11 @@
   
 
    
-    $id = $_POST['id']; 
-    $subtotal = $_POST['subtotal'];
+    $id = $_GET['id']; 
 
-    $sql = "UPDATE ventas SET subtotal = '$subtotal',descontado = 0 WHERE id = '$id'";
+    $sql = "UPDATE descuentos SET estado = 1 WHERE id = '$id'";
+
+
 
 
     $sentencia = $pdo->prepare( $sql );
@@ -16,8 +17,10 @@
     $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-    if( !$register ){   
-        header('location:pagos1.php');
+    if( !$register ){
+             
+    
+        header('location:admindescuentos.php');
     } 
 ?>
 

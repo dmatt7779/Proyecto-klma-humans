@@ -134,6 +134,10 @@ if (empty($usuario)) {
 			<input type="hidden" name="campaña" id="campaña">
 	</form>
 
+	<form action="../Prod_especifico/especifico-transition.php" name="formfrases" method="post">
+			<input type="hidden" name="id" id="idfrase">
+	</form>
+
 	<div class="introcontresult">
 		<div class="btn-blogshare">
 			<button type="submit" onclick="showhide()" class="d-block"><i class="fas fa-ellipsis-v"></i></button>
@@ -142,38 +146,16 @@ if (empty($usuario)) {
 		<!-- frases para Diseñadores -->
 		<div class="wrapper mb-5">
 			<div class="slider-testimonial">
+			<?php for ($i=0; $i < count($listaproductos); $i++) { ?>	 
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p>"EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR TESORO"</p>
+						<p onclick="enviar('<?php echo $listaproductos[$i]['id'] ?>')"> <a><?php echo $listaproductos[$i]['frase'] ?></a></p>
 					</div>
 					<div class="autor">
-						<p>MIEDO BY SARA VARGAS</p>
+						<p onclick="enviar('<?php echo $listaproductos[$i]['id'] ?>')"><a>DESIGN BY <?php echo $listaproductos[$i]['diseñador'] ?></a></p>
 					</div>
 				</div>
-				<div class="testimonial-item">
-					<div class="designer-text">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repudiandae voluptatem alias quam eligendi culpa error nesciunt dignissimos eaque molestiae.</p>
-					</div>
-					<div class="autor">
-						<p>ALEGRÍA BY SARA VARGAS</p>
-					</div>
-				</div>
-				<div class="testimonial-item">
-					<div class="designer-text">
-						<p>"EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR TESORO"</p>
-					</div>
-					<div class="autor">
-						<p>TRISTEZA BY SARA VARGAS</p>
-					</div>
-				</div>
-				<div class="testimonial-item">
-					<div class="designer-text">
-						<p>"EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR TESORO"</p>
-					</div>
-					<div class="autor">
-						<p>AMOR BY SARA VARGAS</p>
-					</div>
-				</div>
+			<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -242,6 +224,11 @@ if (empty($usuario)) {
 	function seecampain(campain){
 		document.getElementById('campaña').value = campain
 		document.formcapsule.submit()
+	}
+
+	function enviar(id){
+		document.getElementById('idfrase').value = id
+		document.formfrases.submit()		
 	}
 </script>
 

@@ -399,34 +399,34 @@ include "../../global/conexion.php";
 			<div class="slider-testimonial">
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p>"EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR TESORO"</p>
+						<p><?php echo $listaproductos1[$seleccion1]['frase']?></p>
 					</div>
 					<div class="autor">
-						<p>MIEDO BY SARA VARGAS</p>
+						<p><?php echo $listaproductos1[$seleccion1]['emocion']?> BY <?php echo $listaproductos1[$seleccion1]['diseñador']?></p>
 					</div>
 				</div>
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repudiandae voluptatem alias quam eligendi culpa error nesciunt dignissimos eaque molestiae.</p>
+						<p><?php echo $listaproductos2[$seleccion2]['frase']?></p>
 					</div>
 					<div class="autor">
-						<p>ALEGRÍA BY SARA VARGAS</p>
+						<p><?php echo $listaproductos2[$seleccion2]['emocion']?> BY <?php echo $listaproductos1[$seleccion2]['diseñador']?></p>
 					</div>
 				</div>
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p>"EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR TESORO"</p>
+						<p><?php echo $listaproductos3[$seleccion3]['frase']?></p>
 					</div>
 					<div class="autor">
-						<p>TRISTEZA BY SARA VARGAS</p>
+						<p><?php echo $listaproductos3[$seleccion3]['emocion']?> BY <?php echo $listaproductos1[$seleccion3]['diseñador']?></p>
 					</div>
 				</div>
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p>"EL LUGAR DONDE RESIDE EL MAYOR DE TUS MIEDOS ES A LA VEZ EL RINCÓN DONDE ENCUENTRAS TU MAYOR TESORO"</p>
+						<p><?php echo $listaproductos4[$seleccion4]['frase']?></p>
 					</div>
 					<div class="autor">
-						<p>AMOR BY SARA VARGAS</p>
+						<p><?php echo $listaproductos4[$seleccion4]['emocion']?> BY <?php echo $listaproductos1[$seleccion4]['diseñador']?></p>
 					</div>
 				</div>
 			</div>
