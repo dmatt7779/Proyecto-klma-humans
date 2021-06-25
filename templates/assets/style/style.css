@@ -292,6 +292,7 @@ header.mainheader {
     grid-template-columns: repeat(3, 1fr);
     padding: 1% 1%;
     align-items: center;
+    background-color: #fff;
 }
 
 header.mainheader .navlogo {
@@ -4687,11 +4688,6 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             margin: 8%;
             width: 84%
         }
-
-        /* .cover{
-            height: 30vw;
-            width: 100%;
-        } */
     }
 
     @media screen and (max-width: 1200px){
@@ -4701,10 +4697,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             width: 93%
             /* padding: 20px; */
         }
-        /* .card-body {
-            padding: 2rem;
-            margin-top: -3rem;
-        } */
+
         .cover{
             height: 30vw;
             max-width: 100%;
@@ -4749,15 +4742,84 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
     /*Móviles*/
     @media screen and (max-width: 576px){
+
+        .card-text {
+            margin-left: 16px;
+        }
+
+        .card {
+            margin-left: 7px;
+            margin-right: 47px;
+            
+        }
+
+        .gridvertical img {
+            width: 116.3%;
+            height: 541px;
+            padding-top: 50px;
+        }
+
+        .gridhorizontal {
+            display: block;
+            margin-bottom: -20px;
+        }
+
+        .price, .price:hover {
+            margin: -2%;
+            /* text-align: center; */
+        }
+
+        .price-horizontal, .price-horizontal:hover {
+            font-size: 11pt;
+            letter-spacing: 0.60rem;
+        }
+
+        .card-title, .card-title:hover {
+            /* text-decoration: none;
+            color: rgb(26,24,24);
+            font-family: "MoristonPersonal-Bold";
+            font-weight: bold;
+            font-size: 7.8pt;
+            text-align: right;
+            letter-spacing: .2rem;
+            line-height: 2.5rem; */
+            /* margin-right: -10rem;
+            text-align: end; */
+        }
+
+        .card-body {
+            max-width: 86%;
+        }
+
+        .griddoblevertical {
+            /* display: grid; */
+            grid-template-columns: repeat(1, 510px);
+            grid-column-gap: 80px;
+            justify-content: center;
+            justify-self: center;
+            align-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .griddoblevertical img {
+            width: 100%;
+            height: 605px;
+        }
+    
+        .nested-nav .cartmenu > img, .nested-nav .loginmenu > img, .nested-nav .dotsmenu > img {
+            margin-left: 1.5rem;
+        }
         .gridclmw{
             grid-template-columns: 100%;
-            margin-top: -15%;
+            margin-top: 5%;
         }
         .cover{
             height: 329px;
             max-width: 100%;
             margin: 5% 0% -5% 0%;
         }
+
         .price, .price:hover {
             margin: 2%;
         }
@@ -4765,17 +4827,17 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             display: none;
         }
         .footerhr2 {
-            width: 95%;
+            width: 99%;
         }
         #footersuscribe {
             letter-spacing: 0.5rem;
             padding: 0% 0% 0% 0.6%;
         }
         .maincontentf{
-            padding: 0% 10% 2% 0%;
+            padding: 0% 2% 2% 0%;
         }
         .conected{
-            margin-left: 1rem;
+            margin-left: 0.4rem;
             max-width: 100%;
         }
 
@@ -4791,7 +4853,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
         .socialfooter img {
             width: 33px;
-            margin: -58px 78px 98px -164px;
+            margin: -58px 81px 98px -155px;
         }
         .legaltexts > div > a{
             font-size: 0.1rem;
