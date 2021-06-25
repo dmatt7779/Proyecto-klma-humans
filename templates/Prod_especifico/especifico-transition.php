@@ -83,8 +83,8 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="font-lw-1 elemento1-5tr">
                     <p class="titleSexo">SEXO</p>
                     <div class="typeselector">
-                        <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Femenino.jpg" alt=""></div>
-                        <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Masculino_2.jpg" alt=""></div>
+                        <div><img onclick="genero('f')" id="femenino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Femenino.png" alt=""></div>
+                        <div><img onclick="genero('m')"  id="masculino" src="../assets/img/prodgenerales/prod_esp/transition/Sexo_Masculino_2.png" alt=""></div>
                     </div>
                 </div>
 
@@ -357,13 +357,13 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         var Ruta = "../assets/img/prodgenerales/prod_esp/transition/";
 
         $(document).on('click', '#femenino', function() {
-            $(this).attr('src', Ruta + 'Sexo_Femenino.jpg');
-            $('#masculino').attr('src', Ruta + 'Sexo_Masculino_2.jpg ');
+            $(this).attr('src', Ruta + 'Sexo_Femenino.png');
+            $('#masculino').attr('src', Ruta + 'Sexo_Masculino_2.png ');
         })
 
         $(document).on('click', '#masculino', function() {
-            $(this).attr('src', Ruta + 'Sexo_Masculino.jpg');
-            $('#femenino').attr('src', Ruta + 'Sexo_Femenino_2.jpg ');
+            $(this).attr('src', Ruta + 'Sexo_Masculino.png');
+            $('#femenino').attr('src', Ruta + 'Sexo_Femenino_2.png ');
         })
     </script>
 
