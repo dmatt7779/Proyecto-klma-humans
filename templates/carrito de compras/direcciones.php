@@ -43,7 +43,9 @@ if ($newsletter == "true") {
     }
 }
 // newsletter
-
+if($direccion == null){
+    header('location:pagos1.php');
+}
 if($savedireccion == "true"){
    
     $sql = "UPDATE usuarios SET has_direccion = true WHERE id = $iduser" ;
@@ -54,7 +56,7 @@ if($savedireccion == "true"){
 
 }
 
-if ($alreadydireccion == null) {
+if ($alreadydireccion) {
 
     $sql2 = "INSERT INTO `Direcciones`(`id_user`, `nombre`, `apellido`, `direccion`, `dep-local`, `ciudad`, `pais`, `provincia`, `barrio`, `telefono`,`correo`) VALUES ('$iduser','$nombres','$apellidos','$direccion','$dep_local','$ciudad','$pais','$provincia','$barrio','$telefono','$correo')";
 
