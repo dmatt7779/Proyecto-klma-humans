@@ -1,7 +1,7 @@
 <?php
 $totalglobal = 0;
-session_start();
 include "../../global/conexion.php";
+session_start();
 
 if (!isset($_SESSION['correo'])) {
 
@@ -161,7 +161,7 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                         </div>
                         <h2><?php echo $detventa['nombre'] ?></h2>
                         <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-                        <h3>$<?php echo $detventa['precio_venta'] ?></h3>
+                        <h3>$<?php echo number_format($detventa['precio_venta']) ?></h3>
                         <!-- <span class="remove-item">remove</span> -->
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
@@ -190,7 +190,7 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                 <hr>
                 <div class="subtotal mt-4">
                     <h3>TOTAL</h3>
-                    <span>$<?php echo $total2 ?></span>
+                    <span>$<?php echo number_format($total2) ?></span>
                 </div>
             </div>
         </div>

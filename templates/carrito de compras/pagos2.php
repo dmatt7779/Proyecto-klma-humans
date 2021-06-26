@@ -169,7 +169,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                                     </div>
                                     <h2><?php echo $detventa['nombre'] ?></h2>
                                     <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-                                    <h3>$<?php echo $detventa['precio_venta'] ?></h3>
+                                    <h3>$<?php echo number_format($detventa['precio_venta']) ?></h3>
                                     <!-- <span class="remove-item">remove</span> -->
                                 </div>
                                 <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
@@ -201,7 +201,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
                             <div class="subtotal mt-3">
                                 <h3>TOTAL</h3>
-                                <span>$<?php echo $total2 ?></span>
+                                <span>$<?php echo number_format($total2) ?></span>
                             </div>
                         </div>
                     </div>
