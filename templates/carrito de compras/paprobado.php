@@ -42,7 +42,7 @@ include "../../global/conexion.php";
                MUCHAS GRACIAS
             </div>
             <div class="backStateTrans">    
-               <button class="btn btnBack">VOLVER</button>
+               <button class="btn btnBack"><a href="../interfaz_cliente/clienteintro.php">VOLVER</a></button>
             </div>
             <hr class="footerhr3">
         </div>

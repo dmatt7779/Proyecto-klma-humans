@@ -23,10 +23,10 @@
 
     switch ($status) {
         case 'DECLINED':
-            echo "declinada";
+            header("location:pdeclinado.php");
             break;
         case 'ERROR':
-            echo "hay error";
+            header("location:perror.php");
             break;
         case 'APPROVED':
             echo "PAGADO";
@@ -40,6 +40,7 @@
             $sentencia = $pdo->prepare( $sql );
             $sentencia -> execute();
             $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            header("location:paprobado.php");
             break;
         default:
             # code...
