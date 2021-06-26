@@ -136,7 +136,6 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                 </div>
             </div>
 
-
             <!-- INICIO configuración pasarela de pagos 1 -->
             <div class="">
                 <div class="pay">
