@@ -45,11 +45,13 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
             <div class="datachance mb-5">
                 <div class="minichance">
                     <span>CONTACTO</span>
+                    <span>311642347823482</span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal">CAMBIAR</button>
                 </div>
                 <hr>
                 <div class="minichance">
                     <span>ENVIAR A</span>
+                    <span>JERSON PINEDA</span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal1">CAMBIAR</button>
                 </div>
 
@@ -129,13 +131,12 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <input type="hidden" name="amount-in-cents" value="<?php echo $total ?>" />
                         <input type="hidden" name="reference" value="<?php echo $ref ?>" />
                         <!-- OPCIONALES -->
-                        <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php" />
-                        <button class="btn btn-Wompi" onclick ="enviarform()">PAGAR CON WOMPI</button>
+                        <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"/>
+                        <button class="btn btn-Wompi" type="submit">PAGAR CON WOMPI</button>
                     </form>
                     <!-- wompi -->
                 </div>
             </div>
-
 
             <!-- INICIO configuración pasarela de pagos 1 -->
             <div class="">
@@ -162,7 +163,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
                         foreach ($detalleventa as $detventa) { ?>
 
-                            <div class="cart-item mb-4">
+                            <div class="cart-item">
                                 <div class="data-item">
                                     <div class="plus-minus">
                                         <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>
@@ -198,7 +199,10 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <hr>
                         <!-- SUBTOTAL -->
                         <div class="cart-footer mt-4">
-
+                            <div class="subtotal mt-3">
+                                <h2>DESCUENTO</h2>
+                                <span>15%</span>
+                            </div>
                             <div class="subtotal mt-3">
                                 <h3>TOTAL</h3>
                                 <span>$<?php echo number_format($total2) ?></span>

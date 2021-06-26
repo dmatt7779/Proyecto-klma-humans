@@ -11,7 +11,7 @@
 <footer id="testfooter" class="footer-content">
     <div class="footercontent">
         <div class="footerleft">
-            <img src="../assets/img/nav_foot/onda1.gif" alt="icono para reproducir musica" id="iconSong">
+            <img src="../assets/img/nav_foot/onda2.gif" alt="icono para reproducir musica" id="iconSong">
         </div>
 
         <audio id="klmaSong">
@@ -33,21 +33,20 @@
     <script src="../assets/js/carrito.js"></script>
 
     <!-- Script reproducir musica manualmente -->
-    <script>
+<script>
 
-        let klmaSong = document.getElementById("klmaSong")
-        let iconSong = document.getElementById("iconSong")
+    let klmaSong = document.getElementById("klmaSong")
+    let iconSong = document.getElementById("iconSong")
 
-        iconSong.onclick = function() {
-            if(klmaSong.paused){
-                klmaSong.play();
-                iconSong.src = "../assets/img/nav_foot/onda1.gif";
-            }else {
-                klmaSong.pause();
-                iconSong.src = "../assets/img/nav_foot/onda2.gif";
-            }
+    iconSong.onclick = function() {
+        if(klmaSong.paused){
+            klmaSong.play();
+            iconSong.src = "../assets/img/nav_foot/onda1.gif";
+        }else {
+            klmaSong.pause();
+            iconSong.src = "../assets/img/nav_foot/onda2.gif";
         }
-
-    </script>
+    }
+</script>
 </body>
 </html>
