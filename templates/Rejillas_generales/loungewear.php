@@ -257,7 +257,7 @@ include "../../global/conexion.php";
                 <a href="#" class="card-title">
                     <p><?php echo $listaproductos[1]['nombre']; ?></p>
                 </a>
-                <p class="card-text"><?php echo $listaproductos[1]['descripcion']; ?></p>
+                <p class="card-text card-text1"><?php echo $listaproductos[1]['descripcion']; ?></p>
                 <a href="#" class="price-horizontal">
                     <p>$<?php echo $listaproductos[1]['precio_venta']; ?></p>
                 </a>
