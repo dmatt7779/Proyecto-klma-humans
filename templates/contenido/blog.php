@@ -43,9 +43,12 @@ include "../../global/conexion.php";
     <div class="container-fluid gridblog">
         <div class="row text-center mt-5">
             <!-- blog 1 -->
+            <?php
+                $_Blog = trim(preg_replace('/\r\n/', '@', $frases[0]['blog']));
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $frases[0]['blog'] ?>','<?php echo $frases[0]['emocion'] ?>','<?php echo $frases[0]['escritor'] ?>','<?php echo $frases[0]['frase'] ?>')" class="blog-title"><?php echo $frases[0]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[0]['emocion'] ?>','<?php echo $frases[0]['escritor'] ?>','<?php echo $frases[0]['frase'] ?>')" class="blog-title"><?php echo $frases[0]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[0]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -54,9 +57,12 @@ include "../../global/conexion.php";
                 </div>
             </div>
             <!-- blog 2 -->
+            <?php
+                $_Blog = trim(preg_replace('/\r\n/', '@', $frases[1]['blog']));
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $frases[1]['blog'] ?>','<?php echo $frases[1]['emocion'] ?>','<?php echo $frases[1]['escritor'] ?>','<?php echo $frases[1]['frase'] ?>')" class="blog-title"><?php echo $frases[1]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[1]['emocion'] ?>','<?php echo $frases[1]['escritor'] ?>','<?php echo $frases[1]['frase'] ?>')" class="blog-title"><?php echo $frases[1]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[1]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -65,9 +71,12 @@ include "../../global/conexion.php";
                 </div>
             </div>
             <!-- blog 3 -->
+            <?php
+                $_Blog = trim(preg_replace('/\r\n/', '@', $frases[2]['blog']));
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $frases[2]['blog'] ?>','<?php echo $frases[2]['emocion'] ?>','<?php echo $frases[2]['escritor'] ?>','<?php echo $frases[2]['frase'] ?>')" class="blog-title"><?php echo $frases[2]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[2]['emocion'] ?>','<?php echo $frases[2]['escritor'] ?>','<?php echo $frases[2]['frase'] ?>')" class="blog-title"><?php echo $frases[2]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[2]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -78,9 +87,12 @@ include "../../global/conexion.php";
 
             <div class="col-12" id="divisor-pod"><img src="../assets/img/podcast/linea_principal.png" alt=""></div>
             <!-- blog 4 -->
+            <?php
+                $_Blog = trim(preg_replace('/\r\n/', '@', $frases[3]['blog']));
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $frases[3]['blog'] ?>','<?php echo $frases[3]['emocion'] ?>','<?php echo $frases[3]['escritor'] ?>','<?php echo $frases[3]['frase'] ?>')" class="blog-title"><?php echo $frases[3]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[3]['emocion'] ?>','<?php echo $frases[3]['escritor'] ?>','<?php echo $frases[3]['frase'] ?>')" class="blog-title"><?php echo $frases[3]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[3]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -88,10 +100,20 @@ include "../../global/conexion.php";
                     </a>
                 </div>
             </div>
+
+
+
+
+
+
+
             <!-- blog 5 -->
+            <?php
+                $_Blog = trim(preg_replace('/\r\n/', '@', $frases[4]['blog']));
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $frases[4]['blog'] ?>','<?php echo $frases[4]['emocion'] ?>','<?php echo $frases[4]['escritor'] ?>','<?php echo $frases[4]['frase'] ?>')" class="blog-title"><?php echo $frases[4]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[4]['emocion'] ?>','<?php echo $frases[4]['escritor'] ?>','<?php echo $frases[4]['frase'] ?>')" class="blog-title"><?php echo $frases[4]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[4]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -99,10 +121,24 @@ include "../../global/conexion.php";
                     </a>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+            
             <!-- blog 6 -->
+            <?php
+                $_Blog = trim(preg_replace('/\r\n/', '@', $frases[5]['blog']));
+            ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $frases[5]['blog'] ?>','<?php echo $frases[5]['emocion'] ?>','<?php echo $frases[5]['escritor'] ?>','<?php echo $frases[5]['frase'] ?>')" class="blog-title"><?php echo $frases[5]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[5]['emocion'] ?>','<?php echo $frases[5]['escritor'] ?>','<?php echo $frases[5]['frase'] ?>')" class="blog-title"><?php echo $frases[5]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[5]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -117,10 +153,10 @@ include "../../global/conexion.php";
 
     <form action="../contenido/public_blog.php" name="formblog" method="post">
 
-        <input type="text" name="blog" id="blog">
-        <input type="text" name="emocion" id="emocion">
-        <input type="text" name="escritor" id="escritor">
-        <input type="text" name="frase" id="frase">
+        <input type="hidden" name="blog" id="blog">
+        <input type="hidden" name="emocion" id="emocion">
+        <input type="hidden" name="escritor" id="escritor">
+        <input type="hidden" name="frase" id="frase">
 
     </form>
 
@@ -132,13 +168,14 @@ include "../../global/conexion.php";
 
     <script>
         function idsend(blog, emocion, escritor, frase) {
-            debugger;
+ /*            debugger; */
+
             document.getElementById('blog').value = blog;
             document.getElementById('emocion').value = emocion;
             document.getElementById('escritor').value = escritor;
             document.getElementById('frase').value = frase;
 
-/*             document.formblog.submit(); */
+            document.formblog.submit();
         }
     </script>
 

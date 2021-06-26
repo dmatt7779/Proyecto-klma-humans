@@ -79,7 +79,7 @@ var
                 Question
                 Titulo = document.getElementById('titulo')
 
-            ( Id == 1 ) ? Question.innerHTML = 'Bienvenido' : Question.innerHTML =  '';
+            ( Id == 1 ) ? Question.innerHTML = 'BIENVENID@' : Question.innerHTML =  'A KLMA';
             
             if( Validate ){
                 console.log( Questions )

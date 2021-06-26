@@ -2,7 +2,7 @@
 session_start();
 include "../../global/conexion.php";
 
-$blog = $_POST['blog'];
+$blog = str_replace('@', '<br><br>', $_POST['blog'] );
 $frase = $_POST['frase'];
 $escritor = $_POST['escritor'];
 $emocion = $_POST['emocion'];
