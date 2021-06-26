@@ -477,7 +477,7 @@ footer {
 }
 
 #footerbg2 {
-    background-image: url("../img/nav_foot/fondo.jpg");
+    background-image: url("../img/nav_foot/fondo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -535,6 +535,7 @@ footer {
     height: 45px;
     width: auto;
     border-radius: 6px;
+    border: 1px solid transparent;
     text-decoration: none;
     padding: 0% 0% 0% 1.3%;
     margin: 0% 0% 0% 1.44444%;
@@ -943,19 +944,19 @@ div.mainb{
 
 .blackTYC{
     position: absolute;
-    top: 32%;
-    width: 90.2%;
-    height: 330px;
-    left: 4.8%;
+    top: 32% !important;
+    width: 90.2% !important;
+    height: 330px !important;
+    left: 4.8% !important;
     background-color: #000000;
-    font-family: MoristonPersonal-Regular !important;
+    font-family: "MoristonPersonal-Regular" !important;
     padding-right: 17px;
 }
 
 .useTYC{
     background-color: #000000!important;
     color: white!important;
-    width: 140%;
+    width: 140% !important;
     left: -22%;
 }
 
@@ -2857,6 +2858,12 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     padding: 9% 9% 9% 15.5%;
 }
+
+.btnBack > a {
+    text-decoration: none;
+    color: white;
+}
+
 .footerhr3 {
     margin-top: 0rem!important;
     margin-bottom: 0rem!important;
@@ -3031,6 +3038,15 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
+.cart-footer h2 {
+    font-family: ""Helvetica"";
+    font-weight: bold;
+    letter-spacing: .7rem;
+    font-size: 7pt;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
 .cart-footer h3 {
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -3104,7 +3120,7 @@ body::-webkit-scrollbar-thumb {
 
 .pay {
     position: absolute;
-    top: 14.1%;
+    top: 0%;
     right: 0;
     width: 100%;
     height: 100%;
@@ -3434,7 +3450,8 @@ hr {
 }
 
 .checkboxship2 {
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.6rem!important;
+    text-align: start;
 }
  /* ----------------------------------FIN CONFIGURACION PASARELA DE PAGOS---------------------------------- */
 
@@ -4440,7 +4457,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 190px;
+    top: 170px;
     position: absolute;
     bottom: 0;
     left: -6px;

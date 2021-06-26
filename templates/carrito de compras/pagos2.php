@@ -45,11 +45,13 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
             <div class="datachance mb-5">
                 <div class="minichance">
                     <span>CONTACTO</span>
+                    <span>311642347823482</span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal">CAMBIAR</button>
                 </div>
                 <hr>
                 <div class="minichance">
                     <span>ENVIAR A</span>
+                    <span>JERSON PINEDA</span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal1">CAMBIAR</button>
                 </div>
 
@@ -114,7 +116,6 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                 <div class="minichance">
                     <label><input type="radio" id="cbox1" value="checkboxsale"></label>
                     <span class="checkboxship checkboxship2">PAGAR ENVÍO CONTRAENTREGA</span>
-                    <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
                 </div>
             </div>
             <!-- Sección para pasar a pagos -->
@@ -197,7 +198,10 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <hr>
                         <!-- SUBTOTAL -->
                         <div class="cart-footer mt-4">
-
+                            <div class="subtotal mt-3">
+                                <h2>DESCUENTO</h2>
+                                <span>15%</span>
+                            </div>
                             <div class="subtotal mt-3">
                                 <h3>TOTAL</h3>
                                 <span>$<?php echo number_format($total2) ?></span>
