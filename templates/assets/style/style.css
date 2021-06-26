@@ -64,7 +64,7 @@ body {
 }
 
 :root {
-    --mainTransition: all 0.5s linear;
+    --mainTransition: all 1s linear;
 }
 
 
@@ -292,7 +292,7 @@ header.mainheader {
     grid-template-columns: repeat(3, 1fr);
     padding: 1% 1%;
     align-items: center;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 header.mainheader .navlogo {
@@ -1657,9 +1657,9 @@ button > .closeColorTYC, .closeColorTYC{
     justify-content: center;
     background-color: #2D2A29;
     color: rgb(255, 255, 255);
-    border-radius: 8px;
+    border-radius: 8px !important;
     font-family: "MoristonPersonal-Medium";
-    font-size: 8pt;
+    font-size: 8pt !important;
     letter-spacing: .2rem;
     box-shadow: 5px 3px 8px rgb(0, 0, 0);
     text-decoration: none;
@@ -2917,9 +2917,11 @@ body::-webkit-scrollbar-thumb {
     overflow: scroll;
     z-index: 100001;
     background: rgb(231, 226, 221);
+    color: #000000;
     padding: 1.5rem;
     transition: var(--mainTransition);
-    /* transform: translateX(100%); */
+    overflow-x: hidden!important;
+/*     transform: translateX(100%); */
   }
   .showCart {
     transform: translateX(0);
@@ -2945,7 +2947,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     text-align: center;
     font-size: 8pt;
-    letter-spacing: 3.5555555555rem;
+    letter-spacing: 3rem;
     margin-bottom: 4rem;
     margin-top: 5rem;
   }
@@ -3429,6 +3431,10 @@ hr {
     display: flex;
     align-items: center;
     color: rgb(122, 122, 122);
+}
+
+.checkboxship2 {
+    letter-spacing: 0.6rem;
 }
  /* ----------------------------------FIN CONFIGURACION PASARELA DE PAGOS---------------------------------- */
 
@@ -4470,7 +4476,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 7pt;
-    top: 155px;
+    top: 126px;
     position: relative;
     bottom: 0;
     left: -13px;
@@ -4610,7 +4616,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 7pt;
-    top: 140px;
+    top: 120px;
     position: relative;
     bottom: 0;
     left: -18px;
@@ -4693,10 +4699,10 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     letter-spacing: .3rem;
     font-family: "MoristonPersonal-Regular";
     font-size: 8pt;
-    top: 170px;
+    top: 145px;
     position: relative;
     bottom: 0;
-    left: -9px;
+    left: -8px;
 }
 
 .scrolllightbar {

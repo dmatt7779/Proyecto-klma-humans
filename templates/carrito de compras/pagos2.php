@@ -113,7 +113,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
                     <label><input type="radio" id="cbox1" value="checkboxsale"></label>
-                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>
+                    <span class="checkboxship checkboxship2">PAGAR ENVÍO CONTRAENTREGA</span>
                     <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
                 </div>
             </div>
