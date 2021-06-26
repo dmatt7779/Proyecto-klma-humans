@@ -129,7 +129,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <input type="hidden" name="amount-in-cents" value="<?php echo $total ?>" />
                         <input type="hidden" name="reference" value="<?php echo $ref ?>" />
                         <!-- OPCIONALES -->
-                        <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php" />
+                        <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"/>
                         <button class="btn btn-Wompi" type="submit">PAGAR CON WOMPI</button>
                     </form>
                     <!-- wompi -->
@@ -162,7 +162,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
                         foreach ($detalleventa as $detventa) { ?>
 
-                            <div class="cart-item mb-4">
+                            <div class="cart-item">
                                 <div class="data-item">
                                     <div class="plus-minus">
                                         <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>

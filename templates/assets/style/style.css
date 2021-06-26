@@ -2954,7 +2954,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 0% 0% 0% 0%;
+    margin: 5% 0% 5% 0%;
   }
 
   .cart-item img {
