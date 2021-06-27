@@ -14,7 +14,7 @@ include "../../global/conexion.php";
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css ">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
-<body>
+<body id="pruebita">
 <?php include "../navbar_footer/header.php";?>
 
 <!-- Scroll Bar personalizado -->
@@ -542,11 +542,22 @@ include "../../global/conexion.php";
     });
 </script>
 
-    <!-- Script reproducir musica manualmente -->
+    <!-- Script reproducir musica -->
 <script>
 
     let klmaSong = document.getElementById("klmaSong")
     let iconSong = document.getElementById("iconSong")
+    let pruebita = document.getElementById("pruebita")
+
+    window.onload = function() {
+        if(klmaSong.paused){
+            iconSong.src = "../assets/img/nav_foot/onda1.gif";
+        }
+
+        klmaSong.play();
+
+
+    }
 
     iconSong.onclick = function() {
         if(klmaSong.paused){
