@@ -107,15 +107,16 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
-                    <label><input type="radio" id="cbox1" value="checkboxsale"></label>
+                    <label><input type="radio" onclick="handleChangeEnvio();" id="cbox1" value="checkboxsale"></label>
                     <span class="checkboxship">PAGAR ENVÍO</span>
                     <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
                 </div>
             </div>
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
-                    <label><input type="radio" id="cbox1" value="checkboxsale"></label>
-                    <span class="checkboxship checkboxship2">PAGAR ENVÍO CONTRAENTREGA</span>
+                    <label><input type="radio" onclick="handleChangeEnvioContraEntrega();" id="cbox2" value="checkboxsale"></label>
+                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>
+                    <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
                 </div>
             </div>
             <!-- Sección para pasar a pagos -->
@@ -217,7 +218,16 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
         function entre() {
             document.telefono.submit()
         }
-
+        function handleChangeEnvio(){
+            debugger
+            var x = document.getElementById("cbox2");
+            x.checked = false;
+        }
+        function handleChangeEnvioContraEntrega(){
+            debugger
+            var x = document.getElementById("cbox1");
+            x.checked = false;
+        }
 
     </script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
