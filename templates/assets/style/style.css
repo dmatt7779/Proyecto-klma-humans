@@ -4429,6 +4429,31 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 /* ----------------------------------FIN BLOG---------------------------------- */
 /* ----------------------------------Barras Laterales---------------------------------- */
 
+/* Scroll title HOME */
+#scrolltitlehome {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 170px;
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+}
+
+.scrolllightbarHome {
+    width: 1px;
+    height: 165px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 225px;
+    bottom: 0;
+    left: 33px;
+    display: block;
+}
+
 /* Scroll Blog */
 #scrollblog {
     position: fixed;

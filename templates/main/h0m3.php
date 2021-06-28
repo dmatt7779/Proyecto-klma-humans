@@ -210,10 +210,10 @@ include "../../global/conexion.php";
 <!---------- SCROLL BAR ---------->
 <div id="scrollabout">
 
-    <div id="scrolltitleabout">HOME</div>
+    <div id="scrolltitlehome">HOME</div>
 
     <!-- Track -->
-    <div class="scrolllightbar">
+    <div class="scrolllightbarHome">
 
     <!-- Thumbs -->
         <div id="scrollwrap" class="scrollblock">
@@ -441,7 +441,7 @@ include "../../global/conexion.php";
         <script src="../assets/librerias/bootstrap.min.js"></script>
         <script src="../test/sss/sss.js"></script>
 
-    <script>
+<script>
         function eliminar(iddelete){
         document.getElementById('eliminacion').value = iddelete;
         document.formdeletecart.submit();
@@ -464,7 +464,7 @@ include "../../global/conexion.php";
 
 
         }
-    </script>
+</script>
 
 
 <!-- Dynamic Navbar -->
@@ -502,7 +502,7 @@ include "../../global/conexion.php";
         var scrollTop = $(window).scrollTop()
         $('#scrollwrap').css('top', scrollTop+'px')
 
-        if( scrollTop >= 260 ){
+        if( scrollTop >= 1600 ){
             $('#scrollwrap').css('display', 'none')
             $('#scrollwrap').parent().css('display', 'none')
         } else if( scrollTop >= 0 ){
