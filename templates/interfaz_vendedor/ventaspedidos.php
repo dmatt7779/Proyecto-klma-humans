@@ -75,11 +75,7 @@ $idventa = $_GET['ventaid'];
     $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
     $iduser = $venta[0]['usuarios_id'];
-    ?> 
-    <script>
-    console.log(<?php echo $iduser ?>)
-    </script>
-    <?php
+
     $sentencia = $pdo->prepare("SELECT * FROM Direcciones where id_user = $iduser");
     $sentencia->execute();
     $direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);

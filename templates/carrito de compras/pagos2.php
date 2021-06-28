@@ -25,7 +25,6 @@ $direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 $pagaenvio = $direcciones[0]['pagaenvio'];
 $contraentrega = $direcciones[0]['contraentrega'];
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +41,32 @@ $contraentrega = $direcciones[0]['contraentrega'];
 </head>
 
 <body id="pagos1" onload="tipopago()">
-    <?php include "../navbar_footer/dark_header.php"; ?>
+    
+<nav class="navbar-expand-sm navbar-light">
+    <header class="darkmainheader">
+    <div class="navlogo">
+            <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
+    </div>
+
+    <div class="navlogo2">
+            <a href="../main/h0m3.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
+    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nested-nav mr-2">
+
+                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu2.png" alt="menu 2"></div></a>
+
+                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login2.png" alt="Login de usuarios"></div></a>
+
+                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera2.png" alt="carrito de compras"></div></a>
+                </div>
+            </div>
+    </header>
+</nav>
 
     <div class="pay-form mb-5">
         <div class="containersale2">
@@ -53,33 +77,38 @@ $contraentrega = $direcciones[0]['contraentrega'];
             <div class="datachance mb-5">
                 <div class="minichance">
                     <span>CONTACTO</span>
-                    <span>311642347823482</span>
+                    <span><?php echo $direcciones[0]['telefono']?></span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal">CAMBIAR</button>
                 </div>
                 <hr>
                 <div class="minichance">
                     <span>ENVIAR A</span>
-                    <span>JERSON PINEDA</span>
+                    <span><?php echo $direcciones[0]['nombre']?></span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal1">CAMBIAR</button>
                 </div>
 
             </div>
             <!-- Button trigger modal -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal1" tabindex="-1" style="z-index: 90;"  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">NUEVO NOMBRE</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">NUEVO NOMBRE DE QUIEN RECIBE Y DIRECCION</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <form action="changenombre.php" name="name" method="post">
-                                <input type="text" name="nombre">
+                            <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">NOMBRE</label>
+                                <input type="text" value="<?php echo $direcciones[0]['nombre']?>" class="newprofile" name="nombre">
+                                <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">APELLIDO</label>
+                                <input type="text" value="<?php echo $direcciones[0]['apellido']?>" class="newprofile" name="apellido">
+                                <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">DIRECCIÓN</label>
+                                <input type="text" value="<?php echo $direcciones[0]['direccion']?>" class="newprofile" name="direccion">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" onclick="document.name.submit()" class="btn btn-primary">CAMBIAR</button>
+                        <div class="mr-3" ><button type="button" style="align-items: center;position: relative;" onclick="document.name.submit()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -99,10 +128,11 @@ $contraentrega = $direcciones[0]['contraentrega'];
                         </div>
                         <div class="modal-body">
                             <form action="changedireccion.php" name="telefono" method="post">
-                                <input type="text" name="telefono">
+                            <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">TELEFONO</label>
+                                <input type="text" value="<?php echo $direcciones[0]['telefono']?>" class="newprofile" name="telefono">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" onclick="entre()" class="btn btn-primary">CAMBIAR</button>
+                        <div class="mr-3"><button type="button" onclick="entre()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -255,6 +285,37 @@ $contraentrega = $direcciones[0]['contraentrega'];
         function tipopago(){
             document.getElementById("cbox2").checked = <?php echo $contraentrega ?>;
             document.getElementById("cbox1").checked = <?php echo $pagaenvio?>;
+        }
+
+        function eliminar(iddelete){
+            document.getElementById('eliminacion').value = iddelete;
+            document.formdeletecart.submit();
+        }
+
+        function add(idadd, cantidadold){
+            document.getElementById('suma').value = idadd;
+            document.getElementById('cantidad').value = cantidadold;
+
+            document.formaddonetocart.submit();
+        }
+
+        function remove(idremove , cantidadold2){
+            document.getElementById('resta').value = idremove;
+            document.getElementById('cantidad2').value = cantidadold2;
+
+            document.formremoveonetocart.submit();
+        }
+
+        function aceptar() {
+            document.getElementById("acept").value = parseInt(document.getElementById("acept").value) + 1
+        }
+
+        function enviarpedido() {
+            if (document.getElementById("acept").value % 2 == 0) {
+                alert("debe aceptar los terminos y condiciones")
+            } else {
+                document.finpedido.submit();
+            }
         }
 
     </script>
