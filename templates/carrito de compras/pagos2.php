@@ -18,6 +18,13 @@ $total2 =  floatval($venta[0]['subtotal']);
 
 $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
+$sentencia = $pdo->prepare("SELECT * FROM Direcciones where id_user = $iduser");
+$sentencia->execute();
+$direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+$pagaenvio = $direcciones[0]['pagaenvio'];
+$contraentrega = $direcciones[0]['contraentrega'];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +40,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
     <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 
-<body id="pagos1">
+<body id="pagos1" onload="tipopago()">
     <?php include "../navbar_footer/dark_header.php"; ?>
 
     <div class="pay-form mb-5">
@@ -107,16 +114,15 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
-                    <label><input type="radio" onclick="handleChangeEnvio();" id="cbox1" value="checkboxsale"></label>
+                    <label><input type="radio" checked="<?php echo $pagaenvio?>" onclick="handleChangeEnvio();" id="cbox1" value="checkboxsale"></label>
                     <span class="checkboxship">PAGAR ENVÍO</span>
                     <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
                 </div>
             </div>
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
-                    <label><input type="radio" onclick="handleChangeEnvioContraEntrega();" id="cbox2" value="checkboxsale"></label>
-                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>
-                    <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
+                    <label><input type="radio" checked="<?php echo $contraentrega?>" onclick="handleChangeEnvioContraEntrega();" id="cbox2" value="checkboxsale"></label>
+                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>                    
                 </div>
             </div>
             <!-- Sección para pasar a pagos -->
@@ -124,7 +130,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                 <div class="datapay">
                     
                     <!-- wompi -->
-                    <form action="https://checkout.wompi.co/p/" method="GET">
+                    <form action="https://checkout.wompi.co/p/" method="GET" name="pagos">
                         <!-- OBLIGATORIOS -->
                         <input type="hidden" name="public-key" value="pub_test_Y6nrs8xkNGx5ZhKW06oZX51bFt3ISh7A" />
                         <input type="hidden" name="currency" value="COP" />
@@ -132,11 +138,14 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <input type="hidden" name="reference" value="<?php echo $ref ?>" />
                         <!-- OPCIONALES -->
                         <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"/>
-                        <button class="btn btn-Wompi" type="submit">PAGAR CON WOMPI</button>
+                    <button class="btn btn-Wompi" onclick="enviar(event)">PAGAR CON WOMPI</button>
                     </form>
+
                     <!-- wompi -->
                 </div>
             </div>
+
+
 
             <!-- INICIO configuración pasarela de pagos 1 -->
             <div class="">
@@ -176,15 +185,10 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                                 <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                             </div>
                             <hr>
-
-
-
                             <?php
                             $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
 
                             ?>
-
-
                         <?php
                         }
                         ?>
@@ -213,20 +217,43 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
             </div>
         </div>
     </div>
+    
+    <form action="cambiotipopago.php" method="get" name="tipopago">
+                        <input type="hidden" name="contraentrega" id="contraentrega" value='<?php echo $contraentrega ?>'>
+                        <input type="hidden" name="pagoenvio" id="pagoenvio" value='<?php echo $pagaenvio?>'>
+            </form>
     <script>
 
         function entre() {
             document.telefono.submit()
         }
         function handleChangeEnvio(){
-            debugger
             var x = document.getElementById("cbox2");
             x.checked = false;
+            document.getElementById("pagoenvio").value = "true";
+            document.getElementById("contraentrega").value = "false";
+            document.tipopago.submit()
         }
         function handleChangeEnvioContraEntrega(){
-            debugger
             var x = document.getElementById("cbox1");
             x.checked = false;
+            document.getElementById("contraentrega").value = "true";
+            document.getElementById("pagoenvio").value = "false";
+            document.tipopago.submit()
+        }
+        function enviar(event){
+            var x = document.getElementById("cbox2");
+            var d = document.getElementById("cbox1");
+            if(x.checked == !false || d.checked == !false){
+                document.pagos.submit()
+            }else{
+                alert("debes seleccionar una opcion de pago al envio")
+                event.preventDefault()
+            }
+        }
+        function tipopago(){
+            document.getElementById("cbox2").checked = <?php echo $contraentrega ?>;
+            document.getElementById("cbox1").checked = <?php echo $pagaenvio?>;
         }
 
     </script>
