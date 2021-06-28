@@ -83,6 +83,19 @@ $idventa = $_GET['ventaid'];
     $sentencia = $pdo->prepare("SELECT * FROM Direcciones where id_user = $iduser");
     $sentencia->execute();
     $direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    
+    if($direcciones[0]['pagaenvio'] == "false"){
+        $pagaenvio = "No";
+    }else{
+        $pagaenvio = "Si";
+    }
+
+    if($direcciones[0]['contraentrega'] == "false"){
+        $contraentrega = "No";
+    }else{
+        $contraentrega = "Si";
+    }
+
     ?>
     <div class="jumbotrontable">
 
@@ -102,10 +115,14 @@ $idventa = $_GET['ventaid'];
                         <th>Barrio</th>
                         <th>Telefono</th>
                         <th>Correo</th>
+                        <th>ContraEntrega</th>
+                        <th>PagaEnvío</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
+                        <th>Filter..</th>
+                        <th>Filter..</th>
                         <th>Filter..</th>
                         <th>Filter..</th>
                         <th>Filter..</th>
@@ -131,7 +148,8 @@ $idventa = $_GET['ventaid'];
                             <td><?php echo $direccion['barrio'] ?></td>
                             <td><?php echo $direccion['telefono'] ?></td>
                             <td><?php echo $direccion['correo'] ?></td>
-                            
+                            <td><?php echo $contraentrega ?></td>
+                            <td><?php echo $pagaenvio ?></td>                            
                         </tr>
                     <?php } ?>
                 </tbody>

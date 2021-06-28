@@ -56,7 +56,7 @@ if($savedireccion == "true"){
 
 }
 
-if ($alreadydireccion) {
+if ($alreadydireccion  == null) {
 
     $sql2 = "INSERT INTO `Direcciones`(`id_user`, `nombre`, `apellido`, `direccion`, `dep-local`, `ciudad`, `pais`, `provincia`, `barrio`, `telefono`,`correo`,`contraentrega`,`pagaenvio`) VALUES ('$iduser','$nombres','$apellidos','$direccion','$dep_local','$ciudad','$pais','$provincia','$barrio','$telefono','$correo','false','false')";
 

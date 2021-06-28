@@ -9,12 +9,13 @@ if (!isset($_SESSION['correo'])) {
 
 
 $iduser = $_SESSION['iduser'];
-$sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
+$sentencia = $pdo->prepare("SELECT * FROM ventas where usuarios_id = $iduser and estado = 0");
 $sentencia->execute();
 $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 $total =  100 * (floatval($venta[0]['subtotal']));
 $total2 =  floatval($venta[0]['subtotal']);
+$porcentaje = $venta[0]['porcentaje']; 
 
 $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
@@ -205,7 +206,7 @@ $contraentrega = $direcciones[0]['contraentrega'];
                         <div class="cart-footer mt-4">
                             <div class="subtotal mt-3">
                                 <h2>DESCUENTO</h2>
-                                <span>15%</span>
+                                <span><?php echo $porcentaje?>%</span>
                             </div>
                             <div class="subtotal mt-3">
                                 <h3>TOTAL</h3>
