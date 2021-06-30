@@ -4896,6 +4896,15 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     /*Móviles*/
     @media screen and (max-width: 576px){
 
+        .contacttitle > h1 {
+            margin-left: -21px;
+        }
+
+        .contactcontainer {
+            padding: 2% 10% 2% 0%;
+            height: 83vh;
+        }
+
         .griddoblevertical > .card-body:nth-child(1){
             margin:0 0 14% 0;
         }
@@ -4906,7 +4915,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
 
         .card-body{
-            padding: 0.2rem;
+            margin-bottom: -45px;
         }
 
         #scrolltitlegenlg {
@@ -4961,12 +4970,12 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
         .gridclmw{
             grid-template-columns: 100%;
-            margin-top: 5%;
+            margin-top: 12%;
         }
         .cover{
-            height: 329px;
+            height: 307px;
             max-width: 100%;
-            margin: 5% 0% -5% 0%;
+            margin: 0% 0% -16% 0%;
         }
 
         .footerhr {
@@ -5007,8 +5016,8 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             letter-spacing: 0.3rem;
         }
         .contactform{
-            width: 150%;
-            margin-left: -8vw;
+            width: 135%;
+            margin-left: -7vw;
             margin-bottom: 4vw;
         }
         .contactform textarea{
