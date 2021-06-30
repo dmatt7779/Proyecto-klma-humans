@@ -9,14 +9,21 @@ if (!isset($_SESSION['correo'])) {
 
 
 $iduser = $_SESSION['iduser'];
-$sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
+$sentencia = $pdo->prepare("SELECT * FROM ventas where usuarios_id = $iduser and estado = 0");
 $sentencia->execute();
 $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 $total =  100 * (floatval($venta[0]['subtotal']));
 $total2 =  floatval($venta[0]['subtotal']);
+$porcentaje = $venta[0]['porcentaje']; 
 
 $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
+
+$sentencia = $pdo->prepare("SELECT * FROM Direcciones where id_user = $iduser");
+$sentencia->execute();
+$direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+$pagaenvio = $direcciones[0]['pagaenvio'];
+$contraentrega = $direcciones[0]['contraentrega'];
 
 ?>
 <!DOCTYPE html>
@@ -33,8 +40,33 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
     <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 
-<body id="pagos1">
-    <?php include "../navbar_footer/dark_header.php"; ?>
+<body id="pagos1" onload="tipopago()">
+    
+<nav class="navbar-expand-sm navbar-light">
+    <header class="darkmainheader">
+    <div class="navlogo">
+            <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
+    </div>
+
+    <div class="navlogo2">
+            <a href="../main/h0m3.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
+    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nested-nav mr-2">
+
+                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu2.png" alt="menu 2"></div></a>
+
+                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login2.png" alt="Login de usuarios"></div></a>
+
+                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera2.png" alt="carrito de compras"></div></a>
+                </div>
+            </div>
+    </header>
+</nav>
 
     <div class="pay-form mb-5">
         <div class="containersale2">
@@ -45,33 +77,38 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
             <div class="datachance mb-5">
                 <div class="minichance">
                     <span>CONTACTO</span>
-                    <span>311642347823482</span>
+                    <span><?php echo $direcciones[0]['telefono']?></span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal">CAMBIAR</button>
                 </div>
                 <hr>
                 <div class="minichance">
                     <span>ENVIAR A</span>
-                    <span>JERSON PINEDA</span>
+                    <span><?php echo $direcciones[0]['nombre']?></span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal1">CAMBIAR</button>
                 </div>
 
             </div>
             <!-- Button trigger modal -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal1" tabindex="-1" style="z-index: 90;"  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">NUEVO NOMBRE</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">NUEVO NOMBRE DE QUIEN RECIBE Y DIRECCION</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <form action="changenombre.php" name="name" method="post">
-                                <input type="text" name="nombre">
+                            <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">NOMBRE</label>
+                                <input type="text" value="<?php echo $direcciones[0]['nombre']?>" class="newprofile" name="nombre">
+                                <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">APELLIDO</label>
+                                <input type="text" value="<?php echo $direcciones[0]['apellido']?>" class="newprofile" name="apellido">
+                                <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">DIRECCIÓN</label>
+                                <input type="text" value="<?php echo $direcciones[0]['direccion']?>" class="newprofile" name="direccion">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" onclick="document.name.submit()" class="btn btn-primary">CAMBIAR</button>
+                        <div class="mr-3" ><button type="button" style="align-items: center;position: relative;" onclick="document.name.submit()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -91,10 +128,11 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         </div>
                         <div class="modal-body">
                             <form action="changedireccion.php" name="telefono" method="post">
-                                <input type="text" name="telefono">
+                            <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">TELEFONO</label>
+                                <input type="text" value="<?php echo $direcciones[0]['telefono']?>" class="newprofile" name="telefono">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" onclick="entre()" class="btn btn-primary">CAMBIAR</button>
+                        <div class="mr-3"><button type="button" onclick="entre()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -107,16 +145,15 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
-                    <label><input type="radio" onclick="handleChangeEnvio();" id="cbox1" value="checkboxsale"></label>
+                    <label><input type="radio" checked="<?php echo $pagaenvio?>" onclick="handleChangeEnvio();" id="cbox1" value="checkboxsale"></label>
                     <span class="checkboxship">PAGAR ENVÍO</span>
                     <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
                 </div>
             </div>
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
-                    <label><input type="radio" onclick="handleChangeEnvioContraEntrega();" id="cbox2" value="checkboxsale"></label>
-                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>
-                    <span style="font-size: 10pt; letter-spacing: .5rem;">$10.000</span>
+                    <label><input type="radio" checked="<?php echo $contraentrega?>" onclick="handleChangeEnvioContraEntrega();" id="cbox2" value="checkboxsale"></label>
+                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>                    
                 </div>
             </div>
             <!-- Sección para pasar a pagos -->
@@ -124,7 +161,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                 <div class="datapay">
                     
                     <!-- wompi -->
-                    <form action="https://checkout.wompi.co/p/" method="GET">
+                    <form action="https://checkout.wompi.co/p/" method="GET" name="pagos">
                         <!-- OBLIGATORIOS -->
                         <input type="hidden" name="public-key" value="pub_test_Y6nrs8xkNGx5ZhKW06oZX51bFt3ISh7A" />
                         <input type="hidden" name="currency" value="COP" />
@@ -132,11 +169,14 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <input type="hidden" name="reference" value="<?php echo $ref ?>" />
                         <!-- OPCIONALES -->
                         <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"/>
-                        <button class="btn btn-Wompi" type="submit">PAGAR CON WOMPI</button>
+                    <button class="btn btn-Wompi" onclick="enviar(event)">PAGAR CON WOMPI</button>
                     </form>
+
                     <!-- wompi -->
                 </div>
             </div>
+
+
 
             <!-- INICIO configuración pasarela de pagos 1 -->
             <div class="">
@@ -176,15 +216,10 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                                 <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                             </div>
                             <hr>
-
-
-
                             <?php
                             $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
 
                             ?>
-
-
                         <?php
                         }
                         ?>
@@ -201,7 +236,7 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
                         <div class="cart-footer mt-4">
                             <div class="subtotal mt-3">
                                 <h2>DESCUENTO</h2>
-                                <span>15%</span>
+                                <span><?php echo $porcentaje?>%</span>
                             </div>
                             <div class="subtotal mt-3">
                                 <h3>TOTAL</h3>
@@ -213,20 +248,74 @@ $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
             </div>
         </div>
     </div>
+    
+    <form action="cambiotipopago.php" method="get" name="tipopago">
+                        <input type="hidden" name="contraentrega" id="contraentrega" value='<?php echo $contraentrega ?>'>
+                        <input type="hidden" name="pagoenvio" id="pagoenvio" value='<?php echo $pagaenvio?>'>
+            </form>
     <script>
 
         function entre() {
             document.telefono.submit()
         }
         function handleChangeEnvio(){
-            debugger
             var x = document.getElementById("cbox2");
             x.checked = false;
+            document.getElementById("pagoenvio").value = "true";
+            document.getElementById("contraentrega").value = "false";
+            document.tipopago.submit()
         }
         function handleChangeEnvioContraEntrega(){
-            debugger
             var x = document.getElementById("cbox1");
             x.checked = false;
+            document.getElementById("contraentrega").value = "true";
+            document.getElementById("pagoenvio").value = "false";
+            document.tipopago.submit()
+        }
+        function enviar(event){
+            var x = document.getElementById("cbox2");
+            var d = document.getElementById("cbox1");
+            if(x.checked == !false || d.checked == !false){
+                document.pagos.submit()
+            }else{
+                alert("debes seleccionar una opcion de pago al envio")
+                event.preventDefault()
+            }
+        }
+        function tipopago(){
+            document.getElementById("cbox2").checked = <?php echo $contraentrega ?>;
+            document.getElementById("cbox1").checked = <?php echo $pagaenvio?>;
+        }
+
+        function eliminar(iddelete){
+            document.getElementById('eliminacion').value = iddelete;
+            document.formdeletecart.submit();
+        }
+
+        function add(idadd, cantidadold){
+            document.getElementById('suma').value = idadd;
+            document.getElementById('cantidad').value = cantidadold;
+
+            document.formaddonetocart.submit();
+        }
+
+        function remove(idremove , cantidadold2){
+            document.getElementById('resta').value = idremove;
+            document.getElementById('cantidad2').value = cantidadold2;
+
+            document.formremoveonetocart.submit();
+        }
+
+        function aceptar() {
+            document.getElementById("acept").value = parseInt(document.getElementById("acept").value) + 1
+        }
+
+        function enviarpedido() {
+            if (document.getElementById("acept").value % 2 == 0) {
+                alert("debe aceptar los terminos y condiciones")
+            } else {
+                document.finpedido.submit();
+            }
         }
 
     </script>

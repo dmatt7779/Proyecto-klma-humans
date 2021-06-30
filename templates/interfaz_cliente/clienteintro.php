@@ -82,7 +82,6 @@ $correo = $_SESSION['correo'];
                             <th>Total</th>
                             <th>Estado</th>
                             <th>Fecha</th>
-                            <th>Envío</th>                           
                         </tr>
                     </thead>
                    
@@ -117,11 +116,6 @@ $correo = $_SESSION['correo'];
 
                             }?></td>
                             <td><?php echo $venta['fecha'] ?></td>
-                            <td><?php echo $venta['envio'] ?></td>
-                            
-                           
-                         
-                        
                     </tr>
                     <?php } ?>                  
                 </tbody>

@@ -47,8 +47,6 @@
             break;
     }
     ?>
-    <h1>lo pagaste una zimbita</h1>
-
     <a href="http://klmahumans.com/templates/main/h0m3.php">volver</a>
 </body>
 

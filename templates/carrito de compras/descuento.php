@@ -24,7 +24,7 @@ if (count($existcode) > 0) {
     $porcentaje = $existcode[0]['porcentaje'];
     $total = ($subtotal * $porcentaje)/100;
     $total = $subtotal - $total;
-    $sentencia = $pdo->prepare("UPDATE ventas SET descontado = 1,subtotal = $total WHERE id = '$ventaid'");
+    $sentencia = $pdo->prepare("UPDATE ventas SET descontado = 1,subtotal = $total,porcentaje = $porcentaje WHERE id = '$ventaid'");
     $sentencia->execute();
 
     header("location:pagos1.php");

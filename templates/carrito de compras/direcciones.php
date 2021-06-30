@@ -56,9 +56,9 @@ if($savedireccion == "true"){
 
 }
 
-if ($alreadydireccion) {
+if ($alreadydireccion  == null) {
 
-    $sql2 = "INSERT INTO `Direcciones`(`id_user`, `nombre`, `apellido`, `direccion`, `dep-local`, `ciudad`, `pais`, `provincia`, `barrio`, `telefono`,`correo`) VALUES ('$iduser','$nombres','$apellidos','$direccion','$dep_local','$ciudad','$pais','$provincia','$barrio','$telefono','$correo')";
+    $sql2 = "INSERT INTO `Direcciones`(`id_user`, `nombre`, `apellido`, `direccion`, `dep-local`, `ciudad`, `pais`, `provincia`, `barrio`, `telefono`,`correo`,`contraentrega`,`pagaenvio`) VALUES ('$iduser','$nombres','$apellidos','$direccion','$dep_local','$ciudad','$pais','$provincia','$barrio','$telefono','$correo','false','false')";
 
     $sentencia2 = $pdo->prepare($sql2);
     $sentencia2->execute();
@@ -69,7 +69,7 @@ if ($alreadydireccion) {
     $sentencia2 = $pdo->prepare($sql2);
     $sentencia2->execute();
 
-    $sql3 = "INSERT INTO `Direcciones`(`id_user`, `nombre`, `apellido`, `direccion`, `dep-local`, `ciudad`, `pais`, `provincia`, `barrio`, `telefono`,`correo`) VALUES ('$iduser','$nombres','$apellidos','$direccion','$dep_local','$ciudad','$pais','$provincia','$barrio','$telefono','$correo')";
+    $sql3 = "INSERT INTO `Direcciones`(`id_user`, `nombre`, `apellido`, `direccion`, `dep-local`, `ciudad`, `pais`, `provincia`, `barrio`, `telefono`,`correo`,`contraentrega`,`pagaenvio`) VALUES ('$iduser','$nombres','$apellidos','$direccion','$dep_local','$ciudad','$pais','$provincia','$barrio','$telefono','$correo','false','false')";
 
     $sentencia3 = $pdo->prepare($sql3);
     $sentencia3->execute();
