@@ -3854,6 +3854,16 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     margin-bottom: 5%;
 }
 
+.mainTitleTest{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 2rem;
+    text-align: center;
+    margin-top: 6%;
+    padding-left: 1.5%;
+}
+
 /* PREGUNTAS DEL TEST (parte inferior) */
 .question1 {
     font-family: "MoristonPersonal-Bold";

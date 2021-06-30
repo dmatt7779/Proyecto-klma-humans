@@ -98,6 +98,7 @@ var
 
             desingTitle = '<div class="row m-0">';
                 desingTitle += '<div class="col-md-3"></div>';
+                    desingQuestion += '<div class="mainTitleTest animate-q1">BIENVENID@ A KLMA</div>';
                     desingTitle += '<div class="' + Class + ' col-md-6 animate-introtest">';
                         desingTitle += Question.title;
                     desingTitle += '</div>';
@@ -121,6 +122,7 @@ var
             desingQuestion += desingTitle;
             desingQuestion += desingReplys;
             desingQuestion += '<div class="col-12">';
+
                 desingQuestion += '<div class="question1 animate-q1">' + Question.question + '</div>';
             desingQuestion += '</div>';
             desingQuestion += '<div class="row m-0" id="' + Question.id + '">';
