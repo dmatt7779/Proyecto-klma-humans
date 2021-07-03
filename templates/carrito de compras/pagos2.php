@@ -163,12 +163,12 @@ $contraentrega = $direcciones[0]['contraentrega'];
                     <!-- wompi -->
                     <form action="https://checkout.wompi.co/p/" method="GET" name="pagos">
                         <!-- OBLIGATORIOS -->
-                        <input type="hidden" name="public-key" value="pub_test_Y6nrs8xkNGx5ZhKW06oZX51bFt3ISh7A" />
-                        <input type="hidden" name="currency" value="COP" />
-                        <input type="hidden" name="amount-in-cents" value="<?php echo $total ?>" />
-                        <input type="hidden" name="reference" value="<?php echo $ref ?>" />
+                        <input type="hidden" id="public-key" name="public-key"  />
+                        <input type="hidden" id="currency" name="currency" />
+                        <input type="hidden" id="amount-in-cent" name="amount-in-cents" />
+                        <input type="hidden" id="reference" name="reference"  />
                         <!-- OPCIONALES -->
-                        <input type="hidden" name="redirect-url" value="http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"/>
+                        <input type="hidden" id="redirect-url" name="redirect-url" />
                     <button class="btn btn-Wompi" onclick="enviar(event)">PAGAR CON WOMPI</button>
                     </form>
 
@@ -276,6 +276,13 @@ $contraentrega = $direcciones[0]['contraentrega'];
             var x = document.getElementById("cbox2");
             var d = document.getElementById("cbox1");
             if(x.checked == !false || d.checked == !false){
+                
+                document.getElementById("public-key").value = "pub_test_Y6nrs8xkNGx5ZhKW06oZX51bFt3ISh7A"
+                document.getElementById("amount-in-cent").value = "<?php echo $total ?>"
+                document.getElementById("currency").value = "COP"                
+                document.getElementById("reference").value = "<?php echo $ref ?>"
+                document.getElementById("redirect-url").value = "http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"
+
                 document.pagos.submit()
             }else{
                 alert("debes seleccionar una opcion de pago al envio")
@@ -319,6 +326,7 @@ $contraentrega = $direcciones[0]['contraentrega'];
         }
 
     </script>
+    
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
