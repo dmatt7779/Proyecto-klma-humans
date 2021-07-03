@@ -67,7 +67,7 @@ var
                 for( var i = 0; i < Count; i++ ){
                     if( Questions[ i ][ 'id' ] === Id ){
                         Validate = true
-                        break
+                        break;
                     }
                 }
             }
@@ -78,8 +78,6 @@ var
             var
                 Question
                 Titulo = document.getElementById('titulo')
-
-            ( Id == 1 ) ? Question.innerHTML = 'BIENVENID@' : Question.innerHTML =  'A KLMA';
             
             if( Validate ){
                 console.log( Questions )
@@ -110,6 +108,7 @@ var
             }
             desingReplys += '</div>'
 
+            
             desingQuestion = '<div class="row">'
                 desingQuestion += '<div class="col-12">'
                     desingQuestion += '<div class="test-titleQuestion">' + Question.question + '</div>'
