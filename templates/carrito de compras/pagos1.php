@@ -1,31 +1,31 @@
 <?php
-$totalglobal = 0;
-include "../../global/conexion.php";
-session_start();
+    $totalglobal = 0;
+    include "../../global/conexion.php";
+    session_start();
 
-if (!isset($_SESSION['correo'])) {
+    if (!isset($_SESSION['correo'])) {
 
-    header("location:../login/login.php");
-}
+        header("location:../login/login.php");
+    }
 
-$iduser = $_SESSION['iduser'];
-$sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
-$sentencia->execute();
-$venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    $iduser = $_SESSION['iduser'];
+    $sentencia = $pdo->prepare("SELECT subtotal FROM ventas where usuarios_id = $iduser and estado = 0");
+    $sentencia->execute();
+    $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-$total2 =  floatval($venta[0]['subtotal']);
+    $total2 =  floatval($venta[0]['subtotal']);
 
-$sql = "SELECT * FROM usuarios WHERE id = '$iduser' and has_direccion = 1";
+    $sql = "SELECT * FROM usuarios WHERE id = '$iduser' and has_direccion = 1";
 
 
-$sentencia = $pdo->prepare($sql);
-$sentencia->execute();
-$hasdireccion = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    $sentencia = $pdo->prepare($sql);
+    $sentencia->execute();
+    $hasdireccion = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-if ($hasdireccion[0]['has_direccion'] == 1) {
+    if ($hasdireccion[0]['has_direccion'] == 1) {
 
-    header("location:pagos2.php");
-}
+        header("location:pagos2.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
 <body id="pagos1" onload="nobackbutton()">
 
     <nav class="navbar-expand-sm navbar-light">
-        <header class="darkmainheader">
+        <div class="darkmainheader">
             <div class="navlogo">
                 <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
             </div>
@@ -72,11 +72,10 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                     </a>
                 </div>
             </div>
-        </header>
+        </div>
     </nav>
 
-    <div class="pay-form mb-5">
-        <!-- Contenedor del formulario Izquierda -->
+    <div class="pay-form">
         <div class="containersale">
             <div class="mb-1 mt-5">
                 <div class="steps">CARRITO <i class="fas fa-angle-right m-3"></i> INFORMACI&Oacute;N <i class="fas fa-angle-right m-3"></i> ENV&Iacute;O <i class="fas fa-angle-right m-3"></i> PAGO</div>
@@ -130,15 +129,9 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
     </div>
     </div>
 
-
-    <!-- INICIO configuración pasarela de pagos 1 -->
-
     <div class="pay">
-        <!-- Contenedor de objetos para el carrito de compras -->
-        <div class="cart-content">
-            <!-- Cart items -->
 
-            <!-- aqui va lo que pruebo -->
+        <div class="cart-content">
             <?php
 
             $iduser = $_SESSION['iduser'];
@@ -162,7 +155,6 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                         <h2><?php echo $detventa['nombre'] ?></h2>
                         <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
                         <h3>$<?php echo number_format($detventa['precio_venta']) ?></h3>
-                        <!-- <span class="remove-item">remove</span> -->
                     </div>
                     <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                 </div>
@@ -172,7 +164,6 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
             }
             ?>
 
-            <!-- FIN Cart items -->
             <div class="saleoff">
                 <form action="descuento.php" method="post">
                     <input type="text" name="codigo" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
@@ -180,7 +171,7 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                 </form>
             </div>
             <hr>
-            <!-- SUBTOTAL -->
+
             <div class="cart-footer mt-4">
                 <div class="subtotal">
                     <h3>SUBTOTAL</h3>
@@ -197,23 +188,21 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
     </div>
     </div>
 
-    <!-- INICIO Footer -->
-<!-- <footer id="testfooter" class="footer-content">
-    <div class="footercontent">
-        <div class="footerleft">
-            <img src="../assets/img/nav_foot/onda1.gif" alt="icono para reproducir musica" id="iconSong">
-        </div>
+    <div id="testfooter" class="footer-content">
+        <div class="footercontent">
+            <div class="footerleft">
+                <img src="../assets/img/nav_foot/onda1.gif" alt="icono para reproducir musica" id="iconSong">
+            </div>
 
-        <audio id="klmaSong">
-            <source src="../assets/audio/klma.mp3" type="audio/mp3">
-        </audio>
+            <audio id="klmaSong">
+                <source src="../assets/audio/klma.mp3" type="audio/mp3">
+            </audio>
 
-        <div class="footerright">
-            <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/nav_foot/Contactenos.png" alt="logo de contacto"></a>
+            <div class="footerright">
+                <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/nav_foot/Contactenos.png" alt="logo de contacto"></a>
+            </div>
         </div>
     </div>
-</footer> -->
-<!-- FIN Footer -->
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
@@ -225,7 +214,6 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
 
     <!-- Script reproducir musica manualmente -->
     <script>
-
         let klmaSong = document.getElementById("klmaSong")
         let iconSong = document.getElementById("iconSong")
 
@@ -238,7 +226,6 @@ if ($hasdireccion[0]['has_direccion'] == 1) {
                 iconSong.src = "../assets/img/nav_foot/onda2.gif";
             }
         }
-
     </script>
 
     <script>

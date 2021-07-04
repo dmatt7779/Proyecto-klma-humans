@@ -1,30 +1,28 @@
 <?php
-session_start();
-include "../../global/conexion.php";
+    session_start();
+    include "../../global/conexion.php";
 
-if (!isset($_SESSION['correo'])) {
+    if (!isset($_SESSION['correo'])) {
 
-    header("location:../login/login.php");
-}
+        header("location:../login/login.php");
+    }
 
+    $iduser = $_SESSION['iduser'];
+    $sentencia = $pdo->prepare("SELECT * FROM ventas where usuarios_id = $iduser and estado = 0");
+    $sentencia->execute();
+    $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-$iduser = $_SESSION['iduser'];
-$sentencia = $pdo->prepare("SELECT * FROM ventas where usuarios_id = $iduser and estado = 0");
-$sentencia->execute();
-$venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    $total =  100 * (floatval($venta[0]['subtotal']));
+    $total2 =  floatval($venta[0]['subtotal']);
+    $porcentaje = $venta[0]['porcentaje']; 
 
-$total =  100 * (floatval($venta[0]['subtotal']));
-$total2 =  floatval($venta[0]['subtotal']);
-$porcentaje = $venta[0]['porcentaje']; 
+    $ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
 
-$ref = $_SESSION['apodo'] . "-" . (string)(rand(0, 1000000000000));
-
-$sentencia = $pdo->prepare("SELECT * FROM Direcciones where id_user = $iduser");
-$sentencia->execute();
-$direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-$pagaenvio = $direcciones[0]['pagaenvio'];
-$contraentrega = $direcciones[0]['contraentrega'];
-
+    $sentencia = $pdo->prepare("SELECT * FROM Direcciones where id_user = $iduser");
+    $sentencia->execute();
+    $direcciones = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    $pagaenvio = $direcciones[0]['pagaenvio'];
+    $contraentrega = $direcciones[0]['contraentrega'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,15 +40,15 @@ $contraentrega = $direcciones[0]['contraentrega'];
 
 <body id="pagos1" onload="tipopago()">
     
-<nav class="navbar-expand-sm navbar-light">
-    <header class="darkmainheader">
-    <div class="navlogo">
-            <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
-    </div>
+    <nav class="navbar-expand-sm navbar-light">
+        <div class="darkmainheader">
+            <div class="navlogo">
+                <a href="../main/menu.php"><img src="../assets/img/nav_foot/Shop-White.gif" alt="Logo de compras"></a>
+            </div>
 
-    <div class="navlogo2">
-            <a href="../main/h0m3.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
-    </div>
+            <div class="navlogo2">
+                <a href="../main/h0m3.php"><img src="../assets/img/nav_foot/logoblanco.png" alt="logo principal"></a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,18 +56,24 @@ $contraentrega = $direcciones[0]['contraentrega'];
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="nested-nav mr-2">
 
-                    <a class="navicons m-2" href="../main/menu2.php"><div class="dotsmenu"><img src="../assets/img/nav_foot/menu2.png" alt="menu 2"></div></a>
+                    <a class="navicons m-2" href="../main/menu2.php">
+                        <div class="dotsmenu"><img src="../assets/img/nav_foot/menu2.png" alt="menu 2"></div>
+                    </a>
 
-                    <a href="../login/login.php" class="m-2"><div class="loginmenu"><img src="../assets/img/nav_foot/Login2.png" alt="Login de usuarios"></div></a>
+                    <a href="../login/login.php" class="m-2">
+                        <div class="loginmenu"><img src="../assets/img/nav_foot/Login2.png" alt="Login de usuarios"></div>
+                    </a>
 
-                    <a href="#" class="m-2" id="btnCart"><div class="cartmenu"><img src="../assets/img/nav_foot/Cartera2.png" alt="carrito de compras"></div></a>
+                    <a href="#" class="m-2" id="btnCart">
+                        <div class="cartmenu"><img src="../assets/img/nav_foot/Cartera2.png" alt="carrito de compras"></div>
+                    </a>
                 </div>
             </div>
-    </header>
-</nav>
+        </div>
+    </nav>
 
-    <div class="pay-form mb-5">
-        <div class="containersale2">
+    <div class="pay-form">
+        <div class="containersale">
             <div class="mb-1 mt-5">
                 <div class="steps">CARRITO <i class="fas fa-angle-right m-3"></i> INFORMACI&Oacute;N <i class="fas fa-angle-right m-3"></i> ENV&Iacute;O <i class="fas fa-angle-right m-3"></i> PAGO</div>
             </div>
@@ -86,9 +90,8 @@ $contraentrega = $direcciones[0]['contraentrega'];
                     <span><?php echo $direcciones[0]['nombre']?></span>
                     <button class="btnminichance" data-toggle="modal" data-target="#exampleModal1">CAMBIAR</button>
                 </div>
-
             </div>
-            <!-- Button trigger modal -->
+
             <div class="modal fade" id="exampleModal1" tabindex="-1" style="z-index: 90;"  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -115,8 +118,6 @@ $contraentrega = $direcciones[0]['contraentrega'];
                 </div>
             </div>
 
-
-            <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -153,10 +154,9 @@ $contraentrega = $direcciones[0]['contraentrega'];
             <div class="datachance mt-3 mb-4">
                 <div class="minichance">
                     <label><input type="radio" checked="<?php echo $contraentrega?>" onclick="handleChangeEnvioContraEntrega();" id="cbox2" value="checkboxsale"></label>
-                    <span class="checkboxship">PAGAR ENVÍO CONTRAENTREGA</span>                    
+                    <span class="checkboxship">ENVÍO CONTRAENTREGA</span>                    
                 </div>
             </div>
-            <!-- Sección para pasar a pagos -->
             <div>
                 <div class="datapay">
                     
@@ -176,16 +176,10 @@ $contraentrega = $direcciones[0]['contraentrega'];
                 </div>
             </div>
 
-
-
-            <!-- INICIO configuración pasarela de pagos 1 -->
             <div class="">
                 <div class="pay">
-                    <!-- Contenedor de objetos para el carrito de compras -->
-                    <div class="cart-content">
-                        <!-- Cart items -->
 
-                        <!-- aqui va lo que pruebo -->
+                    <div class="cart-content">
                         <?php
 
                         $iduser = $_SESSION['iduser'];
@@ -203,7 +197,7 @@ $contraentrega = $direcciones[0]['contraentrega'];
 
                         foreach ($detalleventa as $detventa) { ?>
 
-                            <div class="cart-item">
+                            <div class="cart-item mb-4">
                                 <div class="data-item">
                                     <div class="plus-minus">
                                         <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>
@@ -211,7 +205,6 @@ $contraentrega = $direcciones[0]['contraentrega'];
                                     <h2><?php echo $detventa['nombre'] ?></h2>
                                     <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
                                     <h3>$<?php echo number_format($detventa['precio_venta']) ?></h3>
-                                    <!-- <span class="remove-item">remove</span> -->
                                 </div>
                                 <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
                             </div>
@@ -248,11 +241,28 @@ $contraentrega = $direcciones[0]['contraentrega'];
             </div>
         </div>
     </div>
+
+    <div id="testfooter" class="footer-content">
+        <div class="footercontent">
+            <div class="footerleft">
+                <img src="../assets/img/nav_foot/onda1.gif" alt="icono para reproducir musica" id="iconSong">
+            </div>
+
+            <audio id="klmaSong">
+                <source src="../assets/audio/klma.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="footerright">
+                <a href="https://api.whatsapp.com/send?phone=+573007106853" target="_blank"><img src="../assets/img/nav_foot/Contactenos.png" alt="logo de contacto"></a>
+            </div>
+        </div>
+    </div>
     
     <form action="cambiotipopago.php" method="get" name="tipopago">
-                        <input type="hidden" name="contraentrega" id="contraentrega" value='<?php echo $contraentrega ?>'>
-                        <input type="hidden" name="pagoenvio" id="pagoenvio" value='<?php echo $pagaenvio?>'>
-            </form>
+        <input type="hidden" name="contraentrega" id="contraentrega" value='<?php echo $contraentrega ?>'>
+        <input type="hidden" name="pagoenvio" id="pagoenvio" value='<?php echo $pagaenvio?>'>
+    </form>
+
     <script>
 
         function entre() {
@@ -326,6 +336,21 @@ $contraentrega = $direcciones[0]['contraentrega'];
         }
 
     </script>
+
+    <script>
+        let klmaSong = document.getElementById("klmaSong")
+        let iconSong = document.getElementById("iconSong")
+
+        iconSong.onclick = function() {
+            if(klmaSong.paused){
+                klmaSong.play();
+                iconSong.src = "../assets/img/nav_foot/onda1.gif";
+            }else {
+                klmaSong.pause();
+                iconSong.src = "../assets/img/nav_foot/onda2.gif";
+            }
+        }
+    </script>
     
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
@@ -333,5 +358,4 @@ $contraentrega = $direcciones[0]['contraentrega'];
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
 
 </body>
-
 </html>

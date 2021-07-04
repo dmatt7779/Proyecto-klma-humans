@@ -1,25 +1,25 @@
 <?php
-include "../../global/conexion.php";
-session_start();
-        if (isset($_SESSION['correo'])) {
-            switch ($_SESSION['rol']) {
-                case '3':
-                    header("location:../interfaz_cliente/clienteintro.php");
-                    break;
-                case '2':
-                    header("location:../interfaz_vendedor/vendintro.php");
-                    break;
-                case '1':
-                    header("location:../interfaz_admin/adminintro.php");
-                    break;
-                            
-                    
-                default:
-                    # code...
-                    break;
+    include "../../global/conexion.php";
+    session_start();
+            if (isset($_SESSION['correo'])) {
+                switch ($_SESSION['rol']) {
+                    case '3':
+                        header("location:../interfaz_cliente/clienteintro.php");
+                        break;
+                    case '2':
+                        header("location:../interfaz_vendedor/vendintro.php");
+                        break;
+                    case '1':
+                        header("location:../interfaz_admin/adminintro.php");
+                        break;
+                                
+                        
+                    default:
+                        # code...
+                        break;
+                }
+                
             }
-            
-        }
 ?>
 <!DOCTYPE html>
 <html lang="es">

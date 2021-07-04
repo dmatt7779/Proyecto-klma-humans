@@ -87,18 +87,18 @@ var
                 desingQuestion = '',
                 desingReplys = '',
                 desingTitle = '',
-                countReplys = Question.replys.length,
-                IdxSolution = Solution.findIndex( ( Obj => Obj.IdQuestion === Question.id ) )
+                countReplys = Question.replys.length
+                //IdxSolution = Solution.findIndex( ( Obj => Obj.IdQuestion === Question.id ) )
 
             var Class = ( Question.id === 3 || Question.id === 4 || Question.id === 5 || Question.id === 6 )
                 ?
                     'introtest' + Question.id + ''
                 :
                     'introtest';
-
+                    
             desingTitle = '<div class="row m-0">';
                 desingTitle += '<div class="col-md-3"></div>';
-                    desingQuestion += '<div class="mainTitleTest animate-q1">BIENVENID@ A KLMA</div>';
+                desingQuestion += ( Question.id === 1 ) ? '<div class="mainTitleTest animate-q1">BIENVENID@ A KLMA</div>' : '';
                     desingTitle += '<div class="' + Class + ' col-md-6 animate-introtest">';
                         desingTitle += Question.title;
                     desingTitle += '</div>';
@@ -109,7 +109,7 @@ var
             for( var i = 0; i < countReplys; i++ ){
                 desingReplys += '<div class="testselect' + Question.id + '" data-theme="' + Question.replys[ i ].theme + '" data-val="' + Question.value + '" data-id="' + Question.id + '">';
                     desingReplys += '<div class="testicons testselect' + Question.id + Question.id +' animate-selector' + Question.id + '">';
-                        ( Question.replys[ i ].reply.slice( -4 ) === '.png' ) 
+                        ( Question.replys[ i ].reply.slice( -4 ) === '.png' )
                         ?
                             desingReplys += '<img style="width: 100px" src="' + Question.replys[ i ].reply + '" />'
                         :
