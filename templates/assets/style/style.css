@@ -437,6 +437,7 @@ div.darkmainheader {
 /* ----------------------------INICIO TEST FOOTER------------------------------- */
 #testfooter {
     width: 100%;
+    position: absolute;
 }
 
 #clientfooter {
@@ -4944,6 +4945,22 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     /*Móviles*/
     @media screen and (max-width: 576px){
 
+        /* .footercontent_1 {
+            margin-top: 175px!important;
+        }
+
+        .footercontent {
+            margin-top: 130px;
+        }
+
+        .contentlogin {
+            margin-top: 22%;
+        }
+
+        #divisor-pod {
+            margin: 20px 0px 20px 0;
+        } */
+
         dl, ol, ul {
             margin-right: -72px;
         }
@@ -5209,7 +5226,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             margin-bottom: 4vw;
         }
         .contactform textarea{
-            padding: 5% 0% 0% 9%;
+            /* padding: 5% 0% 0% 9%; */
             letter-spacing: 2rem;
         }
         .img-barras{
