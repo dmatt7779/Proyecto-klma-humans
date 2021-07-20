@@ -4,8 +4,9 @@
     include ('../../global/conexion.php');
 
     
-  
-
+    $opciones = [
+        'cost' => 12,
+    ];
 
     $usuario = $_POST['nickname']; 
     $contrasena = $_POST['contraseña'];
@@ -14,7 +15,9 @@
     $hoy = date('Y-m-d');
     $fecha_registro =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
     $rol = $_POST['rol'];
-    $sql = "INSERT INTO usuarios (apodo, correo, clave, rol, fecha_registro) VALUES ('$usuario', '$correo', '$contrasena', '$rol','$fecha_registro')";
+    $hash = password_hash($contrasena, PASSWORD_DEFAULT, $opciones);
+
+    $sql = "INSERT INTO usuarios (apodo, correo, clave, rol, fecha_registro) VALUES ('$usuario', '$correo', '$hash', '$rol','$fecha_registro')";
 
     $sentencia = $pdo->prepare( $sql );
     $sentencia -> execute();

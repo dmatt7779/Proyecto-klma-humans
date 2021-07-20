@@ -53,13 +53,13 @@
             <div class="logpass">
                 <div class="divshowhide logpassregister">
                     <input id="txtPassword" type="password" name="newpwd" class="login-email" placeholder="NUEVA CONTRASEÑA">
-                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                    <span style="position: absolute;" id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                     <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                 </div>
                 <div class="divshowhide logpassregister">
-                    <input id="txtPassword" type="password" name="confpwd" class="login-pass" placeholder="CONFIRMAR CONTRASEÑA">
-                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
-                    <span id="show_password" onclick="mostrarPassword()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                    <input id="txtPassword2" type="password" name="confpwd" class="login-pass" placeholder="CONFIRMAR CONTRASEÑA">
+                    <span id="show_password2" onclick="mostrarPassword2()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
+                    <span id="show_password2" onclick="mostrarPassword2()" class="btn btn-eye btn-sm fas fa-eye icon"></span>
                     <input type="hidden" class="form-control" name="email" value="<?php echo $email ?>">
                 </div>
             </div>
@@ -77,7 +77,7 @@
     <?php } ?>
 
     <div class="sign-up text-center">
-        <a href="recuperar.php">INGRESAR CÓDIGO NUEVAMENTE</a>
+        <a href="recuperar.php">INTENTARLO NUEVAMENTE/a>
     </div>
 </div>
 
@@ -88,7 +88,7 @@
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
-    <!-- Mostrar y ocultar contraseña-->
+<!-- Mostrar y ocultar contraseña-->
     <script type="text/javascript">
         function mostrarPassword(){
             var cambio = document.getElementById("txtPassword");
@@ -99,7 +99,18 @@
                 cambio.type = "password";
                 $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
             }
+        }
+
+        function mostrarPassword2(){
+            var cambio = document.getElementById("txtPassword2");
+            if(cambio.type == "password"){
+                cambio.type = "text";
+                $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
+            }else{
+                cambio.type = "password";
+                $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye');
             }
+        }
     </script>
 
 </body>

@@ -40,6 +40,8 @@
                     # code...
                     break;
             }
+        }else {
+            header("location:../login/login.php");
         }
     }
 ?>
