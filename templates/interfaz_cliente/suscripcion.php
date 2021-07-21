@@ -3,11 +3,6 @@
    
     include ('../../global/conexion.php');
 
-    
-  
-
-
-   
     $correo = $_POST['correo'];
     if($correo == ''){
      header("location:../login/login.php"); 
@@ -30,7 +25,6 @@ if(!isset($register2[0]['id'])){
     ?> 
     
     <script>
-      
 
         window.location.href = "../interfaz_cliente/clienteintro.php"
     
@@ -42,7 +36,6 @@ if(!isset($register2[0]['id'])){
     
     <script>
       
-
         window.location.href = "../main/h0m3.php"
     
     </script>

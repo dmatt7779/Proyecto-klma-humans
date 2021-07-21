@@ -23,21 +23,35 @@ if($_POST['google-response-token']){
         $correo = $_POST['correo'];
         $hoy = date('Y-m-d');
         $fecha_registro =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
+
+        $consultaSql = "SELECT * FROM usuarios WHERE correo = '$correo'";
+        $sentencia1 = $pdo->prepare( $consultaSql );
+        $sentencia1 -> execute();
+        $alreadyExist = $sentencia1->fetchAll(PDO::FETCH_ASSOC);
+
+            // print_r(count($alreadyExist));
+
         $hash = password_hash($contrasena, PASSWORD_DEFAULT, $opciones);
 
-       $sql = "INSERT INTO usuarios (apodo, correo, clave, rol, fecha_registro) VALUES ('$usuario', '$correo', '$hash', '3','$fecha_registro')";
+        if(!(count($alreadyExist) != 0)) {
+            $sql = "INSERT INTO usuarios (apodo, correo, clave, rol, fecha_registro) VALUES ('$usuario', '$correo', '$hash', '3','$fecha_registro')";
     
-        $sentencia = $pdo->prepare( $sql );
-        $sentencia -> execute();
-        $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-    
-        if( !$register ){
-            $_SESSION['creado'] = 1;      
-            header('location:registro.php');
-        }
+            $sentencia = $pdo->prepare( $sql );
+            $sentencia -> execute();
+            $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        }else {
+            if( !$register ){
+                $_SESSION['creado'] = 1;
+            }
+        ?>
+            <script>
+                var r = alert("Ya existe el email ingresado.");
+                window.location.href = "registro.php";
+            </script>
+        <?php
+        } 
     }else {
         echo "<div class='alert alert-warning'> Validación incorrecta :) </div>";
     }
-    
 }
 ?>
