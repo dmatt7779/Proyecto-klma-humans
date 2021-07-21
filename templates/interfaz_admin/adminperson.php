@@ -39,7 +39,11 @@ if (!isset($_SESSION['correo'])) {
 
                 <div class="newdata">
                     <input type="text" name="nickname" required  class="newprofile" placeholder="APODO"><br>
-                    <input type="text" name="rol" required class="newprofile" placeholder="ROL"><br>
+                    <select class="newprofile" name="rol">
+                        <option value="1"selected>1 Admin</option>
+                        <option value="2">2 Vendedor</option>
+                        <option value="3">3 Cliente</option>
+                    </select>
                 </div>
 
                 <div class="introline2 mt-2">
@@ -64,7 +68,6 @@ if (!isset($_SESSION['correo'])) {
                             <th>id</th>
                             <th>Correo</th>
                             <th>Apodo</th>
-                            <th>clave</th>
                             <th>rol</th>
                             <th>fecha de creacion</th>
                             <th>accion</th>
@@ -74,7 +77,6 @@ if (!isset($_SESSION['correo'])) {
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
@@ -97,7 +99,6 @@ if (!isset($_SESSION['correo'])) {
                             <td><?php echo $usuario['id'] ?></td>
                             <td><?php echo $usuario['correo'] ?></td>
                             <td><?php echo $usuario['apodo'] ?></td>
-                            <td><?php echo $usuario['clave'] ?></td>
                             <td><?php echo $usuario['rol'] ?></td>
                             <td><?php echo $usuario['fecha_registro'] ?></td>
                             <td> <form action="borrarusuario.php" method="post" class="text-center">
