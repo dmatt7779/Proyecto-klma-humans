@@ -189,9 +189,9 @@
     </div>
 
     <div id="testfooter" class="footer-content">
-        <div class="footercontent">
+        <div class="responFootercontent">
             <div class="footerleft">
-                <img src="../assets/img/nav_foot/onda1.gif" alt="icono para reproducir musica" id="iconSong">
+                <img src="../assets/img/nav_foot/onda2.gif" alt="icono para reproducir musica" id="iconSong">
             </div>
 
             <audio id="klmaSong">
@@ -204,7 +204,7 @@
         </div>
     </div>
 
-    <!-- JS, Popper.js, and jQuery -->
+<!-- JS, Popper.js, and jQuery -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
@@ -254,8 +254,4 @@
     </script>
 
 </body>
-
 </html>
-
-<?php //include "../navbar_footer/footer.php"  
-?>

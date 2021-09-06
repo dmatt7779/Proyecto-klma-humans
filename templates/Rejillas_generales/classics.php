@@ -20,7 +20,7 @@ include "../../global/conexion.php";
 
 <!-- navbar -->
 
-<nav id="hnav" class="navbar-expand-sm navbar-light">
+<!--<nav id="hnav" class="navbar-expand-sm navbar-light">
     <header class="mainheader mainheader2">
         <div class="navlogo">
                 <a href="../main/menu.php"><img id="logoshopnav" src="../assets/img/nav_foot/shop.gif" alt="Logo de compras"></a>
@@ -45,7 +45,9 @@ include "../../global/conexion.php";
                 </div>
             </div>
     </header>
-</nav>
+</nav>-->
+
+<?php require "../navbar_footer/header.php"; ?>
 
 <!-- navbar -->
 
