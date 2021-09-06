@@ -1,6 +1,7 @@
 $("#form").submit(function(event){
     event.preventDefault(); //Almacena los datos sin refrescar página web.
     enviar();
+    form.reset();
 });
 
 function enviar() {
