@@ -35,14 +35,14 @@
 
     //Cuerpo del email que se enviará al correo electrónico
 
-    $emailbd = 'Nombre: '.$nombre.'\n';
-    $emailbd.= 'E-mail: '.$email.'\n';
-    $emailbd.= 'Mensaje: '.$mensaje.'\n';
+    $emailbd = 'Nombre: '.$nombre. "\n";
+    $emailbd.= 'E-mail: '.$email. "\n";
+    $emailbd.= 'Mensaje: '.$mensaje;
 
     //Correo Electrónico de destino
 
-    $enviarA = 'dmatt7779@gmail.com';
-    $asunto = 'Nuevo mensaje desde KLMA HUMANS';
+    $enviarA = 'klma.humans@gmail.com';
+    $asunto = 'Nuevo mensaje de contáctanos - KLMA HUMANS';
 
     //Enviar Correo
 

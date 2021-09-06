@@ -43,6 +43,7 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
     <script src="../assets/js/contactform.js"></script>
+
 </body>
 </html>
 
