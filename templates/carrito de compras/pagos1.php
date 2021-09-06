@@ -189,7 +189,7 @@
     </div>
 
     <div id="testfooter" class="footer-content">
-        <div class="responFootercontent">
+        <div class="responFootercontent footercontent">
             <div class="footerleft">
                 <img src="../assets/img/nav_foot/onda2.gif" alt="icono para reproducir musica" id="iconSong">
             </div>

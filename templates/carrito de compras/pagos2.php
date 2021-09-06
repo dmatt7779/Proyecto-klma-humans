@@ -243,7 +243,7 @@
     </div>
 
     <div id="testfooter" class="footer-content">
-        <div class="responFootercontent">
+        <div class="responFootercontent footercontent">
             <div class="footerleft">
                 <img src="../assets/img/nav_foot/onda2.gif" alt="icono para reproducir musica" id="iconSong">
             </div>
@@ -262,100 +262,100 @@
         <input type="hidden" name="contraentrega" id="contraentrega" value='<?php echo $contraentrega ?>'>
         <input type="hidden" name="pagoenvio" id="pagoenvio" value='<?php echo $pagaenvio?>'>
     </form>
-
-    <script>
-
-        function entre() {
-            document.telefono.submit()
-        }
-        function handleChangeEnvio(){
-            var x = document.getElementById("cbox2");
-            x.checked = false;
-            document.getElementById("pagoenvio").value = "true";
-            document.getElementById("contraentrega").value = "false";
-            document.tipopago.submit()
-        }
-        function handleChangeEnvioContraEntrega(){
-            var x = document.getElementById("cbox1");
-            x.checked = false;
-            document.getElementById("contraentrega").value = "true";
-            document.getElementById("pagoenvio").value = "false";
-            document.tipopago.submit()
-        }
-        function enviar(event){
-            var x = document.getElementById("cbox2");
-            var d = document.getElementById("cbox1");
-            if(x.checked == !false || d.checked == !false){
-                
-                document.getElementById("public-key").value = "pub_test_Y6nrs8xkNGx5ZhKW06oZX51bFt3ISh7A"
-                document.getElementById("amount-in-cent").value = "<?php echo $total ?>"
-                document.getElementById("currency").value = "COP"                
-                document.getElementById("reference").value = "<?php echo $ref ?>"
-                document.getElementById("redirect-url").value = "http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"
-
-                document.pagos.submit()
-            }else{
-                alert("debes seleccionar una opcion de pago al envio")
-                event.preventDefault()
-            }
-        }
-        function tipopago(){
-            document.getElementById("cbox2").checked = <?php echo $contraentrega ?>;
-            document.getElementById("cbox1").checked = <?php echo $pagaenvio?>;
-        }
-
-        function eliminar(iddelete){
-            document.getElementById('eliminacion').value = iddelete;
-            document.formdeletecart.submit();
-        }
-
-        function add(idadd, cantidadold){
-            document.getElementById('suma').value = idadd;
-            document.getElementById('cantidad').value = cantidadold;
-
-            document.formaddonetocart.submit();
-        }
-
-        function remove(idremove , cantidadold2){
-            document.getElementById('resta').value = idremove;
-            document.getElementById('cantidad2').value = cantidadold2;
-
-            document.formremoveonetocart.submit();
-        }
-
-        function aceptar() {
-            document.getElementById("acept").value = parseInt(document.getElementById("acept").value) + 1
-        }
-
-        function enviarpedido() {
-            if (document.getElementById("acept").value % 2 == 0) {
-                alert("debe aceptar los terminos y condiciones")
-            } else {
-                document.finpedido.submit();
-            }
-        }
-
-    </script>
-
-    <script>
-        let klmaSong = document.getElementById("klmaSong")
-        let iconSong = document.getElementById("iconSong")
-
-        iconSong.onclick = function() {
-            if(klmaSong.paused){
-                klmaSong.play();
-                iconSong.src = "../assets/img/nav_foot/onda1.gif";
-            }else {
-                klmaSong.pause();
-                iconSong.src = "../assets/img/nav_foot/onda2.gif";
-            }
-        }
-    </script>
     
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
+
+<script>
+
+    function entre() {
+        document.telefono.submit()
+    }
+    function handleChangeEnvio(){
+        var x = document.getElementById("cbox2");
+        x.checked = false;
+        document.getElementById("pagoenvio").value = "true";
+        document.getElementById("contraentrega").value = "false";
+        document.tipopago.submit()
+    }
+    function handleChangeEnvioContraEntrega(){
+        var x = document.getElementById("cbox1");
+        x.checked = false;
+        document.getElementById("contraentrega").value = "true";
+        document.getElementById("pagoenvio").value = "false";
+        document.tipopago.submit()
+    }
+    function enviar(event){
+        var x = document.getElementById("cbox2");
+        var d = document.getElementById("cbox1");
+        if(x.checked == !false || d.checked == !false){
+            
+            document.getElementById("public-key").value = "pub_test_Y6nrs8xkNGx5ZhKW06oZX51bFt3ISh7A"
+            document.getElementById("amount-in-cent").value = "<?php echo $total ?>"
+            document.getElementById("currency").value = "COP"                
+            document.getElementById("reference").value = "<?php echo $ref ?>"
+            document.getElementById("redirect-url").value = "http://klmahumans.com/templates/carrito%20de%20compras/pagado.php"
+
+            document.pagos.submit()
+        }else{
+            alert("debes seleccionar una opcion de pago al envio")
+            event.preventDefault()
+        }
+    }
+    function tipopago(){
+        document.getElementById("cbox2").checked = <?php echo $contraentrega ?>;
+        document.getElementById("cbox1").checked = <?php echo $pagaenvio?>;
+    }
+
+    function eliminar(iddelete){
+        document.getElementById('eliminacion').value = iddelete;
+        document.formdeletecart.submit();
+    }
+
+    function add(idadd, cantidadold){
+        document.getElementById('suma').value = idadd;
+        document.getElementById('cantidad').value = cantidadold;
+
+        document.formaddonetocart.submit();
+    }
+
+    function remove(idremove , cantidadold2){
+        document.getElementById('resta').value = idremove;
+        document.getElementById('cantidad2').value = cantidadold2;
+
+        document.formremoveonetocart.submit();
+    }
+
+    function aceptar() {
+        document.getElementById("acept").value = parseInt(document.getElementById("acept").value) + 1
+    }
+
+    function enviarpedido() {
+        if (document.getElementById("acept").value % 2 == 0) {
+            alert("debe aceptar los terminos y condiciones")
+        } else {
+            document.finpedido.submit();
+        }
+    }
+
+</script>
+
+<script>
+    let klmaSong = document.getElementById("klmaSong")
+    let iconSong = document.getElementById("iconSong")
+
+    iconSong.onclick = function() {
+        if(klmaSong.paused){
+            klmaSong.play();
+            iconSong.src = "../assets/img/nav_foot/onda1.gif";
+        }else {
+            klmaSong.pause();
+            iconSong.src = "../assets/img/nav_foot/onda2.gif";
+        }
+    }
+</script>
 
 </body>
 </html>
