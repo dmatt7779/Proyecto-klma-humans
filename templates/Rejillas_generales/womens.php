@@ -53,7 +53,7 @@ include "../../global/conexion.php";
 	<?php for($i=0 ; $i < count($listaproductos) ;  $i++    ){ ?>
 		<div style="margin-bottom: 15%;" class="card-clmw">
 			<a href="#"><div class="cover" onclick="idprod(<?php echo $listaproductos[$i]['id'];?>,<?php echo $listaproductos[$i]['tipologia_id'];?>)" style="background-image: url(../assets/img/prodgenerales/<?php echo $listaproductos[$i]['imagen']; ?>)" title="Diseño de museo"></div></a>
-			<div class="card-body">
+			<div class="card-body2">
 			<a href="#" class="card-title"><p><?php echo $listaproductos[$i]['nombre']; ?></p></a>
 			<p class="text-clmw"><?php echo $listaproductos[$i]['descripcion']; ?></p>
 			<p class="price" href="#"><?php echo $listaproductos[$i]['precio_venta']; ?></p>
