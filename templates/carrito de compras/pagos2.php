@@ -175,67 +175,65 @@
                     <!-- wompi -->
                 </div>
             </div>
+        </div>
 
-            <div class="">
-                <div class="pay">
+        <div class="pay">
 
-                    <div class="cart-content">
-                        <?php
+            <div class="cart-content">
+                <?php
 
-                        $iduser = $_SESSION['iduser'];
-                        $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
-                        $sentencia->execute();
-                        $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+                $iduser = $_SESSION['iduser'];
+                $sentencia = $pdo->prepare("SELECT id FROM ventas where usuarios_id = $iduser and estado = 0");
+                $sentencia->execute();
+                $venta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-                        $ventaid =  $venta[0]['id'];
-                        $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
-                        $sentencia->execute();
-                        $detalleventa = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+                $ventaid =  $venta[0]['id'];
+                $sentencia = $pdo->prepare("SELECT detalleventa.cantidad, detalleventa.talla, productos.nombre, productos.precio_venta, productos.imagen from detalleventa inner join productos on detalleventa.productos_id = productos.id where detalleventa.ventas_id = $ventaid");
+                $sentencia->execute();
+                $detalleventa = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-                        $subtotal = 0;
+                $subtotal = 0;
 
-                        foreach ($detalleventa as $detventa) { ?>
+                foreach ($detalleventa as $detventa) { ?>
 
-                            <div class="cart-item mb-4">
-                                <div class="data-item">
-                                    <div class="plus-minus">
-                                        <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>
-                                    </div>
-                                    <h2><?php echo $detventa['nombre'] ?></h2>
-                                    <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
-                                    <h3>$<?php echo number_format($detventa['precio_venta']) ?></h3>
-                                </div>
-                                <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
+                    <div class="cart-item mb-4">
+                        <div class="data-item">
+                            <div class="plus-minus">
+                                <p class="item-amount mb-4"> <?php echo $detventa['cantidad'] ?></p>
                             </div>
-                            <hr>
-                            <?php
-                            $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
-
-                            ?>
-                        <?php
-                        }
-                        ?>
-
-                        <!-- FIN Cart items -->
-                        <div class="saleoff">
-                            <form action="descuento.php" method="post">
-                                <input type="text" name="codigo" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
-                                <div class="mr-3"><button type="submit" class="btn btn-saleoff">USAR</button></div>
-                            </form>
+                            <h2><?php echo $detventa['nombre'] ?></h2>
+                            <span class="cart-size">talla <?php echo $detventa['talla'] ?></span>
+                            <h3>$<?php echo number_format($detventa['precio_venta']) ?></h3>
                         </div>
-                        <hr>
-                        <!-- SUBTOTAL -->
-                        <div class="cart-footer mt-4">
-                            <div class="subtotal mt-3">
-                                <h2>DESCUENTO</h2>
-                                <span><?php echo $porcentaje?>%</span>
-                            </div>
-                            <div class="subtotal mt-3">
-                                <h3>TOTAL</h3>
-                                <span>$<?php echo number_format($total2) ?></span>
-                            </div>
-                        </div>
+                        <img src="../assets/img/prodgenerales/<?php echo $detventa['imagen']; ?>" alt="">
+                    </div>
+                    <hr>
+                    <?php
+                    $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+
+                    ?>
+                <?php
+                }
+                ?>
+
+                <!-- FIN Cart items -->
+                <div class="saleoff">
+                    <form action="descuento.php" method="post">
+                        <input type="text" name="codigo" class="saleoff" placeholder="CÓDIGO DE DESCUENTO">
+                        <div class="mr-3"><button type="submit" class="btn btn-saleoff">USAR</button></div>
+                    </form>
+                </div>
+                <hr>
+                <!-- SUBTOTAL -->
+                <div class="cart-footer mt-4">
+                    <div class="subtotal mt-3">
+                        <h2>DESCUENTO</h2>
+                        <span><?php echo $porcentaje?>%</span>
+                    </div>
+                    <div class="subtotal mt-3">
+                        <h3>TOTAL</h3>
+                        <span>$<?php echo number_format($total2) ?></span>
                     </div>
                 </div>
             </div>

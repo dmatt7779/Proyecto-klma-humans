@@ -5057,7 +5057,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 10% 0% 0% 5%;
+            padding: 10% 0% 10% 5%;
         }
 
         .bnav > .btnav > ol {
@@ -5090,7 +5090,8 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         .menub {
             background-color: rgba(242, 232, 220, 0.6);
             padding: 10% 4% 0% 0%;
-            display: block;
+            display: flex;
+            flex-direction: column-reverse;
         }
 
         .loungewear {
@@ -5379,7 +5380,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         }
 
         .carousel-inner{
-            height: 28vh;
+            height: 32vh;
         }
 
         .hmcarousel-control-next-icon, .hmcarousel-control-prev-icon{
@@ -5389,7 +5390,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 
         .pay-form {
             position: static;
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: center;
         }
 
@@ -5417,16 +5418,6 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
         .minichance > span:nth-child(2) {
             letter-spacing: .6rem;
         }
-
-
-
-
-
-
-
-
-
-
         
         /*-----------Móviles Navbar----------------------*/
         .nested-nav{
@@ -5442,7 +5433,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             width: 100%;
             padding-right: 5%;
             padding-left: 5%;
-            margin: 0% 2% 4% 2%;
+            margin: 0% 0% 4% 0%;
         }
     }
 

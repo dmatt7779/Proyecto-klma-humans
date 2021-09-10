@@ -69,15 +69,15 @@
             </div>
 
             <div class="recoverypwd">
-                <button class="btn btn-submit" type="submit">INGRESAR CÓDIGO</button>  
+                <button style="letter-spacing: .12222rem;" class="btn btn-submit" type="submit">CAMBIAR CONTRASEÑA</button>  
             </div>
         </form>
     <?php }else{ ?>
         <div class="alert alert-danger" >Código incorrecto o vencido</div>
     <?php } ?>
 
-    <div class="sign-up text-center">
-        <a href="recuperar.php">INTENTARLO NUEVAMENTE/a>
+    <div class="sign-up text-center mt-3">
+        <a href="recuperar.php">INTENTARLO NUEVAMENTE</a>
     </div>
 </div>
 
