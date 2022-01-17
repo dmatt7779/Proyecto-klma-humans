@@ -13,6 +13,7 @@ if (!isset($_SESSION['correo'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personas KLMA HUMANS</title>
+    <link  rel="icon"   href="../assets/img/favi_klma.png" type="image/png" />
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">

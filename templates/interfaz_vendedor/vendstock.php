@@ -15,7 +15,8 @@ include "../../global/conexion.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS KLMA' HUMANS</title>
+    <title>Stock KLMA' HUMANS</title>
+    <link  rel="icon"   href="../assets/img/favi_klma.png" type="image/png" />
     
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">

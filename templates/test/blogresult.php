@@ -12,7 +12,8 @@ include "../../global/conexion.php";
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
-    <title>KLMA' HUMANS</title>
+    <title>Blog KLMA' HUMANS</title>
+    <link  rel="icon"   href="../assets/img/favi_klma.png" type="image/png" />
 </head>
 <body>
 <?php include "../navbar_footer/header.php";

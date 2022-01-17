@@ -189,6 +189,38 @@ body {
     align-items: center;
 }
 
+.recoverypwd2{
+    font-family: "MoristonPersonal-Bold";
+    color: rgb(255, 255, 255);
+    letter-spacing: .2rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.recoveryPrintEmail {
+    font-family: "MoristonPersonal-Bold";
+    color: rgb(255, 255, 255);
+    letter-spacing: .2rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.recoveryPwdBtn {
+    font-family: "HelveticaNeue";
+    font-size: 6pt;
+    letter-spacing: .9rem;
+    color: white;
+    text-align: center;
+    padding: 9%;
+}
+
+.recoveryPwdBtn > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
 /* ----------------------------------LOGIN------------------------- */
 
 /* ----------------------------------REGISTRO------------------------- */
@@ -1852,7 +1884,7 @@ button > .closeColorTYC, .closeColorTYC{
     font-size: 8pt;
     letter-spacing: 1rem;
     width: 80%;
-    margin: 0% 10% 0% 10%;
+    margin: 0% 5% 0% 5%;
     z-index: 100;
     padding: 0% 2% 1% 5%;
     border: none;
@@ -2013,17 +2045,17 @@ button > .closeColorTYC, .closeColorTYC{
 
 /* Referencia */
 .refer:nth-child(1) {
-    letter-spacing: 2.7rem;
+    letter-spacing: 2.75rem;
 }
 
 .refer:nth-child(2) {
     letter-spacing: 0.433rem;
 }
 .refercl {
-    letter-spacing: 0.8444444rem;
+    letter-spacing: 0.78888rem;
 }
 .refer:nth-child(3) {
-    letter-spacing: 1.1rem;
+    letter-spacing: 2.69rem;
 }
 .refer:nth-child(4) {
     letter-spacing: 1.48888888rem;
@@ -2312,15 +2344,14 @@ button > .closeColorTYC, .closeColorTYC{
 
 /* Contenedor para el boton de empaque especial */
 .contentbagcw {
-    width: 85%;
-    height: 758%;
+    width: 100%;
+    height: 720%;
     color: #ffffff;
     background-color: rgb(26,24,24);
     box-shadow: 5px 10px 8px rgb(0, 0, 0);
     font-family: "Helvetica";
     text-align: justify;
     position: absolute;
-    margin-left: 15%;
     bottom: 0px;
 }
 
@@ -2341,8 +2372,8 @@ button > .closeColorTYC, .closeColorTYC{
 }
 
 .btn-opcionescw:nth-child(2){
-    flex: 1;
-    margin: 0% 18.6% 0% 0%;
+    flex: 2;
+    margin: 0% 2% 0% 2%;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -2350,8 +2381,8 @@ button > .closeColorTYC, .closeColorTYC{
 .btn-opcionescw:nth-child(3){
     flex: 0;
     align-items: flex-end;
-    justify-content: end;
-    margin: 0% 0% 0% 0%;
+    justify-content: flex-end;
+    margin: 0% 0% 0% 2%;
 }
 
 .btn-opcionescw:nth-child(3) > label > span {
@@ -3647,12 +3678,48 @@ hr {
 table.dataTableclient{
     clear: both;
     margin-top: 6px !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 30px !important;
     max-width: none !important;
-    border-collapse: separate !important;
-    border-spacing: 58px 0px!important;
+    border-collapse: collapse !important;
+    border-spacing: 0!important;
     text-align: center!important;
-    border-radius: 100px!important;
+}
+
+.table-borderedClient {
+    border: 0px solid #dee2e6!important;
+}
+
+#mydatatable_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+    justify-items: center;
+}
+
+.titleTableCLiente{
+    letter-spacing: .2rem!important;
+    font-size: 10pt!important;
+    height: 45px!important;
+}
+
+.trTableClient{
+    background-color: black!important;
+    font-size: 11pt!important;
+    height: 40px!important;
+}
+
+#mydatatable_paginate .dataTables_paginate .paging_simple_numbers{
+    display: flex!important;
+    flex-direction: row!important;
+    justify-content: center!important;
+}
+
+.pagination{
+    margin: 2px 0px 0px 7px!important;
+    white-space: nowrap!important;
+    justify-content: center!important;
 }
 
 .jumbotrontableclient{
@@ -3670,38 +3737,36 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 }
 
 .tableTheadClient {
-    background-color: black!important;
+    background-color: #2D2A29!important;
 }
 
 .tableTheadClient > tr > th:nth-child(1){
     width: 5%;
-    border-radius: 8px!important;
 }
 
 .tableTheadClient > tr > th:nth-child(2){
     width: 13%;
-    border-radius: 8px!important;
 }
 .tableTheadClient > tr > th:nth-child(3){
     width: 13%;
-    border-radius: 8px!important;
 }
 .tableTheadClient > tr > th:nth-child(4){
     width: 12%;
-    border-radius: 8px!important;
 }
 .tableTheadClient > tr > th:nth-child(5){
     width: 15%;
-    border-radius: 8px!important;
 }
 .tableTheadClient > tr > th:nth-child(6){
     width: 5%;
-    border-radius: 8px!important;
 }
 
 .table-bordered thead th {
     border-bottom-width: 0px!important;
     border-bottom-color: black!important;
+}
+
+.titleTableCLiente th {
+    border: 0px solid transparent!important;
 }
 
 .containerbeige {
@@ -4815,7 +4880,77 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     background-color: #000000;
 }
 
+#scrolltitleAmor {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 160px;
+    position: relative;
+    bottom: 0;
+    left: 8px;
+}
 
+#scrolltitleAlegria {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 145px;
+    position: relative;
+    bottom: 0;
+    left: -5px;
+}
+
+#scrolltitleFelicidad {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 140px;
+    position: relative;
+    bottom: 0;
+    left: -14px;
+}
+
+#scrolltitleIra {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 180px;
+    position: relative;
+    bottom: 0;
+    left: 18px;
+}
+
+#scrolltitleMiedo {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 160px;
+    position: relative;
+    bottom: 0;
+    left: 4px;
+}
+
+#scrolltitleTristeza {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 145px;
+    position: relative;
+    bottom: 0;
+    left: -10px;
+}
 /* -------------------------------FIN Barras Laterales---------------------------------- */
 
 

@@ -7,16 +7,22 @@ include "../../global/conexion.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KLMA' HUMANS</title>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Test KLMA' HUMANS</title>
+    <link  rel="icon"   href="../assets/img/favi_klma.png" type="image/png" />
 
+    <!-- <link rel="stylesheet" href="../assets/style/style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css ">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="../assets/style/style.css?v=<?php echo(rand()); ?>" />
 </head>
 <body id="pruebita">
 <?php include "../navbar_footer/header.php";?>
-
 <!-- Scroll Bar personalizado -->
 <div id="scrollTest">
 
@@ -457,9 +463,10 @@ include "../../global/conexion.php";
     <!-- JS, Popper.js, and jQuery -->
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
-    <script src="function.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- <script src="function.js"></script> -->
+    <script src="function.js?v=<?php echo(rand()); ?>"></script>
     <script src="../assets/js/carrito.js"></script>
 
 <script>
@@ -553,10 +560,7 @@ include "../../global/conexion.php";
         if(klmaSong.paused){
             iconSong.src = "../assets/img/nav_foot/onda1.gif";
         }
-
         klmaSong.play();
-
-
     }
 
     iconSong.onclick = function() {

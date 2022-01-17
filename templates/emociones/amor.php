@@ -13,9 +13,10 @@ $emocion = "amor";
 
 	<!-- CSS only -->
 	<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/style/style.css">
+<!-- 	<link rel="stylesheet" href="../assets/style/style.css"> -->
+<link rel="stylesheet" href="../assets/style/style.css?v=<?php echo(rand()); ?>" />
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<link rel="stylesheet" href="sss/sss.css">
+	<link rel="stylesheet" href="../test/sss/sss.css">
 </head>
 <body>
 <?php include "../navbar_footer/header.php";
@@ -32,7 +33,7 @@ if (empty($usuario)) {
 <!-- Scroll Bar personalizado -->
 <div id="scrollpostresults">
 
-    <div id="scrolltitlepostresults">EMOCIÓN</div>
+    <div id="scrolltitleAmor">AMOR</div>
 
     <!-- Track -->
     <div class="scrolllightbar">
@@ -165,7 +166,7 @@ if (empty($usuario)) {
 	<script src="../assets/librerias/jquery-2.2.4.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
 	<script src="../assets/librerias/bootstrap.min.js"></script>
-	<script src="sss/sss.js"></script>
+	<script src="../test/sss/sss.js"></script>
 
 <!-- scroll bar -->
 <script>

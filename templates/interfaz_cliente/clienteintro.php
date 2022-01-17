@@ -15,7 +15,8 @@ $correo = $_SESSION['correo'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario KLMA' HUMANS</title>
+    <title>Welcome KLMA' HUMANS</title>
+    <link  rel="icon"   href="../assets/img/favi_klma.png" type="image/png" />
 
     <!-- CSS only -->
    
@@ -74,14 +75,14 @@ $correo = $_SESSION['correo'];
     <div class="container-fluid">
     <!-- DIV PARA EL DATATABLE -->
 <!--         <div class="tableadmin"> -->
-            <table class="dataTableclient records_list table-striped table-bordered table-hover" id="mydatatable">
+            <table class="dataTableclient records_list table-striped table-borderedClient" id="mydatatable">
                     <thead class="tableTheadClient">
-                        <tr>
-                            <th>id</th>
-                            <th>Subtotal</th>
-                            <th>Total</th>
-                            <th>Estado</th>
-                            <th>Fecha</th>
+                        <tr class="titleTableCLiente">
+                            <th>ID</th>
+                            <th>SUBTOTAL</th>
+                            <th>TOTAL</th>
+                            <th>ESTADO</th>
+                            <th>FECHA</th>
                         </tr>
                     </thead>
                    
@@ -94,7 +95,7 @@ $correo = $_SESSION['correo'];
     ?>
 
     <?php foreach($listaventas as $venta) {  ?>
-                    <tr style="background-color: black;">
+                    <tr class="trTableClient">
 
                             <td><?php echo $venta['id'] ?></td>
                             <td><?php echo $venta['subtotal'] ?></td>
@@ -102,13 +103,13 @@ $correo = $_SESSION['correo'];
                             <td><?php switch($venta['estado']){
                                 case '1':
                                     
-                                    echo 'Pagado';
+                                    echo 'PAGADO';
                                     break;
                                 case '2':
-                                    echo 'Enviado';
+                                    echo 'ENVIADO';
                                     break;
                                 case '3':
-                                    echo 'Entregado';
+                                    echo 'ENTREGADO';
                                     break;
                               
                                 default:
@@ -150,6 +151,25 @@ $correo = $_SESSION['correo'];
     </div>
 </footer>
 <!-- FIN Footer -->
+
+<!-- Funcion para eliminar elementos del DOM -->
+<script>
+    document.ready = function(){
+            imagen = document.getElementById(mydatatable_info);
+            console.log (imagen.children.length);
+
+            if (!imagen){
+                 console.log("El elemento selecionado existe");
+            }
+
+            // if (!imagen){
+            //     alert("El elemento selecionado no existe");
+            // } else {
+            //     padre = imagen.parentNode;
+            //     padre.removeChild(imagen);
+            // }
+    }
+</script>
     
 </body>
 </html>

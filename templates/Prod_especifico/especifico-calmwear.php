@@ -29,11 +29,13 @@ if ($idempaque != null || $idempaque != "") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto Especifico - CW</title>
+    <title>Calmwear</title>
+    <link  rel="icon"   href="../assets/img/favi_klma.png" type="image/png" />
 
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/style/style.css?v=<?php echo(rand()); ?>" />
 </head>
 
 <body>
@@ -88,7 +90,7 @@ if ($idempaque != null || $idempaque != "") {
                 <div class="font-lw-1 elemento1cw">
                     <p class="refer">SOFT</p>
                     <p class="refercl"><?php echo $producto[0]['codigo'] ?></p>
-                    <p class="refer">COMFORT</p>
+                    <p class="refer">CALM</p>
                     <p class="refer">DESIGN</p>
                 </div>
 

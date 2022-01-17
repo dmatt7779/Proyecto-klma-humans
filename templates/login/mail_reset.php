@@ -13,17 +13,22 @@ $mensaje = '
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Código para restablecer contraseña</title>
+    <title>CÓDIGO DE RECUPERACIÓN</title>
 </head>
 <body>
-    <h1>Klma humans</h1>
-    <div style="text-align:center; background-color:#ccc">
-        <p>Restablecer contraseña</p>
-        <h3>'.$codigo.'</h3>
-        <p> <a 
-            href="http://klmahumans.com/templates/login/reset.php?email='.$email.'&token='.$token.'"> 
-            para restablecer da click aqui </a> </p>
-        <p> <small>Si no solicitaste el cambio de contraseña, por favor omitir este email.</small> </p>
+    <div><img src="../assets/img/K-2.png alt="Logo Company"></div>
+    <div style="text-align:center; background-color:#ffffff">
+        <h1>CÓDIGO DE RECUPERACIÓN</h1>
+        <p>-----------------------</p>
+        <h2>'.$codigo.'</h2>
+        <p>-----------------------</p>
+        <p>Quedamos atentos a cualquier comunicado o solicitud.</p>
+        <p>Muchas gracias.</p>
+        <h3>KLMA'"'"' humans</h3>
+        <h4><a href="http://klmahumans.com/templates/login/reset.php?email='.$email.'&token='.$token.'">www.klmahumans.com </a></h4>
+        <p> (+57) 3007106853 </p>
+        <h5> CONFIDENCIAL </h5>
+        <p> <small>La información contenida en este mensaje y cualquier archivo adjunto es confidencial y está dirigida exclusivamente a su destinatario.<br>Si este mensaje es recibido por error favor notificar al remitente y proceda a suprimirlo inmediatamente. <br>Cualquier retención, difusión, distribución o copia de este mensaje está prohibida y será sancionada por la ley.  </small> </p>
     </div>
 </body>
 </html>
