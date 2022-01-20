@@ -73,10 +73,10 @@
             <!-- GRID Anidado -->
             <div class="nested-grid-lw">
                 <div class="font-lw-1 elemento1">
-                    <p class="refer">SOFT</p>
-                    <p class="refer">REF <?php echo $producto[0]['codigo'] ?></p>
-                    <p class="refer">COMFORT</p>
-                    <p class="refer">DESIGN</p>
+                    <p class="referlw">SOFT</p>
+                    <p class="referlw">REF <?php echo $producto[0]['codigo'] ?></p>
+                    <p class="referlw">COMFORT</p>
+                    <p class="referlw">DESIGN</p>
                 </div>
 
                 <!-- Precio -->

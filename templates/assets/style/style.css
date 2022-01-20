@@ -2044,20 +2044,37 @@ button > .closeColorTYC, .closeColorTYC{
 }
 
 /* Referencia */
-.refer:nth-child(1) {
+.refercl:nth-child(1) {
     letter-spacing: 2.75rem;
 }
 
-.refer:nth-child(2) {
+.refercl:nth-child(2) {
     letter-spacing: 0.433rem;
 }
 .refercl {
     letter-spacing: 0.78888rem;
 }
-.refer:nth-child(3) {
+.refercl:nth-child(3) {
     letter-spacing: 2.69rem;
 }
-.refer:nth-child(4) {
+.refercl:nth-child(4) {
+    letter-spacing: 1.48888888rem;
+}
+
+.referlw:nth-child(1) {
+    letter-spacing: 2.75rem;
+}
+
+.referlw:nth-child(2) {
+    letter-spacing: 0.433rem;
+}
+.referlw {
+    letter-spacing: 0.78888rem;
+}
+.referlw:nth-child(3) {
+    letter-spacing: 1.12rem;;
+}
+.referlw:nth-child(4) {
     letter-spacing: 1.48888888rem;
 }
 

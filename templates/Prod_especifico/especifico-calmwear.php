@@ -88,10 +88,10 @@ if ($idempaque != null || $idempaque != "") {
             <!-- GRID Anidado -->
             <div class="nested-grid-cw">
                 <div class="font-lw-1 elemento1cw">
-                    <p class="refer">SOFT</p>
-                    <p class="refercl"><?php echo $producto[0]['codigo'] ?></p>
-                    <p class="refer">CALM</p>
-                    <p class="refer">DESIGN</p>
+                    <p class="refercl">SOFT</p>
+                    <p class="refercl">REF <?php echo $producto[0]['codigo'] ?></p>
+                    <p class="refercl">CALM</p>
+                    <p class="refercl">DESIGN</p>
                 </div>
 
                 <div class="font-lw-1 elemento1-5cw">
