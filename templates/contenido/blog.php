@@ -47,6 +47,7 @@ include "../../global/conexion.php";
             <?php
                 $_Blog = trim(preg_replace('/\r\n/', '@', $frases[0]['blog']));
             ?>
+            
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
                     <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[0]['emocion'] ?>','<?php echo $frases[0]['escritor'] ?>','<?php echo $frases[0]['frase'] ?>')" class="blog-title"><?php echo $frases[0]['emocion'] ?></h1>
@@ -102,12 +103,6 @@ include "../../global/conexion.php";
                 </div>
             </div>
 
-
-
-
-
-
-
             <!-- blog 5 -->
             <?php
                 $_Blog = trim(preg_replace('/\r\n/', '@', $frases[4]['blog']));
@@ -122,17 +117,7 @@ include "../../global/conexion.php";
                     </a>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-            
+           
             <!-- blog 6 -->
             <?php
                 $_Blog = trim(preg_replace('/\r\n/', '@', $frases[5]['blog']));
@@ -152,7 +137,7 @@ include "../../global/conexion.php";
     </div>
 
 
-    <form action="../contenido/public_blog.php" name="formblog" method="post">
+    <form action="../contenido/public_blog.php" name="formblog" method="get">
 
         <input type="hidden" name="blog" id="blog">
         <input type="hidden" name="emocion" id="emocion">
