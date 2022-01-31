@@ -105,7 +105,7 @@ if ($idempaque != null || $idempaque != "") {
                 <!-- Precio -->
                 <!-- Precio -->
             <div class="elemento2cw">
-                <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_compra']) ?></p>
+                <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_venta']) ?></p>
             </div>
 
                 <!--  Seleccionador de Tallas -->

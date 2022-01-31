@@ -53,12 +53,6 @@
                     <?php
 
                     $carrusel = explode(',', $producto[0]['carrusel']);
-
-
-
-
-
-
                     for ($i = 0; $i < count($carrusel); $i++) {
 
                     ?>
