@@ -112,7 +112,7 @@
                                 <input type="text" value="<?php echo $direcciones[0]['direccion']?>" class="newprofile" name="direccion">
                         </div>
                         <div class="modal-footer">
-                        <div class="mr-3" ><button type="button" style="align-items: center;position: relative;" onclick="document.name.submit()" class="btn btn-saleoff">CAMBIAR</button></div>
+                        <div class="mr-3" ><button type="button" style="align-items: center;position: relative;" onclick="submitAddress()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -134,7 +134,7 @@
                                 <input type="text" value="<?php echo $direcciones[0]['telefono']?>" class="newprofile" name="telefono">
                         </div>
                         <div class="modal-footer">
-                        <div class="mr-3"><button type="button" onclick="entre()" class="btn btn-saleoff">CAMBIAR</button></div>
+                        <div class="mr-3"><button type="button" onclick="submitPhoneNumber()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -269,9 +269,14 @@
 
 <script>
 
-    function entre() {
+    function submitPhoneNumber() {
         document.telefono.submit()
     }
+
+    function submitAddress() {
+        document.name.submit()
+    }
+
     function handleChangeEnvio(){
         var x = document.getElementById("cbox2");
         x.checked = false;

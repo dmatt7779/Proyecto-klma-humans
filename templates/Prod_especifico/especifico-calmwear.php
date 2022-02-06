@@ -48,13 +48,13 @@ if ($idempaque != null || $idempaque != "") {
 
     </div>
 
-    <form action="newcar.php" name="carrito" method="post">
-        <input type="hidden" name="talla" id="talla" value="S">
+    <form action="newcar3.php" name="carrito" method="post">
+        <input type="hidden" name="talla" id="talla" value="">
         <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
     </form>
 
-    <form action="newcar.php" name="empaque" method="post">
-        <input type="hidden" name="talla" value="S">
+    <form action="newcar3.php" name="empaque" method="post">
+        <input type="hidden" name="talla" value="">
         <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
     </form>
 
@@ -105,7 +105,7 @@ if ($idempaque != null || $idempaque != "") {
                 <!-- Precio -->
                 <!-- Precio -->
             <div class="elemento2cw">
-                <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_compra']) ?></p>
+                <p class="font-price-cw">$<?php echo number_format($producto[0]['precio_venta']) ?></p>
             </div>
 
                 <!--  Seleccionador de Tallas -->
