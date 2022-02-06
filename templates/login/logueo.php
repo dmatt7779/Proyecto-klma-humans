@@ -9,10 +9,14 @@
     $usuario = $_SESSION['correo'];
 
     if ($email == '') {
-        header("location:../login/login.php");
+        header("location:login.php");
+    }else if($password == ''){
+        header("location:login.php");
+    }else if ($email !== $registro['correo']) {
+        echo '<script language="javascript">alert("Email o contraseña incorrectos"); window.location.href = "login.php";</script>';
+        //header("location:login.php");
     }
-
-    ?>
+?>
 <?php
 
     $sentencia = $pdo->prepare("SELECT * FROM usuarios where correo= :email");
@@ -37,11 +41,11 @@
                     header("location:../interfaz_admin/adminintro.php");
                     break;
                 default:
-                    # code...
+                    echo '<script language="javascript">alert("Email sin ROL");</script>';
                     break;
             }
         }else {
-            header("location:../login/login.php");
+            header("location:login.php");
         }
     }
 ?>

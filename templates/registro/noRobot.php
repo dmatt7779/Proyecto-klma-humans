@@ -14,8 +14,6 @@ if($_POST['google-response-token']){
     $response = json_decode($response);
 
     $response = (array) $response;
-    /* print_r($response);
-    exit; */
 
     if($response['success'] && ($response['score'] && $response['score'] > 0.5)){
         $usuario = $_POST['nickname']; 
@@ -29,8 +27,6 @@ if($_POST['google-response-token']){
         $sentencia1 -> execute();
         $alreadyExist = $sentencia1->fetchAll(PDO::FETCH_ASSOC);
 
-            // print_r(count($alreadyExist));
-
         $hash = password_hash($contrasena, PASSWORD_DEFAULT, $opciones);
 
         if(!(count($alreadyExist) != 0)) {
@@ -39,16 +35,24 @@ if($_POST['google-response-token']){
             $sentencia = $pdo->prepare( $sql );
             $sentencia -> execute();
             $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+            ?>
+                <script>
+                    var r = alert("Hemos registrado el email.");
+                    window.location.href = "registro.php";
+                </script>
+            <?php
+
         }else {
             if( !$register ){
                 $_SESSION['creado'] = 1;
             }
-        ?>
-            <script>
-                var r = alert("Ya existe el email ingresado.");
-                window.location.href = "registro.php";
-            </script>
-        <?php
+            ?>
+                <script>
+                    var r = alert("Ya existe el email ingresado.");
+                    window.location.href = "registro.php";
+                </script>
+            <?php
         } 
     }else {
         echo "<div class='alert alert-warning'> Validación incorrecta :) </div>";

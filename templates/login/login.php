@@ -12,13 +12,10 @@
                     case '1':
                         header("location:../interfaz_admin/adminintro.php");
                         break;
-                                
-                        
                     default:
                         # code...
                         break;
                 }
-                
             }
 ?>
 <!DOCTYPE html>
