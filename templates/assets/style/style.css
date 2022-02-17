@@ -1,0 +1,6070 @@
+@font-face{
+    font-family:"HelveticaLt";
+    src: url("../tipografia/HelveticaLt.ttf");
+}
+
+@font-face{
+    font-family:"HelveticaLtObl";
+    src: url("../tipografia/HelveticaLtObl.ttf");
+}
+
+@font-face{
+    font-family:"HelveticaNeue";
+    src: url("../tipografia/HelveticaNeue.ttc");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Black";
+    src: url("../tipografia/MoristonPersonal-Black.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Light";
+    src: url("../tipografia/MoristonPersonal-Light.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Regular";
+    src: url("../tipografia/MoristonPersonal-Regular.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Semibold";
+    src: url("../tipografia/MoristonPersonal-Semibold.otf");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Bold";
+    src: url("../tipografia/MoristonPersonal-Bold.otf");
+}
+
+@font-face{
+    font-family:"Helvetica";
+    src: url("../tipografia/Helvetica.ttc");
+}
+
+@font-face{
+    font-family:"MoristonPersonal-Medium";
+    src: url("../tipografia/MoristonPersonal-Medium.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    list-style: none; /* Lucia agregó esta linea */
+    box-sizing: border-box; /* Lucia agregó esta linea */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainTransition: all 1s linear;
+}
+
+
+/* ----------------------------------LOGIN------------------------- */
+.contentlogin {
+    margin-top: 5%;
+}
+
+.contentlogoform {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-form{
+    background-image: url("../img/login_registro/imagen-login-klma-humans.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 190px;
+    height: 162px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.login-email{
+    background-image: url("../img/login_registro/login-form-klma-humans_01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 25px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.login-pass {
+    padding: 0px 30px;
+    background-image: url("../img/login_registro/login-form-klma-humans_02.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 25px;
+    position: absolute;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+.img-barras {
+    background-image: url("../img/login_registro/linea_principal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 10px;
+}
+
+.login-email::placeholder, .login-pass::placeholder {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    text-align: center;
+    letter-spacing: .2rem;
+    word-spacing: 0.2rem;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.logpass > input {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .2rem;
+    word-spacing: 0.2rem;
+}
+
+.logpassregister > input {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .3rem;
+}
+
+.login-form{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget-pass > a, .forget-pass > a:hover{
+    text-decoration: none;
+    font-family: "MoristonPersonal-Medium";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: .4em;
+    word-spacing: 0.25em;
+    font-size: 5pt;
+    border-bottom: 1px dotted #000000;
+}
+
+.sign-up > a, .sign-up > a:hover{
+    text-decoration: none;
+    font-family: "MoristonPersonal-Medium";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: .4em;
+    word-spacing: 0.25em;
+    font-size: 5pt;
+    border-bottom: 1px dotted #000000;
+}
+
+.recoverypwd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recoverypwd2{
+    font-family: "MoristonPersonal-Bold";
+    color: rgb(255, 255, 255);
+    letter-spacing: .2rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.recoveryPrintEmail {
+    font-family: "MoristonPersonal-Bold";
+    color: rgb(255, 255, 255);
+    letter-spacing: .2rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.recoveryPwdBtn {
+    font-family: "HelveticaNeue";
+    font-size: 6pt;
+    letter-spacing: .9rem;
+    color: white;
+    text-align: center;
+    padding: 9%;
+}
+
+.recoveryPwdBtn > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* ----------------------------------LOGIN------------------------- */
+
+/* ----------------------------------REGISTRO------------------------- */
+
+/* Logo KLMA' HUMANS centrado */
+.img-register{
+    background-image: url("../img/login_registro/simbolo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 190px;
+    height: 162px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.divshowhide{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.divshowhide > span:nth-child(1){
+    position: absolute;
+}
+
+.divshowhide > span:nth-child(3){
+    position: absolute;
+    right: 0;
+}
+
+/* Botón ver y ocultar contraseñas */
+.btn-eye, .btn-eye:hover{
+    color: #000000;
+    opacity: 60%;
+    text-decoration: none;
+}
+
+.nickname > input{
+    margin-top: 15%;
+    font-family: "MoristonPersonal-Medium";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    opacity: 90%;
+    letter-spacing: .2rem;
+    font-size: 6pt;
+    border-bottom: 1px dotted #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/*Enlace REGRESAR*/
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MoristonPersonal-Medium";
+    color: black;
+    letter-spacing: .3em;
+    font-size: 5pt;
+    margin-top: 1%;
+    border-bottom: 1px dotted #000000;
+    margin-bottom: 7%;
+}
+
+/* Hover para etiquetas <a> */
+.nick_name:hover, .btn-submit:hover{
+    color: white;
+    text-decoration: none !important;
+}
+
+.back:hover{
+    color: black;
+    text-decoration: none !important;
+}
+
+.noRobot {
+    height: 100vh;
+}
+.captchaClass{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* ----------------------------------REGISTRO------------------------- */
+
+/* ------------------------------INICIO NAVBAR------------------------------------- */
+.nav-link{
+    padding: none!important;
+}
+
+header.mainheader {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1% 1%;
+    align-items: center;
+    background-color: transparent;
+}
+
+header.mainheader .navlogo {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header.mainheader .navlogo > a > img {
+    width: 55px;
+    /* width: 125px; */
+}
+
+header.mainheader .navlogo2 {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.mainheader .navlogo2 > a > img {
+    width: 205px;
+}
+
+header.mainheader .nav {
+    grid-column: 3/3;
+}
+
+header.darkmainheader .navlogo {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header.darkmainheader .navlogo > a > img {
+    width: 55px;
+}
+
+header.darkmainheader .navlogo2 {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.darkmainheader .navlogo2 > a > img {
+    width: 205px;
+}
+
+header.darkmainheader .nav {
+    grid-column: 3/3;
+}
+
+header.darkmainheader {
+    background-color: #2D2A29;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1%;
+    align-items: center;
+}
+
+div.darkmainheader .navlogo {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.darkmainheader .navlogo > a > img {
+    width: 55px;
+}
+
+div.darkmainheader .navlogo2 {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.darkmainheader .navlogo2 > a > img {
+    width: 205px;
+}
+
+div.darkmainheader .nav {
+    grid-column: 3/3;
+}
+
+div.darkmainheader {
+    background-color: #2D2A29;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1%;
+    align-items: center;
+}
+
+.nested-nav {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-self: self-end;
+    column-gap: 1rem;
+    padding: 0% 2% 0% 54%;
+}
+
+.nested-nav > .dotsmenu {
+    grid-column: 1/2;
+}
+
+.nested-nav > .loginmenu {
+    grid-column: 2/3;
+}
+
+.nested-nav > .cartmenu {
+    grid-column: 3/3;
+}
+
+.nested-nav .cartmenu > img {
+    width: 41px;
+    height: 40px;
+}
+
+.nested-nav .loginmenu > img {
+    width: 26px;
+    height: 31px;
+}
+
+.nested-nav .dotsmenu > img {
+    width: 35px;
+    height: 8px;
+}
+
+.nested-nav .header {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+/* ------------------------------FIN NAVBAR------------------------------------- */
+
+/* ----------------------------INICIO TEST FOOTER------------------------------- */
+#testfooter {
+    width: 100%;
+    position: absolute;
+}
+
+#clientfooter {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.footercontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 1%;
+    background-color: rgb(242, 232, 220);
+}
+
+.footerleft {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerleft > img {
+    width: 33%;
+}
+
+.footerright > a {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footerright > a > img {
+    width: 20%;
+}
+/* ----------------------------FIN TEST FOOTER------------------------------- */
+
+/* ----------------------------INICIO GENERAL FOOTER------------------------------- */
+footer {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin-top: 3%;
+}
+
+#mainfooter {
+    background-color: rgb(26,24,24);
+    padding: 3%;
+}
+
+.maincontentf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2% 2% 2%;
+}
+
+.footerbg {
+    display: flex;
+    justify-content: center;
+}
+
+.footerbg > div > img {
+    width: 80%;
+}
+
+#footerbg2 {
+    background-image: url("../img/nav_foot/fondo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 280px;
+    z-index: 5;
+}
+
+.suscribe {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.newsletter > span {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 5pt;
+    color: #ffffff;
+    letter-spacing: .2rem;
+    width: 305px;
+
+}
+
+.conected > h6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    color: #ffffff;
+    letter-spacing: 1.3rem;
+}
+
+.btnnews {
+    background-color: rgb(148, 149, 148);
+    color: rgb(255, 255, 255);
+    font-family: MoristonPersonal-Medium;
+    font-size: 5pt;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    padding: 0% 0% 0% 1.3%;
+    margin: 0% 0% 0% 1.44444%;
+}
+
+#footersuscribe {
+    letter-spacing: 1rem;
+    font-size: 7pt;
+    padding: 0% 0% 0% 2.6%;
+    text-align: left;
+}
+
+.socialfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.socialfooter img {
+    width: 40px;
+}
+
+.footerhr {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1px solid;
+    color: rgb(189,213,220);
+    width: 220%;
+}
+
+.footerhr2 {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1px solid;
+    color:rgb(189,213,220);
+    width: 100%;
+}
+
+.legaltexts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0% 2%;
+    margin-top: 5%;
+}
+
+.legaltexts div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 1% 0%;
+}
+
+.legaltexts > div > a {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 5pt;
+    color: #ffffff;
+    letter-spacing: .5rem;
+}
+
+#iconSong {
+    cursor: pointer;
+}
+
+/* ----------------------------FIN GENERAL FOOTER------------------------------- */
+
+/* ----------------------------INICIO NEWSLETTER PRINCIPAL------------------------------- */
+.close-news {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.btnnewsp {
+    background-color: rgb(8, 8, 8);
+    color: rgb(255, 255, 255);
+    font-family: MoristonPersonal-Medium;
+    font-size: 5pt;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 0% 0% 0% 1.3%;
+    margin: 0% 0% 0% 1.44444%;
+}
+
+.btnnewsp:hover {
+    color: #ffffff;
+}
+
+#imagenews {
+    background-color: rgb(243, 234, 218);
+    position: relative;    
+    /* display: flex; */
+    justify-content: space-between;
+    
+}
+
+.imagenews2{
+    width: 598px;
+    height: 230px;
+    margin-bottom: -8.1%;
+}
+
+.conectednews > div > h6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    color: #000000;
+    letter-spacing: .3rem;
+}
+
+.conectednews > h6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    color: #000000;
+    letter-spacing: .7rem;
+}
+
+.newscontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 8% 4.5% 8%;
+}
+
+.suscribenews {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    padding: 0% 0% 0% 2%;
+    font-size: 7pt;
+}
+
+.suscribenews::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    text-align: center;
+    letter-spacing: 1.2rem;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+
+}
+
+.inferior {
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    
+}
+
+/* ----------------------------FIN NEWSLETTER PRINCIPAL------------------------------- */
+
+/* ---------------------------------------INICIO MENU SHOP--------------------------------------- */
+/*Distibución para el header de este menú*/
+header.header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);  
+    background-color: transparent;
+}
+
+.logo img {
+    width: 55px;
+    margin: 1%;
+    grid-column: 1/1;
+}
+
+/*Contenedor principal */
+div.main{
+    width: 100%;
+    height: 100vh;
+}
+
+.menua {
+    background-color:rgba(242, 232, 220, 0.6);
+    padding: 2% 0% 2% 7%;
+    display: grid;
+    grid-template-columns: 180px 180px 190px;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.loungewear {
+    display: flex;
+    justify-content: center;
+    grid-column: 1/2;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.calmwear {
+    display: flex;
+    justify-content: center;
+    grid-column: 2/3;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.transition {
+    display: flex;
+    justify-content: center;
+    grid-column: 3/3;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.loungewear img {
+    width: 150px;
+    box-shadow: 4px 5px 10px #000000;
+}
+
+.calmwear img {
+    width: 150px;
+    box-shadow: 4px 5px 10px #000000;
+}
+
+.transition img {
+    width: 150px;
+    box-shadow: 4px 5px 10px #000000;
+}
+
+.nav {
+    padding: 2% 0% 0% 6%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.loungewear > a, .calmwear > a, .transition > a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Helvetica";
+    font-size: 9pt;
+}
+
+.loungewear > a:nth-child(2) {
+    padding-left: 0.1rem;
+    margin-top: 5%;
+    letter-spacing: .58em;
+}
+
+.calmwear > a:nth-child(2) {
+    padding-left: 0.1rem;
+    margin-top: 5%;
+    letter-spacing: .96em;
+}
+
+.transition > a:nth-child(2) {
+    padding-left: 0.1rem;
+    margin-top: 5%;
+    letter-spacing: .7em;
+}
+
+ .tnav {
+    grid-column: 2/2;
+}
+
+ .tnav > ol > a {
+    text-decoration: none;
+    color: rgb(26,24,24);
+    font-family: "MoristonPersonal-Bold";
+    font-size: 7pt;
+    margin-right: 20%;
+    font-weight: bold;
+    letter-spacing: 2.0rem;
+    word-spacing: .5rem;
+}
+ /* ---------------------------------------FIN MENU SHOP--------------------------------------- */
+
+ /* ---------------------------------------INICIO DOTS MENU--------------------------------------- */
+#dotsmenubody {
+    overflow: hidden; 
+    background-image: url(../img/menushop/Fondo.png); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+div.mainb{
+    width: 100%;
+    height: 100vh;
+}
+
+ .menub {
+    background-color:rgba(242, 232, 220, 0.6);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 2rem;
+    align-items: center;
+    padding: 2% 0% 2% 7%;
+}
+
+.bnav {
+    grid-column: 6/8;
+}
+
+.bnav > .btnav > ol > a {
+    text-decoration: none;
+    color: rgb(26,24,24);
+    font-family: "MoristonPersonal-Bold";
+    font-size: 7pt;
+    font-weight: bold;
+    letter-spacing: .4rem;
+}
+
+.bnav > .btnav > ol {
+    text-align: right;
+}
+ /* ---------------------------------------FIN DOTS MENU--------------------------------------- */
+
+ /* ---------------------------------- INICIO HOME ------------------------------ */
+
+#hnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 10;
+    transition: height .5s ease;
+}
+
+#hnavgen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 10;
+    transition: height .5s ease;
+}
+
+.carousel-inner {
+    height: 100vh;
+}
+
+.mainheader2 {
+    transition: background-color .5s ease;
+}
+
+/* Style after scroll */
+.scrolling-active {
+    background-color: #2d2d2d!important;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+.btnGoTest {
+    display: flex;
+    justify-content: center;
+    background-color: #C1D4DF;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-family: "MoristonPersonal-Light";
+    font-size: 9pt;
+    letter-spacing: .3rem;
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    text-decoration: none;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/*FIN Scrolling  */
+
+.hmcarousel-control-prev-icon {
+    background-image: url(../img/flecha-izquierda.gif)!important;
+    width: 40px!important;
+    height: 35px!important;
+    background: no-repeat 50%/100% 100%;
+    display: inline-block;
+}
+    
+.hmcarousel-control-next-icon {
+    background-image: url(../img/flecha-derecha.gif)!important;
+    width: 40px!important;
+    height: 35px!important;
+    background: no-repeat 50%/100% 100%;
+    display: inline-block;
+}
+
+.blackTYC{
+    position: absolute;
+    top: 32% !important;
+    width: 90.2% !important;
+    height: 330px !important;
+    left: 4.8% !important;
+    background-color: #000000;
+    font-family: "MoristonPersonal-Regular" !important;
+    padding-right: 17px;
+}
+
+.useTYC{
+    background-color: #000000!important;
+    color: white!important;
+    width: 140% !important;
+    left: -22%;
+}
+
+div.useTYC > h1 {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: left;
+    margin: 4% 0%;
+}
+
+div.useTYC > h2 {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+div.useTYC > h3 {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    margin: 3% 0%;
+    text-align: left;
+}
+
+div.useTYC > h4 {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: left;
+    margin: 3% 0%;
+}
+
+div.useTYC > h5 {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: left;
+    margin: 3% 0%;
+}
+
+div.useTYC > h6 {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: left;
+    margin: 3% 0%;
+}
+
+div.useTYC >h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p {
+    font-family: "Helvetica";
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: left;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+div.useTYC > p:last-child {
+    margin: 0% 4% 3% 4%;
+}
+
+div.useTYC > ol, ul > li {
+    font-family: "Helvetica";
+    font-size: 9pt;
+    margin: 0% 4%;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+    margin: 0% 4%;
+}
+
+button > .closeColorTYC, .closeColorTYC{
+    color: #ffff!important;
+    opacity: 100%!important;
+    padding: 2% 2% 0% 0%!important;
+}
+
+.aboutstoryHome {
+    padding: 1% 20% 1% 20%;
+}
+
+.aboutstoryHome p:nth-child(1) {
+    margin-top: 2%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .5rem;
+    padding: 0% 0% 5% 2%;
+}
+
+.aboutstoryHome p {
+    margin-top: 2%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .1rem;
+}
+
+.aboutstoryHome h1 {
+    margin-top: 3%;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 12pt;
+    letter-spacing: .8rem;
+    word-spacing: 2rem;
+}
+
+.aboutstoryHome h2 {
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    letter-spacing: .41111rem;
+    word-spacing: .5rem;
+}
+ /* ---------------------------------- FIN HOME ------------------------------ */
+
+/* -----------------------------ABOUT US----------------------------- */
+.aboutstory, .aboutstoryTitle {
+    padding: 1% 30% 1% 30%
+}
+
+.aboutstory p {
+    margin-top: 2%;
+    font-family: "Helvetica";
+    font-size: 8pt;
+    letter-spacing: .1rem;
+}
+
+.aboutstoryTitle h1 {
+    margin-top: 3%;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 10pt;
+    letter-spacing: 1rem;
+    word-spacing: 3.4rem;
+    padding: 0% 0% 0% 0%;
+}
+
+.aboutstoryTitle h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 12pt;
+    letter-spacing: 3.4666rem;
+    padding: 0% 0% 0% 0%;
+}
+
+.aboutbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 0% 0% .5%;
+}
+
+.scdabout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.aboutlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines > div:nth-child(1) {
+    width: 55%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.aboutlines > div:nth-child(1) > a {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .5799999rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines > div:nth-child(2) > a > img {
+    width: 55%;
+    margin: 0%;
+    box-shadow: 5px 6px 10px #000000;
+}
+
+.aboutlines > div:nth-child(3) {
+    flex-direction: column;
+    display: flex;
+    margin: 5% 0% 2% 0%;
+    width: 55%;
+}
+
+.aboutlines > div:nth-child(3) > a {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.17777777rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+.aboutlines > div:nth-child(3) > a:nth-child(2) {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.56666666rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+.aboutlines > div:nth-child(4) > p {
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: center;
+    padding: 0% 10%;
+}
+
+.aboutlines2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines2 > div:nth-child(1) {
+    width: 55%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.aboutlines2 > div:nth-child(1) > a {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .88888888888rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines2 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines2 > div:nth-child(2) > a > img {
+    width: 55%;
+    margin: 0%;
+    box-shadow: 5px 6px 10px #000000;
+}
+
+.aboutlines2 > div:nth-child(3) {
+    flex-direction: column;
+    display: flex;
+    margin: 5% 0% 2% 0%;
+    width: 55%;
+}
+
+.aboutlines2 > div:nth-child(3) > a {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 2.8555555rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+.aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.57999999rem;
+    text-decoration: none;
+}
+
+.aboutlines2 > div:nth-child(4) > p {
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: center;
+    padding: 0% 9%;
+}
+
+.aboutlines3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines3 > div:nth-child(1) {
+    width: 55%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.aboutlines3 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutlines3 > div:nth-child(1) > a {
+    margin-top: 3%;
+    font-family: "Helvetica";
+    font-size: 9pt;
+    letter-spacing: .666666666rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines3 > div:nth-child(2) > a > img {
+    width: 55%;
+    margin: 0%;
+    box-shadow: 5px 6px 10px #000000;
+}
+
+.aboutlines3 > div:nth-child(3) {
+    flex-direction: column;
+    display: flex;
+    margin: 5% 0% 2% 0%;
+    width: 55%;
+}
+
+.aboutlines3 > div:nth-child(3) > a {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: .7777777rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 1.5777777rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.aboutlines3 > div:nth-child(4) > p {
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: center;
+}
+
+
+/* -----------------------------ABOUT US----------------------------- */
+
+/* -----------------------------INICIO Contact Form----------------------------- */
+.contactcontainer {
+    background: rgb(26,24,24);
+    padding: 2% 10% 2% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contacttitle > h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 8pt;
+    letter-spacing: 1.6rem;
+    color: #ffffff;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+}
+
+.contactform input::placeholder, .contactform textarea::placeholder {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 6pt;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.contactform > input {
+    font-family: "MoristonPersonal-Medium";
+    letter-spacing: .5rem;
+    font-size: 8pt;
+    text-align: left;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    padding: 0% 4% 0% 2.5%;
+}
+
+.contactform textarea {
+    font-size: 10pt;
+    height: 150px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    letter-spacing: .5rem;
+    padding: 4% 4% 0% 3%;
+}
+
+.contactform input:nth-child(1)::placeholder {
+    letter-spacing: 2.522222rem;
+    padding-top: 4%;
+    text-align: left;
+}
+
+.contactform input:nth-child(2)::placeholder {
+    letter-spacing: .5rem;
+    word-spacing: .5rem;
+    padding-top: 4%;
+    text-align: left;
+}
+
+.contactform textarea:nth-child(3)::placeholder {
+    text-align: left;
+    letter-spacing: 2.088888rem;
+}
+
+.contactform > .btnformcontact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btnformcontact > button {
+    padding: 0% 3% 0% 5%;
+}
+
+/* -----------------------------FIN Contact Form----------------------------- */
+
+/* INICIO CONFIGURACIÓN LOUNGEWEAR GENERAL */
+
+/*Tamaño de rejillas*/
+.gridvertical {
+    margin-top: 8%;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gridhorizontal {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.griddoblevertical {
+    display: grid;
+    grid-template-columns: repeat(2, 510px);
+    grid-column-gap: 80px;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*Tamaño de imagenes en las rejillas*/
+
+.gridvertical img {
+    width: 503px;
+    height: 600px;
+}
+
+.gridhorizontal img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1%;
+}
+
+.griddoblevertical img {
+    width: 508px;
+    height: 605px;
+    grid-column: 1/2;
+}
+
+/*Contenedor para Imagenes Productos LoungeWear*/
+.carousel-product {
+    position: relative;
+    height: 460px;
+    width: 620px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-left: 0%;
+}
+
+/*Contenedor descripción de los Productos*/
+
+.body-card {
+    flex: 1 1 auto;
+    min-height: 1px;
+    max-width: 695px;
+    margin-top: 10px;
+}
+
+.card {
+    margin-left: 427px;
+    margin-right: 427px;
+    border: none;
+    
+}
+
+/* Titulos LOUNGEWEAR*/
+.card-title, .card-title:hover {
+    text-decoration: none;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7.8pt;
+    text-align: right;
+    letter-spacing: .2rem;
+    margin-bottom: 0rem;
+}
+
+/*Configuracion Descripciones Loungewear*/
+.card-text {
+    min-height: .5rem;
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: left;
+    letter-spacing: .15rem;
+    margin-top: -.8rem;
+    margin-bottom: 0rem;
+}
+
+/*Descripcion para producto especifico*/
+.desc-prod-espec{
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: justify;
+    letter-spacing: .499rem;
+    margin-left: 10%;
+}
+
+/*Configuración FUENTE PRECIO*/
+.price, .price:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -1%;
+    text-decoration: none;
+}
+
+.price-horizontal, .price-horizontal:hover{
+    color: #000000;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .75rem;
+    text-align: right;
+    margin: -8px;
+}
+
+/* Titulo Seleccionar Talla */
+
+.choicesize{
+    font-family: "Helvetica";
+    font-weight: lighter;
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .499rem;
+}
+/* FIN CONFIGURACIÓN LOUNGEWEAR GENERAL */
+
+/* ------------------------------INICIO ESPECIFICO LOUNGEWEAR------------------------ */
+/*Fuentes Especifico LW*/
+.font-lw-1{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    text-align: justify;
+}
+
+.font-tallas-lw, .font-tallas-lw:hover{
+    color: rgb(26,24,24);
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 14pt;
+    max-width: 615px;
+}
+
+.contenedor-tallas-lw, .contenedor-tallas-lw:hover{
+    color: rgb(26,24,24);
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 12pt;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-left: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-tallas-lw > div:first-child{
+    text-align: left!important;
+}
+
+.contenedor-tallas-lw >  div:last-child{
+    text-align: right!important;
+}
+
+.font-price-lw { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 15pt;
+    letter-spacing: 3.8rem;
+}
+
+.font-tallas-lw2 { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 13pt;
+    letter-spacing: .5rem;
+    margin-bottom: -1.5rem;
+}
+
+
+/*Grid para producto especifico Loungewear*/
+.grid-lw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* .grid-lw div {
+    border: 1px solid #000000;
+    margin: 0rem;
+} */
+
+
+.nested-grid-lw {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(10px, auto);
+}
+
+.elemento1 {
+    grid-column: 1/3;
+}
+
+.elemento2 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+}
+
+.elemento3 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.elemento4 {
+    /* grid-column: 3/4; */
+    align-self: center;
+    text-align: center;
+}
+
+/*Botones Negros + Hover neutral*/
+.btn-submit, .btn-submit:hover{
+    display: flex;
+    justify-content: center;
+    background-color: #2D2A29;
+    color: rgb(255, 255, 255);
+    border-radius: 8px !important;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 8pt !important;
+    letter-spacing: .2rem;
+    box-shadow: 5px 3px 8px rgb(0, 0, 0);
+    text-decoration: none;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/*Div para los botones de las opciones Ver producto, Empaque Especial, Ver Detalles*/
+.btn-opciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
+/*Detalles del producto*/
+.btn-details-prod, .btn-details-prod:focus {
+    color: rgb(26,24,24);
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .3rem;
+    z-index: 100;
+    outline: none !important;
+}
+
+/*Detalles del producto*/
+.btn-verproduct, .btn-verproduct:focus {
+    color: rgb(26,24,24);
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .3rem;
+    z-index: 100;
+    outline: none !important;
+}
+
+/*Empaque Especial*/
+.btn-empaque, .btn-empaque:focus {
+    color: rgb(26,24,24);
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1rem;
+    z-index: 100;
+    margin: 0% 10% 0% 10%;
+    padding: 0% 2% 1% 5%;
+    width: 80%;
+    border: none;
+    outline: none !important;
+}
+
+.btn-empaque > .empaque {
+    letter-spacing: 1.1333rem;
+}
+
+.btn-empaque > .especial {
+    letter-spacing: .9999rem;
+}
+
+
+/* ----------------------------------INPUT PERSONALIZADO---------------------------------------------------- */
+
+/* Centra el input personalizado con el texto */
+.custom-radio-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* Modificador para dar la imagen de radio */
+.custom-radio-checkbox__show--radio {
+    background-image: url(../img/esp_lg/uncheck.png);
+}
+
+/* Oculta input original */
+.custom-radio-checkbox > .custom-radio-checkbox__input {
+    display: none;
+}
+
+/* Radio personalizado usando <span> */
+.custom-radio-checkbox > .custom-radio-checkbox__show {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+}
+
+/* Cambia el radio personalizado cuando es pulsado */
+.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
+    background-image: url(../img/esp_lg/check.png);
+}
+
+/* Centra el input TYC personalizado con el texto */
+.custom-radio-tyc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5rem 0% -2% 0%;
+}
+
+/* Modificador para dar la imagen de radio */
+.custom-radio-tyc__show--checkbox {
+    background-image: url(../img/nav_foot/tyc01.png);
+}
+
+/* Oculta input original */
+.custom-radio-tyc > .custom-radio-tyc__input {
+    display: none;
+}
+
+/* Radio personalizado usando <span> */
+.custom-radio-tyc > .custom-radio-tyc__show {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+/* Cambia el radio personalizado cuando es pulsado */
+.custom-radio-tyc > .custom-radio-tyc__input:checked + .custom-radio-tyc__show--checkbox {
+    background-image: url(../img/nav_foot/tyc02.png);
+}
+
+/* ----------------------------------FIN INPUT PERSONALIZADO---------------------------------------------------- */
+
+.btn-size, .btn-size:focus {
+    color: rgb(26,24,24);
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1.11111rem;
+    z-index: 100;
+    margin: 0% 0% 6% 7%;
+    outline: none !important;
+}
+
+/* Cambio de color en la funcion de JQuery */
+.btn-empaque2, .btn-empaque2:focus {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1rem;
+    width: 80%;
+    margin: 0% 5% 0% 5%;
+    z-index: 100;
+    padding: 0% 2% 1% 5%;
+    border: none;
+    outline: none !important;
+}
+
+.btn-empaque2 > .empaque {
+    letter-spacing: 1.1333333333rem;
+}
+
+.btn-empaque2 > .especial {
+    letter-spacing: .9999999rem;
+}
+
+.btn-details-prod2, .btn-details-prod2 {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .3rem;
+    z-index: 100;
+    outline: none !important;
+}
+
+.btn-size2, .btn-size2:focus{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1.11111rem;
+    z-index: 100;
+    margin: 0% 0% 6% 7%;
+    position: relative;
+    outline: none !important;
+}
+
+/*Selector circular de talla*/
+.talla-active{
+    border: 3px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.contentdetails {
+    width: 32%;
+    height: 550%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    text-align: justify;
+    font-size: 7pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 0px;
+    padding: 2%;
+}
+
+/*Contenedor descripcion detalles producto especifico*/
+.contentprod {
+    width:  83%;
+    height: 500px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8pt;
+    position: absolute;
+    bottom: 25px;
+}
+
+/* Contenedor para el boton de empaque especial */
+.contentbag {
+    width: 85%;
+    height: 550%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    text-align: justify;
+    position: absolute;
+    margin-left: -11%;
+    bottom: 0px;
+}
+
+/* Contenedor para el boton de las tallas */
+.contentsize {
+    width: 140%;
+    height: 553px;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 10px 5px 20px rgb(0 0 0);
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+}
+
+.btn-sizes2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor de botones para opciones*/
+.divopciones {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    bottom: 80px;
+}
+
+/* Botones de Ver Detalles, Empaque Especial, Tallas */
+.btn-opciones:nth-child(1){
+    flex: 3;
+    margin-left: 5.1111111%;
+    align-items: flex-end;
+}
+
+.btn-opciones:nth-child(2){
+    flex: 1;
+    margin: 0% 3.555555% 0% 0%;
+    align-items: flex-end;
+}
+
+.btn-opciones:nth-child(3){
+    flex: 0;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.btn-opciones:nth-child(3) > label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-opciones:nth-child(4){
+    flex: 2;
+    margin-left: 5.999999%;
+    letter-spacing: .3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Referencia */
+.refercl:nth-child(1) {
+    letter-spacing: 2.75rem;
+}
+
+.refercl:nth-child(2) {
+    letter-spacing: 0.433rem;
+}
+.refercl {
+    letter-spacing: 0.78888rem;
+}
+.refercl:nth-child(3) {
+    letter-spacing: 2.69rem;
+}
+.refercl:nth-child(4) {
+    letter-spacing: 1.48888888rem;
+}
+
+.referlw:nth-child(1) {
+    letter-spacing: 2.75rem;
+}
+
+.referlw:nth-child(2) {
+    letter-spacing: 0.433rem;
+}
+.referlw {
+    letter-spacing: 0.78888rem;
+}
+.referlw:nth-child(3) {
+    letter-spacing: 1.12rem;;
+}
+.referlw:nth-child(4) {
+    letter-spacing: 1.48888888rem;
+}
+
+/* Texto del contenedor Ver Detalles */
+.refer-details:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+.refer-details:nth-child(2) {
+    margin-bottom: 2rem;
+}
+
+.refer-details:nth-child(3) {
+    margin-bottom: 2rem;
+}
+
+/* Texto del contenedor Empaque Especial */
+.refer-specialbag:nth-child(2) {
+    padding: 2% 0% 0% 0%;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 9pt;
+    letter-spacing: 0.5rem;
+    text-align: center;
+}
+
+.refer-specialbag:nth-child(3) {
+    padding: 2%;
+    font-size: 7pt;
+    letter-spacing: 0.344444rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.refer-specialbag:nth-child(4) {
+    padding: 2%;
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: 1.333333rem;
+    text-align: center;
+}
+
+.modalbody{padding: .1rem;}
+
+.modalcontent{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem!important;
+    outline: 0;
+}
+
+/* Controles para adelantar y devolver el modal de las fotos */
+.control-prev-icon {
+    background-image: url(../img/flecha-izquierda.gif)!important;
+    width: 30px!important;
+    height: 30px!important;
+    background: no-repeat 50%/100% 100%;
+    display: inline-block;
+}
+
+.control-next-icon {
+    background-image: url(../img/flecha-derecha.gif)!important;
+    width: 30px!important;
+    height: 30px!important;
+    background: no-repeat 50%/100% 100%;
+    display: inline-block;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: 3.5;
+    transition: opacity .15s ease;
+}
+/* ------------------------------FIN LOUNGEWEAR ------------------------  */
+
+/* --------------------------INCIO Generales CALMWEAR-------------------------- */
+.gridclmw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin: 8%;
+}
+
+.cover {
+    height: 411px;
+    width: 535px;
+    color: #ffffff;
+    background-position: center;
+    margin-bottom: 1.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-clmw {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+}
+
+.card-title, .card-title:hover {
+    text-decoration: none;
+    color: rgb(26,24,24);
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7.8pt;
+    text-align: right;
+    letter-spacing: .2rem;
+    line-height: 2.5rem;
+}
+
+.text-clmw {
+    min-height: .5rem;
+    font-family: "Helvetica";
+    font-size: 8pt;
+    text-align: left;
+    letter-spacing: .15rem;
+}
+
+.price, .price:hover{
+    color: rgb(26,24,24);
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 11pt;
+    letter-spacing: .5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -1%;
+    text-decoration: none;
+}
+/* --------------------------FIN Generales CALMWEAR-------------------------- */
+
+/* ---------------------------- INICIO Especifico CALMWEAR -------------------------- */
+
+.font-price-cw { 
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 14pt;
+    letter-spacing: 3.6333333rem;
+}
+
+/*Grid para producto especifico Calmwear*/
+.grid-cw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* .grid-cw div {
+    border: 1px solid #000000;
+    margin: 0rem;
+} */
+
+
+.nested-grid-cw {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(10px, auto);
+}
+
+.elemento1cw {
+    grid-column: 1/2;
+}
+
+.elemento1-5cw {
+    grid-column: 3/3;
+}
+
+.elemento2cw {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+}
+
+.elemento3cw {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.elemento4 {
+    align-self: center;
+    text-align: center;
+}
+
+.materials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.materials > div > img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    color: #ffffff;
+    background-position: center;
+    margin: 2% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*Div para los botones de las opciones Ver producto, Empaque Especial, Ver Detalles*/
+.btn-opcionescw {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
+/*Tallas*/
+.btn-change {
+    color: #ffffff;
+    border: none;
+    background: rgb(26,24,24);
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: .7rem;
+    z-index: 100;
+    margin-bottom: 3%;
+    outline: none !important;
+}
+
+.btn-size, .btn-size:focus {
+    color: rgb(26,24,24);
+    border: none;
+    background: #ffffff;
+    text-decoration: none;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: 1.11111rem;
+    z-index: 100;
+    margin: 0% 0% 6% 7%;
+    outline: none !important;
+}
+
+.contentdetailscw {
+    width: 45%;
+    height: 758%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    text-align: justify;
+    font-size: 7pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 0px;
+    padding: 2%;
+}
+
+/* Contenedor para el boton de empaque especial */
+.contentbagcw {
+    width: 100%;
+    height: 720%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    text-align: justify;
+    position: absolute;
+    bottom: 0px;
+}
+
+/*Contenedor de botones para opciones CALMWEAR*/
+.divopcionescw {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    bottom: 55px;
+}
+
+/* Botones de Ver Detalles, Empaque Especial, Tallas */
+.btn-opcionescw:nth-child(1){
+    flex: 2;
+    margin-left: 5%;
+    align-items: flex-end;
+}
+
+.btn-opcionescw:nth-child(2){
+    flex: 2;
+    margin: 0% 2% 0% 2%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btn-opcionescw:nth-child(3){
+    flex: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0% 0% 0% 2%;
+}
+
+.btn-opcionescw:nth-child(3) > label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-opcionescw:nth-child(4){
+    flex: 2;
+    letter-spacing: .3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Referencia */
+.materialstitle:nth-child(1) {
+    letter-spacing: 0.7rem;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 9pt;
+    padding-left: 2%;
+}
+/* ---------------------------- FIN Especifico CALMWEAR -------------------------- */
+
+/* ---------- Colores de iconos adminperson, adminproduct, adminclassics--------- */
+.fa-trash-alt:before {
+    content: "\f2ed";
+    color: #fff;
+}
+
+.fa-check:before {
+    content: "\f00c";
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------INICIO General Transition--------------------------- */
+/* SCROLL BAR Personalizado */
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2d2a29;
+    border-radius: 6px;
+}
+
+.gridtl::-webkit-scrollbar {
+    width: 0.5px;
+}
+/* Thumb para barra de desplazamiento */
+/* .gridtl::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 8px;
+} */
+
+
+
+
+
+
+
+/* GRID para imagenes de figuras geometricas */
+.gridtl {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 235px);
+    column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex:2;
+    overflow:auto;
+}
+
+.gridtl > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+/* GRID para imagenes de camisetas */
+.gridtlin {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 167px);
+    column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 2;
+    overflow: auto;
+    margin-bottom: -10%;
+}
+
+.gridtlin > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridtlin2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 227px);
+    column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 2;
+    overflow: auto;
+    margin-bottom: -10%;
+}
+
+.gridtlin2 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ubicación y configuración tamaño de las figuras geometricas */
+.packet img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 59%;
+}
+
+/* Ubicación y configuración tamaño de las imagenes */
+.tshirt img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Contenedor general de plantilla transition */
+.containertl {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6% 6% 0% 6%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+/* Contenedor de sentimientos */
+.containerfeel2 {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: end;
+    margin: 0% -4%;
+}
+
+.rotate {
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+    -ms-transform: rotate(-90deg); 
+    -o-transform: rotate(-90deg); 
+    transform: rotate(-90deg); 
+    
+    -webkit-transform-origin: 50% 50%; 
+    -moz-transform-origin: 50% 50%; 
+    -ms-transform-origin: 50% 50%; 
+    -o-transform-origin: 50% 50%; 
+    transform-origin: 50% 50%; 
+    
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .5rem;
+    color: #000000;
+    width: 250px;
+}
+
+.rotate>span:hover{
+    color: #c89c91;
+    cursor: pointer;
+    
+}
+/* ------------------------------FIN General TRANSITION ------------------------ */
+
+/* ---------------------------INICIO Especifico TRANSITION ------------------------ */
+.carousel-innertr{
+    position: relative;
+    width: 100%;
+    height: auto !important; 
+    overflow: hidden;
+}
+
+.elemento1-5tr > p:nth-child(1) {
+    letter-spacing: 1.5rem;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 7pt;
+    padding-left: 4%;
+    text-align: center;
+}
+
+/*Grid para producto especifico Loungewear*/
+.grid-lw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* .grid-lw div {
+    border: 1px solid #000000;
+    margin: 0rem;
+} */
+
+.typeselector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#femenino {
+    cursor: pointer;
+}
+
+#masculino {
+    cursor: pointer;
+}
+
+#m-sisa {
+    cursor: pointer;
+}
+
+#m-ranglan {
+    cursor: pointer;
+}
+
+.selectdotted {
+    border-bottom: dotted;
+}
+
+.typeselector > div > img {
+    height: 75px;
+    width: 75px;
+    color: #ffffff;
+    background-position: center;
+    margin: 2% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nested-grid-lw {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(10px, auto);
+}
+
+.elemento1 {
+    grid-column: 1/2;
+}
+
+.elemento1-5tr {
+    grid-column: 3/3;
+}
+
+.elemento2 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+}
+
+.elemento3 {
+    grid-column: 1/4;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.elemento4 {
+    /* grid-column: 3/4; */
+    align-self: center;
+    text-align: center;
+}
+
+.contentdetailstr {
+    width: 47%;
+    height: 550%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: normal;
+    text-align: justify;
+    font-size: 7pt;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 0px;
+    padding: 2%;
+}
+
+/* Contenedor para el boton de empaque especial */
+.contentbagtr {
+    width: 85%;
+    height: 550%;
+    color: #ffffff;
+    background-color: rgb(26,24,24);
+    box-shadow: 5px 10px 8px rgb(0, 0, 0);
+    font-family: "Helvetica";
+    text-align: justify;
+    position: absolute;
+    margin-left: 14%;
+    bottom: 0px;
+}
+
+/*Div para los botones de las opciones Ver producto, Empaque Especial, Ver Detalles*/
+.btn-opcionestr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
+/*Contenedor de botones para opciones*/
+.divopcionestr {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    bottom: 77px;
+}
+
+/* Botones de Ver Detalles, Empaque Especial, Tallas */
+.btn-opcionestr:nth-child(1){
+    flex: 2;
+    margin-left: 5%;
+    align-items: flex-end;
+}
+
+.btn-opcionestr:nth-child(2){
+    flex: 2;
+    margin: 0% 2% 0% 0%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btn-opcionestr:nth-child(3){
+    flex: 0;
+    align-items: flex-end;
+    justify-content: end;
+    margin: 0% 8% 0% 0%;
+}
+
+.btn-opcionestr:nth-child(3) > label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-opcionestr:nth-child(4){
+    flex: 2;
+    letter-spacing: .3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Referencia */
+.refertr:nth-child(1) {
+    letter-spacing: 0.5rem;
+}
+
+.refertr:nth-child(2) {
+    letter-spacing: 1.066666rem;
+
+}
+.refertr:nth-child(3) {
+    letter-spacing: 1rem;
+}
+.refertr:nth-child(4) {
+    letter-spacing: 1.8777777rem;
+}
+/* -------------------------------FIN Especifico TRANSITION-------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------Estados Pedidos---------------------------------------------------- */
+.stateTransactionImg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.stateTransactionImg > img {
+    width: 17%;
+    margin-bottom: 0%;
+}
+.beigeLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 1%;
+    background-color: rgb(242, 232, 220);
+    height: 65px;
+}
+.stateTransaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2% 2% 2%;
+}
+.titleTransaction > h1 {
+    color: #969797;
+    letter-spacing: 4.5rem;
+    font-size: 9pt;
+    font-family: "MoristonPersonal-Regular";
+    padding-left: 5.5%;
+}
+.titleTransactionError > h1 {
+    color: #969797;
+    letter-spacing: 8.5rem;
+    font-size: 9pt;
+    font-family: "MoristonPersonal-Regular";
+    padding-left: 9.5%;
+}
+.owner > h2{
+    color: white;
+    letter-spacing: .2rem;
+    font-size: 8pt;
+    font-family: "HelveticaNeue";
+    margin: 35% 0% 0% 0%;
+}
+.textStateTransaction {
+    color: white;
+    letter-spacing: .15rem;
+    font-size: 8pt;
+    font-family: "HelveticaNeue";
+    margin: 1.5% 25% 1% 25%;
+    text-align: center;
+}
+.thanksCustom{
+    color: white;
+    letter-spacing: .3rem;
+    word-spacing: .3rem;
+    font-size: 7pt;
+    font-family: "MoristonPersonal-bold";
+}
+.backStateTrans {
+    display: flex;
+    background-color: #C1D4DF;
+    border-radius: 5px;
+    box-shadow: 5px 3px 8px rgb(0 0 0);
+    text-decoration: none;
+    width: 150px;
+    flex-direction: column;
+    margin: 3% 0% 2% 0%;
+}
+.btnBack  {
+    font-family: "HelveticaNeue";
+    font-size: 6pt;
+    letter-spacing: .9rem;
+    color: white;
+    text-align: center;
+    padding: 9% 9% 9% 15.5%;
+}
+
+.btnBack > a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerhr3 {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1px solid;
+    color: rgb(189,213,220);
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* -------------------------------INICIO Carro de compras------------------------------- */
+#pagos1 {
+    overflow: auto;
+}
+
+ .cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 15%;
+}
+
+ .cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 100000;
+    visibility: hidden;
+}
+
+  .cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 100001;
+    background: rgb(231, 226, 221);
+    color: #000000;
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    overflow-x: hidden!important;
+/*     transform: translateX(100%); */
+  }
+  .showCart {
+    transform: translateX(0);
+  }
+  .transparentBcg {
+    visibility: visible;
+  }
+
+  @media screen and (min-width: 768px) {
+    .cart {
+      width: 30vw;
+      min-width: 410px;
+    }
+  }
+
+  .close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 0% 0% 4% 0%;
+  }
+  .cart h1 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: center;
+    font-size: 8pt;
+    letter-spacing: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+  }
+  /*---------- Cart Item -------------------- */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5% 0% 5% 0%;
+  }
+
+  .cart-item img {
+    width: 95px;
+    height: 105px;
+    margin-left: 5%;
+  }
+
+  .cart-item h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: end;
+    font-size: 9pt;
+    letter-spacing: .2rem;
+  }
+
+  .cart-item h3 {
+    margin: 0.5rem 0 0 0;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .5rem;
+    text-align: end;
+    padding: 0% 0% 0% 0%;
+  }
+
+  .cart-size {
+    color: grey;
+    font-size: 6.5pt;
+    font-family: "Helvetica";
+    text-align: end;
+    letter-spacing: .2rem;
+    margin: 0.5rem 0;
+  }
+
+  .data-item {
+    text-align: end;
+  }
+
+  .item-amount {
+    text-align: start;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+  }
+
+  .remove-item {
+    color: grey;
+    cursor: pointer;
+  }
+
+  .plus-minus {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .plus-minus span {
+    font-size: 15pt;
+    cursor: pointer;
+  }
+
+/*---------- End of Cart Item -------------------- */
+.cart-footer {
+    margin: 5% -2% 5% 0%;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-footer h2 {
+    font-family: ""Helvetica"";
+    font-weight: bold;
+    letter-spacing: .7rem;
+    font-size: 7pt;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.cart-footer h3 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    letter-spacing: .7rem;
+    font-size: 9pt;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.cart-footer span {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    letter-spacing: .7rem;
+    font-size: 11pt;
+    margin-bottom: 5%;
+    text-align: right;
+}
+
+.cart-footer p{
+    font-family: "Helvetica";
+    font-size: 6.5pt;
+    letter-spacing: .424444rem;
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+.cart-footer p:nth-child(3) {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    letter-spacing: .5rem;
+    font-size: 5pt;
+    text-align: center;
+    margin-top: 40%;
+}
+
+.cart-footer button {
+    margin-top: 5%;
+}
+
+.finalshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.finalshop > button {
+    padding: 1%;
+    letter-spacing: 0.3rem;
+    word-spacing: .5rem;
+}
+/* --------------- End of Cart ---------------- */ 
+
+ /* ----------------------------------INICIO CONFIGURACION PASARELA DE PAGOS---------------------------------- */
+.pay-form {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 232, 220);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+    overflow: auto;
+    position: relative;
+}
+.modal-backdrop {
+    z-index: -1040!important;
+}
+
+.pay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(206, 199, 199);
+    padding: 2% 5% 0% 3%;
+    overflow: auto;
+}
+
+.btn-Wompi, .btn-Wompi:hover {
+    background-color: #2D2A29;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    letter-spacing: .5rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .pay {
+      width: 30vw;
+      min-width: 530px;
+    }
+  }
+ 
+hr {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 1.5px solid;
+    color: rgba(0,0,0);
+    width: 99.5%;
+}
+
+.saleoff::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    text-align: center;
+    letter-spacing: 1em;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoff > form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 0% 2% 0%;
+}
+
+/* Campo del codigo descuento */
+.saleoff input {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 287px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    padding: 0% 0% 1% 0%;
+}
+
+.btn-saleoff, .btn-saleoff:hover {
+    background-color: #2D2A29;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 8pt;
+    letter-spacing: .7rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    margin: 0% 0% 0% 11%;
+    padding: 0% 0% 0% 11%;
+}
+
+.btn-shipping, .btn-shipping:hover {
+    background-color: rgb(23, 23, 23);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 55px;
+    width: auto;
+}
+
+.saleoffcode {
+    display: flex;
+    flex-direction: column;
+}
+
+.saleoffcode::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoffcode input, .saleoffcode textarea  {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.saleoffcode2 input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.saleoffcode2::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoffcode2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.saleoffcode3 input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.saleoffcode3::placeholder{
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    word-spacing: 0.25em;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.saleoffcode3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkboxform {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkboxform input:checked{
+    background-color: #eee;
+  }
+
+.checkboxform input{
+    margin-right: 1%;
+}
+
+.payinfo {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .5rem;
+    word-spacing: .2rem;
+}
+
+.containersale {
+    width: 50%;
+    padding-right: 0%;
+    padding-left: 5%;
+    margin: 5% 0% 0% 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.datapay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.datapay > a {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.steps {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 5pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.steps > i {
+    font-size: 12pt;
+}
+
+.datapay > i > a {
+    font-family: "Helvetica";
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.datapay > i {
+    display: flex;
+    align-items: center;
+}
+
+/* PASARELA PAGOS 2 */
+
+.containersale2 {
+    width: 50%;
+    padding: 2% 3% 0% 5%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(242, 232, 220);
+}
+
+.datachance {
+    background: white;
+    border: 1px solid;
+    border-radius: 8px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 0% 0% 0% 2%;
+
+}
+
+.datachance > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minichance {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .2rem;
+}
+
+.minichance:nth-child(1) {
+    padding: 2% 2% 2% 0%;
+}
+
+.minichance:nth-child(3) {
+    margin: 0% 0% 3% 0%;
+    padding: 2% 2% 2% 0%;
+}
+
+.minichance > label {
+    margin: 0%!important;
+}
+
+.btnminichance{
+    color: rgb(122, 122, 122);
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    border: none;
+    background-color: transparent;
+}
+
+.minichance > span:nth-child(2){
+    font-family: "Helvetica";
+    font-size: 6pt;
+    letter-spacing: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: rgb(122, 122, 122);
+}
+
+.payinfo2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: 1.5rem;
+}
+
+.checkboxship {
+    font-family: "Helvetica";
+    font-size: 6pt;
+    letter-spacing: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: rgb(122, 122, 122);
+}
+
+.checkboxship2 {
+    letter-spacing: 0.6rem!important;
+    text-align: start;
+}
+ /* ----------------------------------FIN CONFIGURACION PASARELA DE PAGOS---------------------------------- */
+
+
+ /* ------------------INICIO CONFIGURACIÓN INTERFACES USUARIOS------------------ */
+ /*----------------------------Interfaz Administrador---------------------- */
+
+ div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0!important;
+    margin: 0% 0% 7% 0%!important;
+ }
+
+.introcontainer {
+    background: rgb(26,24,24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.introtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.introtext > p {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    color: #ffffff;
+}
+
+.introline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introline > h1 {
+    color: #c89c91;
+    font-family: "MoristonPersonal-Bold";
+    font-size: 20pt;
+}
+
+.introline > img {
+    height: auto;
+    width: 45%;
+}
+
+.introline > a, .introline > a:hover {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dotted #ffffff;
+}
+
+.operationsec {
+    background-image: url("../img/interfaces/fondo_2.png");
+    background-color: transparent;
+    background-size: cover;
+    height: 75vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.operationbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+}
+
+.operationbtn > button {
+    margin-top: 5rem;
+}
+
+/* Admin Personas */
+.newprofile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px dotted #000000;
+    background: transparent;
+}
+
+.newprofile::placeholder {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 6pt;
+    text-align: center;
+    letter-spacing: .2rem;
+    word-spacing: .2rem;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.newprofile label {
+    font-family: "MoristonPersonal-Bold";
+    font-size: 6pt;
+    text-align: center;
+    letter-spacing: .2rem;
+    word-spacing: .2rem;
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+}
+
+.newdata {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newdata:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introline2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introline2 > img {
+    height: auto;
+    width: 15%;
+}
+
+.btn-newprofile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+.jumbotrontable {
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: #969797;
+    /* background-color: #000000; */
+    border-radius: .3rem;
+    width: 100%;
+}
+/* ----------------------------------Interfaz Clientes---------------------------------- */
+table.dataTableclient{
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 30px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    border-spacing: 0!important;
+    text-align: center!important;
+}
+
+.table-borderedClient {
+    border: 0px solid #dee2e6!important;
+}
+
+#mydatatable_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+    justify-items: center;
+}
+
+.titleTableCLiente{
+    letter-spacing: .2rem!important;
+    font-size: 10pt!important;
+    height: 45px!important;
+}
+
+.trTableClient{
+    background-color: black!important;
+    font-size: 11pt!important;
+    height: 40px!important;
+}
+
+#mydatatable_paginate .dataTables_paginate .paging_simple_numbers{
+    display: flex!important;
+    flex-direction: row!important;
+    justify-content: center!important;
+}
+
+.pagination{
+    margin: 2px 0px 0px 7px!important;
+    white-space: nowrap!important;
+    justify-content: center!important;
+}
+
+.jumbotrontableclient{
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    /* background-color: #000000; */
+    border-radius: .3rem;
+    width: 100%;
+}
+
+table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting{
+    padding-right: 0!important;
+}
+
+.tableTheadClient {
+    background-color: #2D2A29!important;
+}
+
+.tableTheadClient > tr > th:nth-child(1){
+    width: 5%;
+}
+
+.tableTheadClient > tr > th:nth-child(2){
+    width: 13%;
+}
+.tableTheadClient > tr > th:nth-child(3){
+    width: 13%;
+}
+.tableTheadClient > tr > th:nth-child(4){
+    width: 12%;
+}
+.tableTheadClient > tr > th:nth-child(5){
+    width: 15%;
+}
+.tableTheadClient > tr > th:nth-child(6){
+    width: 5%;
+}
+
+.table-bordered thead th {
+    border-bottom-width: 0px!important;
+    border-bottom-color: black!important;
+}
+
+.titleTableCLiente th {
+    border: 0px solid transparent!important;
+}
+
+.containerbeige {
+    background: rgb(242, 232, 220);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 40vh;
+    width: auto;
+}
+
+.introlineclient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introlineclient > a, .introlineclient > a:hover {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 5pt;
+    letter-spacing: .2rem;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
+}
+
+.cancelsub > a, .cancelsub > a:hover {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    letter-spacing: .1rem;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
+}
+
+.introlineclient > img {
+    height: auto;
+    width: 50%;
+}
+
+.usercounts {
+    font-family: "MoristonPersonal-Medium";
+    font-weight: bold;
+    font-size: 9pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+/* ----------------------------------Interfaz Ventas---------------------------------- */
+.btnsales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.introline > a, .introline > a:hover {
+    font-family: "MoristonPersonal-Medium";
+    font-size: 7pt;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dotted #ffffff;
+}
+
+.usercounts {
+    font-family: "MoristonPersonal-Medium";
+    font-weight: bold;
+    font-size: 6pt;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0% 11%;
+}
+/* ------------------FIN CONFIGURACIÓN INTERFACES USUARIOS------------------ */
+
+/* ----------------------------INICIO configuracion Test--------------------------------- */
+/* Ubicación de componentes Answers */
+.answ{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+.answords{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.testicons, .testicons > img {
+    cursor: pointer;
+    width: 90px
+}
+
+.testicons2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.testicons2 > img {
+    height: 65%;
+    width: 65%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.testicons4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.testicons4 > img {
+    height: 65%;
+    width: 65%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.testwords {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 9pt;
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
+
+/* Texto INSTRODUCCION test */
+.introtest {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: .4rem;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+.introtest3 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 2.5rem;
+    word-spacing: 10rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest4 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 1.177777rem;
+    word-spacing: .5rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest5 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 1.177777rem;
+    word-spacing: .5rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.introtest6 {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: 1.5rem;
+    word-spacing: 0.5rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.mainTitleTest{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 2rem;
+    text-align: center;
+    margin-top: 6%;
+    padding-left: 1.5%;
+}
+
+/* PREGUNTAS DEL TEST (parte inferior) */
+.question1 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1rem;
+    word-spacing: 1rem;
+    text-align: center;
+    margin-top: 6%;
+}
+
+.question2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1rem;
+    word-spacing: 7rem;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+.question3 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1.2rem;
+    word-spacing: 3rem;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.question4 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 1.9rem;
+    word-spacing: 2rem;
+    text-align: center;
+    margin-top: 6%;
+}
+
+.question5 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 5.5rem;
+    word-spacing: 25rem;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.question6 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: 2.5rem;
+    word-spacing: 9rem;
+    text-align: center;
+    margin-top: 8%;
+}
+
+/* Selectores de respuesta */
+.select-wr{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+    border-radius: 100%;
+}
+
+.select-deep{
+    background: #d6e0e4;
+    width: fit-content;
+    border-radius: 100%; 
+    padding: 15px;
+    margin: 10px;
+}
+
+.select-wr2{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+    border-radius: 100%;
+}
+
+.select-deep2{
+    background: #d6e0e4;
+    width: fit-content;
+    border-radius: 100%; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.select-wr3{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+}
+
+.select-deep3{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.select-wr4{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content;
+    border-radius: 100%;
+}
+
+.select-deep4{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+    border-radius: 100%;
+}
+
+.select-wr5{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+}
+
+.select-deep5{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.select-wr6{
+    background: white; 
+    border: 3px dotted #d6e0e4;
+    width: fit-content; 
+}
+
+.select-deep6{
+    background: #d6e0e4;
+    width: fit-content; 
+    padding: 15px;
+    margin: 5px;
+}
+
+.selector-active6{
+    background-color: #d6e0e4;
+    /* background-image: url(img/seleccion1.png); */
+    border-radius: 50%;
+}
+
+/* Boton para Pasar a siguiente pregunta */
+.smooth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 20%;
+    outline: none !important;
+}
+
+.smooth > img {
+    width: 20%;
+}
+
+/*Configuración para Animaciones */
+
+.animate-introtest{
+    animation: fadeIn;
+    animation-duration: 4s;
+}
+
+.animate-q1{
+    animation: zoomIn;
+    animation-duration: 15s;
+}
+
+.animate-arrowbtn{
+    animation: slideInUp;
+    animation-duration: 10s;
+    display: flex;
+    justify-content: center;
+    padding: 3% 0% 0% 0%;
+    align-items: center;
+}
+
+.animate-selector1 {
+    animation: fadeInUp;
+    animation-duration: 5s;
+}
+
+.animate-selector2 {
+    animation: fadeInUp;
+    animation-duration: 6s;
+}
+
+.animate-selector3 {
+    animation: fadeInUp;
+    animation-duration: 7s;
+}
+
+.animate-selector4 {
+    animation: fadeInUp;
+    animation-duration: 8s;
+}
+
+.animate-selector5 {
+    animation: fadeInUp;
+    animation-duration: 9s;
+}
+
+.animate-selector6 {
+    animation: fadeInUp;
+    animation-duration: 10s;
+}
+
+/* ----------------------------INICIO CONFIGURACIÓN RESULTADOS TEST---------------------------- */
+.results {
+    margin-top: 5%;
+    padding-left: 1.5%;
+    margin-left: 4rem;
+}
+
+.results > p {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: 7.1rem;
+}
+
+.containerf {
+    margin-bottom: 3rem;
+}
+
+#divGraph{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.resultfeel {
+    text-align: right;
+    padding-right: 50px;
+    font-family: "Helvetica";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .5rem;
+    color: #000000;
+    
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+    -ms-transform: rotate(-90deg); 
+    -o-transform: rotate(-90deg); 
+    transform: rotate(-90deg); 
+    
+    -webkit-transform-origin: 50% 50%; 
+    -moz-transform-origin: 50% 50%; 
+    -ms-transform-origin: 50% 50%; 
+    -o-transform-origin: 50% 50%; 
+    transform-origin: 50% 50%;
+}
+
+/* -----------------------------Configuración resultado especifico Test----------------------------- */
+
+.newdata > textarea {
+    font-size: 10pt;
+    height: 150px;
+    width: 500%;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    letter-spacing: .5rem;
+    padding: 4% 4% 0% 3%;
+}
+
+
+.introcontresult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.btn-blogshare > button {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+.introresult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.introcontresult p {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.introresult > p {
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.contcampaigns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin: 0% 5%;
+    padding: 0% 1%;
+}
+
+.contcampaignsBG {
+    background-color: #c1d4df;
+}
+
+.contcampaigns > div > a, .contcampaigns > div > a:hover {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .1rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.contautor > p > a{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .1rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.contcampaigns > div > a:hover, .contautor > p > a:hover{
+    font-size: 9pt;
+    color: #C89C91;
+    text-decoration: none;
+}
+
+.tshirtcampaigns > img, .tshirtcampaigns > a > img {
+    width: 70%;
+}
+
+.contcampaigns > .socialmedia {
+    background-color: rgb(189,203,212);
+    height: 230px;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia img {
+    width: 70%;
+}
+
+/* ----------------------------- Configuracion frases de diseñadores -------------------------------- */
+
+.wrapper{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slider-testimonial{
+	width: 50%;
+	max-width: 1400px;
+	margin: auto;
+}
+
+.autor{
+	margin-bottom: 15px;
+}
+
+.autor p{
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 8pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.designer-text{
+	padding: 10px 120px;
+}
+
+.designer-text > p{
+    font-family: "Helvetica";
+    font-size: 7pt;
+    letter-spacing: .2rem;
+	text-align: center;
+	color: #000000;
+}
+
+/* --------------------------------FIN CONFIGURACIÓN TEST------------------------------- */
+
+/* ------------------------------------INICIO CONFIGURACION BLOG POSTRESULTADOS------------------------------------ */
+.container-blog {
+    font-family: "Helvetica";
+    font-size: 9pt;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.container-blog>div>div:nth-child(2) {
+    padding: 1% 4%;
+}
+
+.blogcontresult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.blogcontresult {
+    padding: 0% 4%;
+}
+
+.blogcontresult>div:nth-child(1) {
+    margin-left: 7%;
+}
+
+.blogcontresult h2 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 12pt;
+    letter-spacing: 6rem;
+    color: #000000;
+}
+
+.blogcontresult h3 {
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    color: #000000;
+}
+
+.btn-blogshare {
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------------INICIO CONFIGURACION BLOG POSTRESULTADOS------------------------------------ */
+
+/* ---------------------------INICIO PODCAST--------------------------- */
+.podcastgrid {
+    padding: 0% 5%;
+    margin: 1% 0%;
+}
+
+ #divisor-pod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#divisor-pod > img {
+    width: 50%;
+    margin: 2% 0%;
+}
+
+.container-fluid > div > div > a > img {
+    width: 80%;
+    margin: 2rem 0%;
+}
+/* ---------------------------FIN PODCAST--------------------------- */
+
+/* ----------------------------------INICIO BLOG---------------------------------- */
+.gridblog {
+    padding: 0% 5%;
+    margin: -2% 0%;
+}
+
+/* Titulos Blogs*/
+.blog-title, a > .blog-title {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    font-size: 9pt;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.blog-title:hover {
+    color: #c89c91;
+}
+
+.card-link > h2 {
+    font-size: 7pt;
+    letter-spacing: .2rem;
+    color: #000000;
+    font-family: "MoristonPersonal-Bold";
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.card-link > h2:hover {
+    color: #c89c91;
+    font-size: 9pt;
+}
+
+/*Textos Blog*/
+.blog-text {
+    font-family: "Helvetica";
+    font-size: 7pt;
+    text-align: center;
+    letter-spacing: .5rem;
+    word-spacing: .5rem;
+}
+
+.personalhr {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem!important;
+    border: 0;
+    border-top: 14px solid;
+    color: rgb(189,213,220, .5);
+    width: 100%;
+}
+
+.jumbotronsocialmedia {
+    background-color: #c1d4df!important;
+    margin: 0%!important;
+    padding: 0%!important;
+}
+
+.contentsharesocialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sharesocialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189,203,212);
+    height: 280px;
+}
+
+.sharesocialmedia img {
+    width: 80%;
+    margin: 0% 2%;
+}
+
+/* ----------------------------------FIN BLOG---------------------------------- */
+/* ----------------------------------Barras Laterales---------------------------------- */
+
+/* Scroll title HOME */
+#scrolltitlehome {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 170px;
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+}
+
+.scrolllightbarHome {
+    width: 1px;
+    height: 165px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 225px;
+    bottom: 0;
+    left: 33px;
+    display: block;
+}
+
+/* Scroll Blog */
+#scrollblog {
+    position: fixed;
+}
+
+#scrolltitleblog {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 150px;
+    position: relative;
+    bottom: 0;
+    left: 10px;
+}
+
+/* Scroll About Us */
+#scrollabout {
+    position: fixed;
+}
+
+#scrolltitleabout {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 170px;
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+}
+
+.scrolllightbarabout {
+    width: 1px;
+    height: 165px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 225px;
+    bottom: 0;
+    left: 33px;
+    display: block;
+}
+
+.scrollblock {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+/* Scroll CALMWEAR GENERAL */
+#scrollCalm {
+    position: fixed;
+}
+
+#scrolltitleCalm {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 7pt;
+    top: 126px;
+    position: relative;
+    bottom: 0;
+    left: -13px;
+}
+
+/* Scroll Especifico Calmwear */
+#scrollcw {
+    position: absolute;
+}
+
+#scrolltitlecw {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 274px;
+    position: absolute;
+    bottom: 0;
+    left: -24px;
+}
+
+.scrollblockcw {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+.scrolllightbarcw {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 222px;
+    bottom: 0;
+    left: 35px;
+    display: block;
+}
+
+/* Scroll TRANSITION GENERAL*/
+#scrollTrans {
+    position: absolute;
+}
+
+#scrolltitletrans {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 7pt;
+    top: 127px;
+    position: absolute;
+    bottom: 0;
+    left: -27px;
+}
+
+.scrolllightbartrans {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 215px;
+    bottom: 0;
+    left: 32px;
+    display: block;
+}
+
+.scrollblocktrans {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+/* Scroll Especifico TRANSITION*/
+#scrolltr {
+    position: absolute;
+}
+
+#scrolltitletr {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 270px;
+    position: absolute;
+    bottom: 0;
+    left: -32px;
+}
+
+.scrolllightbartr {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 220px;
+    bottom: 0;
+    left: 31px;
+    display: block;
+}
+
+.scrollblocktr {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+/* Scroll LOUNGEWEAR GENERAL */
+#scrolllg {
+    position: absolute;
+}
+
+#scrollgenlg {
+    position: fixed;
+}
+
+#scrolltitlelg {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 250px;
+    position: absolute;
+    bottom: 0;
+    left: -31px;
+}
+
+#scrolltitlegenlg {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 7pt;
+    top: 120px;
+    position: relative;
+    bottom: 0;
+    left: -18px;
+}
+
+.scrolllightbarglg {
+    width: 1px;
+    height: 215px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+}
+
+/* Scroll LOUNGEWEAR Especifico */
+
+.scrolllightbarlg {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: absolute;
+    top: 195px;
+    bottom: 0;
+    left: 30px;
+    display: block;
+}
+
+.scrollblocklg {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+/* Scroll TEST */
+#scrollTest {
+    position: fixed;
+}
+
+#scrolltitleTest {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 173px;
+    position: relative;
+    bottom: 0;
+    left: -13px;
+}
+
+/* Scroll RESULTADO TEST */
+#scrollresults {
+    position: fixed;
+}
+
+#scrolltitleresults {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 155px;
+    position: relative;
+    bottom: 0;
+    left: -25px;
+}
+
+/* Scroll POSTRESULTADOS*/
+#scrollpostresults {
+    position: fixed;
+}
+
+#scrolltitlepostresults {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 145px;
+    position: relative;
+    bottom: 0;
+    left: -8px;
+}
+
+.scrolllightbar {
+    width: 1px;
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 23% auto auto 2.5%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+}
+
+.scrollblock {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    background-color: #000000;
+}
+
+#scrolltitleAmor {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 160px;
+    position: relative;
+    bottom: 0;
+    left: 8px;
+}
+
+#scrolltitleAlegria {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 145px;
+    position: relative;
+    bottom: 0;
+    left: -5px;
+}
+
+#scrolltitleFelicidad {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 140px;
+    position: relative;
+    bottom: 0;
+    left: -14px;
+}
+
+#scrolltitleIra {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 180px;
+    position: relative;
+    bottom: 0;
+    left: 18px;
+}
+
+#scrolltitleMiedo {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 160px;
+    position: relative;
+    bottom: 0;
+    left: 4px;
+}
+
+#scrolltitleTristeza {
+    margin: 0% 0% 0% 0%;
+    transform: rotate(-90deg);
+    letter-spacing: .3rem;
+    font-family: "MoristonPersonal-Regular";
+    font-size: 8pt;
+    top: 145px;
+    position: relative;
+    bottom: 0;
+    left: -10px;
+}
+/* -------------------------------FIN Barras Laterales---------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@ Responsive media queries*/
+
+    @media screen and (min-width: 1400px){
+        .gridclmw{
+            column-gap: 15rem;
+            margin: 8%;
+            width: 84%
+        }
+    }
+
+    @media screen and (max-width: 1200px){
+        .gridclmw{
+            column-gap: 8rem;
+            margin: 5.5%;
+            width: 93%
+            /* padding: 20px; */
+        }
+
+        .cover{
+            height: 30vw;
+            max-width: 100%;
+        }
+
+    }
+
+    @media screen and (max-width: 992px){
+        .gridclmw{
+            column-gap: 3rem;
+            margin: 7.5%;
+            /* width: 90%; */
+            padding: 20px;
+            /* background-color: rgb(0, 183, 255); */
+        }
+
+        .cover{
+            height: 30vw;
+            max-width: 100%;
+        }
+    }
+
+
+    @media screen and (max-width: 768px){
+        .gridclmw{
+            column-gap: 2rem;
+            margin: 5.5%;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .cover{
+            height: 30vw;
+            max-width: 100%;
+        }
+
+    }
+
+    /*Móviles*/
+    @media screen and (max-width: 576px){
+
+        .resultfeel {
+        padding-right: 45px;
+        font-size: 6pt;
+        letter-spacing: 0.3rem;
+        
+        }
+
+        .results > p {
+            letter-spacing: 1.5rem;
+            margin-top: 30px;
+        }
+
+        .results {
+            padding-left: 5.5%;
+            margin-left: 0rem;
+        }
+
+        #divGraph {
+            padding-left: 6rem;
+        }
+
+        .animate-introtest {
+            margin-top: 23px;
+        }
+
+        .introtest3 {
+            margin-top: 9%;
+            margin-left: 33px;
+        }
+
+        .animate-arrowbtn {
+            margin-bottom: -70px;
+        }
+
+        .introtest {
+            margin-bottom: 10%;
+        }
+
+        .question1 {
+            margin: 48px 0 25px 13px;
+        }
+
+        .mainTitleTest {
+            margin: 20px 0 25px 0px;
+            line-height: 216%;
+            padding-left: 2.5%;
+        }
+
+        #scrolltitleTest {
+            display: none;
+        }
+
+        .answ {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0;
+            row-gap: 11px;
+            padding: 7% 10% 0% 5%;
+            justify-items: center;
+        }
+
+        .blackTYC {
+            top: 5% !important;
+            height: 465px !important;
+        }
+
+        .useTYC {
+            width: 100% !important;
+            left: 3%;
+        }
+
+        #mainfooter {
+            margin-bottom: -133px;
+        }
+
+        #dotsmenubody {
+            overflow: auto;
+        }
+
+        .aboutlines2 > div:nth-child(3) {
+            margin: 0% 0% 2% 0%;
+        }
+
+        .aboutlines3 > div:nth-child(3) {
+            margin: 0% 0% 2% 0%;
+        }
+
+        .aboutbtn {
+            margin-top: 55px;
+        }
+
+        .contentlogin_1 {
+            padding-top: 25px;
+        }
+
+        .footercontent {
+            margin-top: 130px;
+        }
+
+        .contentlogin {
+            margin-top: 24%;
+        }
+
+        #divisor-pod {
+            margin: 20px 0px 20px 0;
+        }
+
+        .bnav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10% 0% 10% 5%;
+        }
+
+        .bnav > .btnav > ol {
+            text-align: center;
+        }
+
+        .tnav {
+            grid-column: 1/2;
+        }
+
+
+        .nav {
+            padding: 6% 6% 0% 4%;
+            font-size: 11pt;
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+        }
+
+        .tnav > ol > a {
+            margin-right: -6%;
+            letter-spacing: 1.3rem;
+        }
+
+        .menua {
+            padding: 2% 0% 4% 0%;
+            column-gap: 1rem;
+            display: block;
+        }
+
+        .menub {
+            background-color: rgba(242, 232, 220, 0.6);
+            padding: 10% 4% 0% 0%;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .loungewear {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            padding: 14px;
+        }
+
+        .calmwear {
+            margin: 25px 0px 25px 0px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            padding: 18px;
+        }
+
+        .transition{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            padding: 18px;
+        }
+
+        .mr-5, .mx-5 {
+            margin-right: 0rem!important;
+        }
+
+        #divisor-pod > img {
+            width: 100%;
+            margin: 3% 0%;
+        }
+
+        .aboutlines > div:nth-child(1) > a {
+            letter-spacing: 0.55rem;
+        }
+
+        .aboutlines2 > div:nth-child(2) > a > img {
+            width: 70%;
+        }
+
+        .aboutlines2 > div:nth-child(3) {
+            width: 70%;
+        }
+
+        .aboutlines2 > div:nth-child(1) {
+            width: 72%;
+            margin-top: -48px;
+        }
+
+        .aboutlines3 > div:nth-child(3) {
+            width: 69%;
+        }
+
+        .aboutlines3 > div:nth-child(2) > a > img {
+            width: 68%;
+        }
+
+        .aboutlines3 > div:nth-child(1) {
+            width: 69%;
+        }
+
+        .aboutlines > div:nth-child(2) > a > img{
+            width: 50%;
+        }
+
+        .aboutlines > div:nth-child(3) {
+            margin: 0% 1% 2% 1%;
+            width: 50%;
+        }
+
+        .aboutlines {
+            padding: 0rem!important;
+        }
+        .aboutstoryTitle h1 {
+            font-size: 8pt;
+            letter-spacing: 0.1rem;
+            word-spacing: 2.4rem;
+        }
+
+        .aboutstoryTitle h2 {
+            font-size: 9pt;
+            letter-spacing: 1.4rem;
+            padding: 3% 0% 0% 0%
+        }
+
+        .aboutstory{
+            padding: 20px;
+            margin-left: 3px;
+        }
+
+        .aboutstoryTitle {
+            padding: 20px;
+            margin-left: 5px;
+        }
+
+        .scdabout {
+            display: grid;
+        }
+
+        .sharesocialmedia {
+            height: 181px;
+        }
+
+        .contentsharesocialmedia {
+            display: grid;
+            padding-right: 52px;
+            padding-left: 52px;
+        }
+
+        .blogcontresult h2 {
+            letter-spacing: 1.5rem;
+            margin-left: -2px;
+        }
+
+        .contacttitle > h1 {
+            margin-left: -21px;
+        }
+
+        .contactcontainer {
+            padding: 2% 10% 2% 0%;
+            height: 83vh;
+        }
+
+        .griddoblevertical > .card-body:nth-child(1){
+            margin:0 0 14% 0;
+        }
+
+        .gridhorizontal img {
+            margin-bottom: 0%;
+            margin-top: 51px;
+        }
+
+        .card-body2{
+            margin-bottom: -48px;
+            padding: 0px 3px 0px 3px;
+        }
+
+        #scrolltitlegenlg, #scrollblog, .scrolllightbarabout, #scrollabout {
+            display: none;
+        }
+
+        .scrolllightbarglg{
+            background-color: rgb(219 219 219 / 0%);
+        }
+
+        .card {
+            margin-left: 7px;
+            margin-right: 9px;
+        }
+
+        .card-clmw2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 0;
+            background-color: #fff;
+        }
+
+        .gridvertical {
+            display: block;
+        }
+
+        .gridvertical img {
+            width: 100%;
+            height: 488px;
+            margin: 20% 0% 0% 0%;
+        }
+
+        .gridhorizontal {
+            display: block;
+            margin-bottom: -20px;
+            margin-left: -6px;
+        }
+
+        .price, .price:hover {
+            margin-top: 10px;
+            margin: 0%;
+        }
+
+        .price-horizontal, .price-horizontal:hover {
+            font-size: 11pt;
+            letter-spacing: 0.60rem;
+            /* margin-right: -47px; */
+            margin-top: 10px;
+        }
+
+        .griddoblevertical {
+            grid-template-columns: repeat(1, 375px);
+            margin-top: 101px;
+        }
+
+        .griddoblevertical img {
+            width: 100%;
+            height: 495px;
+        }
+    
+        .nested-nav .cartmenu > img, .nested-nav .loginmenu > img, .nested-nav .dotsmenu > img {
+            margin-left: 1.5rem;
+        }
+        .gridclmw{
+            grid-template-columns: 100%;
+            padding: 0%!important;
+            row-gap: 5rem;
+        }
+        .cover{
+            height: 411px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .footerhr {
+            display: none;
+        }
+        .footerhr2 {
+            width: 99%;
+        }
+        
+        #footerbg2 {
+            height: 145px;
+        }
+
+        #footersuscribe {
+            letter-spacing: 0.5rem;
+            padding: 0% 0% 0% 0.6%;
+        }
+        .maincontentf{
+            padding: 0% 2% 2% 0%;
+        }
+        .conected{
+            margin-left: 0.4rem;
+            max-width: 100%;
+        }
+
+        .conected > h6 {
+            font-size: 4pt;
+            letter-spacing: 0.9rem;
+            margin-top: 2rem;
+        }
+        .legaltexts div {
+            flex-direction: column;
+            align-items: center;
+            padding: 4% 8%;
+        }
+        .socialfooter img {
+            width: 33px;
+            margin: -58px 81px 98px -155px;
+        }
+        .legaltexts > div > a{
+            font-size: 4.5pt;
+            margin-bottom: 4%;
+            letter-spacing: 0.5rem;
+        }
+        .contactform{
+            width: 135%;
+            margin-left: -7vw;
+            margin-bottom: 4vw;
+        }
+        .contactform textarea{
+            /* padding: 5% 0% 0% 9%; */
+            letter-spacing: 2rem;
+        }
+        .img-barras{
+            width: 375px;
+            height: 5px;
+        }
+
+        #scrolltitleCalm{
+            display: none;
+        }
+        .scrollblock{
+            overflow-x: hidden;
+            display: block;
+            width: 0px;
+            height: 0px;
+        }
+        .scrolllightbar{
+            background-color: rgba(255 255 255);
+        }
+
+        .carousel-inner{
+            height: 32vh;
+        }
+
+        .hmcarousel-control-next-icon, .hmcarousel-control-prev-icon{
+            width: 25px!important;
+            height: 20px!important;
+        }
+
+        .pay-form {
+            position: static;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .pay {
+            position: static;
+        }
+
+        .responFootercontent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5% 1%;
+            background-color: rgb(242, 232, 220);
+            margin-top: -3%;
+        }
+
+        .cart-content{
+            margin-top: 8%;
+        }
+
+        .subtotal{
+            margin-bottom: 3%;
+        }
+
+        .minichance > span:nth-child(2) {
+            letter-spacing: .6rem;
+        }
+        
+        /*-----------Móviles Navbar----------------------*/
+        .nested-nav{
+            display: block;
+            padding: 0% 2% 0% 169%;
+        }
+
+        #email {
+            letter-spacing: .6rem;
+        }
+
+        .containersale {
+            width: 100%;
+            padding-right: 5%;
+            padding-left: 5%;
+            margin: 0% 0% 4% 0%;
+        }
+    }
+
+      /*-----------Responsive MAC 1280----------------------*/
+            /*---------Calmwear-----------*/
+
+      @media screen and (min-width: 1279px) and (max-width: 1280px){
+        .card > p{
+            margin-right: -8%;
+        }
+
+        .body-card {        
+            max-width: 692px;
+        }
+
+        #divGraph{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .results > p {
+            letter-spacing: 7.0rem;
+        }
+
+        #scrolltitlegenlg {
+            top: 130px;
+            left: -20px;
+        }
+
+        #scrolltitleabout {
+            top: 175px;
+            left: 0px;
+        }
+
+        .scrolllightbarabout {
+            left: 38px;
+        }
+
+        #scrolltitleblog {
+            left: 9px;
+        }
+
+        #scrolltitlepostresults {
+            top: 135px;
+            left: -10px;
+        }
+
+        #scrolltitleCalm {
+            top: 135px;
+            left: -14px;
+            font-size: 7pt;
+        }
+
+        #scrolltitletrans {
+            left: -26px;
+        }
+
+        .card {
+            margin-left: 383px;
+            margin-right: 381px;
+        }
+
+        .aboutstory {
+            padding: 1% 20%;
+        }
+
+        .nested-nav {
+            padding: 0% 2% 0% 51%;
+        }
+
+        .aboutbtn {
+            margin: 0%;
+        }
+
+        .aboutstory h1 {
+            text-align: justify;
+            letter-spacing: .6rem;
+            word-spacing: 2.7rem;
+        }
+        
+        .aboutstory h2 {
+            word-spacing: .222222rem;
+        }
+
+        .aboutlines > div:nth-child(3) > a {
+            letter-spacing: 1.055555rem;
+        }
+        
+        .aboutlines > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.422222rem;
+        }
+
+        
+        .aboutlines2 > div:nth-child(3) > a {
+            letter-spacing: 2.599999rem
+        }
+        
+        .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.433333rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a {
+            letter-spacing: .666666rem;
+        }
+        
+        .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+            letter-spacing: 1.388888rem;
+        }
+
+        .aboutlines > div:nth-child(1) > a {
+            letter-spacing: .477777rem;
+        }
+
+        .aboutlines2 > div:nth-child(1) > a {
+            letter-spacing: .7666666rem;
+        }
+
+        .aboutlines3 > div:nth-child(1) > a {
+            letter-spacing: .5777777rem;
+        }
+
+        .footerright > a > img {
+            height: 70px;
+        }
+
+        .footerleft > img {
+            height: 70px;
+            }
+
+        .desc-prod-espec{
+            margin-left: 9.4%;
+        }
+
+        .font-price-lw { 
+            letter-spacing: 3.155555rem;
+        }
+        
+        .btn-opciones:nth-child(2){
+            margin: 0% 3.22222% 0% 0%;
+        }
+        
+        .btn-opciones:nth-child(4){
+            margin-left: 0%;
+        }
+
+        .contentdetails {
+            height: 530%;
+        }
+
+        .contentbag {
+            height: 530%;
+            margin-left: -8%;
+        }
+
+        .contentsize {
+            height: 457px;
+        }
+
+        .btn-opcionestr:nth-child(1){
+            flex: 3;
+        }
+
+        .btn-opcionestr:nth-child(2){
+            flex: 3;
+            margin: 0% 2% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(3){
+            flex: 0;
+            margin: 0% 2% 0% 0%;
+        }
+
+        .btn-opcionestr:nth-child(4){
+            flex: 3;
+        }
+        
+        .contentdetailstr, .contentbagtr {
+            height: 600%;
+        }
+
+        .mac-contentsize{
+            height: 460px;
+        }
+
+        .cover {
+            width: 516px;
+        }
+
+        .card-title>p, .card-title:hover>p {
+            margin: -0.3rem;
+        }
+
+        .refercl {
+            letter-spacing: 0.83rem;
+        }
+
+        .packet img {
+            margin-bottom: 0%;
+        }
+
+        .gridtlin {
+            grid-template-rows: repeat(1, 115px);
+            flex: 3;
+            margin-bottom: -9%;
+        }
+
+        .gridtl {
+            grid-template-rows: repeat(6, 210px);
+            flex: 3;
+        }
+
+        .containerfeel2 {
+            align-items: baseline;
+            margin: 9% -4%;
+        }
+
+        .refertr:nth-child(1) {
+            letter-spacing: 0.477777rem;
+        }
+
+        .refertr:nth-child(2) {
+            letter-spacing: 1.033333rem;
+
+        }
+        .refertr:nth-child(3) {
+            letter-spacing: 0.955555rem;
+        }
+        .refertr:nth-child(4) {
+            letter-spacing: 1.811111rem;
+        }
+
+        .btn-empaque, .btn-empaque:focus {
+            padding: 0% 2% 1% 7%;
+        }
+
+        .btn-empaque2, .btn-empaque2:focus {
+            padding: 0% 2% 1% 7%;
+        }
+
+} /*-----------Fin Responsive MAC----------------------*/
+
+
+  /*-----------Responsive MAC 1440----------------------*/
+
+  @media screen and (min-width: 1439px) and (max-width: 1440px){
+
+    .gridclmw{
+        column-gap: 5rem;
+        width: 84%
+    }
+
+    .cover {
+        width: 541px;
+    }
+
+    .card-bodyMAC{
+        width: 543px;
+    }
+
+    .card {
+        margin-left: 467px;
+        margin-right: 467px;     
+    }
+
+    .btn-opciones:nth-child(1){
+        margin-left: 4.888888%;
+    }
+    
+    .btn-opciones:nth-child(2){
+        margin: 0% 3.8% 0% 0%;
+        justify-content: flex-end;
+    }
+    
+    .btn-opciones:nth-child(3){
+        flex: 1;
+        justify-content: flex-end;
+    }
+    
+    .btn-opciones:nth-child(4){
+        flex: 3;
+        margin-left: 0%;
+    }
+
+    .contentbag {
+        width: 83%;
+        left: -2px;
+        margin-left: 0%;
+    }
+
+    .contentsize {
+        height: 498px;
+    }
+
+    .btn-empaque2, .btn-empaque2:focus {
+        width: 75%;
+        margin: 0% 12% 0% 0%;
+        padding: 0% 2% 1% 2%;
+    }
+
+    .gridtlin {
+        grid-template-rows: repeat(1, 155px);
+        flex: 5;
+    }
+
+    .gridtlin2 {
+        grid-template-rows: repeat(1, 205px);
+        flex: 5;
+    }
+
+    .gridtl {
+        grid-template-rows: repeat(6, 270px);
+        flex:4;
+    }
+
+    .packet img {
+        margin-bottom: 0%;
+    }
+
+    .containerfeel2 {
+        flex: 2;
+        align-items: baseline;
+        margin: 12% -4%;
+    }
+
+    .btn-opcionestr:nth-child(1){
+        margin-left: 5.1%;
+    }
+    
+    .btn-opcionestr:nth-child(2){
+        flex: 1;
+        margin: 0% 11.3% 0% 0%;
+    }
+    
+    .btn-opcionestr:nth-child(3){
+        flex: 1;
+        justify-content: flex-end;
+        margin: 0% 0% 0% -7%;
+    }
+    
+    .btn-opcionestr:nth-child(4){
+        flex: 1;
+        margin: 0% 7.5% 0% 10%;
+        align-items: flex-end;
+    }
+
+    .contentbagtr {
+        width: 83%;
+        margin-left: 0%;
+        left: -2px;
+    }
+
+    .elemento1-5tr > p:nth-child(1) {
+        letter-spacing: 1.8rem;
+        padding-left: 9%;
+    }    
+
+    .typeselector {
+        justify-content: space-around;
+    }
+
+    .elemento1-5tr > p:nth-child(1) {
+        letter-spacing: 1.55555rem;
+        padding-left: 12%;
+    }
+
+    .aboutlines > div:nth-child(1) > a {
+        letter-spacing: .68rem;
+    }
+
+    .aboutlines > div:nth-child(3) > a {
+        letter-spacing: 1.32222rem;
+    }
+    
+    .aboutlines > div:nth-child(3) > a:nth-child(2) {
+        letter-spacing: 1.74444rem;
+    }
+
+    .aboutlines2 > div:nth-child(1) > a {
+        letter-spacing: 1rem;
+    }
+
+    .aboutlines2 > div:nth-child(3) > a {
+        letter-spacing: 3.09999rem
+    }
+
+    .aboutlines2 > div:nth-child(3) > a:nth-child(2) {
+        letter-spacing: 1.73333rem;
+    }
+
+    .aboutlines3 > div:nth-child(1) > a {
+        letter-spacing: .766666rem;
+    }
+
+    .aboutlines3 > div:nth-child(3) > a {
+        letter-spacing: .88888rem;
+    }
+    
+    .aboutlines3 > div:nth-child(3) > a:nth-child(2) {
+        letter-spacing: 1.74444rem;
+    }
+
+    .results {
+        margin-top: 10%;
+        padding-left: 0%;
+        margin-left: 6rem;
+    }
+
+    .results > p {
+        letter-spacing: 7rem;
+    }
+
+    #divGraph{
+        margin: 0% 0% 0% 2.5%!important;
+    }
+
+    .blackTYC{
+        top: 15%;
+    }
+    
+    .btn-opcionescw:nth-child(2){
+        margin: 0% 22.4% 0% 0%;
+    }
+
+    .containertl {
+        padding: 3.7% 6% 0% 6%;
+    }
+
+    #scrolltitleCalm {
+        left: -11px;
+    }
+
+    #scrolltitlegenlg {
+        left: -17px;
+    }
+
+    .body-card {
+        max-width: 699px;
+    }
+
+    .desc-prod-espec{
+        margin-left: 10.4%;
+    }
+
+    .aboutstoryHome p:nth-child(1){
+        letter-spacing: .58rem;
+    }
+
+    .aboutstoryHome h1{
+        letter-spacing: .95rem;
+    }
+
+    .aboutstoryHome h2{
+        letter-spacing: .486rem;
+    }
+
+    .slider-testimonial{
+        width: 55%;
+    }
+
+    .aboutstoryTitle {
+        padding: 1% 30% 1% 30%;
+        margin: 0%!important;
+    }
+
+    .aboutstoryTitle > h1 {
+        letter-spacing: 1rem;
+        text-align: left;
+        margin: 6% 0% 0% 3%;
+    }
+    
+    .aboutstoryTitle > h2 {
+        letter-spacing: 3.455rem;
+        text-align: center;
+        padding: 0% 3% 0% 3.5%;
+        margin: 2% 0% 8% 0%;
+    }
+
+  }
+
+  /*-----------Fin Responsive MAC 1440----------------------*/
+
+

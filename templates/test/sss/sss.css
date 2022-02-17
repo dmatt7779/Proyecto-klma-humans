@@ -1,0 +1,70 @@
+.sss {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.ssslide {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.sssnext {
+	width: 7%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('../../assets/img/test/resultemocion/flecha-derecha.gif') no-repeat;
+}
+
+.sssprev {
+	width: 7%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('../../assets/img/test/resultemocion/flecha-izquierda.gif') no-repeat;
+}
+
+.sssprev {
+	left: 0%;
+	background-position: 0 20%;
+	background-size: contain;
+}
+
+.sssnext {
+	right: 0%;
+	background-position: 0 20%;
+	background-size: contain;
+}
+
+.sssprev:hover, .sssnext:hover {
+	cursor: pointer;
+}
+
+/*@ Responsive media queries*/
+
+
+@media screen and (min-width: 1439px) and (max-width: 1440px){
+
+	.sssprev {
+		left: 0%;
+		background-position: 0 20px;
+	}
+	
+	.sssnext {
+		right: 0%;
+		background-position: 0 20px;
+	}
+
+}
