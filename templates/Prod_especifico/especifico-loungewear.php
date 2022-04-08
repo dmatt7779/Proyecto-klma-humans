@@ -174,7 +174,7 @@
                     </div>
                     <p class="refer-specialbag"><?php echo $empaque[0]['nombre'] ?></p>
                     <p class="refer-specialbag"><?php echo $empaque[0]['descripcion'] ?></p>
-                    <p class="refer-specialbag"><?php echo $empaque[0]['precio_compra'] ?></p>
+                    <p class="refer-specialbag"><?php echo number_format($empaque[0]['precio_venta']) ?></p>
                 </div>
                 <button id="btn-chance" class="btn-empaque" name="bntOpciones" data-target="divEmpaque"><span class="empaque">EMPAQUE</span><br><span class="especial">ESPECIAL</span></button>
 

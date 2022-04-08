@@ -174,7 +174,7 @@ include "../../global/conexion.php";
                     </div>
                 <?php
 
-                    $subtotal = $subtotal + ($detventa['precio_venta'] * $detventa['cantidad']);
+                    $subtotal = $subtotal + ($detventa['precio_venta']) * $detventa['cantidad'];
                 }
                 ?>
                 <!-- FIN Cart items -->
@@ -239,7 +239,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[0]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[0]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[0]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[0]['precio_venta']); ?></a>
         </div>
     </div>
     <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario1">
@@ -247,7 +247,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[0]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[0]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[0]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[0]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[0]['precio_venta']); ?>">
     </form>
 
     <!-- Grid horizontal Importante mantener margenes de las imagenes en esta sección -->
@@ -260,7 +260,7 @@ include "../../global/conexion.php";
                 </a>
                 <p class="card-text card-text1"><?php echo $listaproductos[1]['descripcion']; ?></p>
                 <a href="#" class="price-horizontal">
-                    <p>$<?php echo $listaproductos[1]['precio_venta']; ?></p>
+                    <p>$<?php echo number_format($listaproductos[1]['precio_venta']); ?></p>
                 </a>
             </div>
         </div>
@@ -270,7 +270,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[1]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[1]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[1]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[1]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[1]['precio_venta']); ?>">
     </form>
     <!-- Rejilla Vertical alineada al centro -->
     <div class="gridvertical">
@@ -280,7 +280,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[2]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[2]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[2]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[2]['precio_venta']); ?></a>
         </div>
     </div>
     <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario3">
@@ -288,7 +288,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[2]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[2]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[2]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[2]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[2]['precio_venta']); ?>">
     </form>
 
     <!-- Grid de las imagenes verticales a ambos lados contenidas dentro de una misma rejilla, pero su espacio esta repartido en ambas -->
@@ -299,7 +299,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[3]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[3]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[3]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[3]['precio_venta']); ?></a>
         </div>
 
         <div class="card-body">
@@ -308,7 +308,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[4]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[4]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[4]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[4]['precio_venta']); ?></a>
         </div>
     </div>
 
@@ -317,7 +317,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[3]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[3]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[3]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[3]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[3]['precio_venta']); ?>">
     </form>
 
     <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario5">
@@ -325,7 +325,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[4]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[4]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[4]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[4]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[4]['precio_venta']); ?>">
     </form>
 
     <!-- Grid horizontal Importante mantener margenes de las imagenes en esta sección -->
@@ -339,7 +339,7 @@ include "../../global/conexion.php";
                 </a>
                 <p class="card-text"><?php echo $listaproductos[5]['descripcion']; ?></p>
                 <a href="#" class="price-horizontal">
-                    <p>$<?php echo $listaproductos[5]['precio_venta']; ?></p>
+                    <p>$<?php echo number_format($listaproductos[5]['precio_venta']); ?></p>
                 </a>
             </div>
         </div>
@@ -351,7 +351,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[5]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[5]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[5]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[5]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[5]['precio_venta']); ?>">
     </form>
 
     <!-- Rejilla Vertical alineada al centro -->
@@ -362,7 +362,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[6]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[6]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[6]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[6]['precio_venta']); ?></a>
         </div>
     </div>
     <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario7">
@@ -370,7 +370,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[6]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[6]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[6]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[6]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[6]['precio_venta']); ?>">
     </form>
 
     <!-- Grid de las imagenes verticales a ambos lados contenidas dentro de una misma rejilla, pero su espacio esta repartido en ambas -->
@@ -381,7 +381,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[7]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[7]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[7]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[7]['precio_venta']); ?></a>
         </div>
 
 
@@ -392,7 +392,7 @@ include "../../global/conexion.php";
                 <p><?php echo $listaproductos[8]['nombre']; ?></p>
             </a>
             <p class="card-text"><?php echo $listaproductos[8]['descripcion']; ?></p>
-            <a href="#" class="price">$<?php echo $listaproductos[8]['precio_venta']; ?></a>
+            <a href="#" class="price">$<?php echo number_format($listaproductos[8]['precio_venta']); ?></a>
         </div>
     </div>
 
@@ -403,7 +403,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[7]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[7]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[7]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[7]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[7]['precio_venta']); ?>">
     </form>
 
     <form action="../Prod_especifico/especifico-loungewear.php" method=post name="formulario9">
@@ -411,7 +411,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[8]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[8]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[8]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[8]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[8]['precio_venta']); ?>">
     </form>
 
     <!-- Grid horizontal Importante mantener margenes de las imagenes en esta sección -->
@@ -424,7 +424,7 @@ include "../../global/conexion.php";
                 </a>
                 <p class="card-text"><?php echo $listaproductos[9]['descripcion']; ?></p>
                 <a href="#" class="price-horizontal">
-                    <p>$<?php echo $listaproductos[9]['precio_venta']; ?></p>
+                    <p>$<?php echo number_format($listaproductos[9]['precio_venta']); ?></p>
                 </a>
             </div>
         </div>
@@ -435,7 +435,7 @@ include "../../global/conexion.php";
         <input type="hidden" name="imagen" value="<?php echo $listaproductos[9]['imagen']; ?>">
         <input type="hidden" name="nombre" value="<?php echo $listaproductos[9]['nombre']; ?>">
         <input type="hidden" name="descripcion" value="<?php echo $listaproductos[9]['descripcion']; ?>">
-        <input type="hidden" name="precio_venta" value="<?php echo $listaproductos[9]['precio_venta']; ?>">
+        <input type="hidden" name="precio_venta" value="<?php echo number_format($listaproductos[9]['precio_venta']); ?>">
     </form>
 
 
