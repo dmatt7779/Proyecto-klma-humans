@@ -121,7 +121,7 @@ $emocion = $contenidoBlog[0]['emocion'];
 
             /* Copy the text inside the text field */
             navigator.clipboard.writeText(copyText.value);
-
+            console.log(copyText.value)
             /* Alert the copied text */
             alert("Link copiado")
         }

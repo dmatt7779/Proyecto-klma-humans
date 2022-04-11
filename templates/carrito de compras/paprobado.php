@@ -47,7 +47,7 @@ $userInfo=$user->fetchAll(PDO::FETCH_ASSOC);
                MUCHAS GRACIAS
             </div>
             <div class="backStateTrans">    
-               <button class="btn btnBack"><a href="../interfaz_cliente/clienteintro.php">VOLVER</a></button>
+            <a href="../interfaz_cliente/clienteintro.php"><button class="btn btnBack">VOLVER</button></a>
             </div>
             <hr class="footerhr3">
         </div>

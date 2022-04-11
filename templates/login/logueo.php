@@ -14,7 +14,6 @@
         header("location:login.php");
     }else if ($email !== $registro['correo']) {
         echo '<script language="javascript">alert("Email o contraseña incorrectos"); window.location.href = "login.php";</script>';
-        //header("location:login.php");
     }
 ?>
 <?php

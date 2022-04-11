@@ -1,6 +1,10 @@
 <?php
-include "../../global/conexion.php";
 session_start();
+include "../../global/conexion.php";
+$iduser = $_SESSION['iduser'];
+$user = $pdo->prepare("SELECT * FROM usuarios where id = '$iduser'");
+$user -> execute();
+$userInfo=$user->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +37,7 @@ session_start();
                 <h1>ERROR</h1>
             </div>
             <div class="owner">    
-                <h2>JHONHOB</h2>
+                <h2><?php echo strtoupper($userInfo[0]['apodo'])?></h2>
             </div>
             <div class="textStateTransaction">    
                 EN NOMBRE DE KLMA HUMANS QUEREMOS AGRADECERTE INMENSAMENTE POR LA CONFIANZA DEPOSITADA EN NUESTROS PRODUCTOS. LASTIMOSAMENTE TU TRANSACCIÓN HA PRESENTADO UN ERROR.<br><br>
@@ -43,7 +47,7 @@ session_start();
                MUCHAS GRACIAS
             </div>
             <div class="backStateTrans">    
-            <button class="btn btnBack"><a href="../interfaz_cliente/clienteintro.php">VOLVER</a></button>
+            <a href="../interfaz_cliente/clienteintro.php"><button class="btn btnBack">VOLVER</button></a>
 
 
             </div>
