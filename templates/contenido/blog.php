@@ -50,7 +50,7 @@ include "../../global/conexion.php";
             
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[0]['emocion'] ?>','<?php echo $frases[0]['escritor'] ?>','<?php echo $frases[0]['frase'] ?>')" class="blog-title"><?php echo $frases[0]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $frases[0]['id']?>')" class="blog-title"><?php echo $frases[0]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[0]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -64,7 +64,7 @@ include "../../global/conexion.php";
             ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[1]['emocion'] ?>','<?php echo $frases[1]['escritor'] ?>','<?php echo $frases[1]['frase'] ?>')" class="blog-title"><?php echo $frases[1]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $frases[1]['id']?>')" class="blog-title"><?php echo $frases[1]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[1]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -78,7 +78,7 @@ include "../../global/conexion.php";
             ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[2]['emocion'] ?>','<?php echo $frases[2]['escritor'] ?>','<?php echo $frases[2]['frase'] ?>')" class="blog-title"><?php echo $frases[2]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $frases[2]['id']?>')" class="blog-title"><?php echo $frases[2]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[2]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -94,7 +94,7 @@ include "../../global/conexion.php";
             ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[3]['emocion'] ?>','<?php echo $frases[3]['escritor'] ?>','<?php echo $frases[3]['frase'] ?>')" class="blog-title"><?php echo $frases[3]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $frases[3]['id']?>')" class="blog-title"><?php echo $frases[3]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[3]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -109,7 +109,7 @@ include "../../global/conexion.php";
             ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[4]['emocion'] ?>','<?php echo $frases[4]['escritor'] ?>','<?php echo $frases[4]['frase'] ?>')" class="blog-title"><?php echo $frases[4]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $frases[4]['id']?>')" class="blog-title"><?php echo $frases[4]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[4]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -124,7 +124,7 @@ include "../../global/conexion.php";
             ?>
             <div class="col-md-4 col-xs-12 p-4" id="newblog">
                 <div class="card-body mt-4 mb-4">
-                    <h1 onclick="idsend('<?php echo $_Blog; ?>','<?php echo $frases[5]['emocion'] ?>','<?php echo $frases[5]['escritor'] ?>','<?php echo $frases[5]['frase'] ?>')" class="blog-title"><?php echo $frases[5]['emocion'] ?></h1>
+                    <h1 onclick="idsend('<?php echo $frases[5]['id']?>')" class="blog-title"><?php echo $frases[5]['emocion'] ?></h1>
                     <hr class="personalhr">
                     <p class="blog-text mt-3 mb-4">"<?php echo $frases[5]['frase'] ?>"</p>
                     <a href="#" class="card-link">
@@ -137,13 +137,8 @@ include "../../global/conexion.php";
     </div>
 
 
-    <form action="../contenido/public_blog.php" name="formblog" method="get">
-
-        <input type="hidden" name="blog" id="blog">
-        <input type="hidden" name="emocion" id="emocion">
-        <input type="hidden" name="escritor" id="escritor">
-        <input type="hidden" name="frase" id="frase">
-
+    <form action="public_blog.php" name="formblog" method="get">
+        <input type="hidden" name="id" id="id">
     </form>
 
     <!-- JS, Popper.js, and jQuery -->
@@ -153,13 +148,10 @@ include "../../global/conexion.php";
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
 
     <script>
-        function idsend(blog, emocion, escritor, frase) {
- /*            debugger; */
+        function idsend(id) {
+            // debugger;
 
-            document.getElementById('blog').value = blog;
-            document.getElementById('emocion').value = emocion;
-            document.getElementById('escritor').value = escritor;
-            document.getElementById('frase').value = frase;
+            document.getElementById('id').value = id;
 
             document.formblog.submit();
         }

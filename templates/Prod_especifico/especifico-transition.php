@@ -119,6 +119,13 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
             <input type="hidden" name="manga" id="manga" value="SISA">
         </form>
 
+        <form action="buyItNow.php" method="post" name="buy">
+            <input type="hidden" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
+            <input type="hidden" name="talla" id="talla" value="S">
+            <input type="hidden" name="genero" id="genero" value="Femenino">
+            <input type="hidden" name="manga" id="manga" value="SISA">
+        </form>
+
         <form action="newcar3.php" name="empaque" method="post">
             <input type="hidden" name="talla" value="">
             <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
@@ -180,7 +187,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                 <div class="elemento4">
                     <div class="btn-opcionestr">
                         <div class="contentsize mac-contentsize" id="divSize" hidden>
-                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/prod_esp/transition/iciclenatural.jpg" alt="">
+                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/<?php echo $producto[0]['talla_S'] ?>" alt="tallas">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2">
                                 <button id="sizeS" class="btn-change">S</button>
@@ -193,7 +200,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
                     <button id="btn-size" class="btn-size" name="bntOpcionestr" data-target="divSize">TALLAS</button>
                 </div>
                 <a href="#" class="btn btn-submit" id="aAddCart" onclick="submit()">ADD TO CART</a>
-                <a href="#" class="btn btn-submit">BUY IT NOW</a>
+                <a href="#" class="btn btn-submit" onclick="buyItNow()">BUY IT NOW</a>
             </div>
         </div><!-- FIN Contenedores hidden -->
     </div>
@@ -208,6 +215,11 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         function submit() {
             document.transition.submit()
         }
+
+        function buyItNow() {
+            document.buy.submit()
+        }
+        
 
         function enviar_empaque() {
 
@@ -384,19 +396,19 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
 
         <!-- TALLAS BOTONES BLACK CONTAINER -->
 <script>
-    let routesizes = "../assets/img/prodgenerales/prod_esp/loungewear/"
+    let routesizes = "../assets/img/prodgenerales/"
 
     $('#sizeS').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_S'] ?>');
     }) 
     $('#sizeM').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_M'] ?>');
     }) 
     $('#sizeL').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'iciclenatural.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_L'] ?>');
     }) 
     $('#sizeXL').click(function(){
-        $('#btnSizes').attr( 'src', routesizes + 'btnsizes.jpg');
+        $('#btnSizes').attr( 'src', routesizes + '<?php echo $producto[0]['talla_XL'] ?>');
     });
 </script>
 </body>

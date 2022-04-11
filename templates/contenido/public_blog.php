@@ -2,10 +2,20 @@
 session_start();
 include "../../global/conexion.php";
 
-$blog = str_replace('@', '<br><br>', $_GET['blog']);
-$frase = $_GET['frase'];
-$escritor = $_GET['escritor'];
-$emocion = $_GET['emocion'];
+$idBlog =  (int)$_GET['id'];
+$sentencia = $pdo->prepare("SELECT * FROM frases WHERE id = $idBlog");
+$sentencia->execute();
+$contenidoBlog = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+?>
+<script>
+    console.log('<?php echo count($contenidoBlog) ?>');
+</script>
+<?php
+
+$blog = str_replace('@', '<br><br>', $contenidoBlog[0]['blog']);
+$frase = $contenidoBlog[0]['frase'];
+$escritor = $contenidoBlog[0]['escritor'];
+$emocion = $contenidoBlog[0]['emocion'];
  
     if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
          $url = "https://";   

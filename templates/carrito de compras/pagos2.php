@@ -111,8 +111,8 @@
                                 <label for="imagen" class="mt-2" style="text-align: center; color: black; word-spacing: .2rem; letter-spacing: .2rem; font-family: MoristonPersonal-Bold; font-size: 6pt; color: rgb(0, 0, 0); opacity: 60%;">DIRECCIÓN</label>
                                 <input type="text" value="<?php echo $direcciones[0]['direccion']?>" class="newprofile" name="direccion">
                         </div>
-                        <div class="modal-footer">
-                        <div class="mr-3" ><button type="button" style="align-items: center;position: relative;" onclick="submitAddress()" class="btn btn-saleoff">CAMBIAR</button></div>
+                        <div class="modal-footer mr-3">
+                        <div><button type="button" style="align-items: center;position: relative;" onclick="submitAddress()" class="btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>

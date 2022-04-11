@@ -1,6 +1,10 @@
 <?php
 session_start();
 include "../../global/conexion.php";
+$iduser = $_SESSION['iduser'];
+$user = $pdo->prepare("SELECT * FROM usuarios where id = '$iduser'");
+$user -> execute();
+$userInfo=$user->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +37,7 @@ include "../../global/conexion.php";
                 <h1>APROBADO</h1>
             </div>
             <div class="owner">    
-                <h2>JHONHOB</h2>
+                <h2><?php echo strtoupper($userInfo[0]['apodo'])?></h2>
             </div>
             <div class="textStateTransaction">    
                 EN NOMBRE DE KLMA HUMANS QUEREMOS AGRADECERTE INMENSAMENTE POR LA CONFIANZA DEPOSITADA EN NUESTROS PRODUCTOS. ESPERAMOS QUE ESTES SUPER EMOCIONADO CON TU COMPRA TAL COMO LO ESTAMOS NOSOTROS.<br><br>

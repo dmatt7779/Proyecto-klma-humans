@@ -39,7 +39,7 @@ if($_POST['google-response-token']){
             ?>
                 <script>
                     var r = alert("Hemos registrado el email.");
-                    window.location.href = "registro.php";
+                    window.location.href = "../login/login.php";
                 </script>
             <?php
 

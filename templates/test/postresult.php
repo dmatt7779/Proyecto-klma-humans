@@ -51,7 +51,7 @@ if (empty($usuario)) {
 <!-- Scroll Bar personalizado -->
 <div id="scrollpostresults">
 
-    <div id="scrolltitlepostresults">EMOCIÓN</div>
+    <div id="scrolltitlepostresults"><?php echo strtoupper($emocion) ?></div>
 
     <!-- Track -->
     <div class="scrolllightbar">

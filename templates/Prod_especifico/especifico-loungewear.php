@@ -92,6 +92,12 @@
             <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
         </form>
 
+        <form action="buyItNow2.php" name="buy" method="post">
+            <input type="hidden" name="talla" id="talla" value="S">
+            <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
+        </form>
+
+
         <form action="newcar3.php" name="empaque" method="post">
             <input type="hidden" name="talla" value="">
             <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
@@ -194,7 +200,7 @@
                 <div class="elemento4">
                     <div class="btn-opciones">
                         <div class="contentsize" id="divSize" hidden>
-                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/<?php echo $producto[0]['talla_S'] ?>" alt="">
+                            <img id="btnSizes" class="d-block w-100" src="../assets/img/prodgenerales/<?php echo $producto[0]['talla_S'] ?>" alt="tallas">
                             <p class="choicesize mt-3">SELECCIONAR TALLA</p>
                             <div class="btn-sizes2" id="">
                                 <button id="sizeS" class="btn-change">S</button>
@@ -207,7 +213,7 @@
                     <button id="btn-size" class="btn-size" name="bntOpciones" data-target="divSize">TALLAS</button>
                 </div>
                 <a onclick="enviar_carro();" href="#" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
-                <a href="#" class="btn btn-submit">BUY IT NOW</a>
+                <a href="#" onclick="Buy()" class="btn btn-submit">BUY IT NOW</a>
             </div>
         </div><!-- FIN Contenedores hidden -->
     </div>
@@ -240,6 +246,10 @@
 <script>
     function enviar_empaque() {
         document.empaque.submit()
+    }
+
+    function Buy(){
+        document.buy.submit()
     }
 </script>
 

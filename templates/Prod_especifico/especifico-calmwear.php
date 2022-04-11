@@ -58,6 +58,11 @@ if ($idempaque != null || $idempaque != "") {
         <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
     </form>
 
+    <form action="buyItNow3.php" name="buy" method="post">
+        <input type="hidden" name="talla" value="">
+        <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
+    </form>
+
     <!-- INICIO GRID PADRE -->
     <div class="mt-5">
         <div class="grid-cw mt-4">
@@ -170,7 +175,7 @@ if ($idempaque != null || $idempaque != "") {
                 <!-- Botones Agregar y comprar ahora -->
                 <div class="elemento4">
                     <a href="#" onclick="enviar_carro();" class="btn btn-submit" id="aAddCart">ADD TO CART</a>
-                    <a href="#" class="btn btn-submit">BUY IT NOW</a>
+                    <a href="#" onclick="Buy()" class="btn btn-submit">BUY IT NOW</a>
                 </div>
             </div>
         </div><!-- FIN Contenedores hidden -->
@@ -191,12 +196,13 @@ if ($idempaque != null || $idempaque != "") {
             document.empaque.submit()
         }
 
+        function Buy() {
+            document.buy.submit()
+        }
 
         function enviar_carro() {
 
             document.carrito.submit()
-
-
         }
     </script>
 
