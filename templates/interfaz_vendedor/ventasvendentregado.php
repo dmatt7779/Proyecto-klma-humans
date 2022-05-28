@@ -93,8 +93,8 @@ if (!isset($_SESSION['correo'])) {
                                 <tr>
 
                                     <td><?php echo $venta['id'] ?></td>
-                                    <td><?php echo $venta['subtotal'] ?></td>
-                                    <td><?php echo $venta['total'] ?></td>
+                                    <td>$<?php echo number_format($venta['subtotal']) ?></td>
+                            <td>$<?php echo number_format($venta['total']) ?></td>
                                     <td><?php switch ($venta['estado']) {
                                             case '1':
 

@@ -9,8 +9,8 @@
 
 
 
-    $sql = "UPDATE Direcciones SET nombre = '$nombre', apellido = $apellido, direccion = '$direccion' WHERE id_user = '$iduser'";
-
+    $sql = "UPDATE Direcciones SET nombre = '$nombre', apellido = '$apellido', direccion = '$direccion' WHERE id_user = '$iduser'";
+    
     $sentencia = $pdo->prepare($sql);
     $sentencia->execute();
 
