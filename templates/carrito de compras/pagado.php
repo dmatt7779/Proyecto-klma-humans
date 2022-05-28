@@ -55,13 +55,6 @@
                 $sentencia3 -> execute();
                 $cantidadAntigua = $sentencia3->fetchAll(PDO::FETCH_ASSOC);
                 $cantidadNueva = $cantidadAntigua[0]['cantidad'] - $SellDetails[$i]['cantidad']
-
-                ?>
-                <script>
-                    console.log('<?php echo $cantidadNueva ?>')
-                </script>
-                <?php
-            
                 $sql4 = "UPDATE productos SET cantidad = $cantidadNueva WHERE id = $idProducto";
                 $sentencia4 = $pdo->prepare( $sql4 );
                 $sentencia4 -> execute();
