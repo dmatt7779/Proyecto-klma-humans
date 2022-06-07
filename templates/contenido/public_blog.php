@@ -84,7 +84,7 @@ $emocion = $contenidoBlog[0]['emocion'];
                         <a class="ml-5" target="_blank" href="https://www.facebook.com/klmahum"><img src="../assets/img/test/Face.png" alt="Logo de Facebook"></a>
                         <a target="_blank" href="https://www.instagram.com/klmahum/"><img src="../assets/img/test/Instagram.png" alt="Logo de Instagram"></a>
                         <a target="_blank" href="https://twitter.com/klmahum"><img src="../assets/img/test/Twitter.png" alt="Logo de twitter"></a>
-                        <a target="_blank" class="mr-5" onclick="copy_link()" style="cursor: pointer;"><img src="../assets/img/test/Enlace.png" alt="Logo para compartir enlace"></a>
+                        <a class="mr-5" href="javascript:copy_link();" style="cursor: pointer;"><img src="../assets/img/test/Enlace.png" alt="Logo para compartir enlace"></a>
                     </div>
                     <div class="col-md-4 container"></div>
                 </div>
@@ -111,21 +111,8 @@ $emocion = $contenidoBlog[0]['emocion'];
     <script src="../assets/librerias/bootstrap.min.js"></script>
 
     <!-- Ocultar y Mostrar redesociales o compartir -->
+
     <script type="text/javascript">
-        function copy_link() {
-            var copyText = document.getElementById("myInput");
-
-            /* Select the text field */
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-            /* Copy the text inside the text field */
-            navigator.clipboard.writeText(copyText.value).innerText;
-            console.log(copyText.value)
-            /* Alert the copied text */
-            alert("Link copiado")
-        }
-
         function showhide() {
 
             jQuery(function($) {
@@ -141,6 +128,21 @@ $emocion = $contenidoBlog[0]['emocion'];
             });
         }
     </script>
+
+    <!-- Copiar URL -->
+    <script>
+        function copy_link() {
+            var aux = document.createElement("input");
+            aux.setAttribute("value",window.location.href);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+            alert("COPIADO")
+        }
+    </script>
+
+
 
     <!-- scroll bar -->
     <script>
