@@ -50,8 +50,9 @@
             </div>
             
             <input type="hidden" name="google-response-token" id="google-response-token">
-            <button onclick="noRobot()" class="btn btn-submit" type="submit">REGISTRARME</button>                                
+            <!-- <button onclick="noRobot()" class="btn btn-submit" type="submit">REGISTRARME</button>-->
 
+            <button class="btn btn-submit" type="submit">REGISTRARME</button>   
             <div class="sign-up text-center">
                 <a href="../login/login.php">REGRESAR</a>
             </div>
@@ -59,15 +60,15 @@
     </div>
 
     <!-- JS, Popper.js, and jQuery -->
-
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
     <script src="../assets/librerias/jquery-3.5.1.min.js"></script>
     <script src="../assets/librerias/popper.min.js"></script>
     <script src="../assets/librerias/bootstrap.min.js"></script>
     <script src="../assets/librerias/jquery-2.1.1.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
+    
 
 <!-- Recaptcha $_POST -->
-    <script>
+    <!-- <script>
         function register() {
 
             var form = $('#register-form');
@@ -75,7 +76,7 @@
 
             $.ajax({
                 type: "POST",
-                url: 'noRobot.php',
+                url: './noRobot.php',
                 data: form.serialize(),
                 success: function(data)
                 {
@@ -83,14 +84,14 @@
                 }
             });
         }
-    </script>
+    </script> -->
 
 <!-- Recaptcha Function -->
     <script>
         grecaptcha.ready(function() {
         grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'submit'})
         .then(function(token) {
-            //console.log(token);
+            console.log(token);
             $('#google-response-token').val(token);
         });
         });

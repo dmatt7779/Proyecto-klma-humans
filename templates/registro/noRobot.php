@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL); 
 date_default_timezone_set("America/Bogota");
 include "../../global/conexion.php";
 include "recaptcha.php";
@@ -35,22 +37,45 @@ if($_POST['google-response-token']){
             $sentencia = $pdo->prepare( $sql );
             $sentencia -> execute();
             $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
             ?>
                 <script>
                     var r = alert("Hemos registrado el email.");
-                    window.location.href = "../login/login.php";
                 </script>
             <?php
 
-        }else {
+            $sentencia = $pdo->prepare("SELECT correo, apodo, id, rol FROM usuarios where correo= :correo");
+            $sentencia -> execute(array(":correo"=>$correo));   
+            $registro=$sentencia->fetch(PDO::FETCH_ASSOC);
+            
+            $_SESSION = $registro;
+            $_SESSION['correo']   = $registro['correo'];   
+            $_SESSION['apodo']   = $registro['apodo'];   
+            $_SESSION['iduser']   = $registro['id'];   
+            $_SESSION['rol'] = $registro['rol'];
+
+                 switch ($registro['rol']) {
+                    case '3':
+                        //print_r($_SESSION);
+                        header("location:../interfaz_cliente/clienteintro.php");
+                        break;
+                    case '2':
+                        header("location:../interfaz_vendedor/vendintro.php");
+                        break;
+                    case '1':
+                        header("location:../interfaz_admin/adminintro.php");
+                        break;
+                    default:
+                        echo '<script language="javascript">alert("Email sin ROL");</script>';
+                        break;
+                } 
+    }else {
             if( !$register ){
                 $_SESSION['creado'] = 1;
             }
             ?>
                 <script>
                     var r = alert("Ya existe el email ingresado.");
-                    window.location.href = "registro.php";
+                    //window.location.href = "registro.php";
                 </script>
             <?php
         } 
