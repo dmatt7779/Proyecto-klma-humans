@@ -32,9 +32,10 @@ $_SESSION['emocion'] = $emocion;
 
 	<!-- CSS only -->
 	<link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/style/style.css">
+	<!-- <link rel="stylesheet" href="../assets/style/style.css"> -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="sss/sss.css">
+	<link rel="stylesheet" href="../assets/style/style.css?v=<?php echo(rand()); ?>" />
 </head>
 <body>
 <?php include "../navbar_footer/header.php";
@@ -77,7 +78,7 @@ if (empty($usuario)) {
     $listaproductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 	?>
 		<!-- Campaña 1 -->
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos[0]['campaña']?>)" href="#">C<?php echo $listaproductos[0]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[0]['imagen']; ?>" alt="producto">
@@ -86,7 +87,7 @@ if (empty($usuario)) {
 		</div>
 
 		<!-- Campaña 2 -->
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos[1]['campaña']?>)" href="#">C<?php echo $listaproductos[1]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[1]['imagen']; ?>" alt="producto">
@@ -108,7 +109,7 @@ if (empty($usuario)) {
 		</div>
 
 		<!-- Campaña 3 -->
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos[2]['campaña']?>)" href="#">C<?php echo $listaproductos[2]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[2]['imagen']; ?>" alt="producto">
@@ -117,7 +118,7 @@ if (empty($usuario)) {
 		</div>
 
 		<!-- Campaña 4 -->
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos[3]['campaña']?>)" href="#">C<?php echo $listaproductos[3]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos[3]['imagen']; ?>" alt="producto">

@@ -311,6 +311,23 @@ body {
     display: flex;
 }
 
+.titleSucessfullRegister > h1 {
+    color: #969797;
+    letter-spacing: 2rem;
+    font-size: 9pt;
+    font-family: "MoristonPersonal-Regular";
+    text-align: center;
+}
+
+.btnBackLogin {
+    font-family: "HelveticaNeue";
+    font-size: 6pt;
+    letter-spacing: 1.5rem;
+    color: white;
+    text-align: center;
+    padding: 9% 9%;
+}
+
 /* ----------------------------------REGISTRO------------------------- */
 
 /* ------------------------------INICIO NAVBAR------------------------------------- */
@@ -481,6 +498,14 @@ div.darkmainheader {
 }
 
 .footercontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 1%;
+    background-color: rgb(242, 232, 220);
+}
+
+.footer-responsive {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1136,6 +1161,9 @@ button > .closeColorTYC, .closeColorTYC{
     letter-spacing: .41111rem;
     word-spacing: .5rem;
 }
+.contenedorCampañas {
+    width: 95%;
+}
  /* ---------------------------------- FIN HOME ------------------------------ */
 
 /* -----------------------------ABOUT US----------------------------- */
@@ -1745,7 +1773,7 @@ button > .closeColorTYC, .closeColorTYC{
 .btn-details-prod, .btn-details-prod:focus {
     color: rgb(26,24,24);
     border: none;
-    background: #ffffff;
+    background: #ffffff00;
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -1759,7 +1787,7 @@ button > .closeColorTYC, .closeColorTYC{
 .btn-verproduct, .btn-verproduct:focus {
     color: rgb(26,24,24);
     border: none;
-    background: #ffffff;
+    background: #ffffff00;
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -1772,7 +1800,7 @@ button > .closeColorTYC, .closeColorTYC{
 /*Empaque Especial*/
 .btn-empaque, .btn-empaque:focus {
     color: rgb(26,24,24);
-    background: #ffffff;
+    background: #ffffff00;
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -2332,7 +2360,7 @@ button > .closeColorTYC, .closeColorTYC{
 .btn-size, .btn-size:focus {
     color: rgb(26,24,24);
     border: none;
-    background: #ffffff;
+    background: #ffffff00;
     text-decoration: none;
     font-family: "MoristonPersonal-Bold";
     font-weight: bold;
@@ -2436,57 +2464,9 @@ button > .closeColorTYC, .closeColorTYC{
     color: #fff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fontTableIntern {
+    font-size: 13px!important;
+}
 
 /* ---------------------------INICIO General Transition--------------------------- */
 /* SCROLL BAR Personalizado */
@@ -2504,17 +2484,6 @@ body::-webkit-scrollbar-thumb {
 .gridtl::-webkit-scrollbar {
     width: 0.5px;
 }
-/* Thumb para barra de desplazamiento */
-/* .gridtl::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 8px;
-} */
-
-
-
-
-
-
 
 /* GRID para imagenes de figuras geometricas */
 .gridtl {
@@ -2846,16 +2815,6 @@ body::-webkit-scrollbar-thumb {
 }
 /* -------------------------------FIN Especifico TRANSITION-------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
 /* ------------------------------------------Estados Pedidos---------------------------------------------------- */
 .stateTransactionImg {
     display: flex;
@@ -2950,24 +2909,6 @@ body::-webkit-scrollbar-thumb {
     color: rgb(189,213,220);
     width: 80%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  /* -------------------------------INICIO Carro de compras------------------------------- */
 #pagos1 {
@@ -4347,6 +4288,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 .contcampaigns > .socialmedia {
     background-color: rgb(189,203,212);
     height: 230px;
+    width: 140%;
 }
 
 .socialmedia {
@@ -4398,6 +4340,7 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
     letter-spacing: .2rem;
 	text-align: center;
 	color: #000000;
+    cursor: pointer;
 }
 
 /* --------------------------------FIN CONFIGURACIÓN TEST------------------------------- */
@@ -4971,73 +4914,6 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 /* -------------------------------FIN Barras Laterales---------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*@ Responsive media queries*/
 
     @media screen and (min-width: 1400px){
@@ -5571,7 +5447,6 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             letter-spacing: .6rem;
         }
         
-        /*-----------Móviles Navbar----------------------*/
         .nested-nav{
             display: block;
             padding: 0% 2% 0% 169%;
@@ -5586,6 +5461,262 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
             padding-right: 5%;
             padding-left: 5%;
             margin: 0% 0% 4% 0%;
+        }
+    }
+
+    @media screen and (max-width: 414px){
+        .stateTransactionImg > img {
+            width: 80%;
+        }
+
+        #footerbg2 {
+            height: 160px;
+        }
+
+        .titleSucessfullRegister > h1 {
+            letter-spacing: 1rem;
+            font-size: 7pt;
+        }
+
+        .textStateTransaction {
+            font-size: 6pt;
+            margin: 5% 25% 5% 25%;
+        }
+        
+        .thanksCustom {
+            font-size: 6pt;
+        }
+
+        .stateTransaction {
+            padding: 5% 2% 5% 2%;
+        }
+
+        .footer-content, .footercontent {
+            position: relative!important;
+            bottom: 0px;
+        }
+
+        .contentlogin {
+            margin-top: 15%;
+        }
+
+        .footer-responsive {
+            position: relative;
+            bottom: -130px;
+        }
+
+        .legaltexts > div > a {
+            letter-spacing: 0.4rem;
+        }
+
+        .contactform {
+            width: 345px;
+            margin-left: 0vw;
+        }
+
+        .contacttitle {
+            margin-left: 25px;
+        }
+
+        .contacttitle > h1 {
+            margin-left: 0px;
+        }
+
+        /* INICIO PROD. ESPECIFICO LG */
+        .cover {
+            height: 300px;
+        }
+
+        .gridclmw {
+            padding: 4%!important;
+            margin-top: 25%;
+        }
+
+        .gridvertical {
+            padding: 2.5%;
+        }
+
+        .gridhorizontal {
+            padding: 1.5%;
+        }
+
+        .card-text {
+            padding: 0% 2%;
+        }
+
+        .grid-lw {
+            display: flex;
+            flex-direction: column;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .carousel-product {
+            padding-left: 1%;
+            height: auto;
+            width: 370px;
+        }
+
+        .desc-prod-espec {
+            margin-left: 2%;
+        }
+
+        .nested-grid-lw {
+            row-gap: 1rem;
+            padding: 2%;
+        }
+
+        .elemento1 {
+            font-size: 7pt;
+        }
+
+        .font-price-lw {
+            font-size: 12pt;
+            letter-spacing: 2rem;
+        }
+
+        .contenedor-tallas-lw, .contenedor-tallas-lw:hover {
+            font-size: 9pt;
+        }
+
+        .divopciones, .divopcionescw, .divopcionestr {
+            position: relative;
+            display: flex;
+            bottom: 0px;
+            align-content: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 5% 0%;
+            bottom: 0px;
+        }
+
+        .btn-opciones:nth-child(1) {
+            flex: 0;
+            margin-left: none;
+            align-items: none;
+            padding: 2%;
+        }
+
+        .btn-opciones:nth-child(2) {
+            flex: 0;
+            margin: none;
+            align-items: none;
+            padding: 2%;
+        }
+
+        .btn-opciones:nth-child(3) {
+            flex: none;
+            justify-content: none;
+            padding: 3% 8% 3% 0%;
+            align-items: flex-end;
+        }
+
+        .btn-opciones:nth-child(4) {
+            flex: none;
+            padding: 1%;
+            margin-left: none;
+        }
+
+        .btn-details-prod, .btn-details-prod:focus, .btn-verproduct, .btn-verproduct:focus, .btn-empaque, .btn-empaque:focus, .btn-size, .btn-size:focus {
+            font-size: 7pt;
+            letter-spacing: .5rem;
+        }
+
+        .contentdetails {
+            width: 120px;
+            height: 520PX;
+        }
+
+        .btn-details-prod2, .btn-details-prod2  {
+            margin-left: 5%;
+            font-size: 7pt;
+            letter-spacing: .455rem;
+        }
+
+        .btn-empaque2, .btn-empaque2:focus {
+            padding: 0% 0% 1% 0%;
+            font-size: 7pt;
+
+        }
+        
+        .contentbag {
+            width: 80%;
+            height: 580px;
+        }
+
+        .btn-change {
+            font-size: 7pt;
+        }
+
+        .contentsize {
+            height: 600px;
+        }
+
+        #scrolllg, #scrollcw, #scrolltr {
+            display: none;
+        }
+
+        /* INICIO PROD. ESPECIFICO CALM */
+
+        .grid-cw {
+            display: flex;
+            flex-direction: column;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .nested-grid-cw {
+            display: flex;
+            flex-direction: column;
+            margin: 0%;
+            padding: 0%;
+            margin: 5% 3%;
+        }
+
+        .font-price-cw {
+            letter-spacing: 2rem;
+            padding-left: 4%;
+        }
+
+        .elemento1cw {
+            padding: 2%;
+        }
+
+        .materials {
+            justify-content: flex-start;
+            margin: 4% 0%;
+        }
+
+        .btn-opcionescw:nth-child(4) {
+            margin: 5% 0%;
+        }
+
+        .contentdetailscw {
+            width: 170px;
+            height: 520PX;
+        }
+
+        /* INICIO PROD. ESPECIFICO TRANS */
+
+        .elemento1-5tr > p:nth-child(1) {
+            text-align: start;
+        }
+
+        .typeselector > div > img {
+            margin: 0% 0%;
+        }
+
+        .typeselector {
+            justify-content: flex-start;
+            margin: 3% 0%;
+        }
+
+        .elemento1-5tr {
+            margin: 4% 0%;
+        }
+
+        .btn-opcionestr:nth-child(3) {
+            margin: 5% 0%;
         }
     }
 
@@ -6066,5 +6197,3 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
   }
 
   /*-----------Fin Responsive MAC 1440----------------------*/
-
-

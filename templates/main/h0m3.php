@@ -13,8 +13,9 @@ include "../../global/conexion.php";
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../assets/style/style.css">
+    <!-- <link rel="stylesheet" href="../assets/style/style.css"> -->
     <link rel="stylesheet" href="../test/sss/sss.css">
+    <link rel="stylesheet" href="../assets/style/style.css?v=<?php echo(rand()); ?>" />
 
 </head>
 <body>
@@ -332,7 +333,7 @@ include "../../global/conexion.php";
     $sentencia4 -> execute();
     $listaproductos4=$sentencia4->fetchAll(PDO::FETCH_ASSOC);
 	?>
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos1[$seleccion1]['campaña']?>)" href="#">C<?php echo $listaproductos1[$seleccion1]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos1[$seleccion1]['imagen']; ?>" alt="producto">
@@ -340,7 +341,7 @@ include "../../global/conexion.php";
 			<a onclick="seeclothes(<?php echo $listaproductos1[$seleccion1]['id']?>)" href="#">VER PRODUCTO</a>
 		</div>
 
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos2[$seleccion2]['campaña']?>)" href="#">C<?php echo $listaproductos2[$seleccion2]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos2[$seleccion2]['imagen']; ?>" alt="producto">
@@ -362,7 +363,7 @@ include "../../global/conexion.php";
 		</div>
 
 		<!-- Campaña 3 -->
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos3[$seleccion3]['campaña']?>)" href="#">C<?php echo $listaproductos3[$seleccion3]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos3[$seleccion3]['imagen']; ?>" alt="producto">
@@ -371,7 +372,7 @@ include "../../global/conexion.php";
 		</div>
 
 		<!-- Campaña 4 -->
-		<div>
+		<div class="contenedorCampañas">
 			<a onclick="seecampain(<?php echo $listaproductos4[$seleccion4]['campaña']?>)" href="#">C<?php echo $listaproductos4[$seleccion4]['campaña']?></a>
 			<div class="tshirtcampaigns mt-2 mb-2 mt-2 mb-2">
 				<img src="../assets/img/prodgenerales/<?php echo $listaproductos4[$seleccion4]['imagen']; ?>" alt="producto">
@@ -389,6 +390,10 @@ include "../../global/conexion.php";
 			<input type="hidden" name="campaña" id="campaña">
 	</form>
 
+    <form action="../Prod_especifico/especifico-transition.php" name="formfrases" method="post">
+			<input type="hidden" name="id" id="idfrase">
+	</form>
+
 
 	<div class="introcontresult">
 		<div class="btn-blogshare">
@@ -400,7 +405,7 @@ include "../../global/conexion.php";
 			<div class="slider-testimonial">
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p><?php echo $listaproductos1[$seleccion1]['frase']?></p>
+                        <p onclick="enviar('<?php echo $listaproductos1[$seleccion1]['id'] ?>')"> <a><?php echo $listaproductos1[$seleccion1]['frase'] ?></a></p>
 					</div>
 					<div class="autor">
 						<p><?php echo $listaproductos1[$seleccion1]['emocion']?> BY <?php echo $listaproductos1[$seleccion1]['diseñador']?></p>
@@ -408,7 +413,7 @@ include "../../global/conexion.php";
 				</div>
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p><?php echo $listaproductos2[$seleccion2]['frase']?></p>
+                    <p onclick="enviar('<?php echo $listaproductos2[$seleccion2]['id'] ?>')"> <a><?php echo $listaproductos2[$seleccion2]['frase'] ?></a></p>
 					</div>
 					<div class="autor">
 						<p><?php echo $listaproductos2[$seleccion2]['emocion']?> BY <?php echo $listaproductos1[$seleccion2]['diseñador']?></p>
@@ -416,7 +421,7 @@ include "../../global/conexion.php";
 				</div>
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p><?php echo $listaproductos3[$seleccion3]['frase']?></p>
+                    <p onclick="enviar('<?php echo $listaproductos3[$seleccion3]['id'] ?>')"> <a><?php echo $listaproductos3[$seleccion3]['frase'] ?></a></p>
 					</div>
 					<div class="autor">
 						<p><?php echo $listaproductos3[$seleccion3]['emocion']?> BY <?php echo $listaproductos1[$seleccion3]['diseñador']?></p>
@@ -424,7 +429,7 @@ include "../../global/conexion.php";
 				</div>
 				<div class="testimonial-item">
 					<div class="designer-text">
-						<p><?php echo $listaproductos4[$seleccion4]['frase']?></p>
+                    <p onclick="enviar('<?php echo $listaproductos4[$seleccion4]['id'] ?>')"> <a><?php echo $listaproductos4[$seleccion4]['frase'] ?></a></p>
 					</div>
 					<div class="autor">
 						<p><?php echo $listaproductos4[$seleccion4]['emocion']?> BY <?php echo $listaproductos1[$seleccion4]['diseñador']?></p>
@@ -572,6 +577,12 @@ include "../../global/conexion.php";
 	function seecampain(campain){
 		document.getElementById('campaña').value = campain
 		document.formcapsule.submit()
+	}
+
+    function enviar(id){
+        console.log("entró a la funcion de JS")
+		document.getElementById('idfrase').value = id
+		document.formfrases.submit()		
 	}
 </script>
 

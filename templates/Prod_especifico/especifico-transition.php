@@ -32,6 +32,7 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
     <!-- CSS only -->
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/style/style.css?v=<?php echo(rand()); ?>" />
 </head>
 
 <body>

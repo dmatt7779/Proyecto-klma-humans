@@ -51,7 +51,7 @@ if (!isset($_SESSION['correo'])) {
         <div class="tableadmin">
         <div class="jumbotrontable">
     <div class="container-fluid">
-            <table class="records_list table-striped table-bordered table-hover" id="mydatatable">
+            <table class="fontTableIntern records_list table-striped table-bordered table-hover" id="mydatatable">
                     <thead>
                         <tr>
                             <th>Campaña</th>

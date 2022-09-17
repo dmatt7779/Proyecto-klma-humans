@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="../assets/librerias/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="/css/mi_estilo.css?v=<?php echo(rand()); ?>" />
+    <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
 </head>
 
 <body id="pagos1" onload="tipopago()">
@@ -112,7 +114,7 @@
                                 <input type="text" value="<?php echo $direcciones[0]['direccion']?>" class="newprofile" name="direccion">
                         </div>
                         <div class="modal-footer mr-3">
-                        <div><button type="button" style="align-items: center;position: relative;" onclick="submitAddress()" class="btn btn-saleoff">CAMBIAR</button></div>
+                        <div><button type="button" onclick="submitAddress()" class="mr-3 btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>
@@ -134,7 +136,7 @@
                                 <input type="text" value="<?php echo $direcciones[0]['telefono']?>" class="newprofile" name="telefono">
                         </div>
                         <div class="modal-footer">
-                        <div class="mr-3"><button type="button" onclick="submitPhoneNumber()" class="btn btn-saleoff">CAMBIAR</button></div>
+                        <div class="mr-3"><button type="button" onclick="submitPhoneNumber()" class="mr-3 btn btn-saleoff">CAMBIAR</button></div>
                         </div>
                         </form>
                     </div>

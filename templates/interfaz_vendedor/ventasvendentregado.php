@@ -52,7 +52,7 @@ if (!isset($_SESSION['correo'])) {
                 <div class="container-fluid">
                     <!-- DIV PARA EL DATATABLE -->
                     <!--         <div class="tableadmin"> -->
-                    <table class="records_list table-striped table-bordered table-hover" id="mydatatable">
+                    <table class="fontTableIntern records_list table-striped table-bordered table-hover" id="mydatatable">
                         <thead>
                             <tr>
                                 <th>id</th>

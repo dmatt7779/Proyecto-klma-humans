@@ -39,48 +39,27 @@ if($_POST['google-response-token']){
             $register = $sentencia->fetchAll(PDO::FETCH_ASSOC);
             ?>
                 <script>
-                    var r = alert("Hemos registrado el email.");
+                    window.location.href = "registro_exitoso.php";
                 </script>
             <?php
-
-            $sentencia = $pdo->prepare("SELECT correo, apodo, id, rol FROM usuarios where correo= :correo");
-            $sentencia -> execute(array(":correo"=>$correo));   
-            $registro=$sentencia->fetch(PDO::FETCH_ASSOC);
-            
-            $_SESSION = $registro;
-            $_SESSION['correo']   = $registro['correo'];   
-            $_SESSION['apodo']   = $registro['apodo'];   
-            $_SESSION['iduser']   = $registro['id'];   
-            $_SESSION['rol'] = $registro['rol'];
-
-                 switch ($registro['rol']) {
-                    case '3':
-                        //print_r($_SESSION);
-                        header("location:../interfaz_cliente/clienteintro.php");
-                        break;
-                    case '2':
-                        header("location:../interfaz_vendedor/vendintro.php");
-                        break;
-                    case '1':
-                        header("location:../interfaz_admin/adminintro.php");
-                        break;
-                    default:
-                        echo '<script language="javascript">alert("Email sin ROL");</script>';
-                        break;
-                } 
-    }else {
+        }else {
             if( !$register ){
                 $_SESSION['creado'] = 1;
-            }
-            ?>
+                ?>
                 <script>
-                    var r = alert("Ya existe el email ingresado.");
-                    //window.location.href = "registro.php";
+                    //var r = alert("Ya existe el email ingresado.");
+                    window.location.href = "registro.php";
                 </script>
             <?php
+            }
         } 
     }else {
-        echo "<div class='alert alert-warning'> Validación incorrecta :) </div>";
+        echo "<div class='alert alert-warning'> Validación incorrecta, intentalo nuevamente, gracias </div>";
+        ?>
+        <script>
+            window.location.href = "registro_fallido.php";
+        </script>
+    <?php
     }
 }
 ?>
