@@ -53,14 +53,9 @@ if ($idempaque != null || $idempaque != "") {
         <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
     </form>
 
-    <form action="newcar3.php" name="empaque" method="post">
-        <input type="hidden" name="talla" value="">
-        <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
-    </form>
-
     <form action="buyItNow3.php" name="buy" method="post">
         <input type="hidden" name="talla" value="">
-        <input type="hidden" name="id" value="<?php echo $empaque[0]['id'] ?>">
+        <input type="hidden" name="id" value="<?php echo $producto[0]['id'] ?>">
     </form>
 
     <!-- INICIO GRID PADRE -->

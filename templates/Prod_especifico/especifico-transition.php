@@ -116,14 +116,14 @@ $empaque = $queryempaque->fetchAll(PDO::FETCH_ASSOC);
         <form action="newcar2.php" method="post" name="transition">
             <input type="hidden" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
             <input type="hidden" name="talla" id="talla" value="S">
-            <input type="hidden" name="genero" id="genero" value="Femenino">
+            <input type="hidden" name="genero" id="genero" value="FEMENINO">
             <input type="hidden" name="manga" id="manga" value="SISA">
         </form>
 
         <form action="buyItNow.php" method="post" name="buy">
             <input type="hidden" name="id" id="id" value="<?php echo $producto[0]['id'] ?>">
             <input type="hidden" name="talla" id="talla" value="S">
-            <input type="hidden" name="genero" id="genero" value="Femenino">
+            <input type="hidden" name="genero" id="genero" value="FEMENINO">
             <input type="hidden" name="manga" id="manga" value="SISA">
         </form>
 

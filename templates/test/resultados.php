@@ -2,7 +2,6 @@
 session_start();
 include "../../global/conexion.php";
 
-$usuario = $_SESSION['correo'];
 
 ?>
 <!DOCTYPE html>

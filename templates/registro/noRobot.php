@@ -23,7 +23,31 @@ if($_POST['google-response-token']){
         $correo = $_POST['correo'];
         $hoy = date('Y-m-d');
         $fecha_registro =   $hoy . " " . date("H") . ":"  . date("i") . ":" . date("s");
-
+        if($correo != ''){
+            $res = filter_var($correo, FILTER_VALIDATE_EMAIL);
+            if(!$res){
+                echo "<script>
+                alert('Formato de correo invalido');
+                window.location.href='registro.php';
+                </script>";
+            }
+        }
+                if ($correo == '') { 
+                echo "<script>
+                alert('Email no puede estar vacío');
+                window.location.href='registro.php';
+                </script>";
+                    }else if($contrasena == ''){
+                        echo "<script>
+                alert('Contraseña no puede estar vacía');
+                window.location.href='registro.php';
+                </script>";
+                    }else if($usuario == ''){
+                        echo "<script>
+                alert('Nickname no puede estar vacía');
+                window.location.href='registro.php';
+                </script>";
+                }
         $consultaSql = "SELECT * FROM usuarios WHERE correo = '$correo'";
         $sentencia1 = $pdo->prepare( $consultaSql );
         $sentencia1 -> execute();
@@ -32,6 +56,8 @@ if($_POST['google-response-token']){
         $hash = password_hash($contrasena, PASSWORD_DEFAULT, $opciones);
 
         if(!(count($alreadyExist) != 0)) {
+            
+            
             $sql = "INSERT INTO usuarios (apodo, correo, clave, rol, fecha_registro) VALUES ('$usuario', '$correo', '$hash', '3','$fecha_registro')";
     
             $sentencia = $pdo->prepare( $sql );
@@ -47,7 +73,7 @@ if($_POST['google-response-token']){
                 $_SESSION['creado'] = 1;
                 ?>
                 <script>
-                    //var r = alert("Ya existe el email ingresado.");
+                    alert("Ya existe el email ingresado.");
                     window.location.href = "registro.php";
                 </script>
             <?php

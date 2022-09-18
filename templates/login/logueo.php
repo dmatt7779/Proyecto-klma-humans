@@ -6,23 +6,22 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $usuario = $_SESSION['correo'];
-
-    if ($email == '') {
-        header("location:login.php");
+    if ($email == '') { 
+        echo "<script>
+alert('Email no puede estar vacío');
+window.location.href='login.php';
+</script>";
     }else if($password == ''){
-        header("location:login.php");
-    }else if ($email !== $registro['correo']) {
-        echo '<script language="javascript">alert("Email o contraseña incorrectos"); window.location.href = "login.php";</script>';
+        echo "<script>
+alert('Contraseña no puede estar vacía');
+window.location.href='login.php';
+</script>";
     }
-?>
-<?php
+$sentencia = $pdo->prepare("SELECT * FROM usuarios where correo= :email");
+$sentencia -> execute(array(":email"=>$email));
 
-    $sentencia = $pdo->prepare("SELECT * FROM usuarios where correo= :email");
-    $sentencia -> execute(array(":email"=>$email));
-
-    while($registro=$sentencia->fetch(PDO::FETCH_ASSOC)){
-
+// while($registro=$sentencia->fetch(PDO::FETCH_ASSOC)){
+    $registro=$sentencia->fetch(PDO::FETCH_ASSOC);
         if( password_verify ( $password, $registro['clave'] ) ){
             $_SESSION['correo']   = $registro['correo'];   
             $_SESSION['apodo']   = $registro['apodo'];   
@@ -44,9 +43,11 @@
                     break;
             }
         }else {
-            header("location:login.php");
+
+            echo "<script>
+            alert('Contraseña incorrecta');
+            window.location.href='login.php';
+            </script>";                
         }
-    }
+    // }
 ?>
-
-

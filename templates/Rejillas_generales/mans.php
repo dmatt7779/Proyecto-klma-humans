@@ -57,7 +57,7 @@ include "../../global/conexion.php";
 			<div class="card-body">
 			<a href="#" class="card-title"><p><?php echo $listaproductos[$i]['nombre']; ?></p></a>
 			<p class="text-clmw"><?php echo $listaproductos[$i]['descripcion']; ?></p>
-			<p class="price" href="#"><?php echo $listaproductos[$i]['precio_venta']; ?></p>
+			<p class="price" href="#">$<?php echo number_format($listaproductos[$i]['precio_venta']); ?></p>
 			</div>
 		</div>
 
